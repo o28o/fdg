@@ -113,7 +113,6 @@ document.addEventListener('DOMContentLoaded', function() {
         loadStandaloneScripts()
             .then(() => {
                 console.log('Standalone eng scripts loaded');
-                enablePaliLookup();
             })
             .catch(error => {
                 console.error('Error loading eng standalone scripts:', error);
@@ -124,7 +123,6 @@ document.addEventListener('DOMContentLoaded', function() {
         loadStandaloneScripts("ru")
             .then(() => {
                 console.log('Standalone rus scripts loaded');
-                enablePaliLookup();
             })
             .catch(error => {
                 console.error('Error loading rus standalone scripts:', error);
@@ -132,7 +130,6 @@ document.addEventListener('DOMContentLoaded', function() {
     } 
     else {
         // Включаем Pali Lookup без загрузки standalone-скриптов
-        enablePaliLookup();
     }
 });
 
@@ -530,15 +527,37 @@ if (translation) {
     const isDarkMode = document.body.classList.contains('dark') || document.documentElement.getAttribute('data-theme') === 'dark';
     const themeClass = isDarkMode ? 'dark' : '';
     
+    // Создаем временный div для измерения высоты содержимого
+    const tempDiv = document.createElement('div');
+    tempDiv.style.position = 'absolute';
+    tempDiv.style.visibility = 'hidden';
+    tempDiv.style.width = 'calc(100% - 20px)'; // Ширина как у iframe (с учетом padding)
+    tempDiv.innerHTML = translation;
+    document.body.appendChild(tempDiv);
+    
+    // Получаем высоту содержимого
+    const contentHeight = tempDiv.offsetHeight;
+    document.body.removeChild(tempDiv);
+    
+    // Устанавливаем минимальную и максимальную высоту
+    const minHeight = 100; // Минимальная высота popup
+    const maxHeight = window.innerHeight * 0.8; // Максимальная высота (80% окна)
+    
+    // Вычисляем конечную высоту
+    let finalHeight = Math.min(Math.max(contentHeight + 20, minHeight), maxHeight);
+    
     iframe.srcdoc = `  
         <!DOCTYPE html>  
         <html lang="en" class="${themeClass}">  
         <head>  
             <meta charset="UTF-8">  
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
             <style>  
                 body {  
                     font-family: Arial, sans-serif;  
                     padding: 10px;  
+                    margin: 0;
+                    overflow: hidden;
                 }  
                 body.dark {  
                     background: #07021D !important;  
@@ -560,12 +579,28 @@ if (translation) {
             ${translation}  
         </body>  
         </html>  
-    `;  
-    popup.style.height = '200px';  
+    `;
+    
+    // Устанавливаем высоту popup
+    popup.style.height = `${finalHeight}px`;
     popup.style.display = 'block';  
-    overlay.style.display = 'block';  
+    overlay.style.display = 'block';
+    
+    // Добавляем обработчик для изменения размера после загрузки iframe
+    iframe.onload = function() {
+        try {
+            // Получаем высоту содержимого iframe
+            const iframeBody = iframe.contentDocument.body;
+            const scrollHeight = iframeBody.scrollHeight;
+            
+            // Корректируем высоту popup
+            const adjustedHeight = Math.min(Math.max(scrollHeight + 20, minHeight), maxHeight);
+            popup.style.height = `${adjustedHeight}px`;
+        } catch(e) {
+            console.error('Error adjusting iframe height:', e);
+        }
+    };
 }
-
                 // Обновляем ссылку в кнопке openBtn
                 const openBtn = document.querySelector('.open-btn');
                 const wordForSearch = cleanedWord.replace(/'ti/, ''); // Исправил на replace

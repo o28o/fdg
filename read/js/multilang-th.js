@@ -710,24 +710,32 @@ prevName = prevName.replace(/[0-9.]/g, '');
   console.log(htmlpath);
 
 // Отправка запроса по адресу http://localhost:8080/ru/?q= с использованием значения slug
-  var xhr = new XMLHttpRequest();
-  xhr.open("GET", "/ru/?q=" + encodeURIComponent(slug), true);
-  xhr.send();
+var xhr = new XMLHttpRequest();
+var targetUrl = "/?s=" + encodeURIComponent(sGetparam) + "&q=" + encodeURIComponent(slug) + "#" + anchorURL;
 
-  // Обработка ответа
-  xhr.onreadystatechange = function() {
-    if (xhr.readyState == 4) {
-      if (xhr.status == 200) {
-        // Обработка успешного ответа
-        console.log(xhr.responseText);
-     window.location.href = "/ru/?q=" + encodeURIComponent(slug);
+// Проверяем, не пытаемся ли мы загрузить тот же URL, на котором уже находимся
+if (window.location.href.split('#')[0] !== targetUrl.split('#')[0]) {
+    xhr.open("GET", targetUrl, true);
+    xhr.send();
 
-      } else {
-        // Обработка ошибки
-        console.log('Error sending request to /ru/?q=');
-      }
-    }
-  };
+    xhr.onreadystatechange = function() {
+        if (xhr.readyState == 4) {
+            if (xhr.status == 200) {
+                // Проверяем, что ответ не пустой и не является страницей ошибки
+                if (xhr.responseText && !xhr.responseText.includes("404") && !xhr.responseText.includes("error")) {
+                    console.log("Response received, redirecting...");
+                    window.location.href = targetUrl;
+                } else {
+                    console.log("Server returned an error page");
+                }
+            } else {
+                console.log("Error: Request failed with status", xhr.status);
+            }
+        }
+    };
+} else {
+    console.log("Already on the target URL, skipping request");
+}
 
   // Обновление сообщения об ошибке на странице
   

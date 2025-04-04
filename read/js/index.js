@@ -482,25 +482,31 @@ prevName = prevName.replace(/[0-9.]/g, '');
     .catch(error => {
   console.log('error:not found');
 console.log(rootpath, trnpath, htmlpath, varpath);
-  var xhr = new XMLHttpRequest();
-  xhr.open("GET", "/?q=" + encodeURIComponent(slug), true);
-  xhr.send();
 
-  // Обработка ответа
-  xhr.onreadystatechange = function() {
-    if (xhr.readyState == 4) {
-      if (xhr.status == 200) {
-        // Обработка успешного ответа
+var xhr = new XMLHttpRequest();
+xhr.open("GET", "/?q=" + encodeURIComponent(slug), true);
+xhr.send();
+
+xhr.onreadystatechange = function() {
+  if (xhr.readyState == 4) {
+    if (xhr.status == 200) {
+      // Проверяем, что ответ не является страницей 404 или другой ошибкой
+      // Например, можно проверить наличие определенного текста или структуры ответа
+      if (!xhr.responseText.includes("Page not found") && 
+          !xhr.responseText.includes("404") &&
+          xhr.responseText.trim().length > 0) {
         console.log(xhr.responseText);
-                window.location.reload(true);
-       window.location.href = "/?q=" + encodeURIComponent(slug);
-
+        window.location.href = "/?q=" + encodeURIComponent(slug);
       } else {
-        // Обработка ошибки
-        console.log('Error sending request to /?q=');
+        console.log('Page not found or empty response');
       }
+    } else if (xhr.status == 404) {
+      console.log('Error 404: Page not found');
+    } else {
+      console.log('Error sending request. Status:', xhr.status);
     }
-  };
+  }
+};
 
   // Обновление сообщения об ошибке на странице
         suttaArea.innerHTML = `<p>Searching for "${decodeURIComponent(slug)}". Please wait.</p>

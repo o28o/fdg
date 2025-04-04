@@ -63,46 +63,110 @@ if (savedDict.includes("dpd")) {
 // Функция для загрузки скриптов standalone-словаря
 function loadStandaloneScripts(lang = 'en') {
     return new Promise((resolve, reject) => {
-        // Определяем пути в зависимости от языка
-const commonScripts = [
-    '/assets/js/standalone-dpd/dpd_i2h.js',
-    '/assets/js/standalone-dpd/dpd_deconstructor.js'
-];
-
-const langSpecific = lang === 'ru' 
-    ? '/assets/js/standalone-dpd/ru/dpd_ebts.js'
-    : '/assets/js/standalone-dpd/dpd_ebts.js';
-
-const scripts = [...commonScripts, langSpecific];
-
-        // Проверяем, какие скрипты уже загружены
-        const scriptsToLoad = scripts.filter(src => {
-            return !document.querySelector(`script[src="${src}"]`);
-        });
-
-        // Если все скрипты уже загружены, сразу резолвим промис
-        if (scriptsToLoad.length === 0) {
-            resolve();
-            return;
+        // Ждем полной загрузки DOM перед началом загрузки скриптов
+        if (document.readyState !== 'complete') {
+            window.addEventListener('load', () => executeLoad());
+        } else {
+            executeLoad();
         }
 
-        let loadedCount = 0;
+        function executeLoad() {
+            // Определяем пути в зависимости от языка
+            const commonScripts = [
+                '/assets/js/standalone-dpd/dpd_i2h.js',
+                '/assets/js/standalone-dpd/dpd_deconstructor.js'
+            ];
 
-        scriptsToLoad.forEach(src => {
-            const script = document.createElement('script');
-            script.src = src;
-            script.defer = true;
-            script.onload = () => {
-                loadedCount++;
-                if (loadedCount === scriptsToLoad.length) {
-                    resolve();
-                }
+            const langSpecific = lang === 'ru' 
+                ? '/assets/js/standalone-dpd/ru/dpd_ebts.js'
+                : '/assets/js/standalone-dpd/dpd_ebts.js';
+
+            const scripts = [...commonScripts, langSpecific];
+
+            // Проверяем, какие скрипты уже загружены или есть в кеше
+            const scriptsToLoad = scripts.filter(src => {
+                return !document.querySelector(`script[src="${src}"]`);
+            });
+
+            // Если все скрипты уже загружены, сразу резолвим промис
+            if (scriptsToLoad.length === 0) {
+                resolve();
+                return;
+            }
+
+            let loadedCount = 0;
+
+            // Функция для проверки кеша
+            const checkCacheAndLoad = (src) => {
+                return new Promise((cacheResolve, cacheReject) => {
+                    // Создаем запрос для проверки кеша
+                    fetch(src, {
+                        method: 'HEAD',
+                        cache: 'force-cache'
+                    }).then(response => {
+                        if (response.ok) {
+                            // Файл есть в кеше, загружаем его
+                            const script = document.createElement('script');
+                            script.src = src;
+                            script.defer = true;
+                            script.onload = () => {
+                                loadedCount++;
+                                if (loadedCount === scriptsToLoad.length) {
+                                    resolve();
+                                }
+                                cacheResolve();
+                            };
+                            script.onerror = () => {
+                                console.warn(`Script ${src} found in cache but failed to load`);
+                                cacheReject();
+                            };
+                            document.head.appendChild(script);
+                        } else {
+                            // Файла нет в кеше, загружаем обычным способом
+                            const script = document.createElement('script');
+                            script.src = src;
+                            script.defer = true;
+                            script.onload = () => {
+                                loadedCount++;
+                                if (loadedCount === scriptsToLoad.length) {
+                                    resolve();
+                                }
+                                cacheResolve();
+                            };
+                            script.onerror = () => {
+                                reject(new Error(`Failed to load script: ${src}`));
+                                cacheReject();
+                            };
+                            document.head.appendChild(script);
+                        }
+                    }).catch(() => {
+                        // Если HEAD запрос не сработал, просто загружаем скрипт
+                        const script = document.createElement('script');
+                        script.src = src;
+                        script.defer = true;
+                        script.onload = () => {
+                            loadedCount++;
+                            if (loadedCount === scriptsToLoad.length) {
+                                resolve();
+                            }
+                            cacheResolve();
+                        };
+                        script.onerror = () => {
+                            reject(new Error(`Failed to load script: ${src}`));
+                            cacheReject();
+                        };
+                        document.head.appendChild(script);
+                    });
+                });
             };
-            script.onerror = () => {
-                reject(new Error(`Failed to load script: ${src}`));
-            };
-            document.head.appendChild(script);
-        });
+
+            // Загружаем все необходимые скрипты с проверкой кеша
+            scriptsToLoad.forEach(src => {
+                checkCacheAndLoad(src).catch(() => {
+                    // Ошибка уже обработана в checkCacheAndLoad
+                });
+            });
+        }
     });
 }
 

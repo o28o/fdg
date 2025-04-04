@@ -13,8 +13,8 @@ $start_url = filter_var($start_url, FILTER_SANITIZE_URL);
 header('Content-Type: application/json');
 
 echo json_encode([
-    "short_name" => "DG",
-    "name" => "Dhamma.gift",
+    "short_name" => "Dhamma.Gift",
+    "name" => "Dhamma.gift Search and Read",
     "icons" => [
         [
             "src" => "/assets/img/icon-192x192.png",
@@ -28,7 +28,7 @@ echo json_encode([
         ]
     ],
     "start_url" => "/",
-    "display" => "browser",
+    "display" => "minimal-ui",
     "background_color" => "#ffffff",
     "theme_color" => "#000000",
 

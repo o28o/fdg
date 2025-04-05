@@ -100,7 +100,7 @@ function bgswitch {
 	Варианты:<br>
 	1. Попробуйте опции <strong>Определения</strong> или <strong>Сравнения</strong>, чтобы сузить поиск<br>
 	2. Выберите более специфическое слово из подсказок для Пали<br>
-	3. Скачайте необработанные данные <a class=\"outlink\" href="/result/${basefile}">здесь</a>
+	3. Скачайте необработанные данные <a class=\"outlink\" href="/esult/${basefile}">здесь</a>
 	"
 }
 #
@@ -973,7 +973,11 @@ ${top}"`
 grepvar=
 
 function linklist {
-cat $templatefolder/Header.html $templatefolder/ResultTableHeader.html | sed 's@HOMEVAR@'$mainpagebase'@' | sed 's/$title/TitletoReplace/g' | tohtml 
+  if [[ "$mainpagebase" == *"/ru"* ]]; then
+cat $templatefolder/Header.html $templatefolder/ResultTableHeaderRu.html | sed 's@HOMEVAR@'$mainpagebase'@' | sed 's/$title/TitletoReplace/g' | tohtml 
+else
+cat $templatefolder/Header.html $templatefolder/ResultTableHeaderEn.html | sed 's@HOMEVAR@'$mainpagebase'@' | sed 's/$title/TitletoReplace/g' | tohtml 
+fi
 textlist=`nice -$nicevalue cat $basefile | pvlimit | awk -F':' '{print $1}' | awk -F'/' '{print $NF}' |  awk -F'_' '{print $1}' | sort -Vf | uniq`
 
 for pathAndfile in `nice -$nicevalue cat $basefile | awk -F':' '{print $1}' | sed -E 's@.*(sutta|vinaya|abhidhamma)@@g' |  awk -F'_' -v dirlocation="$dirlocation" '{print dirlocation""$1}' | sort -Vf | uniq` ; do

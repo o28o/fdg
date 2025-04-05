@@ -1,7 +1,6 @@
-
 <div class="container-fluid mt-2">    
 
-    <h3 class="pl-2 resultheader ml-2">$title</h3>
+    <h3 class="pl-2 ml-2">$title</h3>
 
            <a href='HOMEVAR'>
             <button class="btn btn-light mb-1" type="button">
@@ -14,53 +13,39 @@
 </button>		  
 <button id="btn-show-all-children" class="btn btn-light mb-1" type="button">Saṁvaṭṭo / Vivaṭṭo</button>
 
-<button class="btn btn-light forshellscript mb-1" type="button"><a class="text-decoration-none " href="$wordLinkToReplace">Слова</a></button>    
+
+<button class="btn btn-light forshellscript mb-1" type="button"><a class="text-decoration-none " href="$wordLinkToReplace">Слова</a></button>   
 
 <button id="language-button" class="btn btn-light mb-1 " type="button">Pāḷi / Рус</button>
+
+
 
 <button class="btn btn-light mb-1  toggle-dict-btn" type="button" ><img class="" src="/assets/svg/comment.svg"></img></button>
 
  <a title="settings"  id="settingsButton" data-bs-toggle="modal" data-bs-target="#settings" href="javascript:void(0);" class="btn btn-light mb-1 toggle-icon text-decoration-none">
+
   <img id="gearSettings" alt="settings" src="/assets/svg/gear.svg" class="common-size-icon4"></img>
   </a>  
 
+    <a class="btn btn-light mb-1 form-check-inline mb-1 toggle-icon" alt="Help" data-bs-toggle="modal" data-bs-target="#SearchResultHelp" id="helpMessage" href="javascript:void(0);">  
 
-<script>
-  document.addEventListener("DOMContentLoaded", function () {
-    document.querySelectorAll(".btn-language").forEach((btn) => {
-        btn.addEventListener("click", function (event) {
-            event.preventDefault();
-            let newLang = this.getAttribute("data-lang"); // Например, "en", "ru", "th"
-            let url = new URL(window.location.href);
-            let path = url.pathname;
+        <img id="helpResult" class="table-home-icon" src="/assets/svg/question.svg"></img>
 
-            // Определяем текущий язык
-            let currentLang = path.match(/^\/([a-z]{2})\//);
-            currentLang = currentLang ? currentLang[1] : "en"; // Если нет префикса, считаем "en"
+        </a>     
 
-            // Если язык не меняется, ничего не делаем
-            if (currentLang === newLang) return;
-
-            let search = url.search;
-            let hash = url.hash;
-            
-            // Удаляем код языка, если он есть
-            let newPath = path.replace(/^\/[a-z]{2}\//, "/");
-
-            // Добавляем новый язык, если он не "en"
-            if (newLang !== "en") {
-                newPath = `/${newLang}` + newPath;
-            }
-
-            // Перенаправление с сохранением search и hash
-            window.location.href = newPath + search + hash;
-        });
-    });
-});
-</script>
+ <!-- Переключатель режимов 
+<div id="mode-switcher">
+  <a id="toggle-mode" href="javascript:void(0);" class="toggle-icon">
+    <img style="height: 20px; width:20px;" src="/assets/svg/align-left.svg" class="common-size-icon4" />
+  </a>
+</div>
+    <script src="/assets/js/switchView.js"></script>
+-->
 
 <!-- Модальное окно "Настройки" Рус -->
+
 <div class="modal fade" id="settings" tabindex="-1" aria-labelledby="settingsLabel" aria-hidden="true" data-bs-focus="false">
+
     <div class="modal-dialog modal-dialog-centered">
         <div class="modal-content">
             <div class="modal-header">
@@ -255,27 +240,10 @@
 </div>
 
 
-<!--
-Переключатель режимов 
-<div id="mode-switcher">
-  <a id="toggle-mode" href="javascript:void(0);" class="toggle-icon">
-    <img style="height: 20px; width:20px;" src="/assets/svg/align-left.svg" class="common-size-icon4" />
-  </a>
-</div>
-    <script src="/assets/js/switchView.js"></script>
-
-
-        <div class="btn btn-light mb-1 form-check-inline mb-1" data-bs-html="true" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Buttons:<br><br><strong>Home</strong> - go to main page<br><strong>Switch Theme</strong> - dark, light, auto<br><strong>Collapse / Expand</strong> - all search result enries on the page<br><strong>Words</strong> - results aggregated by words.<br><strong>Pali / Eng</strong> - switch between languages: Pali, Pali-English, English<br><strong>Pali Lookup</strong> - toggle Word Lookup On/Off<br><strong>?</strong> - this help<br><br><br>________________<br><br><strong>Searchbar</strong> - additional filtering for search results<br><br><br>________________<br>Columns:<br><strong>Sutta</strong> - text index e.g. sn56.11, dn22, an10.46<br><br><strong>Title</strong> - text name<br><br><strong>Words</strong> - word matches within the text<br><br><strong>Count</strong> - count of matches within the text<br><br><strong>Metaphor Count</strong> - number of similes, metaphors in the text in general, unrelated to the searched word. Useful to identify metaphorical texts<br><br><strong>Links</strong> - links to external resources<br><br><strong>Type</strong> - 'dhamma' for four main Nikayas, 'khudakka' - for all books of khudakka nikaya, 'vinaya' - for all vinaya related texts<br><br><strong>Quote</strong> - quote with mached word<br><br><br>________________<br><strong>Custom Search Builer</strong> - advanced filtering if basic searchbar is not enough<br>">  
-        <img class="table-home-icon" src="/assets/svg/question.svg"></img>
-        </div>     
-
--->
-    <a class="btn btn-light mb-1 form-check-inline mb-1 toggle-icon" alt="Help" data-bs-toggle="modal" data-bs-target="#SearchResultHelp" id="helpMessage" href="javascript:void(0);">  
-        <img id="helpResult" class="table-home-icon" src="/assets/svg/question.svg"></img>
-        </a>     
-
 <!-- Модальное окно "Помощь Рус" -->
+
 <div class="modal fade" id="SearchResultHelp" tabindex="-1" aria-labelledby="SearchResultHelpLabel" aria-hidden="true"  data-bs-focus="false">
+
     <div class="modal-dialog modal-dialog-centered">
         <div class="modal-content">
             <div class="modal-header">
@@ -482,13 +450,12 @@
    <thead class="thead-light">
         <tr>
             <th>Sutta</th>
-
+            <th>St</th>
             <th>Title</th>
             <th>Words</th>
             <th>Ct</th>
             <th>Mr</th>
             <th>Links</th>
-                        <th>Type</th>
             <th class="none">Quote</th>
         <!-- <th class="none">Audio</th> -->
         </tr>

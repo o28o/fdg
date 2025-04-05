@@ -25,6 +25,9 @@
 </a>
 <button id="language-button" class="btn btn-light mb-1 " type="button">Pāḷi / Eng</button>
 
+<button class="btn btn-light mb-1  toggle-dict-btn" type="button" ><img class="" src="/assets/svg/comment.svg"></img></button>
+
+
         <div class="btn btn-light mb-1 form-check-inline mb-1" data-bs-html="true" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Buttons:<br><br><strong>Home</strong> - go to main page<br><strong>Switch Theme</strong> - dark, light, auto<br><strong>Collapse / Expand</strong> - all search result enries on the page<br><strong>Words</strong> - results aggregated by words.<br><strong>Pali / Eng</strong> - switch between languages: Pali, Pali-English, English<br><strong>?</strong> - this help<br><br><br>________________<br><br><strong>Searchbar</strong> - additional filtering for search results<br><br><br>________________<br>Columns:<br><strong>Sutta</strong> - text index e.g. sn56.11, dn22, an10.46<br><br><strong>Title</strong> - text name<br><br><strong>Words</strong> - word matches within the text<br><br><strong>Count</strong> - count of matches within the text<br><br><strong>Metaphor Count</strong> - number of similes, metaphors in the text in general, unrelated to the searched word. Useful to identify metaphorical texts<br><br><strong>Links</strong> - links to external resources<br><br><strong>Type</strong> - 'dhamma' for four main Nikayas, 'khudakka' - for all books of khudakka nikaya, 'vinaya' - for all vinaya related texts<br><br><strong>Quote</strong> - quote with mached word<br><br><br>________________<br><strong>Custom Search Builer</strong> - advanced filtering if basic searchbar is not enough<br>">  <img class="table-home-icon" src="/assets/svg/question.svg"></img></div>     
       
 <hr>

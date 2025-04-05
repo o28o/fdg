@@ -137,6 +137,7 @@ if (preg_match('/(-def|-sml|-nm|-b|-onl|-tru|-si|-abhi)/', $p)  || preg_match('/
 } 
 elseif (preg_match('/(-anyd)/', $extra)) {
   $fdgscript = "./new/fdgnew.sh";
+  $p = "-kn";
 }
 /* elseif (preg_match('/(-vin)/', $p)) {
   $fdgscript = "./new/fdgnew.sh -src vn";
@@ -410,6 +411,9 @@ if (strpos($outputnonl, 'script') !== false || strpos($outputnonl, 'location.hre
 
     // Добавляем скрытие страницы перед выполнением скриптов
     echo '<script>document.body.style.display = "none";</script>';
+if (preg_match('/(-anyd)/', $extra)) {
+  echo "<script>window.location.href='/result/r.html';</script>";
+}
 
     // Выполняем найденные скрипты
     echo $finaloutput;
@@ -439,9 +443,6 @@ if ($outputnonl !== '<br>' && !empty($outputnonl)) {
     echo "<script>document.getElementById( 'spinner' ).style.display = 'none';</script>";
 }
 
-if (preg_match('/(-anyd)/', $extra)) {
-  echo "<script>window.location.href='/result/r.html';</script>";
-}
 
 /*
 if ( preg_match('/(|-en|-b)/', $p ) && ( preg_match('/(-not-in-|-net-v-)/', $check) )  && ( $p != "-vin" ) && ( $p != "-def" ))  {

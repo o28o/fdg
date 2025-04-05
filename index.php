@@ -1377,7 +1377,7 @@ const resources = [...commonResources, langSpecific];
             });
         });
         console.log('fetching dict');
-    }, 2000);
+    }, 5000);
 });
 </script>
 </body>

@@ -130,23 +130,7 @@ if (isset($_GET['reader'])) {
    	  	$q = test_input($_GET["q"]);
 /* 	  	$pitaka = test_input($_GET["pitaka"]);
  */	  	}
- 
- //для поделиться pwa
 
-if (strpos($q, 'http') !== false || strpos($q, 'https') !== false) {
-    if (preg_match('/"([^"]+)"/u', $q, $matches)) {
-        $q = $matches[1]; // оставить только текст в кавычках
-    } else {
-        $q = ''; // если кавычек нет — очистить
-    }
-}
-
-
-
- 
- 
- 
- 
    	  	// Removing the redundant HTML characters if any exist.
    	  	function test_input($data) {
    	  	$data = trim($data);
@@ -160,6 +144,19 @@ if (strpos($q, 'http') !== false || strpos($q, 'https') !== false) {
   } else {
     $p = test_input($_GET["p"]);
   }
+
+
+ //для поделиться pwa share api 
+if (strpos($q, 'http') !== false || strpos($q, 'https') !== false) {
+    if (preg_match('/"([^"]+)"/u', $q, $matches)) {
+        $q = $matches[1]; // оставить только текст в кавычках
+        $p = '-kn';
+    } else {
+        $q = ''; // если кавычек нет — очистить
+    }
+}
+
+
 	
 	if (empty($_GET["la"])) {
     $la = "";

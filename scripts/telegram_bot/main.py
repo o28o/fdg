@@ -88,6 +88,12 @@ def create_keyboard(query: str) -> InlineKeyboardMarkup:
         [
             InlineKeyboardButton(text="🔎 Dhamma.gift", url=search_url),
             InlineKeyboardButton(text="📚 Словарь", url=dict_url)
+        ],
+        [
+            InlineKeyboardButton(
+                text="✏️ Редактировать", 
+                switch_inline_query_current_chat=query
+            )
         ]
     ])
 
@@ -98,49 +104,8 @@ async def start(update: Update, context: CallbackContext):
     await update.message.reply_text(
         "Добро пожаловать! Используйте:\n"
         "• Прямые запросы (например, 'sn12.2' или 'dukkha')\n"
-        "• /find - поиск сутт\n"
-        "• /read - чтение материалов\n"
-        "• /dict - поиск в словаре\n"
-        "• Для подсказок в любом чате: @dhammagift_bot слово"
-    )
-
-async def find(update: Update, context: CallbackContext):
-    query = " ".join(context.args) if context.args else ""
-    logger.info(f"Поиск: {query} от {update.effective_user.id}")
-    if not query:
-        await update.message.reply_text("Пример: /find sn12.2 или /find dukkhasamudayo")
-        return
-    
-    keyboard = create_keyboard(query)
-    await update.message.reply_text(
-        f"🔍 Поиск: {query}",
-        reply_markup=keyboard
-    )
-
-async def read(update: Update, context: CallbackContext):
-    query = " ".join(context.args) if context.args else ""
-    logger.info(f"Чтение: {query} от {update.effective_user.id}")
-    if not query:
-        await update.message.reply_text("Пример: /read sn12.2")
-        return
-    
-    keyboard = create_keyboard(query)
-    await update.message.reply_text(
-        f"📖 Чтение: {query}",
-        reply_markup=keyboard
-    )
-
-async def dict_search(update: Update, context: CallbackContext):
-    query = " ".join(context.args) if context.args else ""
-    logger.info(f"Словарь: {query} от {update.effective_user.id}")
-    if not query:
-        await update.message.reply_text("Пример: /dict metta или /dict любовь")
-        return
-    
-    keyboard = create_keyboard(query)
-    await update.message.reply_text(
-        f"📚 Словарь: {query}",
-        reply_markup=keyboard
+        "• Для подсказок в любом чате: @dhammagift_bot слово\n"
+        "• Долгое нажатие на подсказку позволяет редактировать слово перед отправкой"
     )
 
 # === Инлайн-режим ===
@@ -161,7 +126,7 @@ async def inline_query(update: Update, context: CallbackContext):
                 id=word,
                 title=word,
                 input_message_content=InputTextMessageContent(word),
-                description=f"Нажмите, чтобы отправить '{word}'",
+                description=f"Нажмите, чтобы отправить '{word}'. Долгое нажатие - редактировать",
                 reply_markup=keyboard
             )
         )
@@ -197,9 +162,6 @@ def main():
 
         # Команды
         app.add_handler(CommandHandler("start", start))
-        app.add_handler(CommandHandler("find", find))
-        app.add_handler(CommandHandler("read", read))
-        app.add_handler(CommandHandler("dict", dict_search))
 
         # Инлайн-режим
         app.add_handler(InlineQueryHandler(inline_query))

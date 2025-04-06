@@ -82,7 +82,7 @@ def autocomplete(prefix: str, max_results: int = 28) -> list[str]:
 # === Создание клавиатуры с кнопками ===
 def create_keyboard(query: str) -> InlineKeyboardMarkup:
     search_url = f"https://dhamma.gift/ru/?p=-kn&q={query.replace(' ', '+')}"
-    dict_url = f"https://dpdict.net/ru/search_html?q={query.replace(' ', '+')}"
+    dict_url = f"https://dict.dhamma.gift/ru/search_html?q={query.replace(' ', '+')}"
     
     return InlineKeyboardMarkup([
         [

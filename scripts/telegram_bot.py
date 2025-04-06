@@ -47,7 +47,7 @@ def load_words():
     except Exception as e:
         logger.error(f"Ошибка загрузки словаря: {e}")
         return []
-
+ 
 WORDS = load_words()
 
 # === Нормализация текста ===

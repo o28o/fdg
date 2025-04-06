@@ -1,6 +1,7 @@
 import json
 import os
 import logging
+from fuzzywuzzy import fuzz, process
 from telegram import (
     Update,
     InlineQueryResultArticle,
@@ -66,15 +67,34 @@ def normalize(text: str) -> str:
         .replace("ū", "u")
     )
 
-# === Автокомплит ===
+# === Автокомплит с fuzzy поиском ===
 def autocomplete(prefix: str, max_results: int = 28) -> list[str]:
     try:
-        prefix_n = normalize(prefix)
-        suggestions = [
-            word for word in WORDS if normalize(word).startswith(prefix_n)
-        ][:max_results]
-        logger.debug(f"Автокомплит для '{prefix}': найдено {len(suggestions)} вариантов")
-        return suggestions
+        if not prefix:
+            return []
+            
+        # Варианты поиска:
+        # 1. Точное совпадение с нормализацией
+        normalized_prefix = normalize(prefix)
+        exact_matches = [
+            word for word in WORDS 
+            if normalize(word).startswith(normalized_prefix)
+        ]
+        
+        # 2. Fuzzy поиск, если точных мало
+        if len(exact_matches) < max_results:
+            fuzzy_matches = process.extract(
+                prefix, 
+                WORDS, 
+                scorer=fuzz.token_sort_ratio, 
+                limit=max_results
+            )
+            # Объединяем результаты, убираем дубли
+            combined = exact_matches + [m[0] for m in fuzzy_matches]
+            return sorted(list(set(combined)), key=len)[:max_results]
+            
+        return exact_matches[:max_results]
+        
     except Exception as e:
         logger.error(f"Ошибка автокомплита: {e}")
         return []

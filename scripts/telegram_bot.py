@@ -150,7 +150,7 @@ async def inline_query(update: Update, context: CallbackContext):
         return
 
     logger.info(f"Инлайн-запрос: '{query}' от {update.inline_query.from_user.id}")
-    suggestions = autocomplete(query, max_results=8)
+    suggestions = autocomplete(query, max_results=28)
 
     results = []
     for word in suggestions:

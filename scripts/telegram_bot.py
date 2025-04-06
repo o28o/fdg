@@ -86,7 +86,7 @@ def create_keyboard(query: str) -> InlineKeyboardMarkup:
     
     return InlineKeyboardMarkup([
         [
-            InlineKeyboardButton(text="🔍 Искать", url=search_url),
+            InlineKeyboardButton(text="🔎 Искать", url=search_url),
             InlineKeyboardButton(text="📚 Словарь", url=dict_url)
         ]
     ])
@@ -97,7 +97,7 @@ async def start(update: Update, context: CallbackContext):
     logger.info(f"Команда /start от {user.id} ({user.full_name})")
     await update.message.reply_text(
         "Добро пожаловать! Используйте:\n"
-        "• Прямые запросы (например, 'sn12.2' или 'метта')\n"
+        "• Прямые запросы (например, 'sn12.2' или 'dukkha')\n"
         "• /find - поиск сутт\n"
         "• /read - чтение материалов\n"
         "• /dict - поиск в словаре\n"

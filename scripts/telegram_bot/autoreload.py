@@ -6,7 +6,7 @@ from watchdog.observers import Observer
 from watchdog.events import FileSystemEventHandler
 
 # Имя файла с вашим ботом
-BOT_FILE = "bot.py"
+BOT_FILE = "main.py"
 # Команда для запуска бота (например, `python bot.py`)
 BOT_COMMAND = [sys.executable, BOT_FILE]
 

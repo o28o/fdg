@@ -1,7 +1,13 @@
 import json
 import os
 import logging
-from telegram import Update, InlineQueryResultArticle, InputTextMessageContent
+from telegram import (
+    Update,
+    InlineQueryResultArticle,
+    InputTextMessageContent,
+    InlineKeyboardButton,
+    InlineKeyboardMarkup
+)
 from telegram.ext import (
     Application,
     CommandHandler,
@@ -128,11 +134,13 @@ async def inline_query(update: Update, context: CallbackContext):
         
         if is_dict_query:
             clean_word = word[:-1].strip()
-            url = f"https://dpdict.net/ru/search_html?q={clean_word.replace(' ', '+')}"
-            message_text = f"{word}\n📚 Словарь: {url}"
+            dict_url = f"https://dpdict.net/ru/search_html?q={clean_word.replace(' ', '+')}"
+            search_url = f"https://dhamma.gift/ru/?q={clean_word.replace(' ', '+')}"
+            message_text = f"{clean_word}"
         else:
-            url = f"https://dhamma.gift/ru/?q={word.replace(' ', '+')}"
-            message_text = f"{word}\n🔍 Поиск: {url}"
+            search_url = f"https://dhamma.gift/ru/?q={word.replace(' ', '+')}"
+            dict_url = f"https://dpdict.net/ru/search_html?q={word.replace(' ', '+')}"
+            message_text = f"{word}"
         
         results.append(
             InlineQueryResultArticle(
@@ -140,6 +148,12 @@ async def inline_query(update: Update, context: CallbackContext):
                 title=word,
                 input_message_content=InputTextMessageContent(message_text),
                 description=f"Нажмите, чтобы отправить '{word}'" + (" (словарь)" if is_dict_query else " (поиск)"),
+                reply_markup=InlineKeyboardMarkup([
+                    [
+                        InlineKeyboardButton(text="🔍 Искать", url=search_url),
+                        InlineKeyboardButton(text="📚 Словарь", url=dict_url)
+                    ]
+                ])
             )
         )
 

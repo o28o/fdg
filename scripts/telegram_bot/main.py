@@ -70,11 +70,21 @@ def normalize(text: str) -> str:
 def autocomplete(prefix: str, max_results: int = 28) -> list[str]:
     try:
         prefix_n = normalize(prefix)
-        suggestions = [
-            word for word in WORDS if normalize(word).startswith(prefix_n)
-        ][:max_results]
+        suggestions = []
+        
+        for word in WORDS:
+            norm_word = normalize(word)
+            # Ищем слова, где нормализованная версия содержит префикс
+            if prefix_n in norm_word:
+                suggestions.append(word)
+                if len(suggestions) >= max_results:
+                    break
+        
+        # Сортируем по наиболее релевантным (сначала те, что начинаются с префикса)
+        suggestions.sort(key=lambda w: not normalize(w).startswith(prefix_n))
+        
         logger.debug(f"Автокомплит для '{prefix}': найдено {len(suggestions)} вариантов")
-        return suggestions
+        return suggestions[:max_results]
     except Exception as e:
         logger.error(f"Ошибка автокомплита: {e}")
         return []

@@ -81,7 +81,7 @@ def autocomplete(prefix: str, max_results: int = 28) -> list[str]:
         return []
 
 # === Создание клавиатуры с кнопками ===
-def create_keyboard(query: str, lang: str = "ru") -> InlineKeyboardMarkup:
+def create_keyboard(query: str, lang: str = "ru", is_inline: bool = False) -> InlineKeyboardMarkup:
     base = "https://dhamma.gift"
     search_url = f"{base}/{'' if lang == 'en' else 'ru/'}?p=-kn&q={query.replace(' ', '+')}"
     dict_url = f"https://dict.dhamma.gift/{'' if lang == 'en' else 'ru/'}/search_html?q={query.replace(' ', '+')}"
@@ -90,12 +90,15 @@ def create_keyboard(query: str, lang: str = "ru") -> InlineKeyboardMarkup:
     label_site = "🔎 Dhamma.gift"
     toggle_label = "EN" if lang == "ru" else "RU"
 
+    # Для инлайн-режима добавляем префикс к callback_data
+    callback_prefix = "inline_" if is_inline else ""
+    
     keyboard = [
         [
             InlineKeyboardButton(text=label_site, url=search_url),
             InlineKeyboardButton(text=label_dict, url=dict_url)
         ],
-        [InlineKeyboardButton(text=toggle_label, callback_data=f"toggle_lang:{lang}")]
+        [InlineKeyboardButton(text=toggle_label, callback_data=f"{callback_prefix}toggle_lang:{lang}:{query}")]
     ]
     return InlineKeyboardMarkup(keyboard)
 
@@ -116,27 +119,24 @@ async def inline_query(update: Update, context: CallbackContext):
         return
 
     logger.info(f"Инлайн-запрос: '{query}' от {update.inline_query.from_user.id}")
-    lang = context.user_data.get("lang", "ru")  # Определяем язык
+    lang = context.user_data.get("lang", "ru")
     suggestions = autocomplete(query, max_results=28)
 
     results = []
     for idx, word in enumerate(suggestions):
-        keyboard = create_keyboard(word, lang=lang)
-        
         results.append(
             InlineQueryResultArticle(
-                id=f"{word}_{idx}",  # Уникальный id
+                id=f"{word}_{idx}",
                 title=word,
                 input_message_content=InputTextMessageContent(word),
                 description=f"Нажмите, чтобы отправить '{word}'",
-                reply_markup=keyboard
+                reply_markup=create_keyboard(word, lang=lang, is_inline=True)
             )
         )
 
     if not results:
         return
 
-    logger.debug(f"Результаты: {[r.id for r in results]}")
     await update.inline_query.answer(results, cache_time=10)
 
 # === Обработка обычных сообщений ===
@@ -154,7 +154,7 @@ async def handle_message(update: Update, context: CallbackContext):
             return
 
     # Все сообщения теперь с кнопками
-    lang = context.user_data.get("lang", "ru")  # Определяем язык
+    lang = context.user_data.get("lang", "ru")
     keyboard = create_keyboard(text, lang=lang)
     await update.message.reply_text(
         text,
@@ -167,28 +167,34 @@ async def toggle_language(update: Update, context: CallbackContext):
     await query.answer()
     
     try:
-        # Получаем текущий язык из callback_data
-        _, current_lang = query.data.split(':')
+        # Разбираем callback_data
+        parts = query.data.split(':')
+        is_inline = parts[0] == 'inline_toggle_lang'
+        current_lang = parts[1]
+        search_query = ':'.join(parts[2:])  # На случай, если query содержит ':'
+        
         new_lang = 'en' if current_lang == 'ru' else 'ru'
         
-        # Получаем текст из оригинального сообщения
-        original_text = query.message.text
-        
-        # Удаляем старое сообщение
-        await query.message.delete()
-        
-        # Отправляем новое сообщение с обновлёнными ссылками
-        await context.bot.send_message(
-            chat_id=query.message.chat_id,
-            text=original_text,
-            reply_markup=create_keyboard(original_text, lang=new_lang)
-        )
-        
+        if is_inline:
+            # В инлайн-режиме редактируем существующий результат
+            await query.edit_message_text(
+                text=search_query,
+                reply_markup=create_keyboard(search_query, lang=new_lang, is_inline=True)
+            )
+        else:
+            # В обычном режиме удаляем старое сообщение и отправляем новое
+            if query.message:
+                await query.message.delete()
+                await context.bot.send_message(
+                    chat_id=query.message.chat_id,
+                    text=search_query,
+                    reply_markup=create_keyboard(search_query, lang=new_lang)
+                )
+            
     except Exception as e:
         logger.error(f"Error in toggle_language: {e}")
-        # Если не получилось удалить, хотя бы отправляем сообщение об ошибке
         if query.message:
-            await query.message.reply_text(f"⚠️ Error changing language")
+            await query.message.reply_text("⚠️ Ошибка при смене языка")
 
 # === Запуск бота ===
 def main():
@@ -205,8 +211,9 @@ def main():
         # Обработка обычных сообщений
         app.add_handler(MessageHandler(filters.TEXT & ~filters.COMMAND, handle_message))
 
-        # Обработчик переключения языка
+        # Обработчики переключения языка (для обоих режимов)
         app.add_handler(CallbackQueryHandler(toggle_language, pattern=r"^toggle_lang:"))
+        app.add_handler(CallbackQueryHandler(toggle_language, pattern=r"^inline_toggle_lang:"))
 
         logger.info("Бот запущен")
         app.run_polling()

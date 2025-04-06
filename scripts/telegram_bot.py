@@ -123,12 +123,23 @@ async def inline_query(update: Update, context: CallbackContext):
 
     results = []
     for word in suggestions:
+        # Определяем, это запрос в словарь (если слово заканчивается на ?)
+        is_dict_query = word.endswith('?')
+        
+        if is_dict_query:
+            clean_word = word[:-1].strip()
+            url = f"https://dpdict.net/ru/search_html?q={clean_word.replace(' ', '+')}"
+            message_text = f"{word}\n📚 Словарь: {url}"
+        else:
+            url = f"https://dhamma.gift/ru/?q={word.replace(' ', '+')}"
+            message_text = f"{word}\n🔍 Поиск: {url}"
+        
         results.append(
             InlineQueryResultArticle(
                 id=word,
                 title=word,
-                input_message_content=InputTextMessageContent(word),
-                description=f"Нажмите, чтобы отправить '{word}'",
+                input_message_content=InputTextMessageContent(message_text),
+                description=f"Нажмите, чтобы отправить '{word}'" + (" (словарь)" if is_dict_query else " (поиск)"),
             )
         )
 

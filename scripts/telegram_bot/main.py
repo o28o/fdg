@@ -88,12 +88,6 @@ def create_keyboard(query: str) -> InlineKeyboardMarkup:
         [
             InlineKeyboardButton(text="🔎 Dhamma.gift", url=search_url),
             InlineKeyboardButton(text="📚 Словарь", url=dict_url)
-        ],
-        [
-            InlineKeyboardButton(
-                text="✏️ Редактировать", 
-                switch_inline_query_current_chat=query
-            )
         ]
     ])
 
@@ -104,9 +98,9 @@ async def start(update: Update, context: CallbackContext):
     await update.message.reply_text(
         "Добро пожаловать! Используйте:\n"
         "• Прямые запросы (например, 'sn12.2' или 'dukkha')\n"
-        "• Для подсказок в любом чате: @dhammagift_bot слово\n"
-        "• Долгое нажатие на подсказку позволяет редактировать слово перед отправкой"
+        "• Для подсказок в любом чате: @dhammagift_bot слово"
     )
+
 
 # === Инлайн-режим ===
 async def inline_query(update: Update, context: CallbackContext):
@@ -126,7 +120,7 @@ async def inline_query(update: Update, context: CallbackContext):
                 id=word,
                 title=word,
                 input_message_content=InputTextMessageContent(word),
-                description=f"Нажмите, чтобы отправить '{word}'. Долгое нажатие - редактировать",
+                description=f"Нажмите, чтобы отправить '{word}'",
                 reply_markup=keyboard
             )
         )

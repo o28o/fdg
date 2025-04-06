@@ -90,16 +90,15 @@ def create_keyboard(query: str, lang: str = "ru", is_inline: bool = False) -> In
     label_site = "🔎 Dhamma.gift"
     toggle_label = "EN" if lang == "ru" else "RU"
 
-    # Для инлайн-режима добавляем префикс к callback_data
     callback_prefix = "inline_" if is_inline else ""
-    
-    keyboard = [
-        [
-            InlineKeyboardButton(text=label_site, url=search_url),
-            InlineKeyboardButton(text=label_dict, url=dict_url)
-        ],
-        [InlineKeyboardButton(text=toggle_label, callback_data=f"{callback_prefix}toggle_lang:{lang}:{query}")]
-    ]
+
+    # Все три кнопки в один ряд
+    keyboard = [[
+        InlineKeyboardButton(text=label_site, url=search_url),
+        InlineKeyboardButton(text=label_dict, url=dict_url),
+        InlineKeyboardButton(text=toggle_label, callback_data=f"{callback_prefix}toggle_lang:{lang}:{query}")
+    ]]
+
     return InlineKeyboardMarkup(keyboard)
 
 # === Обработчики команд ===

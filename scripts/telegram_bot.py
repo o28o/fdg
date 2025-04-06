@@ -13,7 +13,6 @@ from telegram.ext import (
     CommandHandler,
     MessageHandler,
     InlineQueryHandler,
-    CallbackQueryHandler,
     filters,
     CallbackContext,
 )
@@ -143,7 +142,7 @@ async def dict_search(update: Update, context: CallbackContext):
         reply_markup=keyboard
     )
 
-# === Инлайн-режим с редактированием текста в поле ввода ===
+# === Инлайн-режим ===
 async def inline_query(update: Update, context: CallbackContext):
     query = update.inline_query.query.strip()
     if not query or len(query) < 2:
@@ -154,35 +153,19 @@ async def inline_query(update: Update, context: CallbackContext):
 
     results = []
     for word in suggestions:
-        keyboard = InlineKeyboardMarkup([
-            [InlineKeyboardButton(text=f"Выбрать: {word}", callback_data=f"edit:{word}")]
-        ])
+        keyboard = create_keyboard(word)
         
         results.append(
             InlineQueryResultArticle(
                 id=word,
                 title=word,
                 input_message_content=InputTextMessageContent(word),
-                description=f"Нажмите, чтобы редактировать '{word}'",
+                description=f"Нажмите, чтобы отправить '{word}'",
                 reply_markup=keyboard
             )
         )
 
     await update.inline_query.answer(results, cache_time=10)
-
-# === Обработчик нажатия на кнопку подсказки ===
-async def button_handler(update: Update, context: CallbackContext):
-    query = update.callback_query
-    user = query.from_user
-    text = query.data  # Например: "edit:dukkha"
-
-    # Извлекаем слово из текста callback
-    if text.startswith("edit:"):
-        new_text = text[len("edit:"):]
-        # Редактируем текст в поле ввода
-        await query.message.edit_text(f"Вы выбрали: {new_text}\nТеперь можете редактировать")
-        # Отправляем это обратно в поле ввода
-        await query.message.reply_text(f"Редактируйте: {new_text}", reply_markup=create_keyboard(new_text))
 
 # === Обработка обычных сообщений ===
 async def handle_message(update: Update, context: CallbackContext):
@@ -219,9 +202,6 @@ def main():
 
         # Инлайн-режим
         app.add_handler(InlineQueryHandler(inline_query))
-
-        # Обработка кнопок
-        app.add_handler(CallbackQueryHandler(button_handler))
 
         # Обработка обычных сообщений
         app.add_handler(MessageHandler(filters.TEXT & ~filters.COMMAND, handle_message))

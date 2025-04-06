@@ -93,9 +93,11 @@ def create_keyboard(query: str, lang: str = "ru", is_inline: bool = False) -> In
     callback_prefix = "inline_" if is_inline else ""
 
     keyboard = [
-        [  # Первый ряд: язык + словарь + поиск
+        [  # Первый ряд: язык + словарь
             InlineKeyboardButton(text=toggle_label, callback_data=f"{callback_prefix}toggle_lang:{lang}:{query}"),
             InlineKeyboardButton(text=label_dict, url=dict_url),
+        ],
+        [  # Второй ряд: dhamma.gift
             InlineKeyboardButton(text=label_site, url=search_url),
         ]
     ]

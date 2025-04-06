@@ -13,6 +13,7 @@ from telegram.ext import (
     CommandHandler,
     MessageHandler,
     InlineQueryHandler,
+    CallbackQueryHandler,
     filters,
     CallbackContext,
 )
@@ -80,16 +81,23 @@ def autocomplete(prefix: str, max_results: int = 28) -> list[str]:
         return []
 
 # === Создание клавиатуры с кнопками ===
-def create_keyboard(query: str) -> InlineKeyboardMarkup:
-    search_url = f"https://dhamma.gift/ru/?p=-kn&q={query.replace(' ', '+')}"
-    dict_url = f"https://dict.dhamma.gift/ru/search_html?q={query.replace(' ', '+')}"
-    
-    return InlineKeyboardMarkup([
+def create_keyboard(query: str, lang: str = "ru") -> InlineKeyboardMarkup:
+    base = "https://dhamma.gift"
+    search_url = f"{base}/{'' if lang == 'en' else 'ru/'}?p=-kn&q={query.replace(' ', '+')}"
+    dict_url = f"https://dict.dhamma.gift/{'' if lang == 'en' else 'ru/'}/search_html?q={query.replace(' ', '+')}"
+
+    label_dict = "📚 Dictionary" if lang == "en" else "📚 Словарь"
+    label_site = "🔎 Dhamma.gift"
+    toggle_label = "EN" if lang == "ru" else "RU"
+
+    keyboard = [
         [
-            InlineKeyboardButton(text="🔎 Dhamma.gift", url=search_url),
-            InlineKeyboardButton(text="📚 Словарь", url=dict_url)
-        ]
-    ])
+            InlineKeyboardButton(text=label_site, url=search_url),
+            InlineKeyboardButton(text=label_dict, url=dict_url)
+        ],
+        [InlineKeyboardButton(text=toggle_label, callback_data=f"toggle_lang:{lang}")]
+    ]
+    return InlineKeyboardMarkup(keyboard)
 
 # === Обработчики команд ===
 async def start(update: Update, context: CallbackContext):
@@ -101,7 +109,6 @@ async def start(update: Update, context: CallbackContext):
         "• Для подсказок в любом чате: @dhammagift_bot слово"
     )
 
-
 # === Инлайн-режим ===
 async def inline_query(update: Update, context: CallbackContext):
     query = update.inline_query.query.strip()
@@ -109,11 +116,12 @@ async def inline_query(update: Update, context: CallbackContext):
         return
 
     logger.info(f"Инлайн-запрос: '{query}' от {update.inline_query.from_user.id}")
+    lang = context.user_data.get("lang", "ru")  # Определяем язык
     suggestions = autocomplete(query, max_results=28)
 
     results = []
     for idx, word in enumerate(suggestions):
-        keyboard = create_keyboard(word)
+        keyboard = create_keyboard(word, lang=lang)
         
         results.append(
             InlineQueryResultArticle(
@@ -146,11 +154,25 @@ async def handle_message(update: Update, context: CallbackContext):
             return
 
     # Все сообщения теперь с кнопками
-    keyboard = create_keyboard(text)
+    lang = context.user_data.get("lang", "ru")  # Определяем язык
+    keyboard = create_keyboard(text, lang=lang)
     await update.message.reply_text(
         text,
         reply_markup=keyboard
     )
+
+# === Обработчик переключения языка ===
+async def toggle_language(update: Update, context: CallbackContext):
+    query = update.callback_query
+    await query.answer()
+
+    current_lang = query.data.split(":")[1]
+    new_lang = "en" if current_lang == "ru" else "ru"
+    context.user_data["lang"] = new_lang  # Сохраняем новый язык
+
+    text = query.message.text
+    keyboard = create_keyboard(text, lang=new_lang)
+    await query.edit_message_reply_markup(reply_markup=keyboard)
 
 # === Запуск бота ===
 def main():
@@ -166,6 +188,9 @@ def main():
 
         # Обработка обычных сообщений
         app.add_handler(MessageHandler(filters.TEXT & ~filters.COMMAND, handle_message))
+
+        # Обработчик переключения языка
+        app.add_handler(CallbackQueryHandler(toggle_language, pattern=r"^toggle_lang:"))
 
         logger.info("Бот запущен")
         app.run_polling()

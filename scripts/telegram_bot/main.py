@@ -1,8 +1,6 @@
 import json
 import os
-import re
 import logging
-from typing import List, Dict
 from telegram import (
     Update,
     InlineQueryResultArticle,
@@ -38,42 +36,8 @@ except Exception as e:
     logger.error(f"Ошибка загрузки конфига: {e}")
     raise
 
-# === Карта нормализации символов ===
-ACCENT_MAP = {
-    "ā": "a",
-    "ī": "i",
-    "ū": "u",
-    "ḍ": "d",
-    "ḷ": "l",
-    "ṃ": "m",
-    "ṁ": "m",
-    "ṅ": "n",
-    "ṇ": "n",
-    "ṭ": "t",
-    "ñ": "n",
-    "ññ": "n",
-    "ss": "s",
-    "aa": "a",
-    "ii": "i",
-    "uu": "u",
-    "dd": "d",
-    "kk": "k",
-    "ḍḍ": "d",
-    "ḷḷ": "l",
-    "ṇṇ": "n",
-    "ṭṭ": "t",
-    "cc": "c",
-    "pp": "p",
-    "cch": "c",
-    "ch": "c",
-    "kh": "k",
-    "ph": "p",
-    "th": "t",
-    "ṭh": "t"
-}
-
 # === Загрузка словаря ===
-def load_words() -> List[str]:
+def load_words():
     try:
         path = os.path.join("assets", "sutta_words.txt")
         with open(path, "r", encoding="utf-8") as f:
@@ -88,47 +52,29 @@ WORDS = load_words()
 
 # === Нормализация текста ===
 def normalize(text: str) -> str:
-    """Нормализация слова с учетом ACCENT_MAP"""
-    return "".join(ACCENT_MAP.get(c, c) for c in text.lower())
+    return (
+        text.lower()
+        .replace("ṁ", "m")
+        .replace("ṃ", "m")
+        .replace("ṭ", "t")
+        .replace("ḍ", "d")
+        .replace("ṇ", "n")
+        .replace("ṅ", "n")
+        .replace("ñ", "n")
+        .replace("ā", "a")
+        .replace("ī", "i")
+        .replace("ū", "u")
+    )
 
-# === Улучшенный автокомплит ===
-def autocomplete(prefix: str, min_length: int = 2, max_results: int = 28) -> List[str]:
-    """
-    Улучшенный автокомплит с логикой как в JS-коде:
-    1. Сначала слова, начинающиеся с префикса
-    2. Затем слова, содержащие префикс
-    3. Минимальная длина префикса для поиска
-    """
+# === Автокомплит ===
+def autocomplete(prefix: str, max_results: int = 28) -> list[str]:
     try:
-        if not prefix or len(prefix) < min_length:
-            return []
-
-        normalized_prefix = normalize(prefix)
-        
-        # Экранируем для regex и добавляем {1,2} для каждой буквы (как в JS-коде)
-        re_prefix = re.escape(normalized_prefix)
-        modified_re = re.sub(r"([a-zA-Z])", r"\1{1,2}", re_prefix)
-        
-        # Регулярки для поиска
-        match_begin = re.compile(f"^{modified_re}", re.IGNORECASE)
-        match_anywhere = re.compile(f"{modified_re}", re.IGNORECASE)
-        
-        # Сначала слова, начинающиеся с префикса
-        begin_matches = [
-            word for word in WORDS
-            if match_begin.search(normalize(word))
-        ]
-        
-        # Затем слова, содержащие префикс (но не начинающиеся с него)
-        other_matches = [
-            word for word in WORDS
-            if match_anywhere.search(normalize(word)) and word not in begin_matches
-        ]
-        
-        # Объединяем и ограничиваем количество результатов
-        results = (begin_matches + other_matches)[:max_results]
-        logger.debug(f"Автокомплит для '{prefix}': найдено {len(results)} вариантов")
-        return results
+        prefix_n = normalize(prefix)
+        suggestions = [
+            word for word in WORDS if normalize(word).startswith(prefix_n)
+        ][:max_results]
+        logger.debug(f"Автокомплит для '{prefix}': найдено {len(suggestions)} вариантов")
+        return suggestions
     except Exception as e:
         logger.error(f"Ошибка автокомплита: {e}")
         return []
@@ -154,6 +100,7 @@ async def start(update: Update, context: CallbackContext):
         "• Прямые запросы (например, 'sn12.2' или 'dukkha')\n"
         "• Для подсказок в любом чате: @dhammagift_bot слово"
     )
+
 
 # === Инлайн-режим ===
 async def inline_query(update: Update, context: CallbackContext):

@@ -112,12 +112,12 @@ async def inline_query(update: Update, context: CallbackContext):
     suggestions = autocomplete(query, max_results=28)
 
     results = []
-    for word in suggestions:
+    for idx, word in enumerate(suggestions):
         keyboard = create_keyboard(word)
         
         results.append(
             InlineQueryResultArticle(
-                id=word,
+                id=f"{word}_{idx}",  # Уникальный id
                 title=word,
                 input_message_content=InputTextMessageContent(word),
                 description=f"Нажмите, чтобы отправить '{word}'",
@@ -125,6 +125,10 @@ async def inline_query(update: Update, context: CallbackContext):
             )
         )
 
+    if not results:
+        return
+
+    logger.debug(f"Результаты: {[r.id for r in results]}")
     await update.inline_query.answer(results, cache_time=10)
 
 # === Обработка обычных сообщений ===

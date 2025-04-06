@@ -84,20 +84,23 @@ def autocomplete(prefix: str, max_results: int = 28) -> list[str]:
 def create_keyboard(query: str, lang: str = "ru", is_inline: bool = False) -> InlineKeyboardMarkup:
     base = "https://dhamma.gift"
     search_url = f"{base}/{'' if lang == 'en' else 'ru/'}?p=-kn&q={query.replace(' ', '+')}"
-    dict_url = f"https://dict.dhamma.gift/{'' if lang == 'en' else 'ru/'}search_html?q={query.replace(' ', '+')}"
+    dict_url = f"https://dict.dhamma.gift/{'' if lang == 'en' else 'ru/'}/search_html?q={query.replace(' ', '+')}"
 
-    label_dict = "📚 Dictionary" if lang == "en" else "📚 Словарь"
+    label_dict = "📘 Dict" if lang == "en" else "📘 Словарь"
     label_site = "🔎 Dhamma.gift"
     toggle_label = "EN" if lang == "ru" else "RU"
 
     callback_prefix = "inline_" if is_inline else ""
 
-    # Все три кнопки в один ряд
-    keyboard = [[
-        InlineKeyboardButton(text=label_site, url=search_url),
-        InlineKeyboardButton(text=label_dict, url=dict_url),
-        InlineKeyboardButton(text=toggle_label, callback_data=f"{callback_prefix}toggle_lang:{lang}:{query}")
-    ]]
+    keyboard = [
+        [  # Первый ряд: язык + словарь
+            InlineKeyboardButton(text=toggle_label, callback_data=f"{callback_prefix}toggle_lang:{lang}:{query}"),
+            InlineKeyboardButton(text=label_dict, url=dict_url),
+        ],
+        [  # Второй ряд: dhamma.gift
+            InlineKeyboardButton(text=label_site, url=search_url),
+        ]
+    ]
 
     return InlineKeyboardMarkup(keyboard)
 

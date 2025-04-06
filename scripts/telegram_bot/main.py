@@ -51,29 +51,38 @@ def load_words():
  
 WORDS = load_words()
 
-# === Нормализация текста ===
 def normalize(text: str) -> str:
+    """Нормализация текста с учетом возможных замен из uniCoder"""
+    if not text:
+        return text
+    
+    # Сначала преобразуем возможные комбинации в их конечную форму
+    text = text.lower()
+    replacements = [
+        ("aa", "a"), ("ii", "i"), ("uu", "u"),
+        ('"n', "n"), ("~n", "n"),
+        (".t", "t"), (".d", "d"), (".n", "n"),
+        (".m", "m"), (".l", "l"), (".h", "h")
+    ]
+    for pattern, repl in replacements:
+        text = text.replace(pattern, repl)
+    
+    # Затем стандартная нормализация
     return (
-        text.lower()
-        .replace("ṁ", "m")
-        .replace("ṃ", "m")
-        .replace("ṭ", "t")
-        .replace("ḍ", "d")
-        .replace("ṇ", "n")
-        .replace("ṅ", "n")
-        .replace("ñ", "n")
-        .replace("ā", "a")
-        .replace("ī", "i")
-        .replace("ū", "u")
+        text.replace("ṁ", "m").replace("ṃ", "m")
+        .replace("ṭ", "t").replace("ḍ", "d")
+        .replace("ṇ", "n").replace("ṅ", "n")
+        .replace("ñ", "n").replace("ā", "a")
+        .replace("ī", "i").replace("ū", "u")
         .replace(".", " ")
     )
 
-# === Автокомплит ===
-def autocomplete(prefix: str, max_results: int = 28) -> list[str]:
+def autocomplete(prefix: str, max_results: int = 29) -> list[str]:
     try:
         prefix_n = normalize(prefix)
         suggestions = [
-            word for word in WORDS if normalize(word).startswith(prefix_n)
+            word for word in WORDS 
+            if normalize(word).startswith(prefix_n)
         ][:max_results]
         logger.debug(f"Автокомплит для '{prefix}': найдено {len(suggestions)} вариантов")
         return suggestions
@@ -134,22 +143,56 @@ async def start(update: Update, context: CallbackContext):
 # === Инлайн-режим ===
 async def inline_query(update: Update, context: CallbackContext):
     query = update.inline_query.query.strip()
-    if not query or len(query) < 2:
+    if not query:
         return
 
     logger.info(f"Инлайн-запрос: '{query}' от {update.inline_query.from_user.id}")
     lang = context.user_data.get("lang", "ru")
-    suggestions = autocomplete(query, max_results=28)
+    
+    # Получаем больше результатов, чтобы учесть пользовательский текст
+    suggestions = autocomplete(query, max_results=29)  # Увеличили лимит
 
     results = []
-    for idx, word in enumerate(suggestions):
-        message_text = format_message_with_links(word, word, lang=lang)
+    
+    # Оптимизированная функция преобразования
+    def uniCoder(text):
+        if not text:
+            return text
+        replacements = [
+            ("aa", "ā"), ("ii", "ī"), ("uu", "ū"),
+            ('"n', "ṅ"), ("~n", "ñ"),
+            (".t", "ṭ"), (".d", "ḍ"), (".n", "ṇ"),
+            (".m", "ṃ"), (".l", "ḷ"), (".h", "ḥ")
+        ]
+        for pattern, repl in replacements:
+            text = text.replace(pattern, repl)
+        return text
+    
+    # Добавляем пользовательский текст (после преобразования)
+    converted_text = uniCoder(query)
+    if converted_text:  # Только если есть что преобразовывать
         results.append(
             InlineQueryResultArticle(
-                id=f"{word}_{idx}",
+                id="user_input",  # Уникальный ID
+                title=f"✏️ Отправить: {converted_text}",
+                input_message_content=InputTextMessageContent(
+                    format_message_with_links(converted_text, converted_text, lang=lang),
+                    parse_mode="HTML",
+                    disable_web_page_preview=True
+                ),
+                description="Ваш текст с преобразованными символами",
+                reply_markup=create_keyboard(converted_text, lang=lang, is_inline=True)
+            )
+        )
+
+    # Добавляем подсказки из словаря
+    for idx, word in enumerate(suggestions[:29]):  # На всякий случай ограничиваем
+        results.append(
+            InlineQueryResultArticle(
+                id=f"dict_{idx}",  # Более понятные ID
                 title=word,
                 input_message_content=InputTextMessageContent(
-                    message_text,
+                    format_message_with_links(word, word, lang=lang),
                     parse_mode="HTML",
                     disable_web_page_preview=True
                 ),
@@ -157,9 +200,6 @@ async def inline_query(update: Update, context: CallbackContext):
                 reply_markup=create_keyboard(word, lang=lang, is_inline=True)
             )
         )
-
-    if not results:
-        return
 
     await update.inline_query.answer(results, cache_time=10)
 

@@ -87,7 +87,7 @@ def create_keyboard(query: str, lang: str = "ru", is_inline: bool = False) -> In
     dict_url = f"https://dict.dhamma.gift/{'' if lang == 'en' else 'ru/'}/search_html?q={query.replace(' ', '+')}"
 
     label_dict = "📘 Dictionary" if lang == "en" else "📘 Словарь"
-    label_site = "🔎 Dhamma.gift"
+    label_site = "🔎 Dhamma.gift" if lang == "en" else "🔎 Dhamma.gift"
     toggle_label = "EN" if lang == "ru" else "RU"
 
     callback_prefix = "inline_" if is_inline else ""
@@ -103,6 +103,18 @@ def create_keyboard(query: str, lang: str = "ru", is_inline: bool = False) -> In
     ]
 
     return InlineKeyboardMarkup(keyboard)
+
+# === Форматирование текста с кнопками ===
+def format_message_with_buttons(text: str, query: str, lang: str = "ru") -> str:
+    base = "https://dhamma.gift"
+    search_url = f"{base}/{'' if lang == 'en' else 'ru/'}?p=-kn&q={query.replace(' ', '+')}"
+    dict_url = f"https://dict.dhamma.gift/{'' if lang == 'en' else 'ru/'}/search_html?q={query.replace(' ', '+')}"
+
+    label_dict = "📘 Dictionary" if lang == "en" else "📘 Словарь"
+    label_site = "🔎 Dhamma.gift" if lang == "en" else "🔎 Dhamma.gift"
+
+    buttons_text = f"\n\n{label_site}: {search_url}\n{label_dict}: {dict_url}"
+    return text + buttons_text
 
 # === Обработчики команд ===
 async def start(update: Update, context: CallbackContext):
@@ -126,11 +138,12 @@ async def inline_query(update: Update, context: CallbackContext):
 
     results = []
     for idx, word in enumerate(suggestions):
+        message_text = format_message_with_buttons(word, word, lang=lang)
         results.append(
             InlineQueryResultArticle(
                 id=f"{word}_{idx}",
                 title=word,
-                input_message_content=InputTextMessageContent(word),
+                input_message_content=InputTextMessageContent(message_text),
                 description=f"Нажмите, чтобы отправить '{word}'",
                 reply_markup=create_keyboard(word, lang=lang, is_inline=True)
             )
@@ -155,12 +168,15 @@ async def handle_message(update: Update, context: CallbackContext):
             await update.message.reply_text(reply)
             return
 
-    # Все сообщения теперь с кнопками
+    # Все сообщения теперь с кнопками и текстовыми ссылками
     lang = context.user_data.get("lang", "ru")
+    message_text = format_message_with_buttons(text, text, lang=lang)
     keyboard = create_keyboard(text, lang=lang)
+    
     await update.message.reply_text(
-        text,
-        reply_markup=keyboard
+        message_text,
+        reply_markup=keyboard,
+        disable_web_page_preview=True
     )
 
 # === Обработчик переключения языка ===
@@ -176,22 +192,24 @@ async def toggle_language(update: Update, context: CallbackContext):
         search_query = ':'.join(parts[2:])  # На случай, если query содержит ':'
         
         new_lang = 'en' if current_lang == 'ru' else 'ru'
+        context.user_data["lang"] = new_lang  # Сохраняем выбор пользователя
+        
+        message_text = format_message_with_buttons(search_query, search_query, lang=new_lang)
         
         if is_inline:
             # В инлайн-режиме редактируем существующий результат
             await query.edit_message_text(
-                text=search_query,
-                reply_markup=create_keyboard(search_query, lang=new_lang, is_inline=True)
+                text=message_text,
+                reply_markup=create_keyboard(search_query, lang=new_lang, is_inline=True),
+                disable_web_page_preview=True
             )
         else:
-            # В обычном режиме удаляем старое сообщение и отправляем новое
-            if query.message:
-                await query.message.delete()
-                await context.bot.send_message(
-                    chat_id=query.message.chat_id,
-                    text=search_query,
-                    reply_markup=create_keyboard(search_query, lang=new_lang)
-                )
+            # В обычном режиме редактируем сообщение
+            await query.edit_message_text(
+                text=message_text,
+                reply_markup=create_keyboard(search_query, lang=new_lang),
+                disable_web_page_preview=True
+            )
             
     except Exception as e:
         logger.error(f"Error in toggle_language: {e}")

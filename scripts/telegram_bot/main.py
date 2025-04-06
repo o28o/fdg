@@ -86,7 +86,7 @@ def create_keyboard(query: str, lang: str = "ru", is_inline: bool = False) -> In
     search_url = f"{base}/{'' if lang == 'en' else 'ru/'}?p=-kn&q={query.replace(' ', '+')}"
     dict_url = f"https://dict.dhamma.gift/{'' if lang == 'en' else 'ru/'}/search_html?q={query.replace(' ', '+')}"
 
-    label_dict = "📘 Dict" if lang == "en" else "📘 Словарь"
+    label_dict = "📘 Dictionary" if lang == "en" else "📘 Словарь"
     label_site = "🔎 Dhamma.gift"
     toggle_label = "EN" if lang == "ru" else "RU"
 

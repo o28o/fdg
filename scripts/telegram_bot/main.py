@@ -166,13 +166,21 @@ async def toggle_language(update: Update, context: CallbackContext):
     query = update.callback_query
     await query.answer()
 
+    # Определяем текущий язык
     current_lang = query.data.split(":")[1]
     new_lang = "en" if current_lang == "ru" else "ru"
     context.user_data["lang"] = new_lang  # Сохраняем новый язык
 
-    text = query.message.text
-    keyboard = create_keyboard(text, lang=new_lang)
-    await query.edit_message_reply_markup(reply_markup=keyboard)
+    # Получаем текст из исходного сообщения или создаём новый
+    if query.message.text:
+        text = query.message.text
+        await query.edit_message_reply_markup(reply_markup=create_keyboard(text, lang=new_lang))
+    else:
+        # Если текста нет, отправляем новое сообщение с переключенной клавиатурой
+        await query.message.reply_text(
+            "Вы изменили язык.",
+            reply_markup=create_keyboard("Вы изменили язык.", lang=new_lang)
+        )
 
 # === Запуск бота ===
 def main():

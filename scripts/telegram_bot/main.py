@@ -65,6 +65,7 @@ def normalize(text: str) -> str:
         .replace("ā", "a")
         .replace("ī", "i")
         .replace("ū", "u")
+        .replace(".", " ")
     )
 
 # === Автокомплит ===
@@ -87,7 +88,7 @@ def create_keyboard(query: str, lang: str = "ru", is_inline: bool = False) -> In
     dict_url = f"https://dict.dhamma.gift/{'' if lang == 'en' else 'ru/'}/search_html?q={query.replace(' ', '+')}"
 
     label_dict = "📘 Dictionary" if lang == "en" else "📘 Словарь"
-    label_site = "🔍 Dhamma.gift" if lang == "en" else "🔍 Dhamma.gift"
+    label_site = "🔎 Dhamma.gift" if lang == "en" else "🔎 Dhamma.gift"
     toggle_label = "EN" if lang == "ru" else "RU"
 
     callback_prefix = "inline_" if is_inline else ""
@@ -111,7 +112,7 @@ def format_message_with_links(text: str, query: str, lang: str = "ru") -> str:
     dict_url = f"https://dict.dhamma.gift/{'' if lang == 'en' else 'ru/'}/search_html?q={query.replace(' ', '+')}"
 
     label_dict = "📘 Dictionary" if lang == "en" else "📘 Словарь"
-    label_site = "🔍 Dhamma.gift" if lang == "en" else "🔍 Dhamma.gift"
+    label_site = "🔎 Dhamma.gift" if lang == "en" else "🔎 Dhamma.gift"
 
     # Используем HTML разметку для кликабельных ссылок
     links_text = (

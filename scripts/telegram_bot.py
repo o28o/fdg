@@ -78,6 +78,18 @@ def autocomplete(prefix: str, max_results: int = 10) -> list[str]:
         logger.error(f"Ошибка автокомплита: {e}")
         return []
 
+# === Создание клавиатуры с кнопками ===
+def create_keyboard(query: str) -> InlineKeyboardMarkup:
+    search_url = f"https://dhamma.gift/ru/?q={query.replace(' ', '+')}"
+    dict_url = f"https://dpdict.net/ru/search_html?q={query.replace(' ', '+')}"
+    
+    return InlineKeyboardMarkup([
+        [
+            InlineKeyboardButton(text="🔍 Искать", url=search_url),
+            InlineKeyboardButton(text="📚 Словарь", url=dict_url)
+        ]
+    ])
+
 # === Обработчики команд ===
 async def start(update: Update, context: CallbackContext):
     user = update.effective_user
@@ -97,8 +109,12 @@ async def find(update: Update, context: CallbackContext):
     if not query:
         await update.message.reply_text("Пример: /find sn12.2 или /find метта")
         return
-    url = f"https://dhamma.gift/ru/?q={query.replace(' ', '+')}"
-    await update.message.reply_text(f"🔍 Поиск: {query}\n{url}")
+    
+    keyboard = create_keyboard(query)
+    await update.message.reply_text(
+        f"🔍 Поиск: {query}",
+        reply_markup=keyboard
+    )
 
 async def read(update: Update, context: CallbackContext):
     query = " ".join(context.args) if context.args else ""
@@ -106,8 +122,12 @@ async def read(update: Update, context: CallbackContext):
     if not query:
         await update.message.reply_text("Пример: /read sn12.2 или /read метта")
         return
-    url = f"https://dhamma.gift/r/?q={query.replace(' ', '+')}"
-    await update.message.reply_text(f"📖 Чтение: {query}\n{url}")
+    
+    keyboard = create_keyboard(query)
+    await update.message.reply_text(
+        f"📖 Чтение: {query}",
+        reply_markup=keyboard
+    )
 
 async def dict_search(update: Update, context: CallbackContext):
     query = " ".join(context.args) if context.args else ""
@@ -115,10 +135,14 @@ async def dict_search(update: Update, context: CallbackContext):
     if not query:
         await update.message.reply_text("Пример: /dict metta или /dict любовь")
         return
-    url = f"https://dpdict.net/ru/search_html?q={query.replace(' ', '+')}"
-    await update.message.reply_text(f"📚 Словарь: {query}\n{url}")
+    
+    keyboard = create_keyboard(query)
+    await update.message.reply_text(
+        f"📚 Словарь: {query}",
+        reply_markup=keyboard
+    )
 
-# === Инлайн-режим (доп. функция) ===
+# === Инлайн-режим ===
 async def inline_query(update: Update, context: CallbackContext):
     query = update.inline_query.query.strip()
     if not query or len(query) < 2:
@@ -129,31 +153,15 @@ async def inline_query(update: Update, context: CallbackContext):
 
     results = []
     for word in suggestions:
-        # Определяем, это запрос в словарь (если слово заканчивается на ?)
-        is_dict_query = word.endswith('?')
-        
-        if is_dict_query:
-            clean_word = word[:-1].strip()
-            dict_url = f"https://dpdict.net/ru/search_html?q={clean_word.replace(' ', '+')}"
-            search_url = f"https://dhamma.gift/ru/?q={clean_word.replace(' ', '+')}"
-            message_text = f"{clean_word}"
-        else:
-            search_url = f"https://dhamma.gift/ru/?q={word.replace(' ', '+')}"
-            dict_url = f"https://dpdict.net/ru/search_html?q={word.replace(' ', '+')}"
-            message_text = f"{word}"
+        keyboard = create_keyboard(word)
         
         results.append(
             InlineQueryResultArticle(
                 id=word,
                 title=word,
-                input_message_content=InputTextMessageContent(message_text),
-                description=f"Нажмите, чтобы отправить '{word}'" + (" (словарь)" if is_dict_query else " (поиск)"),
-                reply_markup=InlineKeyboardMarkup([
-                    [
-                        InlineKeyboardButton(text="🔍 Искать", url=search_url),
-                        InlineKeyboardButton(text="📚 Словарь", url=dict_url)
-                    ]
-                ])
+                input_message_content=InputTextMessageContent(word),
+                description=f"Нажмите, чтобы отправить '{word}'",
+                reply_markup=keyboard
             )
         )
 
@@ -173,14 +181,12 @@ async def handle_message(update: Update, context: CallbackContext):
             await update.message.reply_text(reply)
             return
 
-    # Поиск в словаре (если заканчивается на ?)
-    if text.endswith('?'):
-        query = text[:-1].strip()
-        context.args = query.split()
-        await dict_search(update, context)
-    else:
-        context.args = text.split()
-        await find(update, context)
+    # Все сообщения теперь с кнопками
+    keyboard = create_keyboard(text)
+    await update.message.reply_text(
+        text,
+        reply_markup=keyboard
+    )
 
 # === Запуск бота ===
 def main():
@@ -194,7 +200,7 @@ def main():
         app.add_handler(CommandHandler("read", read))
         app.add_handler(CommandHandler("dict", dict_search))
 
-        # Инлайн-режим (дополнительная функция)
+        # Инлайн-режим
         app.add_handler(InlineQueryHandler(inline_query))
 
         # Обработка обычных сообщений

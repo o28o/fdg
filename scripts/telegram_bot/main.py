@@ -84,7 +84,7 @@ def autocomplete(prefix: str, max_results: int = 28) -> list[str]:
 def create_keyboard(query: str, lang: str = "ru", is_inline: bool = False) -> InlineKeyboardMarkup:
     base = "https://dhamma.gift"
     search_url = f"{base}/{'' if lang == 'en' else 'ru/'}?p=-kn&q={query.replace(' ', '+')}"
-    dict_url = f"https://dict.dhamma.gift/{'' if lang == 'en' else 'ru/'}/search_html?q={query.replace(' ', '+')}"
+    dict_url = f"https://dict.dhamma.gift/{'' if lang == 'en' else 'ru/'}search_html?q={query.replace(' ', '+')}"
 
     label_dict = "📚 Dictionary" if lang == "en" else "📚 Словарь"
     label_site = "🔎 Dhamma.gift"

@@ -87,34 +87,36 @@ def create_keyboard(query: str, lang: str = "ru", is_inline: bool = False) -> In
     dict_url = f"https://dict.dhamma.gift/{'' if lang == 'en' else 'ru/'}/search_html?q={query.replace(' ', '+')}"
 
     label_dict = "📘 Dictionary" if lang == "en" else "📘 Словарь"
-    label_site = "🔎 Dhamma.gift" if lang == "en" else "🔎 Dhamma.gift"
+    label_site = "🔍 Dhamma.gift" if lang == "en" else "🔍 Dhamma.gift"
     toggle_label = "EN" if lang == "ru" else "RU"
 
     callback_prefix = "inline_" if is_inline else ""
 
     keyboard = [
-        [  # Первый ряд: язык + словарь
+        [  # Первый ряд: язык + словарь + поиск
             InlineKeyboardButton(text=toggle_label, callback_data=f"{callback_prefix}toggle_lang:{lang}:{query}"),
             InlineKeyboardButton(text=label_dict, url=dict_url),
-        ],
-        [  # Второй ряд: dhamma.gift
             InlineKeyboardButton(text=label_site, url=search_url),
         ]
     ]
 
     return InlineKeyboardMarkup(keyboard)
 
-# === Форматирование текста с кнопками ===
-def format_message_with_buttons(text: str, query: str, lang: str = "ru") -> str:
+# === Форматирование текста с кликабельными ссылками ===
+def format_message_with_links(text: str, query: str, lang: str = "ru") -> str:
     base = "https://dhamma.gift"
     search_url = f"{base}/{'' if lang == 'en' else 'ru/'}?p=-kn&q={query.replace(' ', '+')}"
     dict_url = f"https://dict.dhamma.gift/{'' if lang == 'en' else 'ru/'}/search_html?q={query.replace(' ', '+')}"
 
     label_dict = "📘 Dictionary" if lang == "en" else "📘 Словарь"
-    label_site = "🔎 Dhamma.gift" if lang == "en" else "🔎 Dhamma.gift"
+    label_site = "🔍 Dhamma.gift" if lang == "en" else "🔍 Dhamma.gift"
 
-    buttons_text = f"\n\n{label_site}: {search_url}\n{label_dict}: {dict_url}"
-    return text + buttons_text
+    # Используем HTML разметку для кликабельных ссылок
+    links_text = (
+        f'<a href="{search_url}">{label_site}</a> | '
+        f'<a href="{dict_url}">{label_dict}</a>'
+    )
+    return f"{text}\n\n{links_text}"
 
 # === Обработчики команд ===
 async def start(update: Update, context: CallbackContext):
@@ -138,12 +140,16 @@ async def inline_query(update: Update, context: CallbackContext):
 
     results = []
     for idx, word in enumerate(suggestions):
-        message_text = format_message_with_buttons(word, word, lang=lang)
+        message_text = format_message_with_links(word, word, lang=lang)
         results.append(
             InlineQueryResultArticle(
                 id=f"{word}_{idx}",
                 title=word,
-                input_message_content=InputTextMessageContent(message_text),
+                input_message_content=InputTextMessageContent(
+                    message_text,
+                    parse_mode="HTML",
+                    disable_web_page_preview=True
+                ),
                 description=f"Нажмите, чтобы отправить '{word}'",
                 reply_markup=create_keyboard(word, lang=lang, is_inline=True)
             )
@@ -168,14 +174,15 @@ async def handle_message(update: Update, context: CallbackContext):
             await update.message.reply_text(reply)
             return
 
-    # Все сообщения теперь с кнопками и текстовыми ссылками
+    # Все сообщения теперь с кликабельными ссылками и кнопками
     lang = context.user_data.get("lang", "ru")
-    message_text = format_message_with_buttons(text, text, lang=lang)
+    message_text = format_message_with_links(text, text, lang=lang)
     keyboard = create_keyboard(text, lang=lang)
     
     await update.message.reply_text(
         message_text,
         reply_markup=keyboard,
+        parse_mode="HTML",
         disable_web_page_preview=True
     )
 
@@ -194,13 +201,14 @@ async def toggle_language(update: Update, context: CallbackContext):
         new_lang = 'en' if current_lang == 'ru' else 'ru'
         context.user_data["lang"] = new_lang  # Сохраняем выбор пользователя
         
-        message_text = format_message_with_buttons(search_query, search_query, lang=new_lang)
+        message_text = format_message_with_links(search_query, search_query, lang=new_lang)
         
         if is_inline:
             # В инлайн-режиме редактируем существующий результат
             await query.edit_message_text(
                 text=message_text,
                 reply_markup=create_keyboard(search_query, lang=new_lang, is_inline=True),
+                parse_mode="HTML",
                 disable_web_page_preview=True
             )
         else:
@@ -208,6 +216,7 @@ async def toggle_language(update: Update, context: CallbackContext):
             await query.edit_message_text(
                 text=message_text,
                 reply_markup=create_keyboard(search_query, lang=new_lang),
+                parse_mode="HTML",
                 disable_web_page_preview=True
             )
             

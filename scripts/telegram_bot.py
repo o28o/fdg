@@ -59,6 +59,7 @@ def normalize(text: str) -> str:
         .replace("ṭ", "t")
         .replace("ḍ", "d")
         .replace("ṇ", "n")
+        .replace("ṅ", "n")
         .replace("ñ", "n")
         .replace("ā", "a")
         .replace("ī", "i")

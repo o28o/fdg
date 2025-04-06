@@ -1,22 +1,25 @@
 import json
 import os
 import logging
-from datetime import datetime
-from telegram import Update
-from telegram.ext import Application, CommandHandler, MessageHandler, filters, CallbackContext
+from telegram import Update, InlineQueryResultArticle, InputTextMessageContent
+from telegram.ext import (
+    Application,
+    CommandHandler,
+    MessageHandler,
+    InlineQueryHandler,
+    filters,
+    CallbackContext,
+)
 
 # === Настройка логирования ===
 logging.basicConfig(
     level=logging.INFO,
-    format='%(asctime)s - %(name)s - %(levelname)s - %(message)s',
-    handlers=[
-        logging.FileHandler('bot.log'),
-        logging.StreamHandler()
-    ]
+    format="%(asctime)s - %(name)s - %(levelname)s - %(message)s",
+    handlers=[logging.FileHandler("bot.log"), logging.StreamHandler()],
 )
 logger = logging.getLogger(__name__)
 
-# === Загрузка токена ===
+# === Загрузка конфигурации ===
 try:
     with open("config.json", "r") as config_file:
         config = json.load(config_file)
@@ -27,7 +30,7 @@ except Exception as e:
     logger.error(f"Ошибка загрузки конфига: {e}")
     raise
 
-# === Загрузка словаря для автокомплита ===
+# === Загрузка словаря ===
 def load_words():
     try:
         path = os.path.join("assets", "sutta_words.txt")
@@ -41,96 +44,95 @@ def load_words():
 
 WORDS = load_words()
 
+# === Нормализация текста ===
 def normalize(text: str) -> str:
-    return text.lower() \
-        .replace("ṁ", "m").replace("ṃ", "m") \
-        .replace("ṭ", "t").replace("ḍ", "d") \
-        .replace("ṇ", "n").replace("ñ", "n") \
-        .replace("ā", "a").replace("ī", "i").replace("ū", "u")
+    return (
+        text.lower()
+        .replace("ṁ", "m")
+        .replace("ṃ", "m")
+        .replace("ṭ", "t")
+        .replace("ḍ", "d")
+        .replace("ṇ", "n")
+        .replace("ñ", "n")
+        .replace("ā", "a")
+        .replace("ī", "i")
+        .replace("ū", "u")
+    )
 
-def autocomplete(prefix: str, max_results=10):
+# === Автокомплит ===
+def autocomplete(prefix: str, max_results: int = 10) -> list[str]:
     try:
         prefix_n = normalize(prefix)
-        suggestions = [word for word in WORDS if normalize(word).startswith(prefix_n)][:max_results]
+        suggestions = [
+            word for word in WORDS if normalize(word).startswith(prefix_n)
+        ][:max_results]
         logger.debug(f"Автокомплит для '{prefix}': найдено {len(suggestions)} вариантов")
         return suggestions
     except Exception as e:
         logger.error(f"Ошибка автокомплита: {e}")
         return []
 
-# === Команды ===
+# === Обработчики команд ===
 async def start(update: Update, context: CallbackContext):
     user = update.effective_user
     logger.info(f"Команда /start от {user.id} ({user.full_name})")
     await update.message.reply_text(
-        "Добро пожаловать! Вы можете писать боту напрямую:\n"
-        "Для поиска или чтения — текст или фразу или номер, как sn56.11\n"
-        "для словаря — слово? (с вопросительным знаком)\n\n"
-        "Также доступны команды:\n"
-        "/find - Поиск на dhamma.gift\n"
-        "/read - Для чтения материалов\n"
-        "/dict - Поиск в словаре на dict.dhamma.gift"
+        "Добро пожаловать! Используйте:\n"
+        "• @dhammagift_bot слово - подсказки в любом чате\n"
+        "• /find - поиск сутт\n"
+        "• /dict - поиск в словаре"
     )
 
 async def find(update: Update, context: CallbackContext):
     query = " ".join(context.args) if context.args else ""
     logger.info(f"Поиск: {query} от {update.effective_user.id}")
     if not query:
-        await update.message.reply_text("Использование: /find слово, фраза или номер текста, как sn56.11")
+        await update.message.reply_text("Пример: /find sn12.2 или /find метта")
         return
     url = f"https://dhamma.gift/ru/?q={query.replace(' ', '+')}"
-    await update.message.reply_text(f"Ищем: {query}\n[Результаты]({url})", parse_mode="Markdown")
-
-async def read(update: Update, context: CallbackContext):
-    query = " ".join(context.args) if context.args else ""
-    logger.info(f"Чтение: {query} от {update.effective_user.id}")
-    if not query:
-        await update.message.reply_text("Использование: /read слово, фраза или номер текста, как sn56.11")
-        return
-    url = f"https://dhamma.gift/r/?q={query.replace(' ', '+')}"
-    await update.message.reply_text(f"Читаем: {query}\n[Результаты]({url})", parse_mode="Markdown")
+    await update.message.reply_text(f"🔍 Поиск: {query}\n{url}")
 
 async def dict_search(update: Update, context: CallbackContext):
     query = " ".join(context.args) if context.args else ""
     logger.info(f"Словарь: {query} от {update.effective_user.id}")
     if not query:
-        await update.message.reply_text("Использование: /dict слово на пали, русском или английском")
+        await update.message.reply_text("Пример: /dict metta или /dict любовь")
         return
     url = f"https://dpdict.net/ru/search_html?q={query.replace(' ', '+')}"
-    await update.message.reply_text(f"Словарь: {query}\n[Результаты]({url})", parse_mode="Markdown")
+    await update.message.reply_text(f"📚 Словарь: {query}\n{url}")
 
-# === Обработка сообщений ===
+# === Инлайн-режим ===
+async def inline_query(update: Update, context: CallbackContext):
+    query = update.inline_query.query.strip()
+    if not query or len(query) < 2:  # Игнорируем слишком короткие запросы
+        return
+
+    logger.info(f"Инлайн-запрос: '{query}' от {update.inline_query.from_user.id}")
+    suggestions = autocomplete(query, max_results=8)
+
+    results = []
+    for word in suggestions:
+        results.append(
+            InlineQueryResultArticle(
+                id=word,
+                title=word,
+                input_message_content=InputTextMessageContent(word),
+                description=f"Нажмите, чтобы отправить '{word}'",
+            )
+        )
+
+    await update.inline_query.answer(results, cache_time=10)
+
+# === Обработка обычных сообщений ===
 async def handle_message(update: Update, context: CallbackContext):
     text = update.message.text.strip()
     user = update.effective_user
     logger.info(f"Сообщение от {user.id}: {text}")
 
-    try:
-        # Автокомплит для коротких слов
-        if len(text) <= 5 and text.isalpha():
-            suggestions = autocomplete(text)
-            if suggestions:
-                reply = "Возможные варианты:\n" + "\n".join(f"- {w}" for w in suggestions)
-                await update.message.reply_text(reply)
-                return
-
-        # Поиск в словаре (если заканчивается на ?)
-        if text.endswith('?'):
-            query = text[:-1].strip()
-            context.args = query.split()
-            await dict_search(update, context)
-        else:
-            context.args = text.split()
-            await find(update, context)
-    except Exception as e:
-        logger.error(f"Ошибка обработки сообщения: {e}")
-        await update.message.reply_text("Произошла ошибка. Попробуйте позже.")
-
-# === Обработка ошибок ===
-async def error_handler(update: Update, context: CallbackContext):
-    logger.error(f"Ошибка в обработчике: {context.error}", exc_info=True)
-    if update.effective_message:
-        await update.effective_message.reply_text("Произошла непредвиденная ошибка. Мы уже работаем над этим!")
+    if text.endswith("?"):  # Поиск в словаре
+        await dict_search(update, context)
+    else:  # Обычный поиск
+        await find(update, context)
 
 # === Запуск бота ===
 def main():
@@ -138,18 +140,21 @@ def main():
     try:
         app = Application.builder().token(TOKEN).build()
 
+        # Команды
         app.add_handler(CommandHandler("start", start))
         app.add_handler(CommandHandler("find", find))
-        app.add_handler(CommandHandler("read", read))
         app.add_handler(CommandHandler("dict", dict_search))
-        app.add_handler(MessageHandler(filters.TEXT & ~filters.COMMAND, handle_message))
-        
-        app.add_error_handler(error_handler)
 
-        logger.info("Бот успешно запущен")
+        # Инлайн-режим
+        app.add_handler(InlineQueryHandler(inline_query))
+
+        # Обычные сообщения
+        app.add_handler(MessageHandler(filters.TEXT & ~filters.COMMAND, handle_message))
+
+        logger.info("Бот запущен")
         app.run_polling()
     except Exception as e:
-        logger.critical(f"Фатальная ошибка при запуске бота: {e}")
+        logger.critical(f"Ошибка запуска: {e}")
 
 if __name__ == "__main__":
     main()

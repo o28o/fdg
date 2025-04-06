@@ -86,7 +86,7 @@ def create_keyboard(query: str) -> InlineKeyboardMarkup:
     
     return InlineKeyboardMarkup([
         [
-            InlineKeyboardButton(text="🔎 Искать", url=search_url),
+            InlineKeyboardButton(text="🔎 Dhamma.gift", url=search_url),
             InlineKeyboardButton(text="📚 Словарь", url=dict_url)
         ]
     ])

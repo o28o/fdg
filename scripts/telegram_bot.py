@@ -13,6 +13,7 @@ from telegram.ext import (
     CommandHandler,
     MessageHandler,
     InlineQueryHandler,
+    CallbackQueryHandler,
     filters,
     CallbackContext,
 )
@@ -66,7 +67,7 @@ def normalize(text: str) -> str:
     )
 
 # === Автокомплит ===
-def autocomplete(prefix: str, max_results: int = 10) -> list[str]:
+def autocomplete(prefix: str, max_results: int = 28) -> list[str]:
     try:
         prefix_n = normalize(prefix)
         suggestions = [
@@ -80,7 +81,7 @@ def autocomplete(prefix: str, max_results: int = 10) -> list[str]:
 
 # === Создание клавиатуры с кнопками ===
 def create_keyboard(query: str) -> InlineKeyboardMarkup:
-    search_url = f"https://dhamma.gift/ru/?q={query.replace(' ', '+')}"
+    search_url = f"https://dhamma.gift/ru/?p=-kn&q={query.replace(' ', '+')}"
     dict_url = f"https://dpdict.net/ru/search_html?q={query.replace(' ', '+')}"
     
     return InlineKeyboardMarkup([
@@ -107,7 +108,7 @@ async def find(update: Update, context: CallbackContext):
     query = " ".join(context.args) if context.args else ""
     logger.info(f"Поиск: {query} от {update.effective_user.id}")
     if not query:
-        await update.message.reply_text("Пример: /find sn12.2 или /find метта")
+        await update.message.reply_text("Пример: /find sn12.2 или /find dukkhasamudayo")
         return
     
     keyboard = create_keyboard(query)
@@ -120,7 +121,7 @@ async def read(update: Update, context: CallbackContext):
     query = " ".join(context.args) if context.args else ""
     logger.info(f"Чтение: {query} от {update.effective_user.id}")
     if not query:
-        await update.message.reply_text("Пример: /read sn12.2 или /read метта")
+        await update.message.reply_text("Пример: /read sn12.2")
         return
     
     keyboard = create_keyboard(query)
@@ -142,7 +143,7 @@ async def dict_search(update: Update, context: CallbackContext):
         reply_markup=keyboard
     )
 
-# === Инлайн-режим ===
+# === Инлайн-режим с редактированием текста в поле ввода ===
 async def inline_query(update: Update, context: CallbackContext):
     query = update.inline_query.query.strip()
     if not query or len(query) < 2:
@@ -153,19 +154,35 @@ async def inline_query(update: Update, context: CallbackContext):
 
     results = []
     for word in suggestions:
-        keyboard = create_keyboard(word)
+        keyboard = InlineKeyboardMarkup([
+            [InlineKeyboardButton(text=f"Выбрать: {word}", callback_data=f"edit:{word}")]
+        ])
         
         results.append(
             InlineQueryResultArticle(
                 id=word,
                 title=word,
                 input_message_content=InputTextMessageContent(word),
-                description=f"Нажмите, чтобы отправить '{word}'",
+                description=f"Нажмите, чтобы редактировать '{word}'",
                 reply_markup=keyboard
             )
         )
 
     await update.inline_query.answer(results, cache_time=10)
+
+# === Обработчик нажатия на кнопку подсказки ===
+async def button_handler(update: Update, context: CallbackContext):
+    query = update.callback_query
+    user = query.from_user
+    text = query.data  # Например: "edit:dukkha"
+
+    # Извлекаем слово из текста callback
+    if text.startswith("edit:"):
+        new_text = text[len("edit:"):]
+        # Редактируем текст в поле ввода
+        await query.message.edit_text(f"Вы выбрали: {new_text}\nТеперь можете редактировать")
+        # Отправляем это обратно в поле ввода
+        await query.message.reply_text(f"Редактируйте: {new_text}", reply_markup=create_keyboard(new_text))
 
 # === Обработка обычных сообщений ===
 async def handle_message(update: Update, context: CallbackContext):
@@ -202,6 +219,9 @@ def main():
 
         # Инлайн-режим
         app.add_handler(InlineQueryHandler(inline_query))
+
+        # Обработка кнопок
+        app.add_handler(CallbackQueryHandler(button_handler))
 
         # Обработка обычных сообщений
         app.add_handler(MessageHandler(filters.TEXT & ~filters.COMMAND, handle_message))

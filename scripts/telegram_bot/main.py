@@ -32,6 +32,16 @@ try:
         TOKEN = config.get("TOKEN", "")
         if not TOKEN:
             raise ValueError("Токен не найден в config.json")
+        
+        # Параметры поиска (со значениями по умолчанию)
+        search_config = config.get("search", {})
+        FUZZY_ENABLED = search_config.get("fuzzy_enabled", True)
+        MIN_QUERY_LENGTH = search_config.get("min_query_length", 2)
+        MAX_SUGGESTIONS = search_config.get("max_suggestions", 28)
+        FUZZY_MIN_SCORE = search_config.get("fuzzy_min_score", 70)
+        NORMALIZE_DIGRAPHS = search_config.get("normalize_digraphs", True)
+        NORMALIZE_DOUBLE_CONSONANTS = search_config.get("normalize_double_consonants", True)
+
 except Exception as e:
     logger.error(f"Ошибка загрузки конфига: {e}")
     raise
@@ -52,32 +62,63 @@ WORDS = load_words()
 
 # === Нормализация текста ===
 def normalize(text: str) -> str:
-    return (
-        text.lower()
-        .replace("ṁ", "m")
-        .replace("ṃ", "m")
-        .replace("ṭ", "t")
-        .replace("ḍ", "d")
-        .replace("ṇ", "n")
-        .replace("ṅ", "n")
-        .replace("ñ", "n")
-        .replace("ā", "a")
-        .replace("ī", "i")
-        .replace("ū", "u")
-    )
+    """Умная нормализация с учетом конфига"""
+    text = text.lower()
+    
+    # Базовые замены (всегда применяются)
+    base_replacements = {
+        "ṁ": "m", "ṃ": "m", "ṭ": "t", "ḍ": "d", "ṇ": "n",
+        "ṅ": "n", "ñ": "n", "ā": "a", "ī": "i", "ū": "u"
+    }
+    
+    # Замены диграфов (ph → p и т.д.)
+    digraph_replacements = {
+        "ph": "p", "th": "t", "dh": "d", "gh": "g",
+        "bh": "b", "jh": "j", "kh": "k", "ch": "c"
+    } if NORMALIZE_DIGRAPHS else {}
+    
+    # Собираем все замены в один словарь
+    all_replacements = {**base_replacements, **digraph_replacements}
+    
+    # Применяем замены
+    for old, new in all_replacements.items():
+        text = text.replace(old, new)
+    
+    # Обработка двойных согласных
+    if NORMALIZE_DOUBLE_CONSONANTS:
+        for consonant in "kkgghhcjjṭṭḍḍttddppbbmmnnyyrrlvss":
+            text = text.replace(consonant * 2, consonant)
+    
+    return text
 
 # === Автокомплит ===
-def autocomplete(prefix: str, max_results: int = 28) -> list[str]:
-    try:
-        prefix_n = normalize(prefix)
-        suggestions = [
-            word for word in WORDS if normalize(word).startswith(prefix_n)
-        ][:max_results]
-        logger.debug(f"Автокомплит для '{prefix}': найдено {len(suggestions)} вариантов")
-        return suggestions
-    except Exception as e:
-        logger.error(f"Ошибка автокомплита: {e}")
+def autocomplete(query: str) -> list[str]:
+    """Улучшенный поиск с учетом конфига"""
+    if len(query) < MIN_QUERY_LENGTH:
         return []
+    
+    query_norm = cached_normalize(query)
+    exact_matches = [w for w in WORDS if cached_normalize(w).startswith(query_norm)]
+    
+    # Если включен расширенный поиск
+    if FUZZY_ENABLED or len(exact_matches) < MAX_SUGGESTIONS // 2:
+        # Поиск по подстроке
+        substring_matches = [w for w in WORDS if query_norm in cached_normalize(w)]
+        exact_matches.extend(substring_matches)
+        
+        # Фаззи-поиск (если включен и результатов мало)
+        if FUZZY_ENABLED and len(exact_matches) < MAX_SUGGESTIONS:
+            fuzzy_results = fuzzy_search(query, WORDS, limit=MAX_SUGGESTIONS, score_cutoff=FUZZY_MIN_SCORE)
+            exact_matches.extend(fuzzy_results)
+    
+    # Удаляем дубликаты и сортируем
+    results = list(dict.fromkeys(exact_matches))
+    results.sort(key=lambda x: (
+        not cached_normalize(x).startswith(query_norm),
+        len(x)
+    ))
+    
+    return results[:MAX_SUGGESTIONS]
 
 # === Создание клавиатуры с кнопками ===
 def create_keyboard(query: str) -> InlineKeyboardMarkup:
@@ -105,12 +146,12 @@ async def start(update: Update, context: CallbackContext):
 # === Инлайн-режим ===
 async def inline_query(update: Update, context: CallbackContext):
     query = update.inline_query.query.strip()
-    if not query or len(query) < 2:
+    if not query:
         return
 
-    logger.info(f"Инлайн-запрос: '{query}' от {update.inline_query.from_user.id}")
-    suggestions = autocomplete(query, max_results=28)
-
+    logger.info(f"Инлайн-запрос: '{query}'")
+    suggestions = autocomplete(query)  # Теперь использует настройки из конфига
+    
     results = []
     for idx, word in enumerate(suggestions):
         keyboard = create_keyboard(word)

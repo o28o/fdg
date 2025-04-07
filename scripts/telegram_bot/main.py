@@ -33,7 +33,7 @@ WELCOME_MESSAGES = {
         "✨ Welcome to Dhamma Gift Bot!\n\n"
         "❓ <b>How to use:</b>\n\n"
         "💬 <b>Call me in any chat or group:</b>\n"
-        "⌨️ Type <code>@dhammagift_bot</code> and start typing a word to search or sutta reference (e.g. <code>sn12.2</code>)\n\n"
+        "⌨️ Type @dgift_bot or @dhammagift_bot and start typing a word to search or sutta reference (e.g. <code>sn12.2</code>)\n\n"
         "💡 Suggestions will appear for Pali words and sutta references\n\n"
         "🤓 You can use Velthuis transliteration for diacritics: <code>.t .d .n ~n aa ii uu</code> → <code>ṭ ḍ ṇ ñ ā ī ū</code>\n\n"
         "💬 <b>In this private chat:</b>\n"
@@ -47,7 +47,7 @@ WELCOME_MESSAGES = {
         "Добро пожаловать в Dhamma Gift Bot!\n\n"
         "🔍 <b>Как использовать:</b>\n\n"
         "💬 <b>Вы можете вызвать меня в любом чате или группе:</b>\n"
-        "⌨️ Напишите <code>@dhammagift_bot</code> и начните печатать слово или номер сутты (например, <code>sn12.2</code>)\n"
+        "⌨️ Напишите @dgift_bot или @dhammagift_bot и начните печатать слово или номер сутты (например, <code>sn12.2</code>)\n"
         "💡 Я предложу варианты палийских слов и ссылок на сутты\n\n"
         "🤓 Также Вы можете использовать транслитерацию Velthuis для диакритики: <code>.t .d .n ~n aa ii uu</code> → <code>ṭ ḍ ṇ ñ ā ī ū</code>\n\n"
         "💬 <b>В этом личном чате:</b>\n"
@@ -522,6 +522,24 @@ async def handle_message(update: Update, context: CallbackContext):
         text = update.message.text.strip()
         user = update.effective_user
         logger.info(f"Message from {user.id}: {text}")
+
+        # Список инлайн-ботов, которые нужно игнорировать
+        IGNORE_INLINE_BOTS = ["dgift_bot", "dhammagift_bot", "cakkhu_bot"]  # Добавьте других ботов по необходимости
+        
+        # Проверка, было ли сообщение отправлено через игнорируемого инлайн-бота
+        if update.message.via_bot and update.message.via_bot.username in IGNORE_INLINE_BOTS:
+            logger.info(f"Ignoring message from inline bot: {update.message.via_bot.username}")
+            return
+
+        # Проверка на наличие URL в тексте
+        if re.search(r'http[s]?://(?:[a-zA-Z]|[0-9]|[$-_@.&+]|[!*\\(\\),]|(?:%[0-9a-fA-F][0-9a-fA-F]))+', text):
+            lang = get_user_lang(user.id) or DEFAULT_LANG
+            reply = {
+                "en": "Please send me just the word or text without URLs. I'll help you with word analysis or translation.",
+                "ru": "Пожалуйста, пришлите мне только слово или текст без URL. Я помогу вам с анализом слова или переводом."
+            }[lang]
+            await update.message.reply_text(reply)
+            return
 
         # Получаем язык
         lang = get_user_lang(user.id) or DEFAULT_LANG

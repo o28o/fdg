@@ -23,7 +23,7 @@ WELCOME_MESSAGES = {
         "✨ Welcome to Dhamma Gift Bot!\n\n"
         "❓ <b>How to use:</b>\n\n"
         "💬 <b>Call me in any chat or group:</b>\n"
-        " ⌨️ Type <code>@dhammagift_bot</code> and start typing a word to search or sutta reference (e.g. <code>sn12.2</code>)\n\n"
+        "⌨️ Type <code>@dhammagift_bot</code> and start typing a word to search or sutta reference (e.g. <code>sn12.2</code>)\n\n"
         "💡 Suggestions will appear for Pali words and sutta references\n\n"
         "🤓 You can use Velthuis transliteration for diacritics: <code>.t .d .n ~n aa ii uu</code> → <code>ṭ ḍ ṇ ñ ā ī ū</code>\n\n"
         "💬 <b>In this private chat:</b>\n"

@@ -41,7 +41,8 @@ WELCOME_MESSAGES = {
         "Following commands available:\n"
         "/start - this message\n"
         "/extra - Mini App links\n"
-        "/help - Dhamma.gift help will be here\n"
+        "/help - Dhamma.gift help will be here\n\n"
+        "Change Bots language 👇\n"
     ),
     "ru": (
         "Добро пожаловать в Dhamma Gift Bot!\n\n"
@@ -55,7 +56,9 @@ WELCOME_MESSAGES = {
         "Доступны следующие команды:\n"
         "/start - это сообщение\n"
         "/extra - ссылки на Mini Apps\n"
-        "/help - здесь будет документация Dhamma.gift\n"
+        "/help - здесь будет документация Dhamma.gift\n\n"
+        "Изенить язык Бота 👇\n"
+
     )
 }
 
@@ -67,7 +70,7 @@ EXTRA_MESSAGES = {
         "📖 Чтение\n"
         "http://t.me/dgift_bot/read\n"
         "🌐 Словарь\n"
-        "http://t.me/dgift_bot/dict"
+        "http://t.me/dgift_bot/dict\n\n"
     ),
     "en": (
         "Mini Applications in English. You may want to pin this message for quick access:\n\n"
@@ -76,10 +79,9 @@ EXTRA_MESSAGES = {
         "📖 Read\n"
         "http://t.me/dhammagift_bot/read\n"
         "🌐 Dictionary\n"
-        "http://t.me/dhammagift_bot/dict"
+        "http://t.me/dhammagift_bot/dict\n\n"
     )
 }
-
 
 # === Настройка логирования ===
 logging.basicConfig(
@@ -91,7 +93,7 @@ logger = logging.getLogger(__name__)
 
 # === Константы ===
 USER_DATA_FILE = "user_data.json"
-DEFAULT_LANG = "ru"  # Английский по умолчанию
+DEFAULT_LANG = "en"  # Английский по умолчанию
 
 # === Функции для работы с JSON-хранилищем ===
 def load_user_data() -> dict:
@@ -472,13 +474,11 @@ async def inline_query(update: Update, context: CallbackContext):
     user_id = update.inline_query.from_user.id
     logger.info(f"Инлайн-запрос: '{query}' от {user_id}")
 
-    # Получаем или сохраняем язык пользователя
-    lang = get_user_lang(user_id)
-    if not lang:
-        lang = DEFAULT_LANG
-        save_user_data(user_id, "lang", lang)
+    # Получаем язык интерфейса пользователя (не меняется при пересылке сообщений)
+    interface_lang = get_user_lang(user_id) or DEFAULT_LANG
     
-    context.user_data["lang"] = lang
+    # Язык для контента можно получить из пересланного сообщения, но мы его не используем
+    # content_lang = ... (если нужно для других целей)
     
     suggestions = autocomplete(query, max_results=29)
     results = []
@@ -487,14 +487,14 @@ async def inline_query(update: Update, context: CallbackContext):
     if converted_text:
         results.append(InlineQueryResultArticle(
             id="user_input",
-            title=f"✏️ Send: {converted_text}" if lang == "en" else f"✏️ Отправить: {converted_text}",
+            title=f"✏️ Send: {converted_text}" if interface_lang == "en" else f"✏️ Отправить: {converted_text}",
             input_message_content=InputTextMessageContent(
-                format_message_with_links(converted_text, converted_text, lang=lang),
+                format_message_with_links(converted_text, converted_text, lang=interface_lang),
                 parse_mode="HTML",
                 disable_web_page_preview=True
             ),
-            description="Your text with converted symbols" if lang == "en" else "Ваш текст с преобразованными символами",
-            reply_markup=create_keyboard(converted_text, lang=lang, is_inline=True)
+            description="Your text with converted symbols" if interface_lang == "en" else "Ваш текст с преобразованными символами",
+            reply_markup=create_keyboard(converted_text, lang=interface_lang, is_inline=True)
         ))
 
     for idx, word in enumerate(suggestions[:29]):
@@ -502,12 +502,12 @@ async def inline_query(update: Update, context: CallbackContext):
             id=f"dict_{idx}",
             title=word,
             input_message_content=InputTextMessageContent(
-                format_message_with_links(word, word, lang=lang),
+                format_message_with_links(word, word, lang=interface_lang),
                 parse_mode="HTML",
                 disable_web_page_preview=True
             ),
-            description=f"Click to send '{word}'",
-            reply_markup=create_keyboard(word, lang=lang, is_inline=True)
+            description=f"Click to send '{word}'" if interface_lang == "en" else f"Нажмите, чтобы отправить '{word}'",
+            reply_markup=create_keyboard(word, lang=interface_lang, is_inline=True)
         ))
 
     await update.inline_query.answer(results, cache_time=10)
@@ -569,7 +569,6 @@ async def handle_message(update: Update, context: CallbackContext):
     except Exception as e:
         logger.error(f"Error in handle_message: {e}")
 
-# === Обработчик переключения языка ===
 async def toggle_language(update: Update, context: CallbackContext):
     query = update.callback_query
     try:
@@ -586,32 +585,20 @@ async def toggle_language(update: Update, context: CallbackContext):
                 raise ValueError("Invalid callback_data format")
             
             is_inline = parts[0] == 'inline_toggle_lang'
-            current_lang = parts[1]
-            search_query = ':'.join(parts[2:])[:256]  # Увеличил лимит для длинных запросов
+            current_lang = parts[1]  # Текущий язык сообщения (не сохраняем его)
+            search_query = ':'.join(parts[2:])[:256]
         except Exception as parse_error:
             logger.error(f"Ошибка разбора callback_data: {parse_error} | Данные: {query.data}")
             await query.message.reply_text("⚠️ Ошибка обработки запроса")
             return
 
-        # Определяем новый язык
+        # Определяем новый язык ТОЛЬКО для текущего сообщения
         new_lang = 'ru' if current_lang == 'en' else 'en'
         
-        # Проверяем необходимость изменений
-        current_saved_lang = get_user_lang(user_id)
-        if current_saved_lang == new_lang:
-            logger.debug(f"Язык для {user_id} уже установлен: {new_lang}")
-            return
-            
-        # Сохраняем новый язык
-        try:
-            save_user_data(user_id, "lang", new_lang)
-            context.user_data["lang"] = new_lang
-        except Exception as save_error:
-            logger.error(f"Ошибка сохранения языка для {user_id}: {save_error}")
-            await query.message.reply_text("⚠️ Ошибка сохранения настроек")
-            return
+        # НЕ сохраняем язык в базу данных - он применяется только к текущему сообщению
+        # НЕ обновляем context.user_data["lang"]
 
-        # Подготавливаем новое сообщение
+        # Подготавливаем новое сообщение с новым языком отображения
         try:
             message_text = format_message_with_links(search_query, search_query, lang=new_lang)
             reply_markup = create_keyboard(search_query, lang=new_lang, is_inline=is_inline)
@@ -632,26 +619,9 @@ async def toggle_language(update: Update, context: CallbackContext):
             if "Message is not modified" not in str(e):
                 logger.error(f"Ошибка редактирования сообщения для {user_id}: {e}")
                 await query.message.reply_text("⚠️ Ошибка обновления сообщения")
-                return
-            logger.debug(f"Сообщение не изменилось для {user_id}")
+            return
 
-        # Обновляем кнопку меню
-        try:
-            await set_menu_button(update, new_lang)
-        except Exception as menu_error:
-            logger.error(f"Ошибка обновления меню для {user_id}: {menu_error}")
-            # Не прерываем выполнение, только логируем
-
-        # Обновляем команды бота
-        try:
-            from telegram import BotCommand
-            commands = [
-                BotCommand("start", "Запустить бота" if new_lang == 'ru' else "Start bot"),
-                BotCommand("help", "Помощь" if new_lang == 'ru' else "Help")
-            ]
-            await context.bot.set_my_commands(commands)
-        except Exception as cmd_error:
-            logger.error(f"Ошибка обновления команд для {user_id}: {cmd_error}")
+        # НЕ обновляем меню и команды бота, так как язык интерфейса не меняется
 
     except Exception as global_error:
         logger.critical(f"Критическая ошибка в toggle_language: {global_error}")

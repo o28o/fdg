@@ -140,6 +140,20 @@ async def start(update: Update, context: CallbackContext):
         "• Для подсказок в любом чате: @dhammagift_bot слово"
     )
 
+    # Оптимизированная функция преобразования
+def uniCoder(text):
+        if not text:
+            return text
+        replacements = [
+            ("aa", "ā"), ("ii", "ī"), ("uu", "ū"),
+            ('"n', "ṅ"), ("~n", "ñ"),
+            (".t", "ṭ"), (".d", "ḍ"), (".n", "ṇ"),
+            (".m", "ṃ"), (".l", "ḷ"), (".h", "ḥ")
+        ]
+        for pattern, repl in replacements:
+            text = text.replace(pattern, repl)
+        return text
+
 # === Инлайн-режим ===
 async def inline_query(update: Update, context: CallbackContext):
     query = update.inline_query.query.strip()
@@ -153,20 +167,6 @@ async def inline_query(update: Update, context: CallbackContext):
     suggestions = autocomplete(query, max_results=29)  # Увеличили лимит
 
     results = []
-    
-    # Оптимизированная функция преобразования
-    def uniCoder(text):
-        if not text:
-            return text
-        replacements = [
-            ("aa", "ā"), ("ii", "ī"), ("uu", "ū"),
-            ('"n', "ṅ"), ("~n", "ñ"),
-            (".t", "ṭ"), (".d", "ḍ"), (".n", "ṇ"),
-            (".m", "ṃ"), (".l", "ḷ"), (".h", "ḥ")
-        ]
-        for pattern, repl in replacements:
-            text = text.replace(pattern, repl)
-        return text
     
     # Добавляем пользовательский текст (после преобразования)
     converted_text = uniCoder(query)
@@ -209,18 +209,21 @@ async def handle_message(update: Update, context: CallbackContext):
     user = update.effective_user
     logger.info(f"Сообщение от {user.id}: {text}")
 
-    # Автокомплит для коротких слов
-    if len(text) < 5 and text.isalpha():
+    # Используем уже существующую функцию uniCoder
+    converted_text = uniCoder(text)
+    
+    # Автокомплит для коротких слов (только если текст не был изменен преобразованием)
+    if converted_text == text and len(text) < 5 and text.isalpha():
         suggestions = autocomplete(text)
         if suggestions:
             reply = "Возможные варианты:\n" + "\n".join(f"- {w}" for w in suggestions)
             await update.message.reply_text(reply)
             return
 
-    # Все сообщения теперь с кликабельными ссылками и кнопками
+    # Отправляем преобразованный текст
     lang = context.user_data.get("lang", "ru")
-    message_text = format_message_with_links(text, text, lang=lang)
-    keyboard = create_keyboard(text, lang=lang)
+    message_text = format_message_with_links(converted_text, converted_text, lang=lang)
+    keyboard = create_keyboard(converted_text, lang=lang)
     
     await update.message.reply_text(
         message_text,

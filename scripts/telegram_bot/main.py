@@ -335,8 +335,8 @@ async def handle_language_selection(update: Update, context: CallbackContext):
     new_lang = 'ru' if current_lang == 'en' else 'en'
 
     # Save language preference
-    save_user_data(user_id, 'lang', new_lang)
-    context.user_data['lang'] = new_lang
+  #  save_user_data(user_id, 'lang', new_lang)
+   # context.user_data['lang'] = new_lang
 
     # Create toggle button for new language
     keyboard = [
@@ -376,26 +376,7 @@ async def handle_language_selection(update: Update, context: CallbackContext):
     except Exception as commands_error:
         logger.error(f"Command update error for {user_id}: {commands_error}")
         
-EXTRA_MESSAGES = {
-    "ru": (
-        "Мини Приложения на Русском:\n"
-        "🔎 Поиск\n"
-        "http://t.me/dgift_bot/find\n"
-        "📖 Чтение\n"
-        "http://t.me/dgift_bot/read\n"
-        "🌐 Словарь\n"
-        "http://t.me/dgift_bot/dict"
-    ),
-    "en": (
-        "Mini Applications in English:\n"
-        "🔎 Search\n"
-        "http://t.me/dhammagift_bot/find\n"
-        "📖 Read\n"
-        "http://t.me/dhammagift_bot/read\n"
-        "🌐 Dictionary\n"
-        "http://t.me/dhammagift_bot/dict"
-    )
-}
+
 
 async def extra_command(update: Update, context: CallbackContext):
     """Handler for /extra command showing mini-applications"""

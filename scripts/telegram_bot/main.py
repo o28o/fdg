@@ -1,13 +1,22 @@
+# Standard Library
 import json
 import os
 import logging
+
+# Telegram Core
 from telegram import (
     Update,
     InlineQueryResultArticle,
     InputTextMessageContent,
+    MenuButtonWebApp,
+    WebAppInfo,
+    BotCommand,
     InlineKeyboardButton,
-    InlineKeyboardMarkup
+    InlineKeyboardMarkup,
+    error
 )
+
+# Telegram Extensions
 from telegram.ext import (
     Application,
     CommandHandler,
@@ -18,6 +27,7 @@ from telegram.ext import (
     CallbackContext,
 )
 
+
 WELCOME_MESSAGES = {
     "en": (
         "✨ Welcome to Dhamma Gift Bot!\n\n"
@@ -27,7 +37,11 @@ WELCOME_MESSAGES = {
         "💡 Suggestions will appear for Pali words and sutta references\n\n"
         "🤓 You can use Velthuis transliteration for diacritics: <code>.t .d .n ~n aa ii uu</code> → <code>ṭ ḍ ṇ ñ ā ī ū</code>\n\n"
         "💬 <b>In this private chat:</b>\n"
-        "Simply send me a word or reference (e.g. <code>mn10</code> or <code>saariputta</code>)"
+        "Simply send me a word or reference (e.g. <code>mn10</code> or <code>saariputta</code>)\n\n\n"
+        "Following commands available:\n"
+        "/start - this message\n"
+        "/extra - Mini App links\n"
+        "/help - Dhamma.gift help will be here\n"
     ),
     "ru": (
         "Добро пожаловать в Dhamma Gift Bot!\n\n"
@@ -37,9 +51,35 @@ WELCOME_MESSAGES = {
         "💡 Я предложу варианты палийских слов и ссылок на сутты\n\n"
         "🤓 Также Вы можете использовать транслитерацию Velthuis для диакритики: <code>.t .d .n ~n aa ii uu</code> → <code>ṭ ḍ ṇ ñ ā ī ū</code>\n\n"
         "💬 <b>В этом личном чате:</b>\n"
-        "Просто отправьте мне слово или номер сутты (например, <code>mn10</code> или <code>saariputta</code>)"
+        "Просто отправьте мне слово или номер сутты (например, <code>mn10</code> или <code>saariputta</code>)\n\n\n"
+        "Доступны следующие команды:\n"
+        "/start - это сообщение\n"
+        "/extra - ссылки на Mini Apps\n"
+        "/help - здесь будет документация Dhamma.gift\n"
     )
 }
+
+EXTRA_MESSAGES = {
+    "ru": (
+        "Мини Приложения на Русском. Вы можете закрепить это сообщение для быстрого доступа:\n\n"
+        "🔎 Поиск\n"
+        "http://t.me/dgift_bot/find\n"
+        "📖 Чтение\n"
+        "http://t.me/dgift_bot/read\n"
+        "🌐 Словарь\n"
+        "http://t.me/dgift_bot/dict"
+    ),
+    "en": (
+        "Mini Applications in English. You may want to pin this message for quick access:\n\n"
+        "🔎 Search\n"
+        "http://t.me/dhammagift_bot/find\n"
+        "📖 Read\n"
+        "http://t.me/dhammagift_bot/read\n"
+        "🌐 Dictionary\n"
+        "http://t.me/dhammagift_bot/dict"
+    )
+}
+
 
 # === Настройка логирования ===
 logging.basicConfig(
@@ -51,7 +91,7 @@ logger = logging.getLogger(__name__)
 
 # === Константы ===
 USER_DATA_FILE = "user_data.json"
-DEFAULT_LANG = "en"  # Английский по умолчанию
+DEFAULT_LANG = "ru"  # Английский по умолчанию
 
 # === Функции для работы с JSON-хранилищем ===
 def load_user_data() -> dict:
@@ -176,51 +216,238 @@ def format_message_with_links(text: str, query: str, lang: str = "en") -> str:
         f'<a href="{dict_url}">{label_dict}</a>'
     )
     return f"\n{text}\n\n{links_text}"
+    
+async def set_menu_button(update: Update, lang: str):
+    """Устанавливает кнопку меню в зависимости от языка"""
+    user_id = update.effective_user.id
+    button_text = "DG ru" if lang == "ru" else "DG en"
+    button_url = "https://dhamma.gift/ru/" if lang == "ru" else "https://dhamma.gift"
+    
+    # Создаем объект WebAppInfo с URL
+    web_app_info = WebAppInfo(url=button_url)
+    menu_button = MenuButtonWebApp(text=button_text, web_app=web_app_info)
+    
+    try:
+        await update.get_bot().set_chat_menu_button(
+            chat_id=user_id,
+            menu_button=menu_button
+        )
+        logger.info(f"Установлена кнопка меню для {user_id}: {button_text} ({button_url})")
+    except Exception as e:
+        logger.error(f"Ошибка установки кнопки меню: {e}")
 
+async def update_menu_button(user_id: int, lang: str, bot):
+    """Обновляет кнопку меню в списке чатов"""
+    button_text = "DG ru" if lang == "ru" else "DG en"
+    button_url = "https://dhamma.gift/ru/" if lang == "ru" else "https://dhamma.gift"
+    
+    menu_button = MenuButtonWebApp(
+        text=button_text,
+        web_app=WebAppInfo(url=button_url)
+    )
+    
+    try:
+        await bot.set_chat_menu_button(
+            chat_id=user_id,
+            menu_button=menu_button
+        )
+        logger.info(f"Обновлена кнопка меню для {user_id}: {button_text}")
+    except Exception as e:
+        logger.error(f"Ошибка обновления кнопки меню: {e}")
+        
 async def start(update: Update, context: CallbackContext):
     user = update.effective_user
-    logger.info(f"Команда /start от {user.id} ({user.full_name})")
+    logger.info(f"Command /start from {user.id} ({user.full_name})")
 
-    # Получаем или устанавливаем язык по умолчанию
+    # Get or set default language
     user_lang = get_user_lang(user.id) or 'en'
     context.user_data["lang"] = user_lang
 
+    # Create single toggle button
     keyboard = [
         [
-            InlineKeyboardButton("English", callback_data="lang_set:en"),
-            InlineKeyboardButton("Русский", callback_data="lang_set:ru")
+            InlineKeyboardButton(
+                "Русский" if user_lang == 'en' else "English",
+                callback_data=f"lang_set:{user_lang}"
+            )
         ]
     ]
 
-    await update.message.reply_text(
-        WELCOME_MESSAGES[user_lang],
-        reply_markup=InlineKeyboardMarkup(keyboard),
-        parse_mode="HTML"
-    )
-    
+    try:
+        # Send welcome message
+        await update.message.reply_text(
+            WELCOME_MESSAGES[user_lang],
+            reply_markup=InlineKeyboardMarkup(keyboard),
+            parse_mode="HTML",
+            disable_web_page_preview=True
+        )
+        
+        # Set menu button with error handling
+        try:
+            await set_menu_button(update, user_lang)
+        except Exception as menu_error:
+            logger.error(f"Menu setup error for {user.id}: {menu_error}")
+            try:
+                await update.message.reply_text(
+                    "⚠️ Menu setup error. Please try later.",
+                    parse_mode="HTML"
+                )
+            except:
+                pass
+
+    except Exception as e:
+        logger.error(f"Error in start for {user.id}: {e}")
+        try:
+            await context.bot.send_message(
+                chat_id=user.id,
+                text="🚫 An error occurred. Please try again.",
+                parse_mode="HTML"
+            )
+        except:
+            pass
+
+    # Set bot commands
+    try:
+        from telegram import BotCommand
+        commands = [
+            BotCommand("start", "Start bot"),
+            BotCommand("help", "Help"),
+            BotCommand("extra", "Extra features")
+        ]
+        if user_lang == 'ru':
+            commands = [
+                BotCommand("start", "Запустить бота"),
+                BotCommand("help", "Помощь"),
+                BotCommand("extra", "Дополнительно")
+            ]
+        await context.bot.set_my_commands(commands)
+    except Exception as commands_error:
+        logger.error(f"Command setup error for {user.id}: {commands_error}")
+
 async def handle_language_selection(update: Update, context: CallbackContext):
     query = update.callback_query
     await query.answer()
 
     user_id = query.from_user.id
-    selected_lang = query.data.split(':')[1]
+    current_lang = query.data.split(':')[1]
+    new_lang = 'ru' if current_lang == 'en' else 'en'
 
-    # Сохраняем выбор языка
-    save_user_data(user_id, 'lang', selected_lang)
-    context.user_data['lang'] = selected_lang
+    # Save language preference
+    save_user_data(user_id, 'lang', new_lang)
+    context.user_data['lang'] = new_lang
 
+    # Create toggle button for new language
     keyboard = [
         [
-            InlineKeyboardButton("English", callback_data="lang_set:en"),
-            InlineKeyboardButton("Русский", callback_data="lang_set:ru")
+            InlineKeyboardButton(
+                "Русский" if new_lang == 'en' else "English",
+                callback_data=f"lang_set:{new_lang}"
+            )
         ]
     ]
 
-    # Редактируем сообщение с текстом на новом языке
+    # Edit message with new language
     await query.edit_message_text(
-        text=WELCOME_MESSAGES[selected_lang],
+        text=WELCOME_MESSAGES[new_lang],
         reply_markup=InlineKeyboardMarkup(keyboard),
         parse_mode="HTML"
+    )
+    
+    # Update menu button
+    await set_menu_button(update, new_lang)
+
+    # Update bot commands
+    try:
+        from telegram import BotCommand
+        commands = [
+            BotCommand("start", "Start bot"),
+            BotCommand("help", "Help"),
+            BotCommand("extra", "Extra features")
+        ]
+        if new_lang == 'ru':
+            commands = [
+                BotCommand("start", "Запустить бота"),
+                BotCommand("help", "Помощь"),
+                BotCommand("extra", "Дополнительно")
+            ]
+        await context.bot.set_my_commands(commands)
+    except Exception as commands_error:
+        logger.error(f"Command update error for {user_id}: {commands_error}")
+        
+EXTRA_MESSAGES = {
+    "ru": (
+        "Мини Приложения на Русском:\n"
+        "🔎 Поиск\n"
+        "http://t.me/dgift_bot/find\n"
+        "📖 Чтение\n"
+        "http://t.me/dgift_bot/read\n"
+        "🌐 Словарь\n"
+        "http://t.me/dgift_bot/dict"
+    ),
+    "en": (
+        "Mini Applications in English:\n"
+        "🔎 Search\n"
+        "http://t.me/dhammagift_bot/find\n"
+        "📖 Read\n"
+        "http://t.me/dhammagift_bot/read\n"
+        "🌐 Dictionary\n"
+        "http://t.me/dhammagift_bot/dict"
+    )
+}
+
+async def extra_command(update: Update, context: CallbackContext):
+    """Handler for /extra command showing mini-applications"""
+    user = update.effective_user
+    user_id = user.id
+    
+    # Get user language
+    lang = get_user_lang(user_id) or DEFAULT_LANG
+    
+    # Create keyboard with toggle button
+    keyboard = [
+        [
+            InlineKeyboardButton(
+                "English" if lang == "ru" else "Русский",
+                callback_data=f"extra_toggle:{lang}"
+            )
+        ]
+    ]
+    
+    # Send message with appropriate language
+    await update.message.reply_text(
+        EXTRA_MESSAGES[lang],
+        reply_markup=InlineKeyboardMarkup(keyboard),
+        disable_web_page_preview=True
+    )
+
+async def handle_extra_toggle(update: Update, context: CallbackContext):
+    """Handler for language toggle in /extra command"""
+    query = update.callback_query
+    await query.answer()
+    
+    user_id = query.from_user.id
+    current_lang = query.data.split(':')[1]
+    new_lang = 'en' if current_lang == 'ru' else 'ru'
+    
+    # Update user language preference
+    save_user_data(user_id, 'lang', new_lang)
+    context.user_data['lang'] = new_lang
+    
+    # Create updated keyboard
+    keyboard = [
+        [
+            InlineKeyboardButton(
+                "English" if new_lang == "ru" else "Русский",
+                callback_data=f"extra_toggle:{new_lang}"
+            )
+        ]
+    ]
+    
+    # Edit message with new language
+    await query.edit_message_text(
+        text=EXTRA_MESSAGES[new_lang],
+        reply_markup=InlineKeyboardMarkup(keyboard),
+        disable_web_page_preview=True
     )
 
 def uniCoder(text):
@@ -327,13 +554,14 @@ async def handle_message(update: Update, context: CallbackContext):
 # === Обработчик переключения языка ===
 async def toggle_language(update: Update, context: CallbackContext):
     query = update.callback_query
-    await query.answer()
-    
     try:
+        # Подтверждаем получение callback
+        await query.answer()
+        
         user = query.from_user
         user_id = user.id
         
-        # Разбираем callback_data безопасно
+        # Безопасный разбор callback_data
         try:
             parts = query.data.split(':')
             if len(parts) < 3:
@@ -341,43 +569,78 @@ async def toggle_language(update: Update, context: CallbackContext):
             
             is_inline = parts[0] == 'inline_toggle_lang'
             current_lang = parts[1]
-            search_query = ':'.join(parts[2:])[:64]  # Ограничиваем длину
-        except Exception as e:
-            logger.error(f"Invalid callback_data: {query.data} | Error: {e}")
-            await query.message.reply_text("⚠️ Произошла ошибка. Пожалуйста, попробуйте ещё раз.")
+            search_query = ':'.join(parts[2:])[:256]  # Увеличил лимит для длинных запросов
+        except Exception as parse_error:
+            logger.error(f"Ошибка разбора callback_data: {parse_error} | Данные: {query.data}")
+            await query.message.reply_text("⚠️ Ошибка обработки запроса")
             return
-        
+
         # Определяем новый язык
         new_lang = 'ru' if current_lang == 'en' else 'en'
         
-        # Сохраняем язык
-        context.user_data["lang"] = new_lang
-        save_user_data(user_id, "lang", new_lang)
-        
-        # Формируем сообщение
+        # Проверяем необходимость изменений
+        current_saved_lang = get_user_lang(user_id)
+        if current_saved_lang == new_lang:
+            logger.debug(f"Язык для {user_id} уже установлен: {new_lang}")
+            return
+            
+        # Сохраняем новый язык
+        try:
+            save_user_data(user_id, "lang", new_lang)
+            context.user_data["lang"] = new_lang
+        except Exception as save_error:
+            logger.error(f"Ошибка сохранения языка для {user_id}: {save_error}")
+            await query.message.reply_text("⚠️ Ошибка сохранения настроек")
+            return
+
+        # Подготавливаем новое сообщение
         try:
             message_text = format_message_with_links(search_query, search_query, lang=new_lang)
             reply_markup = create_keyboard(search_query, lang=new_lang, is_inline=is_inline)
-            
+        except Exception as prep_error:
+            logger.error(f"Ошибка подготовки сообщения для {user_id}: {prep_error}")
+            await query.message.reply_text("⚠️ Ошибка формирования ответа")
+            return
+
+        # Обновляем сообщение
+        try:
             await query.edit_message_text(
                 text=message_text,
                 reply_markup=reply_markup,
                 parse_mode="HTML",
                 disable_web_page_preview=True
             )
-            logger.info(f"User {user_id} switched language to {new_lang}")
-        except Exception as e:
-            logger.error(f"Failed to edit message: {e}")
-            await query.message.reply_text("⚠️ Не удалось обновить сообщение")
+        except telegram.error.BadRequest as e:
+            if "Message is not modified" not in str(e):
+                logger.error(f"Ошибка редактирования сообщения для {user_id}: {e}")
+                await query.message.reply_text("⚠️ Ошибка обновления сообщения")
+                return
+            logger.debug(f"Сообщение не изменилось для {user_id}")
 
-    except Exception as e:
-        logger.error(f"Unexpected error in toggle_language: {e}")
+        # Обновляем кнопку меню
+        try:
+            await set_menu_button(update, new_lang)
+        except Exception as menu_error:
+            logger.error(f"Ошибка обновления меню для {user_id}: {menu_error}")
+            # Не прерываем выполнение, только логируем
+
+        # Обновляем команды бота
+        try:
+            from telegram import BotCommand
+            commands = [
+                BotCommand("start", "Запустить бота" if new_lang == 'ru' else "Start bot"),
+                BotCommand("help", "Помощь" if new_lang == 'ru' else "Help")
+            ]
+            await context.bot.set_my_commands(commands)
+        except Exception as cmd_error:
+            logger.error(f"Ошибка обновления команд для {user_id}: {cmd_error}")
+
+    except Exception as global_error:
+        logger.critical(f"Критическая ошибка в toggle_language: {global_error}")
         try:
             await query.message.reply_text("⚠️ Произошла непредвиденная ошибка")
         except:
             pass
-
-
 
 # === Запуск бота ===
 def main():
@@ -404,6 +667,8 @@ def main():
         app.add_handler(CommandHandler("start", start))
         app.add_handler(CallbackQueryHandler(handle_language_selection, pattern="^lang_set:"))
         app.add_handler(InlineQueryHandler(inline_query))
+        app.add_handler(CommandHandler("extra", extra_command))
+        app.add_handler(CallbackQueryHandler(handle_extra_toggle, pattern=r"^extra_toggle:"))  
         app.add_handler(MessageHandler(filters.TEXT & ~filters.COMMAND, handle_message))
         app.add_handler(CallbackQueryHandler(toggle_language, pattern=r"^toggle_lang:"))
         app.add_handler(CallbackQueryHandler(toggle_language, pattern=r"^inline_toggle_lang:"))

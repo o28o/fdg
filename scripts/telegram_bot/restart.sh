@@ -24,4 +24,4 @@ restart() {
 }
 
 restart /var/www/telegram_bot dgift
-restart /var/www/telegram_bot bot
+restart /var/www/prod_bot bot

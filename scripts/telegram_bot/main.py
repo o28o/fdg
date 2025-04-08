@@ -3,6 +3,7 @@ import json
 import os
 import logging
 import re
+import sys
 
 # Telegram Core
 from telegram import (
@@ -84,8 +85,17 @@ EXTRA_MESSAGES = {
     )
 }
 
-# === Настройка логирования ===
+# === Загрузка конфига ===
+config_path = sys.argv[1] if len(sys.argv) > 1 else "config.json"
+with open(config_path, "r") as f:
+    config = json.load(f)
 
+bot_name = config.get("NAME", "default_bot")
+TOKEN = config.get("TOKEN", "")
+if not TOKEN:
+    raise ValueError(f"Token not found in {config_path}")
+
+# === Настройка логирования ===
 class TelegramTokenFilter(logging.Formatter):
     """Форматтер для маскировки Telegram bot токенов в логах"""
     @staticmethod
@@ -101,11 +111,10 @@ class TelegramTokenFilter(logging.Formatter):
         original = super().format(record)
         return self._mask_token(original)
 
-# === Настройка логирования ===
 logging.basicConfig(
     level=logging.INFO,
     format="%(asctime)s - %(name)s - %(levelname)s - %(message)s",
-    handlers=[logging.FileHandler("bot.log"), logging.StreamHandler()],
+    handlers=[logging.FileHandler(f"{bot_name}.log"), logging.StreamHandler()],
 )
 
 # Применяем наш форматтер ко всем обработчикам
@@ -649,20 +658,11 @@ async def toggle_language(update: Update, context: CallbackContext):
         except:
             pass
 
-# === Запуск бота ===
 def main():
-    logger.info("Starting bot...")
+    logger.info(f"Starting bot {bot_name}...")  # Используем bot_name, загруженное выше
     try:
-        # Загружаем токен из config.json
-        try:
-            with open("config.json", "r") as config_file:
-                config = json.load(config_file)
-                TOKEN = config.get("TOKEN", "")
-                if not TOKEN:
-                    raise ValueError("Token not found in config.json")
-        except Exception as e:
-            logger.error(f"Config load error: {e}")
-            raise
+        # Инициализация и дальнейший код, используя bot_name и TOKEN
+        app = Application.builder().token(TOKEN).build()
 
         # Создаем папку assets если ее нет
         os.makedirs("assets", exist_ok=True)
@@ -684,25 +684,17 @@ def main():
         if not os.path.exists(os.path.join("assets", "sutta_words.txt")):
             logger.warning("Sutta words file not found! Autocomplete will not work")
 
-        logger.info("Bot is running and ready to handle updates")
+        logger.info(f"Bot {bot_name} is running and ready to handle updates")
         app.run_polling()
-
     except Exception as e:
-        logger.critical(f"Bot failed to start: {e}")
+        logger.critical(f"Bot {bot_name} failed to start: {e}")
         raise
 
 if __name__ == "__main__":
-    # Проверяем необходимые файлы
-    required_files = ["config.json"]
-    for file in required_files:
-        if not os.path.exists(file):
-            logger.error(f"Critical file missing: {file}")
-            exit(1)
-    
     # Запускаем бота
     try:
         main()
     except KeyboardInterrupt:
-        logger.info("Bot stopped by user")
+        logger.info(f"Bot {bot_name} stopped by user")
     except Exception as e:
         logger.critical(f"Fatal error: {e}")

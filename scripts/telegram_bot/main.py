@@ -85,12 +85,40 @@ EXTRA_MESSAGES = {
 }
 
 # === Настройка логирования ===
+
+class TelegramTokenFilter(logging.Formatter):
+    """Форматтер для маскировки Telegram bot токенов в логах"""
+    @staticmethod
+    def _mask_token(text: str) -> str:
+        return re.sub(
+            r'(https?://api\.telegram\.org)/bot[^/]+/',
+            r'\1/botTOKEN/',
+            text,
+            flags=re.IGNORECASE
+        )
+
+    def format(self, record):
+        original = super().format(record)
+        return self._mask_token(original)
+
+# === Настройка логирования ===
 logging.basicConfig(
     level=logging.INFO,
     format="%(asctime)s - %(name)s - %(levelname)s - %(message)s",
     handlers=[logging.FileHandler("bot.log"), logging.StreamHandler()],
 )
+
+# Применяем наш форматтер ко всем обработчикам
+for handler in logging.root.handlers:
+    handler.setFormatter(
+        TelegramTokenFilter(
+            fmt=handler.formatter._fmt if hasattr(handler.formatter, '_fmt') else None,
+            datefmt=handler.formatter.datefmt if hasattr(handler.formatter, 'datefmt') else None
+        )
+    )
+
 logger = logging.getLogger(__name__)
+
 
 # === Константы ===
 USER_DATA_FILE = "user_data.json"
@@ -172,10 +200,18 @@ def normalize(text: str) -> str:
 def autocomplete(prefix: str, max_results: int = 29) -> list[str]:
     try:
         prefix_n = normalize(prefix)
-        suggestions = [
+        # Сначала находим слова, которые начинаются с префикса
+        starts_with = [
             word for word in WORDS 
             if normalize(word).startswith(prefix_n)
-        ][:max_results]
+        ]
+        # Затем находим слова, которые содержат префикс (но не начинаются с него)
+        contains = [
+            word for word in WORDS 
+            if prefix_n in normalize(word) and not normalize(word).startswith(prefix_n)
+        ]
+        # Объединяем результаты, сначала те что начинаются, затем содержат
+        suggestions = (starts_with + contains)[:max_results]
         logger.debug(f"Автокомплит для '{prefix}': найдено {len(suggestions)} вариантов")
         return suggestions
     except Exception as e:

@@ -1,29 +1,27 @@
+#!/bin/bash
 
-function restart() {
-cd $dir
-tail $tmp
-rm  $tmp
-echo before kill 
-ps -ef | grep $main | grep -v grep 
-pkill -f $main
-nohup ./telegram/bin/python $main > $tmp 2>&1 &
-echo after nohup
-ps -ef | grep $main | grep -v grep 
-#tail -f $tmp
+restart() {
+  local dir=$1
+  local name=$2
+  local main=$name.py
+  local tmp=/tmp/nohup_$name.out
+
+  echo "Restarting $main in $dir"
+  cd "$dir" || exit 1
+
+  tail "$tmp"
+  rm "$tmp"
+
+  echo "before kill"
+  ps -ef | grep "$main" | grep -v grep
+
+  pkill -f "$main"
+
+  nohup ./telegram/bin/python "$main" > "$tmp" 2>&1 &
+  echo "after nohup"
+  ps -ef | grep "$main" | grep -v grep
+  echo
 }
 
-dir=/var/www/telegram_bot
-name=dgift
-main=$name.py
-tmp=/tmp/nohup_$name.out
-restart()
-
-echo 
-echo 
-echo 
-
-dir=/var/www/telegram_bot
-name=bot
-main=$name.py
-tmp=/tmp/nohup_$name.out
-restart()
+restart /var/www/telegram_bot dgift
+restart /var/www/telegram_bot bot

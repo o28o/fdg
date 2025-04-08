@@ -1,46 +1,34 @@
-import os
-import sys
 import subprocess
-import time
+import sys
 from watchdog.observers import Observer
 from watchdog.events import FileSystemEventHandler
+import time
+import os
 
-# Имя файла с вашим ботом
-BOT_FILE = "main.py"
-# Команда для запуска бота (например, `python bot.py`)
-BOT_COMMAND = [sys.executable, BOT_FILE]
+class ReloadHandler(FileSystemEventHandler):
+    def __init__(self, script):
+        self.script = script
+        self.process = self.run_script()
 
-class BotHandler(FileSystemEventHandler):
-    def __init__(self):
-        self.bot_process = None
-        self.start_bot()
+    def run_script(self):
+        return subprocess.Popen([sys.executable, self.script])
 
-    def start_bot(self):
-        """Запускает бота в отдельном процессе."""
-        print("🔄 **Запуск бота...**")
-        if self.bot_process:
-            self.bot_process.terminate()  # Завершаем предыдущий процесс
-            self.bot_process.wait()
-        self.bot_process = subprocess.Popen(BOT_COMMAND)
-
-    def on_modified(self, event):
-        """Перезапускает бота при изменении файлов."""
-        if not event.is_directory and event.src_path.endswith(".py"):
-            print(f"🔍 **Обнаружены изменения в {event.src_path}**")
-            self.start_bot()
+    def on_any_event(self, event):
+        if event.src_path.endswith('.py'):
+            print(f"Изменен файл: {event.src_path}, перезапуск...")
+            self.process.kill()
+            self.process = self.run_script()
 
 if __name__ == "__main__":
-    event_handler = BotHandler()
+    script_to_run = "main.py"
+    event_handler = ReloadHandler(script_to_run)
     observer = Observer()
-    observer.schedule(event_handler, path=".", recursive=True)
+    observer.schedule(event_handler, path='.', recursive=True)
     observer.start()
-    print("👀 **Слежу за изменениями... (Ctrl+C для выхода)**")
-
     try:
         while True:
             time.sleep(1)
     except KeyboardInterrupt:
         observer.stop()
-        if event_handler.bot_process:
-            event_handler.bot_process.terminate()
+        event_handler.process.kill()
     observer.join()

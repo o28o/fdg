@@ -2,6 +2,7 @@
 import json
 import os
 import logging
+import re
 
 # Telegram Core
 from telegram import (
@@ -94,6 +95,7 @@ logger = logging.getLogger(__name__)
 # === Константы ===
 USER_DATA_FILE = "user_data.json"
 DEFAULT_LANG = "en"  # Английский по умолчанию
+
 
 # === Функции для работы с JSON-хранилищем ===
 def load_user_data() -> dict:

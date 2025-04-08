@@ -129,32 +129,23 @@ for handler in logging.root.handlers:
 logger = logging.getLogger(__name__)
 
 
-
-
 # === Константы ===
-#USER_DATA_FILE = "user_data.json"
-USER_DATA_FILE = f"user_data_{bot_name}.json"
+#USER_DATA_FILE = f"user_data_{bot_name}.json"
+USER_DATA_FILE = "user_data.json"
 DEFAULT_LANG = "en"  # Английский по умолчанию
 
 
 # === Функции для работы с JSON-хранилищем ===
 def load_user_data() -> dict:
-    """Загружает данные пользователей из файла, создает файл если не существует"""
+    """Загружает данные пользователей из файла"""
+    if not os.path.exists(USER_DATA_FILE):
+        return {}
+    
     try:
-        if not os.path.exists(USER_DATA_FILE):
-            with open(USER_DATA_FILE, "w", encoding="utf-8") as f:
-                json.dump({}, f)
-            return {}
-        
         with open(USER_DATA_FILE, "r", encoding="utf-8") as f:
             return json.load(f)
-    except json.JSONDecodeError:
-        logger.error("Файл данных поврежден, создается новый")
-        with open(USER_DATA_FILE, "w", encoding="utf-8") as f:
-            json.dump({}, f)
-        return {}
     except Exception as e:
-        logger.error(f"Критическая ошибка загрузки user_data: {e}")
+        logger.error(f"Ошибка загрузки user_data: {e}")
         return {}
 
 def save_user_data(user_id: int, key: str, value: str):

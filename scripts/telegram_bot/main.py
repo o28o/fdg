@@ -210,17 +210,20 @@ def normalize(text: str) -> str:
 def autocomplete(prefix: str, max_results: int = 29) -> list[str]:
     try:
         prefix_n = normalize(prefix)
-        # Сначала находим слова, которые начинаются с префикса
-        starts_with = [
-            word for word in WORDS 
-            if normalize(word).startswith(prefix_n)
-        ]
-        # Затем находим слова, которые содержат префикс (но не начинаются с него)
-        contains = [
-            word for word in WORDS 
-            if prefix_n in normalize(word) and not normalize(word).startswith(prefix_n)
-        ]
-        # Объединяем результаты, сначала те что начинаются, затем содержат
+        
+        # Сначала находим слова, которые начинаются с префикса, и сортируем их
+        starts_with = sorted(
+            [word for word in WORDS if normalize(word).startswith(prefix_n)],
+            key=lambda x: normalize(x)  # или другой ключ сортировки, если нужно
+        )
+        
+        # Затем находим слова, которые содержат префикс (но не начинаются с него), и сортируем их
+        contains = sorted(
+            [word for word in WORDS if prefix_n in normalize(word) and not normalize(word).startswith(prefix_n)],
+            key=lambda x: normalize(x)  # или другой ключ сортировки
+        )
+        
+        # Объединяем результаты, сначала те, что начинаются, затем содержат
         suggestions = (starts_with + contains)[:max_results]
         logger.debug(f"Автокомплит для '{prefix}': найдено {len(suggestions)} вариантов")
         return suggestions

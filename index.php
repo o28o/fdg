@@ -14,6 +14,8 @@ include 'scripts/search-handler.php';
 //echo basename($_SERVER['REQUEST_URI']);
 ?>
 <html lang="<?php echo $htmllang;?>" data-bs-theme="dark">
+  <meta name="theme-color" content="#1a1a1a" media="(prefers-color-scheme: dark)">
+<meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)">
     <head>
       <meta charset="UTF-8">
 
@@ -70,7 +72,7 @@ if (siteLanguage === 'ru' && currentPath !== '/ru/') {
     window.location.href = '/' + currentHash;
 }
 </script> --> 
-<meta property="og:url" content="https://1Dhamma.gift" />
+<meta property="og:url" content="https://Dhamma.gift" />
 <meta property="og:site_name" content="Dhamma.gift" />
 <meta property="og:image" content="<?php echo $ogshare;?>" />
 

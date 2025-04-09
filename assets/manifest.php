@@ -43,7 +43,7 @@ echo json_encode([
 
     // Поддержка Web Share Target API
     "share_target" => [
-        "action" => $start_url,
+        "action" => $start_url . "/pwa_share",
         "method" => "GET",
         "params" => [
             "text" => "q"

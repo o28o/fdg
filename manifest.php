@@ -1,5 +1,11 @@
 <?php
-// Определяем базовый URL
+// Включаем вывод всех ошиок для отладки
+//error_reporting(E_ALL);
+//ini_set('display_errors', 1);
+error_reporting(E_ERROR | E_PARSE);
+include_once('config/config.php');
+include_once('config/translate.php');
+//echo basename($_SERVER['REQUEST_URI']);
 $scheme = (!empty($_SERVER['HTTPS']) && $_SERVER['HTTPS'] !== 'off') ? "https" : "http";
 $host = $_SERVER['HTTP_HOST'];
 $base_path = rtrim(dirname($_SERVER['SCRIPT_NAME']), '/') . '/';
@@ -36,14 +42,15 @@ echo json_encode([
             "sizes" => "512x512"
         ]
     ],
-"start_url" => $start_url,   
+"start_url" => $mainpagenoslash . "/" ,   
+"scope" => $mainpagenoslash . "/" ,   
 "display" => "minimal-ui",
     "background_color" => "#ffffff",
     "theme_color" => "#000000",
 
     // Поддержка Web Share Target API
     "share_target" => [
-        "action" => $start_url . "pwa_share",
+        "action" => $mainpagenoslash . "/pwa_share",
         "method" => "GET",
         "params" => [
             "text" => "q"

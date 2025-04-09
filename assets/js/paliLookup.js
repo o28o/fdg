@@ -52,7 +52,10 @@ if (savedDict.includes("dpd")) {
   }
 } else if (savedDict === "dicttango") {
   dictUrl = "dttp://app.dicttango/WordLookup?word=";
-} else if (savedDict === "standalonebwru") {
+} else if (savedDict === "mdict") {
+  dictUrl = "mdict://mdict.cn/search?text=";
+}
+else if (savedDict === "standalonebwru") {
   dictUrl = "standalonebwru"; // Используем standalone-словарь
 } else if (savedDict === "standalonebw") {
   dictUrl = "standalonebw"; // Используем standalone-словарь
@@ -660,7 +663,7 @@ searchBtn.addEventListener('click', () => {
     document.addEventListener('click', handleAnyClick);
 }
 
-                if (dictUrl.includes('dicttango')) {
+                if (dictUrl.includes('dicttango') || dictUrl.includes('mdict')) {
                     popup.style.display = 'none';
                     overlay.style.display = 'none';
                     showSearchButton();

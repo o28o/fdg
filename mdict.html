@@ -1,12 +1,78 @@
+Вот HTML-страница со **всеми возможными вариантами** ссылок для открытия MDict из браузера на iOS (iPhone/iPad). Каждый вариант пронумерован — если один не сработает, попробуйте следующий.  
+
+---
+
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>MDict Link Test</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MDict Link Tester</title>
+  <style>
+    body { font-family: Arial, sans-serif; line-height: 1.6; padding: 20px; }
+    a { display: block; margin: 10px 0; color: #0066cc; text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    .note { color: #666; font-size: 0.9em; }
+  </style>
 </head>
 <body>
-  <p>
-    <a href="mdict://mdict.cn/search?text=keyword">MDict Test</a>
-  </p>
+  <h1>Тест ссылок для MDict (iOS)</h1>
+  <p class="note">Если MDict установлен, кликните на ссылку. Если приложение не открывается, попробуйте другой вариант.</p>
+
+  <!-- Вариант 1: Базовая ссылка mdict:// -->
+  <h3>Вариант 1: Стандартная схема</h3>
+  <a href="mdict://keyword">mdict://keyword</a>
+  <p class="note">Стандартный формат. MDict должен быть установлен.</p>
+
+  <!-- Вариант 2: С параметром search -->
+  <h3>Вариант 2: С параметром search</h3>
+  <a href="mdict://search?query=keyword">mdict://search?query=keyword</a>
+  <p class="note">Альтернативный формат с явным указанием поиска.</p>
+
+  <!-- Вариант 3: Через JavaScript -->
+  <h3>Вариант 3: JavaScript-перенаправление</h3>
+  <a href="#" onclick="window.location.href='mdict://keyword'">Открыть через JS (кликните)</a>
+  <p class="note">Обход блокировки браузером прямых переходов.</p>
+
+  <!-- Вариант 4: Универсальная ссылка (Universal Link) -->
+  <h3>Вариант 4: Универсальная ссылка (если поддерживается)</h3>
+  <a href="https://mdict.cn/search?text=keyword">https://mdict.cn/search?text=keyword</a>
+  <p class="note">Работает, если MDict настроил Universal Links.</p>
+
+  <!-- Вариант 5: Альтернативная схема с word -->
+  <h3>Вариант 5: Схема с word=</h3>
+  <a href="mdict://?word=keyword">mdict://?word=keyword</a>
+  <p class="note">Альтернативный параметр для передачи слова.</p>
+
+  <!-- Вариант 6: Intent для Android (на случай, если iOS тоже сработает) -->
+  <h3>Вариант 6: Intent-ссылка (Android/iOS)</h3>
+  <a href="intent://mdict.cn/search?text=keyword#Intent;scheme=mdict;package=cn.mdict;end;">intent://... (Android/iOS)</a>
+  <p class="note">Для Android, но иногда работает и на iOS.</p>
+
+  <!-- Вариант 7: Пользовательская схема с префиксом -->
+  <h3>Вариант 7: Пользовательский префикс (mdict-word://)</h3>
+  <a href="mdict-word://keyword">mdict-word://keyword</a>
+  <p class="note">Некоторые приложения используют свои префиксы.</p>
+
+  <!-- Инструкция -->
+  <h2>Что делать, если ничего не работает?</h2>
+  <ol>
+    <li>Убедитесь, что MDict установлен.</li>
+    <li>Попробуйте вручную ввести <code>mdict://keyword</code> в адресную строку Safari.</li>
+    <li>Свяжитесь с поддержкой MDict, чтобы уточнить правильный формат ссылки.</li>
+  </ol>
 </body>
 </html>
+```
+
+---
+
+### Как использовать:
+1. Сохраните этот код в файл `mdict_test.html`.
+2. Откройте его в **Safari на iPhone/iPad** (другие браузеры могут блокировать кастомные схемы).
+3. Кликайте на ссылки по очереди, пока не сработает нужная.
+
+Если ни один вариант не работает, вероятно, MDict **не поддерживает deep linking в iOS** или требует особого формата. В этом случае стоит уточнить у разработчиков приложения.
+
+

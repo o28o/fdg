@@ -35,7 +35,7 @@ if (isset($_GET['ml']) && $_GET['ml'] === 'on') {
 <meta property="og:type" content="website" />
 <meta property="og:title" content="Dhamma.gift Read" />
 <meta property="og:description" content="<?php echo $ogdesc;?>" />
-<link rel="manifest" href="/assets/manifest.php">
+<link rel="manifest" href="/manifest.php">
 
 <meta property="og:url" content="https://Dhamma.gift/read.php" />
 <meta property="og:site_name" content="Dhamma.gift Read" />

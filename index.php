@@ -38,7 +38,7 @@ include 'scripts/search-handler.php';
     }
 </style>
 
-<link rel="manifest" href="/assets/manifest.php">
+<link rel="manifest" href="/manifest.php">
 <link rel="canonical" href="<?php echo $canonicalPage;?>">
 <link rel="alternate" href="https://dhamma.gift/ru/" hreflang="ru">
 <link rel="alternate" href="https://dhamma.gift/" hreflang="en">

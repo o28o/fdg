@@ -38,7 +38,7 @@ include 'scripts/search-handler.php';
     }
 </style>
 
-<link rel="manifest" href="/manifest.php">
+<link rel="manifest" href="<?php echo $mainpagenoslash ;?>/manifest.php">
 <link rel="canonical" href="<?php echo $canonicalPage;?>">
 <link rel="alternate" href="https://dhamma.gift/ru/" hreflang="ru">
 <link rel="alternate" href="https://dhamma.gift/" hreflang="en">
@@ -162,7 +162,7 @@ function updateURL(params) {
    <img loading="lazy" alt="Precise search in Pali Suttas and Vinaya" src="/assets/img/dhammafindlogo.webp"  style="width:100px;"></a>
 
             
-                <a class="navbar-brand mobile-none" href="/">find.Dhamma.gift</a>
+                <a class="navbar-brand mobile-none" href="/">Dhamma.gift</a>
                 <button class="navbar-toggler text-uppercase font-weight-bold bg-primary text-white rounded" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
                    <?php echo $menu;?>
                     <i class="fas fa-bars"></i>

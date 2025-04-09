@@ -1,6 +1,18 @@
 RewriteEngine On
 #RewriteRule ^(.*)$ https://dhamma.gift/$1 [L,R=301]
 
+
+# /ru/pwa_share → /ru/assets/?p=-kn&q=...
+RewriteCond %{REQUEST_URI} ^/(.*)/pwa_share$
+RewriteCond %{QUERY_STRING} (^|&)q=([^&]+)(&|$)
+RewriteRule ^(.*)/pwa_share$ /%1/assets/?p=-kn&q=%2 [L,R=302]
+
+# /pwa_share → /assets/?p=-kn&q=...
+RewriteCond %{REQUEST_URI} ^/pwa_share$
+RewriteCond %{QUERY_STRING} (^|&)q=([^&]+)(&|$)
+RewriteRule ^pwa_share$ /assets/?p=-kn&q=%2 [L,R=302]
+
+
 # Переадресация с /sc/ на /read/
 
 #RewriteCond %{REQUEST_URI} !^/ru/read.php

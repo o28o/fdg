@@ -130,8 +130,8 @@ logger = logging.getLogger(__name__)
 
 
 # === Константы ===
-#USER_DATA_FILE = f"user_data_{bot_name}.json"
-USER_DATA_FILE = "user_data.json"
+#USER_DATA_FILE = "user_data.json"
+USER_DATA_FILE = f"user_data_{bot_name}.json"
 DEFAULT_LANG = "en"  # Английский по умолчанию
 
 

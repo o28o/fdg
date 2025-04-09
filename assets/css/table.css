@@ -58,10 +58,7 @@ table {
 	width: 100%
 }
 */
-.wordwrap {
-    word-wrap:break-word;
-    vertical-align: top;
-}
+
 
 table.dataTable.dtr-inline.collapsed>tbody>tr>td.dtr-control:before,table.dataTable.dtr-inline.collapsed>tbody>tr>th.dtr-control:before {
  
@@ -69,12 +66,23 @@ color: inherit !important;  /* Или color:  */
 
 }
 
-tbody td:first-child,  
+
 tbody td:nth-child(3) {  
   word-break: break-word;  
   overflow-wrap: break-word;  
 }
- /*   table.dataTable.dtr-inline.collapsed>tbody>tr[role="row"]>td:first-child:before,table.dataTable.dtr-inline.collapsed>tbody>tr[role="row"]>th:first-child:before{
+
+
+.wordwrap,
+.finder {
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+}
+ /*  
+ #pali 
+ tbody td:first-child,  
+ 
+ table.dataTable.dtr-inline.collapsed>tbody>tr[role="row"]>td:first-child:before,table.dataTable.dtr-inline.collapsed>tbody>tr[role="row"]>th:first-child:before{
     content:'+';
     background-color:#16A085
 }

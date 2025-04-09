@@ -801,7 +801,7 @@ filesize=`ls -lh $output/$table | awk '{print \$5}'`
 
 dateforhist=`date +%d-%m-%Y`
 echo -n "<!-- begin $keyword --> 
-<tr><td><a class=\"outlink\" href=\"./result/${table}\">${keyword}</a></td><td><label class='star-checkbox'><input type='checkbox' data-index=\"${table}\"/><i class='fa-regular fa-star'></i></label></td><td>$textsqnty</td><td>$matchqnty</td><td><a class=\"outlink\" href=\"/w.php?s=${escapedKeyword}&d=$source\">$uniqwords</a></td><td>$searchlangForUser/$langtwo</td><td>$searchInForUser</td><td class=\"daterow\">$dateforhist</td><td>$filesize</td><td>" >> $history
+<tr><td><a class=\"outlink wordwrap\" href=\"./result/${table}\">${keyword}</a></td><td><label class='star-checkbox'><input type='checkbox' data-index=\"${table}\"/><i class='fa-regular fa-star'></i></label></td><td>$textsqnty</td><td>$matchqnty</td><td><a class=\"outlink\" href=\"/w.php?s=${escapedKeyword}&d=$source\">$uniqwords</a></td><td>$searchlangForUser/$langtwo</td><td>$searchInForUser</td><td class=\"daterow\">$dateforhist</td><td>$filesize</td><td>" >> $history
 }
 
 

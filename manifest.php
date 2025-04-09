@@ -50,7 +50,7 @@ echo json_encode([
 
     // Поддержка Web Share Target API
     "share_target" => [
-        "action" => $mainpagenoslash . "/pwa_share",
+        "action" => "/ru/pwa_share",
         "method" => "GET",
         "params" => [
             "text" => "q"

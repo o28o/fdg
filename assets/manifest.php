@@ -1,49 +1,51 @@
 <?php
-// Определяем базовый URL
+// Заголовки против кеширования
+header('Cache-Control: no-cache, no-store, must-revalidate');
+header('Pragma: no-cache');
+header('Expires: 0');
+header('Content-Type: application/json');
+
+// Базовый URL
 $scheme = (!empty($_SERVER['HTTPS']) && $_SERVER['HTTPS'] !== 'off') ? "https" : "http";
 $host = $_SERVER['HTTP_HOST'];
 $base_path = rtrim(dirname($_SERVER['SCRIPT_NAME']), '/') . '/';
 $base_url = "$scheme://$host$base_path";
 
-// Получаем реферер или URL, на котором вызвали манифест
+// Определение start_url с несколькими fallback'ами
 $start_url = $_SERVER['HTTP_REFERER'] ?? $base_url;
 $start_url = filter_var($start_url, FILTER_SANITIZE_URL);
 
-// Устанавливаем короткое имя и имя в зависимости от хоста
-if (preg_match('/^(localhost|127\.\d+\.\d+\.\d+)$/', parse_url($base_url, PHP_URL_HOST))) {
-    $short_name = "DG Offline";
-    $name = "DG Offline";
-} else {
-    $short_name = "Dhamma.Gift";
-    $name = "Dhamma.gift Search. Read. Multi-Tool. ";
+// Проверка, что start_url принадлежит нашему домену
+if (!str_starts_with($start_url, $base_url)) {
+    $start_url = $base_url;
 }
 
-// Устанавливаем заголовок JSON
-header('Content-Type: application/json');
+// Имя приложения
+$is_local = preg_match('/^(localhost|127\.\d+\.\d+\.\d+)$/', parse_url($base_url, PHP_URL_HOST));
+$short_name = $is_local ? "DG Offline" : "Dhamma.Gift";
+$name = $is_local ? "DG Offline" : "Dhamma.gift Search. Read. Multi-Tool.";
 
 echo json_encode([
     "short_name" => $short_name,
     "name" => $name,
     "icons" => [
         [
-            "src" => "/assets/img/icon-192x192.png",
+            "src" => "$base_url/assets/img/icon-192x192.png",
             "type" => "image/png",
             "sizes" => "192x192"
         ],
         [
-            "src" => "/assets/img/icon-512x512.png",
+            "src" => "$base_url/assets/img/icon-512x512.png",
             "type" => "image/png",
             "sizes" => "512x512"
         ]
     ],
-"start_url" => $start_url,   
-"display" => "minimal-ui",
+    "start_url" => $start_url,
+    "display" => "minimal-ui",
     "background_color" => "#ffffff",
     "theme_color" => "#000000",
-
-    // Поддержка Web Share Target API
     "share_target" => [
-        "action" => $start_url,
+        "action" => $base_url, // Лучше использовать base_url для action
         "method" => "GET",
         "params" => [
             "text" => "q"

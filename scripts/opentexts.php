@@ -147,6 +147,8 @@ if (isset($_GET['reader'])) {
 
 
  //для поделиться pwa share api 
+$q = urldecode($q);
+
 if (strpos($q, 'http') !== false || strpos($q, 'https') !== false) {
     if (preg_match('/"([^"]+)"/u', $q, $matches)) {
         $q = $matches[1]; // оставить только текст в кавычках
@@ -155,7 +157,6 @@ if (strpos($q, 'http') !== false || strpos($q, 'https') !== false) {
         $q = ''; // если кавычек нет — очистить
     }
 }
-
 
 	
 	if (empty($_GET["la"])) {

@@ -12,10 +12,10 @@ $start_url = filter_var($start_url, FILTER_SANITIZE_URL);
 // Устанавливаем короткое имя и имя в зависимости от хоста
 if (preg_match('/^(localhost|127\.\d+\.\d+\.\d+)$/', parse_url($base_url, PHP_URL_HOST))) {
     $short_name = "DG Offline";
-    $name = "Search. Read. Multi-Tool.";
+    $name = "DG Offline";
 } else {
     $short_name = "Dhamma.Gift";
-    $name = "Search. Read. Multi-Tool. ";
+    $name = "Dhamma.gift Search. Read. Multi-Tool. ";
 }
 
 // Устанавливаем заголовок JSON

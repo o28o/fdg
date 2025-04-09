@@ -7,7 +7,7 @@ RewriteCond %{REQUEST_URI} ^/(.*)/pwa_share$
 RewriteCond %{QUERY_STRING} (^|&)q=([^&]+)(&|$)
 RewriteRule ^(.*)/pwa_share$ /%1/?p=-kn&q=%2 [L,R=302]
 
-# /pwa_share → /assets/?p=-kn&q=...
+# /pwa_share → /?p=-kn&q=...
 RewriteCond %{REQUEST_URI} ^/pwa_share$
 RewriteCond %{QUERY_STRING} (^|&)q=([^&]+)(&|$)
 RewriteRule ^pwa_share$ /?p=-kn&q=%2 [L,R=302]

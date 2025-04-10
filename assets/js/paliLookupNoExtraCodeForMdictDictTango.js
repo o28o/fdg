@@ -519,26 +519,6 @@ document.addEventListener('click', function(event) {
 if (dictUrl === "standalonebw" || dictUrl === "standalonebwru") {
     translation = lookupWordInStandaloneDict(cleanedWord);
 } 
-else if (dictUrl.includes("dicttango") || dictUrl.includes("mdict")) {
-    // Создаем временную кнопку для открытия в приложении
-    const tempLink = document.createElement('a');
-    tempLink.href = 'javascript:void(0)';
-    tempLink.onclick = function() {
-        window.location.href = `${dictUrl}${encodeURIComponent(cleanedWord)}`;
-        return false;
-    };
-    
-    // Имитируем клик (для iOS это должно быть инициировано пользователем)
-    // На практике лучше показать реальную кнопку пользователю
-    tempLink.click();
-    
-    // В этом случае translation остается пустым, так как мы перенаправляем в приложение
-    translation = "";
-    
-    // Скрываем popup, так как он не нужен для этих словарей
-    popup.style.display = 'none';
-    overlay.style.display = 'none';
-}
 else {
     // Иначе используем текущую логику с dictUrl
     const url = `${dictUrl}${encodeURIComponent(cleanedWord)}`;

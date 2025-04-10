@@ -7,9 +7,9 @@ RewriteEngine On
 #RewriteRule ^pwa_share$ /?p=-kn&q=%2 [L,R=302]
 
 # /ru/pwa_share → /ru/?p=-kn&q=...
-RewriteCond %{REQUEST_URI} ^/(.*)/pwa_share$
-RewriteCond %{QUERY_STRING} (^|&)q=([^&]+)(&|$)
-RewriteRule ^(.*)/pwa_share$ /%1/?p=-kn&q=%2 [L,R=302]
+#RewriteCond %{REQUEST_URI} ^/(.*)/pwa_share$
+#RewriteCond %{QUERY_STRING} (^|&)q=([^&]+)(&|$)
+#RewriteRule ^(.*)/pwa_share$ /%1/?p=-kn&q=%2 [L,R=302]
 
 
 # Переадресация с /sc/ на /read/

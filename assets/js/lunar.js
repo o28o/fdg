@@ -1,32 +1,46 @@
-    // Функция для определения текущего лунного дня
-    function getLunarDay() {
-      let currentDate = new Date();
-      currentDate.setHours(-6);
-      let midnightDate = new Date();
-      midnightDate.setHours(0, 0, 0, 0);
-      let diffMilliseconds = currentDate - midnightDate;
-      let diffDays = Math.floor(diffMilliseconds / (1000 * 60 * 60 * 24));
-      let lunarDayCustom = (diffDays + 14) % 30;
+// Улучшенная функция для определения лунных дней
+function getLunarDays() {
+  const now = new Date();
+  
+  // Базовые параметры (можно уточнить для вашего местоположения)
+  const timeZoneOffset = 6; // Часовой пояс
+  const newMoonDate = new Date('2023-01-21T20:53Z'); // Дата известного новолуния
+  
+  // Рассчитываем текущий лунный цикл
+  const lunarCycle = 29.530588; // Средняя продолжительность лунного месяца в днях
+  const daysSinceNewMoon = (now - newMoonDate) / (1000 * 60 * 60 * 24);
+  let lunarAge = daysSinceNewMoon % lunarCycle;
+  
+  // Корректировка лунного дня (начало с заката)
+  const lunarDay = Math.floor(lunarAge) + 1;
+  const adjustedLunarDay = (lunarDay > 29) ? 1 : lunarDay;
+  
+  // Устанавливаем значения на странице
+  document.getElementById("lunarDay").textContent = adjustedLunarDay;
+  document.getElementById("dayOfMonth").textContent = now.getDate();
+  
+  // Рассчитываем даты будущих лунных дней
+  function getNextLunarDay(targetDay) {
+    const daysToAdd = (targetDay - adjustedLunarDay + 29) % 29;
+    const date = new Date(now);
+    date.setDate(now.getDate() + daysToAdd);
+    return date.toLocaleDateString();
+  }
+  
+  document.getElementById("lunar8").textContent = getNextLunarDay(8);
+  document.getElementById("lunar14").textContent = getNextLunarDay(14);
+  document.getElementById("lunar15").textContent = getNextLunarDay(15);
+  
+  // Дополнительно: определяем фазу луны
+  const moonPhases = ["🌑 Новолуние", "🌓 Растущая луна, первая четверть", "🌕 Полнолуние", "🌗 Убывающая луна, последняя четверть."];
+  let phaseIndex;
+  if (lunarAge < 7.4) phaseIndex = 1;
+  else if (lunarAge < 14.8) phaseIndex = 2;
+  else if (lunarAge < 22.1) phaseIndex = 3;
+  else phaseIndex = 0;
+  
+  document.getElementById("moonPhase").textContent = moonPhases[phaseIndex];
+}
 
-      document.getElementById("lunarDay").textContent = lunarDayCustom;
-
-//let dayOfMonth = new Date(10);
-    let dayOfMonth = currentDate.getDate();
-      document.getElementById("dayOfMonth").textContent = dayOfMonth;
-
-      // Рассчитываем даты для 14, 15 и 8 лунных дней
-      let lunar14Date = new Date(currentDate);
-      lunar14Date.setDate(dayOfMonth + (15 - lunarDayCustom));
-      document.getElementById("lunar14").textContent = lunar14Date.toLocaleDateString();
-
-      let lunar15Date = new Date(currentDate);
-      lunar15Date.setDate(dayOfMonth + (16 - lunarDayCustom));
-      document.getElementById("lunar15").textContent = lunar15Date.toLocaleDateString();
-
-      let lunar8Date = new Date(currentDate);
-      lunar8Date.setDate(dayOfMonth + (9 - lunarDayCustom));
-      document.getElementById("lunar8").textContent = lunar8Date.toLocaleDateString();
-    }
-
-    getLunarDay();
-
+// Вызываем функцию при загрузке
+window.onload = getLunarDays;

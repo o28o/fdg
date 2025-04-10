@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" type="image/png" sizes="32x32" href="https://dhamma.gift/assets/img/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="56x56" href="https://dhamma.gift/assets/img/favicon-56x56.png">
+    <link rel="icon" type="image/png" sizes="128x128" href="https://dhamma.gift/assets/img/icon-128x128.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="/assets/css/bootstrap.5.3.1.min.css" rel="stylesheet" />
+    <link href="/assets/css/extrastyles.css" rel="stylesheet" />
+    <link href="/assets/css/pages.css" rel="stylesheet" />
+  <title>Калькулятор дней Упосатхи по Суттам</title>
+
+    <link rel="canonical" href="https://dhamma.gift/assets/common/lunarRu.html">
+    <link rel="alternate" href="https://dhamma.gift/assets/common/lunarRu.html" hreflang="ru">
+    <link rel="alternate" href="https://dhamma.gift/assets/common/lunar.html" hreflang="en">
+    
+    <meta name="keywords" content="Будда, Buddha, Дхамма, Дхарма, Виная, поиск, Сутта, Сутты, Суттапитака, Винаяпитака, suttapitaka, vinayapitaka Пали, Палийский канон, буддизм, dhamma, sutta, Buddhism, pali Canon, патимоккха, пратимокша, patimokkha, pratimoksasutra">
+    <meta name="description" content="Что такое Dhamma.gift? Ключевые особенности Dhamma.gift — ваш универсальный портал для доступа к пали-текстам, переводам и ресурсам для изучения учений Будды, Сутт, Винаи и буддийской доктрины. Найдите переводы и ссылки для изучения Дхаммы Будды.">
+</head>
+<body>
+<div class="container mt-3">
+    <div class="d-flex align-items-center">
+        <div class="input-group">
+
+            <a href="/ru" title="Sutta and Vinaya search" rel="noreferrer" class="me-1">
+                <img width="24px" alt="dhamma.gift icon" src="/assets/img/gray-white.png">
+            </a>
+
+            <div class="ms-1 form-check form-switch">
+                <input type="checkbox" class="form-check-input" id="darkSwitch">
+            </div>
+        </div>
+
+        <!-- Языковой переключатель справа и в одну линию -->
+        <div class="ms-auto d-inline-flex align-items-center">
+            <a class="btn btn-sm btn-secondary rounded-pill text-decoration-none ms-1" href="./lunar.html">en</a>
+            <span>ru</span>
+        </div>
+    </div>
+</div>
+  <div class="container mt-5">
+ <p>
+   
+ <h1>Дни Упосатхи по Суттам</h1>
+ </p> 
+    <p>Сегодня <span id="lunarDay"></span>-й лунный день (с учетом измененной схемы начала суток с 18:00 предыдущего дня).</p>
+    <p>Число месяца: <span id="dayOfMonth"></span></p>
+    <p>14 лунный день: <span id="lunar14"></span></p>
+    <p>15 лунный день: <span id="lunar15"></span></p>
+    <p>8 лунный день: <span id="lunar8"></span></p>
+  </div>
+<div class="container mt-5">
+  <h2>Основные сутты по теме</h2>
+  <ul>
+    <li><a href="/ru/mn146">mn146</a> — 14-я неполная луна, 15-я полная.</li>
+    <li><a href="/ru/an3.37">an3.37</a> — сравнение 14, 15 и 8 дней с божествами.</li>
+    <li><a href="/ru/an3.70">an3.70</a> — «ночи и дня», а не «дня и ночи». В пали есть устойчивое выражение <i>ahoratta</i> («день-ночь») — в других контекстах.</li>
+  </ul>
+</div>
+
+
+<script src="/assets/js/bootstrap.bundle.5.3.1.min.js"></script>
+
+  <script>
+    // Функция для определения текущего лунного дня
+    function getLunarDay() {
+      let currentDate = new Date();
+      currentDate.setHours(-6);
+      let midnightDate = new Date();
+      midnightDate.setHours(0, 0, 0, 0);
+      let diffMilliseconds = currentDate - midnightDate;
+      let diffDays = Math.floor(diffMilliseconds / (1000 * 60 * 60 * 24));
+      let lunarDayCustom = (diffDays + 14) % 30;
+
+      document.getElementById("lunarDay").textContent = lunarDayCustom;
+
+//let dayOfMonth = new Date(10);
+    let dayOfMonth = currentDate.getDate();
+      document.getElementById("dayOfMonth").textContent = dayOfMonth;
+
+      // Рассчитываем даты для 14, 15 и 8 лунных дней
+      let lunar14Date = new Date(currentDate);
+      lunar14Date.setDate(dayOfMonth + (15 - lunarDayCustom));
+      document.getElementById("lunar14").textContent = lunar14Date.toLocaleDateString();
+
+      let lunar15Date = new Date(currentDate);
+      lunar15Date.setDate(dayOfMonth + (16 - lunarDayCustom));
+      document.getElementById("lunar15").textContent = lunar15Date.toLocaleDateString();
+
+      let lunar8Date = new Date(currentDate);
+      lunar8Date.setDate(dayOfMonth + (9 - lunarDayCustom));
+      document.getElementById("lunar8").textContent = lunar8Date.toLocaleDateString();
+    }
+
+    getLunarDay();
+  </script>
+  <script src="/assets/js/dark-mode-switch/dark-mode-switch.js"></script>
+
+</body>
+</html>

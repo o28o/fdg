@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <link rel="icon" type="image/png" sizes="32x32" href="https://dhamma.gift/assets/img/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="56x56" href="https://dhamma.gift/assets/img/favicon-56x56.png">
+  <link rel="icon" type="image/png" sizes="128x128" href="https://dhamma.gift/assets/img/icon-128x128.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="/assets/css/bootstrap.5.3.1.min.css" rel="stylesheet" />
+  <link href="/assets/css/extrastyles.css" rel="stylesheet" />
+  <link href="/assets/css/pages.css" rel="stylesheet" />
+  <title>Uposatha Days Calculator from the Suttas</title>
+
+  <link rel="canonical" href="https://dhamma.gift/assets/common/lunar.html">
+  <link rel="alternate" href="https://dhamma.gift/assets/common/lunarRu.html" hreflang="ru">
+  <link rel="alternate" href="https://dhamma.gift/assets/common/lunar.html" hreflang="en">
+
+  <meta name="keywords" content="Buddha, Dhamma, Dharma, Vinaya, search, Sutta, Suttas, Suttapitaka, Vinayapitaka, Pali, Pali Canon, Buddhism, patimokkha, pratimoksha">
+  <meta name="description" content="What is Dhamma.gift? Key features of Dhamma.gift — your portal for accessing Pali texts, translations, and resources for learning the Buddha's teachings, Suttas, Vinaya, and Buddhist doctrine. Find translations and study links for the Buddha's Dhamma.">
+</head>
+<body>
+<div class="container mt-3">
+  <div class="d-flex align-items-center">
+    <div class="input-group">
+
+      <a href="/" title="Sutta and Vinaya search" rel="noreferrer" class="me-1">
+        <img width="24px" alt="dhamma.gift icon" src="/assets/img/gray-white.png">
+      </a>
+
+      <div class="ms-1 form-check form-switch">
+        <input type="checkbox" class="form-check-input" id="darkSwitch">
+      </div>
+    </div>
+
+    <!-- Language switcher -->
+    <div class="ms-auto d-inline-flex align-items-center">
+      <span>en</span>
+      <a class="btn btn-sm btn-secondary rounded-pill text-decoration-none ms-1" href="./lunarRu.html">ru</a>
+    </div>
+  </div>
+</div>
+
+<div class="container mt-5">
+  <h1>Uposatha Days from the Suttas</h1>
+  <p>Today is the <span id="lunarDay"></span>th lunar day (based on the adjusted day-start scheme from 6:00 PM the previous day).</p>
+  <p>Calendar date: <span id="dayOfMonth"></span></p>
+  <p>14th lunar day: <span id="lunar14"></span></p>
+  <p>15th lunar day: <span id="lunar15"></span></p>
+  <p>8th lunar day: <span id="lunar8"></span></p>
+</div>
+
+<div class="container mt-5">
+<h2>Key Suttas on the Topic</h2>
+<ul>
+    <li><a href="/mn146">mn146</a> — 14th waxing moon, 15th full moon.</li>
+    <li><a href="/an3.37">an3.37</a> — comparison of the 14th, 15th, and 8th days with deities.</li>
+    <li><a href="/an3.70">an3.70</a> — "nights and days" rather than "days and nights"; the Pali has the fixed expression <i>ahoratta</i> (“day-night”) — in other contexts.</li>
+  </ul>
+</div>
+
+<script src="/assets/js/bootstrap.bundle.5.3.1.min.js"></script>
+<script>
+  function getLunarDay() {
+    let currentDate = new Date();
+    currentDate.setHours(-6);
+    let midnightDate = new Date();
+    midnightDate.setHours(0, 0, 0, 0);
+    let diffMilliseconds = currentDate - midnightDate;
+    let diffDays = Math.floor(diffMilliseconds / (1000 * 60 * 60 * 24));
+    let lunarDayCustom = (diffDays + 14) % 30;
+
+    document.getElementById("lunarDay").textContent = lunarDayCustom;
+
+    let dayOfMonth = currentDate.getDate();
+    document.getElementById("dayOfMonth").textContent = dayOfMonth;
+
+    let lunar14Date = new Date(currentDate);
+    lunar14Date.setDate(dayOfMonth + (15 - lunarDayCustom));
+    document.getElementById("lunar14").textContent = lunar14Date.toLocaleDateString();
+
+    let lunar15Date = new Date(currentDate);
+    lunar15Date.setDate(dayOfMonth + (16 - lunarDayCustom));
+    document.getElementById("lunar15").textContent = lunar15Date.toLocaleDateString();
+
+    let lunar8Date = new Date(currentDate);
+    lunar8Date.setDate(dayOfMonth + (9 - lunarDayCustom));
+    document.getElementById("lunar8").textContent = lunar8Date.toLocaleDateString();
+  }
+
+  getLunarDay();
+</script>
+<script src="/assets/js/dark-mode-switch/dark-mode-switch.js"></script>
+
+</body>
+</html>

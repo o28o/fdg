@@ -169,11 +169,11 @@ if (slug.includes("mn"))  {
 } else if (slug.match(/bu-pm|bi-pm/)) {
   let translator = "o";
 	
- if ( script === "devanagari" ) {
+ if (( script === "devanagari" ) || ( savedScript === "Devanagari" ) ) {
 //	     var rootpath = `/assets/texts/${texttype}/${slug}_root-pli-ms.json`;
 var rootpath = `/assets/texts/devanagari/root/pli/ms/${texttype}/${slug}_rootd-pli-ms.json`
  } 
- else  if ( script === "thai" ) {
+ else if (( script === "thai" ) || ( savedScript === "Thai" ) ) {
 var rootpath = `/assets/texts/th/root/pli/ms/${texttype}/${slug}_rootth-pli-ms.json`
  } 
 else {

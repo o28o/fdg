@@ -129,12 +129,12 @@ var htmlpath = `${Sccopy}/sc-data/sc_bilara_data/html/pli/ms/${texttype}/${slugR
 
 let ruUrl  = window.location.href;
 
-let rusUrl = ruUrl.replace("/read/th.html", "/r/");
+let rusUrl = ruUrl.replace("/th/read/", "/r/");
 rusUrl = ruUrl.replace("/th/read/", "/r/");
-let mlUrl = ruUrl.replace("/read/th.html", "/ml/");
+let mlUrl = ruUrl.replace("/th/read/", "/ml/");
 mlUrl = ruUrl.replace("/th/read/", "/ml/");
-let mlthUrl = ruUrl.replace("/read/th.html", "/read/mlth.html");
-mlthUrl = ruUrl.replace("/th/read/", "/read/mlth.html");
+let mlthUrl = ruUrl.replace("/th/read/", "/mlth/");
+mlthUrl = ruUrl.replace("/th/read/", "/mlth/");
  let scLink = `<p class="sc-link"><a target="" href="${rusUrl}">Ru</a> <a target="" href="${mlUrl}">R+E</a> <a target="" href="${mlthUrl}">T+E</a> `;
  //<a class='ruLink' href='' onclick=openRu('${slug}') data-slug='${slug}'>tst</a>&nbsp;
 const currentURL = window.location.href;
@@ -441,7 +441,7 @@ else if ((translator === "" && texttype === "sutta" ) || (translator === "sujato
   
   const ruUrl  = window.location.href;
 
-let enUrl = ruUrl.replace("/read/th.html", "/read/");
+let enUrl = ruUrl.replace("/th/read/", "/read/");
 enUrl = ruUrl.replace("/th/read/", "/read/");
 
 scLink += `<a href="${enUrl}">En</a> `;
@@ -531,10 +531,10 @@ if ((translator === 'sujato') || (translator === 'brahmali')) {
 
 
 let origUrl = window.location.href;
-let rvUrl = origUrl.replace("/read/th.html", "/read/");
+let rvUrl = origUrl.replace("/th/read/", "/read/");
 rvUrl = rvUrl.replace("/th/read/", "/read/");
 dUrl = rvUrl.replace("/read/", "/d");
-rvUrl = rvUrl.replace("/ml/", "");
+rvUrl = rvUrl.replace("/ml/", "/read/");
 rvUrl = rvUrl.replace("/read/", "/memorize/");
 
 const warning = "<p class='warning' >Warning!<a style='cursor: pointer;' class='text-decoration-none' target='' href='" + dUrl + "'>&nbsp;</a><br>Translations, dictionaries and commentaries <br>were not made by the Blessed One.<a style='cursor: pointer;' class='text-decoration-none' target='' href='" + dUrl + "'>&nbsp;</a><br>Cross-check with Pali in 4 main nikayas.<a class='text-decoration-none' target='' href='" + rvUrl + "'>&nbsp;</a></p>";

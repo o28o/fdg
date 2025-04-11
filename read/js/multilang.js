@@ -170,11 +170,11 @@ if (slug.includes("mn"))  {
 } else if (slug.match(/bu-pm|bi-pm/)) {
   let translator = "o";
 
- if ( script === "devanagari" ) {
+ if (( script === "devanagari" ) || ( savedScript === "Devanagari" ) ) {
 //	     var rootpath = `/assets/texts/${texttype}/${slug}_root-pli-ms.json`;
 var rootpath = `/assets/texts/devanagari/root/pli/ms/${texttype}/${slug}_rootd-pli-ms.json`
  } 
- else  if ( script === "thai" ) {
+ else if (( script === "thai" ) || ( savedScript === "Thai" ) ) {
 var rootpath = `/assets/texts/th/root/pli/ms/${texttype}/${slug}_rootth-pli-ms.json`
  } 
 else {
@@ -526,9 +526,9 @@ if ((translator === 'sujato') || (translator === 'brahmali')) {
 
 const origUrl = window.location.href;
 let rvUrl = origUrl.replace("/r/", "/read/");
-thUrl = origUrl.replace("/ml/", "/mlth.html");
-dUrl = origUrl.replace("/ml/", "/d.html");
-rvUrl = rvUrl.replace("/ml/", "");
+thUrl = origUrl.replace("/ml/", "/mlth/");
+dUrl = origUrl.replace("/ml/", "/d/");
+rvUrl = rvUrl.replace("/ml/", "/memorize/");
 rvUrl = rvUrl.replace("/read/", "/memorize/");
 
 const warning = "<p class='warning'>Внимание!<a style='cursor: pointer;' class='text-decoration-none' target='' href='" + dUrl + "'>&nbsp;</a><br>Переводы, словари и комментарии<br>сделаны не Благословенным.<a style='cursor: pointer;' class='text-decoration-none' target='' href='" + thUrl + "'>&nbsp;</a><br>Сверяйтесь с Пали в 4 основных никаях.<a style='cursor: pointer;' class='text-decoration-none' target='' href='" + rvUrl + "'>&nbsp;</a></p>";

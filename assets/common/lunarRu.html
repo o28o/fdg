@@ -45,12 +45,12 @@
 </div>
 <div class="container mt-5">
   <h1>Дни Упосатхи по Суттам</h1>
-  <p>Сегодня <span id="lunarDay"></span>-й лунный день.</p>
+    <p>Сегодня <span id="lunarDay"></span>-й лунный день (с учетом измененной схемы начала суток с 18:00 предыдущего дня).</p>
   <p>Фаза луны: <span id="moonPhase"></span></p>
-  <p>Число месяца: <span id="dayOfMonth"></span></p>
-  <p>Ближайший 14 лунный день: <span id="lunar14"></span></p>
-  <p>Ближайший 15 лунный день: <span id="lunar15"></span></p>
+  <p class="d-none">Число месяца: <span id="dayOfMonth"></span></p>
   <p>Ближайший 8 лунный день: <span id="lunar8"></span></p>
+  <p>Ближайший 14 лунный день: <span id="lunar14"></span> начало в 18:00</p>
+  <p>Ближайший 15 лунный день: <span id="lunar15"></span> окончание в 18:00</p>
 </div>
 <div class="container mt-5">
   <h2>Основные сутты по теме</h2>
@@ -60,7 +60,12 @@
     <li><a href="/ru/an3.70">an3.70</a> — «ночи и дня», а не «дня и ночи». В пали есть устойчивое выражение <i>ahoratta</i> («день-ночь») — в других контекстах.</li>
   </ul>
 </div>
-
+<div class="container mt-5">
+  <h3>Внимание!</h3>
+<p>
+  Возможны ошибки в рассчетах! точное определение состояния луны и фаз к примеру <a href="https://jasonsturges.com/lunarphase-js/">здесь</a>
+</p>
+</div>
 
 
 <script src="/assets/js/bootstrap.bundle.5.3.1.min.js"></script>

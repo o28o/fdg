@@ -32,7 +32,10 @@ function getLunarDays() {
   document.getElementById("lunar15").textContent = getNextLunarDay(15);
   
   // Дополнительно: определяем фазу луны
-  const moonPhases = ["🌑 Новолуние", "🌓 Растущая луна, первая четверть", "🌕 Полнолуние", "🌗 Убывающая луна, последняя четверть."];
+  const htmlLang = document.documentElement.lang;
+const moonPhases = htmlLang === "ru"
+  ? ["🌑 Новолуние", "🌓 Растущая луна, первая четверть", "🌕 Полнолуние", "🌗 Убывающая луна, последняя четверть."]
+  : ["🌑 New Moon", "🌓 First Quarter", "🌕 Full Moon", "🌗 Last Quarter"];
   let phaseIndex;
   if (lunarAge < 7.4) phaseIndex = 1;
   else if (lunarAge < 14.8) phaseIndex = 2;

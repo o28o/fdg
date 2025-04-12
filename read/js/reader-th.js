@@ -919,9 +919,9 @@ else if  (slug.match(/^([a-z]+)-([a-z]+)-([a-z]+)*(\d*)/)){
   return `${bookWithoutNumber}/${slug}`;
 }
 
-  const slugParts = slug.match(/^([a-z]+)(\d*)\.*(\d*)/);
-  const book = slugParts[1];
-  const firstNum = slugParts[2];
+const slugParts = slug.match(/^([a-z]+)(\d*)\.*(\d*)/);
+const book = slugParts ? slugParts[1] : slug;
+const firstNum = slugParts ? slugParts[2] : '';
 
   if (book === "dn" || book === "mn") {
     return `${book}/${slug}`;

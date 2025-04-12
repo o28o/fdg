@@ -39,12 +39,12 @@ WELCOME_MESSAGES = {
         "💡 Suggestions will appear for Pali words and sutta references\n\n"
         "🤓 You can use Velthuis transliteration for diacritics: <code>.t .d .n ~n aa ii uu</code> → <code>ṭ ḍ ṇ ñ ā ī ū</code>\n\n"
         "💬 <b>In this private chat:</b>\n"
-        "Simply send me a word or reference (e.g. <code>mn10</code> or <code>saariputta</code>)\n\n\n"
+        "Simply send me a word or reference (e.g. <code>saariputta</code> or <code>mn10</code>)\n\n\n"
         "Following commands available:\n"
         "/start - this message\n"
         "/extra - Mini App links\n"
         "/help - Dhamma.gift help will be here\n\n"
-        "Change Bots language 👇\n"
+        "Change Bots language 👇 Изменить язык \n"
     ),
     "ru": (
         "Добро пожаловать в Dhamma Gift Bot!\n\n"
@@ -54,12 +54,12 @@ WELCOME_MESSAGES = {
         "💡 Я предложу варианты палийских слов и ссылок на сутты\n\n"
         "🤓 Также Вы можете использовать транслитерацию Velthuis для диакритики: <code>.t .d .n ~n aa ii uu</code> → <code>ṭ ḍ ṇ ñ ā ī ū</code>\n\n"
         "💬 <b>В этом личном чате:</b>\n"
-        "Просто отправьте мне слово или номер сутты (например, <code>mn10</code> или <code>saariputta</code>)\n\n\n"
+        "Просто отправьте мне слово или номер сутты (например, <code>saariputta</code> или <code>mn10</code>)\n\n\n"
         "Доступны следующие команды:\n"
         "/start - это сообщение\n"
         "/extra - ссылки на Mini Apps\n"
         "/help - здесь будет документация Dhamma.gift\n\n"
-        "Изенить язык Бота 👇\n"
+        "Изменить язык Бота 👇 Change Language\n"
 
     )
 }
@@ -134,7 +134,6 @@ logger = logging.getLogger(__name__)
 USER_DATA_FILE = f"user_data_{bot_name}.json"
 DEFAULT_LANG = "en"  # Английский по умолчанию
 
-
 # === Функции для работы с JSON-хранилищем ===
 def load_user_data() -> dict:
     """Загружает данные пользователей из файла"""
@@ -168,6 +167,11 @@ def get_user_lang(user_id: int) -> str:
     """Возвращает сохраненный язык пользователя"""
     data = load_user_data()
     return data.get(str(user_id), {}).get("lang", DEFAULT_LANG)
+
+def get_user_share_lang(user_id: int) -> str:
+    """Возвращает сохраненный язык для шейринга пользователя"""
+    data = load_user_data()
+    return data.get(str(user_id), {}).get("share_lang", get_user_lang(user_id) or DEFAULT_LANG)
 
 # === Загрузка словаря ===
 def load_words():
@@ -428,11 +432,15 @@ async def handle_language_selection(update: Update, context: CallbackContext):
     current_lang = query.data.split(':')[1]
     new_lang = 'ru' if current_lang == 'en' else 'en'
 
-    # Save language preference
-  #  save_user_data(user_id, 'lang', new_lang)
-   # context.user_data['lang'] = new_lang
+    # Сохраняем основной язык бота
+    save_user_data(user_id, 'lang', new_lang)
+    # Также сохраняем этот язык как язык для шейринга (если он не был установлен ранее)
+    if not get_user_share_lang(user_id):
+        save_user_data(user_id, 'share_lang', new_lang)
+    
+    context.user_data['lang'] = new_lang
 
-    # Create toggle button for new language
+    # Создаем кнопку для нового языка
     keyboard = [
         [
             InlineKeyboardButton(
@@ -442,19 +450,18 @@ async def handle_language_selection(update: Update, context: CallbackContext):
         ]
     ]
 
-    # Edit message with new language
+    # Редактируем сообщение с новым языком
     await query.edit_message_text(
         text=WELCOME_MESSAGES[new_lang],
         reply_markup=InlineKeyboardMarkup(keyboard),
         parse_mode="HTML"
     )
     
-    # Update menu button
+    # Обновляем кнопку меню
     await set_menu_button(update, new_lang)
 
-    # Update bot commands
+    # Обновляем команды бота
     try:
-        from telegram import BotCommand
         commands = [
             BotCommand("start", "Start bot"),
             BotCommand("help", "Help"),
@@ -469,8 +476,6 @@ async def handle_language_selection(update: Update, context: CallbackContext):
         await context.bot.set_my_commands(commands)
     except Exception as commands_error:
         logger.error(f"Command update error for {user_id}: {commands_error}")
-        
-
 
 async def extra_command(update: Update, context: CallbackContext):
     """Handler for /extra command showing mini-applications"""
@@ -549,11 +554,10 @@ async def inline_query(update: Update, context: CallbackContext):
     user_id = update.inline_query.from_user.id
     logger.info(f"Инлайн-запрос: '{query}' от {user_id}")
 
-    # Получаем язык интерфейса пользователя (не меняется при пересылке сообщений)
+    # Get interface language (for bot UI)
     interface_lang = get_user_lang(user_id) or DEFAULT_LANG
-    
-    # Язык для контента можно получить из пересланного сообщения, но мы его не используем
-    # content_lang = ... (если нужно для других целей)
+    # Get share language (for content)
+    share_lang = get_user_share_lang(user_id) or interface_lang
     
     suggestions = autocomplete(query, max_results=29)
     results = []
@@ -564,12 +568,12 @@ async def inline_query(update: Update, context: CallbackContext):
             id="user_input",
             title=f"✏️ Send: {converted_text}" if interface_lang == "en" else f"✏️ Отправить: {converted_text}",
             input_message_content=InputTextMessageContent(
-                format_message_with_links(converted_text, converted_text, lang=interface_lang),
+                format_message_with_links(converted_text, converted_text, lang=share_lang),
                 parse_mode="HTML",
                 disable_web_page_preview=True
             ),
             description="Your text with converted symbols" if interface_lang == "en" else "Ваш текст с преобразованными символами",
-            reply_markup=create_keyboard(converted_text, lang=interface_lang, is_inline=True)
+            reply_markup=create_keyboard(converted_text, lang=share_lang, is_inline=True)
         ))
 
     for idx, word in enumerate(suggestions[:29]):
@@ -577,15 +581,15 @@ async def inline_query(update: Update, context: CallbackContext):
             id=f"dict_{idx}",
             title=word,
             input_message_content=InputTextMessageContent(
-                format_message_with_links(word, word, lang=interface_lang),
+                format_message_with_links(word, word, lang=share_lang),
                 parse_mode="HTML",
                 disable_web_page_preview=True
             ),
             description=f"Click to send '{word}'" if interface_lang == "en" else f"Нажмите, чтобы отправить '{word}'",
-            reply_markup=create_keyboard(word, lang=interface_lang, is_inline=True)
+            reply_markup=create_keyboard(word, lang=share_lang, is_inline=True)
         ))
 
-    await update.inline_query.answer(results, cache_time=10)
+    await update.inline_query.answer(results, cache_time=10)    
 
 # === Обработчик сообщений с защитой от None ===
 async def handle_message(update: Update, context: CallbackContext):
@@ -598,15 +602,12 @@ async def handle_message(update: Update, context: CallbackContext):
         user = update.effective_user
         logger.info(f"Message from {user.id}: {text}")
 
-        # Список инлайн-ботов, которые нужно игнорировать
-        IGNORE_INLINE_BOTS = ["dgift_bot", "dhammagift_bot", "cakkhu_bot"]  # Добавьте других ботов по необходимости
+        IGNORE_INLINE_BOTS = ["dgift_bot", "dhammagift_bot", "cakkhu_bot"]
         
-        # Проверка, было ли сообщение отправлено через игнорируемого инлайн-бота
         if update.message.via_bot and update.message.via_bot.username in IGNORE_INLINE_BOTS:
             logger.info(f"Ignoring message from inline bot: {update.message.via_bot.username}")
             return
 
-        # Проверка на наличие URL в тексте
         if re.search(r'http[s]?://(?:[a-zA-Z]|[0-9]|[$-_@.&+]|[!*\\(\\),]|(?:%[0-9a-fA-F][0-9a-fA-F]))+', text):
             lang = get_user_lang(user.id) or DEFAULT_LANG
             reply = {
@@ -616,8 +617,10 @@ async def handle_message(update: Update, context: CallbackContext):
             await update.message.reply_text(reply)
             return
 
-        # Получаем язык
-        lang = get_user_lang(user.id) or DEFAULT_LANG
+        # Get interface language for bot responses
+        interface_lang = get_user_lang(user.id) or DEFAULT_LANG
+        # Get share language for content
+        share_lang = get_user_share_lang(user.id) or interface_lang
         
         converted_text = uniCoder(text)
         
@@ -627,12 +630,12 @@ async def handle_message(update: Update, context: CallbackContext):
                 reply = {
                     "en": "Possible variants:\n" + "\n".join(f"- {w}" for w in suggestions),
                     "ru": "Возможные варианты:\n" + "\n".join(f"- {w}" for w in suggestions)
-                }[lang]
+                }[interface_lang]
                 await update.message.reply_text(reply)
                 return
 
-        message_text = format_message_with_links(converted_text, converted_text, lang=lang)
-        keyboard = create_keyboard(converted_text, lang=lang)
+        message_text = format_message_with_links(converted_text, converted_text, lang=share_lang)
+        keyboard = create_keyboard(converted_text, lang=share_lang)
         
         await update.message.reply_text(
             message_text,
@@ -643,37 +646,31 @@ async def handle_message(update: Update, context: CallbackContext):
         
     except Exception as e:
         logger.error(f"Error in handle_message: {e}")
-
 async def toggle_language(update: Update, context: CallbackContext):
     query = update.callback_query
     try:
-        # Подтверждаем получение callback
         await query.answer()
-        
         user = query.from_user
         user_id = user.id
         
-        # Безопасный разбор callback_data
         try:
             parts = query.data.split(':')
             if len(parts) < 3:
                 raise ValueError("Invalid callback_data format")
             
             is_inline = parts[0] == 'inline_toggle_lang'
-            current_lang = parts[1]  # Текущий язык сообщения (не сохраняем его)
+            current_lang = parts[1]
             search_query = ':'.join(parts[2:])[:256]
         except Exception as parse_error:
             logger.error(f"Ошибка разбора callback_data: {parse_error} | Данные: {query.data}")
             await query.message.reply_text("⚠️ Ошибка обработки запроса")
             return
 
-        # Определяем новый язык ТОЛЬКО для текущего сообщения
         new_lang = 'ru' if current_lang == 'en' else 'en'
         
-        # НЕ сохраняем язык в базу данных - он применяется только к текущему сообщению
-        # НЕ обновляем context.user_data["lang"]
-
-        # Подготавливаем новое сообщение с новым языком отображения
+        # Save the share language preference
+        save_user_data(user_id, 'share_lang', new_lang)
+        
         try:
             message_text = format_message_with_links(search_query, search_query, lang=new_lang)
             reply_markup = create_keyboard(search_query, lang=new_lang, is_inline=is_inline)
@@ -682,7 +679,6 @@ async def toggle_language(update: Update, context: CallbackContext):
             await query.message.reply_text("⚠️ Ошибка формирования ответа")
             return
 
-        # Обновляем сообщение
         try:
             await query.edit_message_text(
                 text=message_text,
@@ -696,15 +692,12 @@ async def toggle_language(update: Update, context: CallbackContext):
                 await query.message.reply_text("⚠️ Ошибка обновления сообщения")
             return
 
-        # НЕ обновляем меню и команды бота, так как язык интерфейса не меняется
-
     except Exception as global_error:
         logger.critical(f"Критическая ошибка в toggle_language: {global_error}")
         try:
             await query.message.reply_text("⚠️ Произошла непредвиденная ошибка")
         except:
             pass
-
 def main():
     logger.info(f"Starting bot {bot_name}...")  # Используем bot_name, загруженное выше
     try:

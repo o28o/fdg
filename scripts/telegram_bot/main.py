@@ -175,20 +175,47 @@ def load_words():
         path = os.path.join("assets", "sutta_words.txt")
         with open(path, "r", encoding="utf-8") as f:
             words = [line.strip() for line in f if line.strip()]
-            logger.info(f"Загружено {len(words)} слов для автокомплита")
-            return words
+            
+            # Создаем словарь: {нормализованное_слово: [оригинальные_слова]}
+            normalized_dict = {}
+            for word in words:
+                norm_word = normalize(word)
+                if norm_word not in normalized_dict:
+                    normalized_dict[norm_word] = []
+                normalized_dict[norm_word].append(word)
+            
+            # Также сохраняем оригинальный список слов для обратной совместимости
+            logger.info(f"Загружено {len(words)} слов для автокомплита, создано {len(normalized_dict)} нормализованных форм")
+            return {
+                "original_words": words,
+                "normalized_dict": normalized_dict
+            }
     except Exception as e:
         logger.error(f"Ошибка загрузки словаря: {e}")
-        return []
- 
-WORDS = load_words()
+        return {
+            "original_words": [],
+            "normalized_dict": {}
+        } 
+
+# Заменяем старую строку:
+# WORDS = load_words()
+
+# На новую:
+WORDS = load_words().get("original_words", [])
 
 def normalize(text: str) -> str:
     """Нормализация текста с учетом возможных замен"""
     if not text:
         return text
+  
+    # Кэширование результатов для повторного использования
+    if not hasattr(normalize, "cache"):
+        normalize.cache = {}
     
-    text = text.lower()
+    if text in normalize.cache:
+        return normalize.cache[text]
+    
+    text_lower = text.lower()
     replacements = [
         ("aa", "a"), ("ii", "i"), ("uu", "u"),
         ('"n', "n"), ("~n", "n"),
@@ -196,38 +223,57 @@ def normalize(text: str) -> str:
         (".m", "m"), (".l", "l"), (".h", "h")
     ]
     for pattern, repl in replacements:
-        text = text.replace(pattern, repl)
+        text_lower = text_lower.replace(pattern, repl)
     
-    return (
-        text.replace("ṁ", "m").replace("ṃ", "m")
+    result = (
+        text_lower.replace("ṁ", "m").replace("ṃ", "m")
         .replace("ṭ", "t").replace("ḍ", "d")
         .replace("ṇ", "n").replace("ṅ", "n")
         .replace("ñ", "n").replace("ā", "a")
         .replace("ī", "i").replace("ū", "u")
         .replace(".", " ")
     )
-
+    
+    normalize.cache[text] = result
+    return result
+    
 def autocomplete(prefix: str, max_results: int = 29) -> list[str]:
     try:
+        if not hasattr(autocomplete, "word_data"):
+            autocomplete.word_data = load_words()
+        
+        normalized_dict = autocomplete.word_data.get("normalized_dict", {})
+        original_words = autocomplete.word_data.get("original_words", [])
+        
         prefix_n = normalize(prefix)
-        # Сначала находим слова, которые начинаются с префикса
-        starts_with = [
-            word for word in WORDS 
-            if normalize(word).startswith(prefix_n)
-        ]
-        # Затем находим слова, которые содержат префикс (но не начинаются с него)
-        contains = [
-            word for word in WORDS 
-            if prefix_n in normalize(word) and not normalize(word).startswith(prefix_n)
-        ]
-        # Объединяем результаты, сначала те что начинаются, затем содержат
-        suggestions = (starts_with + contains)[:max_results]
+        
+        # Сначала ищем слова, которые начинаются с префикса
+        starts_with = []
+        for norm_word, orig_words in normalized_dict.items():
+            if norm_word.startswith(prefix_n):
+                starts_with.extend(orig_words)
+        
+        # Затем ищем слова, которые содержат префикс (но не начинаются с него)
+        contains = []
+        for norm_word, orig_words in normalized_dict.items():
+            if prefix_n in norm_word and not norm_word.startswith(prefix_n):
+                contains.extend(orig_words)
+        
+        # Удаляем дубликаты (если один оригинал попал в оба списка)
+        starts_with = list(dict.fromkeys(starts_with))
+        contains = list(dict.fromkeys(contains))
+        
+        # Сортируем результаты (сначала начинающиеся с префикса, затем содержащие)
+        starts_with_sorted = sorted(starts_with, key=lambda x: normalize(x))
+        contains_sorted = sorted(contains, key=lambda x: normalize(x))
+        
+        # Объединяем результаты
+        suggestions = (starts_with_sorted + contains_sorted)[:max_results]
         logger.debug(f"Автокомплит для '{prefix}': найдено {len(suggestions)} вариантов")
         return suggestions
     except Exception as e:
         logger.error(f"Ошибка автокомплита: {e}")
         return []
-
 # === Создание клавиатуры с кнопками ===
 def create_keyboard(query: str, lang: str = "en", is_inline: bool = False) -> InlineKeyboardMarkup:
     base = "https://dhamma.gift"

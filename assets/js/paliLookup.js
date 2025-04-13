@@ -109,7 +109,7 @@ function lazyLoadStandaloneScripts(lang = 'en') {
                 };
                 document.head.appendChild(script);
             });
-        }, { timeout: 2000 }); // Максимальное время ожидания 2 секунды
+        }, { timeout: 3000 }); // Максимальное время ожидания 2 секунды
     });
 }
 
@@ -122,16 +122,16 @@ document.addEventListener('DOMContentLoaded', function() {
                 lazyLoadStandaloneScripts()
                     .then(() => console.log('Standalone eng scripts lazy-loaded'))
                     .catch(err => console.warn('Lazy loading eng scripts warning:', err));
-            }, { timeout: 1000 });
+            }, { timeout: 2000 });
         } 
         else if (savedDict === "standalonebwru") {
             requestIdleCallback(() => {
                 lazyLoadStandaloneScripts("ru")
                     .then(() => console.log('Standalone rus scripts lazy-loaded'))
                     .catch(err => console.warn('Lazy loading rus scripts warning:', err));
-            }, { timeout: 1000 });
+            }, { timeout: 2000 });
         }
-    }, 100); // Небольшая задержка для гарантированного рендеринга
+    }, 1000); // Небольшая задержка для гарантированного рендеринга
 });
 
 function lookupWordInStandaloneDict(word) {

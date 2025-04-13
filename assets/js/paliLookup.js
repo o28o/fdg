@@ -519,8 +519,8 @@ document.addEventListener('click', function(event) {
 if (dictUrl === "standalonebw" || dictUrl === "standalonebwru") {
     translation = lookupWordInStandaloneDict(cleanedWord);
 } 
-else if (dictUrl.includes("dicttango") || dictUrl.includes("mdict")) {
-    // Создаем временную кнопку для открытия в приложении
+else if ( dictUrl.includes("mdict")) {
+    // Создаем временную кнопку для открытия в приложении dictUrl.includes("dicttango") ||
     const tempLink = document.createElement('a');
     tempLink.href = 'javascript:void(0)';
     tempLink.onclick = function() {

@@ -63,80 +63,76 @@ else if (savedDict === "standalonebwru") {
    dictUrl = "searchonly";
 }
 
-// Функция для загрузки скриптов standalone-словаря
-function loadStandaloneScripts(lang = 'en') {
+// Функция для отложенной загрузки скриптов standalone-словаря
+function lazyLoadStandaloneScripts(lang = 'en') {
     return new Promise((resolve, reject) => {
-        // Определяем пути в зависимости от языка
-const commonScripts = [
-    '/assets/js/standalone-dpd/dpd_i2h.js',
-    '/assets/js/standalone-dpd/dpd_deconstructor.js'
-];
+        // Ждем, пока браузер будет в состоянии простоя
+        requestIdleCallback(() => {
+            const commonScripts = [
+                '/assets/js/standalone-dpd/dpd_i2h.js',
+                '/assets/js/standalone-dpd/dpd_deconstructor.js'
+            ];
 
-const langSpecific = lang === 'ru' 
-    ? '/assets/js/standalone-dpd/ru/dpd_ebts.js'
-    : '/assets/js/standalone-dpd/dpd_ebts.js';
+            const langSpecific = lang === 'ru' 
+                ? '/assets/js/standalone-dpd/ru/dpd_ebts.js'
+                : '/assets/js/standalone-dpd/dpd_ebts.js';
 
-const scripts = [...commonScripts, langSpecific];
+            const scripts = [...commonScripts, langSpecific];
 
-        // Проверяем, какие скрипты уже загружены
-        const scriptsToLoad = scripts.filter(src => {
-            return !document.querySelector(`script[src="${src}"]`);
-        });
+            const scriptsToLoad = scripts.filter(src => {
+                return !document.querySelector(`script[src="${src}"]`);
+            });
 
-        // Если все скрипты уже загружены, сразу резолвим промис
-        if (scriptsToLoad.length === 0) {
-            resolve();
-            return;
-        }
+            if (scriptsToLoad.length === 0) {
+                resolve();
+                return;
+            }
 
-        let loadedCount = 0;
+            let loadedCount = 0;
 
-        scriptsToLoad.forEach(src => {
-            const script = document.createElement('script');
-            script.src = src;
-            script.defer = true;
-            script.onload = () => {
-                loadedCount++;
-                if (loadedCount === scriptsToLoad.length) {
-                    resolve();
-                }
-            };
-            script.onerror = () => {
-                reject(new Error(`Failed to load script: ${src}`));
-            };
-            document.head.appendChild(script);
-        });
+            scriptsToLoad.forEach(src => {
+                const script = document.createElement('script');
+                script.src = src;
+                script.defer = true;
+                script.onload = () => {
+                    loadedCount++;
+                    if (loadedCount === scriptsToLoad.length) {
+                        resolve();
+                    }
+                };
+                script.onerror = () => {
+                    console.warn(`Lazy loading script failed: ${src}`);
+                    loadedCount++; // Продолжаем даже если один скрипт не загрузился
+                    if (loadedCount === scriptsToLoad.length) {
+                        resolve();
+                    }
+                };
+                document.head.appendChild(script);
+            });
+        }, { timeout: 2000 }); // Максимальное время ожидания 2 секунды
     });
 }
 
-// Включаем Pali Lookup после загрузки страницы
+// Инициализация после загрузки страницы
 document.addEventListener('DOMContentLoaded', function() {
-    if (savedDict === "standalonebw") {
-        // Загружаем скрипты standalone-словаря только если выбран standalonebw
-        loadStandaloneScripts()
-            .then(() => {
-                console.log('Standalone eng scripts loaded');
-            })
-            .catch(error => {
-                console.error('Error loading eng standalone scripts:', error);
-            });
-    } 
-  else if (savedDict === "standalonebwru") {
-        // Загружаем скрипты standalone-словаря только если выбран standalonebw
-        loadStandaloneScripts("ru")
-            .then(() => {
-                console.log('Standalone rus scripts loaded');
-            })
-            .catch(error => {
-                console.error('Error loading rus standalone scripts:', error);
-            });
-    } 
-    else {
-        // Включаем Pali Lookup без загрузки standalone-скриптов
-    }
+    // Минимальная задержка перед началом загрузки
+    setTimeout(() => {
+        if (savedDict === "standalonebw") {
+            requestIdleCallback(() => {
+                lazyLoadStandaloneScripts()
+                    .then(() => console.log('Standalone eng scripts lazy-loaded'))
+                    .catch(err => console.warn('Lazy loading eng scripts warning:', err));
+            }, { timeout: 1000 });
+        } 
+        else if (savedDict === "standalonebwru") {
+            requestIdleCallback(() => {
+                lazyLoadStandaloneScripts("ru")
+                    .then(() => console.log('Standalone rus scripts lazy-loaded'))
+                    .catch(err => console.warn('Lazy loading rus scripts warning:', err));
+            }, { timeout: 1000 });
+        }
+    }, 100); // Небольшая задержка для гарантированного рендеринга
 });
-
-
 
 function lookupWordInStandaloneDict(word) {
     let out = "";

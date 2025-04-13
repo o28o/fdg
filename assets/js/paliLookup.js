@@ -494,7 +494,7 @@ document.addEventListener('click', function(event) {
             if (dictionaryVisible) {
                 let translation = "";
                 
-                
+ /*               
         // Если есть необходимость в транслитерации, вызываем функцию
         transliterateWord(cleanedWord)
             .then(transliteratedText => {
@@ -510,6 +510,7 @@ document.addEventListener('click', function(event) {
                 console.error('Ошибка при транслитерации:', error);
             });
     
+*/
 
 // Если выбран standalone-словарь
 if (dictUrl === "standalonebw" || dictUrl === "standalonebwru") {
@@ -790,6 +791,7 @@ function cleanWord(word) {
 }
 
 // Функция для транслитерации слова
+/*
 function transliterateWord(word) {
     return new Promise((resolve, reject) => {
         // Подготавливаем текст для передачи в URL (инкодируем пробелы и спецсимволы)
@@ -811,3 +813,4 @@ function transliterateWord(word) {
             });
     });
 }
+*/

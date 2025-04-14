@@ -363,9 +363,6 @@ if (finder && finder.trim() !== "") {
   }
 }
 
-if (paliData[segment] !== undefined) {
-paliData[segment] = paliData[segment].replace(/[—–—]/, ' — ');
-}
 //   console.log(`transData[${segment}]: ${transData[segment]}`);
   //  console.log(`engTransData[${segment}]: ${engTransData[segment]}`);
     if (engTransData[segment] !== transData[segment] && varData[segment] !== undefined) {

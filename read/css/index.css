@@ -359,6 +359,10 @@ dt {
   display: none !important;
 }
 
+.eng-lang, .rus-lang {
+     white-space: pre-line; /* Сохраняет переносы строк */
+   }
+   
 /* #sutta.hide-pali p span.eng-lang {
   display: inline !important;
 } */

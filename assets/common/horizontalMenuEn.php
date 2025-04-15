@@ -262,6 +262,9 @@ echo '<!--
          </li>   
      
    <li><a class="dropdown-item" target="_blank" href="/assets/common/lunar.html"> <i class="' . $iconimportant . '"></i> Sutta based Uposattha days</a></li>
+   
+   <li><a class="dropdown-item" target="_blank" href="https://www.aksharamukha.com/converter"> <i class="' . $iconimportant . '"></i> Aksharamukha script converter</a></li>
+   
     
    <li><a class="dropdown-item" target="_blank" href="/cse.php">Google Custom Search</a></li>
    

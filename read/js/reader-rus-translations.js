@@ -287,13 +287,16 @@ Promise.all([rootResponse, translationResponse, htmlResponse, varResponse]).then
     const [paliData, transData, htmlData, varData] = responses;
     Object.keys(htmlData).forEach(segment => {
       if (transData[segment] === undefined) {
-        transData[segment] = "&nbsp;";
+        transData[segment] = "";
       }
       if (transData[segment] === "") {
-        transData[segment] = "&nbsp;";
+        transData[segment] = "";
       }      
       
-      let [openHtml, closeHtml] = htmlData[segment].split(/{}/);
+let [openHtml, closeHtml] = htmlData[segment].split(/{}/);
+   openHtml = openHtml || ''; // Запасное значение
+   closeHtml = closeHtml || ''; // Запасное значение 
+ 
       /* openHtml = openHtml.replace(/^<span class='verse-line'>/, "<br><span class='verse-line'>"); inputscript-IASTPali 
       Roman (IAST)     	IAST
 Roman (IAST: Pāḷi)     	IASTPali
@@ -352,11 +355,6 @@ if (finder && finder.trim() !== "") {
   }
 }
 
-
-if (paliData[segment] !== undefined) {
-paliData[segment] = paliData[segment].replace(/[—–—]/, ' — ');
-}
-
 if (paliData[segment] !== undefined && transData[segment] !== undefined && varData[segment] !== undefined) {
         html += `${openHtml}<span id="${anchor}">
       <span class="pli-lang inputscript-ISOPali" lang="pi">${paliData[segment].trim()}<a class="text-decoration-none copyLink" style="cursor: pointer;" onclick="copyToClipboard('${fullUrlWithAnchor}')">&nbsp;</a><br>
@@ -365,10 +363,10 @@ ${varData[segment].trim()}
 </span>      
       </span>
       <span class="rus-lang" lang="ru">${transData[segment]}
-</span>
+<br></span>
       </span>${closeHtml}\n\n`;
 } else if (paliData[segment] !== undefined && transData[segment] !== undefined) {
-html += `${openHtml}<span id="${anchor}"><span class="pli-lang inputscript-ISOPali" lang="pi">${paliData[segment].trim()}<a style="cursor: pointer;" class="text-decoration-none copyLink" onclick="copyToClipboard('${fullUrlWithAnchor}')">&nbsp;</a></span><span class="rus-lang" lang="ru">${transData[segment]}</span></span>${closeHtml}\n\n`;
+html += `${openHtml}<span id="${anchor}"><span class="pli-lang inputscript-ISOPali" lang="pi">${paliData[segment].trim()}<a style="cursor: pointer;" class="text-decoration-none copyLink" onclick="copyToClipboard('${fullUrlWithAnchor}')">&nbsp;</a></span><span class="rus-lang" lang="ru">${transData[segment]}<br></span></span>${closeHtml}\n\n`;
 } else if (paliData[segment] !== undefined) {
   html += openHtml + '<span id="' + anchor + '"><span class="pli-lang inputscript-ISOPali" lang="pi">' + paliData[segment] + '</span></span>' + closeHtml + '\n\n';
 } else if (transData[segment] !== undefined) {

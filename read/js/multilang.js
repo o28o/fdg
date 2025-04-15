@@ -288,12 +288,14 @@ const varResponse = fetchVariant();
 
     Object.keys(htmlData).forEach(segment => {
       if (transData[segment] === undefined) {
-        transData[segment] = "&nbsp;";
+        transData[segment] = "";
       }
       if (transData[segment] === "") {
-        transData[segment] = "&nbsp;";
+        transData[segment] = "";
       }    
       let [openHtml, closeHtml] = htmlData[segment].split(/{}/);
+   openHtml = openHtml || ''; // Запасное значение
+   closeHtml = closeHtml || ''; // Запасное значение
       /* openHtml = openHtml.replace(/^<span class='verse-line'>/, "<br><span class='verse-line'>"); inputscript-IASTPali 
       Roman (IAST)     	IAST
 Roman (IAST: Pāḷi)     	IASTPali
@@ -361,9 +363,6 @@ if (finder && finder.trim() !== "") {
   }
 }
 
-if (paliData[segment] !== undefined) {
-paliData[segment] = paliData[segment].replace(/[—–—]/, ' — ');
-}
 //   console.log(`transData[${segment}]: ${transData[segment]}`);
   //  console.log(`engTransData[${segment}]: ${engTransData[segment]}`);
     if (engTransData[segment] !== transData[segment] && varData[segment] !== undefined) {

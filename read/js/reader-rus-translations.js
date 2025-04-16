@@ -390,7 +390,10 @@ if (translator === "o") {
   translatorforuser = '<a href=/assets/texts/syrkin.html>А.Я. Сыркин</a> с Пали, ред. <a href=/assets/texts/o.html>o</a>';
 } else if (translator === "sv+edited+o" ) {
   translatorforuser = 'SV theravada.ru с Англ, ред. <a href=/assets/texts/o.html>o</a>';
-} else if (translator === "o+in+progress" ) {
+} else if (translator === "myagkih+edited+tr" ) {
+  translatorforuser = 'К. Мягких с Англ, ред. ТР';
+}
+else if (translator === "o+in+progress" ) {
   translatorforuser = '<a href=/assets/texts/o.html>o</a>, в процессе';
 } else {
 	translatorforuser = translator ;

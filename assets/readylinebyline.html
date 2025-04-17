@@ -30,7 +30,7 @@ ul li {
     <!-- Заголовок и список для переменных anranges -->
         <h1>Списки Готовых Сутт</h1>
         <p>Сутты из списков ниже уже есть в Пали-Рус формате
- <a class="text-white text-decoration-none" href="/read/latest-rus.php">Обновить <img style="height: 15px;" src="/assets/svg/arrow-rotate-right.svg"></a> 
+ <a class="text-white text-decoration-none" href="/read/php/latest-rus.php">Обновить <img style="height: 15px;" src="/assets/svg/arrow-rotate-right.svg"></a> 
  
  <br> 
  <a class="text-white text-decoration-none" href="/assets/linebyline.html">lbl</a> 
@@ -42,7 +42,10 @@ ul li {
     <!--  <h2>an</h2>
     <ul id="anRanges"></ul>
 	Заголовок и список для переменных snranges -->
-    <h2>sn</h2>
+    <h2>Бхиккху Виная Вибханга</h2>
+    <ul id="vinayaRanges"></ul>
+
+    <h2>sn Полностью</h2>
     <ul id="snRanges"></ul>
 	
     <h2>an Полностью</h2>
@@ -56,7 +59,7 @@ ul li {
 </div>
     <script>
 	
-fetch('/read/latest-rus.php')
+fetch('/read/php/latest-rus.php')
     .then(response => {
         if (!response.ok) {
             throw new Error('Ошибка при выполнении PHP-скрипта');
@@ -73,7 +76,7 @@ fetch('/read/latest-rus.php')
 
 		
         // Загрузка файла и обработка его содержимого
-        fetch('/read/reader-rus-translations.js')
+        fetch('/read/js/reader-rus-translations.js')
             .then(response => response.text())
             .then(data => {
                 // Извлечение переменных из текста файла
@@ -87,15 +90,25 @@ fetch('/read/latest-rus.php')
                     variables[varName] = varValues;
                 }
 
+       const vinayaList = document.getElementById('vinayaRanges');
+
+                variables['vinayaranges'].forEach(range => {
+                    const listItem = document.createElement('li');
+                    listItem.textContent = range;
+                    snList.appendChild(listItem);
+                });
+
+
+
                 // Вывод переменных anranges и snranges как списки
              //   const anList = document.getElementById('anRanges');
-                const snList = document.getElementById('snRanges');
-
-         /*       variables['anranges'].forEach(range => {
+           
+         /*     const snList = document.getElementById('snRanges');
+       variables['anranges'].forEach(range => {
                     const listItem = document.createElement('li');
                     listItem.textContent = range;
                     anList.appendChild(listItem);
-                }); */
+                }); 
 
                 variables['snranges'].forEach(range => {
                     const listItem = document.createElement('li');
@@ -117,7 +130,8 @@ fetch('/read/latest-rus.php')
                     const listItem = document.createElement('li');
                     listItem.textContent = range;
                     dnList.appendChild(listItem);
-                });
+                }); */
+                
             })
             .catch(error => {
                 console.error('Error fetching file:', error);

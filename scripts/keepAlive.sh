@@ -22,8 +22,9 @@ end_time=$(date +%s)
 # Рассчитываем время ответа
 response_time=$((end_time - start_time))
 
-# Размер контента
-size=$(echo "$content" | wc -c)
+size_bytes=$(echo "$content" | wc -c)
+size_kb=$(echo "scale=2; $size_bytes / 1024" | bc)
+
 
 # Проверка на наличие тега </body>
 if echo "$content" | grep -q "</body>"; then
@@ -33,4 +34,4 @@ else
 fi
 
 # Запись в лог
-echo "$timestamp keepAlive request: $status ($size bytes, response time: ${response_time}s) $term" | tee -a /tmp/keepalive.log
+echo "$timestamp $status ${response_time}s ${size_kb}kb $term" | tee -a /tmp/keepalive.log 2>/dev/null

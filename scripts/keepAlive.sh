@@ -1,0 +1,29 @@
+#!/bin/bash
+
+# Текущая дата и время
+timestamp=$(date "+%Y-%m-%d %H:%M:%S")
+
+# Время начала запроса
+start_time=$(date +%s)
+
+# Запрос к серверу
+content=$(curl --max-time 30 -s http://localhost:8080/ru/search_html?q=bhagavato)
+
+# Время окончания запроса
+end_time=$(date +%s)
+
+# Рассчитываем время ответа
+response_time=$((end_time - start_time))
+
+# Размер контента
+size=$(echo "$content" | wc -c)
+
+# Проверка на наличие тега </body>
+if echo "$content" | grep -q "</body>"; then
+    status="OK"
+else
+    status="FAIL"
+fi
+
+# Запись в лог
+echo "$timestamp keepAlive request: $status ($size bytes, response time: ${response_time}s)" >> /tmp/keepalive.log

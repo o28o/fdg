@@ -135,7 +135,7 @@ $p = "-abhi";
 if (preg_match('/(-def|-sml|-nm|-b|-onl|-tru|-si|-abhi)/', $p)  || preg_match('/(-onl|-def|-sml|-nm|-b|-tru|-si|-la2|-lb2)/', $extra)) {
   $fdgscript = "./scripts/finddhamma.sh";
 } 
-elseif (preg_match('/(-anyd)/', $extra)) {
+else if (preg_match('/(-anyd)/', $extra)) {
   $fdgscript = "./new/fdgnew.sh";
   $p = "-kn";
 }
@@ -160,7 +160,7 @@ $output = trim(preg_replace('/\s\s+/', ' ', $output));
 $outforjs = $output . "<br>";
 	
 }
-elseif (preg_match('/[А-Яа-яЁё]/u', $string) ) {
+else if (preg_match('/[А-Яа-яЁё]/u', $string) ) {
 
 $p = "-ru"; 
 

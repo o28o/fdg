@@ -190,7 +190,12 @@ echo '<!--
   
    <li><a class="dropdown-item" href="' . $linktextbookru . '">
      <i class="' . $iconimportant . '"></i>
-    Дж. Гейр. – Курс по Пали. Рус</a></li>
+    Дж. Гейр. – Курс по Пали</a></li>
+   <li><a class="dropdown-item" href="/assets/materials/yelizarenkova_toporov_pali.pdf">
+     <i class="' . $iconimportant . '"></i>
+    Елизаренкова, Топопов – Язык Пали</a></li>
+    
+    
    <li><a class="dropdown-item" href="' . $linkwarder . '">
     Вардер – Введение в Пали. Англ</a></li>    
     

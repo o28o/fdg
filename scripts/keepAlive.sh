@@ -7,7 +7,14 @@ timestamp=$(date "+%Y-%m-%d %H:%M:%S")
 start_time=$(date +%s)
 
 # Запрос к серверу
-content=$(curl --max-time 30 -s http://localhost:8080/ru/search_html?q=bhagavato)
+terms=("bhagavato" "dukkha" "adhivacanasamphasso" "kho" "kacchapo")
+term=${terms[RANDOM % ${#terms[@]}]}
+
+host=http://localhost:8080
+#host=https://dict.dhamma.gift
+#host=https://dpdict.net
+#
+content=$(curl --max-time 30 -s $host/ru/search_html?q=$term)
 
 # Время окончания запроса
 end_time=$(date +%s)
@@ -26,4 +33,4 @@ else
 fi
 
 # Запись в лог
-echo "$timestamp keepAlive request: $status ($size bytes, response time: ${response_time}s)" >> /tmp/keepalive.log
+echo "$timestamp keepAlive request: $status ($size bytes, response time: ${response_time}s) $term" | tee -a /tmp/keepalive.log

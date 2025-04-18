@@ -322,13 +322,13 @@ var fullUrlWithAnchor = window.location.href.split('#')[0] + '#' + anchor;
 
 
 if (paliData[segment] === undefined) {
-  paliData[segment] = "&nbsp;";
+  paliData[segment] = "";
 }
 if (transData[segment] === undefined) {
-        transData[segment] = "&nbsp;";
+        transData[segment] = "";
       }
 if (engTransData[segment] === undefined) {
-  engTransData[segment] = "&nbsp;";
+  engTransData[segment] = "";
 }
 
 

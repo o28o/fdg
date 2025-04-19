@@ -1,19 +1,4 @@
 
-  
-  1. autofocus on main input field on page load 
-  2. clear main input button add
-  3. autocomplete function for main input
-  4. transform history pane into collapsible/expandable button on mobile breakpoints
-  5. transform settings pane into collapsible/expandable button on mobile breakpoints
-  6. extra link to open current search term on dhamma.gift sutta search
-  7. extra link to open current search term on dpdict.net sutta search
-  8. clickable logo and site name on main page desktop and talbet leading to / or /ru/ or acts like clear button.
-  9. other improvements mostly on css side to make site mobile user friendly.
-  10. slow 1s transition of the dark/light theme must be removed for popup mode as it makes popup load look glitchy
-  
-  
-  
-  
 find e -mindepth 1 -maxdepth 1 -exec ln -s "$(realpath {})" r/ \;
 
 

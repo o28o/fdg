@@ -64,9 +64,11 @@ else if (savedDict === "standalonebwru") {
 }
 
 // Функция для отложенной загрузки скриптов standalone-словаря
+// Cache for tracking loaded scripts
+const scriptCache = new Map();
+
 function lazyLoadStandaloneScripts(lang = 'en') {
     return new Promise((resolve, reject) => {
-        // Ждем, пока браузер будет в состоянии простоя
         requestIdleCallback(() => {
             const commonScripts = [
                 '/assets/js/standalone-dpd/dpd_i2h.js',
@@ -78,9 +80,8 @@ function lazyLoadStandaloneScripts(lang = 'en') {
                 : '/assets/js/standalone-dpd/dpd_ebts.js';
 
             const scripts = [...commonScripts, langSpecific];
-
             const scriptsToLoad = scripts.filter(src => {
-                return !document.querySelector(`script[src="${src}"]`);
+                return !document.querySelector(`script[src="${src}"]`) && !scriptCache.has(src);
             });
 
             if (scriptsToLoad.length === 0) {
@@ -88,28 +89,65 @@ function lazyLoadStandaloneScripts(lang = 'en') {
                 return;
             }
 
-            let loadedCount = 0;
+            // Show loading indicator
+            const loadingId = 'dict-loading-' + Date.now();
+            const loadingEl = document.createElement('div');
+            loadingEl.id = loadingId;
+            loadingEl.style.position = 'fixed';
+            loadingEl.style.bottom = '20px';
+            loadingEl.style.right = '20px';
+            loadingEl.style.padding = '10px';
+            loadingEl.style.background = 'rgba(0,0,0,0.7)';
+            loadingEl.style.color = 'white';
+            loadingEl.style.borderRadius = '5px';
+            loadingEl.style.zIndex = '10000';
+            loadingEl.textContent = 'Loading dictionary...';
+            document.body.appendChild(loadingEl);
 
-            scriptsToLoad.forEach(src => {
-                const script = document.createElement('script');
-                script.src = src;
-                script.defer = true;
-                script.onload = () => {
-                    loadedCount++;
-                    if (loadedCount === scriptsToLoad.length) {
-                        resolve();
+            // Load all scripts in parallel
+            const loadPromises = scriptsToLoad.map(src => {
+                return new Promise((scriptResolve) => {
+                    if (scriptCache.has(src)) {
+                        return scriptResolve();
                     }
-                };
-                script.onerror = () => {
-                    console.warn(`Lazy loading script failed: ${src}`);
-                    loadedCount++; // Продолжаем даже если один скрипт не загрузился
-                    if (loadedCount === scriptsToLoad.length) {
-                        resolve();
-                    }
-                };
-                document.head.appendChild(script);
+
+                    const script = document.createElement('script');
+                    script.src = src;
+                    script.defer = true;
+                    
+                    script.onload = () => {
+                        scriptCache.set(src, true);
+                        scriptResolve();
+                    };
+                    
+                    script.onerror = () => {
+                        console.warn(`Failed to load script: ${src}`);
+                        scriptResolve(); // Resolve even if failed to prevent blocking
+                    };
+
+                    document.head.appendChild(script);
+                });
             });
-        }, { timeout: 3000 }); // Максимальное время ожидания 2 секунды
+
+            // Set timeout for all loads
+            const timeoutPromise = new Promise((_, timeoutReject) => {
+                setTimeout(() => timeoutReject(new Error('Script loading timeout')), 5000);
+            });
+
+            Promise.race([
+                Promise.all(loadPromises),
+                timeoutPromise
+            ])
+            .then(() => {
+                document.getElementById(loadingId)?.remove();
+                resolve();
+            })
+            .catch(err => {
+                console.warn('Dictionary loading warning:', err);
+                document.getElementById(loadingId)?.remove();
+                resolve(); // Still resolve to allow fallback behavior
+            });
+        }, { timeout: 5000 });
     });
 }
 

@@ -67,13 +67,9 @@ else if (savedDict === "standalonebwru") {
 // Cache for tracking loaded scripts
 const scriptCache = new Map();
 
-// Polyfill for requestIdleCallback
-const requestIdleCallback = window.requestIdleCallback || 
-    function(cb) { return setTimeout(() => { cb({ didTimeout: false }); }, 0); };
-
 function lazyLoadStandaloneScripts(lang = 'en') {
     return new Promise((resolve, reject) => {
-        const loadScripts = () => {
+        requestIdleCallback(() => {
             const commonScripts = [
                 '/assets/js/standalone-dpd/dpd_i2h.js',
                 '/assets/js/standalone-dpd/dpd_deconstructor.js'
@@ -93,29 +89,22 @@ function lazyLoadStandaloneScripts(lang = 'en') {
                 return;
             }
 
-            // Show loading indicator - more robust version
+            // Show loading indicator
             const loadingId = 'dict-loading-' + Date.now();
             const loadingEl = document.createElement('div');
             loadingEl.id = loadingId;
-            Object.assign(loadingEl.style, {
-                position: 'fixed',
-                bottom: '20px',
-                right: '20px',
-                padding: '10px',
-                background: 'rgba(0,0,0,0.7)',
-                color: 'white',
-                borderRadius: '5px',
-                zIndex: '10000',
-                fontSize: '14px',
-                boxShadow: '0 2px 5px rgba(0,0,0,0.3)'
-            });
+            loadingEl.style.position = 'fixed';
+            loadingEl.style.bottom = '20px';
+            loadingEl.style.right = '20px';
+            loadingEl.style.padding = '10px';
+            loadingEl.style.background = 'rgba(0,0,0,0.7)';
+            loadingEl.style.color = 'white';
+            loadingEl.style.borderRadius = '5px';
+            loadingEl.style.zIndex = '10000';
             loadingEl.textContent = 'Loading dictionary...';
-            
-            // Ensure loading message is visible in Safari
             document.body.appendChild(loadingEl);
-            setTimeout(() => loadingEl.style.opacity = '1', 10);
 
-            // Load all scripts with better Safari support
+            // Load all scripts in parallel
             const loadPromises = scriptsToLoad.map(src => {
                 return new Promise((scriptResolve) => {
                     if (scriptCache.has(src)) {
@@ -126,12 +115,9 @@ function lazyLoadStandaloneScripts(lang = 'en') {
                     script.src = src;
                     script.defer = true;
                     
-                    // More reliable loading for Safari
-                    script.onload = script.onreadystatechange = function() {
-                        if (!this.readyState || this.readyState === 'loaded' || this.readyState === 'complete') {
-                            scriptCache.set(src, true);
-                            scriptResolve();
-                        }
+                    script.onload = () => {
+                        scriptCache.set(src, true);
+                        scriptResolve();
                     };
                     
                     script.onerror = () => {
@@ -139,15 +125,13 @@ function lazyLoadStandaloneScripts(lang = 'en') {
                         scriptResolve(); // Resolve even if failed to prevent blocking
                     };
 
-                    // Safari sometimes needs this
-                    script.crossOrigin = 'anonymous';
                     document.head.appendChild(script);
                 });
             });
 
             // Set timeout for all loads
             const timeoutPromise = new Promise((_, timeoutReject) => {
-                setTimeout(() => timeoutReject(new Error('Script loading timeout')), 10000); // Longer timeout for Safari
+                setTimeout(() => timeoutReject(new Error('Script loading timeout')), 5000);
             });
 
             Promise.race([
@@ -155,27 +139,15 @@ function lazyLoadStandaloneScripts(lang = 'en') {
                 timeoutPromise
             ])
             .then(() => {
-                const el = document.getElementById(loadingId);
-                if (el) {
-                    el.style.opacity = '0';
-                    setTimeout(() => el.remove(), 300);
-                }
+                document.getElementById(loadingId)?.remove();
                 resolve();
             })
             .catch(err => {
                 console.warn('Dictionary loading warning:', err);
-                const el = document.getElementById(loadingId);
-                if (el) {
-                    el.textContent = 'Dictionary load failed';
-                    el.style.background = 'rgba(255,0,0,0.7)';
-                    setTimeout(() => el.remove(), 2000);
-                }
+                document.getElementById(loadingId)?.remove();
                 resolve(); // Still resolve to allow fallback behavior
             });
-        };
-
-        // Use requestIdleCallback with fallback
-        requestIdleCallback(loadScripts, { timeout: 1000 });
+        }, { timeout: 5000 });
     });
 }
 

@@ -50,25 +50,27 @@ border-width: 2px;
   width: 35px;
   border-radius: 32px;
   -webkit-border-radius: 32px;
-  border: 1px solid var(--dark-gray);
+  border: 1px solid #5a5a5a; /* --dark-gray */
   -webkit-appearance: none;
+  appearance: none;
   display: inline-flex;
   align-items: center;
   justify-content: center;
   box-sizing: border-box;
   padding: 0;
+  background-color: transparent;
+  color: inherit;
 }
 
 .dark .go-button {
-  border-color: var(--off-white);
-  background-color: var(--dark-blue);
-  color: var(--off-white);
+  border-color: #dddddd; /* --off-white */
+  background-color: #42426a; /* --dark-blue */
+  color: #dddddd; /* --off-white */
 }
 
 .dark .go-button:hover {
-  background-color: var(--light-gray);
+  background-color: #8f8f8f; /* --light-gray */
 }
-
 
 .roundedborder{
   position: absolute; 

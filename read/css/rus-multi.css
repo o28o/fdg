@@ -133,24 +133,6 @@ body.dark {
   border-color: var(--off-white);
 }
 
-.go-button {
-  margin-left: 5px;
-  height: 35px;
-  width: 35px;
-  border-radius: 32px;
-  border: 1px solid var(--dark-gray);
-}
-
-.dark .go-button {
-  border-color: var(--off-white);
-  background-color: var(--dark-blue);
-  color: var(--off-white);
-}
-
-.dark .go-button:hover {
-  background-color: var(--light-gray);
-}
-
 .icon-button {
   border: none;
   background: none;

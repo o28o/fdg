@@ -1,22 +1,18 @@
 
-  function loadLazyAudio() {
+function loadLazyAudio() {
   var lazyAudios = document.querySelectorAll('.lazy-audio');
   
   lazyAudios.forEach(function(audio) {
-    // Проверяем, является ли браузер Safari
     var isSafari = /^((?!chrome|android).)*safari/i.test(navigator.userAgent);
     
     if (isSafari) {
-      // Для Safari: принудительно обновляем src
-      var source = audio.querySelector('source');
-      if (source && source.src) {
-        var currentSrc = source.src;
-        source.src = ''; // Временный сброс
-        source.src = currentSrc; // Возвращаем обратно
-      }
+      // Клонируем элемент и заменяем старый
+      var newAudio = audio.cloneNode(true);
+      audio.parentNode.replaceChild(newAudio, audio);
+      newAudio.load(); // Пробуем load() на новом элементе
+    } else {
+      audio.load(); // Для других браузеров оставляем как есть
     }
-    // В любом случае вызываем load() (для других браузеров)
-    audio.load();
   });
 }
 

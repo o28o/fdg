@@ -581,16 +581,23 @@ document.addEventListener('keydown', (event) => {
   }
 });
 
+
+
 document.addEventListener('keydown', (event) => {
-  if (event.altKey && (event.code === 'Period' || event.code === 'KeyЮ') || event.code === 'keyM')) {
-    event.preventDefault(); // Предотвращаем стандартное поведение
+  // Для отладки: смотри, что нажимается
+  console.log('Pressed:', event.code);
+
+  if (event.altKey && (event.code === 'Period' || event.code === 'KeyM')) {
+    event.preventDefault();
 
     const currentValue = localStorage.getItem("removePunct") === "true";
     localStorage.setItem("removePunct", currentValue ? "false" : "true");
 
-    location.reload(); // Перезагружаем страницу
+    location.reload();
   }
 });
+
+
 //end of the initial function
 });
 

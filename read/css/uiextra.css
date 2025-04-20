@@ -58,9 +58,11 @@ border-width: 2px;
   justify-content: center;
   box-sizing: border-box;
   padding: 0;
-  background-color: transparent;
-  color: inherit;
+ /* background-color: transparent;*/
+  background-color: rgb(221, 221, 221);
+  color: #5a5a5a;
 }
+
 
 .dark .go-button {
   border-color: #dddddd; /* --off-white */

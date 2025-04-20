@@ -1,29 +1,24 @@
 
-  document.querySelectorAll('.lazy-audio').forEach(audio => {
-  // Блокируем стандартное поведение (пауза/воспроизведение до загрузки)
-  audio.addEventListener('play', function(e) {
-    if (!this.querySelector('source').src) {
-      e.preventDefault();
-      loadAudio(this);
-    }
-  });
-
-  audio.addEventListener('click', function() {
-    if (!this.querySelector('source').src) {
-      loadAudio(this);
-    }
-  });
-});
-
-function loadAudio(audio) {
-  const source = audio.querySelector('source');
-  if (source.dataset.src && !source.src) {
-    source.src = source.dataset.src; // Подставляем настоящий src
-    audio.load(); // Начинаем загрузку
+  function loadLazyAudio() {
+  var lazyAudios = document.querySelectorAll('.lazy-audio');
+  
+  lazyAudios.forEach(function(audio) {
+    // Проверяем, является ли браузер Safari
+    var isSafari = /^((?!chrome|android).)*safari/i.test(navigator.userAgent);
     
-    // Пытаемся запустить воспроизведение (если клик был на play)
-    audio.play().catch(e => console.log('Autoplay blocked, но аудио загружено'));
-  }
+    if (isSafari) {
+      // Для Safari: принудительно обновляем src
+      var source = audio.querySelector('source');
+      if (source && source.src) {
+        var currentSrc = source.src;
+        source.src = ''; // Временный сброс
+        source.src = currentSrc; // Возвращаем обратно
+      }
+    }
+    // В любом случае вызываем load() (для других браузеров)
+    audio.load();
+  });
 }
+
   // Вызов loadLazyAudio() в конце страницы или при необходимости
   // Например: <button onclick="loadLazyAudio()">Загрузить аудио</button>

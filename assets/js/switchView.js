@@ -8,6 +8,7 @@ function updateButtonText(isColumnView) {
  
 // Функция для переключения режима
 function toggleViewMode() {
+   showPaliEnglish();
   const suttaElement = document.querySelector('#sutta, .sutta'); // Ищем по id или по классу
   const isColumnView = suttaElement.classList.toggle('column-view'); // Переключаем класс 'column-view'
   localStorage.setItem('viewMode', isColumnView ? 'columns' : 'alternate'); // Сохраняем режим в localStorage
@@ -22,6 +23,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
   // Применяем сохранённый режим
   if (isColumnView) {
+     showPaliEnglish();
     suttaElement.classList.add('column-view');
   }
 
@@ -38,3 +40,5 @@ document.addEventListener('keydown', (event) => {
   }
 });  
 });
+
+

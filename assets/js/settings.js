@@ -582,7 +582,7 @@ document.addEventListener('keydown', (event) => {
 });
 
 document.addEventListener('keydown', (event) => {
-  if (event.altKey && (event.code === 'Period' || event.code === 'KeyЮ')) {
+  if (event.altKey && (event.code === 'Period' || event.code === 'KeyЮ') || event.code === 'keyM')) {
     event.preventDefault(); // Предотвращаем стандартное поведение
 
     const currentValue = localStorage.getItem("removePunct") === "true";

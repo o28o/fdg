@@ -142,7 +142,14 @@ html{
   height: 35px;
   width: 35px;
   border-radius: 32px;
+  -webkit-border-radius: 32px;
   border: 1px solid var(--dark-gray);
+  -webkit-appearance: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  padding: 0;
 }
 
 .dark .go-button {

@@ -1,4 +1,4 @@
-/*
+
   function loadLazyAudio() {
     var lazyAudios = document.querySelectorAll('.lazy-audio');
     lazyAudios.forEach(function(audio) {
@@ -6,6 +6,5 @@
     });
   }
   
-*/
   // Вызов loadLazyAudio() в конце страницы или при необходимости
   // Например: <button onclick="loadLazyAudio()">Загрузить аудио</button>

@@ -75,14 +75,21 @@ if (!empty($voicematches)) {
     $voicefilename = basename($voicematches[0]);
     $voicefile = "/assets/audio/" . $pmtype . "-pm" . "/" . $voicefilename;
     $voicelink = "<a target='' href='https://www.sc-voice.net/?src=sc#/sutta/$fromjs'>Voice.SC</a>";
-    $player = "</br></br><audio controls class='lazy-audio' preload='none'><source src='$voicefile' type='audio/mp4'>Browser is not supported.</audio>";
+    
+    // Проверяем расширение файла для правильного MIME-типа
+    $fileExt = pathinfo($voicefilename, PATHINFO_EXTENSION);
+    $mimeType = ($fileExt === 'mp3') ? 'audio/mpeg' : 'audio/mp4; codecs="mp4a.40.2"';
+    
+    $player = "</br></br>
+    <audio controls class='lazy-audio' preload='none'>
+      <source src='$voicefile' type='$mimeType'>
+      Browser is not supported.
+    </audio>";
 
 } else {
-  $voicelink = "<a target='' href='https://www.sc-voice.net/?src=sc#/sutta/$fromjs'>Voice.SC</a>";
-  $player = "";
-
+    $voicelink = "<a target='' href='https://www.sc-voice.net/?src=sc#/sutta/$fromjs'>Voice.SC</a>";
+    $player = "";
 }
-
 
 $output = shell_exec("echo -n \"{$voicelink}{$final}\";
 echo -n \"$player\";");
@@ -95,18 +102,34 @@ $voicematches = glob($fullpathvoicefile);
 if (!empty($voicematches)) {
     $voicefilename = basename($voicematches[0]);
     $voicefile = "/assets/audio/" . $nikaya . $book . "/". $voicefilename;
-
-       $voicelink = "<a target='' href='https://www.sc-voice.net/?src=sc#/sutta/$fromjs'>Voice.SC</a>"; 
-       
-    $player = "</br></br><audio controls class='lazy-audio' preload='none'><source src='$voicefile' type='audio/mp4'>Browser is not supported.</audio>";
+    $voicelink = "<a target='' href='https://www.sc-voice.net/?src=sc#/sutta/$fromjs'>Voice.SC</a>"; 
+    
+    // Определяем MIME-тип по расширению файла
+    $fileExt = strtolower(pathinfo($voicefilename, PATHINFO_EXTENSION));
+    $mimeType = 'audio/mp4'; // По умолчанию для m4a
+    
+    if ($fileExt === 'mp3') {
+        $mimeType = 'audio/mpeg';
+    } elseif ($fileExt === 'm4a' || $fileExt === 'mp4') {
+        $mimeType = 'audio/mp4; codecs="mp4a.40.2"';
+    } elseif ($fileExt === 'aac') {
+        $mimeType = 'audio/aac';
+    } elseif ($fileExt === 'oga' || $fileExt === 'ogg') {
+        $mimeType = 'audio/ogg; codecs="opus"';
+    } elseif ($fileExt === 'wav') {
+        $mimeType = 'audio/wav';
+    }
+    
+    $player = "</br></br>
+    <audio controls class='lazy-audio' preload='none'>
+      <source src='$voicefile' type='$mimeType'>
+      Your browser does not support the audio element.
+    </audio>";
 
 } else {
     $voicelink = "<a target='' href='https://www.sc-voice.net/?src=sc#/sutta/$fromjs'>Voice.SC</a>";
-      //  $voicelink = "<a target='' href='https://voice.suttacentral.net/scv/index.html?#/sutta?search=$fromjs'>Voice.SC</a>";
     $player = "";
-
 }
-
 }
 if ($mode == "offline") {  
     

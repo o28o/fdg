@@ -435,11 +435,9 @@ else {
 
 //const translatorCapitalized = translator.charAt(0).toUpperCase() + translator.slice(1);
 
-    const translatorByline = `<div class="byline">
+     const translatorByline = `<div class="byline">
      <p>
-    <span class="rus-lang" lang="ru">
-     Перевод: ${translatorforuser}
-    </span>
+    <span class="pli-lang" lang="pi">Пали: <a href="/assets/texts/abbr.html">MS</a>.</span> <span class="rus-lang" lang="ru"> Перевод: ${translatorforuser}</span>
      </p>
      </div>`;
      

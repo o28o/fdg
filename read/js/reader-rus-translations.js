@@ -401,9 +401,7 @@ else if (translator === "o+in+progress" ) {
 
      const translatorByline = `<div class="byline">
      <p>
-    <span class="rus-lang" lang="ru">
-     Перевод: ${translatorforuser}
-    </span>
+    <span class="pli-lang" lang="pi">Пали: <a href="/assets/texts/abbr.html">MS</a>.</span> <span class="rus-lang" lang="ru"> Перевод: ${translatorforuser}</span>
      </p>
      </div>`;
   

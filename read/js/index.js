@@ -296,11 +296,9 @@ if (translator === "o") {
 
 //const translatorCapitalized = translator.charAt(0).toUpperCase() + translator.slice(1);
 
-          const translatorByline = `<div class="byline">
+     const translatorByline = `<div class="byline">
      <p>
-    <span class="eng-lang" lang="en">
-     Translated by ${translatorforuser}
-    </span>
+    <span class="pli-lang" lang="pi">Pali: <a href="/assets/texts/abbr.html">MS</a>. </span> <span class="rus-lang" lang="ru">Translated by ${translatorforuser}</span>
      </p>
      </div>`;
      

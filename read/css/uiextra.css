@@ -63,6 +63,27 @@ border-width: 2px;
   color: #5a5a5a;
 }
 
+/* Исправление для byline */
+.byline p {
+ /*  white-space: nowrap; Запрет переноса */
+  overflow: hidden;    /* Обрезка выходящего за границы */
+  text-overflow: ellipsis; /* "..." если текст не помещается */
+  margin: 0;          /* Убираем отступы */
+}
+
+.byline .pli-lang,
+.byline .rus-lang, .byline .eng-lang {
+  display: inline;    /* Отменяем inline-block для byline */
+  width: auto;        /* Сбрасываем ширину */
+}
+
+/* Резервируем место, даже если текст пуст или скрыт */
+.byline::after {
+  content: "";
+  display: inline-block;
+  height: 1.2rem;  /* Такая же высота, как у текста */
+  visibility: hidden;  /* Невидим, но сохраняет место */
+}
 
 .dark .go-button {
   border-color: #dddddd; /* --off-white */

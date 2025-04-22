@@ -152,9 +152,25 @@
         <script src="/assets/js/paliLookup.js"></script>
     <script>
       
-new DataTable('#pali', {
-    pageLength: 50 // Устанавливает количество записей на странице по умолчанию
+ 
+      
+// Инициализируем таблицу
+var table = new DataTable('#pali', {
+  pageLength: 50 // Устанавливает количество записей на странице по умолчанию
 });
+
+// Получаем параметр 's' из URL
+var filterValue = new URLSearchParams(window.location.search).get('s');
+
+// Если параметр существует — применяем фильтр и убираем его из URL
+if (filterValue) {
+  table.search(filterValue).draw();
+
+  // Удаляем параметр 's' из URL без перезагрузки страницы
+  var currentUrl = new URL(window.location.href);
+  currentUrl.searchParams.delete('s');
+  history.replaceState({}, '', currentUrl);
+}
 </script>
   
 

@@ -366,7 +366,7 @@ if (translator === "o") {
 
      const translatorByline = `<div class="byline">
      <p>
-    <span class="pli-lang" lang="pi">Pali <a class="text-decoration-none text-reset" href="/assets/texts/abbr.html?s=ms">MS</a>. </span> <span class="rus-lang" lang="ru">Translated by ${translatorforuser}</span>
+    <span class="pli-lang" lang="pi">Pāḷi <a class="text-decoration-none text-reset" href="/assets/texts/abbr.html?s=ms">MS</a>. </span> <span class="rus-lang" lang="ru">Translated by ${translatorforuser}</span>
      </p>
      </div>`;
      

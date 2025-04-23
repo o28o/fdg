@@ -4,6 +4,34 @@ $actual_link = (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on' ? "https"
 function getRanges($string) {
   include_once('./config/config.php');
   $check = shell_exec("grep -m1 -i \"{$string}_\" $indexesfile | awk '{print \$0}'");
+
+
+// Включаем сессию ТОЛЬКО если запрос содержит проблемные slug
+$problematicSlugs = ['pli-tv-bu-vb-', 'bu-', 'bi-'];
+$isProblematicSlug = false;
+
+foreach ($problematicSlugs as $slugPattern) {
+    if (strpos($stringForOpen, $slugPattern) !== false) {
+        $isProblematicSlug = true;
+        break;
+    }
+}
+
+if ($isProblematicSlug) {
+    session_start(); // Активируем сессию только для проблемных slug
+
+    // Проверяем, не был ли этот slug уже обработан
+    if (isset($_SESSION['processed_slug']) && $_SESSION['processed_slug'] === $stringForOpen) {
+        die("Ошибка: обнаружен бесконечный редирект. Запрос: " . htmlspecialchars($stringForOpen));
+    }
+
+    // Запоминаем slug в сессии
+    $_SESSION['processed_slug'] = $stringForOpen;
+}
+
+
+
+
 //if this empty then find range
 if (empty($check)) {
   $command = escapeshellcmd("bash $scriptfile $string");
@@ -196,6 +224,11 @@ if (preg_match("/^(ja|snp|iti|thig|thag)[0-9].*/i", $stringForOpen)) {
 //  echo "<script>window.location.href='$readerlang?q=$stringForOpen&s=$s';</script>";
 
 // echo "<script>window.location.href='$readerlang?s=$s&q=$stringForOpen#$anchor';</script>";
+ if ($isProblematicSlug) {
+        unset($_SESSION['processed_slug']);
+        session_write_close();
+    }
+	
   echo "<script>window.location.href='$readerlang?q=$stringForOpen';</script>";
   exit();
 	  

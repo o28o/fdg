@@ -8,7 +8,7 @@ terms=("bhagavato" "dhamma" "dukkha" "adhivacanasamphasso" "kho" "kacchapo")
 term=${terms[RANDOM % ${#terms[@]}]}
 
 # Хост
-host=http://localhost:8880
+#host=http://localhost:8880
 #host=https://dict.dhamma.gift
 #host=https://dpdict.net
 
@@ -16,7 +16,7 @@ host=http://localhost:8880
 check_endpoint() {
     local lang=$1
     local path=$2
-    local url="$host$path?q=$term"
+    local url="${3}${path}?q=$term"
 
     local start_time=$(date +%s%3N)
     local content=$(curl --max-time 30 -s "$url")
@@ -34,11 +34,13 @@ check_endpoint() {
         status="FAIL"
     fi
 
-    echo "$timestamp $lang $status ${response_time_s}s ${size_kb}kb $term" | tee -a /tmp/keepalive.log 2>/dev/null
+    echo "$timestamp $lang $status ${response_time_s}s ${size_kb}kb $term $url" | tee -a /tmp/keepalive.log 2>/dev/null
 }
 
 # Проверка русского endpoint
-check_endpoint "RU" "/ru/search_html"
+check_endpoint "RU" "/ru/search_html" "https://dict.dhamma.gift"
+check_endpoint "RU" "/ru/search_html" "https://dpdict.net"
 
 # Проверка английского endpoint
-check_endpoint "EN" "/search_html"
+check_endpoint "EN" "/search_html" "https://dict.dhamma.gift"
+check_endpoint "EN" "/search_html" "https://dpdict.net"

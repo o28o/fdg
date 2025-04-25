@@ -3,20 +3,41 @@
 # Текущая дата и время
 timestamp=$(date "+%Y-%m-%d %H:%M:%S")
 
-# Массив терминов
-terms=("bhagavato" "dhamma" "dukkha" "adhivacanasamphasso" "kho" "kacchapo")
-term=${terms[RANDOM % ${#terms[@]}]}
+# Попытка взять слово из файла, если он существует и не пустой
+words_file="./assets/texts/sutta_words.txt"
+if [[ -s "$words_file" ]]; then
+    mapfile -t file_terms < "$words_file"
+    term="$(echo "${file_terms[RANDOM % ${#file_terms[@]}]}" | tr -d '\r' | xargs)"
+else
+    # Массив терминов по умолчанию
+    terms=("bhagavato" "dhamma" "dukkha" "adhivacanasamphasso" "kho" "kacchapo")
+    term="${terms[RANDOM % ${#terms[@]}]}"
+fi
 
-# Хост
-#host=http://localhost:8880
-#host=https://dict.dhamma.gift
-#host=https://dpdict.net
+# Функция URL-кодирования
+urlencode() {
+    local string="${1}"
+    local length=${#string}
+    local encoded=""
+    local pos c o
+
+    for (( pos = 0 ; pos < length ; pos++ )); do
+        c=${string:$pos:1}
+        case "$c" in
+            [-_.~a-zA-Z0-9]) encoded+="${c}" ;;
+            *) printf -v o '%%%02x' "'$c"; encoded+="${o}" ;;
+        esac
+    done
+    echo "${encoded}"
+}
 
 # Функция проверки endpoint
 check_endpoint() {
     local lang=$1
     local path=$2
-    local url="${3}${path}?q=$term"
+    local base_url=$3
+    local encoded_term=$(urlencode "$term")
+    local url="${base_url}${path}?q=${encoded_term}"
 
     local start_time=$(date +%s%3N)
     local content=$(curl --max-time 30 -s "$url")

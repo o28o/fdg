@@ -7,7 +7,7 @@ timestamp=$(date "+%Y-%m-%d %H:%M:%S")
 start_time=$(date +%s)
 
 # Запрос к серверу
-terms=("bhagavato" "dukkha" "adhivacanasamphasso" "kho" "kacchapo")
+terms=("bhagavato" "dhamma" "dukkha" "adhivacanasamphasso" "kho" "kacchapo")
 term=${terms[RANDOM % ${#terms[@]}]}
 
 host=http://localhost:8080

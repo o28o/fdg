@@ -16,20 +16,8 @@ fi
 
 # Функция URL-кодирования
 urlencode() {
-    local string="${1}"
-    local length=${#string}
-    local encoded=""
-    local pos c o
-
-    for (( pos = 0 ; pos < length ; pos++ )); do
-        c=${string:$pos:1}
-        case "$c" in
-            [-_.~a-zA-Z0-9]) encoded+="${c}" ;;
-            *) printf -v o '%%%02x' "'$c"; encoded+="${o}" ;;
-        esac
-    done
-    echo "${encoded}"
-}
+       jq -nr --arg input "$1" '$input|@uri'
+   }
 
 # Функция проверки endpoint
 check_endpoint() {

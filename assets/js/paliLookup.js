@@ -25,7 +25,8 @@ if (window.location.href.includes('localhost') || window.location.href.includes(
 //dictUrl = "https://dpdict.net";
 } else if (savedDict.includes("compact")) {
     dhammaGift = 'https://dhamma.gift';
-    dictUrl = "https://dpdict.net";
+    dictUrl = "https://dict.dhamma.gift";
+    //dictUrl = "https://dpdict.net";
   }
   else {
     dhammaGift = 'https://dhamma.gift';

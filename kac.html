@@ -1,0 +1,1047 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FDG Digital Pāḷi Dictionary</title>
+    <link rel="stylesheet" type="text/css" href="/static/home.css">
+    <link rel="stylesheet" type="text/css" href="/static/switch.css">
+    <link rel="stylesheet" type="text/css" href="/static/dpd.css">
+<link rel="icon" type="image/png" href="/static/dpd-logo.svg">
+
+    <link href="/static/jquery-ui.min.css" rel="stylesheet"/>
+<link href="/static/extrastyles.css" rel="stylesheet" />
+<script src="/static/jquery-3.7.0.min.js"></script>
+<script src="/static/jquery-ui.min.js"></script>
+
+    <style>
+    </style>
+    
+</head>
+
+
+<body>
+ <div id="tab-container"class="tab-buttons">
+        <button class="tab-link active" onclick="openTab(event, 'dpd-tab')">DPD</button>
+        <button class="tab-link" onclick="openTab(event, 'bold-def-tab')">CST Bold Definitions</button>
+    </div> 
+
+
+    <div id="dpd-tab" class="tab-content active">
+        <div class="header-pane">
+		<div class="logo-title">
+            <a href="/" class="alogo"><img src="/static/dpd-logo.svg" alt="dpd logo" id="header-image" class="header-image"></a>
+	    <h2 class="title" id="title-clear"><a href="/" class="alogo">DPD</a></h2>
+        </div>
+<form id="search-form">
+  <div class="mb-3 form-group input-group ui-widget dropup rounded-pill">
+  <label class="sr-only dropup" for="search-box"></label>
+    <input class="search-box" type="search" name="search" id="search-box" placeholder="Search..." value="" autocomplete="off" inputmode="text" autocapitalize="off" autofocus>
+    <button class="search-button" id="search-button">search</button>
+                <button class="help small-button" id="search-help-button">
+                ?
+                <span class="tooltip velthuis">
+                    <b>
+                        Velthuis Typing:
+                    </b><br><br>
+                    aa - ā<br>
+                    ii - ī<br>
+                    uu - ū<br>
+                    "n - ṅ<br>
+                    ~n - ñ<br>
+                    .t - ṭ<br>
+                    .d - ḍ<br>
+                    .n - ṇ<br>
+                    .m - ṃ<br>
+                    .l - ḷ
+                </span>
+            </button>
+
+    </div>
+</form>
+        </div>
+        <div class="main-pane" id="main-pane">
+            <div class="history-pane" id="history-pane">
+                             <button class="collapse-btn" onclick="toggleHistory()">           
+    <h3>
+History <div class="history-icon"></div>   
+  </h3> 
+  </button>
+  <div id="history-content">
+            
+                      
+                <button id="clear-history-button" class="clear-history-button">x</button>
+                <div class="history-list-pane" id="history-list-pane"></div>
+            </div>
+            </div>
+            <div class="dpd-pane" id="dpd-pane">
+                <div class="summary-results" id="summary-results"></div>
+                <div class="dpd-results" id="dpd-results">
+                    <!-- summary -->
+<h3 id="kacchapa">kacchapa</h3>
+<div class="dpd summary">
+<p>
+        
+
+        masc.
+        
+        <b>tortoise; turtle</b>; lit. drinking marsh
+        
+        [kaccha + pa]
+        
+        
+        <span class="gray">✔</span>
+</p>
+</div>
+<!-- button box -->
+<div class="button-box">
+<a class="button" data-target="grammar_kacchapa" href="#" name="grammar-button">
+        grammar</a>
+<a class="button" data-target="examples_kacchapa" href="#" name="example-button">
+        examples</a>
+<a class="button" data-target="declension_kacchapa" href="#">
+        declension</a>
+<a class="button" data-target="family_compound_kacchapa" href="#">
+        compound families</a>
+<a class="button" data-target="family_set_kacchapa" href="#">
+        set</a>
+<a class="button" data-target="frequency_kacchapa" href="#">
+        frequency</a>
+<a class="button" data-target="feedback_kacchapa" href="#">
+        feedback</a>
+</div>
+<!-- grammar -->
+<div class="dpd content hidden" id="grammar_kacchapa" name="grammar-div">
+<table class="grammar">
+<tr>
+<th>
+                Pāḷi
+            </th>
+<td>
+                kacchapo
+            </td>
+</tr>
+<tr>
+<th>
+                IPA
+            </th>
+<td>
+                /kɐ.cʰɐpə/
+            </td>
+</tr>
+<tr>
+<th>
+                Grammar
+            </th>
+<td>
+                masc, comp
+            </td>
+</tr>
+<tr>
+<th>
+                Construction
+            </th>
+<td>
+                kaccha + pa
+            </td>
+</tr>
+<tr>
+<th>
+                Compound
+            </th>
+<td>
+                dutiyā tappurisa
+                (kacch<b>aṃ</b> + pa)
+            </td>
+</tr>
+<tr>
+<th>
+                Synonym
+            </th>
+<td>
+                kumma
+            </td>
+</tr>
+<tr>
+<th>
+                Commentary
+            </th>
+<td>
+                (SNa) <b>kummo</b>'ti aṭṭhikummo. <b>kacchapo</b>'ti tass'eva vevacanaṃ.
+            </td>
+</tr>
+<tr>
+<th>
+                Sanskrit
+            </th>
+<td>
+<i>
+                    kacchapa
+                </i>
+</td>
+</tr>
+</table>
+<p class="footer">
+        Did you spot a mistake?
+        <a class="link" href="https://docs.google.com/forms/d/e/1FAIpQLSf9boBe7k5tCwq7LdWgBHHGIPVc4ROO5yjVDo1X5LDAxkmGWQ/viewform?usp=pp_url&amp;entry.438735500=kacchapa&amp;entry.326955045=Grammar&amp;entry.1433863141=dpdict.net+2025-04-13" target="_blank">
+            Correct it here.</a>
+</p>
+</div>
+<!-- examples -->
+<div class="dpd content hidden" id="examples_kacchapa" name="example-div">
+<p>
+            tatr'assa kāṇo <b>kacchapo</b>. so vassasatassa vassasatassa accayena sakiṃ sakiṃ ummujjeyya.
+        </p>
+<p class="sutta">
+            
+            SN56.48
+            
+            dutiyachiggaḷayugasuttaṃ
+        </p>
+<p>
+            bhūtapubbaṃ, bhikkhave, kummo <b>kacchapo</b> sāy'anhasamayaṃ anunadītīre gocarapasuto ahosi. siṅgālopi kho, bhikkhave, sāy'anhasamayaṃ anunadītīre gocarapasuto ahosi.
+        </p>
+<p class="sutta">
+            
+            SN35.240
+            
+            kummopamasuttaṃ
+        </p>
+<p class="footer">
+            Can you think of a better example?
+            <a class="link" href="https://docs.google.com/forms/d/e/1FAIpQLSf9boBe7k5tCwq7LdWgBHHGIPVc4ROO5yjVDo1X5LDAxkmGWQ/viewform?usp=pp_url&amp;entry.438735500=kacchapa&amp;entry.326955045=Examples&amp;entry.1433863141=dpdict.net+2025-04-13" target="_blank">
+                Add it here.</a>
+</p>
+</div>
+<!-- sbs examples -->
+<!-- declension -->
+<div class="dpd content hidden" id="declension_kacchapa">
+<p class="heading"><b>kacchapa</b> is <b>a masc</b> declension (like <b>dhamma</b>)</p><table class="inflection"><tr><th></th><th>masc sg</th><th>masc pl</th></tr><tr><th>nom</th><td title="masc nom sg">kacchap<b>o</b></td><td title="masc nom pl">kacchap<b>ā</b><br/><span class="gray">kacchap<b>āse</b></span></td></tr><tr><th>acc</th><td title="masc acc sg">kacchap<b>aṃ</b></td><td title="masc acc pl">kacchap<b>e</b></td></tr><tr><th>instr</th><td title="masc instr sg">kacchap<b>ā</b><br/>kacchap<b>ena</b></td><td title="masc instr pl"><span class="gray">kacchap<b>ebhi</b></span><br/><span class="gray">kacchap<b>ehi</b></span></td></tr><tr><th>dat</th><td title="masc dat sg">kacchap<b>assa</b><br/><span class="gray">kacchap<b>āya</b></span></td><td title="masc dat pl"><span class="gray">kacchap<b>ānaṃ</b></span></td></tr><tr><th>abl</th><td title="masc abl sg"><span class="gray">kacchap<b>ato</b></span><br/><span class="gray">kacchap<b>amhā</b></span><br/><span class="gray">kacchap<b>asmā</b></span><br/>kacchap<b>ā</b></td><td title="masc abl pl"><span class="gray">kacchap<b>ato</b></span><br/><span class="gray">kacchap<b>ebhi</b></span><br/><span class="gray">kacchap<b>ehi</b></span></td></tr><tr><th>gen</th><td title="masc gen sg">kacchap<b>assa</b></td><td title="masc gen pl"><span class="gray">kacchap<b>āna</b></span><br/><span class="gray">kacchap<b>ānaṃ</b></span></td></tr><tr><th>loc</th><td title="masc loc sg"><span class="gray">kacchap<b>amhi</b></span><br/><span class="gray">kacchap<b>asmiṃ</b></span><br/>kacchap<b>e</b></td><td title="masc loc pl"><span class="gray">kacchap<b>esu</b></span></td></tr><tr><th>voc</th><td title="masc voc sg">kacchap<b>a</b><br/>kacchap<b>ā</b></td><td title="masc voc pl">kacchap<b>ā</b></td></tr><tr><th>in comps</th><td title="in comps">kacchap<b>a</b></td><td title=""></td></tr></table>
+<p>
+            Inflections not found in the Chaṭṭha Saṅgāyana corpus, or within processed sandhi compounds are <span class="gray">grayed out</span>. They might still occur elsewhere, within compounds or in other versions
+            of the Pāḷi texts.
+        </p>
+<p class="footer">
+            
+            Did you spot a mistake in the declension table?
+            Something missing?
+            <a class="link" href="https://docs.google.com/forms/d/e/1FAIpQLSfKUBx-icfRCWmhHqUwzX60BVQE21s_NERNfU2VvbjEfE371A/viewform?usp=pp_url&amp;entry.1370304754=kacchapa&amp;entry.1433863141=dpdict.net+2025-04-13" target="_blank">
+                Report it here.</a>
+</p>
+</div>
+<!-- conjugation -->
+<!-- root family -->
+<!-- word family -->
+<!-- compound family -->
+<!-- compound families -->
+<div class="dpd content hidden" id="family_compound_kacchapa">
+<p class="heading" id="kacchapacf_top">jump to:
+            
+            <a class="jump" href="#kacchapacf_kaccha1">
+                
+                kaccha1,
+                
+            </a>
+<a class="jump" href="#kacchapacf_pa1">
+                
+                pa1
+                
+            </a>
+</p>
+<p class="heading underlined overlined" id="kacchapacf_kaccha1">
+<b>2</b>
+            compounds which contain
+            <b>kaccha1</b>
+<a class="jump" href="#kacchapacf_top"> ⤴
+            </a>
+</p>
+<table class="family"><tr><th>kacchapa</th><td><b>masc</b></td><td>tortoise; turtle; lit. drinking marsh</td><td><span class="gray">✔</span></td></tr><tr><th>parūḷhakacchanakhaloma</th><td><b>adj</b></td><td>with long armpit hair, nails and body hair</td><td><span class="gray">✔</span></td></tr></table>
+<p class="heading underlined overlined" id="kacchapacf_pa1">
+<b>4</b>
+            compounds which contain
+            <b>pa1</b>
+<a class="jump" href="#kacchapacf_top"> ⤴
+            </a>
+</p>
+<table class="family"><tr><th>kacchapa</th><td><b>masc</b></td><td>tortoise; turtle; lit. drinking marsh</td><td><span class="gray">✔</span></td></tr><tr><th>dhenupa</th><td><b>masc</b></td><td>suckling calf; unweaned calf; (comm) (or) nursing cow; dairy cow; lit. drinking milk</td><td><span class="gray">✔</span></td></tr><tr><th>pādapa</th><td><b>masc</b></td><td>tree; lit. drinking from the foot</td><td><span class="gray">✔</span></td></tr><tr><th>majjapa</th><td><b>masc</b></td><td>who drinks liquor; drunk</td><td><span class="gray">✔</span></td></tr></table>
+<p class="underline overlined">
+            Back to the top
+            <a class="jump" href="#kacchapacf_top">⤴</a>
+</p>
+<p class="footer">
+            Spot a mistake?
+            <a class="link" href="https://docs.google.com/forms/d/e/1FAIpQLSf9boBe7k5tCwq7LdWgBHHGIPVc4ROO5yjVDo1X5LDAxkmGWQ/viewform?usp=pp_url&amp;entry.438735500=kacchapa&amp;entry.326955045=Compound+Family&amp;entry.1433863141=dpdict.net+2025-04-13" target="_blank">
+                Fix it here</a>.
+        </p>
+</div>
+<!-- idioms -->
+<!-- set -->
+<div class="dpd content hidden" id="family_set_kacchapa">
+<p class="heading underlined">
+<b>kacchapa</b>
+            belongs to the set of
+            <b>animals</b>
+</p>
+<table class="family"><tr><th>accha ²·¹</th><td><b>masc</b></td><td>bear</td><td><span class="gray">✔</span></td></tr><tr><th>aṇḍaja ²</th><td><b>masc</b></td><td>bird; lit. egg born</td><td><span class="gray">✔</span></td></tr><tr><th>anusabha</th><td><b>masc</b></td><td>not a stud bull</td><td><span class="gray">◑</span></td></tr><tr><th>amarā</th><td><b>fem</b></td><td>eel</td><td><span class="gray">✔</span></td></tr><tr><th>ambukasañcarī</th><td><b>fem</b></td><td>name of a bird; water hen; marsh hen; lit. wandering near water</td><td><span class="gray">◑</span></td></tr><tr><th>alagadda</th><td><b>masc</b></td><td>water-snake; poisonous snake; lit. crying sting</td><td><span class="gray">✔</span></td></tr><tr><th>uddhumāyikā</th><td><b>fem</b></td><td>Indian bullfrog; Hoplobatrachus tigerinus; lit. blowing up; puffing up</td><td><span class="gray">✔</span></td></tr><tr><th>uraṇa</th><td><b>masc</b></td><td>ram; billy goat</td><td><span class="gray">◑</span></td></tr><tr><th>uraṇī</th><td><b>fem</b></td><td>ewe; nanny goat</td><td><span class="gray">✔</span></td></tr><tr><th>usabha ¹</th><td><b>masc</b></td><td>head bull; stud bull</td><td><span class="gray">✔</span></td></tr><tr><th>kakuṭa</th><td><b>masc</b></td><td>dove; pigeon; wood-pigeon</td><td><span class="gray">✔</span></td></tr><tr><th>kacchapa</th><td><b>masc</b></td><td>tortoise; turtle; lit. drinking marsh</td><td><span class="gray">✔</span></td></tr><tr><th>karavīka</th><td><b>masc</b></td><td>Indian cuckoo; Cuculus micropterus</td><td><span class="gray">✔</span></td></tr><tr><th>kumbhīla</th><td><b>masc</b></td><td>garial; gavial; fish-eating crocodile; Gavialis gangeticus; lit. with a pot</td><td><span class="gray">✔</span></td></tr><tr><th>kumma</th><td><b>masc</b></td><td>tortoise; turtle</td><td><span class="gray">✔</span></td></tr><tr><th>kurara</th><td><b>masc</b></td><td>osprey; eagle; bird of prey</td><td><span class="gray">✔</span></td></tr><tr><th>kulala</th><td><b>masc</b></td><td>bird of prey; eagle; hawk; osprey</td><td><span class="gray">✔</span></td></tr><tr><th>koka</th><td><b>masc</b></td><td>wolf</td><td><span class="gray">✔</span></td></tr><tr><th>kokila</th><td><b>masc</b></td><td>cuckoo</td><td><span class="gray">✔</span></td></tr><tr><th>kokilā</th><td><b>fem</b></td><td>female cuckoo</td><td><span class="gray">✔</span></td></tr><tr><th>koñca</th><td><b>masc</b></td><td>heron; curlew; aquatic bird</td><td><span class="gray">✔</span></td></tr><tr><th>koñcī</th><td><b>fem</b></td><td>(female) heron; curlew; aquatic bird</td><td><span class="gray">✔</span></td></tr><tr><th>khagga ³</th><td><b>masc</b></td><td>single-horned rhinoceros; Rhinoceros unicornis; lit. sword</td><td><span class="gray">✔</span></td></tr><tr><th>gava</th><td><b>masc</b></td><td>cow; cattle</td><td><span class="gray">✔</span></td></tr><tr><th>gāvī</th><td><b>fem</b></td><td>cow</td><td><span class="gray">✔</span></td></tr><tr><th>gāvo ¹</th><td><b>masc</b></td><td>cattle</td><td><span class="gray">✔</span></td></tr><tr><th>gāvo ²</th><td><b>masc</b></td><td>cattle (object)</td><td><span class="gray">✔</span></td></tr><tr><th>go</th><td><b>masc</b></td><td>cow; cattle</td><td><span class="gray">✔</span></td></tr><tr><th>gokaṇṇa</th><td><b>masc</b></td><td>nilgai; Boselaphus tragocamelus; (or) sambar; Rusa unicolor; lit. cow ear</td><td><span class="gray">◑</span></td></tr><tr><th>gokāṇā ²</th><td><b>fem</b></td><td>nilgai; large antelope; Boselaphus tragocamelus</td><td><span class="gray">◑</span></td></tr><tr><th>goṇa</th><td><b>masc</b></td><td>ox; bull</td><td><span class="gray">✔</span></td></tr><tr><th>godhā</th><td><b>fem</b></td><td>iguana; monitor lizard</td><td><span class="gray">✔</span></td></tr><tr><th>golikā</th><td><b>fem</b></td><td>reptile; lizard; alligator</td><td><span class="gray">◑</span></td></tr><tr><th>gharagolikā</th><td><b>fem</b></td><td>house gecko; Hemidactylus flaviviridis; lit. house reptile</td><td><span class="gray">◑</span></td></tr><tr><th>camara</th><td><b>masc</b></td><td>yak; Bos grunniens</td><td><span class="gray">◑</span></td></tr><tr><th>jāti ⁴</th><td><b>fem</b></td><td>type; kind; category (of)</td><td><span class="gray">✔</span></td></tr><tr><th>taraccha</th><td><b>masc</b></td><td>hyena</td><td><span class="gray">✔</span></td></tr><tr><th>taracchi</th><td><b>masc</b></td><td>hyena</td><td><span class="gray">✔</span></td></tr><tr><th>tittirī</th><td><b>fem</b></td><td>partridge</td><td><span class="gray">✔</span></td></tr><tr><th>dīpi</th><td><b>masc</b></td><td>leopard; panther</td><td><span class="gray">✔</span></td></tr><tr><th>dīpī</th><td><b>masc</b></td><td>leopard; panther</td><td><span class="gray">✔</span></td></tr><tr><th>dhaṅka</th><td><b>masc</b></td><td>crow</td><td><span class="gray">✔</span></td></tr><tr><th>dhenu ¹</th><td><b>fem</b></td><td>cow; lit. giving milk</td><td><span class="gray">✔</span></td></tr><tr><th>dhenu ³</th><td><b>fem</b></td><td>female animal; lit. giving milk</td><td><span class="gray">◑</span></td></tr><tr><th>nīlamaṇḍūka</th><td><b>masc</b></td><td>green frog</td><td><span class="gray">◑</span></td></tr><tr><th>pakkhī ¹</th><td><b>masc</b></td><td>bird; lit. with wings</td><td><span class="gray">✔</span></td></tr><tr><th>pādudara</th><td><b>masc</b></td><td>snake; lit. belly for feet</td><td><span class="gray">✔</span></td></tr><tr><th>puṅgava ¹</th><td><b>masc</b></td><td>bull; lit. male cow</td><td><span class="gray">✔</span></td></tr><tr><th>puṅgava ²</th><td><b>masc</b></td><td>noble one; best being; foremost person; lit. male cow</td><td><span class="gray">✔</span></td></tr><tr><th>pokkharasātakā</th><td><b>fem</b></td><td>name of a bird; lit. lotus cloak</td><td><span class="gray">◑</span></td></tr><tr><th>balibadda</th><td><b>masc</b></td><td>ox; bull</td><td><span class="gray">✔</span></td></tr><tr><th>balibaddha</th><td><b>masc</b></td><td>ox; bull</td><td><span class="gray">✔</span></td></tr><tr><th>balivadda</th><td><b>masc</b></td><td>ox; bull</td><td><span class="gray">✔</span></td></tr><tr><th>balībadda</th><td><b>masc</b></td><td>ox; bull</td><td><span class="gray">✔</span></td></tr><tr><th>byaggha</th><td><b>masc</b></td><td>tiger</td><td><span class="gray">✔</span></td></tr><tr><th>bhiṅka</th><td><b>masc</b></td><td>young animal; young elephant</td><td><span class="gray">✔</span></td></tr><tr><th>bhiṅkacchāpa</th><td><b>masc</b></td><td>young elephant offspring</td><td><span class="gray">✔</span></td></tr><tr><th>makara</th><td><b>masc</b></td><td>sea-monster; shark; sword-fish</td><td><span class="gray">✔</span></td></tr><tr><th>makkhikā ¹</th><td><b>fem</b></td><td>fly; lit. smearer</td><td><span class="gray">✔</span></td></tr><tr><th>makkhikā ²</th><td><b>fem</b></td><td>honey-bee; lit. smearer</td><td><span class="gray">✔</span></td></tr><tr><th>maṅgura ²</th><td><b>masc</b></td><td>walking catfish; Clarias batrachus</td><td><span class="gray">✔</span></td></tr><tr><th>maccha</th><td><b>masc</b></td><td>fish</td><td><span class="gray">✔</span></td></tr><tr><th>maṇḍūka</th><td><b>masc</b></td><td>frog</td><td><span class="gray">✔</span></td></tr><tr><th>mayūra</th><td><b>masc</b></td><td>peacock</td><td><span class="gray">✔</span></td></tr><tr><th>mahiṃsa</th><td><b>masc</b></td><td>buffalo</td><td><span class="gray">✔</span></td></tr><tr><th>miga ¹</th><td><b>masc</b></td><td>deer</td><td><span class="gray">✔</span></td></tr><tr><th>miga ²</th><td><b>masc</b></td><td>animal; beast</td><td><span class="gray">✔</span></td></tr><tr><th>migā</th><td><b>fem</b></td><td>doe</td><td><span class="gray">✔</span></td></tr><tr><th>meṇḍa</th><td><b>masc</b></td><td>ram; sheep</td><td><span class="gray">✔</span></td></tr><tr><th>luvaka</th><td><b>masc</b></td><td>flying squirrel; Petaurista petaurista</td><td><span class="gray">✔</span></td></tr><tr><th>vacchatara</th><td><b>masc</b></td><td>young bull; bullock; lit. more than a calf</td><td><span class="gray">✔</span></td></tr><tr><th>vacchatarī</th><td><b>fem</b></td><td>young heifer; lit. female more than a calf</td><td><span class="gray">✔</span></td></tr><tr><th>vasabha ¹</th><td><b>masc</b></td><td>head bull; stud bull</td><td><span class="gray">◑</span></td></tr><tr><th>vyaggha</th><td><b>masc</b></td><td>tiger</td><td><span class="gray">◑</span></td></tr><tr><th>sigāla</th><td><b>masc</b></td><td>jackal</td><td><span class="gray">✔</span></td></tr><tr><th>sithilahanu</th><td><b>masc</b></td><td>name of a bird; lit. loose jaw</td><td><span class="gray">✔</span></td></tr><tr><th>sīha ¹</th><td><b>masc</b></td><td>lion</td><td><span class="gray">✔</span></td></tr><tr><th>suṇa</th><td><b>masc</b></td><td>dog</td><td><span class="gray">✔</span></td></tr><tr><th>sunī</th><td><b>fem</b></td><td>bitch; female dog</td><td><span class="gray">◑</span></td></tr><tr><th>suvāna</th><td><b>masc</b></td><td>dog</td><td><span class="gray">✔</span></td></tr><tr><th>susumāra</th><td><b>masc</b></td><td>crocodile; alligator; lit. child killer</td><td><span class="gray">✔</span></td></tr><tr><th>hatthi</th><td><b>masc</b></td><td>elephant; lit. having a hand; i.e. trunk</td><td><span class="gray">✔</span></td></tr><tr><th>hatthī ¹</th><td><b>masc</b></td><td>elephant; lit. having a hand; i.e. trunk</td><td><span class="gray">✔</span></td></tr><tr><th>haṃsa ¹·¹</th><td><b>masc</b></td><td>swan; goose; flamingo; water bird</td><td><span class="gray">✔</span></td></tr></table>
+</div>
+<!-- sets -->
+<!-- frequency -->
+<div class="dpd content hidden" id="frequency_kacchapa">
+<p class="heading underlined">
+
+            
+            Frequency of <b>kacchapa</b> and its declensions
+            
+
+            <table class="freq">
+<thead>
+<tr>
+<th></th>
+<th></th>
+<th colspan="3" title="Chaṭṭha Saṅgāyana Tipiṭaka (Myanmar)">
+<b>
+CST
+</b>
+</th>
+<th></th>
+<th colspan="2" title="Buddha Jayanti Tipiṭaka (Sri Lanka)">
+<b>
+BJT
+</b>
+</th>
+<th></th>
+<th colspan="2" title="Syāmaraṭṭha 1927 Royal Edition (Thailand)">
+<b>
+SYA
+</b>
+</th>
+<th></th>
+<th colspan="1" title="Mahāsaṅgīti Tipiṭaka (Sutta Central)">
+<b>
+MST
+</b>
+</th>
+</tr>
+<tr style="text-align: right;">
+<th></th>
+<th></th>
+<!-- CST -->
+<th title="mūla">M</th>
+<th title="aṭṭhakathā">A</th>
+<th title="ṭīkā">Ṭ</th>
+<th></th>
+<!-- BJT -->
+<th title="mūla">M</th>
+<th title="aṭṭhakathā">A</th>
+<th></th>
+<!-- SYA -->
+<th title="mūla">M</th>
+<th title="aṭṭhakathā">A</th>
+<th></th>
+<!-- SC -->
+<th title="mūla">M</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th class="vertical-text" rowspan="6">Vinaya</th>
+</tr>
+<tr>
+<th>Pārājika</th>
+<!-- CST -->
+<td class="gr1">1</td>
+<td class="gr1">3</td>
+<td class="gr1" rowspan="5">1</td>
+<td class="gap"></td>
+<!-- BJT -->
+<td class="gr1">1</td>
+<td class="gr1">3</td>
+<td class="gap"></td>
+<!-- SYA -->
+<td class="gr1" rowspan="2">1</td>
+<td class="gr1" rowspan="5">3</td>
+<td class="gap"></td>
+<!-- SC -->
+<td class="gr1">1</td>
+</tr>
+<tr>
+<th>Pācittiya</th>
+<!-- CST -->
+<td class="gr0">0</td>
+<td class="gr0">0</td>
+<td class="gap"></td>
+<!-- BJT -->
+<td class="gr0">0</td>
+<td class="gr0">0</td>
+<td class="gap"></td>
+<!-- SYA -->
+<td class="gap"></td>
+<!-- SC -->
+<td class="gr0">0</td>
+</tr>
+<tr>
+<th>Mahāvagga</th>
+<!-- CST -->
+<td class="gr0">0</td>
+<td class="gr0">0</td>
+<td class="gap"></td>
+<!-- BJT -->
+<td class="gr0">0</td>
+<td class="gr0">0</td>
+<td class="gap"></td>
+<!-- SYA -->
+<td class="gr0">0</td>
+<td class="gap"></td>
+<!-- SC -->
+<td class="gr0">0</td>
+</tr>
+<tr>
+<th>Cūḷavagga</th>
+<!-- CST -->
+<td class="gr0">0</td>
+<td class="gr0">0</td>
+<td class="gap"></td>
+<!-- BJT -->
+<td class="gr0">0</td>
+<td class="gr0">0</td>
+<td class="gap"></td>
+<!-- SYA -->
+<td class="gr0">0</td>
+<td class="gap"></td>
+<!-- SC -->
+<td class="gr0">0</td>
+</tr>
+<tr>
+<th>Parivāra</th>
+<!-- CST -->
+<td class="gr0">0</td>
+<td class="gr0">0</td>
+<td class="gap"></td>
+<!-- BJT -->
+<td class="gr0">0</td>
+<td class="gr0">0</td>
+<td class="gap"></td>
+<!-- SYA -->
+<td class="gr0">0</td>
+<td class="gap"></td>
+<!-- SC -->
+<td class="gr0">0</td>
+</tr>
+<tr>
+<th class="vertical-text" rowspan="8">Sutta</th>
+</tr>
+<tr>
+<th>Dīgha</th>
+<!-- CST -->
+<td class="gr0">0</td>
+<td class="gr1">1</td>
+<td class="gr0">0</td>
+<td class="gap"></td>
+<!-- BJT -->
+<td class="gr0">0</td>
+<td class="gr1">1</td>
+<td class="gap"></td>
+<!-- SYA -->
+<td class="gr0">0</td>
+<td class="gr1">1</td>
+<td class="gap"></td>
+<!-- SC -->
+<td class="gr0">0</td>
+</tr>
+<tr>
+<th>Majjhima</th>
+<!-- CST -->
+<td class="gr1">4</td>
+<td class="gr1">2</td>
+<td class="gr1">1</td>
+<td class="gap"></td>
+<!-- BJT -->
+<td class="gr1">3</td>
+<td class="gr1">2</td>
+<td class="gap"></td>
+<!-- SYA -->
+<td class="gr1">4</td>
+<td class="gr1">2</td>
+<td class="gap"></td>
+<!-- SC -->
+<td class="gr1">4</td>
+</tr>
+<tr>
+<th>Saṃyutta</th>
+<!-- CST -->
+<td class="gr1">13</td>
+<td class="gr1">4</td>
+<td class="gr0">0</td>
+<td class="gap"></td>
+<!-- BJT -->
+<td class="gr1">13</td>
+<td class="gr1">4</td>
+<td class="gap"></td>
+<!-- SYA -->
+<td class="gr1">13</td>
+<td class="gr1">4</td>
+<td class="gap"></td>
+<!-- SC -->
+<td class="gr1">13</td>
+</tr>
+<tr>
+<th>Aṅguttara</th>
+<!-- CST -->
+<td class="gr0">0</td>
+<td class="gr0">0</td>
+<td class="gr1">2</td>
+<td class="gap"></td>
+<!-- BJT -->
+<td class="gr0">0</td>
+<td class="gr0">0</td>
+<td class="gap"></td>
+<!-- SYA -->
+<td class="gr0">0</td>
+<td class="gr0">0</td>
+<td class="gap"></td>
+<!-- SC -->
+<td class="gr0">0</td>
+</tr>
+<tr>
+<th>Khuddaka 1</th>
+<!-- CST -->
+<td class="gr0">0</td>
+<td class="gr2">18</td>
+<td class="void"></td>
+<td class="gap"></td>
+<!-- BJT -->
+<td class="gr0">0</td>
+<td class="gr2">18</td>
+<td class="gap"></td>
+<!-- SYA -->
+<td class="gr0">0</td>
+<td class="gr2">19</td>
+<td class="gap"></td>
+<!-- SC -->
+<td class="gr0">0</td>
+</tr>
+<tr>
+<th>Khuddaka 2</th>
+<!-- CST -->
+<td class="gr1">12</td>
+<td class="gr10">74</td>
+<td class="void"></td>
+<td class="gap"></td>
+<!-- BJT -->
+<td class="gr1">12</td>
+<td class="gr10">74</td>
+<td class="gap"></td>
+<!-- SYA -->
+<td class="gr1">11</td>
+<td class="gr9">72</td>
+<td class="gap"></td>
+<!-- SC -->
+<td class="gr1">10</td>
+</tr>
+<tr>
+<th>Khuddaka 3</th>
+<!-- CST -->
+<td class="gr1">1</td>
+<td class="gr1">2</td>
+<td class="gr0">0</td>
+<td class="gap"></td>
+<!-- BJT -->
+<td class="gr1">1</td>
+<td class="gr1">2</td>
+<td class="gap"></td>
+<!-- SYA -->
+<td class="gr1">1</td>
+<td class="gr1">1</td>
+<td class="gap"></td>
+<!-- SC -->
+<td class="gr1">1</td>
+</tr>
+<tr>
+<th class="vertical-text" rowspan="8">Abhidhamma</th>
+</tr>
+<tr>
+<th>Dhammasaṅgaṇī</th>
+<!-- CST -->
+<td class="gr0">0</td>
+<td class="gr0" rowspan="7">0</td>
+<td class="gr0" rowspan="7">0</td>
+<td class="gap"></td>
+<!-- BJT -->
+<td class="gr0">0</td>
+<td class="gr0">0</td>
+<td class="gap"></td>
+<!-- SYA -->
+<td class="gr0">0</td>
+<td class="gr0" rowspan="7">0</td>
+<td class="gap"></td>
+<!-- SC -->
+<td class="gr0">0</td>
+</tr>
+<tr>
+<th>Vibhaṅga</th>
+<!-- CST -->
+<td class="gr0">0</td>
+<td class="gap"></td>
+<!-- BJT -->
+<td class="gr0">0</td>
+<td class="gr0">0</td>
+<td class="gap"></td>
+<!-- SYA -->
+<td class="gr0">0</td>
+<td class="gap"></td>
+<!-- SC -->
+<td class="gr0">0</td>
+</tr>
+<tr>
+<th>Dhātukathā</th>
+<!-- CST -->
+<td class="gr0">0</td>
+<td class="gap"></td>
+<!-- BJT -->
+<td class="gr0">0</td>
+<td class="gr0">0</td>
+<td class="gap"></td>
+<!-- SYA -->
+<td class="gr0" rowspan="2">0</td>
+<td class="gap"></td>
+<!-- SC -->
+<td class="gr0">0</td>
+</tr>
+<tr>
+<th>Puggalapaññatti</th>
+<!-- CST -->
+<td class="gr0">0</td>
+<td class="gap"></td>
+<!-- BJT -->
+<td class="gr0">0</td>
+<td class="gr0">0</td>
+<td class="gap"></td>
+<!-- SYA -->
+<!-- included in dhātukathā-->
+<td class="gap"></td>
+<!-- SC -->
+<td class="gr0">0</td>
+</tr>
+<tr>
+<th>Kathāvatthu</th>
+<!-- CST -->
+<td class="gr0">0</td>
+<td class="gap"></td>
+<!-- BJT -->
+<td class="gr0">0</td>
+<td class="gr0">0</td>
+<td class="gap"></td>
+<!-- SYA -->
+<td class="gr0">0</td>
+<td class="gap"></td>
+<!-- SC -->
+<td class="gr0">0</td>
+</tr>
+<tr>
+<th>Yamaka</th>
+<!-- CST -->
+<td class="gr0">0</td>
+<td class="gap"></td>
+<!-- BJT -->
+<td class="gr0">0</td>
+<td class="gr0">0</td>
+<td class="gap"></td>
+<!-- SYA -->
+<td class="gr0">0</td>
+<td class="gap"></td>
+<!-- SC -->
+<td class="gr0">0</td>
+</tr>
+<tr>
+<th>Paṭṭhāna</th>
+<!-- CST -->
+<td class="gr0">0</td>
+<td class="gap"></td>
+<!-- BJT -->
+<td class="gr0">0</td>
+<td class="gr0">0</td>
+<td class="gap"></td>
+<!-- SYA -->
+<td class="gr0">0</td>
+<td class="gap"></td>
+<!-- SC -->
+<td class="gr0">0</td>
+</tr>
+<tr>
+<th class="vertical-text" rowspan="10">Aññā</th>
+</tr>
+<tr>
+<th>Visuddhimagga</th>
+<!-- CST -->
+<td class="void"></td>
+<td class="gr0">0</td>
+<td class="gr0">0</td>
+<td class="gap"></td>
+<!-- BJT -->
+<td class="void"></td>
+<td class="gr0">0</td>
+<td class="gap"></td>
+<!-- SYA -->
+<td class="void"></td>
+<td class="gr0">0</td>
+<td class="gap"></td>
+<!-- SC -->
+<td class="void"></td>
+</tr>
+<tr>
+<th>Leḍī Sayāḍo</th>
+<td class="void"></td>
+<td class="void"></td>
+<td class="gr0">0</td>
+</tr>
+<tr>
+<th>Buddhavandanā</th>
+<td class="void"></td>
+<td class="void"></td>
+<td class="gr0">0</td>
+</tr>
+<tr>
+<th>Vaṃsa</th>
+<td class="void"></td>
+<td class="void"></td>
+<td class="gr0">0</td>
+</tr>
+<tr>
+<th>Byākaraṇa</th>
+<td class="void"></td>
+<td class="void"></td>
+<td class="gr1">11</td>
+</tr>
+<tr>
+<th>Pucchavissajjanā</th>
+<td class="void"></td>
+<td class="void"></td>
+<td class="gr0">0</td>
+</tr>
+<tr>
+<th>Nīti</th>
+<td class="void"></td>
+<td class="void"></td>
+<td class="gr0">0</td>
+</tr>
+<tr>
+<th>Pakiṇṇaka</th>
+<td class="void"></td>
+<td class="void"></td>
+<td class="gr0">0</td>
+</tr>
+<tr>
+<th>Sihaḷa</th>
+<td class="void"></td>
+<td class="void"></td>
+<td class="gr0">0</td>
+</tr>
+</tbody>
+</table>
+<p>
+<b>CST</b>: Chaṭṭha Saṅgāyana Tipiṭaka (Myanmar)
+</p>
+<p>
+<b>BJT</b>: Buddha Jayanti Tipiṭaka (Sri Lanka)
+</p>
+<p>
+<b>SYA</b>: Syāmaraṭṭha 1927 Royal Edition (Thailand)
+</p>
+<p>
+<b>MST</b>: Mahāsaṅgīti Tipiṭaka (Sutta Central)
+</p>
+<p>
+            For a detailed explanation of how this word frequency chart is calculated, it's accuracies and inaccuracies,
+            please refer to
+            <a class="link" href="https://digitalpalidictionary.github.io/features/frequency/" target="_blank">
+                this webpage
+            </a>.
+        </p>
+<p class="footer">
+            If something looks out of place,
+            <a class="link" href="https://docs.google.com/forms/d/e/1FAIpQLSf9boBe7k5tCwq7LdWgBHHGIPVc4ROO5yjVDo1X5LDAxkmGWQ/viewform?usp=pp_url&amp;entry.438735500=kacchapa&amp;entry.326955045=Frequency&amp;entry.1433863141=dpdict.net+2025-04-13" target="_blank">
+                log it here.
+            </a>
+</p>
+</p></div>
+<!-- feedback -->
+<div class="dpd content hidden" id="feedback_kacchapa">
+<p>
+            ID <b>19278</b>
+</p>
+<p>
+            Digital Pāḷi Dictionary is a work in progress, made available for testing and feedback purposes.
+        </p>
+<p>
+<a class="link" href="https://docs.google.com/forms/d/e/1FAIpQLSfResxEUiRCyFITWPkzoQ2HhHEvUS5fyg68Rl28hFH6vhHlaA/viewform?usp=pp_url&amp;entry.1433863141=dpdict.net+2025-04-13" target="_blank">Add a missing word</a><span>. Please use this </span>
+<a class="link" href="https://docs.google.com/forms/d/e/1FAIpQLSfResxEUiRCyFITWPkzoQ2HhHEvUS5fyg68Rl28hFH6vhHlaA/viewform?usp=pp_url&amp;entry.1433863141=dpdict.net+2025-04-13" target="_blank">
+                online form</a>
+            to add missing words, especially from Vinaya, commentaries, and other later texts.
+            If you prefer to work offline, here is a
+            <a class="link" download="true" href="https://github.com/digitalpalidictionary/dpd-db/raw/main/misc/DPD%20Add%20Words.xlsx" target="_blank">
+                spreadsheet to download</a><span>, fill in and submit. </span>
+</p>
+<p>
+<a class="link" href="https://docs.google.com/forms/d/e/1FAIpQLSf9boBe7k5tCwq7LdWgBHHGIPVc4ROO5yjVDo1X5LDAxkmGWQ/viewform?usp=pp_url&amp;entry.438735500=kacchapa&amp;entry.1433863141=dpdict.net+2025-04-13" target="_blank">
+                Correct a mistake
+            </a>
+<span>
+                . Did you spot a mistake in the dictionary? Have something to add? Please report it. It generally takes
+                less than a minute and your corrections and suggestions help to improve the quality of this dictionary
+                for everyone who uses it.
+            </span>
+</p>
+<p>
+<a class="link" href="https://digitalpalidictionary.github.io/" target="_blank">
+                Read the docs
+            </a>
+<span>
+                . Get more detailed information about installation on your devices, upgrades, advanced settings and
+                features.
+            </span>
+</p>
+<p>
+<a class="link" href="mailto:digitalpalidictionary@gmail.com?subject=I%20want%20to%20help!&amp;body=Please%20let%20me%20know%20how%20I%20can%20get%20involved%20with%20the%20development%20of%20DPD.">
+                Get involved
+            </a>
+<span>
+                . If you're a Pāḷi specialist or a coder, or would like to contribute to the project in any way, please
+                get in touch.
+            </span>
+</p>
+<p>
+<a class="link" href="mailto:digitalpalidictionary@gmail.com?subject=Keep%20me%20updated!&amp;body=Please%20let%20me%20know%20about%20new%20features%20and%20updates%20as%20soon%20as%20they%20are%20available.">
+                Join the mailing list
+            </a>
+<span>
+                . Get notified of updates and new features as soon as they become available.
+            </span>
+</p>
+</div>
+<!-- fin --><h3>grammar: kacchapā</h3>
+<div class="dpd">
+
+<table class="sortable-grammar-table">
+<thead>
+<tr>
+<th data-sort="string">Pos</th>
+<th data-sort="string">Gen</th>
+<th data-sort="string">Case</th>
+<th data-sort="string">Num</th>
+<th data-sort="string">Of</th>
+<th data-sort="string">Word</th>
+</tr>
+</thead>
+<tbody><tr><td>noun</td><td>masc</td><td>nom</td><td>pl</td><td>of</td><td>kacchapa</td></tr><tr><td>noun</td><td>masc</td><td>instr</td><td>sg</td><td>of</td><td>kacchapa</td></tr><tr><td>noun</td><td>masc</td><td>abl</td><td>sg</td><td>of</td><td>kacchapa</td></tr><tr><td>noun</td><td>masc</td><td>voc</td><td>sg</td><td>of</td><td>kacchapa</td></tr><tr><td>noun</td><td>masc</td><td>voc</td><td>pl</td><td>of</td><td>kacchapa</td></tr></tbody>
+</table>
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const table = document.querySelector('.sortable-grammar-table');
+        const tbody = table.querySelector('tbody');
+        const headers = table.querySelectorAll('th');
+
+        headers.forEach(header => {
+            header.addEventListener('click', () => {
+                const order = header.dataset.order === 'asc' ? 'desc' : 'asc';
+                const colIndex = header.cellIndex;
+                const rows = Array.from(tbody.querySelectorAll('tr'));
+
+                rows.sort((a, b) => {
+                    const aValue = a.cells[colIndex].textContent.trim().toLowerCase();
+                    const bValue = b.cells[colIndex].textContent.trim().toLowerCase();
+                    return aValue.localeCompare(bValue);
+                });
+
+                if (order === 'desc') {
+                    rows.reverse();
+                }
+
+                tbody.innerHTML = '';
+                rows.forEach(row => tbody.appendChild(row));
+
+                headers.forEach(h => h.dataset.order = '');
+                header.dataset.order = order;
+            });
+        });
+    });
+    </script>
+
+<p class="footer">
+            For more information, please <a class="link" href="https://digitalpalidictionary.github.io/features/grammardict/" target="_blank">read the docs</a>.
+        </p>
+
+</div>
+                </div>
+            </div>
+            <div class="settings-pane">
+                  <button class="collapse-btn" onclick="toggleSettings()">            
+    <h3>
+Settings <div class="settings-icon"></div>   
+  </h3> 
+  </button>
+  <div id="settings-content">
+<p>
+                            <!-- Language selection dropdown -->
+            <div class="language-switcher">
+                <span class="language-icon" title="Language"> 🌐 Change Language
+                    <span class="tooltip">
+                        <b>Language</b>
+                    </span>
+                </span>
+<div class="dropdown" style="display: none;">
+  <a href="javascript:void(0)" class="dropdown-item" onclick="changeLanguage('en')">English</a>
+  <a href="javascript:void(0)" class="dropdown-item" onclick="changeLanguage('ru')">Русский</a>
+</div>
+            </div>
+            </p>
+                <p>
+                    <button class="small-button" id="font-size-down">-</button>
+                    <button class="small-button" id="font-size-up">+</button>
+                    font size
+                    <span id="font-size-display"></span>
+                </p>
+                <p>
+                    <label class="switch">
+                        <input type="checkbox" id="theme-toggle"><span class="slider round"></span>
+                    </label>
+                    light / dark mode
+                </p>
+                <p>
+                    <label class="switch">
+                        <input type="checkbox" id="sans-serif-toggle"><span class="slider round"></span>
+                    </label>
+                    sans / serif font
+                </p>
+                <p>
+                    <label class="switch">
+                        <input type="checkbox" id="niggahita-toggle"><span class="slider round"></span>
+                    </label>
+                    niggahīta ṃ / ṁ
+                </p>
+                <p>
+                    <label class="switch">
+                        <input type="checkbox" id="grammar-toggle"><span class="slider round"></span>
+                    </label>
+                    grammar button closed / open
+                </p>
+                <p>
+                    <label class="switch">
+                        <input type="checkbox" id="example-toggle"><span class="slider round"></span>
+                    </label>
+                    example button closed / open
+                </p>
+                <p>
+                    <label class="switch">
+                        <input type="checkbox" id="one-button-toggle"><span class="slider round"></span>
+                    </label>
+                    one button at a time off / on
+                </p>
+                <!-- <p>
+                <label class="switch">
+                    <input type="checkbox" id="sbs-example-toggle"><span class="slider round"></span>
+                </label>
+                sbs example button closed / open
+            </p> -->
+                <p>
+                    <label class="switch">
+                        <input type="checkbox" id="summary-toggle" ><span class="slider round"></span>
+                    </label>
+                    summary hide / show
+                </p>
+                <p>
+                    <label class="switch">
+                        <input type="checkbox" id="sandhi-toggle" checked><span class="slider round"></span>
+                    </label>
+                    sandhi ' hide / show
+                </p>
+                <p>
+    <label class="switch">
+        <input type="checkbox" id="tabs-toggle">
+        <span class="slider round"></span>
+    </label>
+    Tabs hide / show
+</p>
+
+            </div>
+        </div>
+        </div>
+    <div class="footer-pane">
+<a id="fdg-link" href="" target="_blank">FDG</a> ©  
+<a id="dpd-link" href="" target="_blank">DPD</a>
+    </div>
+    </div>
+
+    <div id="bold-def-tab" class="tab-content">
+        <div class="header-pane bd-header-pane">
+            <div class="logo-title">
+                <h2 class="title" id="bd-title-clear">CST Bold Definitions</h2>
+            </div>
+            <p class="centered-text">
+                Search for <b>360k+</b> 
+                bold defined terms in the Chaṭṭha Saṅgāyana Tipiṭaka
+            </p>
+            <div class="bd-search-pane">
+                <h4>Search for definitions of the term</h4>
+                <form id="bd-search-form">
+                    <input class="search-box bd-search-box" type="text" name="bd-search-1" id="bd-search-box-1"
+                        value="" autocomplete="off" inputmode="text" autocapitalize="off">
+                </form>
+                <h4>which contain</h4>
+                <form id="bd-search-form">
+                    <input class="search-box bd-search-box" type="text" name="bd-search-2" id="bd-search-box-2"
+                        value="" autocomplete="off" inputmode="text" autocapitalize="off">
+                </form>
+                <h4>within them.</h4>
+                <button class="search-button" id="bd-search-button">search</button>
+                <button class="help small-button" id="search-help-button">
+                    ?
+                    <span class="tooltip velthuis">
+                        <b>
+                            Velthuis typing:
+                        </b><br><br>
+                        aa > ā<br>
+                        ii > ī<br>
+                        uu > ū<br>
+                        "n > ṅ<br>
+                        ~n > ñ<br>
+                        .t > ṭ<br>
+                        .d > ḍ<br>
+                        .n > ṇ<br>
+                        .m > ṃ<br>
+                        .l > ḷ
+                    </span>
+                </button>
+            </div>
+            <div class="bd-search-options">
+                <input type="radio" id="option1" name="option" value="starts_with">
+                <label for="option1">start with</label>
+                <input type="radio" id="option2" name="option" value="regex" checked>
+                <label for="option2">normal/rx</label>
+                <input type="radio" id="option3" name="option" value="fuzzy">
+                <label for="option3">fuzzy</label>
+                <button type="button" class="bd-search-option-clear">clear</button>
+            </div>
+        </div>
+        <div class="scrolling-pane" id="bd-results">
+            
+        </div>
+        <div class="footer-pane">
+             About 
+            <a href="https://digitalpalidictionary.github.io/dpdict.html" target="_blank">DPD</a>
+        </div>
+    </div>
+
+    <script src="static/home.js"></script>
+    <script src="static/tabs.js"></script>
+    <script src="static/bold_definitions.js"></script>
+    <script src="static/dpd.js"></script>
+    <script src="static/autopali.js"></script>
+    <script src="static/extra.js"></script>
+
+    <script>
+    </script>
+</body>
+
+</html>

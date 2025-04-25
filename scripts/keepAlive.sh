@@ -10,7 +10,8 @@ start_time=$(date +%s)
 terms=("bhagavato" "dhamma" "dukkha" "adhivacanasamphasso" "kho" "kacchapo")
 term=${terms[RANDOM % ${#terms[@]}]}
 
-host=http://localhost:8080
+#host=http://localhost:8080
+host=http://localhost:8880
 #host=https://dict.dhamma.gift
 #host=https://dpdict.net
 #

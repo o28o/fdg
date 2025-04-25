@@ -58,10 +58,19 @@ check_endpoint() {
     echo "$timestamp $lang $status ${response_time_s}s ${size_kb}kb $term $url" | tee -a /tmp/keepalive.log 2>/dev/null
 }
 
+# Определение базового URL
+if uname -a | grep -qi "android"; then
+  BASE_URL="https://dict.dhamma.gift"
+elif grep -qi "ubuntu" /proc/version; then
+  BASE_URL="http://localhost:8880"
+else
+  BASE_URL="https://dict.dhamma.gift"
+fi
+
 # Проверка русского endpoint
-check_endpoint "RU" "/ru/search_html" "https://dict.dhamma.gift"
+check_endpoint "RU" "/ru/search_html" "$BASE_URL"
 check_endpoint "RU" "/ru/search_html" "https://dpdict.net"
 
 # Проверка английского endpoint
-check_endpoint "EN" "/search_html" "https://dict.dhamma.gift"
+check_endpoint "EN" "/search_html" "$BASE_URL"
 check_endpoint "EN" "/search_html" "https://dpdict.net"

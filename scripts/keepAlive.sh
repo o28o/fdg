@@ -18,11 +18,13 @@ check_endpoint() {
     local path=$2
     local url="$host$path?q=$term"
 
-    local start_time=$(date +%s)
+    local start_time=$(date +%s%3N)
     local content=$(curl --max-time 30 -s "$url")
-    local end_time=$(date +%s)
+    local end_time=$(date +%s%3N)
 
-    local response_time=$((end_time - start_time))
+    local response_time_ms=$((end_time - start_time))
+    local response_time_s=$(echo "scale=3; $response_time_ms / 1000" | bc)
+
     local size_bytes=$(echo "$content" | wc -c)
     local size_kb=$(echo "scale=2; $size_bytes / 1024" | bc)
 
@@ -32,7 +34,7 @@ check_endpoint() {
         status="FAIL"
     fi
 
-    echo "$timestamp $lang $status ${response_time}s ${size_kb}kb $term" | tee -a /tmp/keepalive.log 2>/dev/null
+    echo "$timestamp $lang $status ${response_time_s}s ${size_kb}kb $term" | tee -a /tmp/keepalive.log 2>/dev/null
 }
 
 # Проверка русского endpoint

@@ -63,6 +63,8 @@ $totalinyears years total
 
 <link rel="stylesheet" type="text/css" href="/assets/css/datatables.min.css"/>
 <link rel="stylesheet" href="/assets/css/langswitch.css">
+<script src="/assets/js/jquery-3.7.0.min.js"></script>
+
 <script type="text/javascript" src="/assets/js/datatables.min.js"></script>
 <script type="text/javascript" src="/assets/js/natural.js"></script>
 <script type="text/javascript" src="/assets/js/strip-html.js"></script>
@@ -217,6 +219,8 @@ $totalinyears years total
 
 </tbody>
 </table>
+
+
 <br><br><hr>
 <a href='/' id='back'>Main</a>&nbsp;
 <a href='/ru/sc'>Read</a>&nbsp;
@@ -226,6 +230,10 @@ $totalinyears years total
 <a href="/result/adhivacanasamphasso_suttanta_pali_words_1-2-1.html">Words</a>
 -->
 </div>
+
+
+
+
 <script type="text/javascript" src="/assets/js/typeahead/bootstrap3-typeahead.min.js"></script>
     <script type='text/javascript'>
    $(document).ready(function() {
@@ -282,6 +290,66 @@ $totalinyears years total
 });
   </script>
 
-    <script type="module" src="/assets/js/langswitch.js"></script>      
+    <script type="module" src="/assets/js/langswitch.js"></script>    
+  
+<script>
+$(document).ready(function() {
+    // Создаем контейнер для вывода
+    const outputDiv = $(`
+        <div id="script-output" class="mt-3 p-3 bg-light rounded">
+            <div class="d-flex justify-content-between align-items-center mb-2">
+                <span id="status-text">Running script...</span>
+                <button id="copy-btn" class="btn btn-sm btn-outline-secondary" style="display: none;">
+                    <i class="bi bi-clipboard"></i> Copy
+                </button>
+            </div>
+            <div id="output-content"></div>
+        </div>
+    `);
+    $('body').append(outputDiv);
+
+    // Показываем индикатор загрузки
+    $('#output-content').html('<div class="spinner-border text-primary" role="status"></div>');
+
+    // Глобальная переменная для хранения обработчика
+    if (typeof window.copyButtonHandler === 'undefined') {
+        window.copyButtonHandler = function() {
+            const outputText = $('#output-content pre').text();
+            navigator.clipboard.writeText(outputText)
+                .then(() => {
+                    const $btn = $('#copy-btn');
+                    $btn.html('<i class="bi bi-check"></i> Copied!');
+                    setTimeout(() => {
+                        $btn.html('<i class="bi bi-clipboard"></i> Copy');
+                    }, 2000);
+                })
+                .catch((err) => {
+                    alert('Failed to copy: ' + err);
+                });
+            // Удаляем обработчик после выполнения
+            $('#copy-btn').off('click');
+        };
+    }
+
+    // Запускаем скрипт
+    $.ajax({
+        url: '/scripts/keepAlive.php',
+        method: 'POST',
+        success: function(response) {
+            $('#status-text').text('✅ Script executed');
+            $('#output-content').html('<pre>' + response + '</pre>');
+            $('#copy-btn').show();
+            
+            // Всегда удаляем старый обработчик перед добавлением нового
+            $('#copy-btn').off('click').on('click', window.copyButtonHandler);
+        },
+        error: function(xhr, status, error) {
+            $('#status-text').text('❌ Error');
+            $('#output-content').html('<div class="alert alert-danger">' + error + '</div>');
+        }
+    });
+});
+</script>
+
 </body>
 </html>

@@ -4,6 +4,9 @@
 timestamp=$(date "+%Y-%m-%d %H:%M:%S")
 
 # Попытка взять слово из файла, если он существует и не пустой
+cd /var/www/html/  > /dev/null 2>&1
+cd /data/data/com.termux/files/usr/share/apache2/default-site/htdocs > /dev/null 2>&1
+
 words_file="./assets/texts/sutta_words.txt"
 if [[ -s "$words_file" ]]; then
     mapfile -t file_terms < "$words_file"
@@ -62,3 +65,6 @@ check_endpoint "RU" "/ru/search_html" "https://dpdict.net"
 # Проверка английского endpoint
 check_endpoint "EN" "/search_html" "$BASE_URL"
 check_endpoint "EN" "/search_html" "https://dpdict.net"
+
+
+cd -  > /dev/null 2>&1

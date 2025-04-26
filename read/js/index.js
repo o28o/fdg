@@ -215,13 +215,12 @@ var fullUrlWithAnchor = window.location.href.split('#')[0] + '#' + anchor;
    // let finder = decodeURIComponent(params.get("s"));
 
 
-if (localStorage.getItem("removePunct") === "true") {
+if (localStorage.getItem("removePunct") === "true" && paliData[segment] !== undefined) {
     paliData[segment] = paliData[segment].replace(/[-—–]/g, ' ');  
     paliData[segment] = paliData[segment].replace(/[:;“”‘’,"']/g, '');  
     paliData[segment] = paliData[segment].replace(/[.?!]/g, ' |'); 
-    
-    //।   ॥  
 }
+
 if (finder && finder.trim() !== "") {
   let regex = new RegExp(finder, 'gi'); // 'gi' - игнорировать регистр
 
@@ -479,10 +478,16 @@ prevName = prevName.replace(/[0-9.]/g, '');
     }
     );
     })
-    .catch(error => {
-  console.log('error:not found');
-console.log(rootpath, trnpath, htmlpath, varpath);
+.catch(error => {
+  console.log('error: not found');
+  console.log('Slug:', slug, 'SlugReady:', slugReady);
+  console.log(`Paths:
+root: ${rootpath}
+trn : ${trnpath}
+html: ${htmlpath}
+var : ${varpath}`);
 
+// Отправка запроса по адресу http://localhost:8080/ru/?q= с использованием значения slug
 var xhr = new XMLHttpRequest();
 xhr.open("GET", "/?q=" + encodeURIComponent(slug), true);
 xhr.send();
@@ -496,7 +501,7 @@ xhr.onreadystatechange = function() {
           !xhr.responseText.includes("404") &&
           xhr.responseText.trim().length > 0) {
         console.log(xhr.responseText);
-        window.location.href = "/?q=" + encodeURIComponent(slug);
+        window.location.href = "/ru/?q=" + encodeURIComponent(slug);
       } else {
         console.log('Page not found or empty response');
       }
@@ -507,6 +512,7 @@ xhr.onreadystatechange = function() {
     }
   }
 };
+
 
   // Обновление сообщения об ошибке на странице
         suttaArea.innerHTML = `<p>Searching for "${decodeURIComponent(slug)}". Please wait.</p>

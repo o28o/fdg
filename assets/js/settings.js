@@ -585,7 +585,7 @@ document.addEventListener('keydown', (event) => {
 
 document.addEventListener('keydown', (event) => {
   // Для отладки: смотри, что нажимается
-  console.log('Pressed:', event.code);
+//  console.log('Pressed:', event.code);
 
   if (event.altKey && (event.code === 'Period' || event.code === 'KeyM')) {
     event.preventDefault();

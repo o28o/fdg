@@ -302,7 +302,8 @@ let преобразованныеСлова = слова.map(word => {
 
     return результат;
 }
-if (localStorage.getItem("removePunct") === "true") {
+
+if (localStorage.getItem("removePunct") === "true" && paliData[segment] !== undefined) {
     paliData[segment] = paliData[segment].replace(/[-—–]/g, ' ');  
     paliData[segment] = paliData[segment].replace(/[:;“”‘’,"']/g, '');  
     paliData[segment] = paliData[segment].replace(/[.?!]/g, ' |'); 

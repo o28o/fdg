@@ -414,6 +414,10 @@ echo
 echo dpd-ui
 cd /var/www/dpd-ui
 git pull
+echo
+echo dpd-db
+cd /var/www/dpd-db
+git pull
 echo 
 echo audio
 echo

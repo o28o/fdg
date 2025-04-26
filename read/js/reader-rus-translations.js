@@ -321,8 +321,8 @@ var fullUrlWithAnchor = window.location.href.split('#')[0] + '#' + anchor;
    // let finder = decodeURIComponent(params.get("s"));
 
 
-if (localStorage.getItem("removePunct") === "true") {
-    paliData[segment] = paliData[segment].replace(/[-—–]/g, ' ');  
+if (localStorage.getItem("removePunct") === "true" && paliData[segment] !== undefined) {    
+  paliData[segment] = paliData[segment].replace(/[-—–]/g, ' ');  
     paliData[segment] = paliData[segment].replace(/[:;“”‘’,"']/g, '');  
     paliData[segment] = paliData[segment].replace(/[.?!]/g, ' |'); 
     

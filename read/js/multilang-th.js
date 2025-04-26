@@ -418,7 +418,9 @@ if (transData[segment] === undefined) {
 if (engTransData[segment] === undefined) {
   engTransData[segment] = "&nbsp;";
 }
-if (localStorage.getItem("removePunct") === "true") {
+
+if (localStorage.getItem("removePunct") === "true" && paliData[segment] !== undefined) {
+  
     paliData[segment] = paliData[segment].replace(/[-—–]/g, ' ');  
     paliData[segment] = paliData[segment].replace(/[:;“”‘’,"']/g, '');  
     paliData[segment] = paliData[segment].replace(/[.?!]/g, ' |'); 

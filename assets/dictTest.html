@@ -154,14 +154,13 @@
     }
 
     // Добавление сообщения в вывод
-    function addToOutput(message, className = '') {
-      const line = document.createElement('div');
-      line.textContent = message;
-      line.className = className;
-      outputEl.appendChild(line);
-      outputEl.scrollTop = outputEl.scrollHeight;
-    }
-
+function addToOutput(message, className = '') {
+  const line = document.createElement('div');
+  line.innerHTML = message;  // вместо textContent
+  line.className = className;
+  outputEl.appendChild(line);
+  outputEl.scrollTop = outputEl.scrollHeight;
+}
     // Очистка вывода
     function clearOutput() {
       outputEl.innerHTML = '';
@@ -172,7 +171,7 @@
       const targetUrl = `${baseUrl}${path}?q=${urlencode(term)}`;
       const startTime = performance.now();
 
-      addToOutput(`Testing ${lang} at ${targetUrl}`, 'info');
+      addToOutput(`Testing ${lang} at <a href="${targetUrl}">${baseUrl}</a>`, 'info');
 
       try {
         // Пробуем HEAD запрос сначала
@@ -192,7 +191,7 @@
 
         const totalTime = (performance.now() - startTime) / 1000;
         const timestamp = getClientTimestamp();
-        const resultLine = `${timestamp} ${lang} OK ${totalTime.toFixed(3)}s ${term} ${targetUrl}`;
+        const resultLine = `${timestamp} ${lang} <b>OK</b> <b>${totalTime.toFixed(3)}s</b> ${term} ${targetUrl}`;
         addToOutput(resultLine, 'success');
 
         return {
@@ -208,7 +207,7 @@
           errorMsg = 'Network error (CORS or server down)';
         }
 
-        const errorLine = `${timestamp} ${lang} FAIL ${responseTime.toFixed(3)}s ${term} ${targetUrl} (${errorMsg})`;
+        const errorLine = `${timestamp} ${lang} <b>FAIL</b> <b>${responseTime.toFixed(3)}s</b> ${term} ${targetUrl} (${errorMsg})`;
         addToOutput(errorLine, 'fail');
 
         return {
@@ -231,8 +230,8 @@
 
       // Выбираем случайный термин из доступных
       term = availableTerms[Math.floor(Math.random() * availableTerms.length)];
-      addToOutput(`Starting tests with term: ${term}`, 'info');
-      addToOutput(`Source: ${availableTerms === defaultTerms ? 'default terms': 'sutta_words.txt'}`, 'info');
+      addToOutput(`Starting tests with term: <a target="_blank" href="https://dict.dhamma.gift/search_html?q=${term}">${term}</a>`, 'info');
+    //  addToOutput(`Source: ${availableTerms === defaultTerms ? 'default terms': 'sutta_words.txt'}`, 'info');
       addToOutput(`Your local time: ${getClientTimestamp()}`, 'info');
 
       try {

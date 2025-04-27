@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Сортируемая таблица грамматики</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        h1 {
+            color: #333;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        th, td {
+            padding: 8px 12px;
+            border: 1px solid #ddd;
+            text-align: left;
+        }
+        th {
+            background-color: #f2f2f2;
+            cursor: pointer;
+            position: relative;
+        }
+        th:hover {
+            background-color: #e6e6e6;
+        }
+        th::after {
+            content: "↕";
+            position: absolute;
+            right: 8px;
+            color: #999;
+            font-size: 12px;
+        }
+        th[data-order="asc"]::after {
+            content: "↑";
+            color: #333;
+        }
+        th[data-order="desc"]::after {
+            content: "↓";
+            color: #333;
+        }
+        .original-table {
+            background-color: #f9f9f9;
+        }
+        .original-table th {
+            background-color: #e0e0e0;
+        }
+    </style>
+</head>
+<body>
+    <h1>Тест сортируемой таблицы грамматики</h1>
+    
+    <h2>Исходная таблица:</h2>
+    <div class='dpd original-table'>
+        <table class='grammar_dict'>
+            <thead>
+                <tr>
+                    <th id='col1'>ЧР</th>
+                    <th id='col2'>грам.</th>
+                    <th id='col3'></th>
+                    <th id='col4'>слово</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><b>сущ</b></td>
+                    <td>муж имен мн</td>
+                    <td>от</td>
+                    <td>kacchapa</td>
+                </tr>
+                <tr>
+                    <td><b>сущ</b></td>
+                    <td>муж твор ед</td>
+                    <td>от</td>
+                    <td>kacchapa</td>
+                </tr>
+                <tr>
+                    <td><b>сущ</b></td>
+                    <td>муж отд ед</td>
+                    <td>от</td>
+                    <td>kacchapa</td>
+                </tr>
+                <tr>
+                    <td><b>сущ</b></td>
+                    <td>муж зват ед</td>
+                    <td>от</td>
+                    <td>kacchapa</td>
+                </tr>
+                <tr>
+                    <td><b>сущ</b></td>
+                    <td>муж зват мн</td>
+                    <td>от</td>
+                    <td>kacchapa</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <h2>Английская версия таблицы:</h2>
+    <div class='dpd original-table'>
+        <table class='grammar_dict'>
+            <thead>
+                <tr>
+                    <th id='col1'>POS</th>
+                    <th id='col2'>grammar</th>
+                    <th id='col3'></th>
+                    <th id='col4'>word</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><b>noun</b></td>
+                    <td>masc nom pl</td>
+                    <td>of</td>
+                    <td>kacchapa</td>
+                </tr>
+                <tr>
+                    <td><b>noun</b></td>
+                    <td>masc ins sg</td>
+                    <td>of</td>
+                    <td>kacchapa</td>
+                </tr>
+                <tr>
+                    <td><b>noun</b></td>
+                    <td>masc abl sg</td>
+                    <td>of</td>
+                    <td>kacchapa</td>
+                </tr>
+                <tr>
+                    <td><b>noun</b></td>
+                    <td>masc voc sg</td>
+                    <td>of</td>
+                    <td>kacchapa</td>
+                </tr>
+                <tr>
+                    <td><b>noun</b></td>
+                    <td>masc voc pl</td>
+                    <td>of</td>
+                    <td>kacchapa</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        // Находим все таблицы грамматики на странице
+        const grammarTables = document.querySelectorAll('table.grammar_dict');
+        
+        if (grammarTables.length === 0) return;
+        
+        // Функция для преобразования одной таблицы
+        function transformGrammarTable(oldTable) {
+            // Создаем новую таблицу
+            const newTable = document.createElement('table');
+            newTable.className = 'sortable-grammar-table';
+            
+            // Создаем заголовок таблицы
+            const thead = document.createElement('thead');
+            const headerRow = document.createElement('tr');
+            
+            const headers = [
+                {text: 'Pos', sort: 'string'},
+                {text: 'Gen', sort: 'string'},
+                {text: 'Case', sort: 'string'},
+                {text: 'Num', sort: 'string'},
+                {text: 'Of', sort: 'string'},
+                {text: 'Word', sort: 'string'}
+            ];
+            
+            headers.forEach(header => {
+                const th = document.createElement('th');
+                th.textContent = header.text;
+                th.setAttribute('data-sort', header.sort);
+                headerRow.appendChild(th);
+            });
+            
+            thead.appendChild(headerRow);
+            newTable.appendChild(thead);
+            
+            // Создаем тело таблицы
+            const tbody = document.createElement('tbody');
+            newTable.appendChild(tbody);
+            
+            // Заполняем таблицу данными из старой таблицы
+            const oldRows = oldTable.querySelectorAll('tbody tr');
+            
+            oldRows.forEach(oldRow => {
+                const cells = oldRow.querySelectorAll('td');
+                if (cells.length < 4) return;
+                
+                const pos = cells[0].textContent.trim();
+                const grammar = cells[1].textContent.trim();
+                const word = cells[3].textContent.trim();
+                
+                const grammarParts = grammar.split(/\s+/);
+                const gender = grammarParts[0] || '';
+                const case_ = grammarParts[1] || '';
+                const number = grammarParts[2] || '';
+                
+                const newRow = document.createElement('tr');
+                
+                [pos, gender, case_, number, 'of', word].forEach(text => {
+                    const td = document.createElement('td');
+                    td.textContent = text;
+                    newRow.appendChild(td);
+                });
+                
+                tbody.appendChild(newRow);
+            });
+            
+            // Заменяем старую таблицу новой
+            oldTable.replaceWith(newTable);
+            
+            // Добавляем обработчики сортировки
+            setupSorting(newTable);
+        }
+        
+        // Функция для настройки сортировки
+        function setupSorting(table) {
+            const tbody = table.querySelector('tbody');
+            const headers = table.querySelectorAll('th');
+            
+            headers.forEach(header => {
+                header.addEventListener('click', () => {
+                    const order = header.dataset.order === 'asc' ? 'desc' : 'asc';
+                    const colIndex = header.cellIndex;
+                    const rows = Array.from(tbody.querySelectorAll('tr'));
+                    
+                    rows.sort((a, b) => {
+                        const aValue = a.cells[colIndex].textContent.trim().toLowerCase();
+                        const bValue = b.cells[colIndex].textContent.trim().toLowerCase();
+                        return aValue.localeCompare(bValue);
+                    });
+                    
+                    if (order === 'desc') {
+                        rows.reverse();
+                    }
+                    
+                    tbody.innerHTML = '';
+                    rows.forEach(row => tbody.appendChild(row));
+                    
+                    headers.forEach(h => h.dataset.order = '');
+                    header.dataset.order = order;
+                });
+            });
+        }
+        
+        // Преобразуем все найденные таблицы
+        grammarTables.forEach(table => {
+            transformGrammarTable(table);
+        });
+    });
+    </script>
+</body>
+</html>

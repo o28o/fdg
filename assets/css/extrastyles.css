@@ -362,25 +362,25 @@ label {
   padding: 0.8rem;
 }
 
-@media only screen and (min-width: 1024px) {
+/* Скрываем на мобильных */
+@media (max-width: 991.98px) {
     .hideOnMobile {
-        display: block;
+        display: none;
     }
     .hideOnMobile .divider-custom {
-        display: block;
+        display: none;
     }
 }
-
 
 
 @media (min-width: 992px) {
   
     .hideOnMobile {
-        display: none;
+        display: block;
     }
     .hideOnMobile .divider-custom {
-        display: none;
-    }  
+        display: block;
+    }
   
   
   #mainNav {

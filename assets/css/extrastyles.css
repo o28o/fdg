@@ -368,7 +368,7 @@ label {
 }
 
 /* Скрываем на мобильных */
-@media (max-width: 1224px) {
+@media (max-width: 1423px) {
     .hideOnMobile {
         display: none;
     }
@@ -377,7 +377,7 @@ label {
     }
 }
 
-@media (min-width: 1224px) {
+@media (min-width: 1424px) {
   
     .hideOnMobile {
         display: block;

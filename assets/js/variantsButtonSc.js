@@ -13,7 +13,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // Устанавливаем начальное состояние видимости как "hidden"
   let storedState = localStorage.getItem("variantVisibility") || "hidden";
-  console.log(`Сохраненное состояние visibility из localStorage: ${storedState}`);
+ // console.log(`Сохраненное состояние visibility из localStorage: ${storedState}`);
 
   // Функция для установки начального состояния видимости элементов с классом 'variant'
   function applyVisibility() {

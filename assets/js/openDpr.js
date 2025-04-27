@@ -1,11 +1,11 @@
 document.addEventListener("DOMContentLoaded", function() {
-    console.log("Страница загружена");
+//   console.log("Страница загружена");
     const dprLinks = document.querySelectorAll('.dprLink');
     dprLinks.forEach(link => {
         const slug = link.getAttribute('data-slug');
-        console.log("Slug:", slug);
+       // console.log("Slug:", slug);
         const textUrl = getTextUrl(slug);
-        console.log("Text URL:", textUrl);
+    //    console.log("Text URL:", textUrl);
         if (!textUrl) {
             link.style.display = 'none';
         } else {
@@ -19,13 +19,13 @@ document.addEventListener("DOMContentLoaded", function() {
 
   function openDpr(slug) {
 
-        console.log("Открывается DPR для:", slug);
+     //   console.log("Открывается DPR для:", slug);
         let textUrl = getTextUrl(slug);
         if (textUrl) {
-            console.log("Ссылка найдена:", textUrl);
+     //       console.log("Ссылка найдена:", textUrl);
             window.open(textUrl, "_blank");
         } else {
-            console.log("Ссылка не найдена");
+            console.log("Ссылка не найдена", slug, textUrl);
         }
     }
 

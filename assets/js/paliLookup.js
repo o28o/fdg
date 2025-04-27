@@ -372,7 +372,7 @@ openBtn.style.color = 'rgba(255, 255, 255, 0.8)'; // Белый с неболь�
         localStorage.setItem('popupHeight', popup.style.height);
         localStorage.setItem('popupTop', popup.style.top);
         localStorage.setItem('popupLeft', popup.style.left);
-        console.log('savedstates');
+      //  console.log('savedstates');
     }
 
     // Перетаскивание окна
@@ -509,7 +509,7 @@ overlay.addEventListener('click', () => {
   iframe.src = ''; // Очищаем iframe
 });
 
-console.log('lookup dict ', dictUrl, ' siteLanguage ', siteLanguage);
+// console.log('lookup dict ', dictUrl, ' siteLanguage ', siteLanguage);
 
 // Проверяем состояние в localStorage при загрузке страницы
 let dictionaryVisible = localStorage.getItem('dictionaryVisible') === null ? true : localStorage.getItem('dictionaryVisible') === 'true';
@@ -556,7 +556,7 @@ document.addEventListener('click', function(event) {
 
         if (clickedWord) {
             let cleanedWord = cleanWord(clickedWord);
-            console.log('Клик по слову:', cleanedWord);
+        //    console.log('Клик по слову:', cleanedWord);
 
             if (dictionaryVisible) {
                 let translation = "";
@@ -583,7 +583,7 @@ document.addEventListener('click', function(event) {
 if (dictUrl === "standalonebw" || dictUrl === "standalonebwru") {
     translation = lookupWordInStandaloneDict(cleanedWord);
 } 
-else if ( dictUrl.includes("mdict")) {
+else if (dictUrl.includes('dicttango') || dictUrl.includes('mdict')) {
     // Создаем временную кнопку для открытия в приложении dictUrl.includes("dicttango") ||
     const tempLink = document.createElement('a');
     tempLink.href = 'javascript:void(0)';
@@ -776,7 +776,7 @@ function getClickedWordWithHTML(element, x, y) {
 
     const parentElement = element.closest('.pli-lang, .rus-lang, .eng-lang, [lang="pi"], [lang="en"], [lang="ru"]');
     if (!parentElement) {
-        console.log('Родительский элемент с классом pli-lang не найден.');
+     //   console.log('Родительский элемент с классом pli-lang не найден.');
         return null;
     }
 
@@ -790,14 +790,14 @@ function getClickedWordWithHTML(element, x, y) {
         return null;
     }
 
-    console.log('Смещение в полном тексте:', globalOffset);
+   // console.log('Смещение в полном тексте:', globalOffset);
 
     // Используем обновленное регулярное выражение для поиска слова
     const regex = /[^\s,;.–—!?()]+/g; // Регулярное выражение, игнорирующее пробелы и знаки препинания
     let match;
     while ((match = regex.exec(fullText)) !== null) {
         if (match.index <= globalOffset && regex.lastIndex >= globalOffset) {
-            console.log('Найденное слово:', match[0]);
+        //    console.log('Найденное слово:', match[0]);
             return match[0];
         }
     }
@@ -840,7 +840,7 @@ function getFullTextFromElement(element) {
 document.addEventListener('click', (event) => {
     const clickedWord = getClickedWordWithHTML(event.target, event.clientX, event.clientY);
     if (clickedWord) {
-        console.log('Слово по клику:', clickedWord);
+      //  console.log('Слово по клику:', clickedWord);
     } else {
      //   console.log('Слово не определено');
     }

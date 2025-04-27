@@ -1,11 +1,11 @@
 document.addEventListener("DOMContentLoaded", function() {
-    console.log("Страница загружена");
+  //  console.log("Страница загружена");
     const ruLinks = document.querySelectorAll('.bwLink');
     ruLinks.forEach(link => {
         const slug = link.getAttribute('data-slug');
-        console.log("Slug:", slug);
+     //   console.log("Slug:", slug);
         const textUrl = findBwTextUrl(slug);
-        console.log("Text URL:", textUrl);
+     //   console.log("Text URL:", textUrl);
         if (!textUrl) {
             link.style.display = 'none';
         } else {
@@ -16,13 +16,13 @@ document.addEventListener("DOMContentLoaded", function() {
 });
 
 function openBw(slug) {
-    console.log("Открывается TBW для:", slug);
+  //  console.log("Открывается TBW для:", slug);
     let textUrl = findBwTextUrl(slug);
     if (textUrl) {
-        console.log("Ссылка найдена:", textUrl);
+     //   console.log("Ссылка найдена:", textUrl);
         window.open(textUrl, "_blank");
     } else {
-        console.log("Ссылка не найдена");
+            console.log("Ссылка не найдена", slug, textUrl);
     }
 }
 

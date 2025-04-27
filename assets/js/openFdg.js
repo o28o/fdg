@@ -17,7 +17,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
     // Используем значение из параметра "s" или "keyword"
     let searchValue = sParam && sParam.trim() !== "" ? sParam : keyword;
-    console.log("searchValue:", searchValue);
+ //  console.log("searchValue:", searchValue);
 
     // Получаем базовый URL в зависимости от наличия подстроки "/ru" в текущем URL или в значении localStorage.siteLanguage
     let baseUrl;
@@ -60,10 +60,10 @@ fdgLinks.forEach(link => {
 });
 
 function openFdg(slug) {
-    console.log("Открывается Fdg для:", slug);
+ //   console.log("Открывается Fdg для:", slug);
     let textUrl = findFdgTextUrl(slug);
     if (textUrl) {
-        console.log("Ссылка найдена:", textUrl);
+     //   console.log("Ссылка найдена:", textUrl);
         window.open(textUrl, "_blank");
     } else {
         console.log("Ссылка не найдена");
@@ -82,7 +82,7 @@ if (scUrl.endsWith('#')) {
     scUrl = scUrl.replace(/#$/, '');
 }
      
-console.log("Ссылка эта? ", scUrl);
+// console.log("Ссылка эта? ", scUrl);
     return isSuttaCentral ? url : scUrl;
 }
 

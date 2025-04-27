@@ -94,37 +94,37 @@ if (themeButton) {
 
 //scroll by s params
 document.addEventListener("DOMContentLoaded", function() {
-    console.log("DOMContentLoaded event fired");
+ //   console.log("DOMContentLoaded event fired");
     let params = new URLSearchParams(document.location.search);
     let finder = params.get("s");
     let query = params.get("q");
     let url = document.location.href;
 
     if (finder && finder.trim() !== "" && query && url.indexOf("#") === -1) {
-        console.log("Parameters 's', 'q', and no anchor found in URL");
+    //    console.log("Parameters 's', 'q', and no anchor found in URL");
 
         let regex = new RegExp(finder, 'gi');
         let match = document.body.innerText.match(regex);
-        console.log("Match:", match);
+    //    console.log("Match:", match);
 
         if (match && match.length > 0) {
             let firstMatchElement = document.querySelector(`*:contains(${match[0]})`);
-            console.log("First match element:", firstMatchElement);
+      //      console.log("First match element:", firstMatchElement);
 
             if (firstMatchElement) {
                 firstMatchElement.scrollIntoView({
                     behavior: "smooth",
                     block: "start"
                 });
-                console.log("Smooth scroll to first match element");
+          //      console.log("Smooth scroll to first match element");
             } else {
-                console.log("First match element not found");
+        //        console.log("First match element not found");
             }
         } else {
-            console.log("No match found");
+    //        console.log("No match found");
         }
     } else {
-        console.log("Conditions not met: 's' parameter empty or missing, 'q' parameter empty or missing, or anchor found in URL");
+   //     console.log("Conditions not met: 's' parameter empty or missing, 'q' parameter empty or missing, or anchor found in URL");
     }
 });
 

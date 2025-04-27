@@ -76,7 +76,6 @@ $.ajax({
     }).done(function(data) {
       const trnsResp = data.split(" ");
       let translator = trnsResp[0];
-      console.log('inside', translator);
 
 //if (slug.match(/^mn([1-9]|1[0-9]|2[0-1])$/)) {
  
@@ -358,7 +357,6 @@ if (finder && finder.trim() !== "") {
     try {
       varData[segment] = varData[segment].replace(regex, match => `<b class="match finder">${match}</b>`);
     } catch (error) {
-      console.error("Ошибка при выделении совпадений в varData:", error);
     }
   }
 }
@@ -503,7 +501,7 @@ function findTextUrl(nikaya, subdivision, textnum) {
 }
 
 let textUrl = getTextUrl(slug);
-console.log("Ссылка на", slug + ":", textUrl);
+//console.log("Ссылка на", slug + ":", textUrl);
 if (textUrl) {
 scLink += `<a target="" href="${textUrl}">DPR</a>&nbsp;`;
 }
@@ -520,7 +518,7 @@ if ((translator === 'sujato') || (translator === 'brahmali')) {
 //<a href="/legacy.suttacentral.net/read/pi/${slug}.html">legacy.SC</a>&nbsp; <a target="" href="https://voice.suttacentral.net/scv/index.html?#/sutta?search=${slug}">Voice.SC</a>
       if (linksArray[0].length >= 4) {
         scLink += linksArray[0];
-            console.log("extralinks " + linksArray[0]);
+        //    console.log("extralinks " + linksArray[0]);
       } 
       scLink += "</p>"; 
 
@@ -686,11 +684,9 @@ if (document.location.search) {
 
  if (lang) {
     language = lang;
-    console.log("in the initializing " + lang);
     setLanguage(lang);
   } else if  (localStorage.paliToggleML) {
     	language = localStorage.paliToggleML; 
-		  console.log('read from ls ' + language);
 setLanguage(language);
   }
 } else {
@@ -845,7 +841,6 @@ function showRussian() {
   suttaArea.classList.remove('column-view'); // Отключаем двухколоночный режим
 }
 function showPali() {
-  console.log("showing pali ");
   suttaArea.classList.remove("hide-pali");
   suttaArea.classList.add("hide-english");
   suttaArea.classList.add("hide-russian");
@@ -889,7 +884,6 @@ if (
   slug === 'pli-tv-bi-vb-as1-7'
 ) {
   const slugParts = slug.match(/^([a-z]+)-([a-z]+)-([a-z]+)-([a-z]+)-([a-z]+)*(\d*)/);
-  console.log('as case');
   const fixforbivb = slug.replace(/(\d+)-(\d+)/g, '');
   const bookWithoutNumber = fixforbivb.replace(/(\d+)/g, '');
   const fixforbivb2 = slug.replace(/-([a-z]+)\d+/g, '');

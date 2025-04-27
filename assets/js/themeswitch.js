@@ -3,8 +3,7 @@ function switchIcon(x) {
   
   var imgElement = document.querySelector(".changesvg"); 
    if (localStorage.theme === "dark") {
-     console.log(localStorage.theme);
-  
+
 
   
         x.classList.remove("fa-moon");
@@ -15,7 +14,6 @@ function switchIcon(x) {
   imgElement.src = "/assets/svg/sun.svg";
   }
    } else if (localStorage.theme === "light") {
-     console.log(localStorage.theme);
 
     x.classList.remove("fa-circle-half-stroke");
   x.classList.remove("fa-sun");
@@ -26,7 +24,6 @@ function switchIcon(x) {
   }
 
    } else if (localStorage.theme === "auto") {
-     console.log(localStorage.theme);
 
         x.classList.remove("fa-circle-half-stroke");
    x.classList.remove("fa-moon");
@@ -157,7 +154,7 @@ updateDropdownMenus();
 toggleThemeManually();
 
 var themeValue = localStorage.theme;
-console.log("Значение theme:", themeValue);
+//console.log("Значение theme:", themeValue);
 
 
 

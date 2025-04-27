@@ -163,13 +163,13 @@ async function fetchVariant() {
       if (response.ok) {
         return await response.json();
       }
-      console.log(`note: no var found at ${path}`);
+   //   console.log(`note: no var found at ${path}`);
     } catch (error) {
-      console.log(`note: error fetching var ${path}`);
+  //    console.log(`note: error fetching var ${path}`);
     }
   }
 
-  console.log('note: no var found in any path');
+//  console.log('note: no var found in any path');
   return {}; // Если все пути недоступны
 }
 
@@ -227,20 +227,20 @@ if (finder && finder.trim() !== "") {
   try {
     paliData[segment] = paliData[segment]?.replace(regex, match => `<b class='match finder'>${match}</b>`);
   } catch (error) {
-    console.error("Ошибка при выделении совпадений в paliData:", error);
+ //   console.log("Ошибка при выделении совпадений в paliData:", info);
   }
 
   try {
     transData[segment] = transData[segment]?.replace(regex, match => `<b class="match finder">${match}</b>`);
   } catch (error) {
-    console.error("Ошибка при выделении совпадений в transData:", error);
+  //  console.log("Ошибка при выделении совпадений в transData:", info);
   }
 
   if (varData[segment] !== undefined) {  
     try {
       varData[segment] = varData[segment].replace(regex, match => `<b class="match finder">${match}</b>`);
     } catch (error) {
-      console.error("Ошибка при выделении совпадений в varData:", error);
+      console.info("Ошибка при выделении совпадений в varData:", info);
     }
   }
 }
@@ -487,6 +487,30 @@ trn : ${trnpath}
 html: ${htmlpath}
 var : ${varpath}`);
 
+  // Проверяем, не было ли уже слишком много попыток
+  const redirectKey = `redirect_${slug}`;
+  const redirectCount = localStorage.getItem(redirectKey) || 0;
+  
+  if (redirectCount >= 3) {
+    
+    console.error('Превышено максимальное количество редиректов для slug:', slug);
+      // Обновление сообщения об ошибке на странице
+        suttaArea.innerHTML = `<p>Search for "${decodeURIComponent(slug)}" failed. Please try another slug.</p>
+              <div class="spinner-border" role="status">
+                <span class="visually-hidden">Loading...</span>
+                  </div>
+    <br><br>
+  <p>  Note: <br>
+More search options available from the main page.</p>`;
+    
+    localStorage.removeItem(redirectKey);
+    return;
+  }
+
+  // Увеличиваем счетчик и сохраняем
+  localStorage.setItem(redirectKey, parseInt(redirectCount) + 1);
+
+
 // Отправка запроса по адресу http://localhost:8080/ru/?q= с использованием значения slug
 var xhr = new XMLHttpRequest();
 xhr.open("GET", "/?q=" + encodeURIComponent(slug), true);
@@ -513,15 +537,6 @@ xhr.onreadystatechange = function() {
   }
 };
 
-
-  // Обновление сообщения об ошибке на странице
-        suttaArea.innerHTML = `<p>Searching for "${decodeURIComponent(slug)}". Please wait.</p>
-              <div class="spinner-border" role="status">
-                <span class="visually-hidden">Loading...</span>
-                  </div>
-    <br><br>
-  <p>  Note: <br>
-More search options available from the main page.</p>`;
 });
 }
 
@@ -534,7 +549,6 @@ if (document.location.search) {
   buildSutta(slug);
 if (lang) {
     language = lang;
-    console.log("in the initializing " + lang);
     setLanguage(lang);
   } else if  (localStorage.paliToggle) {
     	language = localStorage.paliToggle; 
@@ -649,7 +663,6 @@ function setLanguage(language) {
 }
 
 function showPaliEnglish() {
-  console.log("showing pali eng");
   suttaArea.classList.remove("hide-pali");
   suttaArea.classList.remove("hide-english");
   suttaArea.classList.remove("hide-russian");
@@ -662,14 +675,12 @@ function showPaliEnglish() {
   }
 }
 function showEnglish() {
-  console.log("showing eng");
   suttaArea.classList.add("hide-pali");
   suttaArea.classList.remove("hide-english");
   suttaArea.classList.remove("hide-russian");
   suttaArea.classList.remove('column-view'); // Отключаем двухколоночный режим
 }
 function showPali() {
-  console.log("showing pali");
   suttaArea.classList.add("hide-english");
     suttaArea.classList.remove("hide-pali");
       suttaArea.classList.add("hide-russian");

@@ -70,7 +70,7 @@ function buildSutta(slug) {
   let html = `<div class="button-area"><button id="language-button" class="hide-button">Pāḷi Рус</button></div>`;
   
   const slugReady = parseSlug(slug);
-  console.log("slugReady is " + slugReady + " slug is " + slug); 
+ // console.log("slugReady is " + slugReady + " slug is " + slug); 
 
 
 
@@ -79,7 +79,6 @@ $.ajax({
     }).done(function(data) {
       const trnsResp = data.split(" ");
       let translator = trnsResp[0];
-      console.log('inside', translator);
 
 //if (slug.match(/^mn([1-9]|1[0-9]|2[0-1])$/)) {
  
@@ -127,23 +126,18 @@ if (slug.includes("mn"))  {
  var trnpath = rustrnpath; 
  let language = "pli-rus";
 // scLink += ifRus; 
-  console.log(trnpath);
 } else if (slug.includes("sn")) { 
   var trnpath = rustrnpath; 
-  console.log(trnpath);
 //  scLink += ifRus; 
 } else if (slug.includes("an")) { 
   var trnpath = rustrnpath; 
-  console.log(trnpath);
 //  scLink += ifRus; 
 } else if (slug.includes("dn")) { 
   var trnpath = rustrnpath; 
-  console.log(trnpath);
 //  scLink += ifRus; 
 } else if (knranges.indexOf(slug) !== -1) { 
   var trnpath = rustrnpath; 
  // scLink += ifRus; 
-  console.log(trnpath);
 } else if (slug.match(/ja/)) {
   let language = "pli";
   let slugNumber = parseInt(slug.replace(/\D/g, ''), 10); // Извлекаем число из slug
@@ -162,6 +156,7 @@ if (slug.includes("mn"))  {
 } else if (slug.match(/bu-pm|bi-pm/)) {
     //let translator = "thanissaro+o";
     let translator = "o";
+//  console.log(trnpath);
 	
 	
  if (( script === "devanagari" ) || ( savedScript === "Devanagari" ) ) {
@@ -177,7 +172,7 @@ var rootpath = `${Sccopy}/sc-data/sc_bilara_data/root/pli/ms/${texttype}/${slug}
  	
     var trnpath = `/assets/texts/${texttype}/${slug}_translation-${pathLang}-${translator}.json`;
     var htmlpath = `/assets/texts/${texttype}/${slug}_html.json`;
-    console.log(rootpath, trnpath, htmlpath);
+  //  console.log(rootpath, trnpath, htmlpath);
 } else if ( texttype === "vinaya" ) {
 	
 if (vinayaranges.indexOf(slug) !== -1) { 
@@ -262,15 +257,15 @@ async function fetchVariant() {
         const data = await response.json();
         combinedData = { ...combinedData, ...data }; // Объединяем данные
       } else {
-        console.log(`note: no var found at ${path}`);
+    //    console.log(`note: no var found at ${path}`);
       }
     } catch (error) {
-      console.log(`note: error fetching var ${path}`);
+    //  console.log(`note: error fetching var ${path}`);
     }
   }
 
   if (Object.keys(combinedData).length === 0) {
-    console.log('note: no var found in any path');
+  //  console.log('note: no var found in any path');
   }
 
   return combinedData; // Возвращаем объединенные данные
@@ -279,8 +274,8 @@ async function fetchVariant() {
 // Использование
 const varResponse = fetchVariant();
     
-  console.log(trnpath);
-  console.log(rustrnpath);
+//  console.log(trnpath);
+//  console.log(rustrnpath);
 Promise.all([rootResponse, translationResponse, htmlResponse, varResponse]).then(responses => {
     const [paliData, transData, htmlData, varData] = responses;
     Object.keys(htmlData).forEach(segment => {
@@ -335,20 +330,20 @@ if (finder && finder.trim() !== "") {
   try {
     paliData[segment] = paliData[segment]?.replace(regex, match => `<b class='match finder'>${match}</b>`);
   } catch (error) {
-    console.error("Ошибка при выделении совпадений в paliData:", error);
+  //  console.log("Ошибка при выделении совпадений в paliData:", info);
   }
 
   try {
     transData[segment] = transData[segment]?.replace(regex, match => `<b class="match finder">${match}</b>`);
   } catch (error) {
-    console.error("Ошибка при выделении совпадений в transData:", error);
+ //   console.log("Ошибка при выделении совпадений в transData:", info);
   }
 
   if (varData[segment] !== undefined) {  
     try {
       varData[segment] = varData[segment].replace(regex, match => `<b class="match finder">${match}</b>`);
     } catch (error) {
-      console.error("Ошибка при выделении совпадений в varData:", error);
+    //  console.log("Ошибка при выделении совпадений в varData:", info);
     }
   }
 }
@@ -467,7 +462,7 @@ function findTextUrl(nikaya, subdivision, textnum) {
 }
 
 let textUrl = getTextUrl(slug);
-console.log("Ссылка на", slug + ":", textUrl);
+//console.log("Ссылка на", slug + ":", textUrl);
 if (textUrl) {
 scLink += `<a target="" href="${textUrl}">DPR</a>&nbsp;`;
 }
@@ -490,7 +485,7 @@ if ((translator === 'sujato') || (translator === 'brahmali')) {
 //<a href="/legacy.suttacentral.net/read/pi/${slug}.html">legacy.SC</a>&nbsp; <a target="" href="https://voice.suttacentral.net/scv/index.html?#/sutta?search=${slug}">Voice.SC</a>
       if (linksArray[0].length >= 4) {
         scLink += linksArray[0];
-            console.log("extralinks " + linksArray[0]);
+          //  console.log("extralinks " + linksArray[0]);
       } 
       scLink = scLink;
       
@@ -545,7 +540,7 @@ nextName = nextName.replace(/[0-9.]/g, '');
       } else {
      var nextPrint = nextSlugPrint +' ' +nextName;
      }
-     console.log(nextPrint);
+   //  console.log(nextPrint);
          next.innerHTML = nextSlug
         ? `<a href="?q=${nextSlug}">${nextPrint}<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" id="body_1" width="15" height="11">
 
@@ -698,11 +693,9 @@ if (document.location.search) {
   
   if (lang) {
     language = lang;
-    console.log("in the initializing " + lang);
     setLanguage(lang);
   } else if  (localStorage.paliToggleRu) {
     	language = localStorage.paliToggleRu; 
-		  console.log('read from ls ' + language);
 setLanguage(language);
   } 
 } else {
@@ -817,7 +810,6 @@ function setLanguage(language) {
 }
 
 function showPaliEnglish() {
-  console.log("showing pali eng");
   suttaArea.classList.remove("hide-pali");
   suttaArea.classList.remove("hide-english");
   suttaArea.classList.remove("hide-russian");
@@ -832,14 +824,12 @@ function showPaliEnglish() {
   
 }
 function showEnglish() {
-  console.log("showing eng");
   suttaArea.classList.add("hide-pali");
   suttaArea.classList.remove("hide-english");
   suttaArea.classList.remove("hide-russian");
   suttaArea.classList.remove('column-view'); // Отключаем двухколоночный режим
 }
 function showPali() {
-  console.log("showing pali");
   suttaArea.classList.remove("hide-pali");
   suttaArea.classList.add("hide-english");
   suttaArea.classList.add("hide-russian");
@@ -884,7 +874,6 @@ if (
   slug === 'pli-tv-bi-vb-as1-7'
 ) {
   const slugParts = slug.match(/^([a-z]+)-([a-z]+)-([a-z]+)-([a-z]+)-([a-z]+)*(\d*)/);
-  console.log('as case');
   const fixforbivb = slug.replace(/(\d+)-(\d+)/g, '');
   const bookWithoutNumber = fixforbivb.replace(/(\d+)/g, '');
   const fixforbivb2 = slug.replace(/-([a-z]+)\d+/g, '');

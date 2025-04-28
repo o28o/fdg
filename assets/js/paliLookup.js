@@ -629,7 +629,7 @@ if (translation) {
     
     // Устанавливаем минимальную и максимальную высоту
     let minHeight = 100; // Минимальная высота popup
-    const maxHeight = window.innerHeight * 0.8; // Максимальная высота (80% окна)
+    const maxHeight = window.innerHeight * 0.95; 
     
    if (dictUrl === "standalonebw" || dictUrl === "standalonebwru") {
         minHeight = 100; // Минимальная высота для standalone

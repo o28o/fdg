@@ -40,7 +40,7 @@ $copyrightnote = 'Материалы сайта распространяются
 $poweredby = 'Powered by NI';
 $tooltippoweredby = 'Natural Intelligence, Естественный Интеллект, Dhamma Интеллект';
 
-$tooltiptitle = 'На Pāḷi, Русском, ไทย, සිංහල и Английском';
+$tooltiptitle = 'На Pāḷi, Русском, Английском, ไทย и සිංහල ';
 $title = 'Найдите Истину';
 $tooltippli = 'Поиск на Пали по-умолчанию. По Суттам an, sn, dn, mn. Ангутара Никаи, Саньютта Никаи, Маджжхима Никаи, Дигха Никаи';
 $radiopli = 'Pāḷi*';

@@ -202,13 +202,13 @@ function updateURL(params) {
 
                 <!-- Masthead Heading-->
 <div class="hideOnMobile">
-<h1 class="masthead-heading">
+<h1 class="masthead-heading mb-5">
     <div data-bs-toggle="tooltip" data-bs-placement="bottom" title="<?php echo $tooltiptitle;?>">
         <?php echo $title;?>
     </div>
 </h1>
 
- <!--Icon Divider    -->
+ <!--Icon Divider    
                 <div class="divider-custom divider-light">
                     <div class="divider-custom-line"></div>
                         <div class="lock example divider-custom-icon">
@@ -217,6 +217,7 @@ function updateURL(params) {
                       </div>
                     <div class="divider-custom-line"></div>
                 </div>
+                -->
 </div>
 
 <form method="GET" id="searchForm" action="" class="justify-content-center">

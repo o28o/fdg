@@ -1,50 +1,45 @@
-
 // Проверяем язык в localStorage
 const siteLanguage = localStorage.getItem('siteLanguage');
-const savedDict = (localStorage.getItem('selectedDict') || "dpdFull").toLowerCase();
-  // Устанавливаем правильный URL для словаря в зависимости от языка
+
+let savedDict = localStorage.getItem('selectedDict');
+
+if (savedDict) {
+    savedDict = savedDict.toLowerCase();
+} else if (window.location.pathname.includes('/d/')) {
+    savedDict = "dpdFull".toLowerCase();
+} else if (window.location.pathname.includes('/r/') || window.location.pathname.includes('/ml/') || window.location.pathname.includes('/ru/')) {
+    savedDict = "standalonebwru".toLowerCase();
+} else {
+    savedDict = "standalonebw".toLowerCase();
+}
+        
+// Устанавливаем правильный URL для словаря в зависимости от языка
 let dhammaGift;
 let dgParams;
 let dictUrl;
 
-
-/*
-// Условие для проверки языка сайта и URL
-if (window.location.href.includes('/ru/') || window.location.href.includes('ml.html')) {
- //dhammaGift = 'https://dhamma.gift/ru/';
- dhammaGift = '/ru/';
-  //dictUrl = 'http://localhost:8080/ru/';
- dictUrl = 'https://dict.dhamma.gift/ru/search_html?q=';
-  //dictUrl = 'https://dpdict.net/ru/search_html?q=';
-} else {
-//   dhammaGift = 'https://dhamma.gift/';
-   dhammaGift = '/';
-  //dictUrl = 'http://localhost:8080/';
-  dictUrl = 'https://dict.dhamma.gift/search_html?q=';
-//  dictUrl = 'https://dpdict.net/search_html?q=';
-}
-
-if (window.location.href.includes('localhost') || window.location.href.includes('127.0.0.1')) {
-  dictUrl = 'dttp://app.dicttango/WordLookup?word=';
-}
-*/
-
 if (window.location.href.includes('localhost') || window.location.href.includes('127.0.0.1')) {
     dhammaGift = '';
-    dictUrl = "http://localhost:8880";
-} else {
+ //  dictUrl = "http://localhost:8880";
+  dictUrl = "https://dict.dhamma.gift";
+//dictUrl = "https://dpdict.net";
+} else if (savedDict.includes("compact")) {
     dhammaGift = 'https://dhamma.gift';
-dictUrl = "https://dict.dhamma.gift";
+    dictUrl = "https://dict.dhamma.gift";
+    //dictUrl = "https://dpdict.net";
+  }
+  else {
+    dhammaGift = 'https://dhamma.gift';
+    dictUrl = "https://dict.dhamma.gift";
 }
 
-  if (window.location.href.includes('/ru') || (localStorage.siteLanguage && localStorage.siteLanguage === 'ru')) {
+if (window.location.href.includes('/r/') || (localStorage.siteLanguage && localStorage.siteLanguage === 'ru')) {
    dhammaGift += '/ru';
 }
- dhammaGift += '/?q=';
+dhammaGift += '/?q=';
 
-//добавить сюда логику для загрузки предпочтений поиска сохраненных на главной.
+// Добавляем сюда логику для загрузки предпочтений поиска, сохраненных на главной.
 dgParams = '&p=-kn';
-
 
 if (savedDict.includes("dpd")) {
   if (savedDict.includes("ru")) {
@@ -58,10 +53,180 @@ if (savedDict.includes("dpd")) {
   }
 } else if (savedDict === "dicttango") {
   dictUrl = "dttp://app.dicttango/WordLookup?word=";
+} else if (savedDict === "mdict") {
+  dictUrl = "mdict://mdict.cn/search?text=";
+}
+else if (savedDict === "standalonebwru") {
+  dictUrl = "standalonebwru"; // Используем standalone-словарь
+} else if (savedDict === "standalonebw") {
+  dictUrl = "standalonebw"; // Используем standalone-словарь
 } else {
    dictUrl = "searchonly";
 }
 
+// Функция для отложенной загрузки скриптов standalone-словаря
+// Cache for tracking loaded scripts
+const scriptCache = new Map();
+
+// Polyfill for requestIdleCallback
+const requestIdleCallback = window.requestIdleCallback || 
+    function(cb) { return setTimeout(() => { cb({ didTimeout: false }); }, 0); };
+
+function lazyLoadStandaloneScripts(lang = 'en') {
+    return new Promise((resolve, reject) => {
+        const loadScripts = () => {
+            const commonScripts = [
+                '/assets/js/standalone-dpd/dpd_i2h.js',
+                '/assets/js/standalone-dpd/dpd_deconstructor.js'
+            ];
+
+            const langSpecific = lang === 'ru' 
+                ? '/assets/js/standalone-dpd/ru/dpd_ebts.js'
+                : '/assets/js/standalone-dpd/dpd_ebts.js';
+
+            const scripts = [...commonScripts, langSpecific];
+            const scriptsToLoad = scripts.filter(src => {
+                return !document.querySelector(`script[src="${src}"]`) && !scriptCache.has(src);
+            });
+
+            if (scriptsToLoad.length === 0) {
+                resolve();
+                return;
+            }
+
+            // Show loading indicator - more robust version
+            const loadingId = 'dict-loading-' + Date.now();
+            const loadingEl = document.createElement('div');
+            loadingEl.id = loadingId;
+            Object.assign(loadingEl.style, {
+                position: 'fixed',
+                bottom: '20px',
+                right: '20px',
+                padding: '10px',
+                background: 'rgba(0,0,0,0.7)',
+                color: 'white',
+                borderRadius: '5px',
+                zIndex: '10000',
+                fontSize: '14px',
+                boxShadow: '0 2px 5px rgba(0,0,0,0.3)'
+            });
+            loadingEl.textContent = 'Loading dictionary...';
+            
+            // Ensure loading message is visible in Safari
+            document.body.appendChild(loadingEl);
+            setTimeout(() => loadingEl.style.opacity = '1', 10);
+
+            // Load all scripts with better Safari support
+            const loadPromises = scriptsToLoad.map(src => {
+                return new Promise((scriptResolve) => {
+                    if (scriptCache.has(src)) {
+                        return scriptResolve();
+                    }
+
+                    const script = document.createElement('script');
+                    script.src = src;
+                    script.defer = true;
+                    
+                    // More reliable loading for Safari
+                    script.onload = script.onreadystatechange = function() {
+                        if (!this.readyState || this.readyState === 'loaded' || this.readyState === 'complete') {
+                            scriptCache.set(src, true);
+                            scriptResolve();
+                        }
+                    };
+                    
+                    script.onerror = () => {
+                        console.warn(`Failed to load script: ${src}`);
+                        scriptResolve(); // Resolve even if failed to prevent blocking
+                    };
+
+                    // Safari sometimes needs this
+                    script.crossOrigin = 'anonymous';
+                    document.head.appendChild(script);
+                });
+            });
+
+            // Set timeout for all loads
+            const timeoutPromise = new Promise((_, timeoutReject) => {
+                setTimeout(() => timeoutReject(new Error('Script loading timeout')), 10000); // Longer timeout for Safari
+            });
+
+            Promise.race([
+                Promise.all(loadPromises),
+                timeoutPromise
+            ])
+            .then(() => {
+                const el = document.getElementById(loadingId);
+                if (el) {
+                    el.style.opacity = '0';
+                    setTimeout(() => el.remove(), 300);
+                }
+                resolve();
+            })
+            .catch(err => {
+                console.warn('Dictionary loading warning:', err);
+                const el = document.getElementById(loadingId);
+                if (el) {
+                    el.textContent = 'Dictionary load failed';
+                    el.style.background = 'rgba(255,0,0,0.7)';
+                    setTimeout(() => el.remove(), 2000);
+                }
+                resolve(); // Still resolve to allow fallback behavior
+            });
+        };
+
+        // Use requestIdleCallback with fallback
+        requestIdleCallback(loadScripts, { timeout: 1000 });
+    });
+}
+
+// Инициализация после загрузки страницы
+document.addEventListener('DOMContentLoaded', function() {
+    // Минимальная задержка перед началом загрузки
+    setTimeout(() => {
+        if (savedDict === "standalonebw") {
+            requestIdleCallback(() => {
+                lazyLoadStandaloneScripts()
+                    .then(() => console.log('Standalone eng scripts lazy-loaded'))
+                    .catch(err => console.warn('Lazy loading eng scripts warning:', err));
+            }, { timeout: 2000 });
+        } 
+        else if (savedDict === "standalonebwru") {
+            requestIdleCallback(() => {
+                lazyLoadStandaloneScripts("ru")
+                    .then(() => console.log('Standalone rus scripts lazy-loaded'))
+                    .catch(err => console.warn('Lazy loading rus scripts warning:', err));
+            }, { timeout: 2000 });
+        }
+    }, 1000); // Небольшая задержка для гарантированного рендеринга
+});
+
+function lookupWordInStandaloneDict(word) {
+    let out = "";
+   // console.log("---");
+ //   console.log("before: ", word);
+    word = word.replace(/[’”'"]/g, "").replace(/ṁ/g, "ṃ");
+   // console.log("after: ", word);
+
+    if (word in dpd_i2h) {
+        out += "<strong>" + word + '</strong><br><ul style="line-height: 1em; padding-left: 15px;">';
+        for (const headword of dpd_i2h[word]) {
+            if (headword in dpd_ebts) {
+                out += '<li>' + headword + '. ' + dpd_ebts[headword] + '</li>';
+            }
+        }
+        out += "</ul>";
+    }
+
+    if (word in dpd_deconstructor) {
+        out += "<strong>" + word + '</strong><br><ul style="line-height: 1em; padding-left: 15px;">';
+        out += "<li>" + dpd_deconstructor[word] + "</li>";
+    }
+
+    out += "</ul>";
+
+    return out.replace(/ṃ/g, "ṁ");
+}
 
 
 function clearParams() {
@@ -71,196 +236,256 @@ function clearParams() {
 
 // Создание элементов для Popup с возможностью изменения размера и перемещения
 function createPopup() {
-  const overlay = document.createElement('div');
-  overlay.classList.add('overlay');
+    const overlay = document.createElement('div');
+    overlay.classList.add('overlay');
 
-  const popup = document.createElement('div');
-  popup.classList.add('popup');
-  popup.style.position = 'fixed';
-  popup.style.maxWidth = '600px';
+    const popup = document.createElement('div');
+    popup.classList.add('popup');
+    popup.style.position = 'fixed';
+    popup.style.maxWidth = '600px';
+    popup.style.maxHeight = '600px';
+    popup.style.overflow = 'hidden'; // Важно для корректного ресайза
 
-  
+    // Проверка параметров окна браузера
+    const currentWindowWidth = window.innerWidth;
+    const currentWindowHeight = window.innerHeight;
 
-  // Проверка параметров окна браузера
-  const currentWindowWidth = window.innerWidth;
-  const currentWindowHeight = window.innerHeight;
+    const savedWindowWidth = localStorage.getItem('windowWidth');
+    const savedWindowHeight = localStorage.getItem('windowHeight');
 
-  const savedWindowWidth = localStorage.getItem('windowWidth');
-  const savedWindowHeight = localStorage.getItem('windowHeight');
+    // Если размеры окна изменились, очищаем сохраненные данные popup
+    if (
+        savedWindowWidth &&
+        savedWindowHeight &&
+        (parseInt(savedWindowWidth, 10) !== currentWindowWidth ||
+            parseInt(savedWindowHeight, 10) !== currentWindowHeight)
+    ) {
+        clearParams();
+    }
 
-  // Если размеры окна изменились, очищаем сохраненные данные popup
-  if (
-    savedWindowWidth &&
-    savedWindowHeight &&
-    (parseInt(savedWindowWidth, 10) !== currentWindowWidth ||
-      parseInt(savedWindowHeight, 10) !== currentWindowHeight)
-  ) {
-clearParams();
-  }
+    // Сохраняем текущие размеры окна
+    localStorage.setItem('windowWidth', currentWindowWidth);
+    localStorage.setItem('windowHeight', currentWindowHeight);
 
-  // Сохраняем текущие размеры окна
-  localStorage.setItem('windowWidth', currentWindowWidth);
-  localStorage.setItem('windowHeight', currentWindowHeight);
+    // Устанавливаем сохранённые размеры и позицию, если они есть
+    const savedWidth = localStorage.getItem('popupWidth');
+    const savedHeight = localStorage.getItem('popupHeight');
+    const savedTop = localStorage.getItem('popupTop');
+    const savedLeft = localStorage.getItem('popupLeft');
 
-  // Устанавливаем сохранённые размеры и позицию, если они есть
-  
+    if (savedWidth) popup.style.width = savedWidth;
+    if (savedHeight) popup.style.height = savedHeight;
+    if (savedTop) popup.style.top = savedTop;
+    if (savedLeft) {
+        popup.style.left = savedLeft;
+    }
 
-  
-  const savedWidth = localStorage.getItem('popupWidth');
-  const savedHeight = localStorage.getItem('popupHeight');
-  const savedTop = localStorage.getItem('popupTop');
-  const savedLeft = localStorage.getItem('popupLeft');
- 
-  
-console.log('loaded: ' + savedTop +  'and ' + savedLeft);
+    const closeBtn = document.createElement('button');
+    closeBtn.classList.add('close-btn');
+    closeBtn.innerHTML = '<img src="/assets/svg/xmark.svg" class=""></img>';
 
-  if (savedWidth) popup.style.width = savedWidth;
-  if (savedHeight) popup.style.height = savedHeight;
-  if (savedTop) popup.style.top = savedTop;
-  if (savedLeft) 
-  {
-    popup.style.left = savedLeft;
-  } 
-  
-  const closeBtn = document.createElement('button');
-  closeBtn.classList.add('close-btn');
-  closeBtn.innerHTML = '<img src="/assets/svg/xmark.svg" class=""></img>';
+    // Создаем кнопку "Search with dhamma.gift"
+    const openBtn = document.createElement('a');
+    openBtn.classList.add('open-btn');
+    openBtn.style.position = 'absolute';
+    openBtn.style.top = '10px';
+    openBtn.style.right = '45px';
+    openBtn.style.border = 'none';
+  //  openBtn.style.background = '#2D3E50';
+ //   openBtn.style.color = 'white';
+ openBtn.style.background = 'rgba(45, 62, 80, 0.6)'; // Прозрачность 80%
+openBtn.style.color = 'rgba(255, 255, 255, 0.8)'; // Белый с небольшим затемнением
+    openBtn.style.cursor = 'pointer';
+    openBtn.style.width = '30px';
+    openBtn.style.height = '30px';
+    openBtn.style.borderRadius = '50%';
+    openBtn.style.display = 'flex';
+    openBtn.style.alignItems = 'center';
+    openBtn.style.justifyContent = 'center';
+    openBtn.style.textDecoration = 'none';
+    openBtn.target = '_blank';
 
-// Создаем кнопку "Search with dhamma.gift"
-const openBtn = document.createElement('a');
-openBtn.classList.add('open-btn');
-openBtn.style.position = 'absolute';
-openBtn.style.top = '10px';
-openBtn.style.right = '45px'; // Располагаем справа от кнопки закрытия
-openBtn.style.border = 'none';
-openBtn.style.background = '#2D3E50';
-openBtn.style.color = 'white';
-openBtn.style.cursor = 'pointer';
-openBtn.style.width = '30px';
-openBtn.style.height = '30px';
-openBtn.style.borderRadius = '50%';
-openBtn.style.display = 'flex';
-openBtn.style.alignItems = 'center';
-openBtn.style.justifyContent = 'center';
-openBtn.style.textDecoration = 'none';
-openBtn.target = '_blank'; // Открывать ссылку в новой вкладке
+    // Иконка лупы
+    openBtn.innerHTML = `
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="16" height="16" fill="white" style="transform: scaleX(-1);">
+            <path d="M505 442.7l-99.7-99.7c28.4-35.3 45.7-79.8 45.7-128C451 98.8 352.2 0 224 0S-3 98.8-3 224s98.8 224 224 224c48.2 0 92.7-17.3 128-45.7l99.7 99.7c6.2 6.2 14.4 9.4 22.6 9.4s16.4-3.1 22.6-9.4c12.5-12.5 12.5-32.8 0-45.3zM224 384c-88.4 0-160-71.6-160-160S135.6 64 224 64s160 71.6 160 160-71.6 160-160 160z"/>
+        </svg>
+    `;
 
-// Иконка лупы (аналогичная иконке закрытия)
-openBtn.innerHTML = `
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="16" height="16" fill="white" style="transform: scaleX(-1);">
-        <path d="M505 442.7l-99.7-99.7c28.4-35.3 45.7-79.8 45.7-128C451 98.8 352.2 0 224 0S-3 98.8-3 224s98.8 224 224 224c48.2 0 92.7-17.3 128-45.7l99.7 99.7c6.2 6.2 14.4 9.4 22.6 9.4s16.4-3.1 22.6-9.4c12.5-12.5 12.5-32.8 0-45.3zM224 384c-88.4 0-160-71.6-160-160S135.6 64 224 64s160 71.6 160 160-71.6 160-160 160z"/>
-    </svg>
-`;
+    const iframe = document.createElement('iframe');
+    iframe.src = '';
+    iframe.style.width = '100%';
+    iframe.style.height = 'calc(100% - 16px)';
+    iframe.style.overflow = 'hidden';
 
+    // Добавляем заголовок для перетаскивания
+    const header = document.createElement('div');
+    header.classList.add('popup-header');
+    header.style.cursor = 'move';
+    header.style.height = '10px';
+    header.style.display = 'flex';
+    header.style.alignItems = 'center';
+    header.style.padding = '0 10px';
+    header.textContent = '';
 
-  const iframe = document.createElement('iframe');
-  iframe.src = '';
-  iframe.style.width = '100%';
-  iframe.style.height = 'calc(100%)'; // Оставляем место для заголовка
+    // Создаем треугольник для ресайза
+    const resizeHandle = document.createElement('div');
+    resizeHandle.classList.add('resize-handle');
+    resizeHandle.style.position = 'absolute';
+    resizeHandle.style.right = '0';
+    resizeHandle.style.bottom = '0';
+    resizeHandle.style.width = '20px';
+    resizeHandle.style.height = '20px';
+    resizeHandle.style.cursor = 'nwse-resize';
+    resizeHandle.style.zIndex = '10';
+    
+    // Создаем треугольник с помощью CSS
+    resizeHandle.innerHTML = `
+        <style>
+            .resize-handle::after {
+                content: "";
+                position: absolute;
+                right: 3px;
+                bottom: 3px;
+                width: 0;
+                height: 0;
+                border-style: solid;
+                border-width: 0 0 12px 12px;
+                border-color: transparent transparent #666 transparent;
+            }
+        </style>
+    `;
 
-  // Добавляем заголовок для перетаскивания
-  const header = document.createElement('div');
-  header.classList.add('popup-header');
-  header.style.cursor = 'move';
-  header.style.height = '10px';
-  header.style.display = 'flex';
-  header.style.alignItems = 'center';
-  header.style.padding = '0 10px';
-  header.textContent = '';
+    popup.appendChild(header);
+    popup.appendChild(openBtn);
+    popup.appendChild(closeBtn);
+    popup.appendChild(iframe);
+    popup.appendChild(resizeHandle);
 
-  popup.appendChild(header);
-  popup.appendChild(openBtn);
-  popup.appendChild(closeBtn);
-  popup.appendChild(iframe);
+    // Добавляем popup и overlay на страницу
+    document.body.appendChild(overlay);
+    document.body.appendChild(popup);
 
-  // Добавляем popup и overlay на страницу
-  document.body.appendChild(overlay);
-  document.body.appendChild(popup);
+    // Функция для сохранения позиции и размеров
+    function savePopupState() {
+        localStorage.setItem('popupWidth', popup.style.width);
+        localStorage.setItem('popupHeight', popup.style.height);
+        localStorage.setItem('popupTop', popup.style.top);
+        localStorage.setItem('popupLeft', popup.style.left);
+      //  console.log('savedstates');
+    }
 
-  // Функция для сохранения позиции и размеров
-  function savePopupState() {
-    localStorage.setItem('popupWidth', popup.style.width);
-    localStorage.setItem('popupHeight', popup.style.height);
-    localStorage.setItem('popupTop', popup.style.top);
-    localStorage.setItem('popupLeft', popup.style.left);
-    console.log('savedstates');
-  }
-
-  // Перетаскивание окна
-  let isDragging = false;
-  let startX, startY, initialLeft, initialTop;
-let isFirstDrag = localStorage.getItem('isFirstDrag') === 'false' ? false : true;
+    // Перетаскивание окна
+    let isDragging = false;
+    let startX, startY, initialLeft, initialTop;
+    let isFirstDrag = localStorage.getItem('isFirstDrag') === 'false' ? false : true;
 
     if (isFirstDrag) {
-      popup.style.top = '50%';
-  popup.style.left = '50%';
-  popup.style.width = '80%';
-  popup.style.maxWidth = '600px';
-  popup.style.height = '80%';
-  popup.style.transform = 'translate(-50%, -50%)';
-}
-
-  // Обработчик нажатия для мыши (десктоп)
-  function startDrag(e) {
-    isDragging = true;
-    
-      // Добавить этот блок для первого перемещения
-    if (isFirstDrag) {
-      const rect = popup.getBoundingClientRect();
-      popup.style.transform = 'none';  // убираем transform, который центрирует окно
-      popup.style.top = rect.top + 'px';
-      popup.style.left = rect.left + 'px';
-      isFirstDrag = false;
-    // Сохраняем состояние isFirstDrag в sessionStorage
-    localStorage.setItem('isFirstDrag', isFirstDrag);
-    }  
-   
-    
-    startX = e.clientX || e.touches[0].clientX; // Поддержка сенсорных устройств
-    startY = e.clientY || e.touches[0].clientY;
-    initialLeft = parseInt(popup.style.left || 0, 10);
-    initialTop = parseInt(popup.style.top || 0, 10);
-    e.preventDefault();
-  }
-
-  // Обработчик перемещения для мыши (десктоп)
-function moveDrag(e) {
-    if (isDragging) {
-      const deltaX = (e.clientX || e.touches[0].clientX) - startX;
-      const deltaY = (e.clientY || e.touches[0].clientY) - startY;
-      popup.style.left = `${initialLeft + deltaX}px`;
-      popup.style.top = `${initialTop + deltaY}px`;
+        popup.style.top = '50%';
+        popup.style.left = '50%';
+        popup.style.width = '80%';
+        popup.style.maxWidth = '600px';
+        popup.style.height = '80%';
+        popup.style.transform = 'translate(-50%, -50%)';
     }
-  }
 
-  // Обработчик окончания перетаскивания для мыши (десктоп)
-  function stopDrag() {
-    if (isDragging) {
-      isDragging = false;
-      savePopupState();
+    // Обработчик нажатия для мыши (десктоп)
+    function startDrag(e) {
+        isDragging = true;
+        
+        // Добавить этот блок для первого перемещения
+        if (isFirstDrag) {
+            const rect = popup.getBoundingClientRect();
+            popup.style.transform = 'none';  // убираем transform, который центрирует окно
+            popup.style.top = rect.top + 'px';
+            popup.style.left = rect.left + 'px';
+            isFirstDrag = false;
+            // Сохраняем состояние isFirstDrag в sessionStorage
+            localStorage.setItem('isFirstDrag', isFirstDrag);
+        }  
+        
+        startX = e.clientX || e.touches[0].clientX;
+        startY = e.clientY || e.touches[0].clientY;
+        initialLeft = parseInt(popup.style.left || 0, 10);
+        initialTop = parseInt(popup.style.top || 0, 10);
+        e.preventDefault();
     }
-  }
 
-  // Обработчики для перетаскивания на десктопе
-  header.addEventListener('mousedown', startDrag);
-  document.addEventListener('mousemove', moveDrag);
-  document.addEventListener('mouseup', stopDrag);
+    function moveDrag(e) {
+        if (isDragging) {
+            const deltaX = (e.clientX || e.touches[0].clientX) - startX;
+            const deltaY = (e.clientY || e.touches[0].clientY) - startY;
+            popup.style.left = `${initialLeft + deltaX}px`;
+            popup.style.top = `${initialTop + deltaY}px`;
+        }
+    }
 
-  // Обработчики для перетаскивания на мобильных устройствах
-  header.addEventListener('touchstart', startDrag);
-  document.addEventListener('touchmove', moveDrag);
-  document.addEventListener('touchend', stopDrag);
+    function stopDrag() {
+        if (isDragging) {
+            isDragging = false;
+            savePopupState();
+        }
+    }
 
-  // Изменение размеров окна
-  popup.style.resize = 'both';
-  popup.style.overflow = 'auto';
+    // Обработчики для перетаскивания
+    header.addEventListener('mousedown', startDrag);
+    document.addEventListener('mousemove', moveDrag);
+    document.addEventListener('mouseup', stopDrag);
+    header.addEventListener('touchstart', startDrag);
+    document.addEventListener('touchmove', moveDrag);
+    document.addEventListener('touchend', stopDrag);
 
-  const resizeObserver = new ResizeObserver(() => {
-    savePopupState();
-  });
-  resizeObserver.observe(popup);
+    // Реализация ресайза с помощью треугольника
+    let isResizing = false;
+    let startWidth, startHeight, startResizeX, startResizeY;
 
-  return { overlay, popup, closeBtn, iframe };
+    resizeHandle.addEventListener('mousedown', startResize);
+    resizeHandle.addEventListener('touchstart', startResize);
+
+    function startResize(e) {
+        isResizing = true;
+        startWidth = parseInt(document.defaultView.getComputedStyle(popup).width, 10);
+        startHeight = parseInt(document.defaultView.getComputedStyle(popup).height, 10);
+        startResizeX = e.clientX || e.touches[0].clientX;
+        startResizeY = e.clientY || e.touches[0].clientY;
+        
+        e.preventDefault();
+        e.stopPropagation();
+    }
+
+    function doResize(e) {
+        if (!isResizing) return;
+        
+        const currentX = e.clientX || e.touches[0].clientX;
+        const currentY = e.clientY || e.touches[0].clientY;
+        
+        const newWidth = startWidth + (currentX - startResizeX);
+        const newHeight = startHeight + (currentY - startResizeY);
+        
+        // Ограничения по минимальному и максимальному размеру
+        const minWidth = 200;
+        const minHeight = 150;
+        const maxWidth = window.innerWidth * 0.9;
+        const maxHeight = window.innerHeight * 0.9;
+        
+        popup.style.width = Math.max(minWidth, Math.min(newWidth, maxWidth)) + 'px';
+        popup.style.height = Math.max(minHeight, Math.min(newHeight, maxHeight)) + 'px';
+        
+        e.preventDefault();
+        e.stopPropagation();
+    }
+
+    function stopResize() {
+        isResizing = false;
+        savePopupState();
+    }
+
+    document.addEventListener('mousemove', doResize);
+    document.addEventListener('touchmove', doResize);
+    document.addEventListener('mouseup', stopResize);
+    document.addEventListener('touchend', stopResize);
+
+    return { overlay, popup, closeBtn, iframe };
 }
 
 // Вставка popup на страницу
@@ -284,16 +509,16 @@ overlay.addEventListener('click', () => {
   iframe.src = ''; // Очищаем iframe
 });
 
-console.log('lookup dict ', dictUrl, ' siteLanguage ', siteLanguage);
+// console.log('lookup dict ', dictUrl, ' siteLanguage ', siteLanguage);
 
 // Проверяем состояние в localStorage при загрузке страницы
 let dictionaryVisible = localStorage.getItem('dictionaryVisible') === null ? true : localStorage.getItem('dictionaryVisible') === 'true';
 
-const toggleBtn = document.querySelector('.toggle-dict-btn');
+const toggleBtn = document.querySelector('.toggle-dict-btn img');
 if (dictionaryVisible) {
-  toggleBtn.innerHTML = '<img src="/assets/svg/comment.svg"></img>';
+  toggleBtn.src = "/assets/svg/comment.svg";
 } else {
-  toggleBtn.innerHTML = '<img src="/assets/svg/comment-slash.svg"></img>';
+  toggleBtn.src = "/assets/svg/comment-slash.svg";
   clearParams();
 }
 
@@ -305,10 +530,10 @@ toggleBtn.addEventListener('click', () => {
   localStorage.setItem('dictionaryVisible', dictionaryVisible);
 
   if (dictionaryVisible) {
-    toggleBtn.innerHTML = '<img src="/assets/svg/comment.svg"></img>';
-  } else {
-    toggleBtn.innerHTML = '<img src="/assets/svg/comment-slash.svg"></img>';
-  }
+  toggleBtn.src = "/assets/svg/comment.svg";
+} else {
+  toggleBtn.src = "/assets/svg/comment-slash.svg";
+}
 });
 
     // Добавляем обработчик сочетания клавиш Alt + A (физическая клавиша)
@@ -321,28 +546,158 @@ toggleBtn.addEventListener('click', () => {
 
 // Перехватчик кликов по слову
 document.addEventListener('click', function(event) {
-    // Проверяем, что клик был по элементу с классом "pli-lang"
-
-
-if (event.target.closest('.pli-lang, .rus-lang, .eng-lang, [lang="pi"], [lang="en"], [lang="ru"]')) {  // Учитываем вложенные элементы
+    if (event.target.closest('.pli-lang, [lang="pi"]')) {
+   // if (event.target.closest('.pli-lang, .rus-lang, .eng-lang, [lang="pi"], [lang="en"], [lang="ru"]')) {
         const clickedWord = getClickedWordWithHTML(event.target, event.clientX, event.clientY);
-        
-                // Если клик был по ссылке <a>, ничего не делаем
-if (event.target.closest('a, button, input, textarea, select')) {
-    return;
-}
+
+        if (event.target.closest('a, button, input, textarea, select')) {
+            return;
+        }
 
         if (clickedWord) {
-            // Убираем кавычки или апострофы в начале слова
-            const cleanedWord = cleanWord(clickedWord);
-            console.log('Клик по слову:', cleanedWord);
+            let cleanedWord = cleanWord(clickedWord);
+        //    console.log('Клик по слову:', cleanedWord);
 
             if (dictionaryVisible) {
-//   use  /gd?search= for xompact mode
-//     const url = `${dictUrl}gd?search=${encodeURIComponent(cleanedWord)}`;
+                let translation = "";
+                
+ /*               
+        // Если есть необходимость в транслитерации, вызываем функцию
+        transliterateWord(cleanedWord)
+            .then(transliteratedText => {
+                // Вставляем транслитерированное слово в перевод
+                translation = transliteratedText;
+
+                // Далее, можно обновить отображение перевода или выполнить другие действия
+                console.log('Транслитерированное слово:', translation);
+                // Например, обновить элемент на странице с переводом:
+                // document.getElementById("translation-element").innerText = translation;
+            })
+            .catch(error => {
+                console.error('Ошибка при транслитерации:', error);
+            });
+    
+*/
+
+// Если выбран standalone-словарь
+if (dictUrl === "standalonebw" || dictUrl === "standalonebwru") {
+    translation = lookupWordInStandaloneDict(cleanedWord);
+} 
+else if (dictUrl.includes('dicttango') || dictUrl.includes('mdict')) {
+    // Создаем временную кнопку для открытия в приложении dictUrl.includes("dicttango") ||
+    const tempLink = document.createElement('a');
+    tempLink.href = 'javascript:void(0)';
+    tempLink.onclick = function() {
+        window.location.href = `${dictUrl}${encodeURIComponent(cleanedWord)}`;
+        return false;
+    };
+    
+    // Имитируем клик (для iOS это должно быть инициировано пользователем)
+    // На практике лучше показать реальную кнопку пользователю
+    tempLink.click();
+    
+    // В этом случае translation остается пустым, так как мы перенаправляем в приложение
+    translation = "";
+    
+    // Скрываем popup, так как он не нужен для этих словарей
+    popup.style.display = 'none';
+    overlay.style.display = 'none';
+}
+else {
+    // Иначе используем текущую логику с dictUrl
+    const url = `${dictUrl}${encodeURIComponent(cleanedWord)}`;
+    iframe.src = url;
+}
+
+
+                // Если перевод найден, отображаем его в iframe
+// Если перевод найден, отображаем его в iframe  
+if (translation) {
+    const isDarkMode = document.body.classList.contains('dark') || document.documentElement.getAttribute('data-theme') === 'dark';
+    const themeClass = isDarkMode ? 'dark' : '';
+    
+    // Создаем временный div для измерения высоты содержимого
+    const tempDiv = document.createElement('div');
+    tempDiv.style.position = 'absolute';
+    tempDiv.style.visibility = 'hidden';
+    tempDiv.style.width = 'calc(100% - 20px)'; // Ширина как у iframe (с учетом padding)
+    tempDiv.innerHTML = translation;
+    document.body.appendChild(tempDiv);
+    
+    // Получаем высоту содержимого
+    const contentHeight = tempDiv.offsetHeight;
+    document.body.removeChild(tempDiv);
+    
+    // Устанавливаем минимальную и максимальную высоту
+    const minHeight = 100; // Минимальная высота popup
+    const maxHeight = window.innerHeight * 0.8; // Максимальная высота (80% окна)
+    
+    // Вычисляем конечную высоту
+    let finalHeight = Math.min(Math.max(contentHeight + 20, minHeight), maxHeight);
+    
+    iframe.srcdoc = `  
+        <!DOCTYPE html>  
+        <html lang="en" class="${themeClass}">  
+        <head>  
+            <meta charset="UTF-8">  
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <style>  
+                body {  
+                    font-family: Arial, sans-serif;  
+                    padding: 10px;  
+                    margin: 0;
+                    overflow: hidden;
+                }  
+                body.dark {  
+                    background: #07021D !important;  
+                    color: #E1EAED !important;  
+                }  
+                strong {  
+                    font-size: 1.2em;  
+                }  
+                ul {  
+                    list-style-type: none;  
+                    padding-left: 0;  
+                }  
+                li {  
+                    margin-bottom: 10px;  
+                }  
+            </style>  
+        </head>  
+        <body class="${themeClass}">  
+            ${translation}  
+        </body>  
+        </html>  
+    `;
+    
+    // Устанавливаем высоту popup
+    popup.style.height = `${finalHeight}px`;
+    popup.style.display = 'block';  
+    overlay.style.display = 'block';
+    
+    // Добавляем обработчик для изменения размера после загрузки iframe
+    iframe.onload = function() {
+        try {
+            // Получаем высоту содержимого iframe
+            const iframeBody = iframe.contentDocument.body;
+            const scrollHeight = iframeBody.scrollHeight;
+            
+            // Корректируем высоту popup
+            const adjustedHeight = Math.min(Math.max(scrollHeight + 20, minHeight), maxHeight);
+            popup.style.height = `${adjustedHeight}px`;
+        } catch(e) {
+            console.error('Error adjusting iframe height:', e);
+        }
+    };
+}
+                // Обновляем ссылку в кнопке openBtn
+                const openBtn = document.querySelector('.open-btn');
+                const wordForSearch = cleanedWord.replace(/'ti/, ''); // Исправил на replace
+                openBtn.href = `${dhammaGift}${encodeURIComponent(wordForSearch)}${dgParams}`;
+
 
 function showSearchButton() {
-      
+      const wordForSearch = cleanedWord.replace(/'ti/, ''); // Исправил на replace
 // Создаем кнопку "Search with dhamma.gift"
 const searchBtn = document.createElement('a');
 searchBtn.href = `${dhammaGift}${encodeURIComponent(wordForSearch)}${dgParams}`;
@@ -384,53 +739,44 @@ searchBtn.addEventListener('click', () => {
         searchBtn.remove();
     }, 1500); // Удалить через 5 секунд
 
-   // Обработчик любого клика на документе
-    const handleAnyClick = () => {
-        newOpenBtn.remove(); // Удаляем кнопку при любом клике
-        document.removeEventListener('click', handleAnyClick); // Удаляем обработчик
-    };
-
-    // Добавляем обработчик клика на весь документ
-    document.addEventListener('click', handleAnyClick);
 }
 
-
-
-               const url = `${dictUrl}${encodeURIComponent(cleanedWord)}`;
-                   iframe.src = url;
-
-// Обновляем ссылку в кнопке openBtn
-const openBtn = document.querySelector('.open-btn');
-const wordForSearch = cleanedWord.replace(/'ti/, ''); // Исправил на replace
-openBtn.href = `${dhammaGift}${encodeURIComponent(wordForSearch)}${dgParams}`;
-
-if (dictUrl.includes('dicttango')) {
-    popup.style.display = 'none';
-    overlay.style.display = 'none';
-    showSearchButton();
-    } else if (dictUrl.includes('searchonly')) {
-    popup.style.display = 'none';
-    overlay.style.display = 'none';
-    showSearchButton();
-  }  else {
-    popup.style.display = 'block';
-    overlay.style.display = 'block';
-  //  savePopupState();
-}
-              
+                if (dictUrl.includes('dicttango') || dictUrl.includes('mdict')) {
+                    popup.style.display = 'none';
+                    overlay.style.display = 'none';
+                    showSearchButton();
+                } else if (dictUrl.includes('searchonly')) {
+                    popup.style.display = 'none';
+                    overlay.style.display = 'none';
+                    showSearchButton();
+                } else {
+                    popup.style.display = 'block';
+                    overlay.style.display = 'block';
+                }
             }
-            
         }
     }
 });
 
 function getClickedWordWithHTML(element, x, y) {
-    const range = document.caretRangeFromPoint(x, y);
+    let range;
+    
+    if (document.caretRangeFromPoint) {
+        range = document.caretRangeFromPoint(x, y); // Для Chrome, Edge
+    } else if (document.caretPositionFromPoint) {
+        const position = document.caretPositionFromPoint(x, y); // Для Firefox
+        if (position && position.offsetNode) {
+            range = document.createRange();
+            range.setStart(position.offsetNode, position.offset);
+            range.setEnd(position.offsetNode, position.offset); // Добавляем setEnd
+        }
+    }
+
     if (!range) return null;
 
     const parentElement = element.closest('.pli-lang, .rus-lang, .eng-lang, [lang="pi"], [lang="en"], [lang="ru"]');
     if (!parentElement) {
-        console.log('Родительский элемент с классом pli-lang не найден.');
+     //   console.log('Родительский элемент с классом pli-lang не найден.');
         return null;
     }
 
@@ -440,18 +786,18 @@ function getClickedWordWithHTML(element, x, y) {
     // Вычисляем смещение в тексте без учета HTML-тегов
     const globalOffset = calculateOffsetWithHTML(parentElement, range.startContainer, range.startOffset);
     if (globalOffset === -1) {
-        console.error('Не удалось вычислить глобальное смещение.');
+      //  console.error('Не удалось вычислить глобальное смещение.');
         return null;
     }
 
-    console.log('Смещение в полном тексте:', globalOffset);
+   // console.log('Смещение в полном тексте:', globalOffset);
 
     // Используем обновленное регулярное выражение для поиска слова
     const regex = /[^\s,;.–—!?()]+/g; // Регулярное выражение, игнорирующее пробелы и знаки препинания
     let match;
     while ((match = regex.exec(fullText)) !== null) {
         if (match.index <= globalOffset && regex.lastIndex >= globalOffset) {
-            console.log('Найденное слово:', match[0]);
+        //    console.log('Найденное слово:', match[0]);
             return match[0];
         }
     }
@@ -473,7 +819,7 @@ function calculateOffsetWithHTML(element, targetNode, targetOffset) {
         offset += node.textContent.length;
     }
 
-    console.log('Целевой узел не найден.');
+  //  console.log('Целевой узел не найден.');
     return -1; // Возвращаем ошибку, если узел не найден
 }
 
@@ -494,9 +840,9 @@ function getFullTextFromElement(element) {
 document.addEventListener('click', (event) => {
     const clickedWord = getClickedWordWithHTML(event.target, event.clientX, event.clientY);
     if (clickedWord) {
-        console.log('Слово по клику:', clickedWord);
+      //  console.log('Слово по клику:', clickedWord);
     } else {
-        console.log('Слово не определено');
+     //   console.log('Слово не определено');
     }
 });
 
@@ -511,3 +857,27 @@ function cleanWord(word) {
         .toLowerCase();
 }
 
+// Функция для транслитерации слова
+/*
+function transliterateWord(word) {
+    return new Promise((resolve, reject) => {
+        // Подготавливаем текст для передачи в URL (инкодируем пробелы и спецсимволы)
+        const encodedText = encodeURIComponent(word);
+
+        // Формируем URL для вызова PHP-скрипта
+        const url = `/scripts/api/transliterate.php?text=${encodedText}&source=autodetect&target=ISOPali`;
+
+        // Отправляем GET-запрос на сервер
+        fetch(url)
+            .then(response => response.json())  // Ожидаем, что сервер вернёт JSON
+            .then(data => {
+                // Извлекаем значение из поля 'converted' и возвращаем его
+                const transliteratedText = data.converted;
+                resolve(transliteratedText);
+            })
+            .catch(error => {
+                reject(error);
+            });
+    });
+}
+*/

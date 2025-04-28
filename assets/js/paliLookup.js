@@ -242,8 +242,8 @@ function createPopup() {
     const popup = document.createElement('div');
     popup.classList.add('popup');
     popup.style.position = 'fixed';
-    popup.style.maxWidth = '600px';
-    popup.style.maxHeight = '600px';
+    popup.style.maxWidth = '100%';
+    popup.style.maxHeight = '1200px';
     popup.style.overflow = 'hidden'; // Важно для корректного ресайза
 
     // Проверка параметров окна браузера
@@ -383,9 +383,8 @@ openBtn.style.color = 'rgba(255, 255, 255, 0.8)'; // Белый с неболь�
     if (isFirstDrag) {
         popup.style.top = '50%';
         popup.style.left = '50%';
-        popup.style.width = '80%';
-        popup.style.maxWidth = '600px';
-        popup.style.height = '80%';
+        popup.style.width = '749px';
+        popup.style.height = '600px';
         popup.style.transform = 'translate(-50%, -50%)';
     }
 
@@ -629,9 +628,15 @@ if (translation) {
     document.body.removeChild(tempDiv);
     
     // Устанавливаем минимальную и максимальную высоту
-    const minHeight = 100; // Минимальная высота popup
-    const maxHeight = window.innerHeight * 0.8; // Максимальная высота (80% окна)
+    let minHeight = 100; // Минимальная высота popup
+    const maxHeight = window.innerHeight * 0.95; 
     
+   if (dictUrl === "standalonebw" || dictUrl === "standalonebwru") {
+        minHeight = 100; // Минимальная высота для standalone
+    } else {
+        minHeight = 600; // Минимальная высота для full и других режимов
+    }
+
     // Вычисляем конечную высоту
     let finalHeight = Math.min(Math.max(contentHeight + 20, minHeight), maxHeight);
     

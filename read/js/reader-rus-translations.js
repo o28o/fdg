@@ -319,7 +319,7 @@ var fullUrlWithAnchor = window.location.href.split('#')[0] + '#' + anchor;
 if (localStorage.getItem("removePunct") === "true" && paliData[segment] !== undefined) {    
   paliData[segment] = paliData[segment].replace(/[-—–]/g, ' ');  
     paliData[segment] = paliData[segment].replace(/[:;“”‘’,"']/g, '');  
-    paliData[segment] = paliData[segment].replace(/[.?!]/g, ' |'); 
+    paliData[segment] = paliData[segment].replace(/[.?!]/g, ' | '); 
     
     //।   ॥  
 }

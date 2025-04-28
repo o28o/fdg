@@ -317,7 +317,7 @@ if (finder && finder.trim() !== "") {
 if (localStorage.getItem("removePunct") === "true" && paliData[segment] !== undefined) {
     paliData[segment] = paliData[segment].replace(/[-—–]/g, ' ');  
     paliData[segment] = paliData[segment].replace(/[:;“”‘’,"']/g, '');  
-    paliData[segment] = paliData[segment].replace(/[.?!]/g, ' |'); 
+    paliData[segment] = paliData[segment].replace(/[.?!]/g, ' | '); 
     
     //।   ॥  
 }

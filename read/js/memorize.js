@@ -279,7 +279,7 @@ if (localStorage.getItem("removePunct") === "true" && paliData[segment] !== unde
   
     paliData[segment] = paliData[segment].replace(/[-—–]/g, ' ');  
     paliData[segment] = paliData[segment].replace(/[:;“”‘’,"']/g, '');  
-    paliData[segment] = paliData[segment].replace(/[.?!]/g, ' |'); 
+    paliData[segment] = paliData[segment].replace(/[.?!]/g, ' | '); 
     
     //।   ॥  
 }

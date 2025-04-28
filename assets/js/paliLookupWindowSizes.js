@@ -25,7 +25,8 @@ if (window.location.href.includes('localhost') || window.location.href.includes(
 //dictUrl = "https://dpdict.net";
 } else if (savedDict.includes("compact")) {
     dhammaGift = 'https://dhamma.gift';
-    dictUrl = "https://dpdict.net";
+    dictUrl = "https://dict.dhamma.gift";
+    //dictUrl = "https://dpdict.net";
   }
   else {
     dhammaGift = 'https://dhamma.gift';
@@ -64,10 +65,16 @@ else if (savedDict === "standalonebwru") {
 }
 
 // Функция для отложенной загрузки скриптов standalone-словаря
+// Cache for tracking loaded scripts
+const scriptCache = new Map();
+
+// Polyfill for requestIdleCallback
+const requestIdleCallback = window.requestIdleCallback || 
+    function(cb) { return setTimeout(() => { cb({ didTimeout: false }); }, 0); };
+
 function lazyLoadStandaloneScripts(lang = 'en') {
     return new Promise((resolve, reject) => {
-        // Ждем, пока браузер будет в состоянии простоя
-        requestIdleCallback(() => {
+        const loadScripts = () => {
             const commonScripts = [
                 '/assets/js/standalone-dpd/dpd_i2h.js',
                 '/assets/js/standalone-dpd/dpd_deconstructor.js'
@@ -78,9 +85,8 @@ function lazyLoadStandaloneScripts(lang = 'en') {
                 : '/assets/js/standalone-dpd/dpd_ebts.js';
 
             const scripts = [...commonScripts, langSpecific];
-
             const scriptsToLoad = scripts.filter(src => {
-                return !document.querySelector(`script[src="${src}"]`);
+                return !document.querySelector(`script[src="${src}"]`) && !scriptCache.has(src);
             });
 
             if (scriptsToLoad.length === 0) {
@@ -88,28 +94,89 @@ function lazyLoadStandaloneScripts(lang = 'en') {
                 return;
             }
 
-            let loadedCount = 0;
-
-            scriptsToLoad.forEach(src => {
-                const script = document.createElement('script');
-                script.src = src;
-                script.defer = true;
-                script.onload = () => {
-                    loadedCount++;
-                    if (loadedCount === scriptsToLoad.length) {
-                        resolve();
-                    }
-                };
-                script.onerror = () => {
-                    console.warn(`Lazy loading script failed: ${src}`);
-                    loadedCount++; // Продолжаем даже если один скрипт не загрузился
-                    if (loadedCount === scriptsToLoad.length) {
-                        resolve();
-                    }
-                };
-                document.head.appendChild(script);
+            // Show loading indicator - more robust version
+            const loadingId = 'dict-loading-' + Date.now();
+            const loadingEl = document.createElement('div');
+            loadingEl.id = loadingId;
+            Object.assign(loadingEl.style, {
+                position: 'fixed',
+                bottom: '20px',
+                right: '20px',
+                padding: '10px',
+                background: 'rgba(0,0,0,0.7)',
+                color: 'white',
+                borderRadius: '5px',
+                zIndex: '10000',
+                fontSize: '14px',
+                boxShadow: '0 2px 5px rgba(0,0,0,0.3)'
             });
-        }, { timeout: 3000 }); // Максимальное время ожидания 2 секунды
+            loadingEl.textContent = 'Loading dictionary...';
+            
+            // Ensure loading message is visible in Safari
+            document.body.appendChild(loadingEl);
+            setTimeout(() => loadingEl.style.opacity = '1', 10);
+
+            // Load all scripts with better Safari support
+            const loadPromises = scriptsToLoad.map(src => {
+                return new Promise((scriptResolve) => {
+                    if (scriptCache.has(src)) {
+                        return scriptResolve();
+                    }
+
+                    const script = document.createElement('script');
+                    script.src = src;
+                    script.defer = true;
+                    
+                    // More reliable loading for Safari
+                    script.onload = script.onreadystatechange = function() {
+                        if (!this.readyState || this.readyState === 'loaded' || this.readyState === 'complete') {
+                            scriptCache.set(src, true);
+                            scriptResolve();
+                        }
+                    };
+                    
+                    script.onerror = () => {
+                        console.warn(`Failed to load script: ${src}`);
+                        scriptResolve(); // Resolve even if failed to prevent blocking
+                    };
+
+                    // Safari sometimes needs this
+                    script.crossOrigin = 'anonymous';
+                    document.head.appendChild(script);
+                });
+            });
+
+            // Set timeout for all loads
+            const timeoutPromise = new Promise((_, timeoutReject) => {
+                setTimeout(() => timeoutReject(new Error('Script loading timeout')), 10000); // Longer timeout for Safari
+            });
+
+            Promise.race([
+                Promise.all(loadPromises),
+                timeoutPromise
+            ])
+            .then(() => {
+                const el = document.getElementById(loadingId);
+                if (el) {
+                    el.style.opacity = '0';
+                    setTimeout(() => el.remove(), 300);
+                }
+                resolve();
+            })
+            .catch(err => {
+                console.warn('Dictionary loading warning:', err);
+                const el = document.getElementById(loadingId);
+                if (el) {
+                    el.textContent = 'Dictionary load failed';
+                    el.style.background = 'rgba(255,0,0,0.7)';
+                    setTimeout(() => el.remove(), 2000);
+                }
+                resolve(); // Still resolve to allow fallback behavior
+            });
+        };
+
+        // Use requestIdleCallback with fallback
+        requestIdleCallback(loadScripts, { timeout: 1000 });
     });
 }
 
@@ -175,8 +242,8 @@ function createPopup() {
     const popup = document.createElement('div');
     popup.classList.add('popup');
     popup.style.position = 'fixed';
-    popup.style.maxWidth = '600px';
-    popup.style.maxHeight = '600px';
+    popup.style.maxWidth = '100%';
+    popup.style.maxHeight = '1200px';
     popup.style.overflow = 'hidden'; // Важно для корректного ресайза
 
     // Проверка параметров окна браузера
@@ -305,7 +372,7 @@ openBtn.style.color = 'rgba(255, 255, 255, 0.8)'; // Белый с неболь�
         localStorage.setItem('popupHeight', popup.style.height);
         localStorage.setItem('popupTop', popup.style.top);
         localStorage.setItem('popupLeft', popup.style.left);
-        console.log('savedstates');
+      //  console.log('savedstates');
     }
 
     // Перетаскивание окна
@@ -317,7 +384,7 @@ openBtn.style.color = 'rgba(255, 255, 255, 0.8)'; // Белый с неболь�
         popup.style.top = '50%';
         popup.style.left = '50%';
         popup.style.width = '80%';
-        popup.style.maxWidth = '600px';
+        popup.style.width = '749px';
         popup.style.height = '80%';
         popup.style.transform = 'translate(-50%, -50%)';
     }
@@ -442,7 +509,7 @@ overlay.addEventListener('click', () => {
   iframe.src = ''; // Очищаем iframe
 });
 
-console.log('lookup dict ', dictUrl, ' siteLanguage ', siteLanguage);
+// console.log('lookup dict ', dictUrl, ' siteLanguage ', siteLanguage);
 
 // Проверяем состояние в localStorage при загрузке страницы
 let dictionaryVisible = localStorage.getItem('dictionaryVisible') === null ? true : localStorage.getItem('dictionaryVisible') === 'true';
@@ -489,7 +556,7 @@ document.addEventListener('click', function(event) {
 
         if (clickedWord) {
             let cleanedWord = cleanWord(clickedWord);
-            console.log('Клик по слову:', cleanedWord);
+        //    console.log('Клик по слову:', cleanedWord);
 
             if (dictionaryVisible) {
                 let translation = "";
@@ -516,7 +583,7 @@ document.addEventListener('click', function(event) {
 if (dictUrl === "standalonebw" || dictUrl === "standalonebwru") {
     translation = lookupWordInStandaloneDict(cleanedWord);
 } 
-else if ( dictUrl.includes("mdict")) {
+else if (dictUrl.includes('dicttango') || dictUrl.includes('mdict')) {
     // Создаем временную кнопку для открытия в приложении dictUrl.includes("dicttango") ||
     const tempLink = document.createElement('a');
     tempLink.href = 'javascript:void(0)';
@@ -562,9 +629,15 @@ if (translation) {
     document.body.removeChild(tempDiv);
     
     // Устанавливаем минимальную и максимальную высоту
-    const minHeight = 100; // Минимальная высота popup
+    let minHeight = 100; // Минимальная высота popup
     const maxHeight = window.innerHeight * 0.8; // Максимальная высота (80% окна)
     
+   if (dictUrl === "standalonebw" || dictUrl === "standalonebwru") {
+        minHeight = 100; // Минимальная высота для standalone
+    } else {
+        minHeight = 600; // Минимальная высота для full и других режимов
+    }
+
     // Вычисляем конечную высоту
     let finalHeight = Math.min(Math.max(contentHeight + 20, minHeight), maxHeight);
     
@@ -709,7 +782,7 @@ function getClickedWordWithHTML(element, x, y) {
 
     const parentElement = element.closest('.pli-lang, .rus-lang, .eng-lang, [lang="pi"], [lang="en"], [lang="ru"]');
     if (!parentElement) {
-        console.log('Родительский элемент с классом pli-lang не найден.');
+     //   console.log('Родительский элемент с классом pli-lang не найден.');
         return null;
     }
 
@@ -723,14 +796,14 @@ function getClickedWordWithHTML(element, x, y) {
         return null;
     }
 
-    console.log('Смещение в полном тексте:', globalOffset);
+   // console.log('Смещение в полном тексте:', globalOffset);
 
     // Используем обновленное регулярное выражение для поиска слова
     const regex = /[^\s,;.–—!?()]+/g; // Регулярное выражение, игнорирующее пробелы и знаки препинания
     let match;
     while ((match = regex.exec(fullText)) !== null) {
         if (match.index <= globalOffset && regex.lastIndex >= globalOffset) {
-            console.log('Найденное слово:', match[0]);
+        //    console.log('Найденное слово:', match[0]);
             return match[0];
         }
     }
@@ -773,7 +846,7 @@ function getFullTextFromElement(element) {
 document.addEventListener('click', (event) => {
     const clickedWord = getClickedWordWithHTML(event.target, event.clientX, event.clientY);
     if (clickedWord) {
-        console.log('Слово по клику:', clickedWord);
+      //  console.log('Слово по клику:', clickedWord);
     } else {
      //   console.log('Слово не определено');
     }

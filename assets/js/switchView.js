@@ -1,3 +1,6 @@
+
+// Проверяем сохранённый режим при загрузке страницы
+document.addEventListener('DOMContentLoaded', function() {
 // Функция для обновления текста кнопки в зависимости от режима
 function updateButtonText(isColumnView) {
   const toggleLink = document.getElementById('toggle-mode');
@@ -15,8 +18,7 @@ function toggleViewMode() {
   updateButtonText(isColumnView); // Обновляем текст кнопки
 }
 
-// Проверяем сохранённый режим при загрузке страницы
-document.addEventListener('DOMContentLoaded', function() {
+
   const savedMode = localStorage.getItem('viewMode') || 'alternate'; // Получаем сохранённое значение или 'alternate' по умолчанию
   const suttaElement = document.querySelector('#sutta, .sutta'); // Ищем по id или по классу
   const isColumnView = (savedMode === 'columns');

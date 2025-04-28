@@ -49,24 +49,16 @@ function showPaliEnglish() {
   suttaA.classList.remove("hide-pali");
   suttaA.classList.remove("hide-english");
   suttaA.classList.remove("hide-russian");
-    const savedMode = localStorage.getItem('viewMode') || 'alternate'; // Получаем сохранённое значение или 'alternate' по умолчанию
-  const isColumnView = (savedMode === 'columns');
-
-  // Применяем сохранённый режим
-  if (isColumnView) {
-    suttaA.classList.add('column-view');
-  }
 }
 function showEnglish() {
   suttaA.classList.add("hide-pali");
   suttaA.classList.remove("hide-english");
   suttaA.classList.remove("hide-russian");
-  suttaA.classList.remove('column-view'); // Отключаем двухколоночный режим
+
 }
 function showPali() {
   suttaA.classList.add("hide-english");
     suttaA.classList.remove("hide-pali");
       suttaA.classList.add("hide-russian");
-      suttaA.classList.remove('column-view'); // Отключаем двухколоночный режим
   
 }

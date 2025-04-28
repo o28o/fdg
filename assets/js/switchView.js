@@ -44,3 +44,28 @@ document.addEventListener('keydown', (event) => {
 });
 
 
+function showPaliEnglish() {
+  suttaArea.classList.remove("hide-pali");
+  suttaArea.classList.remove("hide-english");
+  suttaArea.classList.remove("hide-russian");
+    const savedMode = localStorage.getItem('viewMode') || 'alternate'; // Получаем сохранённое значение или 'alternate' по умолчанию
+  const isColumnView = (savedMode === 'columns');
+
+  // Применяем сохранённый режим
+  if (isColumnView) {
+    suttaArea.classList.add('column-view');
+  }
+}
+function showEnglish() {
+  suttaArea.classList.add("hide-pali");
+  suttaArea.classList.remove("hide-english");
+  suttaArea.classList.remove("hide-russian");
+  suttaArea.classList.remove('column-view'); // Отключаем двухколоночный режим
+}
+function showPali() {
+  suttaArea.classList.add("hide-english");
+    suttaArea.classList.remove("hide-pali");
+      suttaArea.classList.add("hide-russian");
+      suttaArea.classList.remove('column-view'); // Отключаем двухколоночный режим
+  
+}

@@ -306,11 +306,11 @@ let преобразованныеСлова = слова.map(word => {
 if (localStorage.getItem("removePunct") === "true" && paliData[segment] !== undefined) {
     paliData[segment] = paliData[segment].replace(/[-—–]/g, ' ');  
     paliData[segment] = paliData[segment].replace(/[:;“”‘’,"']/g, '');  
-    paliData[segment] = paliData[segment].replace(/[.?!]/g, ' |'); 
+    paliData[segment] = paliData[segment].replace(/[.?!]/g, ' | '); 
  
     paliDevanagariData[segment] = paliDevanagariData[segment].replace(/[-—–]/g, ' ');  
     paliDevanagariData[segment] = paliDevanagariData[segment].replace(/[:;“”‘’,"']/g, '');  
-    paliDevanagariData[segment] = paliDevanagariData[segment].replace(/[.?!]/g, ' |'); 
+    paliDevanagariData[segment] = paliDevanagariData[segment].replace(/[.?!]/g, ' | '); 
     
     
     

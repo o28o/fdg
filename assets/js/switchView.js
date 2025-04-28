@@ -43,6 +43,7 @@ document.addEventListener('keydown', (event) => {
 });  
 });
 
+const suttaArea = document.getElementById("sutta");
 
 function showPaliEnglish() {
   suttaArea.classList.remove("hide-pali");

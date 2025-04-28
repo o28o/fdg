@@ -43,30 +43,30 @@ document.addEventListener('keydown', (event) => {
 });  
 });
 
-const suttaArea = document.getElementById("sutta");
+const suttaA = document.getElementById("sutta");
 
 function showPaliEnglish() {
-  suttaArea.classList.remove("hide-pali");
-  suttaArea.classList.remove("hide-english");
-  suttaArea.classList.remove("hide-russian");
+  suttaA.classList.remove("hide-pali");
+  suttaA.classList.remove("hide-english");
+  suttaA.classList.remove("hide-russian");
     const savedMode = localStorage.getItem('viewMode') || 'alternate'; // Получаем сохранённое значение или 'alternate' по умолчанию
   const isColumnView = (savedMode === 'columns');
 
   // Применяем сохранённый режим
   if (isColumnView) {
-    suttaArea.classList.add('column-view');
+    suttaA.classList.add('column-view');
   }
 }
 function showEnglish() {
-  suttaArea.classList.add("hide-pali");
-  suttaArea.classList.remove("hide-english");
-  suttaArea.classList.remove("hide-russian");
-  suttaArea.classList.remove('column-view'); // Отключаем двухколоночный режим
+  suttaA.classList.add("hide-pali");
+  suttaA.classList.remove("hide-english");
+  suttaA.classList.remove("hide-russian");
+  suttaA.classList.remove('column-view'); // Отключаем двухколоночный режим
 }
 function showPali() {
-  suttaArea.classList.add("hide-english");
-    suttaArea.classList.remove("hide-pali");
-      suttaArea.classList.add("hide-russian");
-      suttaArea.classList.remove('column-view'); // Отключаем двухколоночный режим
+  suttaA.classList.add("hide-english");
+    suttaA.classList.remove("hide-pali");
+      suttaA.classList.add("hide-russian");
+      suttaA.classList.remove('column-view'); // Отключаем двухколоночный режим
   
 }

@@ -383,9 +383,8 @@ openBtn.style.color = 'rgba(255, 255, 255, 0.8)'; // Белый с неболь�
     if (isFirstDrag) {
         popup.style.top = '50%';
         popup.style.left = '50%';
-        popup.style.width = '80%';
         popup.style.width = '749px';
-        popup.style.height = '80%';
+        popup.style.height = '600px';
         popup.style.transform = 'translate(-50%, -50%)';
     }
 

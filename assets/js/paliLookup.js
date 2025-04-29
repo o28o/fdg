@@ -634,7 +634,9 @@ if (translation) {
    if (dictUrl === "standalonebw" || dictUrl === "standalonebwru") {
         minHeight = 100; // Минимальная высота для standalone
     } else {
-        minHeight = 600; // Минимальная высота для full и других режимов
+const screenHeight = window.innerHeight;
+minHeight = (screenHeight * 0.8 < 600) ? screenHeight * 0.8 : 600;
+
     }
 
     // Вычисляем конечную высоту

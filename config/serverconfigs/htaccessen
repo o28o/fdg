@@ -1,10 +1,83 @@
 RewriteEngine On
 #RewriteRule ^(.*)$ https://dhamma.gift/$1 [L,R=301]
 
+# /pwa_share → /?p=-kn&q=...
+#RewriteCond %{REQUEST_URI} ^/pwa_share$
+#RewriteCond %{QUERY_STRING} (^|&)q=([^&]+)(&|$)
+#RewriteRule ^pwa_share$ /?p=-kn&q=%2 [L,R=302]
+
+# /ru/pwa_share → /ru/?p=-kn&q=...
+#RewriteCond %{REQUEST_URI} ^/(.*)/pwa_share$
+#RewriteCond %{QUERY_STRING} (^|&)q=([^&]+)(&|$)
+#RewriteRule ^(.*)/pwa_share$ /%1/?p=-kn&q=%2 [L,R=302]
+
+
+# Переадресация с /sc/ на /read/
+
+#RewriteCond %{REQUEST_URI} !^/ru/read.php
+RewriteRule ^sc/(.*)$ /read/$1 [R=301,L,QSA]
+RewriteRule ^ru/sc/(.*)$ /r/$1 [R=301,L,QSA]
+RewriteRule ^ru/read/(.*)$ /r/$1 [R=301,L,QSA]
+RewriteRule ^th/sc/(.*)$ /th/read/$1 [R=301,L,QSA]
+
+# Правило для запросов без /ru/
+RewriteCond %{REQUEST_URI} !^/ru/
+RewriteRule ^(mn\d+|dn\d+|dhp\d+|iti\d+|ja\d+)$ /read/?q=$1 [R=301,L,QSA]
+RewriteRule ^(an\d+\.\d+|sn\d+\.\d+|ud\d+\.\d+|snp\d+\.\d+|thig\d+\.\d+|thag\d+\.\d+)$ /read/?q=$1 [R=301,L,QSA]
+RewriteRule ^(an\d+\.\d+-\d+|sn\d+\.\d+-\d+|dhp\d+\.\d+-\d+)$ /read/?q=$1 [R=301,L,QSA]
+
+# Обрабатываем запросы с /ru/
+RewriteCond %{REQUEST_URI} ^/ru/
+RewriteRule ^ru/(mn\d+|dn\d+|dhp\d+|iti\d+|ja\d+)$ /r/?q=$1 [R=301,L,QSA]
+RewriteRule ^ru/(an\d+\.\d+|sn\d+\.\d+|ud\d+\.\d+|snp\d+\.\d+|thig\d+\.\d+|thag\d+\.\d+)$ /r/?q=$1 [R=301,L,QSA]
+RewriteRule ^ru/(an\d+\.\d+-\d+|sn\d+\.\d+-\d+|dhp\d+\.\d+-\d+)$ /r/?q=$1 [R=301,L,QSA]
+
+#for read.php переходы по оглавлению 
+RewriteCond %{REQUEST_URI} !^/ru/
+RewriteRule ^(mn|dn|sn|an|dhp|iti|ud|snp|thig|thag|kn|bupm|bipm|pj|ss|ay|np|pc|pd|sk|as|bi-pj|bi-ss|bi-ay|bi-np|bi-pc|bi-pd|bi-sk|bi-as)$ /read.php?q=$1 [R=301,L,QSA]
+RewriteRule ^(an|sn|ud|snp|thig|thag)(\d+)$ /read.php?q=$1$2 [R=301,L,QSA]
+
+#for read.php переходы по оглавлению с /ru/
+RewriteCond %{REQUEST_URI} ^/ru/
+RewriteRule ^ru/(mn|dn|sn|an|dhp|iti|ud|snp|thig|thag|kn|bupm|bipm|pj|ss|ay|np|pc|pd|sk|as|bi-pj|bi-ss|bi-ay|bi-np|bi-pc|bi-pd|bi-sk|bi-as)$ /ru/read.php?q=$1 [R=301,L,QSA]
+RewriteRule ^ru/(an|sn|ud|snp|thig|thag)(\d+)$ /ru/read.php?q=$1$2 [R=301,L,QSA]
+
 
 Redirect 301 /ru.php /ru/
+RewriteCond %{HTTP:Accept-Language} ^ru_RU [NC]
+RewriteRule ^/$ /ru/ [L,R=302]
+
+# language starts with FR
+RewriteCond %{HTTP:Accept-Language} ^ru [NC]
+RewriteRule ^/$ /ru/ [L,R=302]
+
+# else redirect to the English version
+RewriteRule ^/$ / [L,R=302]
+
+
+<IfModule mod_headers.c>
+    # Для статики (CSS, JS, шрифты, картинки) — кэшировать очень долго и без проверки
+    <FilesMatch "\.(css|js|jpg|jpeg|png|gif|svg|woff2?)$">
+        Header set Cache-Control "public, max-age=31536000, immutable"
+    </FilesMatch>
+
+    # Для HTML, JSON — кэшировать умеренно, но всё равно дать контроль
+    <FilesMatch "\.(html|json)$">
+        Header set Cache-Control "public, max-age=86400"
+    </FilesMatch>
+</IfModule>
+
+# Включить генерацию ETag
+<IfModule mod_headers.c>
+    Header unset ETag
+</IfModule>
+<IfModule mod_file_cache.c>
+    FileETag MTime Size
+</IfModule>
+
 
 # GZIP compression for text files: HTML, CSS, JS, Text, XML, fonts
+
 <IfModule mod_deflate.c>
 AddOutputFilterByType DEFLATE application/javascript
 AddOutputFilterByType DEFLATE application/rss+xml
@@ -30,29 +103,34 @@ AddOutputFilterByType DEFLATE text/xml
 AddOutputFilterByType DEFLATE application/x-httpd-php
 AddOutputFilterByType DEFLATE application/json
 AddOutputFilterByType DEFLATE application/xml
-</IfModule> 
+</IfModule>
 
-RewriteCond %{HTTP:Accept-Language} ^ru_RU [NC]
-RewriteRule ^/$ /ru/ [L,R=302]
 
-# language starts with FR
-RewriteCond %{HTTP:Accept-Language} ^ru [NC]
-RewriteRule ^/$ /ru/ [L,R=302]
-
-# else redirect to the English version
-RewriteRule ^/$ / [L,R=302]
-
-  
 
 RewriteCond %{HTTP_USER_AGENT} (bingbot|AhrefsBot|SemrushBot|PetalBot|DataForSeoBot|MegaIndex.ru|Barkrowler|SeekportBot|SemrushBot|Barkrowler) [NC]
 RewriteRule .* - [F]
-ErrorDocument 404 /assets/404.php
 
 
 <IfModule mod_expires.c>
-  ExpiresActive On
-  ExpiresByType text/css "access plus 1 year"
-  ExpiresByType text/javascript "access plus 1 year"
-  ExpiresByType image/jpeg "access plus 1 year"
-  ExpiresByType image/png "access plus 1 year"
+    ExpiresActive On
+    ExpiresDefault "access plus 1 day"
+
+    # Кэширование HTML
+    ExpiresByType text/html "access plus 1 hour"
+
+    # Кэширование CSS и JavaScript
+    ExpiresByType text/css "access plus 1 month"
+    ExpiresByType application/javascript "access plus 1 month"
+
+    # Кэширование изображений
+    ExpiresByType image/jpeg "access plus 1 year"
+    ExpiresByType image/png "access plus 1 year"
+    ExpiresByType image/gif "access plus 1 year"
+    ExpiresByType image/webp "access plus 1 year"
+    ExpiresByType image/svg+xml "access plus 1 year"
+
+    # Кэширование шрифтов
+    ExpiresByType font/ttf "access plus 1 year"
+    ExpiresByType font/woff "access plus 1 year"
+    ExpiresByType font/woff2 "access plus 1 year"
 </IfModule>

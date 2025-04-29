@@ -26,16 +26,21 @@ RewriteRule ^(mn\d+|dn\d+|dhp\d+|iti\d+|ja\d+)$ /read/?q=$1 [R=301,L,QSA]
 RewriteRule ^(an\d+\.\d+|sn\d+\.\d+|ud\d+\.\d+|snp\d+\.\d+|thig\d+\.\d+|thag\d+\.\d+)$ /read/?q=$1 [R=301,L,QSA]
 RewriteRule ^(an\d+\.\d+-\d+|sn\d+\.\d+-\d+|dhp\d+\.\d+-\d+)$ /read/?q=$1 [R=301,L,QSA]
 
-
-#for read.php не работает потому что серверу не передается # это можно сделать с помщью js 
-#RewriteRule ^(mn|dn|sn|an|dhp|iti|ud|snp|thig|thag)$ /read.php\#$1Collapse [R=301,L,QSA]
-#RewriteRule ^(an\d+\|sn\d+\|ud\d+\|snp\d+\|thig\d+\|thag\d+\)$ /read.php\#$1Collapse [R=301,L,QSA]
-
 # Обрабатываем запросы с /ru/
 RewriteCond %{REQUEST_URI} ^/ru/
 RewriteRule ^ru/(mn\d+|dn\d+|dhp\d+|iti\d+|ja\d+)$ /r/?q=$1 [R=301,L,QSA]
 RewriteRule ^ru/(an\d+\.\d+|sn\d+\.\d+|ud\d+\.\d+|snp\d+\.\d+|thig\d+\.\d+|thag\d+\.\d+)$ /r/?q=$1 [R=301,L,QSA]
 RewriteRule ^ru/(an\d+\.\d+-\d+|sn\d+\.\d+-\d+|dhp\d+\.\d+-\d+)$ /r/?q=$1 [R=301,L,QSA]
+
+#for read.php переходы по оглавлению 
+RewriteCond %{REQUEST_URI} !^/ru/
+RewriteRule ^(mn|dn|sn|an|dhp|iti|ud|snp|thig|thag|kn|bupm|bipm|pj|ss|ay|np|pc|pd|sk|as|bi-pj|bi-ss|bi-ay|bi-np|bi-pc|bi-pd|bi-sk|bi-as)$ /read.php?q=$1 [R=301,L,QSA]
+RewriteRule ^(an|sn|ud|snp|thig|thag)(\d+)$ /read.php?q=$1$2 [R=301,L,QSA]
+
+#for read.php переходы по оглавлению с /ru/
+RewriteCond %{REQUEST_URI} ^/ru/
+RewriteRule ^ru/(mn|dn|sn|an|dhp|iti|ud|snp|thig|thag|kn|bupm|bipm|pj|ss|ay|np|pc|pd|sk|as|bi-pj|bi-ss|bi-ay|bi-np|bi-pc|bi-pd|bi-sk|bi-as)$ /ru/read.php?q=$1 [R=301,L,QSA]
+RewriteRule ^ru/(an|sn|ud|snp|thig|thag)(\d+)$ /ru/read.php?q=$1$2 [R=301,L,QSA]
 
 
 Redirect 301 /ru.php /ru/
@@ -51,14 +56,25 @@ RewriteRule ^/$ / [L,R=302]
 
 
 <IfModule mod_headers.c>
+    # Для статики (CSS, JS, шрифты, картинки) — кэшировать очень долго и без проверки
     <FilesMatch "\.(css|js|jpg|jpeg|png|gif|svg|woff2?)$">
         Header set Cache-Control "public, max-age=31536000, immutable"
     </FilesMatch>
 
+    # Для HTML, JSON — кэшировать умеренно, но всё равно дать контроль
     <FilesMatch "\.(html|json)$">
-        Header set Cache-Control "public, max-age=84000"
+        Header set Cache-Control "public, max-age=86400"
     </FilesMatch>
 </IfModule>
+
+# Включить генерацию ETag
+<IfModule mod_headers.c>
+    Header unset ETag
+</IfModule>
+<IfModule mod_file_cache.c>
+    FileETag MTime Size
+</IfModule>
+
 
 # GZIP compression for text files: HTML, CSS, JS, Text, XML, fonts
 

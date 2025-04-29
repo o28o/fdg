@@ -21443,7 +21443,7 @@ echo '
       <button class="btn btn-primary btn-sm" type="button" id="collapseAll">+</button>
     </div> -->
     <div class="mt-3">
-
+   
 <div class="level1 d-flex align-items-center">
   <span class="toggle-button btn btn-primary btn-sm form-check-inline btn-fixed-width btn-rotate"
     data-bs-toggle="collapse" data-bs-target="#bupmCollapse">+</span>
@@ -21453,13 +21453,8 @@ echo '
     data-bs-toggle="collapse" data-bs-target="#bupmCollapse">    <h2 class="my-2"><a class="setReader" href="<?php echo $readerPage;?>/?q=bu-pm#0.2">Bhikkhupātimokkha</a></h2></span>	
 	
       <div class="collapse " id="bupmCollapse">
-           <div class="mt-3" style="margin-left: -400px; margin-right: -400px; max-width: 1250px; width: calc(100% + 800px);">
-
       ';
-      
 include $basedir . "/assets/texts/bupm.php";
-
-echo '</div>';
 
 ?>
 <!-- bi-pm -->

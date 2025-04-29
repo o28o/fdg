@@ -171,12 +171,31 @@ function applySavedDict(dict) {
   localStorage.removeItem('viewMode');
   localStorage.setItem("variantVisibility", "hidden");
 
-  // Функция для очистки дополнительных параметров
-  function clearParams() {
-    const keys = ['popupWidth', 'popupHeight', 'popupTop', 'popupLeft', 'windowWidth', 'windowHeight', 'isFirstDrag'];
-    keys.forEach(key => localStorage.removeItem(key));
-  }
-  clearParams();
+
+  const keysToRemove = [
+    'lightMode',
+    'dark',
+    'paliToggleRu',
+    'pli-rus',
+    'popupHeight',
+    'popupLeft',
+    'popupTop',
+    'popupWidth',
+    'removePunct',
+    'selectedDict',
+    'selectedScript',
+    'theme',
+    'themeButtonAction',
+    'visitCount',
+    'windowHeight',
+    'windowWidth',
+    'isFirstDrag'
+  ];
+
+  keysToRemove.forEach(key => {
+    localStorage.removeItem(key);
+  });
+
 
   // Очищаем параметр 'script' из URL
   const url = new URL(window.location.href);

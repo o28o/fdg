@@ -5,6 +5,8 @@
  	<link rel="icon" type="image/x-icon" href="../images/favicon.ico">
  	<title>Sutta Nipata 2.9</title>
  	<meta name="viewport" content="width=device-width, initial-scale=1">
+		<!-- Loading manifest -->
+	<link rel="manifest" href="../manifest.json">
  	<!-- Loading third party fonts -->
  	<link href="../fonts/font-awesome.min.css" rel="stylesheet" type="text/css">
  	<!-- Loading main and menu stylesheets -->
@@ -46,7 +48,7 @@
  		<div id="navbar" class="w3-hide-small w3-hide-medium bwcontainer3">
  			<ul id="css3menu0">
  				<li class="topfirst" id="home"><a href="../home/index.html" class="w3-hide-small">Home</a></li>
-			<li class="topmenu" id="dn"><a href="../dn/dn.html" class="w3-hide-small">Dīgha Nikāya</a></li>
+ 			<li class="topmenu" id="dn"><a href="../dn/dn.html" class="w3-hide-small">Dīgha Nikāya</a></li>
  				<li class="topmenu" id="mn"><a href="../mn/mn.html" class="w3-hide-small">Majjhima Nikāya</a></li>
  				<li class="topmenu" id="sn"><a href="../sn/sn.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Saṁyutta Nikāya</a>
  					<ul>
@@ -86,8 +88,8 @@
  					<ul>
  						<li><a href="../vi/kd.html" class="w3-hide-small">Khandhaka</a></li>
  						<li><a href="../vi/bu-vb.html" class="w3-hide-small">Bhikkhu Vibhaṅga</a></li>
- 						<li><a href="../vi/bu-pt.html" class="w3-hide-small">Bhikkhu Pāṭimokkha</a></li>
- 						<li><a href="../vi/bi-pt.html" class="w3-hide-small">Bhikkhunī Pāṭimokkha</a></li>
+ 						<li><a href="../vi/bu-pt.html" class="w3-hide-small">Bhikkhu Pātimokkha</a></li>
+ 						<li><a href="../vi/bi-pt.html" class="w3-hide-small">Bhikkhunī Pātimokkha</a></li>
  						<li><a href="../vi/bi-vb.html" class="w3-hide-small">Bhikkhunī Vibhaṅga</a></li>
  					</ul>
  				</li>
@@ -100,7 +102,6 @@
  	<a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-times fa-2x red-color"></i>&nbsp;&nbsp;&nbsp;Close</a><!-- Hides the sidebar when clicked -->
  		<div class="w3-bar-block w3-white">
  			<a href="../home/index.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-home fa-lg"></i>&nbsp;&nbsp;&nbsp;Home</a>
- 			<a href="../guide/guide.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Guide</a>
  			<a href="../guide/guide.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Guide</a>
  			<a href="../dn/dn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Dīgha Nikāya</a>
  			<a href="../mn/mn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Majjhima Nikāya</a>
@@ -124,92 +125,110 @@
  
  <h2>Sutta Nipata 2: The Lesser Chapter</h2>
 
-	<h3>2:9 What Good <span class="var" title="Burmese-script edition">Be</span>haviour?</h3>	
+	<h3>2:9 What Morality?</h3>	
 	<div id="metarea"> <!-- metarea div -->
 		<ul class="translator"><!-- Translator div -->
-			<li><a href="/ru/read/?q=snp2.9">dg</a> <a href="https://suttacentral.net/snp2.9">sc</a> ©&nbsp;Translated from the Pali by Bhikkhu Bodhi</li>
+			<li><a class="dg-link" href="/r/?q=snp2.9">DG</a> <a href="https://suttacentral.net/snp2.9">SC</a> ©&nbsp;Translated from the Pali by Bhante Sujato.<a href="../home/copyright.html#sc">(More copyright information)</a></li>
 		</ul>
 	</div><!-- End metarea div -->
 
 <section class="raw_sutta">
 <div lang="en">
 
-<h2>2:9 What Good <span class="var" title="Burmese-script edition">Be</span>haviour?</h2>
+<h2>2:9 What Morality?</h2>
 
-<p class="verse"><span class ="parno">324</span>“Having what good behavior,<br>
-having what sort of conduct,<br>
-fostering what kind of actions,<br>
-can a person be properly settled<br>
-and attain the highest goal?” (1)</p>
 
-<p class="verse"><span class ="parno">325</span>“One should be respectful toward elders, without envy;<br>
-one should know the proper time for seeing one’s teachers.<br>
-When a Dhamma talk is occurring, one who knows the occasion<br>
-should listen carefully to well-spoken words. (2)</p>
+<p><span class="speaker">Sāriputta</span></p>
 
-<p class="verse"><span class ="parno">326</span>“One should go to teachers at the proper time,<br>
-having dropped one’s pride, with a humble manner. [57]<br>
-One should recollect and practice the meaning,<br>
-the Dhamma, self-control, and the spiritual life. (3)</p>
+	<div class="verse">
+			<p id="p324"><span class="parno">324</span>
+			“With what morality, what conduct, 
+			<br>fostering what deeds, 
+			<br>would a person lay the foundations right, 
+			<br>and reach the highest goal?” </p>
+	</div>
+<p><span class="speaker">Buddha</span></p>
 
-<p class="verse"><span class ="parno">327</span>“Delighting in the Dhamma, delighted with the Dhamma,<br>
-firm in the Dhamma, knowing how to judge the Dhamma,<br>
-one should not engage in talk that corrupts the Dhamma<br>
-but should be guided by genuine well-spoken words. (4)</p>
-
-<p class="verse"><span class ="parno">328</span>“Having abandoned laughter, chatter, lamenting,<br>
-annoyance, hypocritical deeds, scheming, greed, conceit,<br>
-stubbornness, crudeness, blemishes, infatuation:<br>
-one should live free from vanity, inwardly firm. (5)</p>
-
-<p class="verse"><span class ="parno">329</span>“What is understood is the core of well-spoken words;<br>
-concentration is the core of what has been learned and understood.<span class="note"><span class="details"><span class="p">I prefer <span class="var" title="Roman-script edition">Ee</span> <i>sutañca viññātaṃ samādhisāraṃ</i> to <span class="var" title="Burmese-script edition">Be</span> and <span class="var" title="Sinhala-script edition">Ce</span> <i>sutañca viññātasamādhisāraṃ</i>. The latter reading is adopted by all three editions of <span class="var" title="Paramatthajotikā II (Suttanipāta-aṭṭhakathā)">Pj II</span>, but the line makes better sense if <i>viññātaṃ</i> is taken as a distinct subject.</span></span></span><br>
-Wisdom and learning do not grow<br>
-for a person who is impetuous and heedless. (6)</p>
-
-<p class="verse"><span class ="parno">330</span>“Those who delight in the Dhamma taught by the noble ones<br>
-are unsurpassed in speech, mind, and action.<br>
-Being settled in peace, gentleness, and concentration,<br>
-they have reached the core of learning and wisdom.” (7)</p>
+	<div class="verse">
+			<p id="p325"><span class="parno">325</span>
+			“Honoring elders without jealousy, 
+			<br>they’d know the time to visit their teachers. 
+			<br>Treasuring the chance for a Dhamma talk, 
+			<br>they’d listen carefully to the well-spoken words. </p>
+			
+			<p id="p326"><span class="parno">326</span>
+			At the right time, they’d humbly enter 
+			<br>the teachers’ presence, leaving obstinacy behind. 
+			<br>They’d call to mind and put into practice 
+			<br>the meaning, the teaching, self-control, and the spiritual life. </p>
+			
+			<p id="p327"><span class="parno">327</span>
+			Delighting in the teaching, enjoying the teaching, 
+			<br>standing on the teaching, investigating the teaching, 
+			<br>they’d never say anything that degraded the teaching, 
+			<br>but would be guided by genuine words well-spoken. </p>
+			
+			<p id="p328"><span class="parno">328</span>
+			Giving up mirth, prayer, weeping, ill will, 
+			<br>deception, fraud, greed, conceit, 
+			<br>aggression, crudeness, stains, and indulgence, 
+			<br>they’d wander free of vanity, steadfast. </p>
+			
+			<p id="p329"><span class="parno">329</span>
+			Understanding is the essence of well-spoken words, 
+			<br>stillness is the essence of learning and understanding. 
+			<br>Wisdom and learning do not flourish 
+			<br>in a hasty and negligent person. </p>
+			
+			<p id="p330"><span class="parno">330</span>
+			Those happy with the teaching proclaimed by the Noble One 
+			<br>are supreme in speech, mind, and deed. 
+			<br>Settled in peace, gentleness, and stillness, 
+			<br>they’ve realized the essence of learning and wisdom.” </p>
+	</div>
 </div>
 
 <div lang="pi">
 <h2>Kiṁsīlasutta</h2>
+	<div class="verse">
+			<p>&nbsp;</p>
+			<p><span class="parno">324</span>"Kiṁsīlo kiṁsamācāro,<br> kāni kammāni brūhayaṁ;
+			<br>Naro sammā niviṭṭhassa,
+			<br>uttamatthañca pāpuṇe".</p>
+	</div>
 
-<p><span class="parno">324</span>"Kiṁsīlo kiṁsamācāro,<br> kāni kammāni brūhayaṁ;
-<br>Naro sammā niviṭṭhassa,
-<br>uttamatthañca pāpuṇe".</p>
-
-<p><span class="parno">325</span><a class="brnum" id="br2"></a>
-"Vuḍḍhāpacāyī anusūyako siyā,<br> Kālaññū cassa garūnaṁ dassanāya;
-<br>Dhammiṁ kathaṁ erayitaṁ khaṇaññū,
-<br>Suṇeyya sakkacca subhāsitāni.</p>
-
-<p><span class="parno">326</span><a class="brnum" id="br3"></a>
-Kālena gacche garūnaṁ sakāsaṁ,<br> Thambhaṁ niraṅkatvā nivātavutti;
-<br>Atthaṁ dhammaṁ saṁyamaṁ brahmacariyaṁ,
-<br>Anussare ceva samācare ca.</p>
-
-<p><span class="parno">327</span><a class="brnum" id="br4"></a>
-Dhammārāmo dhammarato,<br> Dhamme ṭhito dhammavinicchayaññū;
-<br>Nevācare dhammasandosavādaṁ,
-<br>Tacchehi nīyetha subhāsitehi.</p>
-
-<p><span class="parno">328</span><a class="brnum" id="br5"></a>
-Hassaṁ jappaṁ paridevaṁ padosaṁ,<br> Māyākataṁ kuhanaṁ giddhi mānaṁ;
-<br>Sārambhaṁ kakkasaṁ kasāvañca mucchaṁ,
-<br>Hitvā care vītamado ṭhitatto.</p>
-
-<p><span class="parno">329</span><a class="brnum" id="br6"></a>
-Viññātasārāni subhāsitāni,<br> Sutañca viññātasamādhisāraṁ;
-<br>Na tassa paññā ca sutañca vaḍḍhati,
-<br>Yo sāhaso hoti naro pamatto.</p>
-
-<p><span class="parno">330</span><a class="brnum" id="br7"></a>
-Dhamme ca ye ariyapavedite ratā,<br> Anuttarā te vacasā manasā kammunā ca;
-<br>Te santisoraccasamādhisaṇṭhitā,
+<div class="verse">
+			<p>&nbsp;</p>
+			<p><span class="parno">325</span><a class="brnum" id="br2"></a>
+			"Vuḍḍhāpacāyī anusūyako siyā,<br> Kālaññū cassa garūnaṁ dassanāya;
+			<br>Dhammiṁ kathaṁ erayitaṁ khaṇaññū,
+			<br>Suṇeyya sakkacca subhāsitāni.</p>
+			
+			<p><span class="parno">326</span><a class="brnum" id="br3"></a>
+			Kālena gacche garūnaṁ sakāsaṁ,<br> Thambhaṁ niraṅkatvā nivātavutti;
+			<br>Atthaṁ dhammaṁ saṁyamaṁ brahmacariyaṁ,
+			<br>Anussare ceva samācare ca.</p>
+			
+			<p><span class="parno">327</span><a class="brnum" id="br4"></a>
+			Dhammārāmo dhammarato,<br> Dhamme ṭhito dhammavinicchayaññū;
+			<br>Nevācare dhammasandosavādaṁ,
+			<br>Tacchehi nīyetha subhāsitehi.</p>
+			
+			<p><span class="parno">328</span><a class="brnum" id="br5"></a>
+			Hassaṁ jappaṁ paridevaṁ padosaṁ,<br> Māyākataṁ kuhanaṁ giddhi mānaṁ;
+			<br>Sārambhaṁ kakkasaṁ kasāvañca mucchaṁ,
+			<br>Hitvā care vītamado ṭhitatto.</p>
+			
+			<p><span class="parno">329</span><a class="brnum" id="br6"></a>
+			Viññātasārāni subhāsitāni,<br> Sutañca viññātasamādhisāraṁ;
+			<br>Na tassa paññā ca sutañca vaḍḍhati,
+			<br>Yo sāhaso hoti naro pamatto.</p>
+			
+			<p><span class="parno">330</span><a class="brnum" id="br7"></a>
+			Dhamme ca ye ariyapavedite ratā,<br> Anuttarā te vacasā manasā kammunā ca;
+			<br>Te santisoraccasamādhisaṇṭhitā,
 			<br>Sutassa paññāya ca sāramajjhagū"ti.</p>
-
+	</div>
 <p class="endsection">Kiṁsīlasuttaṁ navamaṁ.</p>
 </div>
 </section>  <!-- End English and Pali -->
@@ -220,7 +239,7 @@ Dhamme ca ye ariyapavedite ratā,<br> Anuttarā te vacasā manasā kammunā ca;
 <!-- Footer -->
 		<footer>
 			<div id="breadcrumbs">
-<a href="../home/index.html">Home</a><a href="../kn/kn.html">Khuddaka Nikāya</a><a href="snp.html">Sutta Nipata</a><a href="snp2.html">2: The Lesser Chapter</a>2:9 What Good <span class="var" title="Burmese-script edition">Be</span>haviour?
+<a href="../home/index.html">Home</a><a href="../kn/kn.html">Khuddaka Nikāya</a><a href="snp.html">Sutta Nipata</a><a href="snp2.html">2: The Lesser Chapter</a>2:9 What Morality?
 </div>
 	
  	<div class="bottomlinks">
@@ -287,5 +306,6 @@ Dhamme ca ye ariyapavedite ratā,<br> Anuttarā te vacasā manasā kammunā ca;
  </script>
  <script src="../js/footer.js"></script><script src="../js/dpd_deconstructor.js"></script><script src="../js/dpd_ebts.js"></script><script src="../js/dpd_i2h.js"></script>
  <script src="/sw.js"></script>
+<script>document.addEventListener("click",e=>{if(e.target.closest("a.dg-link")){e.preventDefault();const s=new URLSearchParams(window.location.search).get("s");window.location.href=e.target.closest("a").href+(s?`&s=${encodeURIComponent(s)}`:"");}})</script>
  </body>
  </html>

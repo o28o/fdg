@@ -5,6 +5,8 @@
  	<link rel="icon" type="image/x-icon" href="../images/favicon.ico">
  	<title>Sutta Nipata 1.5</title>
  	<meta name="viewport" content="width=device-width, initial-scale=1">
+		<!-- Loading manifest -->
+	<link rel="manifest" href="../manifest.json">
  	<!-- Loading third party fonts -->
  	<link href="../fonts/font-awesome.min.css" rel="stylesheet" type="text/css">
  	<!-- Loading main and menu stylesheets -->
@@ -46,8 +48,7 @@
  			<div id="navbar" class="w3-hide-small w3-hide-medium bwcontainer3">
  				<ul id="css3menu0">
  					<li class="topfirst" id="home"><a href="../home/index.html" class="w3-hide-small">Home</a></li>
- 					
-			<li class="topmenu" id="dn"><a href="../dn/dn.html" class="w3-hide-small">Dīgha Nikāya</a></li>
+ 				<li class="topmenu" id="dn"><a href="../dn/dn.html" class="w3-hide-small">Dīgha Nikāya</a></li>
  					<li class="topmenu" id="mn"><a href="../mn/mn.html" class="w3-hide-small">Majjhima Nikāya</a></li>
  					<li class="topmenu" id="sn"><a href="../sn/sn.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Saṁyutta Nikāya</a>
  				<ul>
@@ -87,8 +88,8 @@
  						<ul>
  							<li><a href="../vi/kd.html" class="w3-hide-small">Khandhaka</a></li>
  							<li><a href="../vi/bu-vb.html" class="w3-hide-small">Bhikkhu Vibhaṅga</a></li>
- 							<li><a href="../vi/bu-pt.html" class="w3-hide-small">Bhikkhu Pāṭimokkha</a></li>
- 							<li><a href="../vi/bi-pt.html" class="w3-hide-small">Bhikkhunī Pāṭimokkha</a></li>
+ 							<li><a href="../vi/bu-pt.html" class="w3-hide-small">Bhikkhu Pātimokkha</a></li>
+ 							<li><a href="../vi/bi-pt.html" class="w3-hide-small">Bhikkhunī Pātimokkha</a></li>
  							<li><a href="../vi/bi-vb.html" class="w3-hide-small">Bhikkhunī Vibhaṅga</a></li>
  						</ul>
  					</li>
@@ -102,8 +103,7 @@
  			<div class="w3-bar-block w3-white">
  				<a href="../home/index.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-home fa-lg"></i>&nbsp;&nbsp;&nbsp;Home</a>
  				<a href="../guide/guide.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Guide</a>
- 				<a href="../guide/guide.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Guide</a>
- 			<a href="../dn/dn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Dīgha Nikāya</a>
+ 				<a href="../dn/dn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Dīgha Nikāya</a>
  				<a href="../mn/mn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Majjhima Nikāya</a>
  				<a href="../sn/sn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Saṁyutta Nikāya</a>
  				<a href="../an/an.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Aṅguttara Nikāya</a>
@@ -128,7 +128,7 @@
 	<h3>1:5 With the Smith Chunda</h3>	
 	<div id="metarea"> <!-- metarea div -->
 		<ul class="translator"><!-- Translator div -->
-			<li><a href="/ru/read/?q=snp1.5">dg</a> <a href="https://suttacentral.net/snp1.5">sc</a> ©&nbsp;Translated from the Pali by Bhikkhu Bodhi</li>
+			<li><a class="dg-link" href="/r/?q=snp1.5">DG</a> <a href="https://suttacentral.net/snp1.5">SC</a> ©&nbsp;Translated from the Pali by Bhante Sujato.<a href="../home/copyright.html#sc">(More copyright information)</a></li>
 		</ul>
 	</div><!-- End metarea div -->
 
@@ -138,108 +138,114 @@
 
 <h2>1:5 With the Smith Chunda</h2>
 
+<div class="verse">
+<p><span class="speaker">Cunda</span></p>
 
-<p><strong>Cunda the smith's son</strong></p>
+<p><span class="parno">83</span>“I ask the sage abounding in wisdom,” 
+<br>said Cunda the smith, 
+<br>“the Buddha, master of the teaching, free of craving, 
+<br>best of men, excellent charioteer, please tell me this: 
+<br>how many ascetics are there in the world?” </p>
+</div>
+<div class="verse">
+<p><span class="speaker">Buddha</span></p>
+<p><span class="parno">84</span>“There are four ascetics, not a fifth.” 
+<br>said the Buddha to Cunda, 
+<br>“Being asked to bear witness, I will explain them to you:
+<br>the path-victor, the path-teacher, 
+<br>the path-liver, and the path-wrecker.” </p>
+</div>
+<div class="verse">
+<p><span class="speaker">Cunda</span></p>
 
-<p class="verse"><span class="parno">83</span>“I ask the muni, one of abundant wisdom,”<br>
-“the Buddha, lord of the Dhamma, rid of craving,<br>
-supreme among bipeds, the most excellent of trainers:<br>
-how many ascetics are there in the world? Please tell me this.” (1)</p>
+<p><span class="parno">85</span>“Who is a path-victor according to the Buddhas?” 
+<br>said Cunda the smith, 
+<br>“and how is one an unequaled path-explainer? 
+<br>Tell me when asked about one who lives the path, 
+<br>then declare the path-wrecker.” </p>
+</div>
 
-<hr>
+<div class="verse">
+<p><span class="speaker">Buddha</span></p>
 
-<p><strong>Said the Blessed One to Chunda [17]</strong></p>
+<p><span class="parno">86</span>“Rid of doubt, free of thorns, 
+<br>delighting in quenching, not fawning, 
+<br>a guide for the world with its gods. 
+<br>The Buddhas say one such is victor of the path. </p>
 
-<p class="verse"><span class="parno">84</span>“There are four kinds of ascetics; there is no fifth,<br>
-“Being asked in person, let me explain them to you:<br>
-the conqueror of the path,<span class="note"><span class="details"><span class="p">I follow <span class="var" title="Paramatthajotikā II (Suttanipāta-aṭṭhakathā)">Pj II</span>’s explanation of <i>maggajina</i>, as against Norman’s suggestion that <i>jina</i> is derived from <i>j</i><i>ñ</i><i>a</i>. <i>Maggena sabbakilese vijitāvī</i>. Norman (<span class="var" title="The Group of Discourses (see Norman 2006b)">GD</span> 174&ndash;75) takes <i>maggajino</i> to be from Skt <i>mārga-jña</i> and thus to be equivalent to <i>maggaññū</i>, with the <i>svarabhakti</i> vowel added. However, I find <span class="var" title="Paramatthajotikā II (Suttanipāta-aṭṭhakathā)">Pj II</span>’s explanation cogent enough to accept “conqueror” as the intended sense. In Sn alone, the Buddha is referred to as <i>jina</i> at <b>372</b>a, <b>379</b>b, <b>697</b>d, <b>698</b>a, and <b>996</b>a. <i>Maggajino</i> occurs at <a href="../tha/tha21.html#p1230">Therigata 1230</a>, glossed at <span class="var" title="Theragāthā-aṭṭhakathā">Th-a</span> III 191,32 with <i>maggena vijitakileso</i>. The Chinese versions of the sutta, at <span class="var" title="Taisho edition">T</span> I 18b16, <span class="var" title="Taisho edition">T</span> I 167c21, and <span class="var" title="Taisho edition">T</span> I 183b10 all render the first ascetic as <span class="chinese">道殊勝</span>, which could mean “one victorious over the path,” hence corresponding to <i>maggajino</i>. The fragmentary Skt version is ambivalent, with <i>mārgajñaḥ</i> (= Pāli <i>maggaññū</i>) in the initial enumeration of types (= verse 84) but <i>mārgajinaṃ</i> in the questions about the types (= verse 85).</span></span></span> the teacher of the path,<br>
-the one who lives on the path, and the defiler of the path.” (2)</p>
+<p id="p87"><span class="parno">87</span>
+Knowing the ultimate as ultimate, 
+<br>they explain and analyze the teaching right here. 
+<br>That sage unstirred, with doubt cut off, 
+<br>is the second mendicant, I say, the path-teacher. </p>
 
+<p id="p88"><span class="parno">88</span>
+Living restrained and mindful on the path 
+<br>of the well-taught passages of teaching, 
+<br>cultivating blameless states, 
+<br>is the third mendicant, I say, the path-liver. </p>
 
-<p><strong>(Said Cunda the smith’s son).</strong></p>
+<p id="p89"><span class="parno">89</span>Dressed like one true to their vows, 
+<br>pushy, rude, a corrupter of families, 
+<br>devious, unrestrained, chaff, 
+<br>the path-wrecker’s life is a sham. </p>
 
-<p class="verse"><span class="parno">85</span>“Whom do the buddhas call a conqueror of the path?”<br>
+<p id="p90"><span class="parno">90</span>A layperson who gets this, 
+<br>a learned, wise noble disciple, 
+<br>knows that ‘They are not all like that one’. 
+<br>So when they see them they don’t lose their faith. 
+<br>For how could one equate them—
+<br>the corrupt with the uncorrupt, the pure with the impure?” </p>
 
-“How is one without equal as a shower of the path?<span class="note"><span class="details"><span class="p">I read with <span class="var" title="Burmese-script edition">Be</span> and <span class="var" title="Sinhala-script edition">Ce</span> <i>maggakkhāyī</i>, as against <span class="var" title="Roman-script edition">Ee</span> <i>maggajjhāyī</i>. See <span class="var" title="The Group of Discourses (see Norman 2006b)">GD</span> 175.</span></span></span><br>
-Being asked, tell me about one who lives on the path,<br>
-and explain to me the defiler of the path.” (3)</p>
+<p class="endsutta"></p>
+</div>
 
-<p class="verse">86. “One who has crossed over perplexity, free of inner darts,<br>
-delighted with nibbāna, without any greed;<br>
-the guide of this world together with its devas:<br>
-the buddhas call the impartial one a conqueror of the path. (4)</p>
-
-<p class="verse"><span class="parno">87</span>“One here who, having known the supreme as supreme,<br>
-explains and analyzes the Dhamma right here,<br>
-the muni who has cut off doubt, without impulse,<br>
-is the second bhikkhu,<span class="note"><span class="details"><span class="p"><i>Dutiyaṃ bhikkhunaṃ</i>. I take this as an accusative singular. <i>Bhikkhunaṃ</i> can be taken as either genitive plural (= <i>bhikkhūnaṃ</i>) or accusative singular. I treat it as accusative singular. Commenting on <i>dutiyaṃ bhikkhunaṃ</i>, Norman (at <span class="var" title="The Group of Discourses (see Norman 2006b)">GD</span> 176) says that since <i>bhikkhunaṃ</i> “is certainly accusative singular in <a href="../snp/snp3.6.html#p513">verse 513</a>, it is probably the same here.”</span></span></span> whom they call a teacher of the path. (5)</p>
-
-<p class="verse"><span class="parno">88</span>“The one on the well-taught trail of the Dhamma<br>
-who lives on the path, controlled and mindful,<br>
-resorting to blameless ways of conduct,<br>
-is the third bhikkhu, whom they call one living on the path. (6)</p>
-
-<p class="verse"><span class="parno">89</span>“Having taken on the dress of the disciplined,<br>
-one who is brazen, a corrupter of families, impudent,<br>
-hypocritical, uncontrolled, chaff,<br>
-living as a dissembler: he is the defiler of the path. (7)</p>
-
-<p class="verse"><span class="parno">90</span>“When a householder who is learned, wise,<br>
-a noble disciple, has penetrated these, [18]<br>
-since he knows, ‘They are not all like him,’<span class="note"><span class="details"><span class="p">I take the correct reading to be <i>n’etādisā</i> <i>ti</i> (&lt; <i>na</i> + <i>etādisā</i>), as in the lemma of <span class="var" title="Paramatthajotikā II (Suttanipāta-aṭṭhakathā)">Pj II</span> (<span class="var" title="Roman-script edition">Ee</span>). <span class="var" title="Roman-script edition">Ee</span> has <i>ne ‘tādisā</i>’ <i>ti</i>, with <i>ne</i> an accusative object. Be has <i>netādisā ti</i>, which is ambiguous, and Ce <i>te tādisā ti</i>, which agrees in sense with Ee. I take the correct reading to be <i>n’etādisā</i> <i>ti</i> (&lt; <i>na</i> + <i>etādisā</i>), as in the lemma of <span class="var" title="Paramatthajotikā II (Suttanipāta-aṭṭhakathā)">Pj II</span> (<span class="var" title="Roman-script edition">Ee</span>). The Skt supports this with its reading <i>sarve</i> <i>nāpy evaṃvidhā bhavanti</i>, where <i>na</i> is the negation and <i>evaṃvidhā</i> corresponds to <i>etādisā</i>..</span></span></span><br>
-on seeing such, he does not forsake his faith.<span class="note"><span class="details"><span class="p">On the basis of the Skt parallel, I would change the nominative <i>saddh</i><i>ā</i> <span>to accusative</span> <i>saddhaṃ</i>.</span></span></span><br>For how could one equate them:<br>
-the undefiled with the defiled, the pure with the impure?” (8)</p>
 </div>
 
 <div lang="pi">
 <h2>Cundasutta</h2>
-
 <div class="verse">
-<p><strong>(iti cundo kammāraputto):</strong></p>
-<p class="verse"><span class="parno">83</span>"Pucchāmi muniṁ pahūtapaññaṁ,
-<br> Buddhaṁ dhammassāmiṁ vītataṇhaṁ;
+<p><span class="speaker">(iti cundo kammāraputto):</span></p>
+<p><span class="parno">83</span>"Pucchāmi muniṁ pahūtapaññaṁ,<br> Buddhaṁ dhammassāmiṁ vītataṇhaṁ;
 <br>Dvipaduttamaṁ sārathīnaṁ pavaraṁ,
 <br>Kati loke samaṇā tadiṅgha brūhi".</p>
 </div>
-
-<hr>
-
+<p><span class="speaker">(cundāti bhagavā):</span></p>
 <div class="verse">
-<p><strong>(cundāti bhagavā):</strong></p>
-<p class="verse"><span class="parno">84</span><a class="brnum" id="br2"></a> "Caturo samaṇā na pañcamatthi,
-<br> Te te āvikaromi sakkhipuṭṭho;
+<p><span class="parno">84</span><a class="brnum" id="br2"></a> "Caturo samaṇā na pañcamatthi,<br> Te te āvikaromi sakkhipuṭṭho;
 <br>Maggajino maggadesako ca,
 <br>Magge jīvati yo ca maggadūsī".</p>
 </div>
 
 <div class="verse">
-<p><strong>(iti cundo kammāraputto):</strong></p>
+<p><span class="speaker">(iti cundo kammāraputto):</span></p>
 
-<p class="verse"><span class="parno">85</span><a class="brnum" id="br3"></a> "Kaṁ maggajinaṁ vadanti buddhā,<br> Maggakkhāyī kathaṁ atulyo hoti;
+<p><span class="parno">85</span><a class="brnum" id="br3"></a> "Kaṁ maggajinaṁ vadanti buddhā,<br> Maggakkhāyī kathaṁ atulyo hoti;
 <br>Magge jīvati me brūhi puṭṭho,
 <br>Atha me āvikarohi maggadūsiṁ".</p>
 
-<p class="verse"><span class="parno">86</span><a class="brnum" id="br4"></a>
+<p>&nbsp;</p>
+<p><span class="parno">86</span><a class="brnum" id="br4"></a>
 "Yo tiṇṇakathaṅkatho visallo,<br> Nibbānābhirato anānugiddho;
 <br>Lokassa sadevakassa netā,
 <br>Tādiṁ maggajinaṁ vadanti buddhā.</p>
 
-<p class="verse"><span class="parno">87</span><a class="brnum" id="br5"></a>
+<p><span class="parno">87</span><a class="brnum" id="br5"></a>
 Paramaṁ paramanti yodha ñatvā,<br> Akkhāti vibhajate idheva dhammaṁ;
 <br>Taṁ kaṅkhachidaṁ muniṁ anejaṁ,
 <br>Dutiyaṁ bhikkhunamāhu maggadesiṁ.</p>
 
-<p class="verse"><span class="parno">88</span><a class="brnum" id="br6"></a>
+<p><span class="parno">88</span><a class="brnum" id="br6"></a>
 Yo dhammapade sudesite,<br> Magge jīvati saññato satīmā;
 <br>Anavajjapadāni sevamāno,
 <br>Tatiyaṁ bhikkhunamāhu maggajīviṁ.</p>
 
-<p class="verse"><span class="parno">89</span><a class="brnum" id="br7"></a>
+<p><span class="parno">89</span><a class="brnum" id="br7"></a>
 Chadanaṁ katvāna subbatānaṁ,<br> Pakkhandī kuladūsako pagabbho;
 <br>Māyāvī asaññato palāpo,
 <br>Patirūpena caraṁ sa maggadūsī.</p>
 
-<p class="verse"><span class="parno">90</span><a class="brnum" id="br8"></a>
+<p><span class="parno">90</span><a class="brnum" id="br8"></a>
 Ete ca paṭivijjhi yo gahaṭṭho,<br> Sutavā ariyasāvako sapañño;
 <br>Sabbe netādisāti ñatvā,
 <br>Iti disvā na hāpeti tassa saddhā;
@@ -324,5 +330,6 @@ Ete ca paṭivijjhi yo gahaṭṭho,<br> Sutavā ariyasāvako sapañño;
  </script>
  <script src="../js/footer.js"></script><script src="../js/dpd_deconstructor.js"></script><script src="../js/dpd_ebts.js"></script><script src="../js/dpd_i2h.js"></script>
  <script src="/sw.js"></script>
+<script>document.addEventListener("click",e=>{if(e.target.closest("a.dg-link")){e.preventDefault();const s=new URLSearchParams(window.location.search).get("s");window.location.href=e.target.closest("a").href+(s?`&s=${encodeURIComponent(s)}`:"");}})</script>
  </body>
  </html>

@@ -3,8 +3,10 @@
 <head>
  	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
  	<link rel="icon" type="image/x-icon" href="../images/favicon.ico">
- 	<title>Samyutta Nikāya - Connected Discourses on Stream-Entry 55.63–74</title>
+ 	<title>Samyutta Nika 55.63–74</title>
  	<meta name="viewport" content="width=device-width, initial-scale=1">
+		<!-- Loading manifest -->
+	<link rel="manifest" href="../manifest.json">
  	<!-- Loading third party fonts -->
  	<link href="../fonts/font-awesome.min.css" rel="stylesheet" type="text/css">
  	<!-- Loading main and menu stylesheets -->
@@ -38,19 +40,19 @@
  <!-- Top menu -->
 
  <div class="w3-main w3-white bwcontainer2">
- 	<div class="w3-button w3-padding-8 w3-left w3-hide-large" onclick="w3_open()">☰</div>
+ 	<div class="w3-button w3-padding-8 w3-left w3-hide-large" onclick="w3_open()"><i class="fa fa-bars fa-lg"></i>&nbsp;</div>
  		<div id="navbar" class="w3-hide-small w3-hide-medium bwcontainer3">
  			<ul id="css3menu0">
  				<li class="topfirst" id="home"><a href="../home/index.html" class="w3-hide-small">Home</a></li>
-			<li class="topmenu" id="dn"><a href="../dn/dn.html" class="w3-hide-small">Dīgha Nikāya</a></li>
+ 			<li class="topmenu" id="dn"><a href="../dn/dn.html" class="w3-hide-small">Dīgha Nikāya</a></li>
  				<li class="topmenu" id="mn"><a href="../mn/mn.html" class="w3-hide-small">Majjhima Nikāya</a></li>
  				<li class="topmenu" id="sn"><a href="../sn/sn.html" class="pressed w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Saṁyutta Nikāya</a>
  					<ul>
- 						<li><a href="../sn/sn01.html" class="w3-hide-small">Vol. 1 ‒ The Book with Verses</a></li>
+ 						<li><a href="../sn/sn01.html" class="pressed w3-hide-small">Vol. 1 ‒ The Book with Verses</a></li>
  						<li><a href="../sn/sn02.html" class="w3-hide-small">Vol. 2 ‒ The Book of Causation</a></li>
  						<li><a href="../sn/sn03.html" class="w3-hide-small">Vol. 3 ‒ The Book of the Aggregates</a></li>
  						<li><a href="../sn/sn04.html" class="w3-hide-small">Vol. 4 ‒ The Book of the Six Sense Bases</a></li>
- 						<li><a href="../sn/sn05.html" class="pressed w3-hide-small">Vol. 5 ‒ The Great Book</a></li>
+ 						<li><a href="../sn/sn05.html" class="w3-hide-small">Vol. 5 ‒ The Great Book</a></li>
  					</ul>
  				<li class="topmenu" id="an"><a href="../an/an.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Aṅguttara Nikāya</a>
  					<ul>
@@ -82,8 +84,8 @@
  					<ul>
  						<li><a href="../vi/kd.html" class="w3-hide-small">Khandhaka</a></li>
  						<li><a href="../vi/bu-vb.html" class="w3-hide-small">Bhikkhu Vibhaṅga</a></li>
- 						<li><a href="../vi/bu-pt.html" class="w3-hide-small">Bhikkhu Pāṭimokkha</a></li>
- 						<li><a href="../vi/bi-pt.html" class="w3-hide-small">Bhikkhunī Pāṭimokkha</a></li>
+ 						<li><a href="../vi/bu-pt.html" class="w3-hide-small">Bhikkhu Pātimokkha</a></li>
+ 						<li><a href="../vi/bi-pt.html" class="w3-hide-small">Bhikkhunī Pātimokkha</a></li>
  						<li><a href="../vi/bi-vb.html" class="w3-hide-small">Bhikkhunī Vibhaṅga</a></li>
  					</ul>
  				</li>
@@ -94,9 +96,9 @@
 <!-- Sidebar (hidden by default) -->
  <nav class="w3-sidebar w3-bar-block w3-card w3-border w3-top w3-animate-left w3-hide-large" id="mySidebar">
  	<a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-times fa-2x red-color"></i>&nbsp;&nbsp;&nbsp;Close</a><!-- Hides the sidebar when clicked -->
+<p>&nbsp;</p>
  		<div class="w3-bar-block w3-white">
- 			<a href="../home/index.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-home fa-lg"></i>&nbsp;&nbsp;&nbsp;Home</a>
- 			
+ 			<a href="../home/index.html" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-home fa-lg"></i>&nbsp;&nbsp;Home</a>
  			<a href="../guide/guide.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Guide</a>
  			<a href="../dn/dn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Dīgha Nikāya</a>
  			<a href="../mn/mn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Majjhima Nikāya</a>
@@ -105,48 +107,93 @@
  			<a href="../kn/kn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Khuddaka Nikāya</a>
  			<a href="../vi/vi.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Vinaya Piṭaka</a>
  		</div>
- </nav>
- 
- 
- 
-<!-- !PAGE DIV! --> <!-- Div for page content --> 
- <div class="w3-main w3-content w3-padding w3-left-align bwcontainer4"> 
- 
- <h2 id="SN01heading">Saṁyutta Nikāya — The Connected Discourses</h2>
- 
- 		
+ </nav> 
 
-
-
- 
- <h3 id="SN55header">SN55: Connected Discourses on Stream-Entry</h3>
- 
- 	 
- <!--      SN content begins here      -->
+<!-- !PAGE CONTENT! -->
+<div class="w3-main w3-content w3-padding w3-left-align bwcontainer4">
+ 	<h2 id="SN01heading">Saṁyutta Nikāya — The Linked Discourses</h2>
   
- <div id="content">
+		<div class="w3-bar w3-light-grey center">  <!-- Div for SN sub-navigation -->
+			<a href="sn01.html#SN01heading" title="The Book of the Verses" class="w3-bar-item w3-button w3-border w3-mobile w3-hover-yellow" style="width:20%">Vol 1:<br>Verses<br>SN1-11</a>
+			<a href="sn02.html#SN02heading" title="The Book of Causation" class="w3-bar-item w3-button w3-border w3-mobile w3-hover-yellow" style="width:20%">Vol 2:<br>Causation<br>SN12-21</a>
+			<a href="sn03.html#SN03heading" title="The Book of the Aggregates" class="w3-bar-item w3-button w3-border w3-mobile w3-hover-yellow" style="width:20%">Vol 3:<br>Aggregates<br>SN22-34</a>
+			<a href="sn04.html#SN04heading" title="The Book of the Six Sense Bases" class="w3-bar-item w3-button w3-border w3-mobile w3-hover-yellow" style="width:20%">Vol 4:<br>Sense Bases<br>SN35-44</a>
+			<a href="sn05.html#SN05heading" title="The Great Book" class="w3-bar-item w3-button w3-border w3-mobile w3-hover-yellow w3-yellow" style="width:20%">Vol 5:<br>Great Book<br>SN45-56</a>
+		</div>  <!-- End div for SN sub-navigation -->
 
+<!-- SN content begins here -->
 
-<h3>SN55:63–74 Extensiveness of Wisdom, Etc.</h3>
+<div id="content">
+
+<h2>55. Sotāpattisaṁyutta: On Stream-Entry</h2>
+
+<h3>VII. Great Wisdom — SN55.63-74</h3>
 
 <div id="metaarea">
- <ul class="translator">
- <li><a href="/ru/read/?q=sn55.63-74">dg</a> <a href="https://suttacentral.net/sn55.63-74">sc</a> &copy;&nbsp;Translated from the Pali by Bhikkhu Bodhi.&nbsp;
- <a href="../home/copyright.html#wp">(More copyright information)</a>
- </li>
- </ul>
- </div>
-<section class="raw_sutta">  <!-- English and Pali -->
+	<ul class="translator">
+	<li><a class="dg-link" href="/r/?q=sn55.63-74">DG</a> <a href="https://suttacentral.net/sn55.63-74">SC</a> ©&nbsp;Translated from the Pali by Bhante Sujato.&nbsp;<a href="../home/copyright.html#sc">(More copyright information)</a></li>
+	</ul>
+</div>
+
+<section class="raw_sutta">
 <div lang="en">
 
-<p>"Bhikkhus, these four things, when developed and cultivated, lead to extensiveness of wisdom … to vastness of wisdom … to depth of wisdom … to the state of unequalled wisdom<span class="note" id="n373"><span class="details"><span class="p">[n.373] Reading with Se <i>asāmantapaññatāya,</i> as against <i>appamatta-</i> in Be and Ee.</span></span></span> … to breadth of wisdom … to abundance of wisdom … to quickness of wisdom … to buoyancy of wisdom … to joyousness of wisdom … <a class="pts_pn">sn.v.413</a> … to swiftness of wisdom … to sharpness of wisdom … to penetrativeness of wisdom.<span class="note" id="n374"><span class="details"><span class="p">[n.374] Paṭis II 189–202 quotes the passage in full and defines all the terms with the aid of the full conceptual apparatus of early Theravada scholasticism.</span></span></span> What four? Association with superior persons, hearing the true Dhamma, careful attention, practice in accordance with the Dhamma. These four things, when developed and cultivated, lead to penetrativeness of wisdom."</p>
+<p><span class="parno">(63)</span>“Mendicants, when four things are developed and cultivated they lead to widespread wisdom …”</p>
 
-<p><a class="pts_pn">sn.v.414</a></p>
-</div>
+<p><span class="parno">(64)</span>“Mendicants, when four things are developed and cultivated they lead to abundant wisdom …”</p>
 
+<p><span class="parno">(65)</span>“Mendicants, when four things are developed and cultivated they lead to deep wisdom …”</p>
+
+<p><span class="parno">(66)</span>“Mendicants, when four things are developed and cultivated they lead to extraordinary wisdom …”</p>
+
+<p><span class="parno">(67)</span>“Mendicants, when four things are developed and cultivated they lead to vast wisdom …”</p>
+
+<p><span class="parno">(68)</span>“Mendicants, when four things are developed and cultivated they lead to much wisdom …”</p>
+
+<p><span class="parno">(69)</span>“Mendicants, when four things are developed and cultivated they lead to fast wisdom …”</p>
+
+<p><span class="parno">(70)</span>“Mendicants, when four things are developed and cultivated they lead to light wisdom …”</p>
+
+<p><span class="parno">(71)</span>“Mendicants, when four things are developed and cultivated they lead to laughing wisdom …”</p>
+
+<p><span class="parno">(72)</span>“Mendicants, when four things are developed and cultivated they lead to swift wisdom …”</p>
+
+<p><span class="parno">(73)</span>“Mendicants, when four things are developed and cultivated they lead to sharp wisdom …”</p>
+
+<hr>
+
+<p><span class="parno">(74)</span>“Mendicants, when four things are developed and cultivated they lead to penetrating wisdom. What four? Associating with good people, listening to the true teaching, proper attention, and practicing in line with the teaching. When these four things are developed and cultivated they lead to penetrating wisdom.”</p>
+
+</div> <!-- End English -->
 <div lang="pi">
+<p><span class="parno">(63)</span>“… Puthupaññatāya saṁvattantī”ti.</p>
 
-</div>
+<p><span class="parno">(64)</span>“… Vipulapaññatāya saṁvattantī”ti.</p>
+
+<p><span class="parno">(65)</span>“… Gambhīrapaññatāya saṁvattantī”ti.</p>
+
+<p><span class="parno">(66)</span>“… Appamattapaññatāya saṁvattantī”ti.</p>
+
+<p><span class="parno">(67)</span>“… Bhūripaññatāya saṁvattantī”ti.</p>
+
+<p><span class="parno">(68)</span>“… Paññābāhullāya saṁvattantī”ti.</p>
+
+<p><span class="parno">(69)</span>“… Sīghapaññatāya saṁvattantī”ti.</p>
+
+<p><span class="parno">(70)</span>“… Lahupaññatāya saṁvattantī”ti.</p>
+
+<p><span class="parno">(71)</span>“… Hāsapaññatāya saṁvattantī”ti.</p>
+
+<p><span class="parno">(72)</span>“… Javanapaññatāya saṁvattantī”ti.</p>
+
+<p><span class="parno">(73)</span>“… Tikkhapaññatāya saṁvattantī”ti.</p>
+
+<hr>
+
+<p><span class="parno">(74)</span>“… Nibbedhikapaññatāya saṁvattanti. Katame cattāro? Sappurisasaṁsevo, saddhammassavanaṁ, yonisomanasikāro, dhammānudhammappaṭipatti — ime kho, bhikkhave, cattāro dhammā bhāvitā bahulīkatā nibbedhikapaññatāya saṁvattantī”ti.</p>
+
+</div> <!-- end pali -->
+
 </section>  <!-- End English and Pali -->
 <div id="nextprev"><a id="previous-sutta" href="./sn55.62.html#content"></a><a id="next-sutta" href="./sn56.html#content"></a></div>
 </div>  <!--End Content -->
@@ -154,13 +201,10 @@
 <div class="w3-white bwcontainer2"> <!-- Footer div -->
 <!-- Footer -->
 		<footer>
-			<div id="breadcrumbs"> 
-<a href="../home/index.html">Home</a><a href="sn.html">Saṁyutta Nikāya</a><a href="sn55.html">Connected Discourses on Stream-Entry</a>SN55:63–74 Extensiveness of Wisdom, Etc.
-</div>
-	
- 	<div class="bottomlinks">
+			<div id="breadcrumbs"><a href="../home/index.html">Home</a><a href="sn.html">Saṁyutta Nikāya</a><a href="sn55.html">55. Sotāpattisaṁyutta: On Stream-Entry</a> SN55.63-74</div>
+					<div class="bottomlinks">
  	<a href="../guide/guide.html"><span class="w3-bar-item"><i class="fa fa-compass"></i>&nbsp;Guide</span></a>
- 	<a href="../home/help.html"><span class="w3-bar-item"><i class="fa fa-info"></i>&nbsp;Help</span></a>
+ 	 	<a href="../home/help.html"><span class="w3-bar-item"><i class="fa fa-info"></i>&nbsp;Help</span></a>
  	<a href="../home/crossreference.html"><span class="w3-bar-item"><i class="fa fa-exchange"></i>&nbsp;Links&nbsp;Cross&nbsp;Reference</span></a>
  	<a href="../home/copyright.html"><span class="w3-bar-item">&copy;&nbsp;Copyright</span></a>
  	<a href="../home/contact.html"><span class="w3-bar-item"><i class="fa fa-envelope"></i>&nbsp;Contact</span></a>
@@ -222,5 +266,6 @@
  </script>
  <script src="../js/footer.js"></script><script src="../js/dpd_deconstructor.js"></script><script src="../js/dpd_ebts.js"></script><script src="../js/dpd_i2h.js"></script>
  <script src="/sw.js"></script>
+<script>document.addEventListener("click",e=>{if(e.target.closest("a.dg-link")){e.preventDefault();const s=new URLSearchParams(window.location.search).get("s");window.location.href=e.target.closest("a").href+(s?`&s=${encodeURIComponent(s)}`:"");}})</script>
  </body>
  </html>

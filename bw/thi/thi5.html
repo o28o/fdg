@@ -122,7 +122,7 @@
 <h3>Chapter 5: The Book of the Fives</h3>
 <div id="metaarea">
 <ul class="translator">
-<li><a href="/ru/read/?q=thi5">dg</a> <a href="https://suttacentral.net/thi5">sc</a> &copy;&nbsp;Translated from the Pali by Bhante Sujato and Jessica Walton.&nbsp;<a href="../home/copyright.html#sc">(More copyright information)</a></li>
+<li><a class="dg-link" href="/r/?q=thi5">DG</a> <a href="https://suttacentral.net/thi5">SC</a> &copy;&nbsp;Translated from the Pali by Bhante Sujato and Jessica Walton.&nbsp;<a href="../home/copyright.html#sc">(More copyright information)</a></li>
 </ul>
 </div>
 
@@ -939,5 +939,6 @@ After hearing her words,
  </script>
  <script src="../js/footer.js"></script><script src="../js/dpd_deconstructor.js"></script><script src="../js/dpd_ebts.js"></script><script src="../js/dpd_i2h.js"></script>
  <script src="/sw.js"></script>
+<script>document.addEventListener("click",e=>{if(e.target.closest("a.dg-link")){e.preventDefault();const s=new URLSearchParams(window.location.search).get("s");window.location.href=e.target.closest("a").href+(s?`&s=${encodeURIComponent(s)}`:"");}})</script>
  </body>
  </html>

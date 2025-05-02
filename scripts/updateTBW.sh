@@ -45,5 +45,10 @@ textindex=`echo $i | awk -F'/' '{print $NF}'  | sed 's/.html//g'`
 sed -i '/<li>.*Translated/s/<li>/<li><a href="\/ru\/read\/?q='$textindex'">DG<\/a> <a href="https:\/\/suttacentral.net\/'$textindex'">SC<\/a> /' $i
 done 
 
+
+for i in $(grep -lri "<li>.*Translated" bw/); do textindex=$(echo "$i" | awk -F'/' '{print $NF}' | sed 's/.html//g'); sed -i -e '/<\/body>/i\<script>document.addEventListener("click",e=>{if(e.target.closest("a.dg-link")){e.preventDefault();const s=new URLSearchParams(window.location.search).get("s");window.location.href=e.target.closest("a").href+(s?`&s=${encodeURIComponent(s)}`:"");}})<\/script>' -e '/<li>.*Translated/s/<li>/<li><a class="dg-link" href="\/r\/?q='"$textindex"'">DG<\/a> <a href="https:\/\/suttacentral.net\/'"$textindex"'">SC<\/a> /' "$i"; done
+
+
+
 diff -qr bw/ bw1/
 

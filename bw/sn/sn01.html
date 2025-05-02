@@ -5,6 +5,8 @@
  	<link rel="icon" type="image/x-icon" href="../images/favicon.ico">
  	<title>Samyutta Nikāya I – The Book with Verses</title>
  	<meta name="viewport" content="width=device-width, initial-scale=1">
+		<!-- Loading manifest -->
+	<link rel="manifest" href="../manifest.json">
  	<!-- Loading third party fonts -->
  	<link href="../fonts/font-awesome.min.css" rel="stylesheet" type="text/css">
  	<!-- Loading main and menu stylesheets -->
@@ -42,7 +44,7 @@
  		<div id="navbar" class="w3-hide-small w3-hide-medium bwcontainer3">
  			<ul id="css3menu0">
  				<li class="topfirst" id="home"><a href="../home/index.html" class="w3-hide-small">Home</a></li>
-			<li class="topmenu" id="dn"><a href="../dn/dn.html" class="w3-hide-small">Dīgha Nikāya</a></li>
+ 			<li class="topmenu" id="dn"><a href="../dn/dn.html" class="w3-hide-small">Dīgha Nikāya</a></li>
  				<li class="topmenu" id="mn"><a href="../mn/mn.html" class="w3-hide-small">Majjhima Nikāya</a></li>
  				<li class="topmenu" id="sn"><a href="../sn/sn.html" class="pressed w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Saṁyutta Nikāya</a>
  					<ul>
@@ -82,8 +84,8 @@
  					<ul>
  						<li><a href="../vi/kd.html" class="w3-hide-small">Khandhaka</a></li>
  						<li><a href="../vi/bu-vb.html" class="w3-hide-small">Bhikkhu Vibhaṅga</a></li>
- 						<li><a href="../vi/bu-pt.html" class="w3-hide-small">Bhikkhu Pāṭimokkha</a></li>
- 						<li><a href="../vi/bi-pt.html" class="w3-hide-small">Bhikkhunī Pāṭimokkha</a></li>
+ 						<li><a href="../vi/bu-pt.html" class="w3-hide-small">Bhikkhu Pātimokkha</a></li>
+ 						<li><a href="../vi/bi-pt.html" class="w3-hide-small">Bhikkhunī Pātimokkha</a></li>
  						<li><a href="../vi/bi-vb.html" class="w3-hide-small">Bhikkhunī Vibhaṅga</a></li>
  					</ul>
  				</li>
@@ -96,7 +98,6 @@
  	<a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-times fa-2x red-color"></i>&nbsp;&nbsp;&nbsp;Close</a><!-- Hides the sidebar when clicked -->
  		<div class="w3-bar-block w3-white">
  			<a href="../home/index.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-home fa-lg"></i>&nbsp;&nbsp;&nbsp;Home</a>
- 			
  			<a href="../guide/guide.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Guide</a>
  			<a href="../dn/dn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Dīgha Nikāya</a>
  			<a href="../mn/mn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Majjhima Nikāya</a>
@@ -106,59 +107,73 @@
  			<a href="../vi/vi.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Vinaya Piṭaka</a>
  		</div>
  </nav>
- 
- 
- 
-<!-- !PAGE DIV! --> <!-- Div for page content --> 
- <div class="w3-main w3-content w3-padding w3-left-align bwcontainer4"> 
 
+<!-- !PAGE CONTENT! --> 
+<div class="w3-main w3-content w3-padding w3-left-align bwcontainer4"> 
 
- <h2>Saṁyutta Nikāya — The Connected Discourses</h2>
- 
- 		
+ <h2>Saṁyutta Nikāya — The Linked Discourses</h2>
+	
+<div id="content">
+	
+ 			<div class="w3-bar w3-light-grey center">  <!-- Div for SN sub-navigation -->
+ 					<a href="sn01.html#content" title="The Book of the Verses" class="w3-bar-item w3-button w3-border w3-mobile w3-hover-yellow w3-yellow" style="width:20%">Vol 1:<br>Verses<br>SN1-11</a>
+ 					<a href="sn02.html#content" title="The Book of Causation" class="w3-bar-item w3-button w3-border w3-mobile w3-hover-yellow" style="width:20%">Vol 2:<br>Causation<br>SN12-21</a>
+ 					<a href="sn03.html#content" title="The Book of the Aggregates" class="w3-bar-item w3-button w3-border w3-mobile w3-hover-yellow" style="width:20%">Vol 3:<br>Aggregates<br>SN22-34</a>
+ 					<a href="sn04.html#content" title="The Book of the Six Sense Bases" class="w3-bar-item w3-button w3-border w3-mobile w3-hover-yellow" style="width:20%">Vol 4:<br>Sense Bases<br>SN35-44</a>
+ 					<a href="sn05.html#content" title="The Great Book" class="w3-bar-item w3-button w3-border w3-mobile w3-hover-yellow" style="width:20%">Vol 5:<br>Great Book<br>SN45-56</a>
+ 				</div>  <!-- End div for SN sub-navigation -->
 
-<h3 id="SN01heading">1: Saṁyutta Nikāya - The Book with Verses - Sagātthāvagga</h3>
-
- 
+ <div class="btn-group bwnav" style="margin-top: 1em"> 
+ 	<a href="sn1.html#content" title="1. Devatāsaṁyutta: On Deities" class="w3-bar-item w3-hover-white w3-border-white w3-button">SN1</a>
+ 	<a href="sn2.html#content" title="2. Devaputtasaṁyutta: On Gods" class="w3-bar-item w3-hover-white w3-border-white w3-button">SN2</a>
+ 	<a href="sn3.html#content" title="3. Kosalasaṁyutta: With the Kosalan" class="w3-bar-item w3-hover-white w3-border-white w3-button">SN3</a>
+ 	<a href="sn4.html#content" title="4. Mārasaṁyutta: With Māra" class="w3-bar-item w3-hover-white w3-border-white w3-button">SN4</a>
+ 	<a href="sn5.html#content" title="5. Bhikunīsaṁyutta: With Nuns" class="w3-bar-item w3-hover-white w3-border-white w3-button">SN5</a>
+ 	<a href="sn6.html#content" title="6. Brahmasaṁyutta: With Brahmās" class="w3-bar-item w3-hover-white w3-border-white w3-button">SN6</a>
+ 	<a href="sn7.html#content" title="7. Brāhmaṇasaṁyutta: With Brahmins" class="w3-bar-item w3-hover-white w3-border-white w3-button">SN7</a>
+ 	<a href="sn8.html#content" title="8. Vaṅgīsasaṁyutta: With Vaṅgīsa" class="w3-bar-item w3-hover-white w3-border-white w3-button">SN8</a>
+ 	<a href="sn9.html#content" title="9. Vanasaṁyutta: In the Woods" class="w3-bar-item w3-hover-white w3-border-white w3-button">SN9</a>
+ 	<a href="sn10.html#content" title="10. Yakkhasaṁyutta: With Spirits" class="w3-bar-item w3-hover-white w3-border-white w3-button">SN10</a>
+ 	<a href="sn11.html#content" title="11. Sakkasaṁyutta: With Sakka" class="w3-bar-item w3-hover-white w3-border-white w3-button">SN11</a>
+ </div><!-- End div for lower sub-navigation -->
 
 <!--      SN content begins here      -->
-
-<div id="content">
+<h2>1: Saṁyutta Nikāya - The Book with Verses - Sagātthāvagga</h2>
 
 	<div class="w3-responsive">
 		<table class="w3-striped suttalist">
 		<tr class="w3-hover-yellow">
-			<td><a href="./sn1.html#SN1heading">SN1:&nbsp;&nbsp;Connected Discourses with Devatas</a></td>
+			<td><a href="./sn1.html#content">1. Devatāsaṁyutta: On Deities</a></td>
 		</tr>
 		<tr class="w3-hover-yellow">
-			<td><a href="./sn2.html#SN2heading">SN2:&nbsp;&nbsp;Connected Discourses with Young Devas</a></td>
+			<td><a href="./sn2.html#content">2. Devaputtasaṁyutta: On Gods</a></td>
 		</tr>
 		<tr class="w3-hover-yellow">
-			<td><a href="./sn3.html#SN3heading">SN3:&nbsp;&nbsp;Connected Discourses with the Kosalan</a></td>
+			<td><a href="./sn3.html#content">3. Kosalasaṁyutta: With King Pasenadi of Kosala</a></td>
 		</tr>
 		<tr class="w3-hover-yellow">
-			<td><a href="./sn4.html#SN4heading">SN4:&nbsp;&nbsp;Connected Discourses with Māra</a></td>
+			<td><a href="./sn4.html#content">4. Mārasaṁyutta: With Māra</a></td>
 		</tr>
 		<tr class="w3-hover-yellow">
-			<td><a href="./sn5.html#SN5heading">SN5:&nbsp;&nbsp;Connected Discourses with Bhikkhunīs</a></td>
+			<td><a href="./sn5.html#content">5. Bhikunīsaṁyutta: With Nuns</a></td>
 		</tr>
 		<tr class="w3-hover-yellow">
-			<td><a href="./sn6.html#SN6heading">SN6:&nbsp;&nbsp;Connected Discourses with Brahmas</a></td>
+			<td><a href="./sn6.html#content">6. Brahmasaṁyutta: With Brahmās</a></td>
 		</tr>
 		<tr class="w3-hover-yellow">
-			<td><a href="./sn7.html#SN7heading">SN7:&nbsp;&nbsp;Connected Discourses with Brahmins</a></td>
+			<td><a href="./sn7.html#content">7. Brāhmaṇasaṁyutta: With Brahmins</a></td>
 		</tr>
 		<tr class="w3-hover-yellow">
-			<td><a href="./sn8.html#SN8heading">SN8:&nbsp;&nbsp;Connected Discourses with Vangisa</a></td>
+			<td><a href="./sn8.html#content">8. Vaṅgīsasaṁyutta: With Vaṅgīsa</a></td>
 		</tr>
 		<tr class="w3-hover-yellow">
-			<td><a href="./sn9.html#SN9heading">SN9:&nbsp;&nbsp;Connected Discourses in the Woods</a></td>
+			<td><a href="./sn9.html#content">9. Vanasaṁyutta: In the Woods</a></td>
 		</tr>
 		<tr class="w3-hover-yellow">
-			<td><a href="./sn10.html#SN10heading">SN10:&nbsp;&nbsp;Connected Discourses with Yakkhas</a></td>
+			<td><a href="./sn10.html#content">10. Yakkhasaṁyutta: With Spirits</a></td>
 		</tr>
 		<tr class="w3-hover-yellow">
-			<td><a href="./sn11.html#SN11heading">SN11:&nbsp;&nbsp;Connected Discourses with Sakka</a></td>
+			<td><a href="./sn11.html#content">11. Sakkasaṁyutta: With Sakka</a></td>
 		</tr>
 		</table>
 </div>
@@ -177,7 +192,7 @@
 	
  	<div class="bottomlinks">
  	<a href="../guide/guide.html"><span class="w3-bar-item"><i class="fa fa-compass"></i>&nbsp;Guide</span></a>
- 	<a href="../home/help.html"><span class="w3-bar-item"><i class="fa fa-info"></i>&nbsp;Help</span></a>
+ 	 	<a href="../home/help.html"><span class="w3-bar-item"><i class="fa fa-info"></i>&nbsp;Help</span></a>
  	<a href="../home/crossreference.html"><span class="w3-bar-item"><i class="fa fa-exchange"></i>&nbsp;Links&nbsp;Cross&nbsp;Reference</span></a>
  	<a href="../home/copyright.html"><span class="w3-bar-item">&copy;&nbsp;Copyright</span></a>
  	<a href="../home/contact.html"><span class="w3-bar-item"><i class="fa fa-envelope"></i>&nbsp;Contact</span></a>

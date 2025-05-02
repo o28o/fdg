@@ -5,6 +5,8 @@
  	<link rel="icon" type="image/x-icon" href="../images/favicon.ico">
  	<title>Dīgha Nikāya 12</title>
  	<meta name="viewport" content="width=device-width, initial-scale=1">
+		<!-- Loading manifest -->
+	<link rel="manifest" href="../manifest.json">
  	<!-- Loading third party fonts -->
  	<link href="../fonts/font-awesome.min.css" rel="stylesheet" type="text/css">
  	<!-- Loading main and menu stylesheets -->
@@ -42,7 +44,7 @@
  		<div id="navbar" class="w3-hide-small w3-hide-medium bwcontainer3">
  			<ul id="css3menu0">
  				<li class="topfirst" id="home"><a href="../home/index.html" class="w3-hide-small">Home</a></li>
- 				<li class="topmenu" id="dn"><a href="../dn/dn.html" class="pressed w3-hide-small">Dīgha Nikāya</a></li>
+  				<li class="topmenu" id="dn"><a href="../dn/dn.html" class="pressed w3-hide-small">Dīgha Nikāya</a></li>
  				<li class="topmenu" id="mn"><a href="../mn/mn.html" class="w3-hide-small">Majjhima Nikāya</a></li>
  				<li class="topmenu" id="sn"><a href="../sn/sn.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Saṁyutta Nikāya</a>
  					<ul>
@@ -82,8 +84,8 @@
  					<ul>
  						<li><a href="../vi/kd.html" class="w3-hide-small">Khandhaka</a></li>
  						<li><a href="../vi/bu-vb.html" class="w3-hide-small">Bhikkhu Vibhaṅga</a></li>
- 						<li><a href="../vi/bu-pt.html" class="w3-hide-small">Bhikkhu Pāṭimokkha</a></li>
- 						<li><a href="../vi/bi-pt.html" class="w3-hide-small">Bhikkhunī Pāṭimokkha</a></li>
+ 						<li><a href="../vi/bu-pt.html" class="w3-hide-small">Bhikkhu Pātimokkha</a></li>
+ 						<li><a href="../vi/bi-pt.html" class="w3-hide-small">Bhikkhunī Pātimokkha</a></li>
  						<li><a href="../vi/bi-vb.html" class="w3-hide-small">Bhikkhunī Vibhaṅga</a></li>
  					</ul>
  				</li>
@@ -96,7 +98,6 @@
  	<a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-times fa-2x red-color"></i>&nbsp;&nbsp;&nbsp;Close</a><!-- Hides the sidebar when clicked -->
  		<div class="w3-bar-block w3-white">
  			<a href="../home/index.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-home fa-lg"></i>&nbsp;&nbsp;&nbsp;Home</a>
- 			
  			<a href="../guide/guide.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Guide</a>
  			<a href="../dn/dn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Dīgha Nikāya</a>
  			<a href="../mn/mn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Majjhima Nikāya</a>
@@ -109,179 +110,339 @@
  
  
  
-<!-- !PAGE DIV! --> <!-- Div for page content --> 
+   <!-- !PAGE CONTENT! --> 
 <div class="w3-main w3-content w3-padding w3-left-align bwcontainer4">
 <div id="content">
 <h2>Dīgha Nikāya</h2>
 <h3>DN12: Lohicca Sutta – With Lohicca </h3>
 
 <div id="metaarea">
-<ul class="translator">
-<li><a href="/ru/read/?q=dn12">dg</a> <a href="https://suttacentral.net/dn12">sc</a> &copy;&nbsp;Translated from the Pali by Maurice Walshe &nbsp;<a href="../home/copyright.html#wp">(More copyright information)</a>
-</ul>
+	<ul class="translator">
+		<li><a class="dg-link" href="/r/?q=dn12">DG</a> <a href="https://suttacentral.net/dn12">SC</a> ©&nbsp;Translated from the Pali by Bhante Sujato.&nbsp;<a href="../home/copyright.html#sc">(More copyright information)</a>
+	</ul>
 </div>
 
-<section class="raw_sutta">  <!-- English and Pali -->
+<section class="raw_sutta">
 <div lang="en">
+<p><span class="parno">1</span><span>So I have heard. </span>At one time the Buddha was wandering in the land of the Kosalans together with a large Saṅgha of five hundred mendicants when he arrived at Sālavatikā.</p>
 
-<h4><span class="add">Good and Bad Teachers</span></h4>
-
-<p id="p1"><span class="parno">1</span>Thus have I heard. Once the Lord was touring Kosala with a large company of some five hundred monks, and, coming to Sālavatikā, he stayed there. And at that time the Brahmin Lohicca was living at Sālavatikā, a populous place, full of grass, timber, water and corn, which had been given to him by King Pasenadi of Kosala as a royal gift and with royal powers.</p>
 
 <hr>
-<p id="p2"><span class="parno">2</span>Just then this evil line of reasoning occurred to Lohicca: 'Suppose an ascetic or Brahmin were to discover some good doctrine?<span class="note" id="n243"><span class="details"><span class="p">[n.243] <i>Kusalaṁ dhammaṁ.</i></span></span></span> having done so, he ought not to declare it to anyone else; for what can one man do for another? It is just as if a man, having cut through an old fetter, were to make a new one. I declare that such a thing is an evil deed rooted in attachment, for what can one man do for another?'</p>
+
+<p>Now at that time the brahmin Lohicca was living in Sālavatikā. It was a crown property given by King Pasenadi of Kosala, teeming with living creatures, full of hay, wood, water, and grain, a royal endowment of the highest quality.</p>
 
 <hr>
-<p id="p3"><span class="parno">3</span>Then Lohicca heard it said that the ascetic Gotama had arrived at Salavatika, and that concerning the Blessed Lord Gotama a good report had been spread about… <span class="add">as Sutta 4, verse 2</span>. 'And indeed it is good to see such Arahants.'</p>
 
-<p id="p4"><span class="parno">4</span>And Lohicca said to Bhesika the barber: 'Friend Bhesika, go to the ascetic Gotama, ask in my name after his health and then say: "May the Reverend Gotama consent to take tomorrow's meal, with his order of monks, from the Brahmin Lohicca!'"</p>
-
-<hr>
-<p id="p5"><span class="parno">5</span>'Very good, sir', said Bhesika, and carried out the errand. The Lord signified his acceptance by silence.</p>
-
-<p id="p6"><span class="parno">6</span>Then Bhesika, understanding the Lord's acceptance, rose from his seat and passed by with his right side to the Lord. He returned to Lohicca and told him of the Lord's acceptance.</p>
-
-<p id="p7"><span class="parno">7</span>And Lohicca, as the night was ending, had choice hard and soft foods prepared at his own home. Then he sent Bhesika to tell the Lord that the meal was ready.</p>
+<p><span class="parno">2</span>Now at that time Lohicca had the following harmful misconception: “Should an ascetic or brahmin achieve some skillful quality, they ought not inform anyone else. For what can one person do for another? Suppose someone cut off an old bond, only to create another new bond. That’s the consequence of such a wicked, greedy deed, I say. For what can one person do for another?”</p>
 
 <hr>
-<p>And the Lord, having risen early and taken his robe and bowl, went with his order of monks to Sālavatikā.</p>
 
-<p id="p8"><span class="parno">8</span>And Bhesika the barber followed the Lord close at hand. And he said: 'Lord, this evil thought has occurred to the Brahmin Lohicca…Truly, Lord, this is what the Brahmin Lohicca has been thinking.' 'It may well be so, Bhesika, it may well be so.'</p>
+<p><span class="parno">3</span>Lohicca heard:</p>
 
-<hr>
-<p id="p9"><span class="parno">9</span>So the Lord came to Lohicca's dwelling, and sat down on the prepared seat. Lohicca personally served the Buddha and his order of monks with choice hard and soft food till they were contented and satisfied.</p>
-
-<h3>Lohicca's Inquiry</h3>
-
-<p id="p10"><span class="parno">10</span>When the Lord had taken his hand from the bowl, Lohicca took a low stool and sat down to one side. Then the Lord said to him: 'Lohicca, is it true that an evil line of reasoning has occurred to you … <span class="add">as verse 2</span>?' 'Yes, Reverend Gotama.'</p>
-
-<p>'What do you think, Lohicca? Don't you reside at Sālavatikā? ' 'Yes, Reverend Gotama.' 'Well now, if anyone should say: "The Brahmin Lohicca resides at Sālavatikā, and he should enjoy the entire fruits and revenues of Sālavatikā, not giving anything away to others" — would not anyone who spoke like that be a source of danger to your tenants?' 'He would be a source of danger, Reverend Gotama.'</p>
-
-<p>'And as such, would he be solicitous for their welfare or not?'</p>
-
-<p>'He would not, Reverend Gotama.'</p>
-
-<p>'And, by not being solicitous for their welfare, would he have a heart full of love for them, or of hatred?' 'Of hatred, Reverend Gotama.'</p>
-
-<p>'And in a heart full of hatred, is there wrong view or right view?' 'Wrong view, Reverend Gotama,'</p>
-
-<p>'But Lohicca, I declare that wrong view leads to one of two destinies — hell or an animal rebirth.<span class="note" id="n244"><span class="details"><span class="p">[n.244] <i>Nirayaṁ vā tiracchāna-yoniṁ vā.</i> The statement that those who hold 'wrong views' are liable to hell or an animal rebirth is off-putting to modem readers. It is doubtful whether either term originally meant what it was later taken to mean. See Introduction, p. 40f. 'A painful or beast-like rebirth' might express the meaning better. It should be realised, too, that the 'wrong view' referred to means one according to which there are no rewards and punishments for good and evil deeds — hence no operation of a moral law. This kind of view the Buddha always declared to be particularly reprehensible. Cf. <a href="dn26.html#n801">n.801</a>.</span></span></span></p>
+<p>“It seems the ascetic Gotama — a Sakyan, gone forth from a Sakyan family — has arrived at Sālavatikā, together with a large Saṅgha of five hundred mendicants. He has this good reputation: ‘That Blessed One is perfected, a fully awakened Buddha, accomplished in knowledge and conduct, holy, knower of the world, supreme guide for those who wish to train, teacher of gods and humans, awakened, blessed.’ He has realized with his own insight this world — with its gods, Māras and Brahmās, this population with its ascetics and brahmins, gods and humans — and he makes it known to others. He teaches Dhamma that’s good in the beginning, good in the middle, and good in the end, meaningful and well-phrased. And he reveals a spiritual practice that’s entirely full and pure. It’s good to see such perfected ones.”</p>
 
 <hr>
-<p id="p11"><span class="parno">11</span>'What do you think, Lohicca? Does King Pasenadi of Kosala reside at Kāsi-Kosala?' 'He does, Reverend Gotama.' 'Well, if anyone should say: "King Pasenadi of Kosala resides at Kāsi-Kosala, and he should enjoy the entire fruits and revenues of Kosala, not giving anything away to others" — would not anyone who spoke like that be a source of danger to his tenants?</p>
+
+<p><span class="parno">4</span>Then Lohicca addressed his barber Rosika: “Here, dear Rosika, go to the ascetic Gotama and in my name bow with your head to his feet. Ask him if he is healthy and well, nimble, strong, and living comfortably. And then ask him whether he, together with the mendicant Saṅgha, might accept tomorrow’s meal from the brahmin Lohicca.”</p>
 
 <hr>
-<p>… Would he not have a heart full of hatred … and would that not be wrong view?' 'It would, Reverend Gotama.'</p>
+
+<p><span class="parno">5</span>“Yes, sir,” Rosika replied. He did as he was asked, and the Buddha consented in silence.</p>
+
+<p><span class="parno">6</span>Then, knowing that the Buddha had consented, Rosika got up from his seat, went to Lohicca, and said to him: “I gave the Buddha your message, and he accepted.”</p>
 
 <hr>
-<p id="p12"><span class="parno">12</span>'Then surely, if anyone were to say the same of the Brahmin Lohicca … that would be wrong view.</p>
 
-<p id="p13"><span class="parno">13</span>'In the same way, Lohicca, if anyone should say: "Suppose an ascetic or Brahmin were to discover some good doctrine and thought he ought not to declare it to anyone else, for what can one man do for another?" he would be a source of danger to those young men of good family who, following the Dhamma and discipline taught by the Tathāgata, attain to such excellent distinction as to realise the fruit of Stream-Entry, of Once-Returning, of Non-Returning, of Arahantship — and to all who ripen the seeds of a rebirth in the deva-world.<span class="note" id="n245"><span class="details"><span class="p">[n.245] Those whose meritorious deeds <i>(puñña)</i> will lead to rebirth in a deva-world, life in which is exceedingly pleasant, but not, of course, everlasting. The mischief of Lohicca's evil view is precisely that it may hinder such a consummation.</span></span></span> Being a source of danger to them, he is uncompassionate, and his heart is grounded in hostility, and that constitutes wrong view, which leads to … hell or an animal rebirth.</p>
+<p><span class="parno">7</span>And when the night had passed Lohicca had a variety of delicious foods prepared in his own home. Then he had the Buddha informed of the time, saying: “Here, dear Rosika, go to the ascetic Gotama and announce the time, saying: ‘It’s time, Master Gotama, the meal is ready.’”</p>
 
-<hr>
-<p id="p14"><span class="parno">14</span>'And if anyone were to speak thus of King Pasenadi, he would be a source of danger to the King's tenants, yourself and others…</p>
-
-<p id="p15"><span class="parno">15</span><span class="add">as verse 13</span></p>
-
-<h3>Three Kinds of Teachers</h3>
-
-<p id="p16"><span class="parno">16</span>'Lohicca, these three kinds of teachers in the world are blameworthy, and if anyone blames such teachers, his blame is proper, true, in accordance with reality and faultless. Which three? Here, Lohicca, is a teacher who has gone forth from the household life into homelessness, but who has not gained the goal of asceticism. And without having gained this goal, he teaches his disciples a doctrine,<span class="note" id="n246"><span class="details"><span class="p">[n.246] <i>Dhammaṁ:</i> but not necessarily the Buddhist Dhamma.</span></span></span> saying: "This is for your good, this is for your happiness." But his pupils don't wish to hear, they don't listen, the don't arouse the thought of enlightenment, and the teacher's instructions are flouted. He should be blamed, saying: "This venerable one has gone forth …, his instructions are flouted. It is just as if a man were to persist in making advances to a woman who rejected him, and to embrace her though she turned away." This I declare to be an evil doctrine based on attachment, for what can one man do for another?<span class="note" id="n247"><span class="details"><span class="p">[n.247] The Buddha repeats Lohicca's own phrase.</span></span></span> This is the first teacher who is blameworthy …</p>
-
-<p id="p17"><span class="parno">17</span>'Again, there is a teacher who has gone forth… but who has not gained the goal of asceticism. Without having gained this goal, he teaches his disciples a doctrine, saying: "This is for your good, this is for your happiness." His pupils wish to hear, they listen, they rouse the thought of enlightenment, and the teacher's instructions are not flouted. He should be blamed, saying: "This venerable one has gone forth …" It is as if, leaving his own field, he should think another's field in need of weeding. I declare this to be an evil doctrine rooted in attachment…This is the second teacher who is blameworthy …</p>
-
-<p id="p18"><span class="parno">18</span>'Again, there is a teacher who has gone forth … and who has gained the goal of asceticism. Having gone forth, he teaches … But his pupils don't wish to hear him, … his instructions are flouted. He too should be blamed…Just as if, having cut through an old fetter, one were to make a new one, I declare that this is an evil doctrine rooted in attachment, for what can one man do for another? This is the third teacher who is blameworthy… And these are the three kinds of teacher that I spoke of as blameworthy.'</p>
-
-<h3>Blameworthy Teachers</h3>
-
-<p id="p19"><span class="parno">19</span>Then Lohicca said: 'Reverend Gotama, are there any teachers in the world who are not blameworthy?'</p>
+<p>“Yes, sir,” Rosika replied. He did as he was asked.</p>
 
 <hr>
-<p id="p20"><span class="parno">20</span>'Here, Lohicca, a Tathāgata arises in the world, an Arahant, fully-enlightened Buddha, endowed with wisdom and conduct, Well-Farer, Knower of the worlds, incomparable Trainer of men to be tamed, Teacher of gods and humans, enlightened and blessed. He, having realised it by his own super-knowledge, proclaims this world with its devas, māras and Brahmas, its princes and people. He preaches the Dhamma which is lovely in its beginning, lovely in its middle, lovely in its ending, in the spirit and in the letter, and displays the fully-perfected and purified holy life. A disciple goes forth and practises the moralities, guards the sense-doors, attains the first jhāna <span class="add">Sutta 2, verses 41–76</span>. And whenever the pupil of a teacher attains to such excellent distinction, that is a teacher who is not to be blamed in the world. And if anyone blames that teacher, his blame is improper, untrue, not in accordance with reality, and faulty.</p>
+
+<p><span class="parno">8</span>Then the Buddha put on his outer robe in the morning and, taking his bowl and robe, went to Sālavatikā together with the Saṅgha of mendicants. Now, Rosika was following behind the Buddha, and told him of Lohicca’s views, adding: “Sir, please dissuade him from that harmful misconception.”</p>
+
+<p>“Hopefully that’ll happen, Rosika, hopefully that’ll happen.”</p>
 
 <hr>
-<p id="p21"><span class="parno">21</span>"He attains the other three jhānas <span class="add">as Sutta 2, verses 77–82</span> and various insights <span class="add">Sutta 2, verses 83–84</span>. Whenever the pupil of a teacher attains to such excellent distinction, that is a teacher who is not to be blamed in the world…</p>
+
+<p><span class="parno">9</span>Then the Buddha approached Lohicca’s home, where he sat on the seat spread out. Then Lohicca served and satisfied the mendicant Saṅgha headed by the Buddha with his own hands with a variety of delicious foods.</p>
+
+<h2>1. Questioning Lohicca </h2>
+
+<p><span class="parno">10</span>When the Buddha had eaten and washed his hand and bowl, Lohicca took a low seat and sat to one side.</p>
+
+<p>The Buddha said to him: “Is it really true, Lohicca, that you have such a harmful misconception: ‘Should an ascetic or brahmin achieve some skillful quality, they ought not inform anyone else. For what can one person do for another? Suppose someone cut off an old bond, only to create another new bond. That’s the consequence of such a wicked, greedy deed, I say. For what can one person do for another?’”</p>
+
+<p>“Yes, Master Gotama.”</p>
+
+<p>“What do you think, Lohicca? Do you reside in Sālavatikā?”</p>
+
+<p>“Yes, Master Gotama.”</p>
 
 <hr>
-<p id="p22"><span class="parno">22</span>. 'He realises the Four Noble Truths, the path, and the cessation of the corruptions … <span class="add">as Sutta 2, verses 85–97</span></p>
 
-<p id="p23"><span class="parno">23</span>'Whenever the pupil of a teacher attains to such excellent distinction, that is a teacher who is not to be blamed in the world. And if anyone blames that teacher, his blame is improper, untrue, not in accordance with reality, and faulty.'</p>
+<p>“Lohicca, suppose someone were to say: ‘The brahmin Lohicca reigns over Sālavatikā. He alone should enjoy the revenues produced in Sālavatikā and not share them with anyone else.’ Would the person who spoke like that make it difficult for those whose living depends on you or not?”</p>
 
 <hr>
-<p id="p24"><span class="parno">24</span>At this the Brahmin Lohicca said to the Lord: 'Reverend Gotama, it is as if a man were to seize someone by the hair who had stumbled and was falling into a pit,<span class="note" id="n248"><span class="details"><span class="p">[n.248] <i>Naraka:</i> a synonym of niraya, hell (n.244).</span></span></span> and to set him on firm ground — just so, I, who was falling into the pit, have been saved by the Reverend Gotama! Excellent, Reverend Gotama, excellent! It is as if someone were to set up what had been knocked down, or to point out the way to one who had got lost, or to bring an oil-lamp into a dark place, so that those with eyes could see what was there. Just so the Reverend Gotama has expounded the Dhamma in various ways.'</p>
 
-<p>'I go for refuge to the Lord Gotama, the Dhamma and the Saṅgha. May the Reverend Gotama accept me as a lay-follower who has taken refuge from this day forth for as long as life shall last!'</p>
+<p><span class="parno">11</span>“They would, Master Gotama.”</p>
+
+<p>“But is someone who creates difficulties for others acting kindly or unkindly?”</p>
+
+<p>“Unkindly, sir.”</p>
+
+<p>“But does an unkind person have love in their heart or hostility?”</p>
+
+<p>“Hostility, sir.”</p>
+
+<p>“And when the heart is full of hostility, is there right view or wrong view?”</p>
+
+<p>“Wrong view, Master Gotama.”</p>
+
+<p>“An individual with wrong view is reborn in one of two places, I say: hell or the animal realm.</p>
+
+<hr>
+
+<p><span class="parno">12</span>What do you think, Lohicca? Does King Pasenadi reign over Kāsī and Kosala?”</p>
+
+<p>“Yes, Master Gotama.”</p>
+
+<p>“Lohicca, suppose someone were to say: ‘King Pasenadi reigns over Kāsī and Kosala. He alone should enjoy the revenues produced in Kāsī and Kosala and not share them with anyone else.’ Would the person who spoke like that make it difficult for yourself and others whose living depends on King Pasenadi or not?”</p>
+
+<hr>
+
+<p><span class="parno">13</span>“They would, Master Gotama.”</p>
+
+<p>“But is someone who creates difficulties for others acting kindly or unkindly?”</p>
+
+<p>“Unkindly, sir.”</p>
+
+<p>“But does an unkind person have love in their heart or hostility?”</p>
+
+<p>“Hostility, sir.”</p>
+
+<p>“And when the heart is full of hostility, is there right view or wrong view?”</p>
+
+<p>“Wrong view, Master Gotama.”</p>
+
+<p>“An individual with wrong view is reborn in one of two places, I say: hell or the animal realm.</p>
+
+<hr>
+
+<p><span class="parno">14-15</span>So it seems, Lohicca, that should someone say such a thing either of Lohicca or of King Pasenadi,  that is wrong view.</p>
+
+<hr>
+
+<p>In the same way, suppose someone were to say: ‘Should an ascetic or brahmin achieve some skillful quality, they ought not inform anyone else. For what can one person do for another? Suppose someone cut off an old bond, only to create another new bond. That’s the consequence of such a wicked, greedy deed, I say. For what can one person do for another?’</p>
+
+<hr>
+
+<p>Now, there are gentlemen who, relying on the teaching and training proclaimed by the Realized One, achieve a high distinction such as the following: they realize the fruit of stream-entry, the fruit of once-return, the fruit of non-return, or the fruit of perfection. And in addition, there are those who ripen the seeds for rebirth in a heavenly state. The person who spoke like that makes it difficult for them. They’re acting unkindly, their heart is full of hostility, and they have wrong view. An individual with wrong view is reborn in one of two places, I say: hell or the animal realm.</p>
+
+<h2>2. Three Teachers Who Deserve to Be Reprimanded </h2>
+
+<p><span class="parno">16</span>Lohicca, there are three kinds of teachers in the world who deserve to be reprimanded. When someone reprimands such teachers, the reprimand is true, substantive, legitimate, and blameless. What three?</p>
+
+<p>Firstly, take a teacher who has not reached the goal of the ascetic life for which they went forth from the lay life to homelessness. They teach their disciples: ‘This is for your welfare. This is for your happiness.’ But their disciples don’t want to listen. They don’t pay attention or apply their minds to understand. They proceed having turned away from the teacher’s instruction. That teacher deserves to be reprimanded: ‘Venerable, you haven’t reached the goal of the ascetic life; and when you teach disciples they proceed having turned away from the teacher’s instruction. It’s like a man who makes advances on a woman though she pulls away, or embraces her though she turns her back. That’s the consequence of such a wicked, greedy deed, I say. For what can one do for another?’ This is the first kind of teacher who deserves to be reprimanded.</p>
+
+<p><span class="parno">17</span>Furthermore, take a teacher who has not reached the goal of the ascetic life for which they went forth from the lay life to homelessness. They teach their disciples: ‘This is for your welfare. This is for your happiness.’ Their disciples do want to listen. They pay attention and apply their minds to understand. They don’t proceed having turned away from the teacher’s instruction. That teacher deserves to be reprimanded: ‘Venerable, you haven’t reached the goal of the ascetic life; and when you teach disciples they don’t proceed having turned away from the teacher’s instruction. It’s like someone who abandons their own field and presumes to weed someone else’s field. That’s the consequence of such a wicked, greedy deed, I say. For what can one do for another?’ This is the second kind of teacher who deserves to be reprimanded.</p>
+
+<p><span class="parno">18</span>Furthermore, take a teacher who has reached the goal of the ascetic life for which they went forth from the lay life to homelessness. They teach their disciples: ‘This is for your welfare. This is for your happiness.’ But their disciples don’t want to listen. They don’t pay attention or apply their minds to understand. They proceed having turned away from the teacher’s instruction. That teacher deserves to be reprimanded: ‘Venerable, you have reached the goal of the ascetic life; yet when you teach disciples they proceed having turned away from the teacher’s instruction. Suppose someone cut off an old bond, only to create another new bond. That’s the consequence of such a wicked, greedy deed, I say. For what can one person do for another?’ This is the third kind of teacher who deserves to be reprimanded.</p>
+
+<p>These are the three kinds of teachers in the world who deserve to be reprimanded. When someone reprimands such teachers, the reprimand is true, substantive, legitimate, and blameless.”</p>
+
+<h2>3. A Teacher Who Does Not Deserve to Be Reprimanded </h2>
+
+<p><span class="parno">19</span>When he had spoken, Lohicca said to the Buddha: “But Master Gotama, is there a teacher in the world who does not deserve to be reprimanded?”</p>
+
+<p>“There is, Lohicca.”</p>
+
+<p>“But who is that teacher?”</p>
+
+<p><span class="parno">20</span>“It’s when a Realized One arises in the world, perfected, a fully awakened Buddha … That’s how a mendicant is accomplished in ethics. … They enter and remain in the first absorption … A teacher under whom a disciple achieves such a high distinction is one who does not deserve to be reprimanded. When someone reprimands such a teacher, the reprimand is false, baseless, illegitimate, and blameworthy.</p>
+
+<p><span class="parno">21</span>They enter and remain in the second absorption … third absorption … fourth absorption. A teacher under whom a disciple achieves such a high distinction is one who does not deserve to be reprimanded. …</p>
+
+
+<p><span class="parno">22</span>They extend and project the mind toward knowledge and vision … A teacher under whom a disciple achieves such a high distinction is one who does not deserve to be reprimanded. …</p>
+
+
+<p><span class="parno">23</span>They understand: ‘… there is no return to any state of existence.’ A teacher under whom a disciple achieves such a high distinction is one who does not deserve to be reprimanded. When someone reprimands such a teacher, the reprimand is false, baseless, illegitimate, and blameworthy.”</p>
+
+
+<hr>
+
+<p><span class="parno">24</span>When he had spoken, Lohicca said to the Buddha:</p>
+
+<p>“Suppose, Master Gotama, a person was on the verge of falling off a cliff, and another person were to grab them by the hair, pull them up, and place them on firm ground. In the same way, when I was falling off a cliff Master Gotama pulled me up and placed me on safe ground.</p>
+
+<p>Excellent, Master Gotama! Excellent! As if he were righting the overturned, or revealing the hidden, or pointing out the path to the lost, or lighting a lamp in the dark so people with good eyes can see what’s there, Master Gotama has made the Teaching clear in many ways. I go for refuge to Master Gotama, to the teaching, and to the mendicant Saṅgha. From this day forth, may Master Gotama remember me as a lay follower who has gone for refuge for life.”</p>
 </div>
 
 <div lang="pi">
 	
-<h3>&nbsp;</h3>
-
-<p><span class="parno">1</span>Evaṁ me sutaṁ—​ ekaṁ samayaṁ bhagavā kosalesu cārikaṁ caramāno mahatā bhikkhusaṅghena saddhiṁ pañcamattehi bhikkhusatehi yena sālavatikā tadavasari. Tena kho pana samayena lohicco brāhmaṇo sālavatikaṁ ajjhāvasati sattussadaṁ satiṇakaṭṭhodakaṁ sadhaññaṁ rājabhoggaṁ raññā pasenadinā kosalena dinnaṁ rājadāyaṁ brahmadeyyaṁ.</p>
+<p><span class="parno">1</span>Evaṁ me sutaṁ — ​ ekaṁ samayaṁ bhagavā kosalesu cārikaṁ caramāno mahatā bhikkhusaṅghena saddhiṁ pañcamattehi bhikkhusatehi yena sālavatikā tadavasari. </p>
 
 <hr>
+
+<p>Tena kho pana samayena lohicco brāhmaṇo sālavatikaṁ ajjhāvasati sattussadaṁ satiṇakaṭṭhodakaṁ sadhaññaṁ rājabhoggaṁ raññā pasenadinā kosalena dinnaṁ rājadāyaṁ brahmadeyyaṁ.</p>
+
+
+<hr>
+
 <p><span class="parno">2</span>Tena kho pana samayena lohiccassa brāhmaṇassa evarūpaṁ pāpakaṁ diṭṭhigataṁ uppannaṁ hoti: "idha samaṇo vā brāhmaṇo vā kusalaṁ dhammaṁ adhigaccheyya, kusalaṁ dhammaṁ adhigantvā na parassa āroceyya, kiñhi paro parassa karissati. Seyyathāpi nāma purāṇaṁ bandhanaṁ chinditvā aññaṁ navaṁ bandhanaṁ kareyya; evaṁ sampadamidaṁ pāpakaṁ lobhadhammaṁ vadāmi, kiñhi paro parassa karissatī"ti.</p>
 
-<hr>
-<p><span class="parno">3</span>Assosi kho lohicco brāhmaṇo: "Samaṇo khalu, bho, gotamo sakyaputto sakyakulā pabbajito kosalesu cārikaṁ caramāno mahatā bhikkhusaṅghena saddhiṁ pañcamattehi bhikkhusatehi sālavatikaṁ anuppatto. Taṁ kho pana bhavantaṁ gotamaṁ evaṁ kalyāṇo kittisaddo abbhuggato: 'itipi so bhagavā arahaṁ sammāsambuddho vijjācaraṇasampanno sugato lokavidū anuttaro purisadammasārathi satthā devamanussānaṁ buddho bhagavā'. So imaṁ lokaṁ sadevakaṁ samārakaṁ sabrahmakaṁ sassamaṇabrāhmaṇiṁ pajaṁ sadevamanussaṁ sayaṁ abhiññā sacchikatvā pavedeti. So dhammaṁ deseti ādikalyāṇaṁ majjhekalyāṇaṁ pariyosānakalyāṇaṁ sātthaṁ sabyañjanaṁ kevalaparipuṇṇaṁ parisuddhaṁ brahmacariyaṁ pakāseti. Sādhu kho pana tathārūpānaṁ arahataṁ dassanaṁ hotī"ti.</p>
-
-<p><span class="parno">4</span>Atha kho lohicco brāhmaṇo <span class="var" title="bhesikaṁ (bj, pts1)" id="note233">rosikaṁ</span> nhāpitaṁ āmantesi: "ehi tvaṁ, samma rosike, yena samaṇo gotamo tenupasaṅkama; upasaṅkamitvā mama vacanena samaṇaṁ gotamaṁ appābādhaṁ appātaṅkaṁ lahuṭṭhānaṁ balaṁ phāsuvihāraṁ puccha: 'lohicco, bho gotama, brāhmaṇo bhavantaṁ gotamaṁ appābādhaṁ appātaṅkaṁ lahuṭṭhānaṁ balaṁ phāsuvihāraṁ pucchatī'ti; evañca vadehi—adhivāsetu kira bhavaṁ gotamo lohiccassa brāhmaṇassa svātanāya bhattaṁ saddhiṁ bhikkhusaṁghenā"ti.</p>
 
 <hr>
-<p><span class="parno">5</span>"<span class="var" title="evaṁ bhanteti (bj, s1–3, pts1)" id="note234">Evaṁ, bho"ti</span> kho rosikā nhāpito lohiccassa brāhmaṇassa paṭissutvā yena bhagavā tenupasaṅkami; upasaṅkamitvā bhagavantaṁ abhivādetvā ekamantaṁ nisīdi. Ekamantaṁ nisinno kho rosikā nhāpito bhagavantaṁ etadavoca: "lohicco, bhante, brāhmaṇo bhagavantaṁ appābādhaṁ appātaṅkaṁ lahuṭṭhānaṁ balaṁ phāsuvihāraṁ pucchati; evañca vadeti:adhivāsetu kira, bhante, bhagavā lohiccassa brāhmaṇassa svātanāya bhattaṁ saddhiṁ bhikkhusaṁghenā"ti. Adhivāsesi bhagavā tuṇhībhāvena.</p>
 
-<p><span class="parno">6</span>Atha kho <span class="var" title="bhesikā (bj, pts1)" id="note235">rosikā</span> nhāpito bhagavato adhivāsanaṁ viditvā uṭṭhāyāsanā bhagavantaṁ abhivādetvā padakkhiṇaṁ katvā yena lohicco brāhmaṇo tenupasaṅkami; upasaṅkamitvā lohiccaṁ brāhmaṇaṁ etadavoca: "<span class="var" title="avocumha bho (pts1)" id="note236">avocumhā kho</span> <span class="var" title="Mayaṁ bhante tava (bj, pts1)" id="note237">mayaṁ bhoto</span> vacanena taṁ bhagavantaṁ: 'lohicco, bhante, brāhmaṇo bhagavantaṁ appābādhaṁ appātaṅkaṁ lahuṭṭhānaṁ balaṁ phāsuvihāraṁ pucchati; evañca vadeti:adhivāsetu kira, bhante, bhagavā lohiccassa brāhmaṇassa svātanāya bhattaṁ saddhiṁ bhikkhusaṁghenā'ti. Adhivutthañca pana tena bhagavatā"ti.</p>
+<p><span class="parno">3</span>Assosi kho lohicco brāhmaṇo: </p>
 
-<p><span class="parno">7</span>Atha kho lohicco brāhmaṇo tassā rattiyā accayena sake nivesane paṇītaṁ khādanīyaṁ bhojanīyaṁ paṭiyādāpetvā rosikaṁ nhāpitaṁ āmantesi: "ehi tvaṁ, samma rosike, yena samaṇo gotamo tenupasaṅkama; upasaṅkamitvā samaṇassa gotamassa kālaṁ ārocehi—kālo, bho gotama, niṭṭhitaṁ bhattan"ti. "Evaṁ, bho"ti kho rosikā nhāpito lohiccassa brāhmaṇassa paṭissutvā yena bhagavā tenupasaṅkami; upasaṅkamitvā bhagavantaṁ abhivādetvā ekamantaṁ aṭṭhāsi. Ekamantaṁ ṭhito kho rosikā nhāpito bhagavato kālaṁ ārocesi: "kālo, bhante, niṭṭhitaṁ bhattan"ti.</p>
-
-<hr>
-<p><span class="parno">8</span>Atha kho bhagavā pubbaṇhasamayaṁ nivāsetvā pattacīvaramādāya saddhiṁ bhikkhusaṅghena yena sālavatikā tenupasaṅkami. Tena kho pana samayena rosikā nhāpito bhagavantaṁ piṭṭhito piṭṭhito anubandho hoti. Atha kho rosikā nhāpito bhagavantaṁ etadavoca: "lohiccassa, bhante, brāhmaṇassa evarūpaṁ pāpakaṁ diṭṭhigataṁ uppannaṁ: 'idha samaṇo vā brāhmaṇo vā kusalaṁ dhammaṁ adhigaccheyya, kusalaṁ dhammaṁ adhigantvā na parassa āroceyya—kiñhi paro parassa karissati. Seyyathāpi nāma purāṇaṁ bandhanaṁ chinditvā aññaṁ navaṁ bandhanaṁ kareyya; evaṁ sampadamidaṁ pāpakaṁ lobhadhammaṁ vadāmi—kiñhi paro parassa karissatī'ti. Sādhu, bhante, bhagavā lohiccaṁ brāhmaṇaṁ etasmā pāpakā diṭṭhigatā vivecetū"ti. "Appeva nāma siyā, rosike, appeva nāma siyā, rosike"ti.</p>
+<p>"Samaṇo khalu, bho, gotamo sakyaputto sakyakulā pabbajito kosalesu cārikaṁ caramāno mahatā bhikkhusaṅghena saddhiṁ pañcamattehi bhikkhusatehi sālavatikaṁ anuppatto. Taṁ kho pana bhavantaṁ gotamaṁ evaṁ kalyāṇo kittisaddo abbhuggato: 'itipi so bhagavā arahaṁ sammāsambuddho vijjācaraṇasampanno sugato lokavidū anuttaro purisadammasārathi satthā devamanussānaṁ buddho bhagavā'. So imaṁ lokaṁ sadevakaṁ samārakaṁ sabrahmakaṁ sassamaṇabrāhmaṇiṁ pajaṁ sadevamanussaṁ sayaṁ abhiññā sacchikatvā pavedeti. So dhammaṁ deseti ādikalyāṇaṁ majjhekalyāṇaṁ pariyosānakalyāṇaṁ sātthaṁ sabyañjanaṁ kevalaparipuṇṇaṁ parisuddhaṁ brahmacariyaṁ pakāseti. Sādhu kho pana tathārūpānaṁ arahataṁ dassanaṁ hotī"ti.</p>
 
 <hr>
+
+<p><span class="parno">4</span>Atha kho lohicco brāhmaṇo <span class="var" title="bhesikaṁ (bj, pts1)" id="note233">rosikaṁ</span> nhāpitaṁ āmantesi: "ehi tvaṁ, samma rosike, yena samaṇo gotamo tenupasaṅkama; upasaṅkamitvā mama vacanena samaṇaṁ gotamaṁ appābādhaṁ appātaṅkaṁ lahuṭṭhānaṁ balaṁ phāsuvihāraṁ puccha: 'lohicco, bho gotama, brāhmaṇo bhavantaṁ gotamaṁ appābādhaṁ appātaṅkaṁ lahuṭṭhānaṁ balaṁ phāsuvihāraṁ pucchatī'ti; evañca vadehi — adhivāsetu kira bhavaṁ gotamo lohiccassa brāhmaṇassa svātanāya bhattaṁ saddhiṁ bhikkhusaṁghenā"ti.</p>
+
+
+<hr>
+
+<p><span class="parno">5</span>"<span class="var" title="evaṁ bhanteti (bj, s1–3, pts1)" id="note234">Evaṁ, bho"ti</span> kho rosikā nhāpito lohiccassa brāhmaṇassa paṭissutvā yena bhagavā tenupasaṅkami; upasaṅkamitvā bhagavantaṁ abhivādetvā ekamantaṁ nisīdi. Ekamantaṁ nisinno kho rosikā nhāpito bhagavantaṁ etadavoca: "lohicco, bhante, brāhmaṇo bhagavantaṁ appābādhaṁ appātaṅkaṁ lahuṭṭhānaṁ balaṁ phāsuvihāraṁ pucchati; evañca vadeti — adhivāsetu kira, bhante, bhagavā lohiccassa brāhmaṇassa svātanāya bhattaṁ saddhiṁ bhikkhusaṁghenā"ti. Adhivāsesi bhagavā tuṇhībhāvena.</p>
+
+<p><span class="parno">6</span>Atha kho <span class="var" title="bhesikā (bj, pts1)" id="note235">rosikā</span> nhāpito bhagavato adhivāsanaṁ viditvā uṭṭhāyāsanā bhagavantaṁ abhivādetvā padakkhiṇaṁ katvā yena lohicco brāhmaṇo tenupasaṅkami; upasaṅkamitvā lohiccaṁ brāhmaṇaṁ etadavoca: "<span class="var" title="avocumha bho (pts1)" id="note236">avocumhā kho</span> <span class="var" title="Mayaṁ bhante tava (bj, pts1)" id="note237">mayaṁ bhoto</span> vacanena taṁ bhagavantaṁ: 'lohicco, bhante, brāhmaṇo bhagavantaṁ appābādhaṁ appātaṅkaṁ lahuṭṭhānaṁ balaṁ phāsuvihāraṁ pucchati; evañca vadeti — adhivāsetu kira, bhante, bhagavā lohiccassa brāhmaṇassa svātanāya bhattaṁ saddhiṁ bhikkhusaṁghenā'ti. Adhivutthañca pana tena bhagavatā"ti.</p>
+
+<hr>
+
+<p><span class="parno">7</span>Atha kho lohicco brāhmaṇo tassā rattiyā accayena sake nivesane paṇītaṁ khādanīyaṁ bhojanīyaṁ paṭiyādāpetvā rosikaṁ nhāpitaṁ āmantesi: "ehi tvaṁ, samma rosike, yena samaṇo gotamo tenupasaṅkama; upasaṅkamitvā samaṇassa gotamassa kālaṁ ārocehi — kālo, bho gotama, niṭṭhitaṁ bhattan"ti. </p>
+
+<p>"Evaṁ, bho"ti kho rosikā nhāpito lohiccassa brāhmaṇassa paṭissutvā yena bhagavā tenupasaṅkami; upasaṅkamitvā bhagavantaṁ abhivādetvā ekamantaṁ aṭṭhāsi. Ekamantaṁ ṭhito kho rosikā nhāpito bhagavato kālaṁ ārocesi: "kālo, bhante, niṭṭhitaṁ bhattan"ti.</p>
+
+
+<hr>
+
+<p><span class="parno">8</span>Atha kho bhagavā pubbaṇhasamayaṁ nivāsetvā pattacīvaramādāya saddhiṁ bhikkhusaṅghena yena sālavatikā tenupasaṅkami. Tena kho pana samayena rosikā nhāpito bhagavantaṁ piṭṭhito piṭṭhito anubandho hoti. Atha kho rosikā nhāpito bhagavantaṁ etadavoca: "lohiccassa, bhante, brāhmaṇassa evarūpaṁ pāpakaṁ diṭṭhigataṁ uppannaṁ: 'idha samaṇo vā brāhmaṇo vā kusalaṁ dhammaṁ adhigaccheyya, kusalaṁ dhammaṁ adhigantvā na parassa āroceyya — kiñhi paro parassa karissati. Seyyathāpi nāma purāṇaṁ bandhanaṁ chinditvā aññaṁ navaṁ bandhanaṁ kareyya; evaṁ sampadamidaṁ pāpakaṁ lobhadhammaṁ vadāmi — kiñhi paro parassa karissatī'ti. Sādhu, bhante, bhagavā lohiccaṁ brāhmaṇaṁ etasmā pāpakā diṭṭhigatā vivecetū"ti. </p>
+
+<p>"Appeva nāma siyā, rosike, appeva nāma siyā, rosike"ti.</p>
+
+
+<hr>
+
 <p><span class="parno">9</span>Atha kho bhagavā yena lohiccassa brāhmaṇassa nivesanaṁ tenupasaṅkami; upasaṅkamitvā paññatte āsane nisīdi. Atha kho lohicco brāhmaṇo buddhappamukhaṁ bhikkhusaṅghaṁ paṇītena khādanīyena bhojanīyena sahatthā santappesi sampavāresi.</p>
 
 <h3>1. Lohiccabrāhmaṇānuyoga</h3>
 
-<p><span class="parno">10</span>Atha kho lohicco brāhmaṇo bhagavantaṁ bhuttāviṁ onītapattapāṇiṁ aññataraṁ nīcaṁ āsanaṁ gahetvā ekamantaṁ nisīdi. Ekamantaṁ nisinnaṁ kho lohiccaṁ brāhmaṇaṁ bhagavā etadavoca: "Saccaṁ kira te, lohicca, evarūpaṁ pāpakaṁ diṭṭhigataṁ uppannaṁ: 'idha samaṇo vā brāhmaṇo vā kusalaṁ dhammaṁ adhigaccheyya, kusalaṁ dhammaṁ adhigantvā na parassa āroceyya—kiñhi paro parassa karissati. Seyyathāpi nāma purāṇaṁ bandhanaṁ chinditvā aññaṁ navaṁ bandhanaṁ kareyya; evaṁ sampadamidaṁ pāpakaṁ lobhadhammaṁ vadāmi, kiñhi paro parassa karissatī'"ti? "Evaṁ, bho gotama". "Taṁ kiṁ maññasi, lohicca, nanu tvaṁ sālavatikaṁ ajjhāvasasī"ti? "Evaṁ, bho gotama". "Yo nu kho, lohicca, evaṁ vadeyya: 'lohicco brāhmaṇo sālavatikaṁ ajjhāvasati. Yā sālavatikāya samudayasañjāti lohiccova taṁ brāhmaṇo ekako paribhuñjeyya, na aññesaṁ dadeyyā'ti. Evaṁ vādī so ye taṁ upajīvanti, tesaṁ antarāyakaro vā hoti, no vā"ti?</p>
+<p><span class="parno">10</span>Atha kho lohicco brāhmaṇo bhagavantaṁ bhuttāviṁ onītapattapāṇiṁ aññataraṁ nīcaṁ āsanaṁ gahetvā ekamantaṁ nisīdi. </p>
 
-<p><span class="parno">11</span>"Antarāyakaro, bho gotama". "Antarāyakaro samāno hitānukampī vā tesaṁ hoti ahitānukampī vā"ti? "Ahitānukampī, bho gotama". "Ahitānukampissa mettaṁ vā tesu cittaṁ paccupaṭṭhitaṁ hoti sapattakaṁ vā"ti? "Sapattakaṁ, bho gotama". "Sapattake citte paccupaṭṭhite micchādiṭṭhi vā hoti sammādiṭṭhi vā"ti? "Micchādiṭṭhi, bho gotama". "Micchādiṭṭhissa kho ahaṁ, lohicca, dvinnaṁ gatīnaṁ aññataraṁ gatiṁ vadāmi—nirayaṁ vā tiracchānayoniṁ vā.</p>
+<p>Ekamantaṁ nisinnaṁ kho lohiccaṁ brāhmaṇaṁ bhagavā etadavoca: "Saccaṁ kira te, lohicca, evarūpaṁ pāpakaṁ diṭṭhigataṁ uppannaṁ: 'idha samaṇo vā brāhmaṇo vā kusalaṁ dhammaṁ adhigaccheyya, kusalaṁ dhammaṁ adhigantvā na parassa āroceyya — kiñhi paro parassa karissati. Seyyathāpi nāma purāṇaṁ bandhanaṁ chinditvā aññaṁ navaṁ bandhanaṁ kareyya; evaṁ sampadamidaṁ pāpakaṁ lobhadhammaṁ vadāmi, kiñhi paro parassa karissatī'"ti? </p>
 
-<hr>
-<p><span class="parno">12</span>Taṁ kiṁ maññasi, lohicca, nanu rājā pasenadi kosalo kāsikosalaṁ ajjhāvasatī"ti? "Evaṁ, bho gotama". "Yo nu kho, lohicca, evaṁ vadeyya: 'rājā pasenadi kosalo kāsikosalaṁ ajjhāvasati; yā kāsikosale samudayasañjāti, rājāva taṁ pasenadi kosalo ekako paribhuñjeyya, na aññesaṁ dadeyyā'ti. Evaṁ vādī so ye rājānaṁ pasenadiṁ kosalaṁ upajīvanti tumhe ceva aññe ca, tesaṁ antarāyakaro vā hoti, no vā"ti?</p>
+<p>"Evaṁ, bho gotama". </p>
 
-<hr>
-<p><span class="parno">13</span>"Antarāyakaro, bho gotama". "Antarāyakaro samāno hitānukampī vā tesaṁ hoti ahitānukampī vā"ti? "Ahitānukampī, bho gotama". "Ahitānukampissa mettaṁ vā tesu cittaṁ paccupaṭṭhitaṁ hoti sapattakaṁ vā"ti? "Sapattakaṁ, bho gotama". "Sapattake citte paccupaṭṭhite micchādiṭṭhi vā hoti sammādiṭṭhi vā"ti? "Micchādiṭṭhi, bho gotama". "Micchādiṭṭhissa kho ahaṁ, lohicca, dvinnaṁ gatīnaṁ aññataraṁ gatiṁ vadāmi—nirayaṁ vā tiracchānayoniṁ vā.</p>
+<p>"Taṁ kiṁ maññasi, lohicca, nanu tvaṁ sālavatikaṁ ajjhāvasasī"ti? </p>
 
-<hr>
-<p><span class="parno">14</span>Iti kira, lohicca, yo evaṁ vadeyya: 'lohicco brāhmaṇo sālavatikaṁ ajjhāvasati; yā sālavatikāya samudayasañjāti, lohiccova taṁ brāhmaṇo ekako paribhuñjeyya, na aññesaṁ dadeyyā'ti. Evaṁvādī so ye taṁ upajīvanti, tesaṁ antarāyakaro hoti. Antarāyakaro samāno ahitānukampī hoti, ahitānukampissa sapattakaṁ cittaṁ paccupaṭṭhitaṁ hoti, sapattake citte paccupaṭṭhite micchādiṭṭhi hoti. Evameva kho, lohicca, yo evaṁ vadeyya: 'idha samaṇo vā brāhmaṇo vā kusalaṁ dhammaṁ adhigaccheyya, kusalaṁ dhammaṁ adhigantvā na parassa āroceyya, kiñhi paro parassa karissati. Seyyathāpi nāma purāṇaṁ bandhanaṁ chinditvā aññaṁ navaṁ bandhanaṁ kareyya … pe … karissatī'ti. Evaṁvādī so ye te kulaputtā tathāgatappaveditaṁ dhammavinayaṁ āgamma evarūpaṁ uḷāraṁ visesaṁ adhigacchanti, sotāpattiphalampi sacchikaronti, sakadāgāmiphalampi sacchikaronti, anāgāmiphalampi sacchikaronti, arahattampi sacchikaronti, ye cime dibbā gabbhā paripācenti dibbānaṁ bhavānaṁ abhinibbattiyā, tesaṁ antarāyakaro hoti, antarāyakaro samāno ahitānukampī hoti, ahitānukampissa sapattakaṁ cittaṁ paccupaṭṭhitaṁ hoti, sapattake citte paccupaṭṭhite micchādiṭṭhi hoti. Micchādiṭṭhissa kho ahaṁ, lohicca, dvinnaṁ gatīnaṁ aññataraṁ gatiṁ vadāmi –  nirayaṁ vā tiracchānayoniṁ vā.</p>
+<p>"Evaṁ, bho gotama". </p>
 
 <hr>
-<p><span class="parno">15</span>Iti kira, lohicca, yo evaṁ vadeyya: 'rājā pasenadi kosalo kāsikosalaṁ ajjhāvasati; yā kāsikosale samudayasañjāti, rājāva taṁ pasenadi kosalo ekako paribhuñjeyya, na aññesaṁ dadeyyā'ti. Evaṁvādī so ye rājānaṁ pasenadiṁ kosalaṁ upajīvanti tumhe ceva aññe ca, tesaṁ antarāyakaro hoti. Antarāyakaro samāno ahitānukampī hoti, ahitānukampissa sapattakaṁ cittaṁ paccupaṭṭhitaṁ hoti, sapattake citte paccupaṭṭhite micchādiṭṭhi hoti. Evameva kho, lohicca, yo evaṁ vadeyya: 'idha samaṇo vā brāhmaṇo vā kusalaṁ dhammaṁ adhigaccheyya, kusalaṁ dhammaṁ adhigantvā na parassa āroceyya, kiñhi paro parassa karissati. Seyyathāpi nāma … pe … kiñhi paro parassa karissatī'ti. Evaṁvādī so ye te kulaputtā tathāgatappaveditaṁ dhammavinayaṁ āgamma evarūpaṁ uḷāraṁ visesaṁ adhigacchanti, sotāpattiphalampi sacchikaronti, sakadāgāmiphalampi sacchikaronti, anāgāmiphalampi sacchikaronti, arahattampi sacchikaronti. Ye cime dibbā gabbhā paripācenti dibbānaṁ bhavānaṁ abhinibbattiyā, tesaṁ antarāyakaro hoti, antarāyakaro samāno ahitānukampī hoti, ahitānukampissa sapattakaṁ cittaṁ paccupaṭṭhitaṁ hoti, sapattake citte paccupaṭṭhite micchādiṭṭhi hoti. Micchādiṭṭhissa kho ahaṁ, lohicca, dvinnaṁ gatīnaṁ aññataraṁ gatiṁ vadāmi—nirayaṁ vā tiracchānayoniṁ vā.</p>
+
+<p>"Yo nu kho, lohicca, evaṁ vadeyya: 'lohicco brāhmaṇo sālavatikaṁ ajjhāvasati. Yā sālavatikāya samudayasañjāti lohiccova taṁ brāhmaṇo ekako paribhuñjeyya, na aññesaṁ dadeyyā'ti. Evaṁ vādī so ye taṁ upajīvanti, tesaṁ antarāyakaro vā hoti, no vā"ti?</p>
+
+<hr>
+
+<p><span class="parno">11</span>"Antarāyakaro, bho gotama". </p>
+
+<p>"Antarāyakaro samāno hitānukampī vā tesaṁ hoti ahitānukampī vā"ti? </p>
+
+<p>"Ahitānukampī, bho gotama". </p>
+
+<p>"Ahitānukampissa mettaṁ vā tesu cittaṁ paccupaṭṭhitaṁ hoti sapattakaṁ vā"ti? </p>
+
+<p>"Sapattakaṁ, bho gotama". </p>
+
+<p>"Sapattake citte paccupaṭṭhite micchādiṭṭhi vā hoti sammādiṭṭhi vā"ti? </p>
+
+<p>"Micchādiṭṭhi, bho gotama". </p>
+
+<p>"Micchādiṭṭhissa kho ahaṁ, lohicca, dvinnaṁ gatīnaṁ aññataraṁ gatiṁ vadāmi — nirayaṁ vā tiracchānayoniṁ vā.</p>
+
+
+<hr>
+
+<p><span class="parno">12</span>Taṁ kiṁ maññasi, lohicca, nanu rājā pasenadi kosalo kāsikosalaṁ ajjhāvasatī"ti? </p>
+
+<p>"Evaṁ, bho gotama". </p>
+
+<p>"Yo nu kho, lohicca, evaṁ vadeyya: 'rājā pasenadi kosalo kāsikosalaṁ ajjhāvasati; yā kāsikosale samudayasañjāti, rājāva taṁ pasenadi kosalo ekako paribhuñjeyya, na aññesaṁ dadeyyā'ti. Evaṁ vādī so ye rājānaṁ pasenadiṁ kosalaṁ upajīvanti tumhe ceva aññe ca, tesaṁ antarāyakaro vā hoti, no vā"ti?</p>
+
+
+<hr>
+
+<p><span class="parno">13</span>"Antarāyakaro, bho gotama". </p>
+
+<p>"Antarāyakaro samāno hitānukampī vā tesaṁ hoti ahitānukampī vā"ti? </p>
+
+<p>"Ahitānukampī, bho gotama". </p>
+
+<p>"Ahitānukampissa mettaṁ vā tesu cittaṁ paccupaṭṭhitaṁ hoti sapattakaṁ vā"ti? </p>
+
+<p>"Sapattakaṁ, bho gotama". </p>
+
+<p>"Sapattake citte paccupaṭṭhite micchādiṭṭhi vā hoti sammādiṭṭhi vā"ti? </p>
+
+<p>"Micchādiṭṭhi, bho gotama". </p>
+
+<p>"Micchādiṭṭhissa kho ahaṁ, lohicca, dvinnaṁ gatīnaṁ aññataraṁ gatiṁ vadāmi — nirayaṁ vā tiracchānayoniṁ vā.</p>
+
+
+<hr>
+
+<p><span class="parno">14</span>Iti kira, lohicca, yo evaṁ vadeyya: 'lohicco brāhmaṇo sālavatikaṁ ajjhāvasati; yā sālavatikāya samudayasañjāti, lohiccova taṁ brāhmaṇo ekako paribhuñjeyya, na aññesaṁ dadeyyā'ti. Evaṁvādī so ye taṁ upajīvanti, tesaṁ antarāyakaro hoti. Antarāyakaro samāno ahitānukampī hoti, ahitānukampissa sapattakaṁ cittaṁ paccupaṭṭhitaṁ hoti, sapattake citte paccupaṭṭhite micchādiṭṭhi hoti. </p>
+
+<hr>
+
+<p>Evameva kho, lohicca, yo evaṁ vadeyya: 'idha samaṇo vā brāhmaṇo vā kusalaṁ dhammaṁ adhigaccheyya, kusalaṁ dhammaṁ adhigantvā na parassa āroceyya, kiñhi paro parassa karissati. Seyyathāpi nāma purāṇaṁ bandhanaṁ chinditvā aññaṁ navaṁ bandhanaṁ kareyya … pe … karissatī'ti. </p>
+
+<hr>
+
+<p>Evaṁvādī so ye te kulaputtā tathāgatappaveditaṁ dhammavinayaṁ āgamma evarūpaṁ uḷāraṁ visesaṁ adhigacchanti, sotāpattiphalampi sacchikaronti, sakadāgāmiphalampi sacchikaronti, anāgāmiphalampi sacchikaronti, arahattampi sacchikaronti, ye cime dibbā gabbhā paripācenti dibbānaṁ bhavānaṁ abhinibbattiyā, tesaṁ antarāyakaro hoti, antarāyakaro samāno ahitānukampī hoti, ahitānukampissa sapattakaṁ cittaṁ paccupaṭṭhitaṁ hoti, sapattake citte paccupaṭṭhite micchādiṭṭhi hoti. Micchādiṭṭhissa kho ahaṁ, lohicca, dvinnaṁ gatīnaṁ aññataraṁ gatiṁ vadāmi –  nirayaṁ vā tiracchānayoniṁ vā.</p>
+
+
+<p><span class="parno">15</span>Iti kira, lohicca, yo evaṁ vadeyya: 'rājā pasenadi kosalo kāsikosalaṁ ajjhāvasati; yā kāsikosale samudayasañjāti, rājāva taṁ pasenadi kosalo ekako paribhuñjeyya, na aññesaṁ dadeyyā'ti. Evaṁvādī so ye rājānaṁ pasenadiṁ kosalaṁ upajīvanti tumhe ceva aññe ca, tesaṁ antarāyakaro hoti. Antarāyakaro samāno ahitānukampī hoti, ahitānukampissa sapattakaṁ cittaṁ paccupaṭṭhitaṁ hoti, sapattake citte paccupaṭṭhite micchādiṭṭhi hoti. Evameva kho, lohicca, yo evaṁ vadeyya: 'idha samaṇo vā brāhmaṇo vā kusalaṁ dhammaṁ adhigaccheyya, kusalaṁ dhammaṁ adhigantvā na parassa āroceyya, kiñhi paro parassa karissati. Seyyathāpi nāma … pe … kiñhi paro parassa karissatī'ti. Evaṁvādī so ye te kulaputtā tathāgatappaveditaṁ dhammavinayaṁ āgamma evarūpaṁ uḷāraṁ visesaṁ adhigacchanti, sotāpattiphalampi sacchikaronti, sakadāgāmiphalampi sacchikaronti, anāgāmiphalampi sacchikaronti, arahattampi sacchikaronti. Ye cime dibbā gabbhā paripācenti dibbānaṁ bhavānaṁ abhinibbattiyā, tesaṁ antarāyakaro hoti, antarāyakaro samāno ahitānukampī hoti, ahitānukampissa sapattakaṁ cittaṁ paccupaṭṭhitaṁ hoti, sapattake citte paccupaṭṭhite micchādiṭṭhi hoti. Micchādiṭṭhissa kho ahaṁ, lohicca, dvinnaṁ gatīnaṁ aññataraṁ gatiṁ vadāmi — nirayaṁ vā tiracchānayoniṁ vā.</p>
 
 <h3>2. Tayocodanārahā</h3>
 
-<p><span class="parno">16</span>Tayo khome, lohicca, satthāro, ye loke codanārahā; yo ca panevarūpe satthāro codeti, sā codanā bhūtā tacchā dhammikā anavajjā. Katame tayo? Idha, lohicca, ekacco satthā yassatthāya agārasmā anagāriyaṁ pabbajito hoti, svāssa sāmaññattho ananuppatto hoti. So taṁ sāmaññatthaṁ ananupāpuṇitvā sāvakānaṁ dhammaṁ deseti: 'idaṁ vo hitāya idaṁ vo sukhāyā'ti. Tassa sāvakā na sussūsanti, na sotaṁ odahanti, na aññā cittaṁ upaṭṭhapenti, vokkamma ca satthusāsanā vattanti. So evamassa codetabbo: 'āyasmā kho yassatthāya agārasmā anagāriyaṁ pabbajito, so te sāmaññattho ananuppatto, taṁ tvaṁ sāmaññatthaṁ ananupāpuṇitvā sāvakānaṁ dhammaṁ desesi: "Idaṁ vo hitāya idaṁ vo sukhāyā"ti. Tassa te sāvakā na sussūsanti, na sotaṁ odahanti, na aññā cittaṁ upaṭṭhapenti, vokkamma ca satthusāsanā vattanti. Seyyathāpi nāma osakkantiyā vā ussakkeyya, parammukhiṁ vā āliṅgeyya; evaṁ sampadamidaṁ pāpakaṁ lobhadhammaṁ vadāmi—kiñhi paro parassa karissatī'ti. Ayaṁ kho, lohicca, paṭhamo satthā, yo loke codanāraho; yo ca panevarūpaṁ satthāraṁ codeti, sā codanā bhūtā tacchā dhammikā anavajjā.</p>
+<p><span class="parno">16</span>Tayo khome, lohicca, satthāro, ye loke codanārahā; yo ca panevarūpe satthāro codeti, sā codanā bhūtā tacchā dhammikā anavajjā. Katame tayo? </p>
 
-<p><span class="parno">17</span>Puna caparaṁ, lohicca, idhekacco satthā yassatthāya agārasmā anagāriyaṁ pabbajito hoti, svāssa sāmaññattho ananuppatto hoti. So taṁ sāmaññatthaṁ ananupāpuṇitvā sāvakānaṁ dhammaṁ deseti: 'idaṁ vo hitāya, idaṁ vo sukhāyā'ti. Tassa sāvakā sussūsanti, sotaṁ odahanti, aññā cittaṁ upaṭṭhapenti, na ca vokkamma satthusāsanā vattanti. So evamassa codetabbo: 'āyasmā kho yassatthāya agārasmā anagāriyaṁ pabbajito, so te sāmaññattho ananuppatto. Taṁ tvaṁ sāmaññatthaṁ ananupāpuṇitvā sāvakānaṁ dhammaṁ desesi: "Idaṁ vo hitāya, idaṁ vo sukhāyā"ti. Tassa te sāvakā sussūsanti, sotaṁ odahanti, aññā cittaṁ upaṭṭhapenti, na ca vokkamma satthusāsanā vattanti. Seyyathāpi nāma sakaṁ khettaṁ ohāya paraṁ khettaṁ niddāyitabbaṁ maññeyya, evaṁ sampadamidaṁ pāpakaṁ lobhadhammaṁ vadāmi—kiñhi paro parassa karissatī'ti. Ayaṁ kho, lohicca, dutiyo satthā, yo, loke codanāraho; yo ca panevarūpaṁ satthāraṁ codeti, sā codanā bhūtā tacchā dhammikā anavajjā.</p>
+<p>Idha, lohicca, ekacco satthā yassatthāya agārasmā anagāriyaṁ pabbajito hoti, svāssa sāmaññattho ananuppatto hoti. So taṁ sāmaññatthaṁ ananupāpuṇitvā sāvakānaṁ dhammaṁ deseti: 'idaṁ vo hitāya idaṁ vo sukhāyā'ti. Tassa sāvakā na sussūsanti, na sotaṁ odahanti, na aññā cittaṁ upaṭṭhapenti, vokkamma ca satthusāsanā vattanti. So evamassa codetabbo: 'āyasmā kho yassatthāya agārasmā anagāriyaṁ pabbajito, so te sāmaññattho ananuppatto, taṁ tvaṁ sāmaññatthaṁ ananupāpuṇitvā sāvakānaṁ dhammaṁ desesi: "Idaṁ vo hitāya idaṁ vo sukhāyā"ti. Tassa te sāvakā na sussūsanti, na sotaṁ odahanti, na aññā cittaṁ upaṭṭhapenti, vokkamma ca satthusāsanā vattanti. Seyyathāpi nāma osakkantiyā vā ussakkeyya, parammukhiṁ vā āliṅgeyya; evaṁ sampadamidaṁ pāpakaṁ lobhadhammaṁ vadāmi — kiñhi paro parassa karissatī'ti. Ayaṁ kho, lohicca, paṭhamo satthā, yo loke codanāraho; yo ca panevarūpaṁ satthāraṁ codeti, sā codanā bhūtā tacchā dhammikā anavajjā.</p>
+
+<p><span class="parno">17</span>Puna caparaṁ, lohicca, idhekacco satthā yassatthāya agārasmā anagāriyaṁ pabbajito hoti, svāssa sāmaññattho ananuppatto hoti. So taṁ sāmaññatthaṁ ananupāpuṇitvā sāvakānaṁ dhammaṁ deseti: 'idaṁ vo hitāya, idaṁ vo sukhāyā'ti. Tassa sāvakā sussūsanti, sotaṁ odahanti, aññā cittaṁ upaṭṭhapenti, na ca vokkamma satthusāsanā vattanti. So evamassa codetabbo: 'āyasmā kho yassatthāya agārasmā anagāriyaṁ pabbajito, so te sāmaññattho ananuppatto. Taṁ tvaṁ sāmaññatthaṁ ananupāpuṇitvā sāvakānaṁ dhammaṁ desesi: "Idaṁ vo hitāya, idaṁ vo sukhāyā"ti. Tassa te sāvakā sussūsanti, sotaṁ odahanti, aññā cittaṁ upaṭṭhapenti, na ca vokkamma satthusāsanā vattanti. Seyyathāpi nāma sakaṁ khettaṁ ohāya paraṁ khettaṁ niddāyitabbaṁ maññeyya, evaṁ sampadamidaṁ pāpakaṁ lobhadhammaṁ vadāmi — kiñhi paro parassa karissatī'ti. Ayaṁ kho, lohicca, dutiyo satthā, yo, loke codanāraho; yo ca panevarūpaṁ satthāraṁ codeti, sā codanā bhūtā tacchā dhammikā anavajjā.</p>
 
 <p><span class="parno">18</span>Puna caparaṁ, lohicca, idhekacco satthā yassatthāya agārasmā anagāriyaṁ pabbajito hoti, svāssa sāmaññattho anuppatto hoti. So taṁ sāmaññatthaṁ anupāpuṇitvā sāvakānaṁ dhammaṁ deseti: 'idaṁ vo hitāya, idaṁ vo sukhāyā'ti. Tassa sāvakā na sussūsanti, na sotaṁ odahanti, na aññā cittaṁ upaṭṭhapenti, vokkamma ca satthusāsanā vattanti. So evamassa codetabbo: 'āyasmā kho yassatthāya agārasmā anagāriyaṁ pabbajito, so te sāmaññattho anuppatto. Taṁ tvaṁ sāmaññatthaṁ anupāpuṇitvā sāvakānaṁ dhammaṁ desesi: "Idaṁ vo hitāya, idaṁ vo sukhāyā"ti. Tassa te sāvakā na sussūsanti, na sotaṁ odahanti, na aññā cittaṁ upaṭṭhapenti, vokkamma ca satthusāsanā vattanti. Seyyathāpi nāma purāṇaṁ bandhanaṁ chinditvā aññaṁ navaṁ bandhanaṁ kareyya; evaṁ sampadamidaṁ pāpakaṁ lobhadhammaṁ vadāmi, kiñhi paro parassa karissatī'ti. Ayaṁ kho, lohicca, tatiyo satthā, yo loke codanāraho; yo ca panevarūpaṁ satthāraṁ codeti, sā codanā bhūtā tacchā dhammikā anavajjā. Ime kho, lohicca, tayo satthāro, ye loke codanārahā, yo ca panevarūpe satthāro codeti, sā codanā bhūtā tacchā dhammikā anavajjā"ti.</p>
 
 <h3>3. Nacodanārahasatthu</h3>
 
-<p><span class="parno">19</span>Evaṁ vutte, lohicco brāhmaṇo bhagavantaṁ etadavoca: "atthi pana, bho gotama, koci satthā, yo loke nacodanāraho"ti? "Atthi kho, lohicca, satthā, yo loke nacodanāraho"ti. "Katamo pana so, bho gotama, satthā, yo loke nacodanāraho"ti?</p>
+<p><span class="parno">19</span>Evaṁ vutte, lohicco brāhmaṇo bhagavantaṁ etadavoca: "atthi pana, bho gotama, koci satthā, yo loke nacodanāraho"ti? </p>
 
-<hr>
+<p>"Atthi kho, lohicca, satthā, yo loke nacodanāraho"ti. </p>
+
+<p>"Katamo pana so, bho gotama, satthā, yo loke nacodanāraho"ti?</p>
+
+
 <p><span class="parno">20</span>"Idha, lohicca, tathāgato loke uppajjati arahaṁ, sammāsambuddho <span class="var" title="yathā sāmaññaphalasutte 190--212 anucchedesu evaṁ" id="note238"> … pe … </span> Evaṁ kho, lohicca, bhikkhu sīlasampanno hoti … pe … paṭhamaṁ jhānaṁ upasampajja viharati … yasmiṁ kho, lohicca, satthari sāvako evarūpaṁ uḷāraṁ visesaṁ adhigacchati, ayampi kho, lohicca, satthā, yo loke nacodanāraho. Yo ca panevarūpaṁ satthāraṁ codeti, sā codanā abhūtā atacchā adhammikā sāvajjā.</p>
 
-<hr>
+
 <p><span class="parno">21</span>… pe … Dutiyaṁ jhānaṁ … pe … tatiyaṁ jhānaṁ … pe … catutthaṁ jhānaṁ upasampajja viharati. Yasmiṁ kho, lohicca, satthari sāvako evarūpaṁ uḷāraṁ visesaṁ adhigacchati, ayampi kho, lohicca, satthā, yo loke nacodanāraho, yo ca panevarūpaṁ satthāraṁ codeti, sā codanā abhūtā atacchā adhammikā sāvajjā.</p>
 
-<hr>
+
 <p><span class="parno">22</span>… pe … Ñāṇadassanāya cittaṁ abhinīharati abhininnāmeti … yasmiṁ kho, lohicca, satthari sāvako evarūpaṁ uḷāraṁ visesaṁ adhigacchati, ayampi kho, lohicca, satthā, yo loke nacodanāraho, yo ca panevarūpaṁ satthāraṁ codeti, sā codanā abhūtā atacchā adhammikā sāvajjā.</p>
 
 <p><span class="parno">23</span>… pe … Nāparaṁ itthattāyāti pajānāti. Yasmiṁ kho, lohicca, satthari sāvako evarūpaṁ uḷāraṁ visesaṁ adhigacchati, ayampi kho, lohicca, satthā, yo loke nacodanāraho, yo ca panevarūpaṁ satthāraṁ codeti, sā codanā abhūtā atacchā adhammikā sāvajjā"ti.</p>
 
+
 <hr>
-<p><span class="parno">24</span>Evaṁ vutte, lohicco brāhmaṇo bhagavantaṁ etadavoca: "Seyyathāpi, bho gotama, puriso purisaṁ narakapapātaṁ patantaṁ kesesu gahetvā uddharitvā thale patiṭṭhapeyya; evamevāhaṁ bhotā gotamena narakapapātaṁ papatanto uddharitvā thale patiṭṭhāpito. Abhikkantaṁ, bho gotama, abhikkantaṁ, bho gotama. Seyyathāpi, bho gotama, nikkujjitaṁ vā ukkujjeyya, paṭicchannaṁ vā vivareyya, mūḷhassa vā maggaṁ ācikkheyya, andhakāre vā telapajjotaṁ dhāreyya: 'cakkhumanto rūpāni dakkhantī'ti; evamevaṁ bhotā gotamena anekapariyāyena dhammo pakāsito.Esāhaṁ bhavantaṁ gotamaṁ saraṇaṁ gacchāmi dhammañca bhikkhusaṅghañca. Upāsakaṁ maṁ bhavaṁ gotamo dhāretu ajjatagge pāṇupetaṁ saraṇaṁ gatan"ti.</p><p class="endsutta">Lohiccasuttaṁ niṭṭhitaṁ dvādasamaṁ.</p>
+
+<p><span class="parno">24</span>Evaṁ vutte, lohicco brāhmaṇo bhagavantaṁ etadavoca: </p>
+
+<p>"Seyyathāpi, bho gotama, puriso purisaṁ narakapapātaṁ patantaṁ kesesu gahetvā uddharitvā thale patiṭṭhapeyya; evamevāhaṁ bhotā gotamena narakapapātaṁ papatanto uddharitvā thale patiṭṭhāpito. </p>
+
+<p>Abhikkantaṁ, bho gotama, abhikkantaṁ, bho gotama. Seyyathāpi, bho gotama, nikkujjitaṁ vā ukkujjeyya, paṭicchannaṁ vā vivareyya, mūḷhassa vā maggaṁ ācikkheyya, andhakāre vā telapajjotaṁ dhāreyya: 'cakkhumanto rūpāni dakkhantī'ti; evamevaṁ bhotā gotamena anekapariyāyena dhammo pakāsito.Esāhaṁ bhavantaṁ gotamaṁ saraṇaṁ gacchāmi dhammañca bhikkhusaṅghañca. Upāsakaṁ maṁ bhavaṁ gotamo dhāretu ajjatagge pāṇupetaṁ saraṇaṁ gatan"ti.</p><p class="endsutta">Lohiccasuttaṁ niṭṭhitaṁ dvādasamaṁ.</p>
 </div>
 </section>  <!-- End English and Pali -->
 <div id="nextprev"><a id="previous-sutta" href="./dn11.html#content"></a><a id="next-sutta" href="./dn13.html#content"></a></div>
@@ -291,9 +452,9 @@
 <!-- Footer -->
 		<footer>
 			<div id="breadcrumbs"><a href="../home/index.html">Home</a><a href="dn.html">Dīgha Nikāya</a>DN12: Lohicca Sutta</div>
-		<div class="bottomlinks">
+					<div class="bottomlinks">
  	<a href="../guide/guide.html"><span class="w3-bar-item"><i class="fa fa-compass"></i>&nbsp;Guide</span></a>
- 	<a href="../home/help.html"><span class="w3-bar-item"><i class="fa fa-info"></i>&nbsp;Help</span></a>
+ 	 	<a href="../home/help.html"><span class="w3-bar-item"><i class="fa fa-info"></i>&nbsp;Help</span></a>
  	<a href="../home/crossreference.html"><span class="w3-bar-item"><i class="fa fa-exchange"></i>&nbsp;Links&nbsp;Cross&nbsp;Reference</span></a>
  	<a href="../home/copyright.html"><span class="w3-bar-item">&copy;&nbsp;Copyright</span></a>
  	<a href="../home/contact.html"><span class="w3-bar-item"><i class="fa fa-envelope"></i>&nbsp;Contact</span></a>
@@ -355,5 +516,6 @@
  </script>
  <script src="../js/footer.js"></script><script src="../js/dpd_deconstructor.js"></script><script src="../js/dpd_ebts.js"></script><script src="../js/dpd_i2h.js"></script>
  <script src="/sw.js"></script>
+<script>document.addEventListener("click",e=>{if(e.target.closest("a.dg-link")){e.preventDefault();const s=new URLSearchParams(window.location.search).get("s");window.location.href=e.target.closest("a").href+(s?`&s=${encodeURIComponent(s)}`:"");}})</script>
  </body>
  </html>

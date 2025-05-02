@@ -5,6 +5,8 @@
  	<link rel="icon" type="image/x-icon" href="../images/favicon.ico">
  	<title>Sutta Nipata 4:15</title>
  	<meta name="viewport" content="width=device-width, initial-scale=1">
+		<!-- Loading manifest -->
+	<link rel="manifest" href="../manifest.json">
  	<!-- Loading third party fonts -->
  	<link href="../fonts/font-awesome.min.css" rel="stylesheet" type="text/css">
  	<!-- Loading main and menu stylesheets -->
@@ -46,7 +48,7 @@
  		<div id="navbar" class="w3-hide-small w3-hide-medium bwcontainer3">
  			<ul id="css3menu0">
  				<li class="topfirst" id="home"><a href="../home/index.html" class="w3-hide-small">Home</a></li>
-			<li class="topmenu" id="dn"><a href="../dn/dn.html" class="w3-hide-small">Dīgha Nikāya</a></li>
+ 			<li class="topmenu" id="dn"><a href="../dn/dn.html" class="w3-hide-small">Dīgha Nikāya</a></li>
  				<li class="topmenu" id="mn"><a href="../mn/mn.html" class="w3-hide-small">Majjhima Nikāya</a></li>
  				<li class="topmenu" id="sn"><a href="../sn/sn.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Saṁyutta Nikāya</a>
  					<ul>
@@ -86,8 +88,8 @@
  					<ul>
  						<li><a href="../vi/kd.html" class="w3-hide-small">Khandhaka</a></li>
  						<li><a href="../vi/bu-vb.html" class="w3-hide-small">Bhikkhu Vibhaṅga</a></li>
- 						<li><a href="../vi/bu-pt.html" class="w3-hide-small">Bhikkhu Pāṭimokkha</a></li>
- 						<li><a href="../vi/bi-pt.html" class="w3-hide-small">Bhikkhunī Pāṭimokkha</a></li>
+ 						<li><a href="../vi/bu-pt.html" class="w3-hide-small">Bhikkhu Pātimokkha</a></li>
+ 						<li><a href="../vi/bi-pt.html" class="w3-hide-small">Bhikkhunī Pātimokkha</a></li>
  						<li><a href="../vi/bi-vb.html" class="w3-hide-small">Bhikkhunī Vibhaṅga</a></li>
  					</ul>
  				</li>
@@ -100,7 +102,6 @@
  	<a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-times fa-2x red-color"></i>&nbsp;&nbsp;&nbsp;Close</a><!-- Hides the sidebar when clicked -->
  		<div class="w3-bar-block w3-white">
  			<a href="../home/index.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-home fa-lg"></i>&nbsp;&nbsp;&nbsp;Home</a>
- 			<a href="../guide/guide.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Guide</a>
  			<a href="../guide/guide.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Guide</a>
  			<a href="../dn/dn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Dīgha Nikāya</a>
  			<a href="../mn/mn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Majjhima Nikāya</a>
@@ -122,125 +123,157 @@
  
  <div id="content">
  
- <h2>Sutta Nipata Chapter 4: The Chapter of Octads - Aṭṭhakavagga</h2>
+ <h2>Sutta Nipata Chapter 4: The Chapter of the Eights - Aṭṭhakavagga</h2>
 	
-	<h3>4:15 One Who Has Taken Up the Rod</h3>	
+	<h3>4:15 Taking Up Arms</h3>	
 	<div id="metarea"> <!-- metarea div -->
 		<ul class="translator"><!-- Translator div -->
-			<li><a href="/ru/read/?q=snp4.15">dg</a> <a href="https://suttacentral.net/snp4.15">sc</a> ©&nbsp;Translated from the Pali by Bhikkhu Bodhi</li>
+			<li><a class="dg-link" href="/r/?q=snp4.15">DG</a> <a href="https://suttacentral.net/snp4.15">SC</a> ©&nbsp;Translated from the Pali by Bhante Sujato.<a href="../home/copyright.html#sc">(More copyright information)</a></li>
 		</ul>
 	</div><!-- End metarea div -->
 
 <section class="raw_sutta">
 <div lang="en">
 
-<h2>4:15 One Who Has Taken Up the Rod</h2>
-<p class="verse"><span class ="parno">935</span>“Fear has arisen from one who has taken up the rod:<br>
-see the people engaged in strife.<br>
-I will tell you of my sense of urgency,<br>
-how I was stirred by a sense of urgency. (1) [183]</p>
 
-<p class="verse"><span class ="parno">936</span>“Having seen the population trembling<br>
-like fish in a pool with little water,<br>
-having seen them hostile to one another,<br>
-fear came upon me. (2)</p>
+<h2>4:15 Taking Up Arms</h2>
 
-<p class="verse"><span class ="parno">937</span>“The world was insubstantial all around;<br>
-all the directions were in turmoil.<br>
-Desiring an abode for myself,<br>
-I did not see [any place] unoccupied. (3)</p>
+	<div class="verse">
+			<p id="p935"><span class="parno">935</span>
+			Peril stems from those who take up arms—
+			<br>just look at people in conflict! 
+			<br>I shall extol how I came to be 
+			<br>stirred with a sense of urgency. </p>
+			
+			<p id="p936"><span class="parno">936</span>
+			I saw this population flounder, 
+			<br>like a fish in a little puddle. 
+			<br>Seeing them fight each other, 
+			<br>fear came upon me. </p>
+			
+			<p id="p937"><span class="parno">937</span>
+			The world around was hollow, 
+			<br>all directions were in turmoil. 
+			<br>Wanting a home for myself, 
+			<br>I saw nowhere unsettled. </p>
+			
+			<p id="p938"><span class="parno">938</span>
+			Yet even in their settlement they fight—
+			<br>seeing that, I grew uneasy. 
+			<br>Then I saw a dart there, 
+			<br>so hard to see, stuck in the heart. </p>
+	</div>
 
-<p class="verse"><span class ="parno">938</span>“Having seen those hostile at the end,<br>
-discontent came upon me.<br>
-Then I saw the dart here,<br>
-hard to see, nestled in the heart. (4)</p>
+<hr>
 
-<p class="verse"><span class ="parno">939</span>“When one is struck by that dart<br>
-one runs astray in all directions.<br>
-But having drawn out that dart,<br>
-one does not run, does not sink.”<span class="note"><span class="details"><span class="p">Reading with <span class="var" title="Burmese-script edition">Be</span> and <span class="var" title="Sinhala-script edition">Ce</span> <i>na</i> <i>sīdati</i>, as against <span class="var" title="Roman-script edition">Ee</span> <i>nisīdati</i>.</span></span></span> (5)</p>
+	<div class="verse">
+			<p id="p939"><span class="parno">939</span>
+			When struck by that dart, 
+			<br>you run around in all directions. 
+			<br>But when that same dart has been plucked out, 
+			<br>you neither run around nor sink down. </p>
+			
+			<p id="p940"><span class="parno">940</span>
+			(On that topic, the trainings are recited.) 
+			<br>Whatever attachments there are in the world, 
+			<br>don’t pursue them. 
+			<br>Having pierced through sensual pleasures in every way, 
+			<br>train yourself for quenching. </p>
+			
+			<p id="p941"><span class="parno">941</span>
+			Be truthful, not rude, 
+			<br>free of deceit, and rid of slander; 
+			<br>without anger, a sage would cross over 
+			<br>the evils of greed and avarice. </p>
+			
+			<p id="p942"><span class="parno">942</span>
+			Prevail over sleepiness, sloth, and drowsiness, 
+			<br>don’t abide in negligence, 
+			<br>A person intent on quenching 
+			<br>would not stand for arrogance. </p>
+			
+			<p id="p943"><span class="parno">943</span>
+			Don’t be led into lying, 
+			<br>or get caught up in fondness for form. 
+			<br>Completely understand conceit, 
+			<br>and desist from hasty conduct. </p>
+			
+			<p id="p944"><span class="parno">944</span>
+			Don’t relish the old, 
+			<br>or welcome the new. 
+			<br>Don’t grieve for what is running out, 
+			<br>or get attached to things that pull you in. </p>
+			
+			<p id="p945"><span class="parno">945</span>
+			Greed, I say, is the great flood, 
+			<br>and longing is the current—
+			<br>the basis, the compulsion, 
+			<br>the swamp of sensuality so hard to get past. </p>
+			
+			<p id="p946"><span class="parno">946</span>
+			The sage never strays from the truth; 
+			<br>the brahman stands firm on the shore. 
+			<br>Having given up everything, 
+			<br>they are said to be at peace. </p>
+			
+			<p id="p947"><span class="parno">947</span>
+			They have truly known, they’re a knowledge master, 
+			<br>understanding the teaching, they are independent. 
+			<br>They rightly proceed in the world, 
+			<br>not coveting anything here. </p>
+			
+			<p id="p948"><span class="parno">948</span>
+			One who has crossed over sensuality here, 
+			<br>the snare in the world so hard to get past, 
+			<br>grieves not, nor hopes; 
+			<br>they’ve cut the strings, they’re no longer bound. </p>
+	</div>
 
-<p class="verse"><span class ="parno">940</span>There the trainings are recited:<span class="note"><span class="details"><span class="p"><i>Tattha sikkh</i><i>ā</i><i>nug</i><i>ī</i><i>yanti.</i> This seems to be a remark by the compilers that was absorbed into the sutta. <i>Tannimittaṃ hatthisikkhādikā anekā sikkhā kathīyanti uggayhanti vā</i>. The two glosses on <i>sikkhānugīyanti</i> in Pj II &mdash; explained even more elaborately in Niddesa &mdash; suggest the authors were uncertain whether to take the expression as resolvable into <i>sikkh</i><i>ā</i> <i>anug</i><i>ī</i><i>yanti</i> or <i>sikkh</i><i>ā</i> <i>uggayhant</i> (in the latter case with &ndash;<i>n</i>&ndash; presumably serving as a liaison consonant). Norman says (GD 363): “The fact that the commentaries give two explanations . . . seems to indicate that the pāda was not fully understood.” He proposes the line is not an integral part of the verse, but “an instruction to the reciter which has become embedded in the text . . . an interpolation, although clearly it is a very old one.” The Arthapada does not have a corresponding line, which supports Norman’s supposition.<br>The trainings mentioned in pāda a should likely be connected with the last pāda, where “training” is indicated by the optative verb: <i>sikkhe nibbānamattano</i>. The following verses can then be seen as detailing the training. Norman renders the line, “At that point the precepts are recited,” and Jayawickrama has: “Recounted in song is the training therein.” I believe Paññobhāsa was misled by the layout in Be into his rendering, “Therein training rules are recited which are ties in the world,” which wrongly identifies <i>sikkh</i><i>ā</i> <span>with</span> <i>gathit</i><i>ā</i><i>ni</i>. <i>Yāni loke gadhitāni</i> should be seen, rather, as a relative clause completed by <i>na tesu pasuto siyā</i>.</span></span></span><br>
-“Whatever bonds<span class="note"><span class="details"><span class="p">I read with <span class="var" title="Sinhala-script edition">Ce</span> and <span class="var" title="Roman-script edition">Ee</span> <i>gathitāni</i>.</span></span></span> there are in the world,<br>
-one should not be intent on them.<br>
-Having entirely pierced through sensual pleasures,<br>
-one should train for one’s own nibbāna. (6)</p>
+<hr>
 
-<p class="verse"><span class ="parno">941</span>“One should be truthful, not impudent,<br>
-without hypocrisy, devoid of divisive speech.<br>
-Without anger, a muni should cross over<br>
-the evil of greed and miserliness. (7)</p>
-
-<p class="verse"><span class ="parno">942</span>“One should vanquish sleepiness, torpor, and dullness;<br>
-one should not keep company with heedlessness.<br>
-A person whose mind is set on nibbāna<br>
-should not persist in arrogance. (8) [184]</p>
-
-<p class="verse"><span class ="parno">943</span>“One should not be led into false speech;<br>
-one should not engender affection for form.<br>
-One should fully understand conceit,<br>
-and one should refrain from rashness. (9)</p>
-
-<p class="verse"><span class ="parno">944</span>“One should not delight in the old;<br>
-one should not form a liking for the new.<br>
-One should not sorrow over what is diminishing;<br>
-one should not be attached to an attraction. (10)</p>
-
-<p class="verse"><span class ="parno">945</span>“I call greed the great flood,<br>
-I call longing the rapids,<br>
-the basis, compulsion,<span class="note"><span class="details"><span class="p">Though all three editions have <i>pakappanaṃ</i>, with <span class="var" title="Paramatthajotikā II (Suttanipāta-aṭṭhakathā)">Pj II</span> (<span class="var" title="Burmese-script edition">Be</span>) I read <i>pakampanaṃ</i> (<i>kampanaṃ</i> in <span class="var" title="Sinhala-script edition">Ce</span> and <span class="var" title="Roman-script edition">Ee</span>).</span></span></span><br>
-the swamp of sensuality hard to overcome. (11)</p>
-
-<p class="verse"><span class ="parno">946</span>“Not deviating from truth, a muni,<br>
-a brahmin, stands on high ground.<br>
-Having relinquished all,<br>
-he is indeed called peaceful. (12)</p>
-
-<p class="verse"><span class ="parno">947</span>“One who truly is a knower, a Veda-master,<br>
-having known the Dhamma, is independent.<br>
-Living rightly in the world,<br>
-he does not long for anything here. (13)</p>
-
-<p class="verse"><span class ="parno">948</span>“One here who has crossed over sensual pleasures,<br>
-the tie so hard to overcome in the world,<br>
-who has cut off the stream, without bonds,<br>
-does not sorrow, does not hope. (14)</p>
-
-<p class="verse"><span class ="parno">949</span>“Dry up what pertains to the past;<br>
-let there be nothing afterward.<br>
-If you do not grasp in the middle,<br>
-you will live in peace. (15)</p>
-
-<p class="verse"><span class ="parno">950</span>“One who does not claim as ‘mine’<br>
-anything at all here in name-and-form,<br>
-who does not sorrow over what is nonexistent,<br>
-truly does not lose out in the world. (16)</p>
-
-<p class="verse"><span class ="parno">951</span>“One for whom nothing is taken<br>
-as ‘this is mine’ or ‘[this belongs] to others,’<br>
-not finding anything to be taken as ‘mine,’<br>
-does not sorrow, thinking: ‘It is not mine.’ (17) [185]</p>
-
-<p class="verse"><span class ="parno">952</span>“Not bitter, not greedy,<br>
-without impulse, everywhere the same &mdash;<br>
-when asked about one who is unshakable,<br>
-I call that the benefit. (18)</p>
-
-<p class="verse"><span class ="parno">953</span>“For one without impulse, who understands,<br>
-there is no activation at all.<span class="note"><span class="details"><span class="p">Reading with <span class="var" title="Sinhala-script edition">Ce</span> <i>kāci nisaṅkhiti</i>.</span></span></span><br>
-Abstaining from instigation,<br>
-he sees security everywhere. (19)</p>
-
-<p class="verse"><span class ="parno">954</span>“The muni does not speak of himself<br>
-as among equals, inferiors, or superiors.<br>
-Peaceful, without miserliness,<br>
-he does not take, does not reject” &mdash;<br>
-so said the Blessed One. (20)</p>
+	<div class="verse">
+			<p id="p949"><span class="parno">949</span>
+			What came before, let wither away, 
+			<br>and after, let there be nothing. 
+			<br>If you don’t grasp at the middle, 
+			<br>you will live at peace. </p>
+			
+			<p id="p950"><span class="parno">950</span>
+			One who has no sense of ownership 
+			<br>in the whole realm of name and form, 
+			<br>does not grieve for that which is not, 
+			<br>they suffer no loss in the world. </p>
+			
+			<p id="p951"><span class="parno">951</span>
+			If you don’t think of anything 
+			<br>as belonging to yourself or others, 
+			<br>not finding anything to be ‘mine’, 
+			<br>you won’t grieve, thinking ‘I don’t have it’. </p>
+			
+			<p id="p952"><span class="parno">952</span>
+			Not bitter, not fawning, 
+			<br>unstirred, everywhere even; 
+			<br>when asked about one who is unshakable, 
+			<br>I declare that that is the benefit. </p>
+			
+			<p id="p953"><span class="parno">953</span>
+			For the unstirred who understand, 
+			<br>there’s no performance of deeds. 
+			<br>Desisting from instigation, 
+			<br>they see sanctuary everywhere. </p>
+			
+			<p id="p954"><span class="parno">954</span>
+			A sage doesn’t speak of themselves as being 
+			<br>among superiors, inferiors, or equals. 
+			<br>Peaceful, rid of stinginess, 
+			<br>they neither take nor reject. </p>
+			</div>
 </div>
 
 <div lang="pi">
 <h2>Attadaṇḍasutta</h2>
 
+<div class="verse">
 <p><span class="parno">935</span>"Attadaṇḍā bhayaṁ jātaṁ,<br> janaṁ passatha medhagaṁ;
 <br>Saṁvegaṁ kittayissāmi,
 <br>yathā saṁvijitaṁ mayā.</p>
@@ -260,6 +293,9 @@ Osāne tveva byāruddhe,<br> Disvā me aratī ahu;
 <br>Athettha sallamaddakkhiṁ,
 <br>Duddasaṁ hadayanissitaṁ.</p>
 
+</div>
+<hr>
+<div class="verse">
 <p><span class="parno">939</span><a class="brnum" id="br5"></a>
 Yena sallena otiṇṇo,<br> disā sabbā vidhāvati;
 <br>Tameva sallamabbuyha,
@@ -311,6 +347,9 @@ Yodha kāme accatari,<br> Saṅgaṁ loke duraccayaṁ;
 <br>Na so socati nājjheti,
 <br>Chinnasoto abandhano.</p>
 
+</div>
+<hr>
+<div class="verse">
 <p><span class="parno">949</span><a class="brnum" id="br15"></a>
 Yaṁ pubbe taṁ visosehi,<br> Pacchā te māhu kiñcanaṁ;
 <br>Majjhe ce no gahessasi,
@@ -340,7 +379,7 @@ Anejassa vijānato,<br> Natthi kāci nisaṅkhati;
 Na samesu na omesu,<br> Na ussesu vadate muni;
 <br>Santo so vītamaccharo,
 <br>Nādeti na nirassatī"ti.</p>
-
+</div>
 <p class="endsection">Attadaṇḍasuttaṁ pannarasamaṁ.</p>
 
 </div>
@@ -352,7 +391,7 @@ Na samesu na omesu,<br> Na ussesu vadate muni;
 <!-- Footer -->
 		<footer>
 			<div id="breadcrumbs">
-<a href="../home/index.html">Home</a><a href="../kn/kn.html">Khuddaka Nikāya</a><a href="snp.html">Sutta Nipata</a><a href="snp4.html">Chapter 4: The Octads</a>4:15 One Who Has Taken Up the Rod
+<a href="../home/index.html">Home</a><a href="../kn/kn.html">Khuddaka Nikāya</a><a href="snp.html">Sutta Nipata</a><a href="snp4.html">Chapter 4: The Eights</a>4:15 Taking Up Arms
 </div>
 	
  	<div class="bottomlinks">
@@ -419,5 +458,6 @@ Na samesu na omesu,<br> Na ussesu vadate muni;
  </script>
  <script src="../js/footer.js"></script><script src="../js/dpd_deconstructor.js"></script><script src="../js/dpd_ebts.js"></script><script src="../js/dpd_i2h.js"></script>
  <script src="/sw.js"></script>
+<script>document.addEventListener("click",e=>{if(e.target.closest("a.dg-link")){e.preventDefault();const s=new URLSearchParams(window.location.search).get("s");window.location.href=e.target.closest("a").href+(s?`&s=${encodeURIComponent(s)}`:"");}})</script>
  </body>
  </html>

@@ -70,7 +70,7 @@ body[light-mode=dark] {
 #content,
 #footer,
 #breadcrumbs {
- padding: 15px;
+ padding:1px;
 }
 
 .bwcontainer {
@@ -536,6 +536,9 @@ color: blue;
     display: block;
     width: 100%;
     text-align: center;
+  }
+  .body {
+   margin-left: 0;
   }
 }
 /*Sub navigation */
@@ -1346,9 +1349,8 @@ hr, .pairs hr {
     height: 16px;
     position: absolute;
     border: 1px solid rgba(255,255,255,0);
-    position: static;
-    top:20px;
-    left:40px;
+    top:0px;
+    left:0px;
 }
 
 .light-mode-button:focus {
@@ -1358,7 +1360,7 @@ hr, .pairs hr {
 .light-mode-button span:nth-child(1) {
     position: absolute;
     top:17px;
-    left:21px;
+    left:0px;
     width: 30px;
     height:16px;
     background-color: #d6d7db;
@@ -1371,7 +1373,7 @@ hr, .pairs hr {
 .light-mode-button span:nth-child(2) {
     position: absolute;
     top:20px;
-    left:24px;
+    left:4px;
     width: 10px;
     height: 10px;
     background-color: #fff;
@@ -1382,7 +1384,7 @@ hr, .pairs hr {
 
 /* Light & Dark Mode Styles */ 
 body[light-mode=dark] .light-mode-button span:nth-child(2) {
-    left: 37px;
+    left: 17px;
     background-color: #141516;
 }
 
@@ -1395,18 +1397,18 @@ body[light-mode=dark] .light-mode-button span:nth-child(2) {
   cursor: pointer;
   position: absolute;
   top:16px;
-  left:55px;
+  left:35px;
 }
 
 .w3-image {
     max-width: 100%;
     height: auto;
-    margin-left: 30px; 
+    margin-left: 0px; 
 	    background-color: #FFF3D6;
 }
 
  .w3-padding {
-    padding: 0px 16px!important;
+    padding: 0px 8px!important;
 }
 
 .centered {

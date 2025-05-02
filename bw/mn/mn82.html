@@ -5,6 +5,8 @@
  	<link rel="icon" type="image/x-icon" href="../images/favicon.ico">
  	<title>Majjhima Nikāya 82</title>
  	<meta name="viewport" content="width=device-width, initial-scale=1">
+		<!-- Loading manifest -->
+	<link rel="manifest" href="../manifest.json">
  	<!-- Loading third party fonts -->
  	<link href="../fonts/font-awesome.min.css" rel="stylesheet" type="text/css">
  	<!-- Loading main and menu stylesheets -->
@@ -42,7 +44,7 @@
  		<div id="navbar" class="w3-hide-small w3-hide-medium bwcontainer3">
  			<ul id="css3menu0">
  				<li class="topfirst" id="home"><a href="../home/index.html" class="w3-hide-small">Home</a></li>
-			<li class="topmenu" id="dn"><a href="../dn/dn.html" class="w3-hide-small">Dīgha Nikāya</a></li>
+ 			<li class="topmenu" id="dn"><a href="../dn/dn.html" class="w3-hide-small">Dīgha Nikāya</a></li>
  				<li class="topmenu" id="mn"><a href="../mn/mn.html" class="pressed w3-hide-small">Majjhima Nikāya</a></li>
  				<li class="topmenu" id="sn"><a href="../sn/sn.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Saṁyutta Nikāya</a>
  					<ul>
@@ -82,8 +84,8 @@
  					<ul>
  						<li><a href="../vi/kd.html" class="w3-hide-small">Khandhaka</a></li>
  						<li><a href="../vi/bu-vb.html" class="w3-hide-small">Bhikkhu Vibhaṅga</a></li>
- 						<li><a href="../vi/bu-pt.html" class="w3-hide-small">Bhikkhu Pāṭimokkha</a></li>
- 						<li><a href="../vi/bi-pt.html" class="w3-hide-small">Bhikkhunī Pāṭimokkha</a></li>
+ 						<li><a href="../vi/bu-pt.html" class="w3-hide-small">Bhikkhu Pātimokkha</a></li>
+ 						<li><a href="../vi/bi-pt.html" class="w3-hide-small">Bhikkhunī Pātimokkha</a></li>
  						<li><a href="../vi/bi-vb.html" class="w3-hide-small">Bhikkhunī Vibhaṅga</a></li>
  					</ul>
  				</li>
@@ -96,7 +98,6 @@
  	<a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-times fa-2x red-color"></i>&nbsp;&nbsp;&nbsp;Close</a><!-- Hides the sidebar when clicked -->
  		<div class="w3-bar-block w3-white">
  			<a href="../home/index.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-home fa-lg"></i>&nbsp;&nbsp;&nbsp;Home</a>
- 			
  			<a href="../guide/guide.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Guide</a>
  			<a href="../dn/dn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Dīgha Nikāya</a>
  			<a href="../mn/mn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Majjhima Nikāya</a>
@@ -106,356 +107,363 @@
  			<a href="../vi/vi.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Vinaya Piṭaka</a>
  		</div>
  </nav>
- 
- 
- 
-<!-- !PAGE DIV! --> <!-- Div for page content --> 
+
+ <!-- !PAGE CONTENT! --> 
 <div class="w3-main w3-content w3-padding w3-left-align bwcontainer4">
 
 <h2>Majjhima Nikāya</h2>
 
 <div id="content">
 
-<h2>MN82: Raṭṭhapālasutta - On Raṭṭhapāla</h2>
+<h3>MN82: Raṭṭhapālasutta - With Raṭṭhapāla</h3>
+
 
 <div id="metaarea">
 	<ul class="translator">
-		<li><a href="/ru/read/?q=mn82">dg</a> <a href="https://suttacentral.net/mn82">sc</a> &copy;&nbsp;Translated from the Pali by Bhikkhu Ñanamoli and Bhikkhu Bodhi.&nbsp;<a href="../home/copyright.html#mn">(More copyright information)</a></li>
+		<li><a class="dg-link" href="/r/?q=mn82">DG</a> <a href="https://suttacentral.net/mn82">SC</a> ©&nbsp;Translated from the Pali by Bhante Sujato.&nbsp;<a href="../home/copyright.html#sc">(More copyright information)</a>
 	</ul>
 </div>
 
-<section class="raw_sutta">  <!-- English and Pali -->
+
+<section class="raw_sutta">
 <div lang="en">
 
-<p id="p1"><span class="parno">1</span>Thus have I heard. On one occasion the Blessed One was wandering in the Kuru country with a large Saṅgha of bhikkhus, and eventually he arrived at a Kuru town named Thullakoṭṭhita.</p>
+<p id="p1"><span class="parno">1</span>So I have heard. At one time the Buddha was wandering in the land of the Kurus together with a large Saṅgha of mendicants when he arrived at a town of the Kurus named Thullakoṭṭhita.</p>
 
-<p>The brahmin householders of Thullakoṭṭhita heard: "The recluse Gotama, the son of the Sakyans who went forth from a Sakyan clan, has been wandering in the Kuru country with a large Saṅgha of bhikkhus and has come to Thullakoṭṭhita. Now a good report of Master Gotama has been spread to this effect: ‘That Blessed One is accomplished, fully enlightened, perfect in true knowledge and conduct, sublime, knower of worlds, incomparable leader of persons to be tamed, teacher of gods and humans, enlightened, blessed. He declares this world with its gods, its Māras, and its Brahmās, this generation with its recluses and brahmins, its princes and its people, which he has himself realised with direct knowledge. He teaches the Dhamma good in the beginning, good in the middle, and good in the end, with the right meaning and phrasing, and he reveals a holy life that is utterly perfect and pure.’ Now it is good to see such arahants."</p>
-
-<hr>
-<p id="p2"><span class="parno">2</span>Then the brahmin householders of Thullakoṭṭhita went to the Blessed One. Some paid homage to the Blessed One and sat down at one side; some exchanged greetings with him, and when this courteous and amiable talk was finished, sat down at one side; some extended their hands in reverential salutation towards the Blessed One and sat down at one side; some pronounced their name and clan in the Blessed One's presence and sat down at one side; some kept silent and sat down at one side. When they were seated, the Blessed One instructed, urged, roused, and gladdened them with talk on the Dhamma.</p>
-
-<p id="p3"><span class="parno">3</span>Now at that time a clansman named Raṭṭhapāla, the son of the leading clan in that same Thullakoṭṭhita, was sitting in the assembly. <span class="note" id="n796"><span class="details"><span class="p">[n.796] Because of his readiness to risk death in order to obtain his parents’ permission to go forth, he was later declared by the Buddha the foremost of those gone forth in faith. His verses are at <a href="../tha/tha17.html#p769">Thag&nbsp;769–93</a>.</span></span></span> Then it occurred to him: "As I understand the Dhamma taught by the Blessed One, it is not easy while living in a home to lead the holy life, utterly perfect and pure as a polished shell. Suppose I shave off my hair and beard, put on the yellow robe, and go forth from the home life into homelessness."</p>
-
-<p>Then the brahmin householders of Thullakoṭṭhita, having been instructed, urged, roused, and gladdened by the Blessed One with talk on the Dhamma, delighted and rejoiced in his words. They then rose from their seats, and after paying homage to him, they departed, keeping him on their right.</p>
-
-<p>Soon after they had gone, the clansman Raṭṭhapāla went to the Blessed One, and after paying homage to him, he sat down at one side and said to the Blessed One: "Venerable sir, as I understand the Dhamma taught by the Blessed One, it is not easy while living in a home to lead the holy life, utterly perfect and pure as a polished shell. Venerable sir, I wish to shave off my hair and beard, put on the yellow robe, and go forth from the home life into homelessness. I would receive the going forth under the Blessed One, I would receive the full admission."</p>
-
-<p>"Have you been permitted by your parents, Raṭṭhapāla, to go forth from the home life into homelessness?"</p>
-
-<p>"No, venerable sir, I have not been permitted by my parents."</p>
-
-<p>"Raṭṭhapāla, Tathāgatas do not give the going forth to anyone who does not have his parents’ permission."</p>
-
-<p>"Venerable sir, I shall see to it that my parents permit me to go forth from the home life into homelessness."</p>
+<p>The brahmins and householders of Thullakoṭṭhita heard:</p>
 
 <hr>
-<p id="p4"><span class="parno">4</span>Then the clansman Raṭṭhapāla rose from his seat, and after paying homage to the Blessed One, he departed, keeping him on his right. He went to his parents and told them: "Mother and father, as I understand the Dhamma taught by the Blessed One, it is not easy while living in a home to lead the holy life, utterly perfect and pure as a polished shell. I wish to shave off my hair and beard, put on the yellow robe, and go forth from the home life into homelessness. Give me permission to go forth from the home life into homelessness."</p>
 
-<p>When he had said this, his parents replied: "Dear Raṭṭhapāla, you are our only son, dear and beloved. You have been raised in comfort, brought up in comfort; you know nothing of suffering, dear Raṭṭhapāla.<span class="note" id="n797"><span class="details"><span class="p">[n.797] I omit here the lines beginning <i>ehi tvaṁ Raṭṭ̣hapāla,</i> found in SBJ but given in brackets in PTS and in a note by BBS. The lines seem to fit better into ¶7 below, with the verb <i>uṭṭhehi</i> in place of <i>ehi.</i></span></span></span> Even in case of your death we would lose you unwillingly, so how could we give you our permission to go forth from the home life into homelessness while you are still living?"</p>
-
-<hr>
-<p id="p5"><span class="parno">5</span>For the second time … For the third time the clansman Raṭṭhapāla said to his parents: "Mother and father … give me permission to go forth from the home life into homelessness."</p>
+<p>“It seems the ascetic Gotama — a Sakyan, gone forth from a Sakyan family — has arrived at Thullakoṭṭhita, together with a large Saṅgha of mendicants. He has this good reputation: ‘That Blessed One is perfected, a fully awakened Buddha, accomplished in knowledge and conduct, holy, knower of the world, supreme guide for those who wish to train, teacher of gods and humans, awakened, blessed.’ He has realized with his own insight this world — with its gods, Māras and Brahmās, this population with its ascetics and brahmins, gods and humans — and he makes it known to others. He teaches Dhamma that’s good in the beginning, good in the middle, and good in the end, meaningful and well-phrased. And he reveals a spiritual practice that’s entirely full and pure. It’s good to see such perfected ones.”</p>
 
 <hr>
-<p id="p6"><span class="parno">6</span>For the third time his parents replied: "Dear Raṭṭhapāla … how could we give you our permission to go forth from the home life into homelessness while you are still living?"</p>
 
-<p id="p7"><span class="parno">7</span>Then, not receiving his parents’ permission to go forth, the clansman Raṭṭhapāla lay down there on the bare floor, saying: "Right here I shall either die or receive the going forth."</p>
+<p id="p2"><span class="parno">2</span>Then the brahmins and householders of Thullakoṭṭhita went up to the Buddha. Before sitting down to one side, some bowed, some exchanged greetings and polite conversation, some held up their joined palms toward the Buddha, some announced their name and clan, while some kept silent. When they were seated, the Buddha educated, encouraged, fired up, and inspired them with a Dhamma talk.</p>
 
-<p>Then the clansman Raṭṭhapāla's parents said to him: "Dear Raṭṭhapāla, you are our only son, dear and beloved. You have been raised in comfort, brought up in comfort; you know nothing of suffering, dear Raṭṭhapāla. Get up, dear Raṭṭhapāla, eat, drink, and amuse yourself. While eating, drinking, and amusing yourself, you can be happy enjoying sensual pleasures and making merit. We do not permit you to go forth from the home life into homelessness. Even in the case of your death we would lose you unwillingly, so how could we give you our permission to go forth from the home life into homelessness while you are still living?" When this was said, the clansman Raṭṭhapāla was silent.</p>
+<p id="p3"><span class="parno">3</span>Now at that time a gentleman named Raṭṭhapāla, the son of the leading clan in Thullakoṭṭhita, was sitting in the assembly. He thought: “As I understand the Buddha’s teachings, it’s not easy for someone living at home to lead the spiritual life utterly full and pure, like a polished shell. Why don’t I cut off my hair and beard, dress in ocher robes, and go forth from lay life to homelessness?”</p>
 
-<p>For the second time …</p>
+<p>Then, having approved and agreed with what the Buddha said, the brahmins and householders of Thullakoṭṭhita got up from their seat, bowed, and respectfully circled the Buddha, keeping him on their right, before leaving.</p>
 
-<hr>
-<p id="p8"><span class="parno">8</span>For the third time his parents said to him: "Dear Raṭṭhapāla … how could we give you our permission to go forth from the home life into homelessness while you are still living?" For the third time the clansman Raṭṭhapāla was silent.</p>
-
-<p>Then the clansman Raṭṭhapāla's parents went to his friends and said to them: "Dears, the clansman Raṭṭhapāla has lain down on the bare floor, having said: ‘Right here I shall either die or receive the going forth.’ Come, dears, go to the clansman Raṭṭhapāla and say to him: ‘Friend Raṭṭhapāla, you are your parents’ only son … Get up, friend Raṭṭhapāla, eat, drink, and amuse yourself … how could your parents give you their permission to go forth from the home life into homelessness while you are still living?’"</p>
-
-<p id="p9"><span class="parno">9</span>Then the clansman Raṭṭhapāla's friends went to him and said: "Friend Raṭṭhapāla, you are your parents’ only son, dear and beloved. You have been raised in comfort, brought up in comfort; you know nothing of suffering, friend Raṭṭhapāla. Get up, friend Raṭṭhapāla, eat, drink, and amuse yourself. While eating, drinking, and amusing yourself, you can be happy enjoying sensual pleasures and making merit. Your parents do not permit you to go forth from the home life into homelessness. Even in case of your death they would lose you unwillingly, so how could they give you their permission to go forth from the home life into homelessness while you are still living?" When this was said, the clansman Raṭṭhapāla was silent.</p>
+<p>Soon after they left, Raṭṭhapāla went up to the Buddha, bowed, sat down to one side, and said to him: “Sir, as I understand the Buddha’s teachings, it’s not easy for someone living at home to lead the spiritual life utterly full and pure, like a polished shell. I wish to cut off my hair and beard, dress in ocher robes, and go forth from the lay life to homelessness. Sir, may I receive the going forth, the ordination in the Buddha’s presence? May the Buddha please give me the going forth!”</p>
 
 <hr>
-<p id="p10"><span class="parno">10</span>For the second time … For the third time his friends said to him: "Friend Raṭṭhapāla … how could they give you their permission to go forth from the home life into homelessness while you are still living?" For the third time the clansman Raṭṭhapāla was silent.</p>
+
+<p>“But, Raṭṭhapāla, do you have your parents’ permission?”</p>
+
+<p>“No, sir.”</p>
 
 <hr>
-<p id="p11"><span class="parno">11</span>Then the clansman Raṭṭhapāla's friends went to his parents and said to them: "Mother and father, the clansman Raṭṭhapāla is lying down there on the bare floor, having said: ‘Right here I shall either die or receive the going forth.’ Now if you do not give him your permission to go forth from the home life into homelessness, he will die there. But if you give him your permission, you will see him after he has gone forth. And if he does not enjoy the going forth, what else can he do then but return here? So give him your permission to go forth from the home life into homelessness."</p>
 
-<p>"Then, dears, we give the clansman Raṭṭhapāla permission to go forth from the home life into homelessness. But when he has gone forth, he must visit his parents."</p>
-
-<p>Then the clansman Raṭṭhapāla's friends went to him and told him: "Get up, friend Raṭṭhapāla. Your parents permit you to go forth from the home life into homelessness. But when you have gone forth, you must visit your parents."</p>
+<p>“Raṭṭhapāla, Buddhas don’t give the going forth to the child of parents who haven’t given their permission.”</p>
 
 <hr>
-<p id="p12"><span class="parno">12</span>The clansman Raṭṭhapāla then got up, and when he had regained his strength, he went to the Blessed One, and after paying homage to him, he sat down at one side and told him: "Venerable sir, I have my parents’ permission to go forth from the home life into homelessness. Let the Blessed One give me the going forth." Then the clansman Raṭṭhapāla received the going forth under the Blessed One, and he received the full admission.</p>
 
-<p>Then not long after the venerable Raṭṭhapāla had received the full admission, a half-month after he had received the full admission, the Blessed One, having stayed at Thullakoṭṭhita as long as he chose, set out to wander towards Sāvatthī. Wandering by stages, he eventually arrived at Sāvatthī, and there he lived at Sāvatthī in Jeta's Grove, Anāthapiṇḍika's Park.</p>
-
-<p>Before long, dwelling alone, withdrawn, diligent, ardent, and resolute, the venerable Raṭṭhapāla, by realising for himself with direct knowledge, here and now entered upon and abided in that supreme goal of the holy life for the sake of which clansmen rightly go forth from the home life into homelessness.<span class="note" id="n798"><span class="details"><span class="p">[n.798] Although the stock phrase "before long" is used here, <a href="mn0-abbr.html">MA</a> says that it took Raṭṭhapāla twelve years of striving to attain arahantship. This statement seems correct in view of the fact that on his return journey to his parents’ home his father did not immediately recognise him.</span></span></span> He directly knew: "Birth is destroyed, the holy life has been lived, what had to be done has been done, there is no more coming to any state of being." And the venerable Raṭṭhapāla became one of the arahants.</p>
+<p>“I’ll make sure, sir, to get my parents’ permission.”</p>
 
 <hr>
-<p id="p13"><span class="parno">13</span>Then the venerable Raṭṭhapāla went to the Blessed One, and after paying homage to him, he sat down at one side and told him: "Venerable sir, I wish to visit my parents, if I have the Blessed One's permission."</p>
 
-<p>Then the Blessed One penetrated mentally the thoughts in venerable Raṭṭhapāla's mind. When he knew that the clansman Raṭṭhapāla was incapable of abandoning the training and returning to the low life, he told him: "You may go, Raṭṭhapāla, at your own convenience."</p>
+<p id="p4"><span class="parno">4</span>Then Raṭṭhapāla got up from his seat, bowed, and respectfully circled the Buddha. Then he went to his parents and said: “Mum and dad, as I understand the Buddha’s teachings, it’s not easy for someone living at home to lead the spiritual life utterly full and pure, like a polished shell. I wish to cut off my hair and beard, dress in ocher robes, and go forth from the lay life to homelessness. Please give me permission to go forth.”</p>
 
-<p>Then the venerable Raṭṭhapāla rose from his seat, and after paying homage to the Blessed One, he departed, keeping him on his right. He then set his resting place in order, and taking his bowl and outer robe, set out to wander towards Thullakoṭṭhita. Wandering by stages, he eventually arrived at Thullakoṭṭhita. There he lived in Thullakoṭṭhita in King Koravya's Migācīra Garden. Then, when it was morning, he dressed, and taking his bowl and outer robe, went into Thullakoṭṭhita for alms. As he was wandering for alms from house to house in Thullakoṭṭhita, he came to his own father's house.</p>
-
-<p>Now on that occasion the venerable Raṭṭhapāla's father was sitting in the hall of the central door having his hair dressed. When he saw the venerable Raṭṭhapāla coming in the distance, he said: "Our only son, dear and beloved, was made to go forth by these bald-pated recluses." Then at his own father's house the venerable Raṭṭhapāla received neither alms nor a polite refusal; instead, he received only abuse.</p>
-
-<p>Just then a slavewoman belonging to one of his relatives was about to throw away some old porridge. Seeing this, the venerable Raṭṭhapāla said to her: "Sister, if that stuff is to be thrown away, then pour it into my bowl here."</p>
+<p>When he said this, Raṭṭhapāla’s parents said to him: “But, dear Raṭṭhapāla, you’re our only child. You’re dear to us and we love you. You’re dainty and raised in comfort. You know nothing of suffering. When you die we will lose you against our wishes. So how can we allow you to go forth while you’re still alive?”</p>
 
 <hr>
-<p>While she was doing so, she recognised the characteristic features of his hands, his feet, and his voice.</p>
 
-<p id="p14"><span class="parno">14</span>Then she went to his mother and said: "Please know, my lady, that my lord's son Raṭṭhapāla has arrived."</p>
-
-<hr>
-<p>"Gracious! If what you say is true, you are no longer a slave!"</p>
+<p id="p5-6"><span class="parno">5-6</span>For a second time, and a third time, Raṭṭhapāla asked his parents for permission, but got the same reply.</p>
 
 <hr>
-<p>Then the venerable Raṭṭhapāla's mother went to his father and said: "Please know, householder, they say that the clansman Raṭṭhapāla has arrived."</p>
 
-<p>Just then the venerable Raṭṭhapāla was eating the old porridge by the wall of a certain shelter. His father went to him and said: "Raṭṭhapāla, my dear, surely there is … and you will be eating old porridge!<span class="note" id="n799"><span class="details"><span class="p">[n.799] <a href="mn0-abbr.html">MA</a> explains that his father meant to say: "Raṭṭhapāla, my dear, there is our wealth — we cannot be called poor — yet you sit in such a place eating old porridge!" However, the householder was afflicted with such sorrow that he was unable to complete his utterance.</span></span></span> Is there not your own house to go to?"</p>
+<p id="p7"><span class="parno">7</span>Then Raṭṭhapāla thought: “My parents don’t allow me to go forth.” He laid down there on the bare ground, saying: “I’ll either die right here or go forth.” And he refused to eat, up to the seventh meal.</p>
 
-<p>"How could we have a house, householder, when we have gone forth from the home life into homelessness? We are homeless, householder. We went to your house, but we received neither alms nor a polite refusal there; instead we received only abuse."</p>
+<p>Then Raṭṭhapāla’s parents said to him: “Dear Raṭṭhapāla, you’re our only child. You’re dear to us and we love you. You’re dainty and raised in comfort. You know nothing of suffering. When you die we will lose you against our wishes. So how can we allow you to go forth from lay life to homelessness while you’re still living? Get up, Raṭṭhapāla! Eat, drink, and amuse yourself. While enjoying sensual pleasures, delight in making merit. We don’t allow you to go forth. When you die we will lose you against our wishes. So how can we allow you to go forth while you’re still alive?”</p>
 
-<p>"Come, dear Raṭṭhapāla, let us go to the house."</p>
-
-<p>"Enough, householder, my meal for today is finished."</p>
-
-<p>"Then, dear Raṭṭhapāla, consent to accept tomorrow's meal." The venerable Raṭṭhapāla consented in silence.</p>
-
-<p>Then, knowing that the venerable Raṭṭhapāla had consented, his father went back to his own house where he had gold coins and bullion made into a large heap and covered it with mats. Then he told the venerable Raṭṭhapāla's former wives: "Come, daughters-in-law, adorn yourselves with ornaments in the way Raṭṭhapāla found you most dear and loveable."</p>
+<p>When they said this, Raṭṭhapāla kept silent.</p>
 
 <hr>
-<p id="p15"><span class="parno">15</span>When night had ended, the venerable Raṭṭhapāla's father had good food of various kinds prepared in his own house and had the time announced to the venerable Raṭṭhapāla: "It is time, dear Raṭṭhapāla, the meal is ready."</p>
 
-<p>Then, it being morning, the venerable Raṭṭhapāla dressed, and taking his bowl and outer robe, he went to his own father's house and sat down on the seat made ready. Then his father had the pile of gold coins and bullion uncovered and said: "Dear Raṭṭhapāla, this is your maternal fortune; your paternal fortune is another and your ancestral fortune is yet another. Dear Raṭṭhapāla, you can enjoy the wealth and make merit. Come then, dear, abandon the training and return to the low life, enjoy the wealth and make merit."</p>
+<p id="p8"><span class="parno">8</span>For a second time, and a third time, Raṭṭhapāla’s parents made the same request. And for a third time, Raṭṭhapāla kept silent. <br>
 
-<p>"Householder, if you would follow my advice, then have this pile of gold coins and bullion loaded on carts and carried away to be dumped midstream in the river Ganges. Why is that? Because, householder, on account of this there will arise for you sorrow, lamentation, pain, grief, and despair."</p>
-
-<p>Then the venerable Raṭṭhapāla's former wives clasped his feet and said to him: "What are they like, my lord's son, the nymphs for whose sake you lead the holy life?"</p>
-
-<p>"We do not lead the holy life for the sake of nymphs, sisters."</p>
-
-<p>"Our lord's son Raṭṭhapāla calls us ‘sisters,’" they cried and right there they fainted.</p>
-
-<p>Then the venerable Raṭṭhapāla told his father: "Householder, if there is a meal to be given, then give it. Do not harass us."</p>
-
-<p>"Eat then, dear Raṭṭhapāla, the meal is ready."</p>
-
-<p>Then, with his own hands, the venerable Raṭṭhapāla's father served and satisfied him with the various kinds of good food.</p>
+<br>Raṭṭhapāla’s parents then went to see his friends. They told them of the situation and asked for their help.</p>
 
 <hr>
-<p id="p16"><span class="parno">16</span>When the venerable Raṭṭhapāla had eaten and had put his bowl aside, he stood up and uttered these stanzas:</p>
 
-<div class="verse">
-<p id="p17"><span class="parno">17</span>"Behold a puppet here pranked out,<span class="note" id="n800"><span class="details"><span class="p">[n.800] The verses obviously refer to his former wives, adorned in order to entice him back to the lay life. Strangely, no mention is made of the wives in the portion of the sutta conceived in his pre-ordination days.</span></span></span>
-<br>A body built up out of sores,
-<br>Sick, an object for concern,
-<br>Where no stability abides.</p>
+<p id="p9"><span class="parno">9</span>Then Raṭṭhapāla’s friends went to him and said: “Our friend Raṭṭhapāla, you are your parents’ only child. You’re dear to them and they love you. You’re dainty and raised in comfort. You know nothing of suffering. When you die your parents will lose you against their wishes. So how can they allow you to go forth while you’re still alive? Get up, Raṭṭhapāla! Eat, drink, and amuse yourself. While enjoying sensual pleasures, delight in making merit. Your parents will not allow you to go forth. When you die your parents will lose you against their wishes. So how can they allow you to go forth while you’re still alive?”</p>
 
-<p id="p18"><span class="parno">18</span>Behold a figure here pranked out
-<br>With jewellery and earrings too,
-<br>A skeleton wrapped up in skin,
-<br>Made attractive by its clothes.</p>
-
-<p id="p19"><span class="parno">19</span>Its feet adorned with henna dye
-<br>And powder smeared upon its face:
-<br>It may beguile a fool, but not
-<br>A seeker of the further shore.</p>
-
-<p id="p20"><span class="parno">20</span>Its hair is dressed in eightfold plaits
-<br>And unguent smeared upon its eyes:
-<br>It may beguile a fool, but not
-<br>A seeker of the further shore.</p>
-
-<p id="p21"><span class="parno">21</span>A filthy body well adorned
-<br>Like a new-painted unguent pot:
-<br>It may beguile a fool, but not
-<br>A seeker of the further shore.</p>
-
-<p id="p22"><span class="parno">22</span>The deer-hunter set out the snare
-<br>But the deer did not spring the trap;
-<br>We ate the bait and now depart
-<br>Leaving the hunters to lament."</p>
-</div>
+<p>When they said this, Raṭṭhapāla kept silent.</p>
 
 <hr>
-<p id="p23"><span class="parno">23</span>After the venerable Raṭṭhapāla had stood up and uttered these stanzas, he went to King Koravya's Migācīra garden and sat down at the root of a tree for the day's abiding.</p>
-<a id="24"></a>
-<hr>
-<p id="p24"><span class="parno">24</span>Then King Koravya addressed his gamekeeper thus: "Good gamekeeper, tidy up the Migācīra Garden so that we may go to the pleasure garden to see a pleasing spot." — "Yes, sire," he replied. Now while he was tidying up the Migācīra Garden, the gamekeeper saw the venerable Raṭṭhapāla seated at the root of a tree for the day's abiding. When he saw him, he went to King Koravya and told him: "Sire, the Migācīra Garden has been tidied up. The clansman Raṭṭhapāla is there, the son of the leading clan in this same Thullakoṭṭhita, of whom you have always spoken highly;<span class="note" id="n801"><span class="details"><span class="p">[n.801] <a href="mn0-abbr.html">MA</a>: Recalling the Elder, the king would speak praise of him in the midst of his army or his harem: "That young man has done a difficult thing — having abandoned great wealth, he went forth without turning back or looking aside."</span></span></span> he is seated at the root of a tree for the day's abiding."</p>
 
-<p>"Then, good gamekeeper, enough of the pleasure garden for today. Now we shall go to pay respects to that Master Raṭṭhapāla."</p>
-
-<p>Then, saying: "Give away all the food that has been prepared there," King Koravya had a number of state carriages prepared, and mounting one of them, accompanied by the other carriages, he drove out from Thullakoṭṭhita with the full pomp of royalty to see the venerable Raṭṭhapāla. He drove thus as far as the road was passable for carriages, and then he dismounted from his carriage and went forward on foot with a following of the most eminent officials to where the venerable Raṭṭhapāla was. He exchanged greetings with the venerable Raṭṭhapāla, and when this courteous and amiable talk was finished, he stood at one side and said: "Here is an elephant rug. Let Master Raṭṭhapāla be seated on it."</p>
-
-<p>"There is no need, great king. Sit down. I am sitting on my own mat."</p>
-
-<p>King Koravya sat down on a seat made ready and said:</p>
-
-<p id="p25"><span class="parno">25</span>"Master Raṭṭhapāla, there are four kinds of loss. Because they have undergone these four kinds of loss, some people here shave off their hair and beard, put on the yellow robe, and go forth from the home life into homelessness. What are the four? They are loss through ageing, loss through sickness, loss of wealth, and loss of relatives.</p>
-
-<p>"And what is loss through ageing? Here, Master Raṭṭhapāla, someone is old, aged, burdened with years, advanced in life, come to the last stage. He considers thus: ‘I am old, aged, burdened with years, advanced in life, come to the last stage. It is no longer easy for me to acquire unacquired wealth or to augment wealth already acquired. Suppose I shave off my hair and beard, put on the yellow robe, and go forth from the home life into homelessness.’ Because he has undergone that loss through ageing, he shaves off his hair and beard, puts on the yellow robe, and goes forth from the home life into homelessness. This is called loss through ageing. But Master Raṭṭhapāla is now still young, a black-haired young man endowed with the blessing of youth, in the prime of life. Master Raṭṭhapāla has not undergone any loss through ageing. What has he known or seen or heard that he has gone forth from the home life into homelessness?</p>
-
-<p id="p26"><span class="parno">26</span>"And what is loss through sickness? Here, Master Raṭṭhapāla, someone is afflicted, suffering, and gravely ill. He considers thus: ‘I am afflicted, suffering, and gravely ill. It is no longer easy for me to acquire unacquired wealth … … into homelessness.’ Because he has undergone that loss through sickness … he goes forth from the home life into homelessness. This is called loss through sickness. But Master Raṭṭhapāla now is free from illness and affliction; he possesses a good digestion that is neither too cool nor too warm but medium. Master Raṭṭhapāla has not undergone any loss through sickness. What has he known or seen or heard that he has gone forth from the home life into homelessness?</p>
-
-<p id="p27"><span class="parno">27</span>"And what is loss of wealth? Here, Master Raṭṭhapāla, someone is rich, of great wealth, of great possessions. Gradually his wealth dwindles away. He considers thus: ‘Formerly I was rich, of great wealth, of great possessions. Gradually my wealth has dwindled away. It is no longer easy for me to acquire unacquired wealth … into homelessness.’ Because he has undergone that loss of wealth … he goes forth from the home life into homelessness. This is called loss of wealth. But Master Raṭṭhapāla is the son of the leading clan in this same Thullakoṭṭhita. Master Raṭṭhapāla has not undergone any loss of wealth. What has he known or seen or heard that he has gone forth from the home life into homelessness?</p>
-
-<p id="p28"><span class="parno">28</span>"And what is loss of relatives? Here, Master Raṭṭhapāla, someone has many friends and companions, kinsmen and relatives. Gradually those relatives of his dwindle away. He considers thus: ‘Formerly I had many friends and companions, kinsmen and relatives. Gradually those relatives of mine have dwindled away. It is no longer easy for me to acquire unacquired wealth … … into homelessness.’ Because he has undergone that loss of relatives … he goes forth from the home life into homelessness. This is called loss of relatives. But Master Raṭṭhapāla has many friends and companions, kinsmen and relatives, in this same Thullakoṭṭhita. Master Raṭṭhapāla has not undergone any loss of relatives. What has he known or seen or heard that he has gone forth from the home life into homelessness?</p>
-
-<p id="p29"><span class="parno">29</span>"Master Raṭṭhapāla, these are the four kinds of loss. Because they have undergone these four kinds of loss, some people here shave off their hair and beard, put on the yellow robe, and go forth from the home life into homelessness. Master Raṭṭhapāla has not undergone any of these. What has he known or seen or heard that he has gone forth from the home life into homelessness?"</p>
-
-<p id="p30"><span class="parno">30</span>"Great king, there are four summaries of the Dhamma that have been taught by the Blessed One who knows and sees, accomplished and fully enlightened. Knowing and seeing and hearing them, I went forth from the home life into homelessness. What are the four?</p>
-
-<p>(1) "‘<span class="add">Life in</span> any world is unstable, it is swept away’:<span class="note" id="n802"><span class="details"><span class="p">[n.802] <i>Upanīyati loko addhuvo.</i> <a href="mn0-abbr.html">MA</a>: It is swept away towards ageing and death.</span></span></span> this is the first summary of the Dhamma taught by the Blessed One who knows and sees, accomplished and fully enlightened. Knowing and seeing and hearing this, I went forth from the home life into homelessness.</p>
-
-<p>(2) "‘<span class="add">Life in</span> any world has no shelter and no protector’:<span class="note" id="n803"><span class="details"><span class="p">[n.803] <i>Attāṇo loko anabhissaro.</i> <a href="mn0-abbr.html">MA</a>: There is no one able to offer it shelter or to console it with a refuge. This statement, of course, does not deny a refuge from the world, which is just what the Dhamma offers.</span></span></span> this is the second summary of the Dhamma taught by the Blessed One who knows and sees …</p>
-
-<p>(3) "‘<span class="add">Life in</span> any world has nothing of its own; one has to leave all and pass on’:<span class="note" id="n804"><span class="details"><span class="p">[n.804] <i>Assako loko sabbaṁ pahāya gamanīyaṁ.</i></span></span></span> this is the third summary of the Dhamma taught by the Blessed One who knows and sees …</p>
-
-<p>(4) "‘<span class="add">Life in</span> any world is incomplete, insatiate, the slave of craving’:<span class="note" id="n805"><span class="details"><span class="p">[n.805] <i>Ūno loko atitto taṇhādāso.</i></span></span></span> this is the fourth summary of the Dhamma taught by the Blessed One who knows and sees …</p>
-
-<p>Knowing and seeing and hearing them, I went forth from the home life into homelessness."</p>
+<p id="p10"><span class="parno">10</span>For a second time, and a third time, Raṭṭhapāla’s friends made the same request. And for a third time, Raṭṭhapāla kept silent.</p>
 
 <hr>
-<p id="p31"><span class="parno">31</span>"Master Raṭṭhapāla said: ‘<span class="add">Life in</span> any world is unstable, it is swept away.’ How should the meaning of that statement be understood?"</p>
 
-<p>"What do you think, great king? When you were twenty or twenty-five years old, were you an expert rider of elephants, an expert horseman, an expert charioteer, an expert archer, an expert swordsman, strong in thighs and arms, sturdy, capable in battle?"</p>
+<p id="p11"><span class="parno">11</span>Then Raṭṭhapāla’s friends went to his parents and said: “Mum and dad, Raṭṭhapāla is lying there on the bare ground saying: ‘I’ll either die right here or go forth.’ If you don’t allow him to go forth, he’ll die there. But if you do allow him to go forth, you’ll see him again afterwards. And if he doesn’t enjoy the renunciate life, where else will he have to go? He’ll come right back here. Please give Raṭṭhapāla permission to go forth.”</p>
 
-<p>"When I was twenty or twenty-five years old, Master Raṭṭhapāla, I was an expert rider of elephants … strong in thighs and arms, sturdy, capable in battle. Sometimes I wonder if I had supernormal power then. I do not see anyone who could equal me in strength."</p>
+<p>“Then, dears, we give Raṭṭhapāla permission to go forth. But once gone forth he must visit his parents.”</p>
 
-<hr>
-<p>"What do you think, great king? Are you now as strong in thighs and arms, as sturdy and as capable in battle?"</p>
-
-<p>"No, Master Raṭṭhapāla. Now I am old, aged, burdened with years, advanced in life, come to the last stage; my years have turned eighty. Sometimes I mean to put my foot here and I put my foot somewhere else."</p>
-
-<p>"Great king, it was on account of this that the Blessed One who knows and sees, accomplished and fully enlightened, said: ‘<span class="add">Life in</span> any world is unstable, it is swept away’; and when I knew and saw and heard this, I went forth from the home life into homelessness."</p>
-
-<p>"It is wonderful, Master Raṭṭhapāla, it is marvellous how well that has been expressed by the Blessed One who knows and sees, accomplished and fully enlightened: ‘<span class="add">Life in</span> any world is unstable, it is swept away.’ It is indeed so!</p>
+<p>Then Raṭṭhapāla’s friends went to him and said: “Get up, Raṭṭhapāla! Your parents have given you permission to go forth from lay life to homelessness. But once gone forth you must visit your parents.”</p>
 
 <hr>
-<p id="p32"><span class="parno">32</span>"Master Raṭṭhapāla, there exist in this court elephant troops and cavalry and chariot troops and infantry, which will serve to subdue any threats to us. Now Master Raṭṭhapāla said: ‘<span class="add">Life in</span> any world has no shelter and no protector.’ How should the meaning of that statement be understood?"</p>
 
-<p>"What do you think, great king? Do you have any chronic ailment?"</p>
+<p id="p12"><span class="parno">12</span>Raṭṭhapāla got up and regained his strength. He went to the Buddha, bowed, sat down to one side, and said to him: “Sir, I have my parents’ permission to go forth from the lay life to homelessness. May the Buddha please give me the going forth.”</p>
 
-<p>"I have a chronic wind ailment, Master Raṭṭhapāla. Sometimes my friends and companions, kinsmen and relatives, stand around me, thinking: ‘Now King Koravya is about to die, now King Koravya is about to die!’"</p>
-
-<p>"What do you think, great king? Can you command your friends and companions, your kinsmen and relatives: ‘Come, my good friends and companions, my kinsmen and relatives. All of you present share this painful feeling so that I may feel less pain’? Or do you have to feel that pain yourself alone?"</p>
-
-<p>"I cannot command my friends and companions, my kinsmen and relatives thus, Master Raṭṭhapāla. I have to feel that pain alone."</p>
+<p>And Raṭṭhapāla received the going forth, the ordination in the Buddha’s presence. Not long after Venerable Raṭṭhapāla’s ordination, a fortnight later, the Buddha — having stayed in Thullakoṭṭhita as long as he wished — set out for Sāvatthī. Traveling stage by stage, he arrived at Sāvatthī, where he stayed in Jeta’s Grove, Anāthapiṇḍika’s monastery.</p>
 
 <hr>
-<p>"Great king, it was on account of this that the Blessed One who knows and sees, accomplished and fully enlightened, said: ‘<span class="add">Life in</span> any world has no shelter and no protector’; and when I knew and saw and heard this, I went forth from the home life into homelessness."</p>
 
-<p>"It is wonderful, Master Raṭṭhapāla, it is marvellous how well that has been expressed by the Blessed One who knows and sees, accomplished and fully enlightened: ‘<span class="add">Life in</span> any world has no shelter and no protector.’ It is indeed so!</p>
+<p>Then Venerable Raṭṭhapāla, living alone, withdrawn, diligent, keen, and resolute, soon realized the supreme end of the spiritual path in this very life. He lived having achieved with his own insight the goal for which gentlemen rightly go forth from the lay life to homelessness.</p>
 
-<p id="p33"><span class="parno">33</span>"Master Raṭṭhapāla, there exist in this court abundant gold coins and bullion stored away in vaults and lofts. Now Master Raṭṭhapāla said: ‘<span class="add">Life in</span> any world has nothing of its own; one has to leave all and pass on.’ How should the meaning of that statement be understood?"</p>
-
-<p>"What do you think, great king? You now enjoy yourself provided and endowed with the five cords of sensual pleasure, but will you be able to have it of the life to come: ‘Let me likewise enjoy myself provided and endowed with these same five cords of sensual pleasure’? Or will others take over this property, while you will have to pass on according to your actions?"</p>
-
-<p>"I cannot have it thus of the life to come, Master Raṭṭhapāla. On the contrary, others will take over this property while I shall have to pass on according to my actions."</p>
-
-<p>"Great king, it was on account of this that the Blessed One who knows and sees, accomplished and fully enlightened, said: ‘<span class="add">Life in</span> any world has nothing of its own; one has to leave all and pass on’; and when I knew and saw and heard this, I went forth from the home life into homelessness."</p>
-
-<p>"It is wonderful, Master Raṭṭhapāla, it is marvellous how well that has been expressed by the Blessed One who knows and sees, accomplished and fully enlightened: ‘<span class="add">Life in</span> any world has nothing of its own; one has to leave all and pass on.’ It is indeed so!</p>
-
-<p id="p34"><span class="parno">34</span>"Now Master Raṭṭhapāla said: ‘<span class="add">Life in</span> any world is incomplete, insatiate, the slave of craving.’ How should the meaning of that statement be understood?"</p>
-
-<p>"What do you think, great king? Do you reign over the rich Kuru country?"</p>
-
-<p>"Yes, Master Raṭṭhapāla, I do."</p>
-
-<p>"What do you think, great king? Suppose a trustworthy and reliable man came to you from the east and said: ‘Please know, great king, that I have come from the east, and there I saw a large country, powerful and rich, very populous and crowded with people. There are plenty of elephant troops there, plenty of cavalry, chariot troops and infantry; there is plenty of ivory there, and plenty of gold coins and bullion both unworked and worked, and plenty of women for wives. With your present forces you can conquer it. Conquer it then, great king.’ What would you do?"</p>
-
-<p>"We would conquer it and reign over it, Master Raṭṭhapāla."</p>
+<p>He understood: “Rebirth is ended; the spiritual journey has been completed; what had to be done has been done; there is no return to any state of existence.” And Venerable Raṭṭhapāla became one of the perfected.</p>
 
 <hr>
-<p id="p35"><span class="parno">35</span>"What do you think, great king? Suppose a trustworthy and reliable man came to you from the west … from the north … from the south … from across the sea and said: ‘Please know, great king, that I have come from across the sea, and there I saw a large country, powerful and rich … Conquer it then, great king.’ What would you do?"</p>
+
+<p id="p13"><span class="parno">13</span>Then he went up to the Buddha, bowed, sat down to one side, and said to him: “Sir, I’d like to visit my parents, if the Buddha allows it.”</p>
+
+<p>Then the Buddha focused on comprehending Raṭṭhapāla’s mind. When he knew that it was impossible for Raṭṭhapāla to reject the training and return to a lesser life, he said: “Please, Raṭṭhapāla, go at your convenience.”</p>
+
+<p>And then Raṭṭhapāla got up from his seat, bowed, and respectfully circled the Buddha, keeping him on his right. Then he set his lodgings in order and, taking his bowl and robe, set out for Thullakoṭṭhita. Traveling stage by stage, he arrived at Thullakoṭṭhika, where he stayed in King Koravya’s deer raṅge. Then Raṭṭhapāla robed up in the morning and, taking his bowl and robe, entered Thullakoṭṭhita for alms. Wandering indiscriminately for alms-food, he approached his own father’s house.</p>
+
+<p>Now at that time Raṭṭhapāla’s father was having his hair dressed in the hall of the middle gate. He saw Raṭṭhapāla coming off in the distance and said,</p>
+
+<p>“Our dear and beloved only son was made to go forth by these shavelings, these fake ascetics!” And at his own father’s house Raṭṭhapāla received neither alms nor a polite refusal, but only abuse.</p>
 
 <hr>
-<p>"We would conquer it too and reign over it, Master Raṭṭhapāla."</p>
 
-<p>"Great king, it was on account of this that the Blessed One who knows and sees, accomplished and fully enlightened, said: ‘<span class="add">Life in</span> any world is incomplete, insatiate, the slave of craving’; and when I knew and saw and heard this, I went forth from the home life into homelessness."</p>
+<p>Now at that time a family bondservant wanted to throw away the previous night’s porridge. So Raṭṭhapāla said to her: “If that’s to be thrown away, sister, pour it here in my bowl.” As she was pouring the porridge into his bowl, she recognized the features of his hands, feet, and voice.</p>
 
-<p>"It is wonderful, Master Raṭṭhapāla, it is marvellous how well that has been expressed by the Blessed One who knows and sees, accomplished and fully enlightened: ‘<span class="add">Life in</span> any world is incomplete, insatiate, the slave of craving.’ It is indeed so!"</p>
+<hr>
 
-<p id="p36"><span class="parno">36</span>That is what the venerable Raṭṭhapāla said. And having said that he said further:</p>
+<p id="p14"><span class="parno">14</span>She then went to his mother and said: “Please, madam, you should know this. My lord Raṭṭhapāla has arrived.”</p>
 
-<div class="verse">
-<p id="p37"><span class="parno">37</span>"I see men wealthy in the world, who yet
-<br>From ignorance give not their gathered wealth.
-<br>Greedily they hoard away their riches
-<br>Longing still for further sensual pleasures.</p>
+<p>“Wow! If you speak the truth, I’ll make you a free woman!”</p>
 
-<p id="p38"><span class="parno">38</span>A king who has conquered the earth by force
-<br>And rules over the land the ocean bounds
-<br>Is yet unsated with the sea's near shore
-<br>And hungers for its further shore as well.</p>
+<hr>
 
-<p id="p39"><span class="parno">39</span>Most other people too, not just a king,
-<br>Encounter death with craving unabated;
-<br><span class="add">With plans</span> still incomplete they leave the corpse;
-<br>Desires remain unsated in the world.</p>
+<p>Then Raṭṭhapāla’s mother went to his father and said: “Please householder, you should know this. It seems our son Raṭṭhapāla has arrived.”</p>
 
-<p id="p40"><span class="parno">40</span>His relatives lament and rend their hair,
-<br>Crying, ‘Ah me! Alas! Our love is dead!’
-<br>They bear away the body wrapped in shrouds
-<br>To place it on a pyre and burn it there.</p>
-</div>
-<div class="verse">
-<p id="p41"><span class="parno">41</span>Clad in a shroud, he leaves his wealth behind,
-<br>Prodded with stakes he burns <span class="add">upon the pyre</span>.
-<br>And as he dies, no relatives or friends
-<br>Can offer him shelter and refuge here.</p>
+<hr>
 
-<p id="p42"><span class="parno">42</span>While his heirs take over his wealth, this being
-<br>Must pass on according to his actions;
-<br>And as he dies nothing can follow him;
-<br>Not child nor wife nor wealth nor royal estate.</p>
+<p>Now at that time Raṭṭhapāla was eating last night’s porridge by a wall. Then Raṭṭhapāla’s father went up to him and said: “Dear Raṭṭhapāla! There’s … and you’ll be eating last night’s porridge! Why not go to your own home?”</p>
 
-<p id="p43"><span class="parno">43</span>Longevity is not acquired with wealth
-<br>Nor can prosperity banish old age;
-<br>Short is this life, as all the sages say,
-<br>Eternity it knows not, only change.</p>
+<p>“Householder, how could those of us who have gone forth from the lay life to homelessness have a house? We’re homeless, householder. I came to your house, but there I received neither alms nor a polite refusal, but only abuse.”</p>
 
-<p id="p44"><span class="parno">44</span>The rich and poor alike shall feel <span class="add">Death's</span> touch,
-<br>The fool and sage as well shall feel it too;
-<br>But while the fool lies stricken by his folly,
-<br>No sage will ever tremble at the touch.</p>
+<p>“Come, dear Raṭṭhapāla, let’s go to the house.”</p>
 
-<p id="p45"><span class="parno">45</span>Better is wisdom here than any wealth,
-<br>Since by wisdom one gains the final goal.
-<br>For people through ignorance do evil deeds
-<br>While failing to reach the goal from life to life.</p>
-</div>
-<div class="verse">
-<p id="p46"><span class="parno">46</span>As one goes to the womb and the next world,
-<br>Renewing the successive round of births,
-<br>Another of little wisdom, trusting him,
-<br>Goes also to the womb and the next world.</p>
+<p>“Enough, householder. My meal is finished for today.”</p>
 
-<p id="p47"><span class="parno">47</span>Just as a robber caught in burglary
-<br>Is made to suffer for his evil deed,
-<br>So people after death, in the next world,
-<br>Are made to suffer for their evil deeds.</p>
+<p>“Well then, dear Raṭṭhapāla, please accept tomorrow’s meal from me.” Raṭṭhapāla consented in silence.</p>
 
-<p id="p48"><span class="parno">48</span>Sensual pleasures, varied, sweet, delightful,
-<br>In many different ways disturb the mind:
-<br>Seeing the danger in these sensual ties
-<br>I chose to lead the homeless life, O King.</p>
+<hr>
 
-<p id="p49"><span class="parno">49</span>As fruits fall from the tree, so people too,
-<br>Both young and old, fall when this body breaks.
-<br>Seeing this too, O King, I have gone forth:
-<br>Better is the recluse's life assured."</p>
-</div>
+<p>Then, knowing that Raṭṭhapāla had consented, his father went back to his own house. He made a heap of gold coins and bullion and hid it under mats. Then he addressed Raṭṭhapāla’s former wives: “Please, daughters-in-law, adorn yourselves in the way that our son Raṭṭhapāla found you most adorable.”</p>
+
+<p id="p15"><span class="parno">15</span>And when the night had passed Raṭṭhapāla’s father had a variety of delicious foods prepared in his own home, and announced the time to the Venerable Raṭṭhapāla, saying: “Sir, it’s time. The meal is ready.”</p>
+
+<p>Then Raṭṭhapāla robed up in the morning and, taking his bowl and robe, went to his father’s home, and sat down on the seat spread out. Raṭṭhapāla’s father, revealing the heap of gold coins and bullion, said to him: “Dear Raṭṭhapāla, this is your maternal fortune. There’s another paternal fortune, and an ancestral one. You can both enjoy your wealth and make merit. Come, return to a lesser life, enjoy wealth, and make merit!”</p>
+
+<p>“If you’d follow my advice, householder, you’d have this heap of gold loaded on a cart and carried away to be dumped in the middle of the Ganges river. Why is that? Because this will bring you nothing but sorrow, lamentation, pain, sadness, and distress.”</p>
+
+<p>Then Raṭṭhapāla’s former wives each clasped his feet and said: “What are they like, lord, the nymphs for whom you lead the spiritual life?”</p>
+
+<p>“Sisters, I don’t lead the spiritual life for the sake of nymphs.”</p>
+
+<p>Saying: “Our lord Raṭṭhapāla refers to us as sisters!” they fainted right away.</p>
+
+<p>Then Raṭṭhapāla said to his father: “If there is food to be given, householder, please give it. But don’t harass me.”</p>
+
+<p>“Eat, dear Raṭṭhapāla. The meal is ready.” Then Raṭṭhapāla’s father served and satisfied Venerable Raṭṭhapāla with his own hands with a variety of delicious foods.</p>
+
+<p id="p16"><span class="parno">16</span>When he had eaten and washed his hand and bowl, he recited these verses while standing right there:</p>
+
+
+<hr>
+
+<p class="verse" id="p17"><span class="parno">17</span>“See this fancy puppet,<br>a body built of sores,<br>diseased, obsessed over,<br>which doesn’t last at all.</p>
+
+<p class="verse" id="p18"><span class="parno">18</span>See this fancy figure,<br>with its gems and earrings;<br>it is bones wrapped in skin,<br>made pretty by its clothes.</p>
+
+<p class="verse" id="p19"><span class="parno">19</span>Rouged feet<br>and powdered face<br>may be enough to beguile a fool,<br>but not a seeker of the far shore.</p>
+
+<p class="verse" id="p20"><span class="parno">20</span>Hair in eight braids<br>and eyeliner<br>may be enough to beguile a fool,<br>but not a seeker of the far shore.</p>
+
+<p class="verse" id="p21"><span class="parno">21</span>A rotting body all adorned<br>like a freshly painted makeup box<br>may be enough to beguile a fool,<br>but not a seeker of the far shore.</p>
+
+<p class="verse" id="p22"><span class="parno">22</span>The hunter laid his snare,<br>but the deer didn’t spring the trap.<br>I’ve eaten the bait and now I go,<br>leaving the trapper to lament.”</p>
+
+<hr>
+
+<p id="p23"><span class="parno">23</span>Then Raṭṭhapāla, having recited this verse while standing, went to King Koravya’s deer range and sat at the root of a tree for the day’s meditation.</p>
+
+<p id="p24"><span class="parno">24</span>Then King Koravya addressed his gamekeeper: “My good gamekeeper, tidy up the park of the deer raṅge. We will go to see the scenery.”</p>
+
+<p>“Yes, Your Majesty,” replied the gamekeeper. While tidying the deer range he saw Raṭṭhapāla sitting in meditation. Seeing this, he went to the king, and said: “The deer range is tidy, sire. And the gentleman named Raṭṭhapāla, the son of the leading clan in Thullakoṭṭhita, of whom you have often spoken highly, is meditating there at the root of a tree.”</p>
+
+<p>“Well then, my good gamekeeper, that’s enough of the park for today. Now I shall pay homage to the Master Raṭṭhapāla.”</p>
+
+<p>And then King Koravya said: “Give away all the different foods that have been prepared there.” He had the finest carriages harnessed. Then he mounted a fine carriage and, along with other fine carriages, set out in full royal pomp from Thullakoṭṭhita to see Raṭṭhapāla. He went by carriage as far as the terrain allowed, then descended and approached Raṭṭhapāla on foot, together with a group of eminent officials. They exchanged greetings, and, when the greetings and polite conversation were over, he stood to one side, and said to Raṭṭhapāla:</p>
+
+<p>“Here, Master Raṭṭhapāla, sit on this elephant rug.”</p>
+
+<p>“Enough, great king, you sit on it. I’m sitting on my own seat.”</p>
+
+<p>So the king sat down on the seat spread out, and said:</p>
+
+<p>“Master Raṭṭhapāla, there are these four kinds of decay. Because of these, some people shave off their hair and beard, dress in ocher robes, and go forth from the lay life to homelessness. What four? Decay due to old age, decay due to sickness, decay of wealth, and decay of relatives.</p>
+
+<p id="p25"><span class="parno">25</span>And what is decay due to old age? It’s when someone is old, elderly, and senior, advanced in years, and has reached the final stage of life. They reflect: ‘I’m now old, elderly, and senior. I’m advanced in years and have reached the final stage of life. It’s not easy for me to acquire more wealth or to increase the wealth I’ve already acquired. Why don’t I shave off my hair and beard, dress in ocher robes, and go forth from the lay life to homelessness?’ So because of that decay due to old age they go forth. This is called decay due to old age. But Master Raṭṭhapāla is now a youth, young, black-haired, blessed with youth, in the prime of life. You have no decay due to old age. So what did you know or see or hear that made you go forth?</p>
+
+<p id="p26"><span class="parno">26</span>And what is decay due to sickness? It’s when someone is sick, suffering, gravely ill. They reflect: ‘I’m now sick, suffering, gravely ill. It’s not easy for me to acquire more wealth or to increase the wealth I’ve already acquired. Why don’t I go forth from the lay life to homelessness?’ So because of that decay due to sickness they go forth. This is called decay due to sickness. But Master Raṭṭhapāla is now rarely ill or unwell. Your stomach digests well, being neither too hot nor too cold. You have no decay due to sickness. So what did you know or see or hear that made you go forth?</p>
+
+<hr>
+
+<p id="p27"><span class="parno">27</span>And what is decay of wealth? It’s when someone is rich, affluent, and wealthy. But gradually their wealth dwindles away. They reflect: ‘I used to be rich, affluent, and wealthy. But gradually my wealth has dwindled away. It’s not easy for me to acquire more wealth or to increase the wealth I’ve already acquired. Why don’t I go forth from the lay life to homelessness?’ So because of that decay of wealth they go forth. This is called decay of wealth. But Master Raṭṭhapāla is the son of the leading clan here in Thullakoṭṭhita. You have no decay of wealth. So what did you know or see or hear that made you go forth?</p>
+
+<hr>
+
+<p id="p28"><span class="parno">28</span>And what is decay of relatives? It’s when someone has many friends and colleagues, relatives and kin. But gradually their relatives dwindle away. They reflect: ‘I used to have many friends and colleagues, relatives and kin. But gradually they’ve dwindled away. It’s not easy for me to acquire more wealth or to increase the wealth I’ve already acquired. Why don’t I shave off my hair and beard, dress in ocher robes, and go forth from the lay life to homelessness?’ So because of that decay of relatives they go forth. This is called decay of relatives. But Master Raṭṭhapāla has many friends and colleagues, relatives and kin right here in Thullakoṭṭhita. You have no decay of relatives. So what did you know or see or hear that made you go forth?</p>
+
+<p id="p29"><span class="parno">29</span>There are these four kinds of decay. Because of these, some people shave off their hair and beard, dress in ocher robes, and go forth from the lay life to homelessness. Master Raṭṭhapāla has none of these. So what did you know or see or hear that made you go forth?”</p>
+
+<hr>
+
+<p id="p30"><span class="parno">30</span>“Great king, the Blessed One who knows and sees, the perfected one, the fully awakened Buddha has taught these four summaries of the teaching for recitation. It was after knowing and seeing and hearing these that I went forth from the lay life to homelessness. What four?</p>
+
+<hr>
+
+<p>‘The world is unstable and swept away.’ This is the first summary.</p>
+
+<p>‘The world has no shelter and no savior.’ This is the second summary.</p>
+
+<p>‘The world has no owner — you must leave it all behind and pass on.’ This is the third summary.</p>
+
+<hr>
+
+<p>‘The world is wanting, insatiable, the slave of craving.’ This is the fourth summary.</p>
+
+<hr>
+
+<p>The Blessed One who knows and sees, the perfected one, the fully awakened Buddha taught these four summaries of the teaching. It was after knowing and seeing and hearing these that I went forth from the lay life to homelessness.”</p>
+
+<hr>
+
+<p id="p31"><span class="parno">31</span>“‘The world is unstable and swept away.’ So Master Raṭṭhapāla said. How should I see the meaning of this statement?”</p>
+
+<p>“What do you think, great king? When you were twenty or twenty-five years of age, were you proficient at riding elephants, horses, and chariots, and at archery? Were you strong in thigh and arm, capable, and battle-hardened?”</p>
+
+<p>“I was, Master Raṭṭhapāla. Sometimes it seems as if I had superpowers then. I don’t see anyone who could have equalled me in strength.”</p>
+
+<hr>
+
+<p>“What do you think, great king? These days are you just as strong in thigh and arm, capable, and battle-hardened?”</p>
+
+<p>“No, Master Raṭṭhapāla. For now I am old, elderly, and senior, I’m advanced in years and have reached the final stage of life. I am eighty years old. Sometimes I intend to step in one place, but my foot goes somewhere else.”</p>
+
+<p>“This is what the Buddha was referring to when he said: ‘The world is unstable and swept away.’”</p>
+
+<p>“It’s incredible, Master Raṭṭhapāla, it’s amazing, how well said this was by the Buddha. For the world is indeed unstable and swept away.</p>
+
+<hr>
+
+<p id="p32"><span class="parno">32</span>In this royal court you can find divisions of elephants, cavalry, chariots, and infantry. They will serve to defend us from any threats. Yet you said: ‘The world has no shelter and no savior.’ How should I see the meaning of this statement?”</p>
+
+<p>“What do you think, great king? Do you have any chronic ailments?”</p>
+
+<hr>
+
+<p>“Yes, I do. Sometimes my friends and colleagues, relatives and family members surround me, thinking: ‘Now the king will die! Now the king will die!’”</p>
+
+<p>“What do you think, great king? Can you get your friends and colleagues, relatives and family members to help: ‘Please, my dear friends and colleagues, relatives and family members, all of you here share my pain so that I may feel less pain.’ Or must you alone feel that pain?”</p>
+
+<p>“I can’t get my friends to share my pain. Rather, I alone must feel it.”</p>
+
+<p>“This is what the Buddha was referring to when he said: ‘The world has no shelter and no savior.’”</p>
+
+<p>“It’s incredible, Master Raṭṭhapāla, it’s amazing, how well said this was by the Buddha. For the world indeed has no shelter and no savior.</p>
+
+<hr>
+
+<p id="p33"><span class="parno">33</span>In this royal court you can find abundant gold coin and bullion stored in dungeons and towers. Yet you said: ‘The world has no owner — you must leave it all behind and pass on.’ How should I see the meaning of this statement?”</p>
+
+<p>‘What do you think, great king? These days you amuse yourself, supplied and provided with the five kinds of sensual stimulation. But is there any way to ensure that in the next life you will continue to amuse yourself in the same way, supplied and provided with the same five kinds of sensual stimulation? Or will others make use of this property, while you pass on according to your deeds?”</p>
+
+<p>“There’s no way to ensure that I will continue to amuse myself in the same way. </p>
+
+<p>Rather, others will take over this property, while I pass on according to my deeds.”</p>
+
+<hr>
+
+<p>“This is what the Buddha was referring to when he said: ‘The world has no owner — you must leave it all behind and pass on.’”</p>
+
+<p>“It’s incredible, Master Raṭṭhapāla, it’s amazing, how well said this was by the Buddha. For the world indeed has no owner — you must leave it all behind and pass on.</p>
+
+<p id="p34"><span class="parno">34</span>You also said this: ‘The world is wanting, insatiable, the slave of craving.’ How should I see the meaning of this statement?”</p>
+
+<p>“What do you think, great king? Do you dwell in the prosperous land of Kuru?”</p>
+
+<p>“Indeed I do.”</p>
+
+<hr>
+
+<p>“What do you think, great king? Suppose a trustworthy and reliable man were to come from the east. He’d approach you and say: ‘Please sir, you should know this. I come from the east. There I saw a large country that is successful and prosperous and full of people. They have many divisions of elephants, cavalry, chariots, and infantry. And there’s plenty of money and grain, plenty of gold coins and bullion, both worked and unworked, and plenty of women for the taking. With your current forces you can conquer it. Conquer it, great king!’ What would you do?”</p>
+
+<p>“I would conquer it and dwell there.”</p>
+
+<hr>
+
+<p id="p35"><span class="parno">35</span>“What do you think, great king? Suppose a trustworthy and reliable man were to come from the west, north, south, or from over the ocean. He’d approach you and say the same thing. What would you do?”</p>
+
+<p>“I would conquer it and dwell there.”</p>
+
+<hr>
+
+<p>“This is what the Buddha was referring to when he said: ‘The world is wanting, insatiable, the slave of craving.’ And it was after knowing and seeing and hearing this that I went forth from the lay life to homelessness.”</p>
+
+<p>“It’s incredible, Master Raṭṭhapāla, it’s amazing, how well said this was by the Buddha. For the world is indeed wanting, insatiable, the slave of craving.”</p>
+
+<p>This is what Venerable Raṭṭhapāla said. Then he went on to say:</p>
+
+
+<hr>
+
+<p class="verse" id="p37"><span class="parno">37</span>“I see rich people in the world who,<br>because of delusion, give not the wealth they’ve earned.<br>Greedily, they hoard their riches,<br>yearning for ever more sensual pleasures.</p>
+
+<p class="verse" id="p38"><span class="parno">38</span>A king who conquered the earth by force,<br>ruling the land from sea to sea,<br>unsatisfied with the near shore of the ocean,<br>would still yearn for the further shore.</p>
+
+<p class="verse" id="p39"><span class="parno">39</span>Not just the king, but others too,<br>reach death not rid of craving.<br>They leave the body still wanting,<br>for in this world sensual pleasures never satisfy.</p>
+
+<p class="verse" id="p40"><span class="parno">40</span>Relatives lament, their hair disheveled,<br>saying ‘Ah! Alas! They’re not immortal!’<br>They take out the body wrapped in a shroud,<br>heap up a pyre, and burn it there.</p>
+
+<p class="verse" id="p41"><span class="parno">41</span>It’s poked with stakes while being burnt,<br>in just a single cloth, all wealth gone.<br>Relatives, friends, and companions<br>can’t help you when you’re dying.</p>
+
+<p class="verse" id="p42"><span class="parno">42</span>Heirs take your riches,<br>while beings fare on according to their deeds.<br>Riches don’t follow you when you die;<br>nor do children, wife, wealth, nor kingdom.</p>
+
+<p class="verse" id="p43"><span class="parno">43</span>Longevity isn’t gained by riches,<br>nor does wealth banish old age;<br>for the wise say this life is short,<br>it’s perishable and not eternal.</p>
+
+<p class="verse" id="p44"><span class="parno">44</span>The rich and the poor feel its touch;<br>the fool and the wise feel it too.<br>But the fool lies stricken by their own folly,<br>while the wise don’t tremble at the touch.</p>
+
+<p class="verse" id="p45"><span class="parno">45</span>Therefore wisdom’s much better than wealth,<br>since by wisdom you reach consummation in this life.<br>But if because of delusion you don’t reach consummation,<br>you’ll do evil deeds in life after life.</p>
+
+<p class="verse" id="p46"><span class="parno">46</span>One who enters a womb and the world beyond,<br>will transmigrate from one life to the next.<br>While someone of little wisdom, placing faith in them,<br>also enters a womb and the world beyond.</p>
+
+<p class="verse" id="p47"><span class="parno">47</span>As a bandit caught in the door<br>is punished for his own bad deeds;<br>so after departing, in the world beyond,<br>people are punished for their own bad deeds.</p>
+
+<p class="verse" id="p48"><span class="parno">48</span>Sensual pleasures are diverse, sweet, delightful;<br>appearing in disguise they disturb the mind.<br>Seeing danger in the many kinds of sensual stimulation,<br>I went forth, O King.</p>
+
+<p class="verse" id="p49"><span class="parno">49</span>As fruit falls from a tree, so people fall,<br>young and old, when the body breaks up.<br>Seeing this, too, I went forth, O King;<br>the ascetic life is guaranteed to be better.”</p>
+
 </div>
 
 <div lang="pi">
 
 <p><span class="parno">1</span>Evaṁ me sutaṁ — ​ ekaṁ samayaṁ bhagavā kurūsu cārikaṁ caramāno mahatā bhikkhusaṁghena saddhiṁ yena <span class="var" title="thullakoṭṭhitaṁ (bj, s1–3, km, pts1)" id="note381">thullakoṭṭhikaṁ</span> nāma kurūnaṁ nigamo tadavasari.</p>
 
-<p>Assosuṁ kho <span class="var" title="thullakoṭṭhitakā (bj, s1–3, km, pts1)" id="note382">thullakoṭṭhikā</span> brāhmaṇagahapatikā: "Samaṇo khalu, bho, gotamo sakyaputto sakyakulā pabbajito kurūsu cārikaṁ caramāno mahatā bhikkhusaṁghena saddhiṁ thullakoṭṭhikaṁ anuppatto. Taṁ kho pana bhavantaṁ gotamaṁ evaṁ kalyāṇo kittisaddo abbhuggato: ‘itipi so bhagavā arahaṁ sammāsambuddho vijjācaraṇasampanno sugato lokavidū anuttaro purisadammasārathi satthā devamanussānaṁ buddho bhagavā’ti. So imaṁ lokaṁ sadevakaṁ samārakaṁ sabrahmakaṁ sassamaṇabrāhmaṇiṁ pajaṁ sadevamanussaṁ sayaṁ abhiññā sacchikatvā pavedeti. So dhammaṁ deseti ādikalyāṇaṁ majjhekalyāṇaṁ pariyosānakalyāṇaṁ sātthaṁ sabyañjanaṁ, kevalaparipuṇṇaṁ parisuddhaṁ brahmacariyaṁ pakāseti. Sādhu kho pana tathārūpānaṁ arahataṁ dassanaṁ hotī"ti.</p>
+<p>Assosuṁ kho <span class="var" title="thullakoṭṭhitakā (bj, s1–3, km, pts1)" id="note382">thullakoṭṭhikā</span> brāhmaṇagahapatikā: </p>
 
 <hr>
+
+<p>"Samaṇo khalu, bho, gotamo sakyaputto sakyakulā pabbajito kurūsu cārikaṁ caramāno mahatā bhikkhusaṁghena saddhiṁ thullakoṭṭhikaṁ anuppatto. Taṁ kho pana bhavantaṁ gotamaṁ evaṁ kalyāṇo kittisaddo abbhuggato: ‘itipi so bhagavā arahaṁ sammāsambuddho vijjācaraṇasampanno sugato lokavidū anuttaro purisadammasārathi satthā devamanussānaṁ buddho bhagavā’ti. So imaṁ lokaṁ sadevakaṁ samārakaṁ sabrahmakaṁ sassamaṇabrāhmaṇiṁ pajaṁ sadevamanussaṁ sayaṁ abhiññā sacchikatvā pavedeti. So dhammaṁ deseti ādikalyāṇaṁ majjhekalyāṇaṁ pariyosānakalyāṇaṁ sātthaṁ sabyañjanaṁ, kevalaparipuṇṇaṁ parisuddhaṁ brahmacariyaṁ pakāseti. Sādhu kho pana tathārūpānaṁ arahataṁ dassanaṁ hotī"ti.</p>
+
+<hr>
+
 <p><span class="parno">2</span>Atha kho thullakoṭṭhikā brāhmaṇagahapatikā yena bhagavā tenupasaṅkamiṁsu; upasaṅkamitvā appekacce bhagavantaṁ abhivādetvā ekamantaṁ nisīdiṁsu; appekacce bhagavatā saddhiṁ sammodiṁsu, sammodanīyaṁ kathaṁ sāraṇīyaṁ vītisāretvā ekamantaṁ nisīdiṁsu; appekacce yena bhagavā tenañjaliṁ paṇāmetvā ekamantaṁ nisīdiṁsu; appekacce bhagavato santike nāmagottaṁ sāvetvā ekamantaṁ nisīdiṁsu; appekacce tuṇhībhūtā ekamantaṁ nisīdiṁsu. Ekamantaṁ nisinne kho thullakoṭṭhike brāhmaṇagahapatike bhagavā dhammiyā kathāya sandassesi samādapesi samuttejesi sampahaṁsesi.</p>
 
 <p><span class="parno">3</span>Tena kho pana samayena raṭṭhapālo nāma kulaputto tasmiṁyeva thullakoṭṭhike <span class="var" title="aggakulikassa (bj, s1–3, km, pts1)" id="note383">aggakulassa</span> putto tissaṁ parisāyaṁ nisinno hoti. Atha kho raṭṭhapālassa kulaputtassa etadahosi: "<span class="var" title="yathā yathā kho bhagavā dhammaṁ deseti (bj)" id="note384">yathā yathā khvāhaṁ bhagavatā dhammaṁ desitaṁ ājānāmi</span>, nayidaṁ sukaraṁ agāraṁ ajjhāvasatā ekantaparipuṇṇaṁ ekantaparisuddhaṁ saṅkhalikhitaṁ brahmacariyaṁ carituṁ. Yannūnāhaṁ kesamassuṁ ohāretvā kāsāyāni vatthāni acchādetvā agārasmā anagāriyaṁ pabbajeyyan"ti.</p>
@@ -464,40 +472,56 @@
 
 <p>Atha kho raṭṭhapālo kulaputto acirapakkantesu thullakoṭṭhikesu brāhmaṇagahapatikesu yena bhagavā tenupasaṅkami; upasaṅkamitvā bhagavantaṁ abhivādetvā ekamantaṁ nisīdi. Ekamantaṁ nisinno kho raṭṭhapālo kulaputto bhagavantaṁ etadavoca: "yathā yathāhaṁ, bhante, bhagavatā dhammaṁ desitaṁ ājānāmi, nayidaṁ sukaraṁ agāraṁ ajjhāvasatā ekantaparipuṇṇaṁ ekantaparisuddhaṁ saṅkhalikhitaṁ brahmacariyaṁ carituṁ. Icchāmahaṁ, bhante, kesamassuṁ ohāretvā kāsāyāni vatthāni acchādetvā agārasmā anagāriyaṁ pabbajituṁ. Labheyyāhaṁ, bhante, bhagavato santike pabbajjaṁ, labheyyaṁ upasampadaṁ. Pabbājetu maṁ bhagavā"<span class="var" title='ettha " labheyy … pe … upasampada v sabbesupi m dissati pa sudinnabh p pana eta natthi. ma bhagav ida mr potthake yeva tadeva atthi bj s1–3 potthakesu' id="note385">ti</span>.</p>
 
+<hr>
+
 <p>"Anuññātosi pana tvaṁ, raṭṭhapāla, mātāpitūhi agārasmā anagāriyaṁ pabbajjāyā"ti?</p>
 
 <p>"Na khohaṁ, bhante, anuññāto mātāpitūhi agārasmā anagāriyaṁ pabbajjāyā"ti.</p>
 
+<hr>
+
 <p>"Na kho, raṭṭhapāla, tathāgatā ananuññātaṁ mātāpitūhi puttaṁ pabbājentī"ti.</p>
+
+<hr>
 
 <p>"Svāhaṁ, bhante, tathā karissāmi yathā maṁ mātāpitaro anujānissanti agārasmā anagāriyaṁ pabbajjāyā"ti.</p>
 
 <hr>
+
 <p><span class="parno">4</span>Atha kho raṭṭhapālo kulaputto uṭṭhāyāsanā bhagavantaṁ abhivādetvā padakkhiṇaṁ katvā yena mātāpitaro tenupasaṅkami; upasaṅkamitvā mātāpitaro etadavoca: "ammatātā, yathā yathāhaṁ bhagavatā dhammaṁ desitaṁ ājānāmi, nayidaṁ sukaraṁ agāraṁ ajjhāvasatā ekantaparipuṇṇaṁ ekantaparisuddhaṁ saṅkhalikhitaṁ brahmacariyaṁ carituṁ. Icchāmahaṁ kesamassuṁ ohāretvā kāsāyāni vatthāni acchādetvā agārasmā anagāriyaṁ pabbajituṁ. Anujānātha maṁ agārasmā anagāriyaṁ pabbajjāyā"ti.</p>
 
 <p>Evaṁ vutte, raṭṭhapālassa kulaputtassa mātāpitaro raṭṭhapālaṁ kulaputtaṁ etadavocuṁ: "tvaṁ khosi, tāta raṭṭhapāla, amhākaṁ ekaputtako piyo manāpo sukhedhito <span class="var" title="sukhaparihato (s1–3, km, mr)" id="note386">sukhaparibhato</span>. Na tvaṁ, tāta raṭṭhapāla, kassaci dukkhassa jānāsi. <span class="var" title="(ehi tvaṁ tāta raṭṭhapāla bhuñja ca piva ca paricārehi ca, bhuñjanto pivanto paricārento kāme paribhuñjanto puññāni karonto abhiramassu, na taṁ mayaṁ anujānāma agārasmā anagāriyaṁ pabbajjāya) sabbattha dissati, sudinnakaṇḍe pana natthi, aṭṭhakathāsupi na" id="note387"></span> Māraṇenapi te mayaṁ akāmakā vinā bhavissāma. Kiṁ pana mayaṁ taṁ jīvantaṁ anujānissāma agārasmā anagāriyaṁ pabbajjāyā"ti?</p>
 
 <hr>
+
 <p><span class="parno">5</span>Dutiyampi kho raṭṭhapālo kulaputto … pe … tatiyampi kho raṭṭhapālo kulaputto mātāpitaro etadavoca: "ammatātā, yathā yathāhaṁ bhagavatā dhammaṁ desitaṁ ājānāmi, nayidaṁ sukaraṁ agāraṁ ajjhāvasatā ekantaparipuṇṇaṁ ekantaparisuddhaṁ saṅkhalikhitaṁ brahmacariyaṁ carituṁ. Icchāmahaṁ kesamassuṁ ohāretvā kāsāyāni vatthāni acchādetvā agārasmā anagāriyaṁ pabbajituṁ. Anujānātha maṁ agārasmā anagāriyaṁ pabbajjāyā"ti.</p>
 
-<hr>
 <p><span class="parno">6</span>Tatiyampi kho raṭṭhapālassa kulaputtassa mātāpitaro raṭṭhapālaṁ kulaputtaṁ etadavocuṁ: "tvaṁ khosi, tāta raṭṭhapāla, amhākaṁ ekaputtako piyo manāpo sukhedhito sukhaparibhato. Na tvaṁ, tāta raṭṭhapāla, kassaci dukkhassa jānāsi. Māraṇenapi te mayaṁ akāmakā vinā bhavissāma. Kiṁ pana mayaṁ taṁ jīvantaṁ anujānissāma agārasmā anagāriyaṁ pabbajjāyā"ti?</p>
+
+<hr>
 
 <p><span class="parno">7</span>Atha kho raṭṭhapālo kulaputto: "na maṁ mātāpitaro anujānanti agārasmā anagāriyaṁ pabbajjāyā"ti tattheva anantarahitāya bhūmiyā nipajji: "idheva me maraṇaṁ bhavissati pabbajjā vā"ti.</p>
 
-<p>Atha kho raṭṭhapālo kulaputto ekampi bhattaṁ na bhuñji, dvepi bhattāni na bhuñji, tīṇipi bhattāni na bhuñji, cattāripi bhattāni na bhuñji, pañcapi bhattāni na bhuñji, chapi bhattāni na bhuñji, sattapi bhattāni na bhuñji. Atha kho raṭṭhapālassa kulaputtassa mātāpitaro raṭṭhapālaṁ kulaputtaṁ etadavocuṁ: "tvaṁ khosi, tāta raṭṭhapāla, amhākaṁ ekaputtako piyo manāpo sukhedhito sukhaparibhato. Na tvaṁ, tāta raṭṭhapāla, kassaci, dukkhassa jānāsi<q class="open" id="note388" title=" etthantare pāṭho sī, syā1–3, kaṁ, pā1 potthakesu">. Māraṇenapi te mayaṁ akāmakā vinā bhavissāma. Kiṁ pana mayaṁ taṁ jīvantaṁ anujānissāma agārasmā anagāriyaṁ pabbajjāya</q>. Uṭṭhehi, tāta raṭṭhapāla, bhuñja ca piva ca paricārehi ca; bhuñjanto pivanto paricārento kāme paribhuñjanto puññāni karonto abhiramassu. Na taṁ mayaṁ anujānāma agārasmā anagāriyaṁ pabbajjāya. Māraṇenapi te mayaṁ akāmakā vinā bhavissāma. Kiṁ pana mayaṁ taṁ jīvantaṁ anujānissāma agārasmā anagāriyaṁ pabbajjāyā"ti? Evaṁ vutte, raṭṭhapālo kulaputto tuṇhī ahosi. Dutiyampi kho raṭṭhapālassa kulaputtassa mātāpitaro raṭṭhapālaṁ kulaputtaṁ etadavocuṁ … pe …</p>
+<p>Atha kho raṭṭhapālo kulaputto ekampi bhattaṁ na bhuñji, dvepi bhattāni na bhuñji, tīṇipi bhattāni na bhuñji, cattāripi bhattāni na bhuñji, pañcapi bhattāni na bhuñji, chapi bhattāni na bhuñji, sattapi bhattāni na bhuñji. </p>
 
-<p>dutiyampi kho raṭṭhapālo kulaputto tuṇhī ahosi.</p>
+<p>Atha kho raṭṭhapālassa kulaputtassa mātāpitaro raṭṭhapālaṁ kulaputtaṁ etadavocuṁ: "tvaṁ khosi, tāta raṭṭhapāla, amhākaṁ ekaputtako piyo manāpo sukhedhito sukhaparibhato. Na tvaṁ, tāta raṭṭhapāla, kassaci, dukkhassa jānāsi<q class="open" id="note388" title=" etthantare pāṭho sī, syā1–3, kaṁ, pā1 potthakesu">. Māraṇenapi te mayaṁ akāmakā vinā bhavissāma. Kiṁ pana mayaṁ taṁ jīvantaṁ anujānissāma agārasmā anagāriyaṁ pabbajjāya</q>. Uṭṭhehi, tāta raṭṭhapāla, bhuñja ca piva ca paricārehi ca; bhuñjanto pivanto paricārento kāme paribhuñjanto puññāni karonto abhiramassu. Na taṁ mayaṁ anujānāma agārasmā anagāriyaṁ pabbajjāya. Māraṇenapi te mayaṁ akāmakā vinā bhavissāma. Kiṁ pana mayaṁ taṁ jīvantaṁ anujānissāma agārasmā anagāriyaṁ pabbajjāyā"ti? Evaṁ vutte, raṭṭhapālo kulaputto tuṇhī ahosi. Dutiyampi kho raṭṭhapālassa kulaputtassa mātāpitaro raṭṭhapālaṁ kulaputtaṁ etadavocuṁ … pe … dutiyampi kho raṭṭhapālo kulaputto tuṇhī ahosi.</p>
 
 <hr>
+
 <p><span class="parno">8</span>Tatiyampi kho raṭṭhapālassa kulaputtassa mātāpitaro raṭṭhapālaṁ kulaputtaṁ etadavocuṁ: "tvaṁ khosi, tāta raṭṭhapāla, amhākaṁ ekaputtako piyo manāpo sukhedhito sukhaparibhato. Na tvaṁ, tāta raṭṭhapāla, kassaci dukkhassa jānāsi. Māraṇenapi te mayaṁ akāmakā vinā bhavissāma, kiṁ pana mayaṁ taṁ jīvantaṁ anujānissāma agārasmā anagāriyaṁ pabbajjāya. Uṭṭhehi, tāta raṭṭhapāla, bhuñja ca piva ca paricārehi ca; bhuñjanto pivanto paricārento kāme paribhuñjanto puññāni karonto abhiramassu. Na taṁ mayaṁ anujānāma agārasmā anagāriyaṁ pabbajjāya. Māraṇenapi te mayaṁ akāmakā vinā bhavissāma. Kiṁ pana mayaṁ taṁ jīvantaṁ anujānissāma agārasmā anagāriyaṁ pabbajjāyā"ti? Tatiyampi kho raṭṭhapālo kulaputto tuṇhī ahosi.</p>
 
-<p><span class="parno">9</span>Atha kho raṭṭhapālassa kulaputtassa sahāyakā yena raṭṭhapālo kulaputto tenupasaṅkamiṁsu; upasaṅkamitvā raṭṭhapālaṁ kulaputtaṁ etadavocuṁ: "<span class="var" title="tvaṁ kho (bj, pts1)" id="note390">tvaṁ khosi</span>, samma raṭṭhapāla, mātāpitūnaṁ ekaputtako piyo manāpo sukhedhito sukhaparibhato. Na tvaṁ, samma raṭṭhapāla, kassaci dukkhassa jānāsi. Māraṇenapi te mātāpitaro akāmakā vinā bhavissanti. Kiṁ pana te taṁ jīvantaṁ anujānissanti agārasmā anagāriyaṁ pabbajjāya. Uṭṭhehi, samma raṭṭhapāla, bhuñja ca piva ca paricārehi ca; bhuñjanto pivanto paricārento kāme paribhuñjanto puññāni karonto abhiramassu. Na taṁ mātāpitaro <span class="var" title="anujānanti (bj, s1–3, km)" id="note391">anujānissanti</span> agārasmā anagāriyaṁ pabbajjāya. Māraṇenapi te mātāpitaro akāmakā vinā bhavissanti. Kiṁ pana te taṁ jīvantaṁ anujānissanti agārasmā anagāriyaṁ pabbajjāyā"ti? Evaṁ vutte, raṭṭhapālo kulaputto tuṇhī ahosi.</p>
+<hr>
+
+<p><span class="parno">9</span>Atha kho raṭṭhapālassa kulaputtassa sahāyakā yena raṭṭhapālo kulaputto tenupasaṅkamiṁsu; upasaṅkamitvā raṭṭhapālaṁ kulaputtaṁ etadavocuṁ: "<span class="var" title="tvaṁ kho (bj, pts1)" id="note390">tvaṁ khosi</span>, samma raṭṭhapāla, mātāpitūnaṁ ekaputtako piyo manāpo sukhedhito sukhaparibhato. Na tvaṁ, samma raṭṭhapāla, kassaci dukkhassa jānāsi. Māraṇenapi te mātāpitaro akāmakā vinā bhavissanti. Kiṁ pana te taṁ jīvantaṁ anujānissanti agārasmā anagāriyaṁ pabbajjāya. Uṭṭhehi, samma raṭṭhapāla, bhuñja ca piva ca paricārehi ca; bhuñjanto pivanto paricārento kāme paribhuñjanto puññāni karonto abhiramassu. Na taṁ mātāpitaro <span class="var" title="anujānanti (bj, s1–3, km)" id="note391">anujānissanti</span> agārasmā anagāriyaṁ pabbajjāya. Māraṇenapi te mātāpitaro akāmakā vinā bhavissanti. Kiṁ pana te taṁ jīvantaṁ anujānissanti agārasmā anagāriyaṁ pabbajjāyā"ti? </p>
+
+<p>Evaṁ vutte, raṭṭhapālo kulaputto tuṇhī ahosi.</p>
 
 <hr>
+
 <p><span class="parno">10</span>Dutiyampi kho … tatiyampi kho raṭṭhapālassa kulaputtassa sahāyakā raṭṭhapālaṁ kulaputtaṁ etadavocuṁ: "tvaṁ khosi, samma raṭṭhapāla, mātāpitūnaṁ ekaputtako piyo manāpo sukhedhito sukhaparibhato, na tvaṁ, samma raṭṭhapāla, kassaci dukkhassa jānāsi, maraṇenapi te mātāpitaro akāmakā vinā bhavissanti. Kiṁ pana te taṁ jīvantaṁ anujānissanti agārasmā anagāriyaṁ pabbajjāya? Uṭṭhehi, samma raṭṭhapāla, bhuñja ca piva ca paricārehi ca, bhuñjanto pivanto paricārento kāme paribhuñjanto puññāni karonto abhiramassu. Na taṁ mātāpitaro anujānissanti agārasmā anagāriyaṁ pabbajjāya, maraṇenapi te mātāpitaro akāmakā vinā bhavissanti. Kiṁ pana te taṁ jīvantaṁ anujānissanti agārasmā anagāriyaṁ pabbajjāyā"ti? Tatiyampi kho raṭṭhapālo kulaputto tuṇhī ahosi.</p>
 
 <hr>
+
 <p><span class="parno">11</span>Atha kho raṭṭhapālassa kulaputtassa sahāyakā yena raṭṭhapālassa kulaputtassa mātāpitaro tenupasaṅkamiṁsu; upasaṅkamitvā raṭṭhapālassa kulaputtassa mātāpitaro etadavocuṁ: "ammatātā, eso raṭṭhapālo kulaputto tattheva anantarahitāya bhūmiyā nipanno: ‘idheva me maraṇaṁ bhavissati pabbajjā vā’ti. Sace tumhe raṭṭhapālaṁ kulaputtaṁ nānujānissatha agārasmā anagāriyaṁ pabbajjāya, <span class="var" title="tatthevassa (bj)" id="note392">tattheva</span> maraṇaṁ āgamissati. Sace pana tumhe raṭṭhapālaṁ kulaputtaṁ anujānissatha agārasmā anagāriyaṁ pabbajjāya, pabbajitampi naṁ dakkhissatha. Sace raṭṭhapālo kulaputto nābhiramissati agārasmā anagāriyaṁ pabbajjāya, kā <span class="var" title="kā cassa (bj)" id="note393">tassa</span> aññā gati bhavissati? Idheva paccāgamissati. Anujānātha raṭṭhapālaṁ kulaputtaṁ agārasmā anagāriyaṁ pabbajjāyā"ti.</p>
 
 <p>"Anujānāma, tātā, raṭṭhapālaṁ kulaputtaṁ agārasmā anagāriyaṁ pabbajjāya. Pabbajitena ca <span class="var" title="pana te (s1–3, km, mr)" id="note394">pana</span> mātāpitaro uddassetabbā"ti.</p>
@@ -505,37 +529,50 @@
 <p>Atha kho raṭṭhapālassa kulaputtassa sahāyakā yena raṭṭhapālo kulaputto tenupasaṅkamiṁsu; upasaṅkamitvā raṭṭhapālaṁ kulaputtaṁ etadavocuṁ: "<q class="open" id="note395" title=" "> uṭṭhehi, samma raṭṭhapāla</q>, anuññātosi mātāpitūhi agārasmā anagāriyaṁ pabbajjāya. Pabbajitena ca pana te mātāpitaro uddassetabbā"ti.</p>
 
 <hr>
+
 <p><span class="parno">12</span>Atha kho raṭṭhapālo kulaputto uṭṭhahitvā balaṁ gāhetvā yena bhagavā tenupasaṅkami; upasaṅkamitvā bhagavantaṁ abhivādetvā ekamantaṁ nisīdi. Ekamantaṁ nisinno kho raṭṭhapālo kulaputto bhagavantaṁ etadavoca: "anuññāto ahaṁ, bhante, mātāpitūhi agārasmā anagāriyaṁ pabbajjāya. Pabbājetu maṁ bhagavā"ti. Alattha kho raṭṭhapālo kulaputto bhagavato santike pabbajjaṁ, alattha upasampadaṁ.</p>
 
 <p>Atha kho bhagavā acirūpasampanne āyasmante raṭṭhapāle aḍḍhamāsupasampanne thullakoṭṭhike yathābhirantaṁ viharitvā yena sāvatthi tena cārikaṁ pakkāmi. Anupubbena cārikaṁ caramāno yena sāvatthi tadavasari. Tatra sudaṁ bhagavā sāvatthiyaṁ viharati jetavane anāthapiṇḍikassa ārāme.</p>
 
-<p>Atha kho āyasmā raṭṭhapālo eko vūpakaṭṭho appamatto ātāpī pahitatto viharanto nacirasseva — yassatthāya kulaputtā sammadeva agārasmā anagāriyaṁ pabbajanti, tadanuttaraṁ — brahmacariyapariyosānaṁ diṭṭheva dhamme sayaṁ abhiññā sacchikatvā upasampajja vihāsi. "Khīṇā jāti, vusitaṁ brahmacariyaṁ, kataṁ karaṇīyaṁ, nāparaṁ itthattāyā"ti abbhaññāsi. Aññataro kho panāyasmā raṭṭhapālo arahataṁ ahosi.</p>
+<hr>
+
+<p>Atha kho āyasmā raṭṭhapālo eko vūpakaṭṭho appamatto ātāpī pahitatto viharanto nacirasseva — yassatthāya kulaputtā sammadeva agārasmā anagāriyaṁ pabbajanti, tadanuttaraṁ — brahmacariyapariyosānaṁ diṭṭheva dhamme sayaṁ abhiññā sacchikatvā upasampajja vihāsi. </p>
+
+<p>"Khīṇā jāti, vusitaṁ brahmacariyaṁ, kataṁ karaṇīyaṁ, nāparaṁ itthattāyā"ti abbhaññāsi. Aññataro kho panāyasmā raṭṭhapālo arahataṁ ahosi.</p>
 
 <hr>
+
 <p><span class="parno">13</span>Atha kho āyasmā raṭṭhapālo yena bhagavā tenupasaṅkami; upasaṅkamitvā bhagavantaṁ abhivādetvā ekamantaṁ nisīdi. Ekamantaṁ nisinno kho āyasmā raṭṭhapālo bhagavantaṁ etadavoca: "Icchāmahaṁ, bhante, mātāpitaro uddassetuṁ, sace maṁ bhagavā anujānātī"ti.</p>
 
 <p>Atha kho bhagavā āyasmato raṭṭhapālassa cetasā ceto <span class="var" title="parivitakkaṁ (bj, pts1)" id="note397">paricca</span> manasākāsi. <span class="var" title="yadā (bj, pts1)" id="note398">Yathā</span> bhagavā aññāsi: "abhabbo kho raṭṭhapālo kulaputto sikkhaṁ paccakkhāya hīnāyāvattitun"ti, atha kho bhagavā āyasmantaṁ raṭṭhapālaṁ etadavoca: "yassadāni tvaṁ, raṭṭhapāla, kālaṁ maññasī"ti.</p>
 
 <p>Atha kho āyasmā raṭṭhapālo uṭṭhāyāsanā bhagavantaṁ abhivādetvā padakkhiṇaṁ katvā senāsanaṁ saṁsāmetvā pattacīvaramādāya yena thullakoṭṭhikaṁ tena cārikaṁ pakkāmi. Anupubbena cārikaṁ caramāno yena thullakoṭṭhiko tadavasari. Tatra sudaṁ āyasmā raṭṭhapālo thullakoṭṭhike viharati rañño korabyassa migacīre. Atha kho āyasmā raṭṭhapālo pubbaṇhasamayaṁ nivāsetvā pattacīvaramādāya thullakoṭṭhikaṁ piṇḍāya pāvisi. Thullakoṭṭhike sapadānaṁ piṇḍāya caramāno yena sakapitu nivesanaṁ tenupasaṅkami.</p>
 
-<p>Tena kho pana samayena āyasmato raṭṭhapālassa pitā majjhimāya dvārasālāya ullikhāpeti. Addasā kho āyasmato raṭṭhapālassa pitā āyasmantaṁ raṭṭhapālaṁ dūratova āgacchantaṁ. Disvāna etadavoca: "imehi muṇḍakehi samaṇakehi amhākaṁ ekaputtako piyo manāpo pabbājito"ti. Atha kho āyasmā raṭṭhapālo sakapitu nivesane neva dānaṁ alattha na paccakkhānaṁ; aññadatthu akkosameva alattha.</p>
+<p>Tena kho pana samayena āyasmato raṭṭhapālassa pitā majjhimāya dvārasālāya ullikhāpeti. Addasā kho āyasmato raṭṭhapālassa pitā āyasmantaṁ raṭṭhapālaṁ dūratova āgacchantaṁ. Disvāna etadavoca: </p>
+
+<p>"imehi muṇḍakehi samaṇakehi amhākaṁ ekaputtako piyo manāpo pabbājito"ti. Atha kho āyasmā raṭṭhapālo sakapitu nivesane neva dānaṁ alattha na paccakkhānaṁ; aññadatthu akkosameva alattha.</p>
+
+<hr>
 
 <p>Tena kho pana samayena āyasmato raṭṭhapālassa ñātidāsī ābhidosikaṁ kummāsaṁ chaḍḍetukāmā hoti. Atha kho āyasmā raṭṭhapālo taṁ ñātidāsiṁ etadavoca: "sacetaṁ, bhagini, chaḍḍanīyadhammaṁ, idha me patte ākirā"ti.</p>
 
-<hr>
 <p>Atha kho āyasmato raṭṭhapālassa ñātidāsī taṁ ābhidosikaṁ kummāsaṁ āyasmato raṭṭhapālassa patte ākirantī hatthānañca pādānañca sarassa ca nimittaṁ aggahesi.</p>
+
+<hr>
 
 <p><span class="parno">14</span>Atha kho āyasmato raṭṭhapālassa ñātidāsī yenāyasmato raṭṭhapālassa mātā tenupasaṅkami; upasaṅkamitvā āyasmato raṭṭhapālassa mātaraṁ etadavoca: "yaggheyye, jāneyyāsi: ‘ayyaputto raṭṭhapālo anuppatto’"ti.</p>
 
-<hr>
 <p>"Sace, je, saccaṁ bhaṇasi, <span class="var" title="adāsī bhavasīti (bj, pts1) | adāsī bhavissasi (mr)" id="note399">adāsiṁ taṁ karomī"ti</span>.</p>
 
 <hr>
+
 <p>Atha kho āyasmato raṭṭhapālassa mātā yenāyasmato raṭṭhapālassa pitā tenupasaṅkami; upasaṅkamitvā āyasmato raṭṭhapālassa pitaraṁ etadavoca: "yagghe, gahapati, jāneyyāsi: ‘raṭṭhapālo kira kulaputto anuppatto’"ti?</p>
 
-<p>Tena kho pana samayena āyasmā raṭṭhapālo taṁ ābhidosikaṁ kummāsaṁ aññataraṁ <span class="var" title="kuḍḍaṁ (bj, s1–3, km, pts1)" id="note400">kuṭṭamūlaṁ</span> nissāya paribhuñjati. Atha kho āyasmato raṭṭhapālassa pitā yenāyasmā raṭṭhapālo tenupasaṅkami; upasaṅkamitvā āyasmantaṁ raṭṭhapālaṁ etadavoca: "atthi nāma, tāta raṭṭhapāla, ābhidosikaṁ kummāsaṁ paribhuñjissasi?</p>
+<hr>
 
-<p>Nanu, tāta raṭṭhapāla, sakaṁ gehaṁ gantabban"ti? "Kuto no, gahapati, amhākaṁ gehaṁ agārasmā anagāriyaṁ pabbajitānaṁ? Anagārā mayaṁ, gahapati. Agamamha kho te, gahapati, gehaṁ, tattha neva dānaṁ alatthamha na paccakkhānaṁ; aññadatthu akkosameva alatthamhā"ti.</p>
+<p>Tena kho pana samayena āyasmā raṭṭhapālo taṁ ābhidosikaṁ kummāsaṁ aññataraṁ <span class="var" title="kuḍḍaṁ (bj, s1–3, km, pts1)" id="note400">kuṭṭamūlaṁ</span> nissāya paribhuñjati. Atha kho āyasmato raṭṭhapālassa pitā yenāyasmā raṭṭhapālo tenupasaṅkami; upasaṅkamitvā āyasmantaṁ raṭṭhapālaṁ etadavoca: "atthi nāma, tāta raṭṭhapāla, ābhidosikaṁ kummāsaṁ paribhuñjissasi? Nanu, tāta raṭṭhapāla, sakaṁ gehaṁ gantabban"ti? </p>
+
+<p>"Kuto no, gahapati, amhākaṁ gehaṁ agārasmā anagāriyaṁ pabbajitānaṁ? Anagārā mayaṁ, gahapati. Agamamha kho te, gahapati, gehaṁ, tattha neva dānaṁ alatthamha na paccakkhānaṁ; aññadatthu akkosameva alatthamhā"ti. </p>
 
 <p>"Ehi, tāta raṭṭhapāla, gharaṁ gamissāmā"ti.</p>
 
@@ -543,18 +580,17 @@
 
 <p>"Tena hi, tāta raṭṭhapāla, adhivāsehi svātanāya bhattan"ti. Adhivāsesi kho āyasmā raṭṭhapālo tuṇhībhāvena.</p>
 
+<hr>
+
 <p>Atha kho āyasmato raṭṭhapālassa pitā āyasmato raṭṭhapālassa adhivāsanaṁ viditvā yena sakaṁ nivesanaṁ tenupasaṅkami; upasaṅkamitvā mahantaṁ hiraññasuvaṇṇassa puñjaṁ kārāpetvā kilañjehi paṭicchādetvā āyasmato raṭṭhapālassa purāṇadutiyikā āmantesi: "etha tumhe, vadhuyo, yena alaṅkārena alaṅkatā pubbe raṭṭhapālassa kulaputtassa piyā hotha manāpā tena alaṅkārena alaṅkarothā"ti.</p>
 
-<hr>
 <p><span class="parno">15</span>Atha kho āyasmato raṭṭhapālassa pitā tassā rattiyā accayena sake nivesane paṇītaṁ khādanīyaṁ bhojanīyaṁ paṭiyādāpetvā āyasmato raṭṭhapālassa kālaṁ ārocesi: "kālo, tāta raṭṭhapāla, niṭṭhitaṁ bhattan"ti.</p>
 
 <p>Atha kho āyasmā raṭṭhapālo pubbaṇhasamayaṁ nivāsetvā pattacīvaramādāya yena sakapitu nivesanaṁ tenupasaṅkami; upasaṅkamitvā paññatte āsane nisīdi. Atha kho āyasmato raṭṭhapālassa pitā taṁ hiraññasuvaṇṇassa puñjaṁ vivarāpetvā āyasmantaṁ raṭṭhapālaṁ etadavoca: "Idaṁ te, tāta raṭṭhapāla, mātu mattikaṁ dhanaṁ, aññaṁ pettikaṁ, aññaṁ pitāmahaṁ. Sakkā, tāta raṭṭhapāla, bhoge ca bhuñjituṁ puññāni ca kātuṁ. <span class="var" title="raṭṭhapāla sikkhaṁ paccakkhāya (sabbattha)" id="note401">Ehi tvaṁ, tāta raṭṭhapāla</span>, hīnāyāvattitvā bhoge ca bhuñjassu puññāni ca karohī"ti.</p>
 
 <p>"Sace me tvaṁ, gahapati, vacanaṁ kareyyāsi, imaṁ hiraññasuvaṇṇassa puñjaṁ sakaṭe āropetvā nibbāhāpetvā majjhegaṅgāya nadiyā sote opilāpeyyāsi. Taṁ kissa hetu? Ye uppajjissanti hi te, gahapati, tatonidānaṁ sokaparidevadukkhadomanassupāyāsā"ti.</p>
 
-<p>Atha kho āyasmato raṭṭhapālassa purāṇadutiyikā paccekaṁ pādesu gahetvā āyasmantaṁ raṭṭhapālaṁ etadavocuṁ: "kīdisā nāma tā, ayyaputta, accharāyo yāsaṁ tvaṁ hetu brahmacariyaṁ carasī"ti?</p>
-
-<p>"Na kho mayaṁ, bhaginī, accharānaṁ hetu brahmacariyaṁ carāmā"ti.</p>
+<p>Atha kho āyasmato raṭṭhapālassa purāṇadutiyikā paccekaṁ pādesu gahetvā āyasmantaṁ raṭṭhapālaṁ etadavocuṁ: "kīdisā nāma tā, ayyaputta, accharāyo yāsaṁ tvaṁ hetu brahmacariyaṁ carasī"ti? "Na kho mayaṁ, bhaginī, accharānaṁ hetu brahmacariyaṁ carāmā"ti.</p>
 
 <p>"Bhaginivādena no ayyaputto raṭṭhapālo samudācaratī"ti tā tattheva mucchitā papatiṁsu.</p>
 
@@ -564,45 +600,44 @@
 
 <p>Atha kho āyasmato raṭṭhapālassa pitā āyasmantaṁ raṭṭhapālaṁ paṇītena khādanīyena bhojanīyena sahatthā santappesi sampavāresi.</p>
 
-<hr>
 <p><span class="parno">16</span>Atha kho āyasmā raṭṭhapālo bhuttāvī onītapattapāṇī ṭhitakova imā gāthā abhāsi: </p>
 
-<div class="verse">
-<p><span class="parno">17</span>"Passa cittīkataṁ bimbaṁ,
+<hr>
+
+<p class="verse"><span class="parno">17</span>"Passa cittīkataṁ bimbaṁ,
 <br>arukāyaṁ samussitaṁ;
 <br>Āturaṁ bahusaṅkappaṁ,
 <br>yassa natthi dhuvaṁ ṭhiti.</p>
 
-<p><span class="parno">18</span>Passa cittīkataṁ rūpaṁ,
+<p class="verse"><span class="parno">18</span>Passa cittīkataṁ rūpaṁ,
 <br>maṇinā kuṇḍalena ca;
 <br>Aṭṭhi tacena onaddhaṁ,
 <br>saha vatthebhi sobhati.</p>
 
-<p><span class="parno">19</span>Alattakakatā pādā,
+<p class="verse"><span class="parno">19</span>Alattakakatā pādā,
 <br>mukhaṁ cuṇṇakamakkhitaṁ;
 <br>Alaṁ bālassa mohāya,
 <br>no ca pāragavesino.</p>
 
-<p><span class="parno">20</span>Aṭṭhāpadakatā kesā,
+<p class="verse"><span class="parno">20</span>Aṭṭhāpadakatā kesā,
 <br>nettā añjanamakkhitā;
 <br>Alaṁ bālassa mohāya,
 <br>no ca pāragavesino.</p>
 
-<p><span class="parno">21</span><span class="var" title="añjanīvaṇṇavā (mr)" id="note402">Añjanīva navā</span> cittā,
+<p class="verse"><span class="parno">21</span><span class="var" title="añjanīvaṇṇavā (mr)" id="note402">Añjanīva navā</span> cittā,
 <br>pūtikāyo alaṅkato;
 <br>Alaṁ bālassa mohāya,
 <br>no ca pāragavesino.</p>
 
-<p><span class="parno">22</span>Odahi migavo pāsaṁ,
+<p class="verse"><span class="parno">22</span>Odahi migavo pāsaṁ,
 <br>nāsadā vākaraṁ migo;
 <br>Bhutvā nivāpaṁ <span class="var" title="gacchāmi (si, s1–3, mr)" id="note403">gacchāma</span>,
 <br>kandante migabandhake"ti.</p>
-</div>
 
 <hr>
+
 <p><span class="parno">23</span>Atha kho āyasmā raṭṭhapālo ṭhitakova imā gāthā bhāsitvā yena rañño korabyassa migacīraṁ tenupasaṅkami; upasaṅkamitvā aññatarasmiṁ rukkhamūle divāvihāraṁ nisīdi.</p>
 
-<hr>
 <p><span class="parno">24</span>Atha kho rājā korabyo migavaṁ āmantesi: "sodhehi, samma migava, migacīraṁ uyyānabhūmiṁ; gacchāma subhūmiṁ dassanāyā"ti. "Evaṁ, devā"ti kho migavo rañño korabyassa paṭissutvā migacīraṁ sodhento addasa āyasmantaṁ raṭṭhapālaṁ aññatarasmiṁ rukkhamūle divāvihāraṁ nisinnaṁ. Disvāna yena rājā korabyo tenupasaṅkami; upasaṅkamitvā rājānaṁ korabyaṁ etadavoca: "suddhaṁ kho te, deva, migacīraṁ. Atthi cettha raṭṭhapālo nāma kulaputto imasmiṁyeva thullakoṭṭhike aggakulassa putto yassa tvaṁ abhiṇhaṁ kittayamāno ahosi, so aññatarasmiṁ rukkhamūle divāvihāraṁ nisinno"ti.</p>
 
 <p>"Tena hi, samma migava, alaṁ dānajja uyyānabhūmiyā. Tameva dāni mayaṁ bhavantaṁ raṭṭhapālaṁ payirupāsissāmā"ti.</p>
@@ -619,13 +654,21 @@
 
 <p><span class="parno">26</span>Katamañca, bho raṭṭhapāla, byādhipārijuññaṁ? Idha, bho raṭṭhapāla, ekacco ābādhiko hoti dukkhito bāḷhagilāno. So iti paṭisañcikkhati: ‘Ahaṁ khomhi etarahi ābādhiko dukkhito bāḷhagilāno. Na kho pana mayā sukaraṁ anadhigataṁ vā bhogaṁ adhigantuṁ adhigataṁ vā bhogaṁ phātiṁ kātuṁ. Yannūnāhaṁ kesamassuṁ ohāretvā kāsāyāni vatthāni acchādetvā agārasmā anagāriyaṁ pabbajeyyan’ti. So tena byādhipārijuññena samannāgato kesamassuṁ ohāretvā kāsāyāni vatthāni acchādetvā agārasmā anagāriyaṁ pabbajati. Idaṁ vuccati, bho raṭṭhapāla, byādhipārijuññaṁ. Bhavaṁ kho pana raṭṭhapālo etarahi appābādho appātaṅko samavepākiniyā gahaṇiyā samannāgato nātisītāya nāccuṇhāya. Taṁ bhoto raṭṭhapālassa byādhipārijuññaṁ natthi. Kiṁ bhavaṁ raṭṭhapālo ñatvā vā disvā vā sutvā vā agārasmā anagāriyaṁ pabbajito? <span class="brnum">(2)</span></p>
 
+<hr>
+
 <p><span class="parno">27</span>Katamañca, bho raṭṭhapāla, bhogapārijuññaṁ? Idha, bho raṭṭhapāla, ekacco aḍḍho hoti mahaddhano mahābhogo. Tassa te bhogā anupubbena parikkhayaṁ gacchanti. So iti paṭisañcikkhati: ‘Ahaṁ kho pubbe aḍḍho ahosiṁ mahaddhano mahābhogo. Tassa me te bhogā anupubbena parikkhayaṁ gatā. Na kho pana mayā sukaraṁ anadhigataṁ vā bhogaṁ adhigantuṁ adhigataṁ vā bhogaṁ phātiṁ kātuṁ. Yannūnāhaṁ kesamassuṁ ohāretvā kāsāyāni vatthāni acchādetvā agārasmā anagāriyaṁ pabbajeyyan’ti. So tena bhogapārijuññena samannāgato kesamassuṁ ohāretvā kāsāyāni vatthāni acchādetvā agārasmā anagāriyaṁ pabbajati. Idaṁ vuccati, bho raṭṭhapāla, bhogapārijuññaṁ. Bhavaṁ kho pana raṭṭhapālo imasmiṁyeva thullakoṭṭhike aggakulassa putto. Taṁ bhoto raṭṭhapālassa bhogapārijuññaṁ natthi. Kiṁ bhavaṁ raṭṭhapālo ñatvā vā disvā vā sutvā vā agārasmā anagāriyaṁ pabbajito? <span class="brnum">(3)</span></p>
+
+<hr>
 
 <p><span class="parno">28</span>Katamañca, bho raṭṭhapāla, ñātipārijuññaṁ? Idha, bho raṭṭhapāla, ekaccassa bahū honti mittāmaccā ñātisālohitā. Tassa te ñātakā anupubbena parikkhayaṁ gacchanti. So iti paṭisañcikkhati: ‘mamaṁ kho pubbe bahū ahesuṁ mittāmaccā ñātisālohitā. Tassa me te anupubbena parikkhayaṁ gatā. Na kho pana mayā sukaraṁ anadhigataṁ vā bhogaṁ adhigantuṁ adhigataṁ vā bhogaṁ phātiṁ kātuṁ. Yannūnāhaṁ kesamassuṁ ohāretvā kāsāyāni vatthāni acchādetvā agārasmā anagāriyaṁ pabbajeyyan’ti. So tena ñātipārijuññena samannāgato kesamassuṁ ohāretvā kāsāyāni vatthāni acchādetvā agārasmā anagāriyaṁ pabbajati. Idaṁ vuccati, bho raṭṭhapāla, ñātipārijuññaṁ. Bhoto kho pana raṭṭhapālassa imasmiṁyeva thullakoṭṭhike bahū mittāmaccā ñātisālohitā. Taṁ bhoto raṭṭhapālassa ñātipārijuññaṁ natthi. Kiṁ bhavaṁ raṭṭhapālo ñatvā vā disvā vā sutvā vā agārasmā anagāriyaṁ pabbajito? <span class="brnum">(4)</span></p>
 
 <p><span class="parno">29</span>Imāni kho, bho raṭṭhapāla, cattāri pārijuññāni, yehi pārijuññehi samannāgatā idhekacce kesamassuṁ ohāretvā kāsāyāni vatthāni acchādetvā agārasmā anagāriyaṁ pabbajanti. Tāni bhoto raṭṭhapālassa natthi. Kiṁ bhavaṁ raṭṭhapālo ñatvā vā disvā vā sutvā vā agārasmā anagāriyaṁ pabbajito"ti?</p>
 
+<hr>
+
 <p><span class="parno">30</span>"Atthi kho, mahārāja, tena bhagavatā jānatā passatā arahatā sammāsambuddhena cattāro dhammuddesā uddiṭṭhā, ye <span class="var" title="ye'haṁ (bj) | yamahaṁ (s1–3, km, mr)" id="note407">ahaṁ</span> ñatvā ca disvā ca sutvā ca agārasmā anagāriyaṁ pabbajito. Katame cattāro?</p>
+
+<hr>
 
 <p>‘Upaniyyati loko addhuvo’ti kho, mahārāja, tena bhagavatā jānatā passatā arahatā sammāsambuddhena paṭhamo dhammuddeso uddiṭṭho, yamahaṁ ñatvā ca disvā ca sutvā ca agārasmā anagāriyaṁ pabbajito.</p>
 
@@ -633,11 +676,16 @@
 
 <p>‘Assako loko, sabbaṁ pahāya gamanīyan’ti kho, mahārāja, tena bhagavatā jānatā passatā arahatā sammāsambuddhena tatiyo dhammuddeso uddiṭṭho, yamahaṁ ñatvā ca disvā ca sutvā ca agārasmā anagāriyaṁ pabbajito.</p>
 
+<hr>
+
 <p>‘Ūno loko atitto taṇhādāso’ti kho, mahārāja, tena bhagavatā jānatā passatā arahatā sammāsambuddhena catuttho dhammuddeso uddiṭṭho, yamahaṁ ñatvā ca disvā ca sutvā ca agārasmā anagāriyaṁ pabbajito.</p>
+
+<hr>
 
 <p>Ime kho, mahārāja, tena bhagavatā jānatā passatā arahatā sammāsambuddhena cattāro dhammuddesā uddiṭṭhā, ye ahaṁ ñatvā ca disvā ca sutvā ca agārasmā anagāriyaṁ pabbajito"ti.</p>
 
 <hr>
+
 <p><span class="parno">31</span>"‘Upaniyyati loko addhuvo’ti — bhavaṁ raṭṭhapālo āha. Imassa, bho raṭṭhapāla, bhāsitassa kathaṁ attho daṭṭhabbo"ti?</p>
 
 <p>"Taṁ kiṁ maññasi, mahārāja, tvaṁ vīsativassuddesikopi paṇṇavīsativassuddesikopi hatthismimpi katāvī assasmimpi katāvī rathasmimpi katāvī dhanusmimpi katāvī tharusmimpi katāvī ūrubalī bāhubalī alamatto saṅgāmāvacaro"ti?</p>
@@ -645,6 +693,7 @@
 <p>"Ahosiṁ ahaṁ, bho raṭṭhapāla, vīsativassuddesikopi paṇṇavīsativassuddesikopi hatthismimpi katāvī assasmimpi katāvī rathasmimpi katāvī dhanusmimpi katāvī tharusmimpi katāvī ūrubalī bāhubalī alamatto saṅgāmāvacaro. Appekadāhaṁ, bho raṭṭhapāla, <span class="var" title="iddhimā ca maññe (si) | iddhimā maññe (s1) | iddhimā maññe na (s2, s3, km) | na viya maññe (mr)" id="note408">iddhimāva maññe na</span> attano balena samasamaṁ samanupassāmī"ti.</p>
 
 <hr>
+
 <p>"Taṁ kiṁ maññasi, mahārāja, evameva tvaṁ etarahi ūrubalī bāhubalī alamatto saṅgāmāvacaro"ti?</p>
 
 <p>"No hidaṁ, bho raṭṭhapāla. Etarahi jiṇṇo vuḍḍho mahallako addhagato vayoanuppatto āsītiko me vayo vattati. Appekadāhaṁ, bho raṭṭhapāla, ‘idha pādaṁ karissāmī’ti aññeneva pādaṁ karomī"ti.</p>
@@ -654,9 +703,12 @@
 <p>"Acchariyaṁ, bho raṭṭhapāla, abbhutaṁ, bho raṭṭhapāla. Yāva subhāsitañcidaṁ tena bhagavatā jānatā passatā arahatā sammāsambuddhena: ‘upaniyyati loko addhuvo’ti. Upaniyyati hi, bho raṭṭhapāla, loko addhuvo. <span class="brnum">(1)</span></p>
 
 <hr>
+
 <p><span class="parno">32</span>Saṁvijjante kho, bho raṭṭhapāla, imasmiṁ rājakule hatthikāyāpi assakāyāpi rathakāyāpi pattikāyāpi, amhākaṁ āpadāsu pariyodhāya vattissanti. ‘Atāṇo loko anabhissaro’ti — bhavaṁ raṭṭhapālo āha. Imassa pana, bho raṭṭhapāla, bhāsitassa kathaṁ attho daṭṭhabbo"ti?</p>
 
 <p>"Taṁ kiṁ maññasi, mahārāja, atthi te koci anusāyiko ābādho"ti?</p>
+
+<hr>
 
 <p>"Atthi me, bho raṭṭhapāla, anusāyiko ābādho. Appekadā maṁ, bho raṭṭhapāla, mittāmaccā ñātisālohitā parivāretvā ṭhitā honti: ‘idāni rājā korabyo kālaṁ karissati, idāni rājā korabyo kālaṁ karissatī’"ti.</p>
 
@@ -664,10 +716,11 @@
 
 <p>"Nāhaṁ, bho raṭṭhapāla, labhāmi te mittāmacce ñātisālohite: ‘āyantu me bhonto mittāmaccā ñātisālohitā, sabbeva santā imaṁ vedanaṁ saṁvibhajatha, yathāhaṁ lahukatarikaṁ vedanaṁ vediyeyyan’ti. Atha kho ahameva taṁ vedanaṁ vediyāmī"ti.</p>
 
-<hr>
 <p>"Idaṁ kho taṁ, mahārāja, tena bhagavatā jānatā passatā arahatā sammāsambuddhena sandhāya bhāsitaṁ: ‘atāṇo loko anabhissaro’ti, yamahaṁ ñatvā ca disvā ca sutvā ca agārasmā anagāriyaṁ pabbajito"ti.</p>
 
 <p>"Acchariyaṁ, bho raṭṭhapāla, abbhutaṁ, bho raṭṭhapāla. Yāva subhāsitaṁ cidaṁ tena bhagavatā jānatā passatā arahatā sammāsambuddhena: ‘atāṇo loko anabhissaro’ti. Atāṇo hi, bho raṭṭhapāla, loko anabhissaro. <span class="brnum">(2)</span></p>
+
+<hr>
 
 <p><span class="parno">33</span>Saṁvijjati kho, bho raṭṭhapāla, imasmiṁ rājakule pahūtaṁ hiraññasuvaṇṇaṁ bhūmigatañca vehāsagatañca. ‘Assako loko, sabbaṁ pahāya gamanīyan’ti — bhavaṁ raṭṭhapālo āha. Imassa pana, bho raṭṭhapāla, bhāsitassa kathaṁ attho daṭṭhabbo"ti?</p>
 
@@ -675,7 +728,11 @@
 
 <p>"Yathāhaṁ, bho raṭṭhapāla, etarahi pañcahi kāmaguṇehi samappito samaṅgībhūto paricāremi, nāhaṁ lacchāmi paratthāpi: ‘evameva imeheva pañcahi kāmaguṇehi samappito samaṅgībhūto paricāremī’ti.</p>
 
-<p>Atha kho aññe imaṁ bhogaṁ paṭipajjissanti; ahaṁ pana yathākammaṁ gamissāmī"ti. "Idaṁ kho taṁ, mahārāja, tena bhagavatā jānatā passatā arahatā sammāsambuddhena sandhāya bhāsitaṁ: ‘assako loko, sabbaṁ pahāya gamanīyan’ti, yamahaṁ ñatvā ca disvā ca sutvā ca agārasmā anagāriyaṁ pabbajito"ti.</p>
+<p>Atha kho aññe imaṁ bhogaṁ paṭipajjissanti; ahaṁ pana yathākammaṁ gamissāmī"ti. </p>
+
+<hr>
+
+<p>"Idaṁ kho taṁ, mahārāja, tena bhagavatā jānatā passatā arahatā sammāsambuddhena sandhāya bhāsitaṁ: ‘assako loko, sabbaṁ pahāya gamanīyan’ti, yamahaṁ ñatvā ca disvā ca sutvā ca agārasmā anagāriyaṁ pabbajito"ti.</p>
 
 <p>"Acchariyaṁ, bho raṭṭhapāla, abbhutaṁ, bho raṭṭhapāla. Yāva subhāsitaṁ cidaṁ tena bhagavatā jānatā passatā arahatā sammāsambuddhena: ‘assako loko, sabbaṁ pahāya gamanīyan’ti. Assako hi, bho raṭṭhapāla, loko sabbaṁ pahāya gamanīyaṁ. <span class="brnum">(3)</span></p>
 
@@ -685,15 +742,19 @@
 
 <p>"Evaṁ, bho raṭṭhapāla, phītaṁ kuruṁ ajjhāvasāmī"ti.</p>
 
+<hr>
+
 <p>"Taṁ kiṁ maññasi, mahārāja, idha puriso āgaccheyya puratthimāya disāya saddhāyiko paccayiko. So taṁ upasaṅkamitvā evaṁ vadeyya: ‘yagghe, mahārāja, jāneyyāsi, ahaṁ āgacchāmi puratthimāya disāya? Tatthaddasaṁ mahantaṁ janapadaṁ iddhañceva phītañca bahujanaṁ ākiṇṇamanussaṁ. Bahū tattha hatthikāyā assakāyā rathakāyā pattikāyā; bahu tattha <span class="var" title="dantājinaṁ (s1–3, km, pts1)" id="note409">dhanadhaññaṁ</span>; bahu tattha hiraññasuvaṇṇaṁ akatañceva katañca; bahu tattha itthipariggaho. Sakkā ca tāvatakeneva <span class="var" title="balatthena (s1–3, km, pts1) | bahalatthena (mr)" id="note410">balamattena</span> abhivijinituṁ. Abhivijina, mahārājā’ti, kinti naṁ kareyyāsī"ti?</p>
 
 <p>"Tampi mayaṁ, bho raṭṭhapāla, abhivijiya ajjhāvaseyyāmā"ti.</p>
 
 <hr>
+
 <p><span class="parno">35</span>"Taṁ kiṁ maññasi, mahārāja, idha puriso āgaccheyya pacchimāya disāya … uttarāya disāya … dakkhiṇāya disāya … parasamuddato saddhāyiko paccayiko. So taṁ upasaṅkamitvā evaṁ vadeyya: ‘yagghe, mahārāja, jāneyyāsi, ahaṁ āgacchāmi parasamuddato? Tatthaddasaṁ mahantaṁ janapadaṁ iddhañceva phītañca bahujanaṁ ākiṇṇamanussaṁ. Bahū tattha hatthikāyā assakāyā rathakāyā pattikāyā; bahu tattha dhanadhaññaṁ; bahu tattha hiraññasuvaṇṇaṁ akatañceva katañca; bahu tattha itthipariggaho. Sakkā ca tāvatakeneva balamattena abhivijinituṁ. Abhivijina, mahārājā’ti, kinti naṁ kareyyāsī"ti?</p>
 
-<hr>
 <p>"Tampi mayaṁ, bho raṭṭhapāla, abhivijiya ajjhāvaseyyāmā"ti.</p>
+
+<hr>
 
 <p>"Idaṁ kho taṁ, mahārāja, tena bhagavatā jānatā passatā arahatā sammāsambuddhena sandhāya bhāsitaṁ: ‘ūno loko atitto taṇhādāso’ti, yamahaṁ ñatvā ca disvā ca sutvā ca agārasmā anagāriyaṁ pabbajito"ti.</p>
 
@@ -701,74 +762,75 @@
 
 <p><span class="parno">36</span>Idamavoca āyasmā raṭṭhapālo. Idaṁ vatvā athāparaṁ etadavoca: </p>
 
-<div class="verse">
-<p><span class="parno">37</span>"Passāmi loke sadhane manusse,
+
+<hr>
+
+<p class="verse"><span class="parno">37</span>"Passāmi loke sadhane manusse,
 <br>Laddhāna vittaṁ na dadanti mohā;
 <br><span class="var" title="laddhā dhanaṁ (mr)" id="note411">Luddhā dhanaṁ</span> sannicayaṁ karonti,
 <br>Bhiyyova kāme abhipatthayanti.</p>
 
-<p><span class="parno">38</span>Rājā pasayhā pathaviṁ vijitvā,
+<p class="verse"><span class="parno">38</span>Rājā pasayhā pathaviṁ vijitvā,
 <br>Sasāgarantaṁ <span class="var" title="mahiyā vasanto (si, mr) | mahiṁ āvasanto (pts1)" id="note412">mahimāvasanto</span>;
 <br>Oraṁ samuddassa atittarūpo,
 <br>Pāraṁ samuddassapi patthayetha.</p>
 
-<p><span class="parno">39</span>Rājā ca aññe ca bahū manussā,
+<p class="verse"><span class="parno">39</span>Rājā ca aññe ca bahū manussā,
 <br><span class="var" title="atittataṇhā (mr)" id="note413">Avītataṇhā</span> maraṇaṁ upenti;
 <br>Ūnāva hutvāna jahanti dehaṁ,
 <br>Kāmehi lokamhi na hatthi titti.</p>
 
-<p><span class="parno">40</span>Kandanti naṁ ñātī pakiriya kese,
+<p class="verse"><span class="parno">40</span>Kandanti naṁ ñātī pakiriya kese,
 <br>Ahovatā no amarāti cāhu;
 <br>Vatthena naṁ pārutaṁ nīharitvā,
 <br>Citaṁ <span class="var" title="samādhāya (bj)" id="note414">samādāya</span> tatoḍahanti.</p>
 
-<p><span class="parno">41</span>So ḍayhati sūlehi tujjamāno,
+<p class="verse"><span class="parno">41</span>So ḍayhati sūlehi tujjamāno,
 <br>Ekena vatthena pahāya bhoge;
 <br>Na mīyamānassa bhavanti tāṇā,
 <br>Ñātīdha mittā atha vā sahāyā.</p>
 
-<p><span class="parno">42</span>Dāyādakā tassa dhanaṁ haranti,
+<p class="verse"><span class="parno">42</span>Dāyādakā tassa dhanaṁ haranti,
 <br>Satto pana gacchati yena kammaṁ;
 <br>Na mīyamānaṁ dhanamanveti kiñci,
 <br>Puttā ca dārā ca dhanañca raṭṭhaṁ.</p>
 
-<p><span class="parno">43</span>Na dīghamāyuṁ labhate dhanena,
+<p class="verse"><span class="parno">43</span>Na dīghamāyuṁ labhate dhanena,
 <br>Na cāpi vittena jaraṁ vihanti;
 <br>Appaṁ hidaṁ jīvitamāhu dhīrā,
 <br>Asassataṁ vippariṇāmadhammaṁ.</p>
 
-<p><span class="parno">44</span>Aḍḍhā daliddā ca phusanti phassaṁ,
+<p class="verse"><span class="parno">44</span>Aḍḍhā daliddā ca phusanti phassaṁ,
 <br>Bālo ca dhīro ca tatheva phuṭṭho;
 <br>Bālo ca bālyā vadhitova seti,
 <br><span class="var" title="dhīrova (mr)" id="note415">Dhīro ca</span> na vedhati phassaphuṭṭho.</p>
 
-<p><span class="parno">45</span>Tasmā hi paññāva dhanena seyyo,
+<p class="verse"><span class="parno">45</span>Tasmā hi paññāva dhanena seyyo,
 <br>Yāya vosānamidhādhigacchati;
 <br><span class="var" title="asositattā (si, pts1)" id="note416">Abyositattā</span> hi bhavābhavesu,
 <br>Pāpāni kammāni karonti mohā.</p>
 
-<p><span class="parno">46</span>Upeti gabbhañca parañca lokaṁ,
+<p class="verse"><span class="parno">46</span>Upeti gabbhañca parañca lokaṁ,
 <br>Saṁsāramāpajja paramparāya;
 <br>Tassappapañño abhisaddahanto,
 <br>Upeti gabbhañca parañca lokaṁ.</p>
 
-<p><span class="parno">47</span>Coro yathā sandhimukhe gahito,
+<p class="verse"><span class="parno">47</span>Coro yathā sandhimukhe gahito,
 <br>Sakammunā haññati pāpadhammo;
 <br>Evaṁ pajā pecca paramhi loke,
 <br>Sakammunā haññati pāpadhammo.</p>
 
-<p><span class="parno">48</span>Kāmāhi citrā madhurā manoramā,
+<p class="verse"><span class="parno">48</span>Kāmāhi citrā madhurā manoramā,
 <br>Virūparūpena mathenti cittaṁ;
 <br>Ādīnavaṁ kāmaguṇesu disvā,
 <br>Tasmā ahaṁ pabbajitomhi rāja.</p>
 
-<p><span class="parno">49</span>Dumapphalāneva patanti māṇavā,
+<p class="verse"><span class="parno">49</span>Dumapphalāneva patanti māṇavā,
 <br>Daharā ca vuḍḍhā ca sarīrabhedā;
 <br><span class="var" title="evampi disvā (si) | etaṁ viditvā (s1–3, km)" id="note417">Etampi disvā</span> pabbajitomhi rāja,
 <br>Apaṇṇakaṁ sāmaññameva seyyo"ti.</p>
-</div>
 
-<p class="endsection">Raṭṭhapālasuttaṁ niṭṭhitaṁ dutiyaṁ.</p>
+<p class="endsutta">Raṭṭhapālasuttaṁ niṭṭhitaṁ dutiyaṁ.</p>
 </div>
 </section>  <!-- End English and Pali -->
 <div id="nextprev"><a id="previous-sutta" href="./mn81.html#content"></a><a id="next-sutta" href="./mn83.html#content"></a></div>
@@ -778,9 +840,9 @@
 <!-- Footer -->
 		<footer>
 			<div id="breadcrumbs"><a href="../home/index.html">Home</a><a href="../mn/mn.html">Majjhima Nikāya</a>MN82: Raṭṭhapālasutta</div>
-		<div class="bottomlinks">
+					<div class="bottomlinks">
  	<a href="../guide/guide.html"><span class="w3-bar-item"><i class="fa fa-compass"></i>&nbsp;Guide</span></a>
- 	<a href="../home/help.html"><span class="w3-bar-item"><i class="fa fa-info"></i>&nbsp;Help</span></a>
+ 	 	<a href="../home/help.html"><span class="w3-bar-item"><i class="fa fa-info"></i>&nbsp;Help</span></a>
  	<a href="../home/crossreference.html"><span class="w3-bar-item"><i class="fa fa-exchange"></i>&nbsp;Links&nbsp;Cross&nbsp;Reference</span></a>
  	<a href="../home/copyright.html"><span class="w3-bar-item">&copy;&nbsp;Copyright</span></a>
  	<a href="../home/contact.html"><span class="w3-bar-item"><i class="fa fa-envelope"></i>&nbsp;Contact</span></a>
@@ -842,5 +904,6 @@
  </script>
  <script src="../js/footer.js"></script><script src="../js/dpd_deconstructor.js"></script><script src="../js/dpd_ebts.js"></script><script src="../js/dpd_i2h.js"></script>
  <script src="/sw.js"></script>
+<script>document.addEventListener("click",e=>{if(e.target.closest("a.dg-link")){e.preventDefault();const s=new URLSearchParams(window.location.search).get("s");window.location.href=e.target.closest("a").href+(s?`&s=${encodeURIComponent(s)}`:"");}})</script>
  </body>
  </html>

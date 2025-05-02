@@ -4,44 +4,49 @@
  	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
  	<link rel="icon" type="image/x-icon" href="../images/favicon.ico">
  	<title>Sutta Cross Reference Table</title>
- 	 	<meta name="viewport" content="width=device-width, initial-scale=1">
-  	<!-- Loading third party fonts -->
-  	  	<link href="../fonts/font-awesome.min.css" rel="stylesheet" type="text/css">
-  	<!-- Loading main and menu stylesheets -->
-  	<link rel="stylesheet" href="../css/w3.css">
-  	<link rel="stylesheet" href="../css/css.css">
-  	<link rel="stylesheet" href="../css/menu.css">
-			<script src="../js/jquery-1.10.2.min.js"></script>
-			<script src="../js/controlpanel.js"></script>
-   <script src="../js/mousetrap.min.js"></script>
-<body>
-
- 	<!--  <header>-->
- 	<div class="w3-header w3-content w3-padding w3-left-align bwcontainer">
+ 	<meta name="viewport" content="width=device-width, initial-scale=1">
+		<!-- Loading manifest -->
+	<link rel="manifest" href="../manifest.json">
+ 	<!-- Loading third party fonts -->
+ 	<link href="../fonts/font-awesome.min.css" rel="stylesheet" type="text/css">
+ 	<!-- Loading main and menu stylesheets -->
+ 	<link rel="stylesheet" href="../css/w3.css">
+ 	<link rel="stylesheet" href="../css/css.css">
+ 	<link rel="stylesheet" href="../css/menu.css">
+ 	<script src="../js/jquery-1.10.2.min.js"></script>
+ 	<script src="../js/controlpanel.js"></script>
+ 	<script src="../js/mousetrap.min.js"></script>
+ </head>
+ <body class="container">
+ <div class="header-background">
+ <!-- Header -->
+ <div class="w3-header w3-content w3-padding w3-left-align bwcontainer">
+ 	<div class="centered">
  		<button class="light-mode-button" aria-label="Toggle Light Mode" onclick="toggle_light_mode()">
- 		<span></span>
- 		<span></span>
- 	</button>
- 	<span class="box-lbl">Light\Dark</span>
- <a href="../home/index.html" id="bwlogo"><img src="../images/headerlogo.png" alt="The Buddha's Words logo" class="w3-image"></a>
+ 			<span></span>
+ 			<span></span>
+ 		</button>
+ 		<span class="box-lbl">Light/Dark</span>
+ 	</div> <!-- Centered -->
+ 		<a href="../home/index.html" id="bwlogo"><img src="../images/headerlogo.png" alt="The Buddha's Words logo" class="w3-image"></a>
  		<div class="w3-bar bwcontainer">
  			<div id="searchlinks">
- 				<a href="../home/engsearch.html"><span class="w3-bar-item"><i class="fa fa-search"></i>&nbsp;Search English</span></a>
- 				<a href="../home/palisearch.html"><span class="w3-bar-item"><i class="fa fa-search"></i>&nbsp;Search Pali</span></a>
- 		</div><!-- End Searchlinks div -->
- 
-			 		<div class="help"><span><a href="../home/help.html"><img src="../images/help_icon.png" title="Help" alt="Help"></a></span></div>
- 	</div>
- </div>
-<!-- Top menu -->
+ 			<a href="../home/engsearch.html"><span class="w3-bar-item"><i class="fa fa-search"></i>&nbsp;Search English</span></a>
+ 			<a href="../home/palisearch.html"><span class="w3-bar-item"><i class="fa fa-search"></i>&nbsp;Search Pali</span></a>
+ 			</div><!-- End Searchlinks div -->
+ 			<div class="help"><span><a href="../home/help.html"><img src="../images/help_icon.png" title="Help" alt="Help"></a></span></div>
+ 		</div> <!-- End w3-bar bwcontainer --> 	</div> <!-- End w3-header w3-content w3-padding w3-left-align bwcontainer -->
+ </div> <!-- End header-background -->
+ <!-- Top menu -->
+
  <div class="w3-main w3-white bwcontainer2">
  	<div class="w3-button w3-padding-8 w3-left w3-hide-large" onclick="w3_open()">☰</div>
  		<div id="navbar" class="w3-hide-small w3-hide-medium bwcontainer3">
  			<ul id="css3menu0">
  				<li class="topfirst" id="home"><a href="../home/index.html" class="pressed w3-hide-small">Home</a></li>
- 				<li class="topmenu" id="dn"><a href="../dn/dn.html" class="w3-hide-small">Digha Nikaya</a></li>
- 				<li class="topmenu" id="mn"><a href="../mn/mn.html" class="w3-hide-small">Majjhima Nikaya</a></li>
- 				<li class="topmenu" id="sn"><a href="../sn/sn.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Samyutta Nikaya</a>
+ 			<li class="topmenu" id="dn"><a href="../dn/dn.html" class="w3-hide-small">Dīgha Nikāya</a></li>
+ 				<li class="topmenu" id="mn"><a href="../mn/mn.html" class="w3-hide-small">Majjhima Nikāya</a></li>
+ 				<li class="topmenu" id="sn"><a href="../sn/sn.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Saṁyutta Nikāya</a>
  					<ul>
  						<li><a href="../sn/sn01.html" class="w3-hide-small">Vol. 1 ‒ The Book with Verses</a></li>
  						<li><a href="../sn/sn02.html" class="w3-hide-small">Vol. 2 ‒ The Book of Causation</a></li>
@@ -49,7 +54,7 @@
  						<li><a href="../sn/sn04.html" class="w3-hide-small">Vol. 4 ‒ The Book of the Six Sense Bases</a></li>
  						<li><a href="../sn/sn05.html" class="w3-hide-small">Vol. 5 ‒ The Great Book</a></li>
  					</ul>
- 				<li class="topmenu" id="an"><a href="../an/an.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Anguttara Nikaya</a>
+ 				<li class="topmenu" id="an"><a href="../an/an.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Aṅguttara Nikāya</a>
  					<ul>
  						<li><a href="../an/an1.html" class="w3-hide-small">The Ones</a></li>
  						<li><a href="../an/an2.html" class="w3-hide-small">The Twos</a></li>
@@ -64,7 +69,7 @@
  						<li><a href="../an/an11.html" class="w3-hide-small">The Elevens</a></li>
  					</ul>
  				</li>
- 				<li class="topmenu" id="kn"><a href="../kn/kn.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Khuddaka Nikaya</a>
+ 				<li class="topmenu" id="kn"><a href="../kn/kn.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Khuddaka Nikāya</a>
  					<ul>
  						<li><a href="../kp/kp.html" class="w3-hide-small">The Khuddakapatha</a></li>
  						<li><a href="../dhp/dhp.html" class="w3-hide-small">The Dhammapada</a></li>
@@ -75,15 +80,13 @@
  						<li><a href="../thi/thi.html" class="w3-hide-small">The Therigatha</a></li>
  					</ul>
  				</li>
- 				<li class="toplast" id="vi"><a href="../vi/vi.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Vinaya Pitaka</a>
+ 				<li class="toplast" id="vi"><a href="../vi/vi.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Vinaya Piṭaka</a>
  					<ul>
  						<li><a href="../vi/kd.html" class="w3-hide-small">Khandhaka</a></li>
  						<li><a href="../vi/bu-vb.html" class="w3-hide-small">Bhikkhu Vibhaṅga</a></li>
- 						<li><a href="../vi/bu-pt.html" class="w3-hide-small">Bhikkhu Pāṭimokkha</a></li>
- 						<li><a href="../vi/bi-pt.html" class="w3-hide-small">Bhikkhunī Pāṭimokkha</a></li>
+ 						<li><a href="../vi/bu-pt.html" class="w3-hide-small">Bhikkhu Pātimokkha</a></li>
+ 						<li><a href="../vi/bi-pt.html" class="w3-hide-small">Bhikkhunī Pātimokkha</a></li>
  						<li><a href="../vi/bi-vb.html" class="w3-hide-small">Bhikkhunī Vibhaṅga</a></li>
- 						<li><a href="../bmc/bmc.html" class="w3-hide-small">Buddhist Monastic Code</a></li>
- 						
  					</ul>
  				</li>
  			</ul>
@@ -95,12 +98,13 @@
  	<a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-times fa-2x red-color"></i>&nbsp;&nbsp;&nbsp;Close</a><!-- Hides the sidebar when clicked -->
  		<div class="w3-bar-block w3-white">
  			<a href="../home/index.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-home fa-lg"></i>&nbsp;&nbsp;&nbsp;Home</a>
- 			<a href="../dn/dn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Digha Nikaya</a>
- 			<a href="../mn/mn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Majjhima Nikaya</a>
- 			<a href="../sn/sn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Samyutta Nikaya</a>
- 			<a href="../an/an.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Anguttara Nikaya</a>
- 			<a href="../kn/kn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Khuddaka Nikaya</a>
- 			<a href="../vi/vi.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Vinaya Pitaka</a>
+ 			<a href="../guide/guide.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Guide</a>
+ 			<a href="../dn/dn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Dīgha Nikāya</a>
+ 			<a href="../mn/mn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Majjhima Nikāya</a>
+ 			<a href="../sn/sn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Saṁyutta Nikāya</a>
+ 			<a href="../an/an.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Aṅguttara Nikāya</a>
+ 			<a href="../kn/kn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Khuddaka Nikāya</a>
+ 			<a href="../vi/vi.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Vinaya Piṭaka</a>
  		</div>
  </nav>
  
@@ -112,27 +116,27 @@
 <h2>Sutta Cross Reference Table</h2>
  <p>(<a href="#skip">Skip to table</a>)</p>
 
-<p>This table is provided to address the problem with finding a reference given in the format of the Pali Text Society (PTS). e.g. S IV43 (or S iv43). This translates to "page 43 in the fourth volume of the <b>(Pali)</b> Samyutta Nikaya. In this example the PTS reference is to SN35.71-73.</p>
+<p>This table is provided to address the problem with finding a reference given in the format of the Pali Text Society (PTS). e.g. S IV43 (or S iv43). This translates to "page 43 in the fourth volume of the <b>(Pali)</b> Saṁyutta Nikāya. In this example the PTS reference is to SN35.71-73</p>
 
-<p>To use the table, the volumes of each of the nikayas are listed as hyperlinks. If your reference is for <b>iv 43</b> of the <b>Samyutta Nikaya</b> click on the iv in the top area alongside the Samyutta Nikaya. You'll be taken to the suttas in volume iv where you can scroll down till you find <b>iv 43</b> in the right hand column. Clicking anywhere in that row will take you to the sutta itself. Finding the verse in a PTS reference is the next hurdle but at least you've found the sutta from the PTS reference. (Paragraph numbers in the Pali are numbered sequentially from the beginning of the volume making it challenging to find a particular verse.)</p>
+<p>To use the table, the volumes of each of the nikayas are listed as hyperlinks. If your reference is for <b>iv 43</b> of the <b>Saṁyutta Nikāya</b> click on the iv in the top area alongside the Saṁyutta Nikāya. You'll be taken to the suttas in volume iv where you can scroll down till you find <b>iv 43</b> in the right hand column. Clicking anywhere in that row will take you to the sutta itself. Finding the verse in a PTS reference is the next hurdle but at least you've found the sutta from the PTS reference. (Paragraph numbers in the Pali are numbered sequentially from the beginning of the volume making it challenging to find a particular verse).</p>
 
 <a id="skip"></a>
 
 <table>
 	<tr>
-		<td style="width:30%">Digha Nikaya</td>
+		<td style="width:30%">Dīgha Nikāya</td>
 		<td style="width:69%"><a href="#Di" class="w3-hover-yellow">&nbsp;&nbsp;Di&nbsp;</a><a href="#Dii" class="w3-hover-yellow">&nbsp;&nbsp;Dii&nbsp;</a><a href="#Diii" class="w3-hover-yellow">&nbsp;&nbsp;Diii&nbsp;</a></td>
 	</tr>
 	<tr>
-		<td>Majjhima Nikaya</td>
+		<td>Majjhima Nikāya</td>
 		<td><a href="#Mi" class="w3-hover-yellow">&nbsp;&nbsp;Mi&nbsp;</a><a href="#Mii" class="w3-hover-yellow">&nbsp;&nbsp;Mii&nbsp;</a><a href="#Miii" class="w3-hover-yellow">&nbsp;&nbsp;Miii&nbsp;</a></td>
 	</tr>
 	<tr>
-		<td>Samyutta Nikaya</td>
+		<td>Saṁyutta Nikāya</td>
 		<td><a href="#Si" class="w3-hover-yellow">&nbsp;&nbsp;Si&nbsp;&nbsp;</a><a href="#Sii" class="w3-hover-yellow">&nbsp;&nbsp;Sii&nbsp;</a><a href="#Siii" class="w3-hover-yellow">&nbsp;&nbsp;Siii&nbsp;</a> <a href="#Siv" class="w3-hover-yellow">&nbsp;&nbsp;Siv&nbsp;</a> <a href="#Sv" class="w3-hover-yellow">&nbsp;&nbsp;Sv&nbsp;</a></td>
 	</tr>	
 	<tr>	
-		<td>Anguttara Nikaya</td>
+		<td>Aṅguttara Nikāya</td>
 		<td><a href="#Ai" class="w3-hover-yellow">&nbsp;&nbsp;Ai&nbsp;</a> <a href="#Aii" class="w3-hover-yellow">&nbsp;&nbsp;Aii&nbsp;</a><a href="#Aiii" class="w3-hover-yellow">&nbsp;&nbsp;Aiii&nbsp;</a> <a href="#Aiv" class="w3-hover-yellow">&nbsp;&nbsp;Aiv&nbsp;</a> <a href="#Av" class="w3-hover-yellow">&nbsp;&nbsp;Av&nbsp;</a></td>
 	</tr>
 	</table>
@@ -140,7 +144,7 @@
 	<table>
 	<tr>
 	<td style="width:15%; padding-left:1em;">Note:</td>
-	<td style="width:84%">&lt;…&gt; refers to PTS 1998 (Somaratne) edition of the Samyutta Nikaya vol&nbsp;1.
+	<td style="width:84%">&lt;…&gt; refers to PTS 1998 (Somaratne) edition of the Saṁyutta Nikāya vol&nbsp;1.
 	<br>[…] indicates alternative PTS numbering.</td>
 	</tr>
 	</table>
@@ -148,7 +152,7 @@
 	<p id="Di">&nbsp;</p>
 	
 	<div class="w3-responsive">
-		<table class="w3-striped suttalist">
+		<table class="suttalist">
 	<tr>
 		<th>Sutta Number&nbsp;&nbsp;</th>
 		<th>Sutta Name&nbsp;&nbsp;&nbsp;&nbsp;</th>
@@ -4737,7 +4741,7 @@
 	</tr>
 	<tr>
 	<td><a href="../sn/sn47.46.html">SN 47.46</a></td>
-	<td><a href="../sn/sn47.46.html">Pāṭimokkha</a></td>
+	<td><a href="../sn/sn47.46.html">Pātimokkha</a></td>
 	<td><a href="../sn/sn47.46.html">S v 187</a></td>
 	</tr>
 	<tr>
@@ -12428,7 +12432,7 @@
 	</tr>
 	<tr>
 	<td><a href="../an/an10.32.html"> AN 10.32</a></td>
-	<td><a href="../an/an10.32.html">Pāṭimokkhaṭṭhapana [á¹¬hapana]</a></td>
+	<td><a href="../an/an10.32.html">Pātimokkhaṭṭhapana [á¹¬hapana]</a></td>
 	<td><a href="../an/an10.32.html">A v 70</a></td>
 	</tr>
 	<tr>
@@ -13372,13 +13376,28 @@
 <footer>
  	<div class="bottomlinks">
  	<a href="../guide/guide.html"><span class="w3-bar-item"><i class="fa fa-compass"></i>&nbsp;Guide</span></a>
- 		<a href="../guide/study_guide.html"><span class="w3-bar-item"><i class="fa fa-compass"></i>&nbsp;Study&nbsp;Guide</span></a>
- 		<a href="../home/help.html"><span class="w3-bar-item"><i class="fa fa-info"></i>&nbsp;Help</span></a>
- 		<a href="../home/crossreference.html"><span class="w3-bar-item"><i class="fa fa-exchange"></i>&nbsp;Links&nbsp;Cross&nbsp;Reference</span></a>
- 		<a href="../home/copyright.html"><span class="w3-bar-item">&copy;&nbsp;Copyright</span></a>
- 		<a href="../home/contact.html"><span class="w3-bar-item"><i class="fa fa-envelope"></i>&nbsp;Contact</span></a>
- 	</div>  <!-- End bottom links -->
- </footer>
+ 	 	<a href="../home/help.html"><span class="w3-bar-item"><i class="fa fa-info"></i>&nbsp;Help</span></a>
+ 	<a href="../home/crossreference.html"><span class="w3-bar-item"><i class="fa fa-exchange"></i>&nbsp;Links&nbsp;Cross&nbsp;Reference</span></a>
+ 	<a href="../home/copyright.html"><span class="w3-bar-item">&copy;&nbsp;Copyright</span></a>
+ 	<a href="../home/contact.html"><span class="w3-bar-item"><i class="fa fa-envelope"></i>&nbsp;Contact</span></a>
+ </div>  <!-- End bottom links -->
+</footer>
+
+ 
+ <!-- Scripts -->
+
+<script>
+ // Script to turn Pali Lookup on and off
+ function togPaliLookup() {
+ 		var checkBox = document.getElementById("myCheck");
+ 		var text = document.getElementById("text");
+ 		if (checkBox.checked == true){
+ 				text.style.display = "block";
+ 					} else {
+ 							text.style.display = "none";
+ 		}
+ }
+ </script>
 
  <script>
  // Script to open and close sidebar
@@ -13395,28 +13414,29 @@
  			app.setAttribute("light-mode", "dark");
  	}
  </script>
-
+ 
  <script>
  		function toggle_light_mode() {
  			var app = document.getElementsByTagName("BODY")[0];
  				if (localStorage.lightMode == "dark") {
- 					localStorage.lightMode = "light";
- 					app.setAttribute("light-mode", "light");
- 				} else {
+ 			localStorage.lightMode = "light";
+ 			app.setAttribute("light-mode", "light");
+ 		} else {
  					localStorage.lightMode = "dark";
  					app.setAttribute("light-mode", "dark");
  	}
  		}
-
+ 
  		window.addEventListener("storage", function () {
  			if (localStorage.lightMode == "dark") {
  				app.setAttribute("light-mode", "dark");
- 			} else {
+ 				} else {
  				app.setAttribute("light-mode", "light");
  		}
  		}, false);
-
+ 
  </script>
  <script src="../js/footer.js"></script><script src="../js/dpd_deconstructor.js"></script><script src="../js/dpd_ebts.js"></script><script src="../js/dpd_i2h.js"></script>
-  </body>
+ <script src="/sw.js"></script>
+ </body>
  </html>

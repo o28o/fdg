@@ -5,6 +5,8 @@
  	<link rel="icon" type="image/x-icon" href="../images/favicon.ico">
  	<title>Sutta Nipata 3:8</title>
  	<meta name="viewport" content="width=device-width, initial-scale=1">
+		<!-- Loading manifest -->
+	<link rel="manifest" href="../manifest.json">
  	<!-- Loading third party fonts -->
  	<link href="../fonts/font-awesome.min.css" rel="stylesheet" type="text/css">
  	<!-- Loading main and menu stylesheets -->
@@ -46,7 +48,7 @@
  		<div id="navbar" class="w3-hide-small w3-hide-medium bwcontainer3">
  			<ul id="css3menu0">
  				<li class="topfirst" id="home"><a href="../home/index.html" class="w3-hide-small">Home</a></li>
-			<li class="topmenu" id="dn"><a href="../dn/dn.html" class="w3-hide-small">Dīgha Nikāya</a></li>
+ 			<li class="topmenu" id="dn"><a href="../dn/dn.html" class="w3-hide-small">Dīgha Nikāya</a></li>
  				<li class="topmenu" id="mn"><a href="../mn/mn.html" class="w3-hide-small">Majjhima Nikāya</a></li>
  				<li class="topmenu" id="sn"><a href="../sn/sn.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Saṁyutta Nikāya</a>
  					<ul>
@@ -86,8 +88,8 @@
  					<ul>
  						<li><a href="../vi/kd.html" class="w3-hide-small">Khandhaka</a></li>
  						<li><a href="../vi/bu-vb.html" class="w3-hide-small">Bhikkhu Vibhaṅga</a></li>
- 						<li><a href="../vi/bu-pt.html" class="w3-hide-small">Bhikkhu Pāṭimokkha</a></li>
- 						<li><a href="../vi/bi-pt.html" class="w3-hide-small">Bhikkhunī Pāṭimokkha</a></li>
+ 						<li><a href="../vi/bu-pt.html" class="w3-hide-small">Bhikkhu Pātimokkha</a></li>
+ 						<li><a href="../vi/bi-pt.html" class="w3-hide-small">Bhikkhunī Pātimokkha</a></li>
  						<li><a href="../vi/bi-vb.html" class="w3-hide-small">Bhikkhunī Vibhaṅga</a></li>
  					</ul>
  				</li>
@@ -100,7 +102,6 @@
  	<a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-times fa-2x red-color"></i>&nbsp;&nbsp;&nbsp;Close</a><!-- Hides the sidebar when clicked -->
  		<div class="w3-bar-block w3-white">
  			<a href="../home/index.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-home fa-lg"></i>&nbsp;&nbsp;&nbsp;Home</a>
- 			<a href="../guide/guide.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Guide</a>
  			<a href="../guide/guide.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Guide</a>
  			<a href="../dn/dn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Dīgha Nikāya</a>
  			<a href="../mn/mn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Majjhima Nikāya</a>
@@ -127,7 +128,7 @@
 	<h3>3:8 The Dart</h3>	
 	<div id="metarea"> <!-- metarea div -->
 		<ul class="translator"><!-- Translator div -->
-			<li><a href="/ru/read/?q=snp3.8">dg</a> <a href="https://suttacentral.net/snp3.8">sc</a> ©&nbsp;Translated from the Pali by Bhikkhu Bodhi</li>
+			<li><a class="dg-link" href="/r/?q=snp3.8">DG</a> <a href="https://suttacentral.net/snp3.8">SC</a> ©&nbsp;Translated from the Pali by Bhante Sujato.<a href="../home/copyright.html#sc">(More copyright information)</a></li>
 		</ul>
 	</div><!-- End metarea div -->
 
@@ -135,113 +136,147 @@
 <div lang="en">
 
 <h2>3:8 The Dart</h2>
-<p class="verse"><span class ="parno">574</span>Without a sign, unknown<br>
-is the life of mortals here &mdash;<br>
-it is difficult and short,<br>
-and conjoined with suffering. (1) [113]</p>
 
-<p class="verse"><span class ="parno">575</span>For there is no way by which<br>
-those who have been born will not die.<br>
-Death occurs also when one has reached old age:<br>
-for such is the nature of living beings. (2)</p>
+	<div class="verse">
+			<p id="p574"><span class="parno">574</span>
+			Unforeseen and unknown 
+			<br>is the extent of this mortal life—
+			<br>hard and short 
+			<br>and bound to pain. </p>
+			
+			<p id="p575"><span class="parno">575</span>
+			There is no way that 
+			<br>those born will not die. 
+			<br>On reaching old age death follows: 
+			<br>such is the nature of living creatures. </p>
+			
+			<p id="p576"><span class="parno">576</span>
+			As ripe fruit 
+			<br>are always in danger of falling, 
+			<br>so mortals once born 
+			<br>are always in danger of death. </p>
+			
+			<p id="p577"><span class="parno">577</span>
+			As clay pots 
+			<br>made by a potter 
+			<br>all end up being broken, 
+			<br>so is the life of mortals. </p>
+	</div>
 
-<p class="verse"><span class ="parno">576</span>Just as when fruits have ripened,<br>
-there is always fear of their falling; <span class="note"><span class="details"><span class="p">I accept Norman’s suggestion that we read <i>niccaṃ</i> for <i>pāto</i>. <i>Tena tāni phalāni pāto pāto niccakālaṃ patanti, nesaṃ pāto patanato bhayaṃ hoti, patanā bhayaṃ hotī ti attho</i>. Following Norman (see <span class="var" title="The Group of Discourses (see Norman 2006b)">GD</span> 270), I take <i>niccaṃ</i> to be the preferred reading. <span class="var" title="Paramatthajotikā II (Suttanipāta-aṭṭhakathā)">Pj II</span>, it seems, is trying to explain the verse on the basis of both <i>p</i><i>ā</i><i>to</i> and <i>niccaṃ</i>. <span class="var" title="Jataka-aṭṭhakathā">Ja</span> IV 127,<span class="line-numbers-in-notes">3</span> has <i>phalānamiva pakkānaṃ, niccaṃ patanato bhayaṃ</i>. The paraphrase at <span class="var" title="Jataka-aṭṭhakathā">Ja</span> IV 128,<span class="line-numbers-in-notes">6&ndash;8</span> clearly supports <i>niccaṃ</i>: <i>pakkānaṃ phalānaṃ pakkakālato paṭṭhāya “idāni vaṇṭā chijjitvā patissanti, idāni patissantī” ti patanato bhayaṃ niccaṃ dhuvaṃ ekaṃsikameva bhavati</i>.</span></span></span><br>
-so for mortals who have taken birth,<br>
-there is always fear of death. (3)</p>
+<hr>
 
-<p class="verse"><span class ="parno">577</span>Just as the clay pots<br>
-produced by a potter<br>
-all finally end up by breaking,<br>
-such is the life of mortals. (4)</p>
+	<div class="verse">
+			<p id="p578"><span class="parno">578</span>
+			Young and old, 
+			<br>foolish and wise—
+			<br>all go under the sway of death; 
+			<br>all are destined to die. </p>
+			
+			<p id="p579"><span class="parno">579</span>
+			When those overcome by death 
+			<br>leave this world for the next, 
+			<br>a father cannot protect his son, 
+			<br>nor relatives their kin. </p>
+			
+			<p id="p580"><span class="parno">580</span>
+			See how, while relatives look on, 
+			<br>wailing profusely, 
+			<br>mortals are led away one by one, 
+			<br>like a cow to the slaughter. </p>
+			
+			<p id="p581"><span class="parno">581</span>
+			And so the world is stricken 
+			<br>by old age and by death. 
+			<br>That is why the wise do not grieve, 
+			<br>for they understand the way of the world. </p>
+			
+			<p id="p582"><span class="parno">582</span>
+			For one whose path you do not know—
+			<br>not whence they came nor where they went—
+			<br>you lament in vain, 
+			<br>seeing neither end. </p>
+			
+			<p id="p583"><span class="parno">583</span>
+			If a bewildered person, 
+			<br>lamenting and self-harming, 
+			<br>could extract any good from that, 
+			<br>then those who see clearly would do the same. </p>
+	</div>
 
-<p class="verse"><span class ="parno">578</span>Both the young and the old,<br>
-both the foolish and the wise,<br>
-all go under the control of death;<br>
-all have death as their destination. (5)</p>
+<hr>
 
-<p class="verse"><span class ="parno">579</span>When those overpowered by death<br>
-are going from here to the next world,<span class="note"><span class="details"><span class="p">I adopt the variant <i>paralokito</i>, divided as <i>paralok’ito</i>, following Norman at <span class="var" title="The Group of Discourses (see Norman 2006b)">GD</span> 73.</span></span></span><br>
-the father cannot protect his son,<br>
-nor can one protect one’s relatives. (6)</p>
+	<div class="verse">
+			<p id="p584"><span class="parno">584</span>
+			For not by weeping and wailing 
+			<br>will you find peace of heart. 
+			<br>It just gives rise to more suffering, 
+			<br>and distresses your body. </p>
+			
+			<p id="p585"><span class="parno">585</span>
+			Growing thin and pale, 
+			<br>you hurt yourself. 
+			<br>It does nothing to help the dead: 
+			<br>your lamentation is in vain. </p>
+			
+			<p id="p586"><span class="parno">586</span>
+			Unless a person gives up grief, 
+			<br>they fall into suffering all the more. 
+			<br>Bewailing those whose time has come, 
+			<br>you fall under the sway of grief. </p>
+			
+			<p id="p587"><span class="parno">587</span>
+			See, too, other folk departing 
+			<br>to fare after their deeds; 
+			<br>fallen under the sway of death, 
+			<br>beings flounder while still here. </p>
+			
+			<p id="p588"><span class="parno">588</span>
+			For whatever you imagine it is, 
+			<br>it turns out to be something else. 
+			<br>Such is separation: 
+			<br>see the way of the world! </p>
+			
+			<p id="p589"><span class="parno">589</span>
+			Even if a human lives 
+			<br>a hundred years or more, 
+			<br>they are parted from their family circle, 
+			<br>they leave this life behind. </p>
+	</div>
 
-<p class="verse"><span class ="parno">580</span>Even as the relatives are looking on<br>
-and wailing profusely,<br>
-see how each of the mortals is led away<br>
-like a cow to be slaughtered. (7)</p>
+<hr>
 
-<p class="verse"><span class ="parno">581</span>Thus the world is stricken<br>
-by death and by old age;<br>
-therefore the wise do not sorrow,<br>
-having understood the way of the world. (8)</p>
-
-<p class="verse"><span class ="parno">582</span>You who do not know the path<br>
-by which he has come or gone,<br>
-not perceiving either end,<br>
-yet lament without purpose. (9)</p>
-
-<p class="verse"><span class ="parno">583</span>If while he is lamenting,<br>
-a bewildered person, injuring himself,<br>
-could derive some benefit,<br>
-a wise person too would do the same. (10)</p>
-
-<p class="verse"><span class ="parno">584</span>It is not by weeping or sorrowing<br>
-that one attains peace of mind.<br>
-One’s suffering arises still more<br>
-and one’s body is harmed. (11) [114]</p>
-
-
-<p class="verse"><span class ="parno">585</span>One becomes thin and pale,<br>
-and one inflicts injury upon oneself.<br>
-The departed are not thereby sustained;<br>
-thus lamentation is useless. (12)</p>
-
-<p class="verse"><span class ="parno">586</span>Without abandoning sorrow,<br>
-a person incurs still more suffering.<br>
-Bemoaning the one who has died,<br>
-one comes under the control of sorrow. (13)</p>
-
-<p class="verse"><span class ="parno">587</span>>Behold others, too, about to depart,<br>
-people who fare according to their kamma:<br>
-living beings just trembling here,<br>
-having come under the control of death. (14)</p>
-
-<p class="verse"><span class ="parno">588</span>In whatever way they conceive it,<br>
-it turns out otherwise.<br>
-Such is separation:<br>
-see the way of the world! (15)</p>
-
-<p class="verse"><span class ="parno">589</span>Even if a person were to live<br>
-for a hundred years or longer,<br>
-there is separation from one’s group of relatives<br>
-when one abandons life here. (16)</p>
-
-<p class="verse"><span class ="parno">590</span>Therefore, having heard it from the arahant,<br>
-one should stop lamentation.<br>
-Having seen that he has departed and died,<br>
-realize, “I cannot [bring the dead back to life].”<span class="note"><span class="details"><span class="p">Literally “It is not possible for me.” I add the phrase in brackets based on <span class="var" title="Paramatthajotikā II (Suttanipāta-aṭṭhakathā)">Pj II</span>.</span></span></span> (17)</p>
-
-<p class="verse"><span class ="parno">591</span>Just as, if one’s shelter were blazing,<br>
-one would extinguish the fire with water,<br>
-so too a sensible person &mdash;<br>
-wise, learned, skilled &mdash;<br>
-would quickly blow away arisen sorrow,<br>
-as the wind does a tuft of cotton wool. (18)</p>
-
-<p class="verse"><span class ="parno">592</span>[Blow away] lamentation and muttering,<br>
-and one’s own dejection:<br>
-seeking happiness for oneself,<br>
-one should draw out the dart from oneself. (19)</p>
-
-<p class="verse"><span class ="parno">593</span>With the dart drawn out, unattached,<br>
-having attained peace of mind,<br>
-having overcome all sorrow,<br>
-sorrowless, one is quenched. (20) [115]</p>
+<div class="verse">
+			<p id="p590"><span class="parno">590</span>
+			Therefore, having learned from the Perfected One, 
+			<br>dispel lamentation. 
+			<br>Seeing the dead and departed, think: 
+			<br>“I cannot escape this.” </p>
+			
+			<p id="p591"><span class="parno">591</span>
+			As one would extinguish 
+			<br>a blazing refuge with water, 
+			<br>so too a sage—a wise, 
+			<br>astute, and skilled person—
+			<br>would swiftly blow away grief that comes up, 
+			<br>like the wind a tuft of cotton. </p>
+			
+			<p id="p592"><span class="parno">592</span>
+			One who seeks their own happiness 
+			<br>would pluck out the dart from themselves—
+			<br>the wailing and moaning, 
+			<br>and sadness inside. </p>
+			
+			<p id="p593"><span class="parno">593</span>
+			With dart plucked out, unattached, 
+			<br>having found peace of mind, 
+			<br>overcoming all sorrow, 
+			<br>one is sorrowless and extinguished. </p>
+	</div>
 </div>
 
 <div lang="pi">
 <h2>Sallasutta</h2>
-
+<div class="verse">
 <p><span class="parno">574</span>Animittamanaññātaṁ,<br> maccānaṁ idha jīvitaṁ;
 <br>Kasirañca parittañca,
 <br>tañca dukkhena saṁyutaṁ.</p>
@@ -261,6 +296,9 @@ Yathāpi kumbhakārassa,<br> katā mattikabhājanā;
 <br>Sabbe bhedanapariyantā,
 <br>evaṁ maccāna jīvitaṁ.</p>
 
+</div>
+<hr>
+<div class="verse">
 <p><span class="parno">578</span><a class="brnum" id="br5"></a>
 Daharā ca mahantā ca,<br> ye bālā ye ca paṇḍitā;
 <br>Sabbe maccuvasaṁ yanti,
@@ -291,6 +329,9 @@ Paridevayamāno ce,<br> Kiñcidatthaṁ udabbahe;
 <br>Sammūḷho hiṁsamattānaṁ,
 <br>Kayirā ce naṁ vicakkhaṇo.</p>
 
+</div>
+<hr>
+<div class="verse">
 <p><span class="parno">584</span><a class="brnum" id="br11"></a>
 Na hi ruṇṇena sokena,<br> Santiṁ pappoti cetaso;
 <br>Bhiyyassuppajjate dukkhaṁ,
@@ -321,6 +362,9 @@ Api vassasataṁ jīve,<br> Bhiyyo vā pana māṇavo;
 <br>Ñātisaṅghā vinā hoti,
 <br>Jahāti idha jīvitaṁ.</p>
 
+</div>
+<hr>
+<div class="verse">
 <p><span class="parno">590</span><a class="brnum" id="br17"></a>
 Tasmā arahato sutvā,<br> Vineyya paridevitaṁ;
 <br>Petaṁ kālaṅkataṁ disvā,
@@ -341,7 +385,7 @@ Paridevaṁ pajappañca,<br> Domanassañca attano;
 <p><span class="parno">593</span>Abbūḷhasallo asito,<br> santiṁ pappuyya cetaso;
 <br>Sabbasokaṁ atikkanto,
 <br>asoko hoti nibbutoti.</p>
-
+</div>
 <p class="endsection">Sallasuttaṁ aṭṭhamaṁ.</p>
 
 </div>
@@ -420,5 +464,6 @@ Paridevaṁ pajappañca,<br> Domanassañca attano;
  </script>
  <script src="../js/footer.js"></script><script src="../js/dpd_deconstructor.js"></script><script src="../js/dpd_ebts.js"></script><script src="../js/dpd_i2h.js"></script>
  <script src="/sw.js"></script>
+<script>document.addEventListener("click",e=>{if(e.target.closest("a.dg-link")){e.preventDefault();const s=new URLSearchParams(window.location.search).get("s");window.location.href=e.target.closest("a").href+(s?`&s=${encodeURIComponent(s)}`:"");}})</script>
  </body>
  </html>

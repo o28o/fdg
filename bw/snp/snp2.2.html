@@ -5,6 +5,8 @@
  	<link rel="icon" type="image/x-icon" href="../images/favicon.ico">
  	<title>Sutta Nipata 2.2</title>
  	<meta name="viewport" content="width=device-width, initial-scale=1">
+		<!-- Loading manifest -->
+	<link rel="manifest" href="../manifest.json">
  	<!-- Loading third party fonts -->
  	<link href="../fonts/font-awesome.min.css" rel="stylesheet" type="text/css">
  	<!-- Loading main and menu stylesheets -->
@@ -46,7 +48,7 @@
  		<div id="navbar" class="w3-hide-small w3-hide-medium bwcontainer3">
  			<ul id="css3menu0">
  				<li class="topfirst" id="home"><a href="../home/index.html" class="w3-hide-small">Home</a></li>
-			<li class="topmenu" id="dn"><a href="../dn/dn.html" class="w3-hide-small">Dīgha Nikāya</a></li>
+ 			<li class="topmenu" id="dn"><a href="../dn/dn.html" class="w3-hide-small">Dīgha Nikāya</a></li>
  				<li class="topmenu" id="mn"><a href="../mn/mn.html" class="w3-hide-small">Majjhima Nikāya</a></li>
  				<li class="topmenu" id="sn"><a href="../sn/sn.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Saṁyutta Nikāya</a>
  					<ul>
@@ -86,8 +88,8 @@
  					<ul>
  						<li><a href="../vi/kd.html" class="w3-hide-small">Khandhaka</a></li>
  						<li><a href="../vi/bu-vb.html" class="w3-hide-small">Bhikkhu Vibhaṅga</a></li>
- 						<li><a href="../vi/bu-pt.html" class="w3-hide-small">Bhikkhu Pāṭimokkha</a></li>
- 						<li><a href="../vi/bi-pt.html" class="w3-hide-small">Bhikkhunī Pāṭimokkha</a></li>
+ 						<li><a href="../vi/bu-pt.html" class="w3-hide-small">Bhikkhu Pātimokkha</a></li>
+ 						<li><a href="../vi/bi-pt.html" class="w3-hide-small">Bhikkhunī Pātimokkha</a></li>
  						<li><a href="../vi/bi-vb.html" class="w3-hide-small">Bhikkhunī Vibhaṅga</a></li>
  					</ul>
  				</li>
@@ -100,7 +102,6 @@
  	<a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-times fa-2x red-color"></i>&nbsp;&nbsp;&nbsp;Close</a><!-- Hides the sidebar when clicked -->
  		<div class="w3-bar-block w3-white">
  			<a href="../home/index.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-home fa-lg"></i>&nbsp;&nbsp;&nbsp;Home</a>
- 			<a href="../guide/guide.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Guide</a>
  			<a href="../guide/guide.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Guide</a>
  			<a href="../dn/dn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Dīgha Nikāya</a>
  			<a href="../mn/mn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Majjhima Nikāya</a>
@@ -127,7 +128,7 @@
 	<h3>2:2 Carrion</h3>	
 	<div id="metarea"> <!-- metarea div -->
 		<ul class="translator"><!-- Translator div -->
-			<li><a href="/ru/read/?q=snp2.2">dg</a> <a href="https://suttacentral.net/snp2.2">sc</a> ©&nbsp;Translated from the Pali by Bhikkhu Bodhi</li>
+			<li><a class="dg-link" href="/r/?q=snp2.2">DG</a> <a href="https://suttacentral.net/snp2.2">SC</a> ©&nbsp;Translated from the Pali by Bhante Sujato.<a href="../home/copyright.html#sc">(More copyright information)</a></li>
 		</ul>
 	</div><!-- End metarea div -->
 
@@ -136,172 +137,221 @@
 
 <h2>2:2 Carrion</h2>
 
-<p><strong>[The brahmin Tissa:]</strong></p>
+<p><span class="speaker">Question</span></p>
 
+<div class="verse">
+			<p id="p239"><span class="parno">239</span>
+			“The good eat properly obtained 
+			<br>millet, wild grains, broomcorn, 
+			<br>greens, tubers, and squashes. 
+			<br>They don’t lie to get what they want. </p>
+			
+			<p id="p240"><span class="parno">240</span>
+			But when you eat delicious food, 
+			<br>nicely cooked and prepared, and offered by others, 
+			<br>enjoying a dish of fine rice, 
+			<br>Kassapa, you eat putrefaction. </p>
+			
+			<p id="p241"><span class="parno">241</span>
+			‘Putrefaction is not appropriate for me’—
+			<br>so you said, kinsman of Brahmā. 
+			<br>Yet here you are enjoying a dish of fine rice, 
+			<br>nicely cooked with the flesh of fowl. 
+			<br>I’m asking you this, Kassapa: 
+			<br>what do you take to be putrefaction?” </p>
+</div>
 
-<p class="verse"><span class ="parno">239</span>“Wild millet, grains from grasses, highland pulses,<br>
-green leaves, tubers, and squashes:<br>
-eating these, righteously obtained, the good<br>
-do not speak lies, desiring sensual pleasures. (1)</p>
+<hr>
 
-<p class="verse"><span class ="parno">240</span>“But eating food well prepared, well flavored,<br>
-given by others, presented with respect, delicious, [43]<br>
-enjoying a dish of fine rice,<br>
-you eat <span class="note"><span class="details"><span class="p">I read <i>bhu</i><i>ñj</i><i>asi</i>/<i>bhu</i><i>ñ</i><i>jas</i><i>ī</i> <span>with <span class="var" title="Burmese-script edition">Be</span> and the lemma in all three editions of <span class="var" title="Paramatthajotikā II (Suttanipāta-aṭṭhakathā)">Pj II</span>, as against <span class="var" title="Sinhala-script edition">Ce</span> and <span class="var" title="Roman-script edition">Ee</span></span> <i>bhu</i><i>ñ</i><i>jat</i><i>ī</i><span>.</span></span></span></span> carrion, O Kassapa! (2)</p>
+<p><span class="speaker">Answer</span></p>
 
-<p class="verse"><span class ="parno">241</span>“You said, O kinsman of Brahmā,<br>
-‘Carrion is not proper for me,’<br>
-yet you are enjoying a dish of fine rice,<br>
-well prepared with the flesh of fowl.<br>
-I ask you about this matter, Kassapa:<br>
-what do you take to be carrion?” (3)</p>
+<div class="verse">
+			<p id="p242"><span class="parno">242</span>
+			“Killing creatures, mutilation, murder, abduction; 
+			<br>stealing, lying, cheating and fraud, 
+			<br>learning crooked spells, adultery: 
+			<br>this is putrefaction, not eating meat. </p>
+			
+			<p id="p243"><span class="parno">243</span>
+			People here with unbridled sensuality, 
+			<br>greedy for tastes, mixed up in impurity, 
+			<br>nihilists, immoral, intractable: 
+			<br>this is putrefaction, not eating meat. </p>
+			
+			<p id="p244"><span class="parno">244</span>
+			Brutal and rough backbiters, 
+			<br>pitiless and arrogant betrayers of friends, 
+			<br>misers who never give anything: 
+			<br>this is putrefaction, not eating meat. </p>
+			
+			<p id="p245"><span class="parno">245</span>
+			Anger, vanity, obstinacy, contrariness, 
+			<br>deceit, jealousy, boastfulness, 
+			<br>haughtiness, wicked associates: 
+			<br>this is putrefaction, not eating meat. </p>
+			
+			<p id="p246"><span class="parno">246</span>
+			The ill-behaved, debt-evaders, slanderers, 
+			<br>business cheats and con-artists, 
+			<br>vile men committing depravity: 
+			<br>this is putrefaction, not eating meat. </p>
+</div>
 
-<p><strong>[The Buddha Kassapa:]</strong></p>
+<hr>
 
+<div class="verse">
+			<p id="p247"><span class="parno">247</span>
+			People here who can’t stop harming living creatures, 
+			<br>taking from others, intent on hurting, 
+			<br>immoral, cruel, harsh, lacking regard for others: 
+			<br>this is putrefaction, not eating meat. </p>
+			
+			<p id="p248"><span class="parno">248</span>
+			Greedy, hostile, aggressive to others, 
+			<br>and addicted to evil—those beings pass into darkness, 
+			<br>falling headlong into hell: 
+			<br>this is putrefaction, not eating meat. </p>
+			
+			<p id="p249"><span class="parno">249</span>
+			Not fish or flesh or fasting, 
+			<br>being naked or shaven, or dreadlocks or dirt, 
+			<br>not rough hides or serving the sacred flame, 
+			<br>or the many austerities in the world aimed at immortality, 
+			<br>not hymns or oblations, sacrifices or seasonal observances, 
+			<br>will cleanse a mortal not free of doubt. </p>
+</div>
 
-<p class="verse"><span class ="parno">242</span>“Destruction of life, beating, mutilating, binding;<br>
-theft, false speech, fraudulence and cheating,<br>
-studying useless subjects, resorting to the wives of others:<br>
-this is carrion, but not the eating of meat. (4)</p>
+<hr>
 
-<p class="verse"><span class ="parno">243</span>“People here uncontrolled in sensual pleasures,<br>
-greedy for tastes, mixed up with impurity,<br>
-who hold the nihilist view, warped, stubborn:<br>
-this is carrion, but not the eating of meat. (5)</p>
+<div class="verse">
+			<p id="p250"><span class="parno">250</span>
+Guarding the streams of sense impressions, wander with faculties conquered, 
+<br>standing on the teaching, delighting in sincerity and gentleness. 
+<br>The wise have escaped their chains and given up all pain; 
+<br>they don’t cling to the seen and the heard.” </p>
+</div>
 
-<p class="verse"><span class ="parno">244</span>“Those who are rough, violent, backbiters,<br>
-betrayers of friends, cruel-hearted, arrogant,<br>
-miserly, who do not give to anyone:<br>
-this is carrion, but not the eating of meat. (6) [44]</p>
+<hr>
+<p><span class="speaker">Narrator</span></p>
+<div class="verse">
+			<p id="p251"><span class="parno">251</span>
+			The Buddha explained this matter to him again and again, 
+			<br>until the master of hymns understood it. 
+			<br>It was illustrated with colorful verses 
+			<br>by the sage free of putrefaction, unattached, hard to trace. </p>
+</div>
 
-
-<p class="verse"><span class ="parno">245</span>“Anger, vanity, obstinacy, recalcitrance,<br>
-hypocrisy, envy, and boastfulness,<br>
-haughtiness, and intimacy with the bad:<br>
-this is carrion, but not the eating of meat. (7)</p>
-
-<p class="verse"><span class ="parno">246</span>“Those ill behaved, debt-evaders, slanderers,<br>
-crooked in their dealings, dissemblers here;<br>
-vile men who here commit wicked deeds:<br>
-this is carrion, but not the eating of meat. (8)</p>
-
-<p class="verse"><span class ="parno">247</span>“Those people here uncontrolled toward living beings,<br>
-who steal from others, intent on inflicting harm,<br>
-immoral, cruel, harsh, disrespectful:<br>
-this is carrion, but not the eating of meat. (9)</p>
-
-<p class="verse"><span class ="parno">248</span>“Those who are greedy toward these, hostile, transgressors,<br>
-ever intent, who are heading for darkness after death,<br>
-beings who fall head first into hell:<br>
-this is carrion, but not the eating of meat. (10)</p>
-
-
-<p class="verse"><span class ="parno">249</span>“Neither [avoiding] fish and meat nor fasting,<br>
-nor nakedness, a shaven head, matted locks, dirt, or rough antelope hides,<br>
-nor tending the sacrificial fire,<br>
-or the many austerities in the world aimed at immortality,<br>
-sacred hymns, oblations, sacrifices, and seasonal penances,<br>
-purify a mortal who has not overcome doubt. (11) [45]</p>
-
-
-<p class="verse"><span class ="parno">250</span>“One guarded over the sense doors<br>
-should live with sense faculties understood,<span class="note"><span class="details"><span class="p">Reading <i>viditindriyo</i> with <span class="var" title="Burmese-script edition">Be</span> and <span class="var" title="Sinhala-script edition">Ce</span> and all three editions of <span class="var" title="Paramatthajotikā II (Suttanipāta-aṭṭhakathā)">Pj II</span>, as against <span class="var" title="Roman-script edition">Ee</span> <i>vijitindriyo</i>. While <i>vijitindriyo</i> makes better sense, the gloss by <span class="var" title="Paramatthajotikā II (Suttanipāta-aṭṭhakathā)">Pj II</span>, <i>ñātapariññāya chaḷindriyāni viditvā pākaṭāni katvā careyya</i><span>, confirms that the commentator read</span> <i>viditindriyo</i>.</span></span></span><br>
-firm in Dhamma, delighting in honesty and mildness.<br>
-A wise one who has overcome the ties,<br>
-who has abandoned all suffering,<br>
-is not tainted by things seen and heard.” (12)</p>
-
-
-<p class="verse"><span class ="parno">251</span>Thus the Blessed One repeatedly explained this matter;<br>
-the master of the sacred hymns understood it.<br>
-The muni, free of carrion, unattached, hard to lead,<br>
-elucidated it with variegated verses. (13)</p>
-
-
-<p class="verse"><span class ="parno">252</span>Having heard the Buddha’s well-spoken word,<br>
-which was free of carrion, dispelling all suffering,<br>
-humble in mind [Tissa] venerated the Tathāgata,<br>
-and right there declared he would go forth. (14)</p>
+<hr>
+<p><span class="speaker">Narrator</span></p>
+<div class="verse">			
+			<p id="p252"><span class="parno">252</span>
+			Having heard the fine words of the Buddha, 
+			<br>that are free of putrefaction, getting rid of all suffering; 
+			<br>humbled, he bowed to the Realized One, 
+			<br>and right away begged to go forth. </p>
+			</div>
 </div>
 
 <div lang="pi">
 <h2>Āmagandhasutta</h2>
 
-<p class="verse">&nbsp;&nbsp;<br>
-<span class="parno">239</span>"Sāmākaciṅgūlakacīnakāni ca,<br> Pattapphalaṁ mūlaphalaṁ gavipphalaṁ;
+<p></p>
+
+<div class="verse">
+<p>&nbsp;</p>
+<p><span class="parno">239</span>"Sāmākaciṅgūlakacīnakāni ca,<br> Pattapphalaṁ mūlaphalaṁ gavipphalaṁ;
 <br>Dhammena laddhaṁ satamasnamānā,
 <br>Na kāmakāmā alikaṁ bhaṇanti.</p>
 
-<p class="verse"><span class="parno">240</span><a class="brnum" id="br2"></a>
+<p><span class="parno">240</span><a class="brnum" id="br2"></a>
 Yadasnamāno sukataṁ suniṭṭhitaṁ,<br> Parehi dinnaṁ payataṁ paṇītaṁ;
 <br>Sālīnamannaṁ paribhuñjamāno,
 <br>So bhuñjasī kassapa āmagandhaṁ.</p>
 
-<p class="verse"><span class="parno">241</span><a class="brnum" id="br3"></a>
+<p><span class="parno">241</span><a class="brnum" id="br3"></a>
 Na āmagandho mama kappatīti,<br> Icceva tvaṁ bhāsasi brahmabandhu;
 <br>Sālīnamannaṁ paribhuñjamāno,
 <br>Sakuntamaṁsehi susaṅkhatehi;
 <br>Pucchāmi taṁ kassapa etamatthaṁ,
 <br>Kathaṁpakāro tava āmagandho".</p>
+</div>
 
+<hr>
 
-<p class="verse"><span class="parno">242</span><a class="brnum" id="br4"></a>
-"Pāṇātipāto vadhachedabandhanaṁ,<br> Theyyaṁ musāvādo nikativañcanāni ca;
-<br>Ajjhenakuttaṁ paradārasevanā,
-<br>Esāmagandho na hi maṁsabhojanaṁ.</p>
+<div class="verse">
+			<p>&nbsp;</p>
+			<p><span class="parno">242</span><a class="brnum" id="br4"></a>
+			"Pāṇātipāto vadhachedabandhanaṁ,<br> Theyyaṁ musāvādo nikativañcanāni ca;
+			<br>Ajjhenakuttaṁ paradārasevanā,
+			<br>Esāmagandho na hi maṁsabhojanaṁ.</p>
+			
+			<p><span class="parno">243</span><a class="brnum" id="br5"></a>
+			Ye idha kāmesu asaññatā janā,<br> Rasesu giddhā asucibhāvamassitā;
+			<br>Natthikadiṭṭhī visamā durannayā,
+			<br>Esāmagandho na hi maṁsabhojanaṁ.</p>
+			
+			<p><span class="parno">244</span><a class="brnum" id="br6"></a>
+			Ye lūkhasā dāruṇā piṭṭhimaṁsikā,<br> Mittadduno nikkaruṇātimānino;
+			<br>Adānasīlā na ca denti kassaci,
+			<br>Esāmagandho na hi maṁsabhojanaṁ.</p>
+			
+			<p><span class="parno">245</span><a class="brnum" id="br7"></a>
+			Kodho mado thambho paccupaṭṭhāpanā,<br> Māyā usūyā bhassasamussayo ca;
+			<br>Mānātimāno ca asabbhi santhavo,
+			<br>Esāmagandho na hi maṁsabhojanaṁ.</p>
+			
+			<p><span class="parno">246</span><a class="brnum" id="br8"></a>
+			Ye pāpasīlā iṇaghātasūcakā,<br> Vohārakūṭā idha pāṭirūpikā;
+			<br>Narādhamā yedha karonti kibbisaṁ,
+			<br>Esāmagandho na hi maṁsabhojanaṁ.</p>
+</div>
 
-<p class="verse"><span class="parno">243</span><a class="brnum" id="br5"></a>
-Ye idha kāmesu asaññatā janā,<br> Rasesu giddhā asucibhāvamassitā;
-<br>Natthikadiṭṭhī visamā durannayā,
-<br>Esāmagandho na hi maṁsabhojanaṁ.</p>
+<hr>
 
-<p class="verse"><span class="parno">244</span><a class="brnum" id="br6"></a>
-Ye lūkhasā dāruṇā piṭṭhimaṁsikā,<br> Mittadduno nikkaruṇātimānino;
-<br>Adānasīlā na ca denti kassaci,
-<br>Esāmagandho na hi maṁsabhojanaṁ.</p>
-
-<p class="verse"><span class="parno">245</span><a class="brnum" id="br7"></a>
-Kodho mado thambho paccupaṭṭhāpanā,<br> Māyā usūyā bhassasamussayo ca;
-<br>Mānātimāno ca asabbhi santhavo,
-<br>Esāmagandho na hi maṁsabhojanaṁ.</p>
-
-<p class="verse"><span class="parno">246</span><a class="brnum" id="br8"></a>
-Ye pāpasīlā iṇaghātasūcakā,<br> Vohārakūṭā idha pāṭirūpikā;
-<br>Narādhamā yedha karonti kibbisaṁ,
-<br>Esāmagandho na hi maṁsabhojanaṁ.</p>
-
-<p class="verse"><span class="parno">247</span><a class="brnum" id="br9"></a>
-Ye idha pāṇesu asaññatā janā,<br> Paresamādāya vihesamuyyutā;
-<br>Dussīlaluddā pharusā anādarā,
-<br>Esāmagandho na hi maṁsabhojanaṁ.</p>
-
-<p class="verse"><span class="parno">248</span><a class="brnum" id="br10"></a>
-Etesu giddhā viruddhātipātino,<br> Niccuyyutā pecca tamaṁ vajanti ye;
-<br>Patanti sattā nirayaṁ avaṁsirā,
-<br>Esāmagandho na hi maṁsabhojanaṁ.</p>
-
-<p class="verse"><span class="parno">249</span><a class="brnum" id="br11"></a>
-Na macchamaṁsānamanāsakattaṁ,<br> Na naggiyaṁ na muṇḍiyaṁ jaṭājallaṁ;
-<br>Kharājināni nāggihuttassupasevanā,
-<br>Ye vāpi loke amarā bahū tapā;
-<br>Mantāhutī yaññamutūpasevanā,
-<br>Sodhenti maccaṁ avitiṇṇakaṅkhaṁ.</p>
-
-<p class="verse"><span class="parno">250</span><a class="brnum" id="br12"></a>
+<div class="verse">
+			<p><span class="parno">247</span><a class="brnum" id="br9"></a>
+			Ye idha pāṇesu asaññatā janā,<br> Paresamādāya vihesamuyyutā;
+			<br>Dussīlaluddā pharusā anādarā,
+			<br>Esāmagandho na hi maṁsabhojanaṁ.</p>
+			
+			<p><span class="parno">248</span><a class="brnum" id="br10"></a>
+			Etesu giddhā viruddhātipātino,<br> Niccuyyutā pecca tamaṁ vajanti ye;
+			<br>Patanti sattā nirayaṁ avaṁsirā,
+			<br>Esāmagandho na hi maṁsabhojanaṁ.</p>
+			
+			<p><span class="parno">249</span><a class="brnum" id="br11"></a>
+			Na macchamaṁsānamanāsakattaṁ,<br> Na naggiyaṁ na muṇḍiyaṁ jaṭājallaṁ;
+			<br>Kharājināni nāggihuttassupasevanā,
+			<br>Ye vāpi loke amarā bahū tapā;
+			<br>Mantāhutī yaññamutūpasevanā,
+			<br>Sodhenti maccaṁ avitiṇṇakaṅkhaṁ.</p>
+</div>
+<hr>
+<div class="verse">
+<p><span class="parno">250</span><a class="brnum" id="br12"></a>
 Sotesu gutto viditindriyo care,<br> Dhamme ṭhito ajjavamaddave rato;
 <br>Saṅgātigo sabbadukkhappahīno,
 <br>Na lippati diṭṭhasutesu dhīro".</p>
+</div>
 
-<p class="verse"><span class="parno">251</span><a class="brnum" id="br13"></a>
-Iccetamatthaṁ bhagavā punappunaṁ,<br> Akkhāsi naṁ vedayi mantapāragū;
-<br>Citrāhi gāthāhi munī pakāsayi,
-<br>Nirāmagandho asito durannayo.</p>
+<hr>
 
-<p class="verse"><span class="parno">252</span><a class="brnum" id="br14"></a>
-Sutvāna buddhassa subhāsitaṁ padaṁ,<br> Nirāmagandhaṁ sabbadukkhappanūdanaṁ;
-<br>Nīcamano vandi tathāgatassa,
-<br>Tattheva pabbajjamarocayitthāti.</p>
+<div class="verse">
+			<p>&nbsp;</p>
+			<p><span class="parno">251</span><a class="brnum" id="br13"></a>
+			Iccetamatthaṁ bhagavā punappunaṁ,<br> Akkhāsi naṁ vedayi mantapāragū;
+			<br>Citrāhi gāthāhi munī pakāsayi,
+			<br>Nirāmagandho asito durannayo.</p>
+			</div>
 
+<hr>
+<p>&nbsp;</p>
+<div class="verse">
+			<p><span class="parno">252</span><a class="brnum" id="br14"></a>
+			Sutvāna buddhassa subhāsitaṁ padaṁ,<br> Nirāmagandhaṁ sabbadukkhappanūdanaṁ;
+			<br>Nīcamano vandi tathāgatassa,
+			<br>Tattheva pabbajjamarocayitthāti.</p>
+</div>
 <p class="endsection">Āmagandhasuttaṁ dutiyaṁ.</p>
 
 </div>
@@ -380,5 +430,6 @@ Sutvāna buddhassa subhāsitaṁ padaṁ,<br> Nirāmagandhaṁ sabbadukkhappanū
  </script>
  <script src="../js/footer.js"></script><script src="../js/dpd_deconstructor.js"></script><script src="../js/dpd_ebts.js"></script><script src="../js/dpd_i2h.js"></script>
  <script src="/sw.js"></script>
+<script>document.addEventListener("click",e=>{if(e.target.closest("a.dg-link")){e.preventDefault();const s=new URLSearchParams(window.location.search).get("s");window.location.href=e.target.closest("a").href+(s?`&s=${encodeURIComponent(s)}`:"");}})</script>
  </body>
  </html>

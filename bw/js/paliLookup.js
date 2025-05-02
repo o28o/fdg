@@ -1,1 +1,0 @@
-../../assets/js/paliLookup.js

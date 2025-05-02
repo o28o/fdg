@@ -5,6 +5,8 @@
  	<link rel="icon" type="image/x-icon" href="../images/favicon.ico">
  	<title>Majjhima Nikāya 20</title>
  	<meta name="viewport" content="width=device-width, initial-scale=1">
+		<!-- Loading manifest -->
+	<link rel="manifest" href="../manifest.json">
  	<!-- Loading third party fonts -->
  	<link href="../fonts/font-awesome.min.css" rel="stylesheet" type="text/css">
  	<!-- Loading main and menu stylesheets -->
@@ -42,7 +44,7 @@
  		<div id="navbar" class="w3-hide-small w3-hide-medium bwcontainer3">
  			<ul id="css3menu0">
  				<li class="topfirst" id="home"><a href="../home/index.html" class="w3-hide-small">Home</a></li>
-			<li class="topmenu" id="dn"><a href="../dn/dn.html" class="w3-hide-small">Dīgha Nikāya</a></li>
+ 			<li class="topmenu" id="dn"><a href="../dn/dn.html" class="w3-hide-small">Dīgha Nikāya</a></li>
  				<li class="topmenu" id="mn"><a href="../mn/mn.html" class="pressed w3-hide-small">Majjhima Nikāya</a></li>
  				<li class="topmenu" id="sn"><a href="../sn/sn.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Saṁyutta Nikāya</a>
  					<ul>
@@ -82,8 +84,8 @@
  					<ul>
  						<li><a href="../vi/kd.html" class="w3-hide-small">Khandhaka</a></li>
  						<li><a href="../vi/bu-vb.html" class="w3-hide-small">Bhikkhu Vibhaṅga</a></li>
- 						<li><a href="../vi/bu-pt.html" class="w3-hide-small">Bhikkhu Pāṭimokkha</a></li>
- 						<li><a href="../vi/bi-pt.html" class="w3-hide-small">Bhikkhunī Pāṭimokkha</a></li>
+ 						<li><a href="../vi/bu-pt.html" class="w3-hide-small">Bhikkhu Pātimokkha</a></li>
+ 						<li><a href="../vi/bi-pt.html" class="w3-hide-small">Bhikkhunī Pātimokkha</a></li>
  						<li><a href="../vi/bi-vb.html" class="w3-hide-small">Bhikkhunī Vibhaṅga</a></li>
  					</ul>
  				</li>
@@ -96,7 +98,6 @@
  	<a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-times fa-2x red-color"></i>&nbsp;&nbsp;&nbsp;Close</a><!-- Hides the sidebar when clicked -->
  		<div class="w3-bar-block w3-white">
  			<a href="../home/index.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-home fa-lg"></i>&nbsp;&nbsp;&nbsp;Home</a>
- 			
  			<a href="../guide/guide.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Guide</a>
  			<a href="../dn/dn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Dīgha Nikāya</a>
  			<a href="../mn/mn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Majjhima Nikāya</a>
@@ -106,73 +107,85 @@
  			<a href="../vi/vi.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Vinaya Piṭaka</a>
  		</div>
  </nav>
- 
- 
- 
-<!-- !PAGE DIV! --> <!-- Div for page content --> 
+
+ <!-- !PAGE CONTENT! --> 
 <div class="w3-main w3-content w3-padding w3-left-align bwcontainer4">
 
 <h2>Majjhima Nikāya</h2>
 
 <div id="content">
 
-<h2>MN20: Vitakkasaṇṭhāna Sutta - The Removal of Distracting Thoughts</h2>
+<h3>MN20: Vitakkasaṇṭhāna Sutta — How to Stop Thinking</h3>
 
 <div id="metaarea">
 	<ul class="translator">
-		<li><a href="/ru/read/?q=mn20">dg</a> <a href="https://suttacentral.net/mn20">sc</a> &copy;&nbsp;Translated from the Pali by Bhikkhu Ñanamoli and Bhikkhu Bodhi.&nbsp;<a href="../home/copyright.html#mn">(More copyright information)</a></li>
+		<li><a class="dg-link" href="/r/?q=mn20">DG</a> <a href="https://suttacentral.net/mn20">SC</a> ©&nbsp;Translated from the Pali by Bhante Sujato.&nbsp;<a href="../home/copyright.html#sc">(More copyright information)</a>
 	</ul>
 </div>
 
-<section class="raw_sutta">  <!-- English and Pali -->
+<section class="raw_sutta">
 <div lang="en">
 
-<p id="p1"><span class="parno">1</span>Thus have I heard. On one occasion the Blessed One was living at Sāvatthī in Jeta's Grove, Anāthapiṇḍika's Park. There he addressed the bhikkhus thus: "Bhikkhus." — "Venerable sir," they replied. The Blessed One said this:</p>
+<p><span class="parno">1</span>So I have heard. At one time the Buddha was staying near Sāvatthī in Jeta’s Grove, Anāthapiṇḍika’s monastery. There the Buddha addressed the mendicants: “Mendicants!”</p>
 
-<p id="p2"><span class="parno">2</span>"Bhikkhus, when a bhikkhu is pursuing the higher mind, from time to time he should give attention to five signs.<span class="note" id="n239"><span class="details"><span class="p">[n.239] <i>MA:</i> The higher mind <i>(adhicitta)</i> is the mind of the eight meditative attainments used as a basis for insight; it is called "higher mind" because it is higher than the ordinary (wholesome) mind of the ten wholesome courses of action. The five "signs" <i>(nimitta)</i> may be understood as practical methods of removing the distracting thoughts. They should be resorted to only when the distractions become persistent or obtrusive; at other times the meditator should remain with his primary subject of meditation.</span></span></span> What are the five? "Here, bhikkhus, when a bhikkhu is giving attention to some sign, and owing to that sign there arise in him evil unwholesome thoughts connected with desire, with hate, and with delusion, then he should give attention to some other sign connected with what is wholesome.<span class="note" id="n240"><span class="details"><span class="p">[n.240] <a href="mn0-abbr.html">MA:</a> When thoughts of sensual desire arise directed towards living beings, the "other sign" is the meditation on foulness (see <a href="mn10.html#p13">MN&nbsp;10.10</a>); when the thoughts are directed to inanimate things, the "other sign" is attention to impermanence. When thoughts of hate arise directed towards living beings, the "other sign" is the meditation on loving-kindness; when they are directed to inanimate things, the "other sign" is attention to the elements (see <a href="mn10.html#p12">MN&nbsp;10.16</a>). The remedy for thoughts connected with delusion is living under a teacher, studying the Dhamma, inquiring into its meaning, listening to the Dhamma, and inquiring into causes.</span></span></span> When he gives attention to some other sign connected with what is wholesome, then any evil unwholesome thoughts connected with desire, with hate, and with delusion are abandoned in him and subside. With the abandoning of them his mind becomes steadied internally, quieted, brought to singleness, and concentrated. Just as a skilled carpenter or his apprentice might knock out, remove, and extract a coarse peg by means of a fine one, so too … when a bhikkhu gives attention to some other sign connected with what is wholesome … his mind becomes steadied internally, quieted, brought to singleness, and concentrated. <span class="add">1</span></p>
-
-<p id="p3"><span class="parno">3</span>"If, while he is giving attention to some other sign connected with what is wholesome, there still arise in him evil unwholesome thoughts connected with desire, with hate, and with delusion, then he should examine the danger in those thoughts thus: ‘These thoughts are unwholesome, they are reprehensible, they result in suffering.′<span class="note" id="n241"><span class="details"><span class="p">[n.241] This method can be illustrated by the reflections of the Bodhisatta in <a href="mn19.html#p3">MN&nbsp;19.3–5</a>. Calling to mind the unworthiness of the evil thoughts produces a sense of shame <i>(hiri)</i>; calling to mind their dangerous consequences produces fear of wrongdoing <i>(ottappa)</i>.</span></span></span> When he examines the danger in those thoughts, then any evil unwholesome thoughts connected with desire, with hate, and with delusion are abandoned in him and subside. With the abandoning of them his mind becomes steadied internally, quieted, brought to singleness, and concentrated. Just as a man or a woman, young, youthful, and fond of ornaments, would be horrified, humiliated, and disgusted if the carcass of a snake or a dog or a human being were hung around his or her neck, so too … when a bhikkhu examines the danger in those thoughts … his mind becomes steadied internally, quieted, brought to singleness, and concentrated. <span class="add">2</span></p>
-
-<p id="p4"><span class="parno">4</span>"If, while he is examining the danger in those thoughts, there still arise in him evil unwholesome thoughts connected with desire, with hate, and with delusion, then he should try to forget those thoughts and should not give attention to them. When he tries to forget those thoughts and does not give attention to them, then any evil unwholesome thoughts connected with desire, with hate, and with delusion are abandoned in him and subside. With the abandoning of them his mind becomes steadied internally, quieted, brought to singleness, and concentrated. Just as a man with good eyes who did not want to see forms that had come within range of sight would either shut his eyes or look away, so too … when a bhikkhu tries to forget those thoughts and does not give attention to them … his mind becomes steadied internally, quieted, brought to singleness, and concentrated. <span class="add">3</span></p>
-
-<p id="p5"><span class="parno">5</span>"If, while he is trying to forget those thoughts and is not giving attention to them, there still arise in him evil unwholesome thoughts connected with desire, with hate, and with delusion, then he should give attention to stilling the thought-formation of those thoughts.<span class="note" id="n242"><span class="details"><span class="p">[n.242] <i>Vitakka-saṅkhāra-saṇṭ̣hānaṁ.</i> <a href="mn0-abbr.html">MA</a> understands <i>saṅkhāra</i> here as condition, cause, or root, and takes the compound to mean "stopping the cause of the thought." This is accomplished by inquiring, when an unwholesome thought has arisen: "What is its cause? What is the cause of its cause?" etc. Such an inquiry, according to MA, brings about a slackening, and eventually the cessation, of the flow of unwholesome thought.</span></span></span> When he gives attention to stilling the thought-formation of those thoughts, then any evil unwholesome thoughts connected with desire, with hate, and with delusion are abandoned in him and subside. With the abandoning of them his mind becomes steadied internally, quieted, brought to singleness, and concentrated. Just as a man walking fast might consider: ‘Why am I walking fast? What if I walk slowly?’ and he would walk slowly; then he might consider: ‘Why am I walking slowly? What if I stand?’ and he would stand; then he might consider: ‘Why am I standing? What if I sit?’ and he would sit; then he might consider: ‘Why am I sitting? What if I lie down?’ and he would lie down. By doing so he would substitute for each grosser posture one that was subtler. So too … when a bhikkhu gives attention to stilling the thought-formation of those thoughts … his mind becomes steadied internally, quieted, brought to singleness, and concentrated. <span class="add">4</span></p>
-
-<p id="p6"><span class="parno">6</span>"If, while he is giving attention to stilling the thought-formation of those thoughts, there still arise in him evil unwholesome thoughts connected with desire, with hate, and with delusion, then, with his teeth clenched and his tongue pressed against the roof of his mouth, he should beat down, constrain, and crush mind with mind.<span class="note" id="n243"><span class="details"><span class="p">[n.243] <a href="mn0-abbr.html">MA:</a> He should crush the unwholesome state of mind with a wholesome state of mind.</span></span></span> When, with his teeth clenched and his tongue pressed against the roof of his mouth, he beats down, constrains, and crushes mind with mind, then any evil unwholesome thoughts connected with desire, with hate, and with delusion are abandoned in him and subside. With the abandoning of them his mind becomes steadied internally, quieted, brought to singleness, and concentrated. Just as a strong man might seize a weaker man by the head or shoulders and beat him down, constrain him, and crush him, so too … when, with his teeth clenched and his tongue pressed against the roof of his mouth, a bhikkhu beats down, constrains, and crushes mind with mind … his mind becomes steadied internally, quieted, brought to singleness, and concentrated. <span class="add">5</span></p>
-
-<p id="p7"><span class="parno">7</span>"Bhikkhus, when a bhikkhu is giving attention to some sign, and owing to that sign there arise in him evil unwholesome thoughts connected with desire, with hate, and with delusion, then when he gives attention to some other sign connected with what is wholesome, any such evil unwholesome thoughts are abandoned in him and subside, and with the abandoning of them his mind becomes steadied internally, quieted, brought to singleness, and concentrated. When he examines the danger in those thoughts … When he tries to forget those thoughts and does not give attention to them … When he gives attention to stilling the thought-formation of those thoughts … When, with his teeth clenched and his tongue pressed against the roof of his mouth, he beats down, constrains, and crushes mind with mind, any such evil unwholesome thoughts are abandoned in him … and his mind becomes steadied internally, quieted, brought to singleness, and concentrated. This bhikkhu is then called a master of the courses of thought. He will think whatever thought he wishes to think and he will not think any thought that he does not wish to think. He has severed craving, flung off the fetters, and with the complete penetration of conceit he has made an end of suffering."<span class="note" id="n244"><span class="details"><span class="p">[n.244] This shows the attainment of arahantship. See <a href="mn2.html#n50">n.50.</a></span></span></span></p>
+<p>“Venerable sir,” they replied. The Buddha said this:</p>
 
 <hr>
-<p id="p8"><span class="parno">8</span>That is what the Blessed One said. The bhikkhus were satisfied and delighted in the Blessed One's words.</p>
-</div> <!-- lang eng -->
+<p><span class="parno">2</span>“Mendicants, a mendicant committed to the higher mind should focus on five foundations of meditation from time to time. What five?</p>
+
+<p>Take a mendicant who is focusing on some foundation of meditation that gives rise to bad, unskillful thoughts connected with desire, hate, and delusion. That mendicant should focus on some other foundation of meditation connected with the skillful. As they do so, those bad thoughts are given up and come to an end. Their mind becomes stilled internally; it settles, unifies, and becomes immersed in samādhi. It’s like a deft carpenter or their apprentice who’d knock out or extract a large peg with a finer peg. In the same way, a mendicant … should focus on some other foundation of meditation connected with the skillful …</p>
+
+<p><span class="parno">3</span>Now, suppose that mendicant is focusing on some other foundation of meditation connected with the skillful, but bad, unskillful thoughts connected with desire, hate, and delusion keep coming up. They should examine the drawbacks of those thoughts: ‘So these thoughts are unskillful, they’re blameworthy, and they result in suffering.’ As they do so, those bad thoughts are given up and come to an end. Their mind becomes stilled internally; it settles, unifies, and becomes immersed in samādhi. Suppose there was a woman or man who was young, youthful, and fond of adornments. If the corpse of a snake or a dog or a human were hung around their neck, they’d be horrified, repelled, and disgusted. In the same way, a mendicant … should examine the drawbacks of those thoughts …</p>
+
+<p><span class="parno">4</span>Now, suppose that mendicant is examining the drawbacks of those thoughts, but bad, unskillful thoughts connected with desire, hate, and delusion keep coming up. They should try to ignore and forget about them. As they do so, those bad thoughts are given up and come to an end. Their mind becomes stilled internally; it settles, unifies, and becomes immersed in samādhi. Suppose there was a person with good eyesight, and some undesirable sights came into their range of vision. They’d just close their eyes or look away. In the same way, a mendicant … those bad thoughts are given up and come to an end …</p>
+
+<p><span class="parno">5</span>Now, suppose that mendicant is ignoring and forgetting about those thoughts, but bad, unskillful thoughts connected with desire, hate, and delusion keep coming up. They should focus on stopping the formation of thoughts. As they do so, those bad thoughts are given up and come to an end. Their mind becomes stilled internally; it settles, unifies, and becomes immersed in samādhi. Suppose there was a person walking quickly. They’d think: ‘Why am I walking so quickly? Why don’t I slow down?’ So they’d slow down. They’d think: ‘Why am I walking slowly? Why don’t I stand still?’ So they’d stand still. They’d think: ‘Why am I standing still? Why don’t I sit down?’ So they’d sit down. They’d think: ‘Why am I sitting? Why don’t I lie down?’ So they’d lie down. And so that person would reject successively coarser postures and adopt more subtle ones.</p>
+
+<p>In the same way, a mendicant … those thoughts are given up and come to an end …</p>
+
+<hr>
+<p><span class="parno">6</span>Now, suppose that mendicant is focusing on stopping the formation of thoughts, but bad, unskillful thoughts connected with desire, hate, and delusion keep coming up. With teeth clenched and tongue pressed against the roof of the mouth, they should squeeze, squash, and torture mind with mind. As they do so, those bad thoughts are given up and come to an end. Their mind becomes stilled internally; it settles, unifies, and becomes immersed in samādhi. It’s like a strong man who grabs a weaker man by the head or throat or shoulder and squeezes, squashes, and tortures them. In the same way, a mendicant … with teeth clenched and tongue pressed against the roof of the mouth, should squeeze, squash, and torture mind with mind. As they do so, those bad thoughts are given up and come to an end. Their mind becomes stilled internally; it settles, unifies, and becomes immersed in samādhi.</p>
+
+<p><span class="parno">7</span>Now, take the mendicant who is focusing on some foundation of meditation that gives rise to bad, unskillful thoughts connected with desire, hate, and delusion. They focus on some other foundation of meditation connected with the skillful … They examine the drawbacks of those thoughts … They try to ignore and forget about those thoughts … They focus on stopping the formation of thoughts … With teeth clenched and tongue pressed against the roof of the mouth, they squeeze, squash, and torture mind with mind. When they succeed in each of these things, those bad thoughts are given up and come to an end. Their mind becomes stilled internally; it settles, unifies, and becomes immersed in samādhi. This is called a mendicant who is a master of the ways of thought. They’ll think what they want to think, and they won’t think what they don’t want to think. They’ve cut off craving, untied the fetters, and by rightly comprehending conceit have made an end of suffering.”</p>
+
+<p><span class="parno">8</span>That is what the Buddha said. Satisfied, the mendicants were happy with what the Buddha said.</p>
+<hr>
+
+</div>
 
 <div lang="pi">
 
- <p><span class="parno">1</span>Evaṁ me sutaṁ — ekaṁ samayaṁ bhagavā sāvatthiyaṁ viharati jetavane anāthapiṇḍikassa ārāme. Tatra kho bhagavā bhikkhū āmantesi: "bhikkhavo"ti. "Bhadante"ti te bhikkhū bhagavato paccassosuṁ. Bhagavā etadavoca:</p>
+<p><span class="parno">1</span>Evaṁ me sutaṁ — ekaṁ samayaṁ bhagavā sāvatthiyaṁ viharati jetavane anāthapiṇḍikassa ārāme. Tatra kho bhagavā bhikkhū āmantesi: "bhikkhavo"ti. </p>
 
-<p><span class="parno">2</span>"Adhicittamanuyuttena, bhikkhave, bhikkhunā pañca nimittāni kālena kālaṁ manasi kātabbāni. Katamāni pañca? Idha, bhikkhave, bhikkhuno yaṁ nimittaṁ āgamma yaṁ nimittaṁ manasikaroto uppajjanti pāpakā akusalā vitakkā chandūpasaṁhitāpi dosūpasaṁhitāpi mohūpasaṁhitāpi, tena, bhikkhave, bhikkhunā tamhā nimittā aññaṁ nimittaṁ manasi kātabbaṁ kusalūpasaṁhitaṁ. Tassa tamhā nimittā aññaṁ nimittaṁ manasikaroto kusalūpasaṁhitaṁ ye pāpakā akusalā vitakkā chandūpasaṁhitāpi dosūpasaṁhitāpi mohūpasaṁhitāpi te pahīyanti te abbhatthaṁ gacchanti. Tesaṁ pahānā ajjhattameva cittaṁ santiṭṭhati sannisīdati ekodi <span class="var" title="ekodibhoti (s1–3, mr)" id="note211">hoti</span> samādhiyati. Seyyathāpi, bhikkhave, dakkho palagaṇḍo vā palagaṇḍantevāsī vā sukhumāya āṇiyā oḷārikaṁ āṇiṁ abhinihaneyya abhinīhareyya <span class="var" title="abhinivajjeyya (bj, pts1)" id="note212">abhinivatteyya</span>; evameva kho, bhikkhave, bhikkhuno yaṁ nimittaṁ āgamma yaṁ nimittaṁ manasikaroto uppajjanti pāpakā akusalā vitakkā chandūpasaṁhitāpi dosūpasaṁhitāpi mohūpasaṁhitāpi, tena, bhikkhave, bhikkhunā tamhā nimittā aññaṁ nimittaṁ manasi kātabbaṁ kusalūpasaṁhitaṁ. Tassa tamhā nimittā aññaṁ nimittaṁ manasikaroto kusalūpasaṁhitaṁ ye pāpakā akusalā vitakkā chandūpasaṁhitāpi dosūpasaṁhitāpi mohūpasaṁhitāpi te pahīyanti te abbhatthaṁ gacchanti. Tesaṁ pahānā ajjhattameva cittaṁ santiṭṭhati sannisīdati ekodi hoti samādhiyati. <span class="brnum">(1)</span></p>
+<p>"Bhadante"ti te bhikkhū bhagavato paccassosuṁ. Bhagavā etadavoca:</p>
+
+<hr>
+<p><span class="parno">2</span>"Adhicittamanuyuttena, bhikkhave, bhikkhunā pañca nimittāni kālena kālaṁ manasi kātabbāni. Katamāni pañca? </p>
+
+<p>Idha, bhikkhave, bhikkhuno yaṁ nimittaṁ āgamma yaṁ nimittaṁ manasikaroto uppajjanti pāpakā akusalā vitakkā chandūpasaṁhitāpi dosūpasaṁhitāpi mohūpasaṁhitāpi, tena, bhikkhave, bhikkhunā tamhā nimittā aññaṁ nimittaṁ manasi kātabbaṁ kusalūpasaṁhitaṁ. Tassa tamhā nimittā aññaṁ nimittaṁ manasikaroto kusalūpasaṁhitaṁ ye pāpakā akusalā vitakkā chandūpasaṁhitāpi dosūpasaṁhitāpi mohūpasaṁhitāpi te pahīyanti te abbhatthaṁ gacchanti. Tesaṁ pahānā ajjhattameva cittaṁ santiṭṭhati sannisīdati ekodi <span class="var" title="ekodibhoti (s1–3, mr)" id="note211">hoti</span> samādhiyati. Seyyathāpi, bhikkhave, dakkho palagaṇḍo vā palagaṇḍantevāsī vā sukhumāya āṇiyā oḷārikaṁ āṇiṁ abhinihaneyya abhinīhareyya <span class="var" title="abhinivajjeyya (bj, pts1)" id="note212">abhinivatteyya</span>; evameva kho, bhikkhave, bhikkhuno yaṁ nimittaṁ āgamma yaṁ nimittaṁ manasikaroto uppajjanti pāpakā akusalā vitakkā chandūpasaṁhitāpi dosūpasaṁhitāpi mohūpasaṁhitāpi, tena, bhikkhave, bhikkhunā tamhā nimittā aññaṁ nimittaṁ manasi kātabbaṁ kusalūpasaṁhitaṁ. Tassa tamhā nimittā aññaṁ nimittaṁ manasikaroto kusalūpasaṁhitaṁ ye pāpakā akusalā vitakkā chandūpasaṁhitāpi dosūpasaṁhitāpi mohūpasaṁhitāpi te pahīyanti te abbhatthaṁ gacchanti. Tesaṁ pahānā ajjhattameva cittaṁ santiṭṭhati sannisīdati ekodi hoti samādhiyati. <span class="brnum">(1)</span></p>
 
 <p><span class="parno">3</span>Tassa ce, bhikkhave, bhikkhuno tamhā nimittā aññaṁ nimittaṁ manasikaroto kusalūpasaṁhitaṁ uppajjanteva pāpakā akusalā vitakkā chandūpasaṁhitāpi dosūpasaṁhitāpi mohūpasaṁhitāpi, tena, bhikkhave, bhikkhunā tesaṁ vitakkānaṁ ādīnavo upaparikkhitabbo: ‘itipime vitakkā akusalā, itipime vitakkā sāvajjā, itipime vitakkā dukkhavipākā’ti. Tassa tesaṁ vitakkānaṁ ādīnavaṁ upaparikkhato ye pāpakā akusalā vitakkā chandūpasaṁhitāpi dosūpasaṁhitāpi mohūpasaṁhitāpi te pahīyanti te abbhatthaṁ gacchanti. Tesaṁ pahānā ajjhattameva cittaṁ santiṭṭhati sannisīdati ekodi hoti samādhiyati. Seyyathāpi, bhikkhave, itthī vā puriso vā daharo yuvā maṇḍanakajātiko ahikuṇapena vā kukkurakuṇapena vā manussakuṇapena vā kaṇṭhe āsattena aṭṭiyeyya harāyeyya jiguccheyya; evameva kho, bhikkhave, tassa ce bhikkhuno tamhāpi nimittā aññaṁ nimittaṁ manasikaroto kusalūpasaṁhitaṁ uppajjanteva pāpakā akusalā vitakkā chandūpasaṁhitāpi dosūpasaṁhitāpi mohūpasaṁhitāpi, tena, bhikkhave, bhikkhunā tesaṁ vitakkānaṁ ādīnavo upaparikkhitabbo: ‘itipime vitakkā akusalā, itipime vitakkā sāvajjā, itipime vitakkā dukkhavipākā’ti. Tassa tesaṁ vitakkānaṁ ādīnavaṁ upaparikkhato ye pāpakā akusalā vitakkā chandūpasaṁhitāpi dosūpasaṁhitāpi mohūpasaṁhitāpi te pahīyanti te abbhatthaṁ gacchanti. Tesaṁ pahānā ajjhattameva cittaṁ santiṭṭhati sannisīdati ekodi hoti samādhiyati. <span class="brnum">(2)</span></p>
 
 <p><span class="parno">4</span>Tassa ce, bhikkhave, bhikkhuno tesampi vitakkānaṁ ādīnavaṁ upaparikkhato uppajjanteva pāpakā akusalā vitakkā chandūpasaṁhitāpi dosūpasaṁhitāpi mohūpasaṁhitāpi, tena, bhikkhave, bhikkhunā tesaṁ vitakkānaṁ asatiamanasikāro āpajjitabbo. Tassa tesaṁ vitakkānaṁ asatiamanasikāraṁ āpajjato ye pāpakā akusalā vitakkā chandūpasaṁhitāpi dosūpasaṁhitāpi mohūpasaṁhitāpi te pahīyanti te abbhatthaṁ gacchanti. Tesaṁ pahānā ajjhattameva cittaṁ santiṭṭhati sannisīdati ekodi hoti samādhiyati. Seyyathāpi, bhikkhave, cakkhumā puriso āpāthagatānaṁ rūpānaṁ adassanakāmo assa; so nimīleyya vā aññena vā apalokeyya; evameva kho, bhikkhave, tassa ce bhikkhuno tesampi vitakkānaṁ ādīnavaṁ upaparikkhato uppajjanteva pāpakā akusalā vitakkā chandūpasaṁhitāpi dosūpasaṁhitāpi mohūpasaṁhitāpi, te pahīyanti te abbhatthaṁ gacchanti. Tesaṁ pahānā ajjhattameva cittaṁ santiṭṭhati sannisīdati ekodi hoti samādhiyati. <span class="brnum">(3)</span></p>
 
-<p><span class="parno">5</span>Tassa ce, bhikkhave, bhikkhuno tesampi vitakkānaṁ asatiamanasikāraṁ āpajjato uppajjanteva pāpakā akusalā vitakkā chandūpasaṁhitāpi dosūpasaṁhitāpi mohūpasaṁhitāpi, tena, bhikkhave, bhikkhunā tesaṁ vitakkānaṁ <span class="var" title=" … santhānaṁ (pts1)" id="note213">vitakkasaṅkhārasaṇṭhānaṁ</span> manasikātabbaṁ. Tassa tesaṁ vitakkānaṁ vitakkasaṅkhārasaṇṭhānaṁ manasikaroto ye pāpakā akusalā vitakkā chandūpasaṁhitāpi dosūpasaṁhitāpi mohūpasaṁhitāpi te pahīyanti te abbhatthaṁ gacchanti. Tesaṁ pahānā ajjhattameva cittaṁ santiṭṭhati sannisīdati ekodi hoti samādhiyati. Seyyathāpi, bhikkhave, puriso sīghaṁ gaccheyya. Tassa evamassa: ‘kiṁ nu kho ahaṁ sīghaṁ gacchāmi? Yannūnāhaṁ saṇikaṁ gaccheyyan’ti. So saṇikaṁ gaccheyya. Tassa evamassa: ‘kiṁ nu kho ahaṁ saṇikaṁ gacchāmi? Yannūnāhaṁ tiṭṭheyyan’ti. So tiṭṭheyya. Tassa evamassa: ‘kiṁ nu kho ahaṁ ṭhito? Yannūnāhaṁ nisīdeyyan’ti. So nisīdeyya. Tassa evamassa: ‘kiṁ nu kho ahaṁ nisinno? Yannūnāhaṁ nipajjeyyan’ti. So nipajjeyya. Evañhi so, bhikkhave, puriso oḷārikaṁ oḷārikaṁ iriyāpathaṁ <span class="var" title="abhinissajjetvā (s1–3)" id="note214">abhinivajjetvā</span> sukhumaṁ sukhumaṁ iriyāpathaṁ kappeyya. Evameva kho, bhikkhave, tassa ce bhikkhuno tesampi vitakkānaṁ asatiamanasikāraṁ āpajjato uppajjanteva pāpakā akusalā vitakkā chandūpasaṁhitāpi dosūpasaṁhitāpi mohūpasaṁhitāpi te pahīyanti te abbhatthaṁ gacchanti. Tesaṁ pahānā ajjhattameva cittaṁ santiṭṭhati sannisīdati ekodi hoti samādhiyati. <span class="brnum">(4)</span></p>
+<p><span class="parno">5</span>Tassa ce, bhikkhave, bhikkhuno tesampi vitakkānaṁ asatiamanasikāraṁ āpajjato uppajjanteva pāpakā akusalā vitakkā chandūpasaṁhitāpi dosūpasaṁhitāpi mohūpasaṁhitāpi, tena, bhikkhave, bhikkhunā tesaṁ vitakkānaṁ <span class="var" title=" … santhānaṁ (pts1)" id="note213">vitakkasaṅkhārasaṇṭhānaṁ</span> manasikātabbaṁ. Tassa tesaṁ vitakkānaṁ vitakkasaṅkhārasaṇṭhānaṁ manasikaroto ye pāpakā akusalā vitakkā chandūpasaṁhitāpi dosūpasaṁhitāpi mohūpasaṁhitāpi te pahīyanti te abbhatthaṁ gacchanti. Tesaṁ pahānā ajjhattameva cittaṁ santiṭṭhati sannisīdati ekodi hoti samādhiyati. Seyyathāpi, bhikkhave, puriso sīghaṁ gaccheyya. Tassa evamassa: ‘kiṁ nu kho ahaṁ sīghaṁ gacchāmi? Yannūnāhaṁ saṇikaṁ gaccheyyan’ti. So saṇikaṁ gaccheyya. Tassa evamassa: ‘kiṁ nu kho ahaṁ saṇikaṁ gacchāmi? Yannūnāhaṁ tiṭṭheyyan’ti. So tiṭṭheyya. Tassa evamassa: ‘kiṁ nu kho ahaṁ ṭhito? Yannūnāhaṁ nisīdeyyan’ti. So nisīdeyya. Tassa evamassa: ‘kiṁ nu kho ahaṁ nisinno? Yannūnāhaṁ nipajjeyyan’ti. So nipajjeyya. Evañhi so, bhikkhave, puriso oḷārikaṁ oḷārikaṁ iriyāpathaṁ <span class="var" title="abhinissajjetvā (s1–3)" id="note214">abhinivajjetvā</span> sukhumaṁ sukhumaṁ iriyāpathaṁ kappeyya. </p>
 
+<p>Evameva kho, bhikkhave, tassa ce bhikkhuno tesampi vitakkānaṁ asatiamanasikāraṁ āpajjato uppajjanteva pāpakā akusalā vitakkā chandūpasaṁhitāpi dosūpasaṁhitāpi mohūpasaṁhitāpi te pahīyanti te abbhatthaṁ gacchanti. Tesaṁ pahānā ajjhattameva cittaṁ santiṭṭhati sannisīdati ekodi hoti samādhiyati. <span class="brnum">(4)</span></p>
+
+<hr>
 <p><span class="parno">6</span>Tassa ce, bhikkhave, bhikkhuno tesampi vitakkānaṁ vitakkasaṅkhārasaṇṭhānaṁ manasikaroto uppajjanteva pāpakā akusalā vitakkā chandūpasaṁhitāpi dosūpasaṁhitāpi mohūpasaṁhitāpi. Tena, bhikkhave, bhikkhunā <span class="var" title="dantehi dantamādhāya (pts1)" id="note215">dantebhidantamādhāya</span> jivhāya tāluṁ āhacca cetasā cittaṁ abhiniggaṇhitabbaṁ abhinippīḷetabbaṁ abhisantāpetabbaṁ. Tassa dantebhidantamādhāya jivhāya tāluṁ āhacca cetasā cittaṁ abhiniggaṇhato abhinippīḷayato abhisantāpayato ye pāpakā akusalā vitakkā chandūpasaṁhitāpi dosūpasaṁhitāpi mohūpasaṁhitāpi te pahīyanti te abbhatthaṁ gacchanti. Tesaṁ pahānā ajjhattameva cittaṁ santiṭṭhati sannisīdati ekodi hoti samādhiyati. Seyyathāpi, bhikkhave, balavā puriso dubbalataraṁ purisaṁ sīse vā gale vā khandhe vā gahetvā abhiniggaṇheyya abhinippīḷeyya abhisantāpeyya; evameva kho, bhikkhave, tassa ce bhikkhuno tesampi vitakkānaṁ vitakkasaṅkhārasaṇṭhānaṁ manasikaroto uppajjanteva pāpakā akusalā vitakkā chandūpasaṁhitāpi dosūpasaṁhitāpi mohūpasaṁhitāpi. Tena, bhikkhave, bhikkhunā dantebhidantamādhāya jivhāya tāluṁ āhacca cetasā cittaṁ abhiniggaṇhitabbaṁ abhinippīḷetabbaṁ abhisantāpetabbaṁ. Tassa dantebhidantamādhāya jivhāya tāluṁ āhacca cetasā cittaṁ abhiniggaṇhato abhinippīḷayato abhisantāpayato ye pāpakā akusalā vitakkā chandūpasaṁhitāpi dosūpasaṁhitāpi mohūpasaṁhitāpi te pahīyanti te abbhatthaṁ gacchanti. Tesaṁ pahānā ajjhattameva cittaṁ santiṭṭhati sannisīdati ekodi hoti samādhiyati. <span class="brnum">(5)</span></p>
 
 <p><span class="parno">7</span><span class="var" title="yato ca kho (s1–3, mr)" id="note216">Yato kho</span>, bhikkhave, bhikkhuno yaṁ nimittaṁ āgamma yaṁ nimittaṁ manasikaroto uppajjanti pāpakā akusalā vitakkā chandūpasaṁhitāpi dosūpasaṁhitāpi mohūpasaṁhitāpi, tassa tamhā nimittā aññaṁ nimittaṁ manasikaroto kusalūpasaṁhitaṁ ye pāpakā akusalā vitakkā chandūpasaṁhitāpi dosūpasaṁhitāpi mohūpasaṁhitāpi te pahīyanti te abbhatthaṁ gacchanti. Tesaṁ pahānā ajjhattameva cittaṁ santiṭṭhati sannisīdati ekodi hoti samādhiyati. Tesampi vitakkānaṁ ādīnavaṁ upaparikkhato ye pāpakā akusalā vitakkā chandūpasaṁhitāpi dosūpasaṁhitāpi mohūpasaṁhitāpi te pahīyanti te abbhatthaṁ gacchanti. Tesaṁ pahānā ajjhattameva cittaṁ santiṭṭhati sannisīdati ekodi hoti samādhiyati. Tesampi vitakkānaṁ asatiamanasikāraṁ āpajjato ye pāpakā akusalā vitakkā chandūpasaṁhitāpi dosūpasaṁhitāpi mohūpasaṁhitāpi te pahīyanti te abbhatthaṁ gacchanti. Tesaṁ pahānā ajjhattameva cittaṁ santiṭṭhati sannisīdati ekodi hoti samādhiyati. Tesampi vitakkānaṁ vitakkasaṅkhārasaṇṭhānaṁ manasikaroto ye pāpakā akusalā vitakkā chandūpasaṁhitāpi dosūpasaṁhitāpi mohūpasaṁhitāpi te pahīyanti te abbhatthaṁ gacchanti. Tesaṁ pahānā ajjhattameva cittaṁ santiṭṭhati sannisīdati ekodi hoti samādhiyati. Dantebhidantamādhāya jivhāya tāluṁ āhacca cetasā cittaṁ abhiniggaṇhato abhinippīḷayato abhisantāpayato ye pāpakā akusalā vitakkā chandūpasaṁhitāpi dosūpasaṁhitāpi mohūpasaṁhitāpi te pahīyanti te abbhatthaṁ gacchanti. Tesaṁ pahānā ajjhattameva cittaṁ santiṭṭhati sannisīdati ekodi hoti samādhiyati. Ayaṁ vuccati, bhikkhave, bhikkhu vasī vitakkapariyāyapathesu. Yaṁ vitakkaṁ ākaṅkhīssati taṁ vitakkaṁ vitakkessati, yaṁ vitakkaṁ nākaṅkhīssati na taṁ vitakkaṁ vitakkessati. Acchecchi taṇhaṁ, <span class="var" title="vāvattayi (bj, pts1)" id="note218">vivattayi</span> saṁyojanaṁ, sammā mānābhisamayā antamakāsi dukkhassā"ti.</p>
 
-<hr>
-<p><span class="parno">8</span>Idamavoca bhagavā. Attamanā te bhikkhū bhagavato bhāsitaṁ abhinandunti.
-<br>Vitakkasaṇṭhānasuttaṁ niṭṭhitaṁ dasamaṁ.</p>
+<p><span class="parno">8</span>Idamavoca bhagavā. Attamanā te bhikkhū bhagavato bhāsitaṁ abhinandunti.</p><p class="endsutta">Vitakkasaṇṭhānasuttaṁ niṭṭhitaṁ dasamaṁ.</p>
 
+<hr>
 <p class="endsutta">Sīhanādavaggo niṭṭhito dutiyo.</p>
 
-<div class="verse">
-<p><span class="parno">9</span>Cūḷasīhanādalomahaṁsavaro,
+<p class="verse"><span class="parno">9</span>Cūḷasīhanādalomahaṁsavaro,
 <br>Mahācūḷadukkhakkhandhaanumānikasuttaṁ;
 <br>Khilapatthamadhupiṇḍikadvidhāvitakka,
 <br>Pañcanimittakathā puna vaggo.</p>
-</div> <!-- verse -->
 
 </div> <!-- lang pi -->
 
@@ -184,9 +197,9 @@
 <!-- Footer -->
 		<footer>
 			<div id="breadcrumbs"><a href="../home/index.html">Home</a><a href="../mn/mn.html">Majjhima Nikāya</a>MN20: Vitakkasaṇṭhāna Sutta</div>
-		<div class="bottomlinks">
+					<div class="bottomlinks">
  	<a href="../guide/guide.html"><span class="w3-bar-item"><i class="fa fa-compass"></i>&nbsp;Guide</span></a>
- 	<a href="../home/help.html"><span class="w3-bar-item"><i class="fa fa-info"></i>&nbsp;Help</span></a>
+ 	 	<a href="../home/help.html"><span class="w3-bar-item"><i class="fa fa-info"></i>&nbsp;Help</span></a>
  	<a href="../home/crossreference.html"><span class="w3-bar-item"><i class="fa fa-exchange"></i>&nbsp;Links&nbsp;Cross&nbsp;Reference</span></a>
  	<a href="../home/copyright.html"><span class="w3-bar-item">&copy;&nbsp;Copyright</span></a>
  	<a href="../home/contact.html"><span class="w3-bar-item"><i class="fa fa-envelope"></i>&nbsp;Contact</span></a>
@@ -248,5 +261,6 @@
  </script>
  <script src="../js/footer.js"></script><script src="../js/dpd_deconstructor.js"></script><script src="../js/dpd_ebts.js"></script><script src="../js/dpd_i2h.js"></script>
  <script src="/sw.js"></script>
+<script>document.addEventListener("click",e=>{if(e.target.closest("a.dg-link")){e.preventDefault();const s=new URLSearchParams(window.location.search).get("s");window.location.href=e.target.closest("a").href+(s?`&s=${encodeURIComponent(s)}`:"");}})</script>
  </body>
  </html>

@@ -5,6 +5,8 @@
  	<link rel="icon" type="image/x-icon" href="../images/favicon.ico">
  	<title>Sutta Nipata 4:5</title>
  	<meta name="viewport" content="width=device-width, initial-scale=1">
+		<!-- Loading manifest -->
+	<link rel="manifest" href="../manifest.json">
  	<!-- Loading third party fonts -->
  	<link href="../fonts/font-awesome.min.css" rel="stylesheet" type="text/css">
  	<!-- Loading main and menu stylesheets -->
@@ -46,7 +48,7 @@
  		<div id="navbar" class="w3-hide-small w3-hide-medium bwcontainer3">
  			<ul id="css3menu0">
  				<li class="topfirst" id="home"><a href="../home/index.html" class="w3-hide-small">Home</a></li>
-			<li class="topmenu" id="dn"><a href="../dn/dn.html" class="w3-hide-small">Dīgha Nikāya</a></li>
+ 			<li class="topmenu" id="dn"><a href="../dn/dn.html" class="w3-hide-small">Dīgha Nikāya</a></li>
  				<li class="topmenu" id="mn"><a href="../mn/mn.html" class="w3-hide-small">Majjhima Nikāya</a></li>
  				<li class="topmenu" id="sn"><a href="../sn/sn.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Saṁyutta Nikāya</a>
  					<ul>
@@ -86,8 +88,8 @@
  					<ul>
  						<li><a href="../vi/kd.html" class="w3-hide-small">Khandhaka</a></li>
  						<li><a href="../vi/bu-vb.html" class="w3-hide-small">Bhikkhu Vibhaṅga</a></li>
- 						<li><a href="../vi/bu-pt.html" class="w3-hide-small">Bhikkhu Pāṭimokkha</a></li>
- 						<li><a href="../vi/bi-pt.html" class="w3-hide-small">Bhikkhunī Pāṭimokkha</a></li>
+ 						<li><a href="../vi/bu-pt.html" class="w3-hide-small">Bhikkhu Pātimokkha</a></li>
+ 						<li><a href="../vi/bi-pt.html" class="w3-hide-small">Bhikkhunī Pātimokkha</a></li>
  						<li><a href="../vi/bi-vb.html" class="w3-hide-small">Bhikkhunī Vibhaṅga</a></li>
  					</ul>
  				</li>
@@ -100,7 +102,6 @@
  	<a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-times fa-2x red-color"></i>&nbsp;&nbsp;&nbsp;Close</a><!-- Hides the sidebar when clicked -->
  		<div class="w3-bar-block w3-white">
  			<a href="../home/index.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-home fa-lg"></i>&nbsp;&nbsp;&nbsp;Home</a>
- 			<a href="../guide/guide.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Guide</a>
  			<a href="../guide/guide.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Guide</a>
  			<a href="../dn/dn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Dīgha Nikāya</a>
  			<a href="../mn/mn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Majjhima Nikāya</a>
@@ -122,64 +123,77 @@
  
  <div id="content">
  
- <h2>Sutta Nipata Chapter 4: The Chapter of Octads - Aṭṭhakavagga</h2>
+ <h2>Sutta Nipata Chapter 4: The Chapter of the Eights - Aṭṭhakavagga</h2>
 	
-	<h3>4:5 The Octad on the Supreme</h3>	
+	<h3>4:5 Eight on the Ultimate</h3>	
 	<div id="metarea"> <!-- metarea div -->
 		<ul class="translator"><!-- Translator div -->
-			<li><a href="/ru/read/?q=snp4.5">dg</a> <a href="https://suttacentral.net/snp4.5">sc</a> ©&nbsp;Translated from the Pali by Bhikkhu Bodhi</li>
+			<li><a class="dg-link" href="/r/?q=snp4.5">DG</a> <a href="https://suttacentral.net/snp4.5">SC</a> ©&nbsp;Translated from the Pali by Bhante Sujato.<a href="../home/copyright.html#sc">(More copyright information)</a></li>
 		</ul>
 	</div><!-- End metarea div -->
 
 <section class="raw_sutta">
 <div lang="en">
 
-<h2>4:5 The Octad on the Supreme</h2>
-<p class="verse"><span class ="parno">796</span>Settling [on his own] as supreme among views,<br>
-whatever a person esteems as best in the world,<br>
-[in comparison] he says all others are “inferior”:<br>
-therefore he has not transcended disputes. (1)</p>
 
-<p class="verse"><span class ="parno">797</span>Whatever benefit one sees for oneself<br>
-in the seen, the heard, the sensed,<br>
-or in good behavior and observances,<br>
-having grasped hold of that alone,<br>
-one regards all else as inferior. (2)</p>
+<h2>4:5 Eight on the Ultimate</h2>
+<div class="verse">
+<p id="p796"><span class="parno">796</span>
+If, maintaining that theirs is the “ultimate” view, 
+<br>a person makes it out to be highest in the world; 
+<br>then they declare all others are “lesser”; 
+<br>that’s why they’re not over disputes. </p>
 
-<p class="verse"><span class ="parno">798</span>The skilled speak of that as a knot<br>
-when one is attached and regards others as inferior.<br>
-Therefore a bhikkhu should not be attached to the seen,<br>
-to the heard or sensed, or to good behavior and observances. (3) [157]</p>
+<p id="p797"><span class="parno">797</span>
+If they see an advantage for themselves 
+<br>in what’s seen, heard, or thought; or in precepts or vows, 
+<br>in that case, having adopted that one alone, 
+<br>they see all others as inferior. </p>
 
-<p class="verse"><span class ="parno">799</span>Nor should one construct any view in the world<br>
-by means of knowledge or good behavior and observances.<br>
-One should not take oneself as “equal”<br>
-or think of oneself as “inferior” or “superior.” (4)</p>
+<p id="p798"><span class="parno">798</span>
+Experts say that, too, is a knot, 
+<br>relying on which people see others as lesser. 
+<br>That’s why a mendicant ought not rely 
+<br>on what’s seen, heard, or thought, or on precepts and vows. </p>
 
-<p class="verse"><span class ="parno">800</span>Having abandoned what is taken up, not clinging,<br>
-one does not create a dependency even on knowledge.<br>
-Not taking sides among those who are divided,<br>
-one does not fall back on any view at all. (5)</p>
+<p id="p799"><span class="parno">799</span>
+Nor would they form a view about the world 
+<br>through a notion or through precepts and vows. 
+<br>They would never represent themselves as “equal”, 
+<br>nor conceive themselves “worse” or “better”. </p>
 
-<p class="verse"><span class ="parno">801</span>For one who has no wish here for either end,<br>
-for various states of existence here or beyond,<br>
-there are no places of residence at all<br>
-grasped after deciding among teachings. (6)</p>
+</div>
+<hr>
+<div class="verse">
+<p id="p800"><span class="parno">800</span>
+What was picked up has been set down and is not grasped again; 
+<br>they form no dependency even on notions. 
+<br>They follow no side among the factions, 
+<br>and believe in no view at all. </p>
 
-<p class="verse"><span class ="parno">802</span>Not even a subtle notion is formulated by him<br>
-about what is seen, heard, or sensed here.<br>
-How could anyone here in the world categorize him,<br>
-that brahmin who does not cling to any view? (7)</p>
+<p id="p801"><span class="parno">801</span>
+One here who has no wish for either end—
+<br>for any form of existence in this life or the next—
+<br>has adopted no dogma at all 
+<br>after judging among the teachings. </p>
 
-<p class="verse"><span class ="parno">803</span>They do not construct, they have no preferences;<br>
-even the teachings are not embraced by them. [158]<br>
-A brahmin cannot be led by good behavior and observances;<br>
-the impartial one, gone beyond, does not fall back. (8)</p>
+<p id="p802"><span class="parno">802</span>
+For them not even the tiniest idea is formulated here 
+<br>regarding what is seen, heard, or thought. 
+<br>That brahmin does not grasp any view—
+<br>how could anyone in this world judge them? </p>
+
+<p id="p803"><span class="parno">803</span>
+They don’t make things up or promote them, 
+<br>and don’t subscribe to any of the doctrines. 
+<br>The brahmin has no need to be led by precept or vow; 
+<br>gone to the far shore, one such does not return. </p>
+</div>
 </div>
 
 <div lang="pi">
 <h2>Paramaṭṭhakasutta</h2>
-
+<div class="verse">
 <p><span class="parno">796</span>Paramanti diṭṭhīsu paribbasāno,<br> Yaduttari kurute jantu loke;
 <br>Hīnāti aññe tato sabbamāha,
 <br>Tasmā vivādāni avītivatto.</p>
@@ -199,6 +213,9 @@ Diṭṭhimpi lokasmiṁ na kappayeyya,<br> Ñāṇena vā sīlavatena vāpi;
 <br>Samoti attānamanūpaneyya,
 <br>Hīno na maññetha visesi vāpi.</p>
 
+</div>
+<hr>
+<div class="verse">
 <p><span class="parno">800</span><a class="brnum" id="br5"></a>
 Attaṁ pahāya anupādiyāno,<br> Ñāṇepi so nissayaṁ no karoti;
 <br>Sa ve viyattesu na vaggasārī,
@@ -218,7 +235,7 @@ Tassīdha diṭṭhe va sute mute vā,<br> Pakappitā natthi aṇūpi saññā;
 Na kappayanti na purekkharonti,<br> Dhammāpi tesaṁ na paṭicchitāse;
 <br>Na brāhmaṇo sīlavatena neyyo,
 <br>Pāraṅgato na pacceti tādīti.</p>
-
+</div>
 <p class="endsection">Paramaṭṭhakasuttaṁ pañcamaṁ.</p>
 
 </div>
@@ -230,7 +247,7 @@ Na kappayanti na purekkharonti,<br> Dhammāpi tesaṁ na paṭicchitāse;
 <!-- Footer -->
 		<footer>
 			<div id="breadcrumbs">
-<a href="../home/index.html">Home</a><a href="../kn/kn.html">Khuddaka Nikāya</a><a href="snp.html">Sutta Nipata</a><a href="snp4.html">Chapter 4: The Octads</a>4:5 The Octad on the Supreme
+<a href="../home/index.html">Home</a><a href="../kn/kn.html">Khuddaka Nikāya</a><a href="snp.html">Sutta Nipata</a><a href="snp4.html">Chapter 4: The Eights</a>4:5 Eight on the Ultimate
 </div>
 	
  	<div class="bottomlinks">
@@ -297,5 +314,6 @@ Na kappayanti na purekkharonti,<br> Dhammāpi tesaṁ na paṭicchitāse;
  </script>
  <script src="../js/footer.js"></script><script src="../js/dpd_deconstructor.js"></script><script src="../js/dpd_ebts.js"></script><script src="../js/dpd_i2h.js"></script>
  <script src="/sw.js"></script>
+<script>document.addEventListener("click",e=>{if(e.target.closest("a.dg-link")){e.preventDefault();const s=new URLSearchParams(window.location.search).get("s");window.location.href=e.target.closest("a").href+(s?`&s=${encodeURIComponent(s)}`:"");}})</script>
  </body>
  </html>

@@ -5,6 +5,8 @@
  	<link rel="icon" type="image/x-icon" href="../images/favicon.ico">
  	<title>Sutta Nipata 3.2</title>
  	<meta name="viewport" content="width=device-width, initial-scale=1">
+		<!-- Loading manifest -->
+	<link rel="manifest" href="../manifest.json">
  	<!-- Loading third party fonts -->
  	<link href="../fonts/font-awesome.min.css" rel="stylesheet" type="text/css">
  	<!-- Loading main and menu stylesheets -->
@@ -46,7 +48,7 @@
  		<div id="navbar" class="w3-hide-small w3-hide-medium bwcontainer3">
  			<ul id="css3menu0">
  				<li class="topfirst" id="home"><a href="../home/index.html" class="w3-hide-small">Home</a></li>
-			<li class="topmenu" id="dn"><a href="../dn/dn.html" class="w3-hide-small">Dīgha Nikāya</a></li>
+ 			<li class="topmenu" id="dn"><a href="../dn/dn.html" class="w3-hide-small">Dīgha Nikāya</a></li>
  				<li class="topmenu" id="mn"><a href="../mn/mn.html" class="w3-hide-small">Majjhima Nikāya</a></li>
  				<li class="topmenu" id="sn"><a href="../sn/sn.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Saṁyutta Nikāya</a>
  					<ul>
@@ -86,8 +88,8 @@
  					<ul>
  						<li><a href="../vi/kd.html" class="w3-hide-small">Khandhaka</a></li>
  						<li><a href="../vi/bu-vb.html" class="w3-hide-small">Bhikkhu Vibhaṅga</a></li>
- 						<li><a href="../vi/bu-pt.html" class="w3-hide-small">Bhikkhu Pāṭimokkha</a></li>
- 						<li><a href="../vi/bi-pt.html" class="w3-hide-small">Bhikkhunī Pāṭimokkha</a></li>
+ 						<li><a href="../vi/bu-pt.html" class="w3-hide-small">Bhikkhu Pātimokkha</a></li>
+ 						<li><a href="../vi/bi-pt.html" class="w3-hide-small">Bhikkhunī Pātimokkha</a></li>
  						<li><a href="../vi/bi-vb.html" class="w3-hide-small">Bhikkhunī Vibhaṅga</a></li>
  					</ul>
  				</li>
@@ -100,7 +102,6 @@
  	<a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-times fa-2x red-color"></i>&nbsp;&nbsp;&nbsp;Close</a><!-- Hides the sidebar when clicked -->
  		<div class="w3-bar-block w3-white">
  			<a href="../home/index.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-home fa-lg"></i>&nbsp;&nbsp;&nbsp;Home</a>
- 			<a href="../guide/guide.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Guide</a>
  			<a href="../guide/guide.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Guide</a>
  			<a href="../dn/dn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Dīgha Nikāya</a>
  			<a href="../mn/mn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Majjhima Nikāya</a>
@@ -127,7 +128,7 @@
 	<h3>3:2 Striving</h3>	
 	<div id="metarea"> <!-- metarea div -->
 		<ul class="translator"><!-- Translator div -->
-				<li><a href="/ru/read/?q=snp3.2">dg</a> <a href="https://suttacentral.net/snp3.2">sc</a> ©&nbsp;Translated from the Pali by Bhikkhu Bodhi</li>
+				<li><a class="dg-link" href="/r/?q=snp3.2">DG</a> <a href="https://suttacentral.net/snp3.2">SC</a> ©&nbsp;Translated from the Pali by Bhante Sujato.<a href="../home/copyright.html#sc">(More copyright information)</a></li>
 		</ul>
 	</div><!-- End metarea div -->
 
@@ -136,264 +137,323 @@
 
 <h2>3:2 Striving</h2>
 
-<p class="verse"><span class ="parno">425</span>“When, resolved upon striving,<br>
-I had gone to the Nerañjarā River,<br>
-as I was meditating very strenuously<br>
-to attain security from bondage, (1)</p>
+<p><span class="speaker">Buddha</span></p>
 
-<p class="verse"><span class ="parno">426</span>“Namucī approached me,<br>
-speaking compassionate words:<br>
-‘You are thin, pale;<br>
-you’re on the verge of death. (2)</p>
+	<div class="verse">
+			<p><span class="parno">425</span>“During my time of resolute striving 
+			<br>on the bank of the Nerañjara River, 
+			<br>I was meditating very hard 
+			<br>for the sake of finding sanctuary. </p>
+			
+			<p id="p426"><span class="parno">426</span>
+			Namucī approached, 
+			<br>speaking words of kindness: 
+			<br>‘You’re thin, discolored, 
+			<br>on the verge of death. </p>
+			
+			<p id="p427"><span class="parno">427</span>
+			Death has a thousand parts of you, 
+			<br>one fraction is left to life. 
+			<br>Live sir! Life is better! 
+			<br>Living, you can make merits. </p>
+			
+			<p id="p428"><span class="parno">428</span>
+			While leading the spiritual life 
+			<br>and serving the sacred flame, 
+			<br>you can pile up abundant merit—
+			<br>so what will striving do for you? </p>
+			
+			<p id="p429"><span class="parno">429</span>
+			Hard to walk is the path of striving, 
+			<br>hard to do, a hard challenge to win.’” 
+			<br>These are the verses Māra spoke 
+			<br>as he stood beside the Buddha. </p>
+	</div>
 
-<p class="verse"><span class ="parno">427</span>“ ‘A thousand parts belong to death,<br>
-one fraction of your life remains.<br>
-Live, sir, life is better!<br>
-While living, make merits! (3) [75]</p>
+<hr>
 
-<p class="verse"><span class ="parno">428</span>“ ‘While you are living the spiritual life<br>
-and performing the fire sacrifice,<br>
-abundant merit is stored up.<br>
-Why devote yourself to striving? (4)</p>
+	<div class="verse">
+			<p id="p430"><span class="parno">430</span>
+			When Māra had spoken in this way, 
+			<br>the Buddha said this: 
+			<br>“O Wicked One, kinsman of the negligent, 
+			<br>you’re here for your own purpose. </p>
+			
+			<p id="p431"><span class="parno">431</span>
+			I have no need for 
+			<br>the slightest bit of merit. 
+			<br>Those with need for merit 
+			<br>are fit for Māra to address. </p>
+			
+			<p id="p432"><span class="parno">432</span>
+			I have faith and energy too, 
+			<br>and wisdom is found in me. 
+			<br>When I am so resolute, 
+			<br>why do you beg me to live? </p>
+			
+			<p id="p433"><span class="parno">433</span>
+			The rivers and streams 
+			<br>might be dried by the wind, 
+			<br>so why, when I am resolute, 
+			<br>should it not dry up my blood? </p>
+			
+			<p id="p434"><span class="parno">434</span>
+			And while the blood is drying up, 
+			<br>the bile and phlegm dry too. 
+			<br>And as my muscles waste away, 
+			<br>my mind grows more serene. 
+			<br>And all the stronger grow mindfulness 
+			<br>and wisdom and immersion. </p>
+			
+			<p id="p435"><span class="parno">435</span>
+			As I meditate like this, 
+			<br>having attained the supreme feeling, 
+			<br>my mind has no interest in sensual pleasures: 
+			<br>behold a being’s purity! </p>
+			
+			<p id="p436"><span class="parno">436</span>
+			Sensual pleasures are your first army, 
+			<br>the second is called discontent, 
+			<br>hunger and thirst are the third, 
+			<br>and the fourth is said to be craving. </p>
+			
+			<p id="p437"><span class="parno">437</span>
+			Your fifth is dullness and drowsiness, 
+			<br>the sixth is said to be cowardice, 
+			<br>your seventh is doubt, 
+			<br>contempt and obstinacy are your eighth. </p>
+	</div>
 
-<p class="verse"><span class ="parno">429</span>“ ‘Hard to travel is the path for striving,<br>
-hard to practice, hard to achieve.’ ”<br>
-Speaking these verses, Māra stood<br>
-in the presence of the Buddha. (5)</p>
+<hr>
 
-<p class="verse"><span class ="parno">430</span>When Māra had spoken in such a way,<br>
-the Blessed One said this to him:<br>
-“Kinsman of the heedless, Evil One,<br>
-you have come here with a purpose. (6)</p>
+	<div class="verse">
+			<p id="p438"><span class="parno">438</span>
+			Profit, praise, and honor, 
+			<br>and misbegotten fame; 
+			<br>the extolling of oneself 
+			<br>while scorning others. </p>
+			
+			<p id="p439"><span class="parno">439</span>
+			This is your army, Namucī, 
+			<br>the strike force of the Dark One. 
+			<br>Only a hero can defeat it, 
+			<br>but in victory there lies bliss. </p>
+			
+			<p id="p440"><span class="parno">440</span>
+			Let me gird myself—
+			<br>so what if I die! 
+			<br>I’d rather die in battle 
+			<br>than live on in defeat. </p>
+			
+			<p id="p441"><span class="parno">441</span>
+			Here some ascetics and brahmins 
+			<br>are swallowed up, not to be seen again. 
+			<br>They do not know the path 
+			<br>traveled by those true to their vows. </p>
+			
+			<p id="p442"><span class="parno">442</span>
+			Seeing Māra ready on his mount, 
+			<br>surrounded by his bannered forces, 
+			<br>I shall meet them in battle—
+			<br>they’ll never make me retreat! </p>
+			
+			<p id="p443"><span class="parno">443</span>
+			That army of yours has never been beaten 
+			<br>by the world with all its gods. 
+			<br>Yet I shall smash it with wisdom, 
+			<br>like an unfired pot with a stone. </p>
+			
+			<p id="p444"><span class="parno">444</span>
+			Having brought my thoughts under control, 
+			<br>and established mindfulness well, 
+			<br>I shall wander from country to country, 
+			<br>guiding many disciples. </p>
+			
+			<p id="p445"><span class="parno">445</span>
+			Diligent and resolute, 
+			<br>following my instructions, 
+			<br>they will proceed despite your will, 
+			<br>to where there is no sorrow.” </p>
+	</div>
 
-<p class="verse"><span class ="parno">431</span>“I do not have any need<br>
-even for the slightest merit.<span class="note"><span class="details"><span class="p">I read with <span class="var" title="Sinhala-script edition">Ce</span> and <span class="var" title="Roman-script edition">Ee</span> <i>aṇumattenapi puññena attho</i>, as against <span class="var" title="Burmese-script edition">Be</span> <i>aṇumattopi puññena attho</i>.</span></span></span><br>
-It is fitting for Māra to speak<br>
-to those who have need of merits. (7)</p>
+<hr>
 
-<p class="verse"><span class ="parno">432</span>“I have faith and energy too,<br>
-and wisdom exists in me.<br>
-When I am so resolute,<br>
-why do you ask me to live? (8)</p>
+<p><span class="speaker">Māra</span><p>
 
-<p class="verse"><span class ="parno">433</span>“This wind might dry up<br>
-even the streams of the rivers,<br>
-so why, when I am resolute,<br>
-should it not dry up my blood? (9)</p>
+	<div class="verse">
+			<p><span class="parno">446</span>
+			“For seven years I followed 
+			<br>step by step behind the Blessed One. 
+			<br>I found no vulnerability 
+			<br>in the mindful Awakened One. </p>
+			
+			<p id="p447"><span class="parno">447</span>
+			A crow once circled a stone 
+			<br>that looked like a lump of fat. 
+			<br>‘Perhaps I’ll find something tender,’ it thought, 
+			<br>‘perhaps there’s something tasty.’ </p>
+			
+			<p id="p448"><span class="parno">448</span>
+			But finding nothing tasty, 
+			<br>the crow left that place. 
+			<br>Like the crow that pecked the stone, 
+			<br>I leave Gotama disappointed.” </p>
+	</div>
 
-<p class="verse"><span class ="parno">434</span>“When the blood is drying up,<br>
-the bile and phlegm dry up.<br>
-When my muscles are wasting away,<br>
-my mind becomes even more serene,<br>
-and my mindfulness and wisdom<br>
-and concentration become more firm. (10)</p>
+<hr>
 
-<p class="verse"><span class ="parno">435</span>“While I am dwelling in such a way<br>
-I have experienced extreme pain,<br>
-yet my mind does not turn to sensual pleasures:<br>
-behold the purity of the being! (11) [76]</p>
+<p><span class="speaker">Narrator</span></p>
 
-<p class="verse"><span class ="parno">436</span>“Sensual pleasures are your first army;<br>
-the second is called discontent.<br>
-Hunger and thirst are the third;<br>
-the fourth is called craving. (12)</p>
-
-
-<p class="verse"><span class ="parno">437</span>“The fifth is dullness and drowsiness;<br>
-the sixth is called cowardice.<br>
-Doubt is your seventh;<br>
-your eighth, denigration and pride. (13)</p>
-
-<p class="verse"><span class ="parno">438</span>“Gain, praise, and honor,<br>
-and wrongly obtained fame [is ninth];<br>
-[the tenth is when] one extols oneself<br>
-and looks down at others. (14)</p>
-
-<p class="verse"><span class ="parno">439</span>“This is your army, Namucī,<br>
-the squadron of the Dark One.<br>
-A weakling does not conquer it,<br>
-but having conquered it, one gains bliss. (15)</p>
-
-
-<p class="verse"><span class ="parno">440</span>“I wear muñja grass;<br>
-wretched would life be to me.<span class="note"><span class="details"><span class="p">I read with <span class="var" title="Burmese-script edition">Be</span> and <span class="var" title="Sinhala-script edition">Ce</span>, and all three editions of <span class="var" title="Paramatthajotikā II (Suttanipāta-aṭṭhakathā)">Pj II</span>, <i>dhiratthu mama jīvitaṃ</i>. <span class="var" title="Roman-script edition">Ee</span> has <i>idha</i> for <i>mama</i>.</span></span></span><br>
-It’s better that I die in battle<br>
-than live on defeated. (16)</p>
-
-<p class="verse"><span class ="parno">441</span>“Some ascetics and brahmins,<br>
-engulfed here, are no longer seen.<br>
-They do not know the path by which<br>
-the disciplined ones travel. (17)</p>
-
-<p class="verse"><span class ="parno">442</span>“Having seen the bannered army all around,<br>
-[and] Māra with his vehicle ready,<br>
-I will go out to meet him in battle:<br>
-may he not dislodge me from my place! (18)</p>
-
-<p class="verse"><span class ="parno">443</span>“Though the world with its devas<br>
-cannot overcome that army of yours, [77]<br>
-I will destroy<span class="note"><span class="details"><span class="p">I read with <span class="var" title="Burmese-script edition">Be</span> <i>bhecch</i><i>ā</i><i>mi</i>, corresponding to <i>bhetsy</i><i>ā</i><i>mi</i> at Mvu II 240,<span class="line-numbers-in-notes">11</span>. <span class="var" title="Sinhala-script edition">Ce</span> and <span class="var" title="Roman-script edition">Ee</span> have <i>gacch</i><i>ā</i><i>mi</i>.</span></span></span> it with wisdom,<br>
-like a fresh clay bowl with a stone. (19)</p>
-
-<p class="verse"><span class ="parno">444</span>“Having gained mastery over my intention,<br>
-and with mindfulness well established,<br>
-I will wander from realm to realm,<br>
-guiding many disciples. (20)</p>
-
-
-<p class="verse"><span class ="parno">445</span>“Heedful and resolute,<br>
-those practitioners of my teaching,<br>
-against your wishes, will go<br>
-to the state where one does not sorrow.” (21)</p>
-
-<p class="verse"><span class ="parno">446</span>“For seven years I followed the Blessed One,<br>
-[trailing him] step by step,<br>
-but I have not found an opening<br>
-in the Enlightened One, who is mindful. (22)</p>
-
-<p class="verse"><span class ="parno">447</span>“There was a crow that circled around<br>
-a stone that looked like a lump of fat:<br>
-‘Perhaps we’ll find something tender here;<br>
-perhaps there may be something tasty.’ (23)</p>
-
-<p class="verse"><span class ="parno">448</span>“But finding nothing tasty there,<br>
-the crow departed from that place.<br>
-Just like the crow that attacked the stone,<br>
-we leave Gotama disappointed.” (24) [78]</p>
-
-<p class="verse"><span class ="parno">449</span>So much was he stricken with sorrow<br>
-that his lute fell from his armpit.<br>
-Thereupon that saddened spirit<br>
-disappeared right on the spot. (25)</p>
+	<div class="verse">
+			<p><span class="parno">449</span>
+			So stricken with sorrow 
+			<br>that his harp dropped from his armpit, 
+			<br>that spirit, downcast, 
+			<br>vanished right there. </p>
+	</div>
 </div>
 
 <div lang="pi">
 <h2>Padhānasutta</h2>
-
-<p class="verse"><span class="parno">425</span>"Taṁ maṁ padhānapahitattaṁ,<br> nadiṁ nerañjaraṁ pati;
+<div class="verse">
+<p>
+<br><span class="parno">425</span>"Taṁ maṁ padhānapahitattaṁ,<br> nadiṁ nerañjaraṁ pati;
 <br>Viparakkamma jhāyantaṁ,
 <br>yogakkhemassa pattiyā.</p>
 
-<p class="verse"><span class="parno">426</span><a class="brnum" id="br2"></a>
+<p><span class="parno">426</span><a class="brnum" id="br2"></a>
 Namucī karuṇaṁ vācaṁ,<br> bhāsamāno upāgami;
 <br><span class="squo">‘</span> Kiso tvamasi dubbaṇṇo,<br> santike maraṇaṁ tava.</p>
 
-<p class="verse"><span class="parno">427</span><a class="brnum" id="br3"></a>
+<p><span class="parno">427</span><a class="brnum" id="br3"></a>
 Sahassabhāgo maraṇassa,<br> ekaṁso tava jīvitaṁ;
 <br>Jīva bho jīvitaṁ seyyo,
 <br>jīvaṁ puññāni kāhasi.</p>
 
-<p class="verse"><span class="parno">428</span><a class="brnum" id="br4"></a>
+<p><span class="parno">428</span><a class="brnum" id="br4"></a>
 Carato ca te brahmacariyaṁ,<br> Aggihuttañca jūhato;
 <br>Pahūtaṁ cīyate puññaṁ,
 <br>Kiṁ padhānena kāhasi.</p>
 
-<p class="verse"><span class="parno">429</span><a class="brnum" id="br5"></a>
+<p><span class="parno">429</span><a class="brnum" id="br5"></a>
 Duggo maggo padhānāya,<br> dukkaro durabhisambhavo’";
 <br>Imā gāthā bhaṇaṁ māro,
 <br>aṭṭhā buddhassa santike.</p>
 
-<p class="verse"><span class="parno">430</span><a class="brnum" id="br6"></a>
+</div>
+<hr>
+<div class="verse">
+<p><span class="parno">430</span><a class="brnum" id="br6"></a>
 Taṁ tathāvādinaṁ māraṁ,<br> bhagavā etadabravi;
 <br>"Pamattabandhu pāpima,<br> yenatthena idhāgato.</p>
 
-<p class="verse"><span class="parno">431</span><a class="brnum" id="br7"></a>
+<p><span class="parno">431</span><a class="brnum" id="br7"></a>
 Aṇumattopi puññena,<br> Attho mayhaṁ na vijjati;
 <br>Yesañca attho puññena,
 <br>Te māro vattumarahati.</p>
 
-<p class="verse"><span class="parno">432</span><a class="brnum" id="br8"></a>
+<p><span class="parno">432</span><a class="brnum" id="br8"></a>
 Atthi saddhā tathā viriyaṁ,<br> paññā ca mama vijjati;
 <br>Evaṁ maṁ pahitattampi,
 <br>kiṁ jīvamanupucchasi.</p>
 
-<p class="verse"><span class="parno">433</span><a class="brnum" id="br9"></a>
+<p><span class="parno">433</span><a class="brnum" id="br9"></a>
 Nadīnamapi sotāni,<br> ayaṁ vāto visosaye;
 <br>Kiñca me pahitattassa,
 <br>lohitaṁ nupasussaye.</p>
 
-<p class="verse"><span class="parno">434</span><a class="brnum" id="br10"></a>
+<p><span class="parno">434</span><a class="brnum" id="br10"></a>
 Lohite sussamānamhi,<br> Pittaṁ semhañca sussati;
 <br>Maṁsesu khīyamānesu,
 <br>Bhiyyo cittaṁ pasīdati;
 <br>Bhiyyo sati ca paññā ca,
 <br>Samādhi mama tiṭṭhati.</p>
 
-<p class="verse"><span class="parno">435</span><a class="brnum" id="br11"></a>
+<p><span class="parno">435</span><a class="brnum" id="br11"></a>
 Tassa mevaṁ viharato,<br> Pattassuttamavedanaṁ;
 <br>Kāmesu nāpekkhate cittaṁ,
 <br>Passa sattassa suddhataṁ.</p>
 
-<p class="verse"><span class="parno">436</span><a class="brnum" id="br12"></a>
+<p><span class="parno">436</span><a class="brnum" id="br12"></a>
 Kāmā te paṭhamā senā,<br> Dutiyā arati vuccati;
 <br>Tatiyā khuppipāsā te,
 <br>Catutthī taṇhā pavuccati.</p>
 
-<p class="verse"><span class="parno">437</span><a class="brnum" id="br13"></a>
+<p><span class="parno">437</span><a class="brnum" id="br13"></a>
 Pañcamaṁ thinamiddhaṁ te,<br> Chaṭṭhā bhīrū pavuccati;
 <br>Sattamī vicikicchā te,
 <br>Makkho thambho te aṭṭhamo.</p>
 
-<p class="verse"><span class="parno">438</span><a class="brnum" id="br14"></a>
+</div>
+<hr>
+<div class="verse">
+<p><span class="parno">438</span><a class="brnum" id="br14"></a>
 Lābho siloko sakkāro,<br> Micchāladdho ca yo yaso;
 <br>Yo cattānaṁ samukkaṁse,
 <br>Pare ca avajānati.</p>
 
-<p class="verse"><span class="parno">439</span><a class="brnum" id="br15"></a>
+<p><span class="parno">439</span><a class="brnum" id="br15"></a>
 Esā namuci te senā,<br> Kaṇhassābhippahārinī;
 <br>Na naṁ asūro jināti,
 <br>Jetvā ca labhate sukhaṁ.</p>
 
-<p class="verse"><span class="parno">440</span><a class="brnum" id="br16"></a>
+<p><span class="parno">440</span><a class="brnum" id="br16"></a>
 Esa muñjaṁ parihare,<br> Dhiratthu mama jīvitaṁ;
 <br>Saṅgāme me mataṁ seyyo,
 <br>Yañce jīve parājito.</p>
 
-<p class="verse"><span class="parno">441</span><a class="brnum" id="br17"></a>
+<p><span class="parno">441</span><a class="brnum" id="br17"></a>
 Pagāḷhettha na dissanti,<br> Eke samaṇabrāhmaṇā;
 <br>Tañca maggaṁ na jānanti,
 <br>Yena gacchanti subbatā.</p>
 
-<p class="verse"><span class="parno">442</span><a class="brnum" id="br18"></a>
+<p><span class="parno">442</span><a class="brnum" id="br18"></a>
 Samantā dhajiniṁ disvā,<br> Yuttaṁ māraṁ savāhanaṁ;
 <br>Yuddhāya paccuggacchāmi,
 <br>Mā maṁ ṭhānā acāvayi.</p>
 
-<p class="verse"><span class="parno">443</span><a class="brnum" id="br19"></a>
+<p><span class="parno">443</span><a class="brnum" id="br19"></a>
 Yaṁ te taṁ nappasahati,<br> Senaṁ loko sadevako;
 <br>Taṁ te paññāya bhecchāmi,
 <br>Āmaṁ pattaṁva asmanā.</p>
 
-<p class="verse"><span class="parno">444</span><a class="brnum" id="br20"></a>
+<p><span class="parno">444</span><a class="brnum" id="br20"></a>
 Vasīkaritvā saṅkappaṁ,<br> Satiñca sūpatiṭṭhitaṁ;
 <br>Raṭṭhā raṭṭhaṁ vicarissaṁ,
 <br>Sāvake vinayaṁ puthū.</p>
 
-<p class="verse"><span class="parno">445</span><a class="brnum" id="br21"></a>
+<p><span class="parno">445</span><a class="brnum" id="br21"></a>
 Te appamattā pahitattā,<br> Mama sāsanakārakā;
 <br>Akāmassa te gamissanti,
 <br>Yattha gantvā na socare".</p>
-
-<p class="verse"><span class="parno">446</span><a class="brnum" id="br22"></a>
+</div>
+<hr>
+<div class="verse">
+<p>
+<br><span class="parno">446</span><a class="brnum" id="br22"></a>
 "Satta vassāni bhagavantaṁ,<br> Anubandhiṁ padāpadaṁ;
 <br>Otāraṁ nādhigacchissaṁ,
 <br>Sambuddhassa satīmato.</p>
 
-<p class="verse"><span class="parno">447</span><a class="brnum" id="br23"></a>
+<p><span class="parno">447</span><a class="brnum" id="br23"></a>
 Medavaṇṇaṁva pāsāṇaṁ,<br> Vāyaso anupariyagā;
 <br>Apettha muduṁ vindema,
 <br>Api assādanā siyā.</p>
 
-<p class="verse"><span class="parno">448</span><a class="brnum" id="br24"></a>
+<p><span class="parno">448</span><a class="brnum" id="br24"></a>
 Aladdhā tattha assādaṁ,<br> Vāyasetto apakkami;
 <br>Kākova selamāsajja,
 <br>Nibbijjāpema gotamaṁ".</p>
 
-<p class="verse"><span class="parno">449</span><a class="brnum" id="br25"></a>
+</div>
+<hr>
+<div class="verse">
+<p>
+<br><span class="parno">449</span><a class="brnum" id="br25"></a>
 Tassa sokaparetassa,<br> Vīṇā kacchā abhassatha;
 <br>Tato so dummano yakkho,
 <br>Tatthevantaradhāyathāti.</p>
-
+</div>
 <p class="endsection">Padhānasuttaṁ dutiyaṁ.</p>
 
 </div>
@@ -472,5 +532,6 @@ Tassa sokaparetassa,<br> Vīṇā kacchā abhassatha;
  </script>
  <script src="../js/footer.js"></script><script src="../js/dpd_deconstructor.js"></script><script src="../js/dpd_ebts.js"></script><script src="../js/dpd_i2h.js"></script>
  <script src="/sw.js"></script>
+<script>document.addEventListener("click",e=>{if(e.target.closest("a.dg-link")){e.preventDefault();const s=new URLSearchParams(window.location.search).get("s");window.location.href=e.target.closest("a").href+(s?`&s=${encodeURIComponent(s)}`:"");}})</script>
  </body>
  </html>

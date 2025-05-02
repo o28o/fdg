@@ -414,9 +414,8 @@ echo
 echo dpd-ui
 cd /var/www/dpd-ui
 git pull
-echo
+echo 
 echo audio
-echo
 cd /var/www/html/assets/audio
 git pull"
 }

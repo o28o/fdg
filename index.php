@@ -346,7 +346,7 @@ Add <strong>Dhamma.gift</strong> to your Home Screen?
   
   
 <div class="form-check form-check-inline">
-  <input class="form-check-input" type="checkbox" id="laCheckbox" name="la" <?php if (isset($extra) && $extra=="-la$defaultla ") echo "checked";?>  value='<?php echo "-la$defaultla"?>'>
+  <input class="form-check-input" type="checkbox" id="laCheckbox" name="la" <?php if (isset($extra) && $extra=="-la$defaultla -lb$defaultla") echo "checked";?>  value='<?php echo "-la$defaultla -lb$defaultla"?>'>
   <div data-bs-toggle="tooltip" data-bs-placement="bottom" title='<?php echo $tooltipla;?>'><?php echo $checkboxla;?><span class="text-muted">*</span></div>
   </div>
   

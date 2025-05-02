@@ -124,14 +124,10 @@ echo '<!--
 <figcaption class="horiz-menu-item figure-caption text-center">' . $anamehist . '</figcaption>   
 </figure>	  
 </a>
-<!--
- <a class="text-decoration-none mx-1" href="/dpd">
-<figure class="figure">
-<i class="menu-icon fa-solid fa-spell-check"></i>
-<figcaption class="horiz-menu-item figure-caption text-center">DPD Online</figcaption>   
-</figure>	  
-</a>
 
+
+
+<!--
 <a class="dropdown text-decoration-none mx-1 d-md-inline-block" id="CSEMenu" data-bs-toggle="dropdown" aria-expanded="false" href="#">
 <figure class="figure d-md-inline-block">
   <i class="menu-icon fa-brands fa-google"></i>
@@ -152,6 +148,41 @@ echo '<!--
 </figure>	  
 </a> 
     -->
+
+<a class="dropdown text-decoration-none mx-1 d-md-inline-block" id="MenuDict" data-bs-toggle="dropdown" aria-expanded="false" href="#">
+  <figure class="figure d-md-inline-block">
+    <i class="menu-icon fa-solid fa-book-atlas"></i>
+    <figcaption class="horiz-menu-item figure-caption text-center">Dictionaries</figcaption>   
+  </figure>	  
+</a>
+
+<ul class="dropdown-menu" aria-labelledby="MenuDict">
+
+         <li><a class="dropdown-item" target="_blank" href="https://dharmamitra.org/">Mitra Translator</a></li>
+
+   <li><a class="dropdown-item" target="_blank" href="https://Wisdomlib.org">Wisdomlib.org</a></li>
+
+               <li>
+         <div class="dropdown-item ">
+                      <i class="' . $iconimportant . '"></i>        <a class="text-reset" target="" href="https://dict.dhamma.gift/">Digital Pāḷi Dict</a> 
+         <a class="text-reset" target=""  href="https://digitalpalidictionary.github.io/">Offline</a>
+       <a class="text-reset" target="" href="https://github.com/o28o/dictPlugin/tree/main?tab=readme-ov-file#for-end-users-requires-installing-browser-extention-orand-setup">Extentions</a>     
+       </div>
+         </li>   
+   
+   <li><a class="dropdown-item" target="_blank" href="https://gandhari.org/dop">Gandhari.org dictionaries</a></li>   
+   <li><a class="dropdown-item" target="_blank" href="https://dsal.uchicago.edu/dictionaries/pali/">Rhys Davids dictionary PTS</a></li>          
+  <li><a class="dropdown-item" target="_blank" href="http://dictionary.tamilcube.com/pali-dictionary.aspx">Eng-Pali Dictionary</a></li>
+
+      <li>
+         <div class="dropdown-item "> Eng-Sanskr Dictionary
+         <a class="text-reset" target=""  href="https://sanskritdictionary.com/?iencoding=iast&q=&lang=sans&action=Search">Skrdict</a>
+     <a class="text-reset" target="" href="https://www.learnsanskrit.cc/translate?search=&dir=au">Learnskr</a>  
+       </div>
+         </li>    
+
+</ul>
+
 
 <a class="dropdown text-decoration-none mx-1 d-md-inline-block" id="materials" data-bs-toggle="dropdown" aria-expanded="false" href="#">
 <figure class="figure d-md-inline-block">
@@ -276,28 +307,6 @@ echo '<!--
       <a class="text-reset" target="_blank" href="https://norbu-ai.org/">Norbu AI</a>
            </div>
          </li>
-         <li><a class="dropdown-item" target="_blank" href="https://dharmamitra.org/">Mitra Translator</a></li>
-
-   <li><a class="dropdown-item" target="_blank" href="https://Wisdomlib.org">Wisdomlib.org</a></li>
-
-               <li>
-         <div class="dropdown-item ">
-                      <i class="' . $iconimportant . '"></i>        <a class="text-reset" target="" href="https://dict.dhamma.gift/">Digital Pāḷi Dict</a> 
-         <a class="text-reset" target=""  href="https://digitalpalidictionary.github.io/">Offline</a>
-       <a class="text-reset" target="" href="https://github.com/o28o/dictPlugin/tree/main?tab=readme-ov-file#for-end-users-requires-installing-browser-extention-orand-setup">Extentions</a>     
-       </div>
-         </li>   
-   
-   <li><a class="dropdown-item" target="_blank" href="https://gandhari.org/dop">Gandhari.org dictionaries</a></li>   
-   <li><a class="dropdown-item" target="_blank" href="https://dsal.uchicago.edu/dictionaries/pali/">Rhys Davids dictionary PTS</a></li>          
-  <li><a class="dropdown-item" target="_blank" href="http://dictionary.tamilcube.com/pali-dictionary.aspx">Eng-Pali Dictionary</a></li>
-
-      <li>
-         <div class="dropdown-item "> Eng-Sanskr Dictionary
-         <a class="text-reset" target=""  href="https://sanskritdictionary.com/?iencoding=iast&q=&lang=sans&action=Search">Skrdict</a>
-     <a class="text-reset" target="" href="https://www.learnsanskrit.cc/translate?search=&dir=au">Learnskr</a>  
-       </div>
-         </li>    
 
    
               <li>

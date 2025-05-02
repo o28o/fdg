@@ -167,6 +167,41 @@ echo '<!--
 </a> 
   
     -->
+
+<a class="dropdown text-decoration-none mx-1 d-md-inline-block" id="MenuDict" data-bs-toggle="dropdown" aria-expanded="false" href="#">
+  <figure class="figure d-md-inline-block">
+    <i class="menu-icon fa-solid fa-book-atlas"></i>
+    <figcaption class="horiz-menu-item figure-caption text-center">Словари</figcaption>   
+  </figure>	  
+</a>
+
+<ul class="dropdown-menu" aria-labelledby="MenuDict">
+
+         <li><a class="dropdown-item" target="_blank" href="https://dharmamitra.org/">Mitra Translator</a></li>
+
+   <li><a class="dropdown-item" target="_blank" href="https://Wisdomlib.org">Wisdomlib.org</a></li>
+
+               <li>
+         <div class="dropdown-item ">
+                      <i class="' . $iconimportant . '"></i>        <a class="text-reset" target="" href="https://dict.dhamma.gift/">Digital Pāḷi Dict</a> 
+         <a class="text-reset" target=""  href="https://digitalpalidictionary.github.io/">Оффлайн</a>
+       <a class="text-reset" target="" href="https://github.com/o28o/dictPlugin/tree/main?tab=readme-ov-file#for-end-users-requires-installing-browser-extention-orand-setup">Расширения</a>     
+       </div>
+         </li>   
+   
+   <li><a class="dropdown-item" target="_blank" href="https://gandhari.org/dop">Gandhari.org словари</a></li>   
+   <li><a class="dropdown-item" target="_blank" href="https://dsal.uchicago.edu/dictionaries/pali/">Rhys Davids словарь PTS</a></li>          
+  <li><a class="dropdown-item" target="_blank" href="http://dictionary.tamilcube.com/pali-dictionary.aspx">Англ-Пали Словарь</a></li>
+
+      <li>
+         <div class="dropdown-item "> Англ-Санскр Словарь
+         <a class="text-reset" target=""  href="https://sanskritdictionary.com/?iencoding=iast&q=&lang=sans&action=Search">Skrdict</a>
+     <a class="text-reset" target="" href="https://www.learnsanskrit.cc/translate?search=&dir=au">Learnskr</a>  
+       </div>
+         </li>    
+
+</ul>    
+    
 <a class="dropdown text-decoration-none mx-1 d-md-inline-block" id="materials" data-bs-toggle="dropdown" aria-expanded="false" href="#">
 <figure class="figure d-md-inline-block">
   <i class="menu-icon icon-item fa-solid fa-graduation-cap"></i>
@@ -292,7 +327,6 @@ echo '<!--
   
          </div>
          </li>
-      <li><a class="dropdown-item" target="_blank" href="https://dharmamitra.org/">Mitra Переводчик</a></li>
 
               <li>
          <div class="dropdown-item ">PTS Конвертер
@@ -310,29 +344,6 @@ echo '<!--
        </div>
          </li>   
      
-   <li><a class="dropdown-item" target="_blank" href="https://Wisdomlib.org">Wisdomlib.org</a></li>
-
-               <li>
-         <div class="dropdown-item ">
-                      <i class="' . $iconimportant . '"></i>        <a class="text-reset" target="" href="https://dict.dhamma.gift/ru/">Digital Pāḷi Dict</a>
-         <a class="text-reset" target=""  href="https://digitalpalidictionary.github.io/rus/">Оффлайн</a>
-       <a class="text-reset" target="" href="https://github.com/o28o/dictPlugin/tree/main?tab=readme-ov-file#for-end-users-requires-installing-browser-extention-orand-setup">Расширения</a>     
-       </div>
-         </li>   
-  
-   <li><a class="dropdown-item" target="_blank" href="https://gandhari.org/dop">Словари на Gandhari.org</a></li>    
-   <li><a class="dropdown-item" target="_blank" href="https://dsal.uchicago.edu/dictionaries/pali/">Словарь "Rhys Davids" PTS</a></li>       
-
-
-  <li><a class="dropdown-item" target="_blank" href="http://dictionary.tamilcube.com/pali-dictionary.aspx">Англ-Пали Словарь</a></li>
-  
-      <li>
-         <div class="dropdown-item "> Англ-Санскр Словарь
-         <a class="text-reset" target=""  href="https://sanskritdictionary.com/?iencoding=iast&q=&lang=sans&action=Search">Skrdict</a>
-     <a class="text-reset" target="" href="https://www.learnsanskrit.cc/translate?search=&dir=au">Learnskr</a>  
-       </div>
-         </li>    
-  
    <li><a class="dropdown-item" href="/ru/assets/linebyline.html">Создание Построчных Файлов</a></li>
    <li><a class="dropdown-item" href="/ru/assets/diff/?lang=pl">' . $anamesdiff . '</a></li>
  <li><a class="dropdown-item" href="/ru/assets/makelist.html">

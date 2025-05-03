@@ -301,7 +301,7 @@ if (translator === "o") {
      </p>
      </div>`;
      
-      const scButton = `<a href="https://suttacentral.net/${slug}/en/${translator}">Read on SC.net</a>`;
+      const scButton = `<a href="https://suttacentral.net/${slug}/en/${translator}">Read on SC</a>`;
       
       
       $.ajax({
@@ -379,7 +379,7 @@ scLink += `<a target="" href="${textUrl}">DPR</a>&nbsp;`;
 }
 //dpr end
 
-scLink += `<a target="" href="https://suttacentral.net/${slug}/en/${translator}">SC.net</a>&nbsp;`;
+scLink += `<a target="" href="https://suttacentral.net/${slug}/en/${translator}">SC</a>&nbsp;`;
       
 //<a href="/legacy.suttacentral.net/read/pi/${slug}.html">legacy.SC</a>&nbsp; <a target="" href="https://voice.suttacentral.net/scv/index.html?#/sutta?search=${slug}">Voice.SC</a> 
       if (linksArray[0].length >= 4) {

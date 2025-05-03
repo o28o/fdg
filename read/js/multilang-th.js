@@ -518,7 +518,7 @@ else if ((translator === "" && texttype === "vinaya") || (translator === "brahma
      </p>
      </div>`;
      
-      const scButton = `<a href="https://suttacentral.net/${slug}/th/${translator}">Читать на SC.net</a>`;
+      const scButton = `<a href="https://suttacentral.net/${slug}/th/${translator}">Читать на SC</a>`;
       
       $.ajax({
       url: "/read/php/extralinks.php?fromjs=" +slug
@@ -588,11 +588,11 @@ scLink += `<a target="" href="${textUrl}">DPR</a> `;
 //dpr end
 
 if ((translator === 'sujato') || (translator === 'brahmali')) {
-  scLink += `<a target="" href="https://suttacentral.net/${slug}/en/${translator}">SC.net</a> `;  
+  scLink += `<a target="" href="https://suttacentral.net/${slug}/en/${translator}">SC</a> `;  
 } else {
-  scLink += `<a target="" href="https://suttacentral.net/${slug}/th/siam_rath">SC.net</a> `;
+  scLink += `<a target="" href="https://suttacentral.net/${slug}/th/siam_rath">SC</a> `;
 }
- //     scLink += `<a target="" href="https://suttacentral.net/${slug}/en/${translator}">SC.net</a> `; 
+ //     scLink += `<a target="" href="https://suttacentral.net/${slug}/en/${translator}">SC</a> `; 
 
 //<a href="/legacy.suttacentral.net/read/pi/${slug}.html">legacy.SC</a>  <a target="" href="https://voice.suttacentral.net/scv/index.html?#/sutta?search=${slug}">Voice.SC</a>
       if (linksArray[0].length >= 4) {

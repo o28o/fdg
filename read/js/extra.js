@@ -26,7 +26,7 @@ function showNotification(message) {
   
   // Добавляем иконку (если нужно)
   const icon = document.createElement('span');
-  icon.innerHTML = '✓'; // или можно использовать SVG
+  icon.innerHTML = ''; // или можно использовать SVG
   notification.appendChild(icon);
   
   // Добавляем текст

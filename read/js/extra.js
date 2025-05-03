@@ -25,11 +25,11 @@ async function copyToClipboard(text) {
 }
 
 function showNotification(message) {
-  let notification = document.getElementById('bubbleNotification');
+  let notification = document.getElementById('bubbleNotif2');
   if (!notification) {
     // Создаем уведомление на лету, если его нет
     notification = document.createElement('div');
-    notification.id = 'bubbleNotification';
+    notification.id = 'bubbleNotif2';
     notification.style.position = 'fixed';
     notification.style.bottom = '20px';
     notification.style.right = '20px';
@@ -135,17 +135,17 @@ function initSuttaCopy() {
   // console.log('.rus-lang элементы:', document.querySelectorAll('.rus-lang').length);
   // console.log('.copy-pali элементы:', document.querySelectorAll('.copy-pali').length);
   // console.log('.copy-translation элементы:', document.querySelectorAll('.copy-translation').length);
-  // console.log('Элемент bubbleNotification:', document.getElementById('bubbleNotification') ? 'Найден' : 'Не найден');
+  // console.log('Элемент bubbleNotif2:', document.getElementById('bubbleNotif2') ? 'Найден' : 'Не найден');
   
   // Слушатель на всём документе
   document.addEventListener('click', handleSuttaClick);
   // console.log('Модуль sutta-copy инициализирован');
   
   // Создаем элемент уведомления, если его нет
-  if (!document.getElementById('bubbleNotification')) {
+  if (!document.getElementById('bubbleNotif2')) {
     // console.log('Создаем элемент уведомления, так как он отсутствует');
     const notification = document.createElement('div');
-    notification.id = 'bubbleNotification';
+    notification.id = 'bubbleNotif2';
     notification.style.position = 'fixed';
     notification.style.bottom = '20px';
     notification.style.right = '20px';
@@ -161,7 +161,7 @@ function initSuttaCopy() {
     // Добавляем стиль для класса .show
     const style = document.createElement('style');
     style.textContent = `
-      #bubbleNotification.show {
+      #bubbleNotif2.show {
         opacity: 1;
       }
     `;

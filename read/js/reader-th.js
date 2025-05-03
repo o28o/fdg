@@ -532,11 +532,17 @@ if ((translator === 'sujato') || (translator === 'brahmali')) {
 let origUrl = window.location.href;
 let rvUrl = origUrl.replace("/th/read/", "/read/");
 rvUrl = rvUrl.replace("/th/read/", "/read/");
-dUrl = rvUrl.replace("/read/", "/d");
+dUrl = rvUrl.replace("/read/", "/d/");
 rvUrl = rvUrl.replace("/ml/", "/read/");
 rvUrl = rvUrl.replace("/read/", "/memorize/");
 
-const warning = "<br><p class='warning' >Warning!<a style='cursor: pointer;' class='text-decoration-none' target='' href='" + dUrl + "'>&nbsp;</a> Translations, dictionaries and<br>commentaries were not made by the Blessed One.<a style='cursor: pointer;' class='text-decoration-none' target='' href='" + dUrl + "'>&nbsp;</a><br>Cross-check with Pali in 4 main nikayas.<a class='text-decoration-none' target='' href='" + rvUrl + "'>&nbsp;</a></p>";
+const warning = `<br>
+  <div style="max-width: 550px; margin: 0 auto; text-align: center;">
+    <p class='warning'>
+      Warning!<a style='cursor: pointer;' class='text-decoration-none' target='' href='${dUrl}'>&nbsp;</a>Translations, dictionaries and commentaries were not made by the Blessed One.<a style='cursor: pointer;' class='text-decoration-none' target='' href='${dUrl}'>&nbsp;</a>Cross-check with Pali in 4 main nikayas.<a class='text-decoration-none' target='' href='${rvUrl}'>&nbsp;</a>
+    </p>
+  </div>
+`;
 
 
 suttaArea.innerHTML =  scLink + warning + translatorByline + html + translatorByline + warning + scLink;

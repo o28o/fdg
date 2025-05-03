@@ -312,6 +312,7 @@ echo '<div style="max-width: 450px; display: none;" class="alert alert-primary a
    <br>
    <strong>Android</strong> Chrome<br>
    Настройки -> добавить на Главную<br>
+   После этого вы сможете искать любое выделенное слово через "Поделиться" -> DG из контекстного меню ОС<br>
    <strong>iOS</strong> Safari<br>  
    Поделиться -> добавить на Главную. 
 
@@ -323,6 +324,7 @@ Add <strong>Dhamma.gift</strong> to your Home Screen?
    <br>
    <strong>Android</strong> Chrome<br>
    Settings -> Add to Home Screen<br>
+      After that you can search any selected word using "Share" -> DG from OS context menu<br>
    <strong>iOS</strong> Safari<br>
   Share -> Add to Home Screen.
 

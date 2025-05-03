@@ -170,7 +170,7 @@ echo '<!--
        </div>
          </li>   
    
-   <li><a class="dropdown-item" target="_blank" href="https://gandhari.org/dop">Gandhari.org dictionaries</a></li>   
+   <li><a class="dropdown-item" target="_blank" href="https://gandhari.org/dop">M. Cone Gandhari.org dictionary</a></li>   
    <li><a class="dropdown-item" target="_blank" href="https://dsal.uchicago.edu/dictionaries/pali/">Rhys Davids dictionary PTS</a></li>          
   <li><a class="dropdown-item" target="_blank" href="http://dictionary.tamilcube.com/pali-dictionary.aspx">Eng-Pali Dictionary</a></li>
 

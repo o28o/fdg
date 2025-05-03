@@ -739,96 +739,80 @@ break; // Прекратить поиск после первого совпад
 
 <script src="/assets/js/paliLookup.js" defer></script>
 
+
 <script>
-  document.addEventListener('DOMContentLoaded', function() {
-    // Определяем Safari
-    const isSafari = /^((?!chrome|android).)*safari/i.test(navigator.userAgent);
-    
-    // Обработчики для всех браузеров
-    function initVoicePlayers() {
-        document.querySelectorAll('.voice-link').forEach(link => {
-            // Удаляем предыдущие обработчики
-            link.removeEventListener('click', handleClick);
-            link.removeEventListener('touchstart', handleTouch);
-            
-            // Для Safari используем и touch и click
-            if (isSafari) {
-                link.addEventListener('touchstart', handleTouch, {passive: true});
-                link.addEventListener('click', handleClick);
-            } else {
-                link.addEventListener('click', handleClick);
-            }
-        });
-        
-        // Кнопка закрытия
-        document.querySelectorAll('.close-player').forEach(btn => {
-            btn.addEventListener('click', closeAllPlayers);
-        });
-    }
-    
-    function handleClick(e) {
-        e.preventDefault();
-        togglePlayer(this);
-    }
-    
-    function handleTouch(e) {
-        // Для Safari iOS предотвращаем ghost click
-        e.preventDefault();
-        togglePlayer(this);
-    }
-    
-    function togglePlayer(link) {
-        const dropdown = link.closest('.voice-dropdown');
-        const wasActive = dropdown.classList.contains('active');
-        
-        closeAllPlayers();
-        
-        if (!wasActive) {
-            dropdown.classList.add('active');
-            // Фокус на аудио элементе
-            const audio = dropdown.querySelector('audio');
-            if (audio) {
-                audio.focus();
-                // Для iOS нужно явно запускать воспроизведение
-                if (isSafari) {
-                    audio.load();
-                    audio.play().catch(e => console.log('Autoplay prevented'));
-                }
-            }
-        }
-    }
-    
-    function closeAllPlayers() {
-        document.querySelectorAll('.voice-dropdown.active').forEach(dropdown => {
-            dropdown.classList.remove('active');
-        });
-    }
-    
-    // Закрытие по клику вне плеера
-    document.addEventListener('click', function(e) {
-        if (!e.target.closest('.voice-dropdown') && 
-            !e.target.closest('.voice-player')) {
-            closeAllPlayers();
-        }
-    });
-    
-    // Инициализация при загрузке
-    initVoicePlayers();
-    
-    // Для динамически добавленных элементов
-    if (typeof MutationObserver !== 'undefined') {
-        const observer = new MutationObserver(function(mutations) {
-            initVoicePlayers();
-        });
-        
-        observer.observe(document.body, {
-            childList: true,
-            subtree: true
-        });
-    }
+document.addEventListener('DOMContentLoaded', function() {
+const isSafari = /^((?!chrome|android).)*safari/i.test(navigator.userAgent);
+
+function initVoicePlayers() {
+document.querySelectorAll('.voice-link').forEach(link => {
+link.removeEventListener('click', handleClick);
+link.removeEventListener('touchstart', handleTouch);
+
+if (isSafari) {
+link.addEventListener('touchstart', handleTouch, {
+passive: true
+});
+link.addEventListener('click', handleClick);
+} else {
+link.addEventListener('click', handleClick);
+}
+});
+
+// Кнопка закрытия
+document.querySelectorAll('.close-player').forEach(btn => {
+btn.addEventListener('click', function(e) {
+e.stopPropagation();
+this.closest('.voice-dropdown').classList.remove('active');
+});
+});
+}
+
+function handleClick(e) {
+e.preventDefault();
+togglePlayer(this);
+}
+
+function handleTouch(e) {
+e.preventDefault();
+togglePlayer(this);
+}
+
+function togglePlayer(link) {
+const dropdown = link.closest('.voice-dropdown');
+const wasActive = dropdown.classList.contains('active');
+
+closeAllPlayers();
+
+if (!wasActive) {
+dropdown.classList.add('active');
+// Убрал автозапуск аудио для всех браузеров, включая Safari
+// Теперь аудио будет запускаться только при клике на Play внутри плеера
+}
+}
+
+function closeAllPlayers() {
+document.querySelectorAll('.voice-dropdown.active').forEach(dropdown => {
+dropdown.classList.remove('active');
+});
+}
+
+document.addEventListener('click', function(e) {
+if (!e.target.closest('.voice-dropdown') && !e.target.closest('.voice-player')) {
+closeAllPlayers();
+}
+});
+
+initVoicePlayers();
+
+if (typeof MutationObserver !== 'undefined') {
+new MutationObserver(initVoicePlayers).observe(document.body, {
+childList: true,
+subtree: true
+});
+}
 });
 </script>
-
 
 <script type="module" src="/read/js/extra.js"></script>
 </body>

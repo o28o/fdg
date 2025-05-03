@@ -154,13 +154,13 @@
     }
 
     // Добавление сообщения в вывод
-function addToOutput(message, className = '') {
-  const line = document.createElement('div');
-  line.innerHTML = message;  // вместо textContent
-  line.className = className;
-  outputEl.appendChild(line);
-  outputEl.scrollTop = outputEl.scrollHeight;
-}
+    function addToOutput(message, className = '') {
+      const line = document.createElement('div');
+      line.innerHTML = message; // вместо textContent
+      line.className = className;
+      outputEl.appendChild(line);
+      outputEl.scrollTop = outputEl.scrollHeight;
+    }
     // Очистка вывода
     function clearOutput() {
       outputEl.innerHTML = '';
@@ -231,7 +231,7 @@ function addToOutput(message, className = '') {
       // Выбираем случайный термин из доступных
       term = availableTerms[Math.floor(Math.random() * availableTerms.length)];
       addToOutput(`Starting tests with term: <a target="_blank" href="https://dict.dhamma.gift/search_html?q=${term}">${term}</a>`, 'info');
-    //  addToOutput(`Source: ${availableTerms === defaultTerms ? 'default terms': 'sutta_words.txt'}`, 'info');
+      //  addToOutput(`Source: ${availableTerms === defaultTerms ? 'default terms': 'sutta_words.txt'}`, 'info');
       addToOutput(`Your local time: ${getClientTimestamp()}`, 'info');
 
       try {
@@ -243,7 +243,7 @@ function addToOutput(message, className = '') {
         const results = [];
 
         results.push(await checkEndpoint("RU", "/ru/search_html", baseUrl));
-        results.push(await checkEndpoint("RU", "/ru/search_html", "https://dpdict.net"));
+        results.push(await checkEndpoint("RU", "/search_html", "https://ru.dpdict.net"));
         results.push(await checkEndpoint("EN", "/search_html", baseUrl));
         results.push(await checkEndpoint("EN", "/search_html", "https://dpdict.net"));
 

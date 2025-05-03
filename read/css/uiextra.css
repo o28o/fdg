@@ -322,9 +322,3 @@ margin-left: 6px;
     box-shadow: 0 2px 5px rgba(0,0,0,0.5);
 }
 
-/* Улучшение для мобильных */
-@media (hover: none) {
-    .voice-dropdown:hover .voice-player {
-        display: none; /* Отключаем hover-эффект на тач-устройствах */
-    }
-}

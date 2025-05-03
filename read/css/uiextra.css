@@ -269,22 +269,26 @@ margin-left: 6px;
     }
     
     
+/* всплывающее окно плеера */
     
-.voice-dropdown {
+    .voice-dropdown {
     position: relative;
     display: inline-block;
 }
 
+
 .voice-link {
     display: inline-block;
+    position: relative; /* Для мобильного взаимодействия */
 }
 
+/* Основные стили плеера */
 .voice-player {
     display: none;
     position: fixed;
-    top: 25%;          /* Позиция от верхнего края */
-    left: 50%;         /* Горизонтальное центрирование */
-    transform: translateX(-50%);  /* Только по X (горизонталь) */
+    top: 25%;
+    left: 50%;
+    transform: translateX(-50%);
     background: white;
     padding: 20px;
     border: 1px solid #ddd;
@@ -294,10 +298,21 @@ margin-left: 6px;
     border-radius: 24px;
 }
 
+/* 1. Показываем плеер при hover (десктопы) */
 .voice-dropdown:hover .voice-player {
     display: block;
 }
 
+/* 2. Показываем плеер при фокусе (мобильные + десктопы) */
+.voice-link:focus + .voice-player,
+.voice-player:focus-within {
+    display: block;
+}
+
+/* 3. Фикс для десктопов: сохраняем открытым при hover на плеере */
+.voice-player:hover {
+    display: block !important;
+}
 
 /* Темная тема */
 .dark .voice-player {
@@ -307,13 +322,9 @@ margin-left: 6px;
     box-shadow: 0 2px 5px rgba(0,0,0,0.5);
 }
 
-
-/* Дополнительные стили для темной темы, если нужно */
-.dark {
-    background-color: #222;
-    color: #eee;
-}
-
-.dark .voice-dropdown:hover {
-    background-color: #444;
+/* Улучшение для мобильных */
+@media (hover: none) {
+    .voice-dropdown:hover .voice-player {
+        display: none; /* Отключаем hover-эффект на тач-устройствах */
+    }
 }

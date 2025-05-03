@@ -738,6 +738,84 @@ break; // Прекратить поиск после первого совпад
 
 
 <script src="/assets/js/paliLookup.js" defer></script>
+
+<script>
+  
+  document.addEventListener('DOMContentLoaded', function() {
+    // Определяем iOS Safari
+    const isIOS = () => {
+        return /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream;
+    };
+
+    // Добавляем iOS-специфичные классы если нужно
+    if (isIOS()) {
+        document.documentElement.classList.add('ios-safari');
+        
+        // Добавляем дополнительные стили прямо в head
+        const style = document.createElement('style');
+        style.textContent = `
+            .ios-safari .voice-link {
+                padding: 8px 12px;
+            }
+            .ios-safari .voice-player {
+                -webkit-overflow-scrolling: touch;
+            }
+        `;
+        document.head.appendChild(style);
+    }
+
+    // Общая логика работы для всех браузеров
+    function handleVoiceLinkClick(e) {
+        e.preventDefault();
+        e.stopPropagation();
+        
+        const dropdown = this.closest('.voice-dropdown');
+        const wasActive = dropdown.classList.contains('active');
+        
+        document.querySelectorAll('.voice-dropdown.active').forEach(el => {
+            el.classList.remove('active');
+        });
+        
+        if (!wasActive) {
+            dropdown.classList.add('active');
+        }
+    }
+
+    // Особые обработчики для iOS
+    if (isIOS()) {
+        document.querySelectorAll('.voice-link').forEach(link => {
+            link.addEventListener('touchstart', function() {
+                this.classList.add('voice-link-touch');
+            });
+            
+            link.addEventListener('touchend', function(e) {
+                this.classList.remove('voice-link-touch');
+                handleVoiceLinkClick.call(this, e);
+            });
+        });
+    } else {
+        document.querySelectorAll('.voice-link').forEach(link => {
+            link.addEventListener('click', handleVoiceLinkClick);
+        });
+    }
+
+    document.addEventListener('click', function(e) {
+        if (!e.target.closest('.voice-dropdown')) {
+            document.querySelectorAll('.voice-dropdown.active').forEach(el => {
+                el.classList.remove('active');
+            });
+        }
+    });
+    
+    document.querySelectorAll('.voice-player').forEach(player => {
+        player.addEventListener('click', function(e) {
+            e.stopPropagation();
+        });
+    });
+});
+</script>
+
+
 <script type="module" src="/read/js/extra.js"></script>
 </body>
 </html>

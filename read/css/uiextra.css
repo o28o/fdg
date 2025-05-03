@@ -322,3 +322,57 @@ margin-left: 6px;
     box-shadow: 0 2px 5px rgba(0,0,0,0.5);
 }
 
+/* textarea
+.voice-dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.voice-link {
+    display: inline-block;
+    cursor: pointer;
+    padding: 8px 12px;
+    -webkit-tap-highlight-color: transparent;
+}
+
+.voice-player {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: white;
+    padding: 20px;
+    border: 1px solid #ddd;
+    z-index: 1000;
+    min-width: 300px;
+    max-width: 90vw;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    border-radius: 24px;
+}
+
+.voice-dropdown.active .voice-player {
+    display: block;
+}
+
+.close-player {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: none;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.player-links {
+    margin-top: 15px;
+    text-align: center;
+}
+
+@supports (-webkit-touch-callout: none) {
+    .voice-link {
+        min-height: 44px; /* Минимальный размер для тач-целей */
+    }
+}
+*/

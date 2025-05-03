@@ -740,78 +740,92 @@ break; // Прекратить поиск после первого совпад
 <script src="/assets/js/paliLookup.js" defer></script>
 
 <script>
-  
   document.addEventListener('DOMContentLoaded', function() {
-    // Определяем iOS Safari
-    const isIOS = () => {
-        return /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream;
-    };
-
-    // Добавляем iOS-специфичные классы если нужно
-    if (isIOS()) {
-        document.documentElement.classList.add('ios-safari');
+    // Определяем Safari
+    const isSafari = /^((?!chrome|android).)*safari/i.test(navigator.userAgent);
+    
+    // Обработчики для всех браузеров
+    function initVoicePlayers() {
+        document.querySelectorAll('.voice-link').forEach(link => {
+            // Удаляем предыдущие обработчики
+            link.removeEventListener('click', handleClick);
+            link.removeEventListener('touchstart', handleTouch);
+            
+            // Для Safari используем и touch и click
+            if (isSafari) {
+                link.addEventListener('touchstart', handleTouch, {passive: true});
+                link.addEventListener('click', handleClick);
+            } else {
+                link.addEventListener('click', handleClick);
+            }
+        });
         
-        // Добавляем дополнительные стили прямо в head
-        const style = document.createElement('style');
-        style.textContent = `
-            .ios-safari .voice-link {
-                padding: 8px 12px;
-            }
-            .ios-safari .voice-player {
-                -webkit-overflow-scrolling: touch;
-            }
-        `;
-        document.head.appendChild(style);
+        // Кнопка закрытия
+        document.querySelectorAll('.close-player').forEach(btn => {
+            btn.addEventListener('click', closeAllPlayers);
+        });
     }
-
-    // Общая логика работы для всех браузеров
-    function handleVoiceLinkClick(e) {
+    
+    function handleClick(e) {
         e.preventDefault();
-        e.stopPropagation();
-        
-        const dropdown = this.closest('.voice-dropdown');
+        togglePlayer(this);
+    }
+    
+    function handleTouch(e) {
+        // Для Safari iOS предотвращаем ghost click
+        e.preventDefault();
+        togglePlayer(this);
+    }
+    
+    function togglePlayer(link) {
+        const dropdown = link.closest('.voice-dropdown');
         const wasActive = dropdown.classList.contains('active');
         
-        document.querySelectorAll('.voice-dropdown.active').forEach(el => {
-            el.classList.remove('active');
-        });
+        closeAllPlayers();
         
         if (!wasActive) {
             dropdown.classList.add('active');
+            // Фокус на аудио элементе
+            const audio = dropdown.querySelector('audio');
+            if (audio) {
+                audio.focus();
+                // Для iOS нужно явно запускать воспроизведение
+                if (isSafari) {
+                    audio.load();
+                    audio.play().catch(e => console.log('Autoplay prevented'));
+                }
+            }
         }
     }
-
-    // Особые обработчики для iOS
-    if (isIOS()) {
-        document.querySelectorAll('.voice-link').forEach(link => {
-            link.addEventListener('touchstart', function() {
-                this.classList.add('voice-link-touch');
-            });
-            
-            link.addEventListener('touchend', function(e) {
-                this.classList.remove('voice-link-touch');
-                handleVoiceLinkClick.call(this, e);
-            });
-        });
-    } else {
-        document.querySelectorAll('.voice-link').forEach(link => {
-            link.addEventListener('click', handleVoiceLinkClick);
+    
+    function closeAllPlayers() {
+        document.querySelectorAll('.voice-dropdown.active').forEach(dropdown => {
+            dropdown.classList.remove('active');
         });
     }
-
+    
+    // Закрытие по клику вне плеера
     document.addEventListener('click', function(e) {
-        if (!e.target.closest('.voice-dropdown')) {
-            document.querySelectorAll('.voice-dropdown.active').forEach(el => {
-                el.classList.remove('active');
-            });
+        if (!e.target.closest('.voice-dropdown') && 
+            !e.target.closest('.voice-player')) {
+            closeAllPlayers();
         }
     });
     
-    document.querySelectorAll('.voice-player').forEach(player => {
-        player.addEventListener('click', function(e) {
-            e.stopPropagation();
+    // Инициализация при загрузке
+    initVoicePlayers();
+    
+    // Для динамически добавленных элементов
+    if (typeof MutationObserver !== 'undefined') {
+        const observer = new MutationObserver(function(mutations) {
+            initVoicePlayers();
         });
-    });
+        
+        observer.observe(document.body, {
+            childList: true,
+            subtree: true
+        });
+    }
 });
 </script>
 

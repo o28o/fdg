@@ -298,9 +298,9 @@ margin-left: 6px;
     border-radius: 24px;
 }
 
-/* 1. Показываем плеер при hover (десктопы) */
+/* 1. не Показываем плеер при hover (десктопы) */
 .voice-dropdown:hover .voice-player {
-    display: block;
+    display: none;
 }
 
 /* 2. Показываем плеер при фокусе (мобильные + десктопы) */

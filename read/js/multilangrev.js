@@ -471,7 +471,7 @@ const rvfr = "<a class='text-decoration-none' target='' href='" + frUrl + "'>&nb
 const scrollLink = "<a class='text-decoration-none' target='' href='javascript:void(0);' onclick='window.scrollTo(0, document.body.scrollHeight)'>&nbsp;</a>";
 
 // Добавляем ссылку в вашу строку предупреждения
-const warning = "<p class='warning'>Warning!" + rvfr + "<br>Translations, dictionaries and commentaries <br>were not made by the Blessed One.<a style='cursor: pointer;' class='text-decoration-none' target='' href='" + dUrl + "'>&nbsp;</a><br>Cross-check with Pali in 4 main nikayas." + scrollLink + "</p>";
+const warning = "<br><p class='warning'>Warning!" + rvfr + "Translations, dictionaries and<br>commentaries were not made by the Blessed One.<a style='cursor: pointer;' class='text-decoration-none' target='' href='" + dUrl + "'>&nbsp;</a><br>Cross-check with Pali in 4 main nikayas." + scrollLink + "</p>";
 
 
 

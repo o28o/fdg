@@ -498,7 +498,7 @@ dUrl = origUrl.replace("/r/", "/d/");
 rvUrl = rvUrl.replace("/ml/", "/r/");
 rvUrl = rvUrl.replace("/read/", "/memorize/");
 
-const warning = "<p class='warning'>Внимание!<a style='cursor: pointer;' class='text-decoration-none' target='' href='" + dUrl + "'>&nbsp;</a><br>Переводы, словари и комментарии<br>сделаны не Благословенным.<a style='cursor: pointer;' class='text-decoration-none' target='' href='" + thUrl + "'>&nbsp;</a><br>Сверяйтесь с Пали в 4 основных никаях.<a style='cursor: pointer;' class='text-decoration-none' target='' href='" + rvUrl + "'>&nbsp;</a></p>";
+const warning = "<br><p class='warning'>Внимание!<a style='cursor: pointer;' class='text-decoration-none' target='' href='" + dUrl + "'>&nbsp;</a>Переводы, словари и комментарии сделаны<br>не Благословенным.<a style='cursor: pointer;' class='text-decoration-none' target='' href='" + thUrl + "'>&nbsp;</a>Сверяйтесь с Пали в 4 основных никаях.<a style='cursor: pointer;' class='text-decoration-none' target='' href='" + rvUrl + "'>&nbsp;</a></p>";
 
 suttaArea.innerHTML =  scLink + warning + translatorByline + html + translatorByline + warning + scLink;
 

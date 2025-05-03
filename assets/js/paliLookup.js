@@ -312,6 +312,30 @@ openBtn.style.color = 'rgba(255, 255, 255, 0.8)'; // Белый с неболь�
         </svg>
     `;
 
+const dictBtn = document.createElement('a');
+dictBtn.classList.add('dict-btn');
+dictBtn.style.position = 'absolute';
+dictBtn.style.top = '10px';
+dictBtn.style.right = '80px'; // Располагаем левее существующей кнопки
+dictBtn.style.background = 'rgba(45, 62, 80, 0.6)';
+dictBtn.style.color = 'rgba(255, 255, 255, 0.8)';
+dictBtn.style.cursor = 'pointer';
+dictBtn.style.width = '30px';
+dictBtn.style.height = '30px';
+dictBtn.style.borderRadius = '50%';
+dictBtn.style.display = 'flex';
+dictBtn.style.alignItems = 'center';
+dictBtn.style.justifyContent = 'center';
+dictBtn.style.textDecoration = 'none';
+dictBtn.target = '_blank';
+dictBtn.title = 'Open in dict.dhamma.gift';
+
+// Заменяем SVG код на использование внешнего файла
+dictBtn.innerHTML = `
+    <img src="/assets/svg/dpd-logo-dark.svg" width="18" height="18" >
+`;
+
+
     const iframe = document.createElement('iframe');
     iframe.src = '';
     iframe.style.width = '100%';
@@ -357,6 +381,7 @@ openBtn.style.color = 'rgba(255, 255, 255, 0.8)'; // Белый с неболь�
     `;
 
     popup.appendChild(header);
+    popup.appendChild(dictBtn);
     popup.appendChild(openBtn);
     popup.appendChild(closeBtn);
     popup.appendChild(iframe);
@@ -701,6 +726,10 @@ minHeight = (screenHeight * 0.8 < 600) ? screenHeight * 0.8 : 600;
                 const openBtn = document.querySelector('.open-btn');
                 const wordForSearch = cleanedWord.replace(/'ti/, ''); // Исправил на replace
                 openBtn.href = `${dhammaGift}${encodeURIComponent(wordForSearch)}${dgParams}`;
+
+                const dictBtn = document.querySelector('.dict-btn');
+                const dictSearchUrl = `https://dict.dhamma.gift/${savedDict.includes("ru") ? "ru/" : ""}search_html?q=${encodeURIComponent(wordForSearch)}`;
+                dictBtn.href = dictSearchUrl;
 
 
 function showSearchButton() {

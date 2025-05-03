@@ -23,12 +23,7 @@ function showNotification(message) {
   // Создаем новое уведомление
   const notification = document.createElement('div');
   notification.className = 'bubble-notification';
-  
-  // Добавляем иконку (если нужно)
-  const icon = document.createElement('span');
-  icon.innerHTML = ''; // или можно использовать SVG
-  notification.appendChild(icon);
-  
+
   // Добавляем текст
   const text = document.createElement('span');
   text.textContent = message;

@@ -269,20 +269,21 @@ margin-left: 6px;
     }
     
     
-/* всплывающее окно плеера */
     
-    .voice-dropdown {
+
+.voice-dropdown {
     position: relative;
     display: inline-block;
 }
 
-
 .voice-link {
+    position: relative; 
     display: inline-block;
-    position: relative; /* Для мобильного взаимодействия */
+    cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
 }
 
-/* Основные стили плеера */
+
 .voice-player {
     display: none;
     position: fixed;
@@ -293,28 +294,31 @@ margin-left: 6px;
     padding: 20px;
     border: 1px solid #ddd;
     z-index: 1000;
-    min-width: 200px;
+    min-width: 200px;    
+    max-width: 90vw;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
     border-radius: 24px;
 }
 
-/* 1. не Показываем плеер при hover (десктопы) */
 .voice-dropdown:hover .voice-player {
     display: none;
 }
 
-/* 2. Показываем плеер при фокусе (мобильные + десктопы) */
+.voice-player:hover {
+    display: block !important;
+}
+
+
 .voice-link:focus + .voice-player,
 .voice-player:focus-within {
     display: block;
 }
 
-/* 3. Фикс для десктопов: сохраняем открытым при hover на плеере */
-.voice-player:hover {
-    display: block !important;
+
+.voice-dropdown.active .voice-player {
+    display: block;
 }
 
-/* Темная тема */
 .dark .voice-player {
     background: #333;
     border-color: #555;
@@ -322,43 +326,10 @@ margin-left: 6px;
     box-shadow: 0 2px 5px rgba(0,0,0,0.5);
 }
 
-/* textarea
-.voice-dropdown {
-    position: relative;
-    display: inline-block;
-}
-
-.voice-link {
-    display: inline-block;
-    cursor: pointer;
-    padding: 8px 12px;
-    -webkit-tap-highlight-color: transparent;
-}
-
-.voice-player {
-    display: none;
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background: white;
-    padding: 20px;
-    border: 1px solid #ddd;
-    z-index: 1000;
-    min-width: 300px;
-    max-width: 90vw;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-    border-radius: 24px;
-}
-
-.voice-dropdown.active .voice-player {
-    display: block;
-}
-
 .close-player {
     position: absolute;
-    top: 10px;
-    right: 10px;
+    top: 5px;
+    right: 5px;
     background: none;
     border: none;
     font-size: 20px;
@@ -367,12 +338,5 @@ margin-left: 6px;
 
 .player-links {
     margin-top: 15px;
-    text-align: center;
 }
 
-@supports (-webkit-touch-callout: none) {
-    .voice-link {
-        min-height: 44px; /* Минимальный размер для тач-целей */
-    }
-}
-*/

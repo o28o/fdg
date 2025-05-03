@@ -75,11 +75,11 @@ function extraLinks($fromjs) {
           
           $fileExt = pathinfo($voicefilename, PATHINFO_EXTENSION);
           $mimeType = ($fileExt === 'mp3') ? 'audio/mpeg' : 'audio/mp4; codecs="mp4a.40.2"';
-          
+      //        <button class='close-player' aria-label='Close player'>×</button>
+    
 $playerHtml = "<span class='voice-dropdown'>
     <a href='javascript:void(0)' class='voice-link'>Voice</a>
     <span class='voice-player'>
-        <button class='close-player' aria-label='Close player'>×</button>
         <audio controls class='lazy-audio' preload='none'>
             <source src='$voicefile' type='$mimeType'>
             Your browser does not support the audio element.

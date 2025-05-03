@@ -434,7 +434,7 @@ else if ((translator === "" && texttype === "sutta" ) || (translator === "sujato
 
      const translatorByline = `<div class="byline">
      <p>
-    <span class="pli-lang" lang="pi">Pāḷi <a class="text-decoration-none text-reset" href="/assets/texts/abbr.html?s=ms">MS</a> </span> <span class="rus-lang" lang="ru">Translated by ${translatorforuser}</span>
+    <span class="pli-lang" lang="pi">Pāḷi <a class="text-decoration-none text-reset" href="/assets/texts/abbr.html?s=ms">MS</a> </span> <span class="rus-lang" lang="ru">Trans. by ${translatorforuser}</span>
      </p>
      </div>`;
   
@@ -539,7 +539,7 @@ rvUrl = rvUrl.replace("/read/", "/memorize/");
 const warning = `<br>
   <div style="max-width: 550px; margin: 0 auto; text-align: center;">
     <p class='warning'>
-      Warning!<a style='cursor: pointer;' class='text-decoration-none' target='' href='${dUrl}'>&nbsp;</a>Translations, dictionaries and commentaries were not made by the Blessed One.<a style='cursor: pointer;' class='text-decoration-none' target='' href='${dUrl}'>&nbsp;</a>Cross-check with Pali in 4 main nikayas.<a class='text-decoration-none' target='' href='${rvUrl}'>&nbsp;</a>
+      <strong>Warning!</strong><a style='cursor: pointer;' class='text-decoration-none' target='' href='${dUrl}'>&nbsp;</a>Translations, dictionaries and commentaries were not made by the Blessed One.<a style='cursor: pointer;' class='text-decoration-none' target='' href='${dUrl}'>&nbsp;</a>Cross-check with Pali in 4 main nikayas.<a class='text-decoration-none' target='' href='${rvUrl}'>&nbsp;</a>
     </p>
   </div>
 `;

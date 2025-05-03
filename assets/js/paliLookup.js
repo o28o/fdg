@@ -208,22 +208,24 @@ function lookupWordInStandaloneDict(word) {
     word = word.replace(/[’”'"]/g, "").replace(/ṁ/g, "ṃ");
    // console.log("after: ", word);
 
-    if (word in dpd_i2h) {
-        out += "<strong>" + word + '</strong><br><ul style="line-height: 1em; padding-left: 15px;">';
-        for (const headword of dpd_i2h[word]) {
-            if (headword in dpd_ebts) {
-                out += '<li>' + headword + '. ' + dpd_ebts[headword] + '</li>';
-            }
+// Создаем URL для поиска слова в словаре
+const dictSearchUrl = `https://dict.dhamma.gift/${savedDict.includes("ru") ? "ru/" : ""}search_html?q=${encodeURIComponent(word)}`;
+
+if (word in dpd_i2h) {
+    out += `<a href="${dictSearchUrl}" target="_blank" rel="noopener noreferrer" style="text-decoration: none; color: inherit;"><strong>${word}</strong></a><br><ul style="line-height: 1em; padding-left: 15px;">`;
+    for (const headword of dpd_i2h[word]) {
+        if (headword in dpd_ebts) {
+            out += '<li>' + headword + '. ' + dpd_ebts[headword] + '</li>';
         }
-        out += "</ul>";
     }
-
-    if (word in dpd_deconstructor) {
-        out += "<strong>" + word + '</strong><br><ul style="line-height: 1em; padding-left: 15px;">';
-        out += "<li>" + dpd_deconstructor[word] + "</li>";
-    }
-
     out += "</ul>";
+}
+
+if (word in dpd_deconstructor) {
+    out += `<a href="${dictSearchUrl}" target="_blank" rel="noopener noreferrer" style="text-decoration: none; color: inherit;"><strong>${word}</strong></a><br><ul style="line-height: 1em; padding-left: 15px;">`;
+    out += "<li>" + dpd_deconstructor[word] + "</li>";
+    out += "</ul>";
+}
 
     return out.replace(/ṃ/g, "ṁ");
 }

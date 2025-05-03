@@ -267,3 +267,53 @@ margin-left: 6px;
       content: "";
       font-size: 16px;
     }
+    
+    
+    
+.voice-dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.voice-link {
+    display: inline-block;
+}
+
+.voice-player {
+    display: none;
+    position: fixed;
+    top: 25%;          /* Позиция от верхнего края */
+    left: 50%;         /* Горизонтальное центрирование */
+    transform: translateX(-50%);  /* Только по X (горизонталь) */
+    background: white;
+    padding: 20px;
+    border: 1px solid #ddd;
+    z-index: 1000;
+    min-width: 200px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    border-radius: 24px;
+}
+
+.voice-dropdown:hover .voice-player {
+    display: block;
+}
+
+
+/* Темная тема */
+.dark .voice-player {
+    background: #333;
+    border-color: #555;
+    color: #fff;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.5);
+}
+
+
+/* Дополнительные стили для темной темы, если нужно */
+.dark {
+    background-color: #222;
+    color: #eee;
+}
+
+.dark .voice-dropdown:hover {
+    background-color: #444;
+}

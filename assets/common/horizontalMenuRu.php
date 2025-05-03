@@ -190,7 +190,7 @@ echo '<!--
          </li>   
    
    <li><a class="dropdown-item" target="_blank" href="https://gandhari.org/dop">Gandhari.org словари</a></li>   
-   <li><a class="dropdown-item" target="_blank" href="https://dsal.uchicago.edu/dictionaries/pali/">Rhys Davids словарь PTS</a></li>          
+   <li><a class="dropdown-item" target="_blank" href="https://dsal.uchicago.edu/dictionaries/pali/">Rhys Davids  PTS словарь</a></li>          
   <li><a class="dropdown-item" target="_blank" href="http://dictionary.tamilcube.com/pali-dictionary.aspx">Англ-Пали Словарь</a></li>
 
       <li>

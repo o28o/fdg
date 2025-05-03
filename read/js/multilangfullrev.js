@@ -483,7 +483,7 @@ const warning = `<br>
   </div>
 `;
 
-//const warning = "<p class='warning'>Внимание!<br>Переводы выполнены не Благословенным.<br>Сверяйтесь с Пали в 4 основных никаях.<a class='text-decoration-none' target='' href='" + "'>&nbsp;</a></p>";
+//const warning = "<p class='warning'><strong>Внимание!</strong><br>Переводы выполнены не Благословенным.<br>Сверяйтесь с Пали в 4 основных никаях.<a class='text-decoration-none' target='' href='" + "'>&nbsp;</a></p>";
 
 var lineBreak = "\n\n",
 revhtml = html.split(lineBreak).reverse().join(lineBreak)

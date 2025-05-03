@@ -532,7 +532,7 @@ rvUrl = rvUrl.replace("/read/", "/memorize/");
 const warning = `<br>
   <div style="max-width: 550px; margin: 0 auto; text-align: center;">
     <p class='warning'>
-      Внимание!<a style='cursor: pointer;' class='text-decoration-none' target='' href='${dUrl}'>&nbsp;</a>Переводы, словари и комментарии сделаны не Благословенным.<a style='cursor: pointer;' class='text-decoration-none' target='' href='${thUrl}'>&nbsp;</a>Сверяйтесь с Пали в 4 основных никаях.<a style='cursor: pointer;' class='text-decoration-none' target='' href='${rvUrl}'>&nbsp;</a>
+      <strong>Внимание!</strong><a style='cursor: pointer;' class='text-decoration-none' target='' href='${dUrl}'>&nbsp;</a>Переводы, словари и комментарии сделаны не Благословенным.<a style='cursor: pointer;' class='text-decoration-none' target='' href='${thUrl}'>&nbsp;</a>Сверяйтесь с Пали в 4 основных никаях.<a style='cursor: pointer;' class='text-decoration-none' target='' href='${rvUrl}'>&nbsp;</a>
     </p>
   </div>
 `;

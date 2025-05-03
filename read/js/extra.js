@@ -61,7 +61,7 @@ async function handleSuttaClick(e) {
     if (e.target.classList.contains('copy-pali')) {
       selector = '.pli-lang';
       message = window.location.pathname.includes('/ru/') || window.location.pathname.includes('/r/') 
-        ? 'Текст на пали скопирован' 
+        ? 'Текст Пали скопирован' 
         : 'Pali text copied';
     } else {
       selector = '.rus-lang';

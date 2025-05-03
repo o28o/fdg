@@ -396,18 +396,12 @@ thUrl = origUrl.replace("/read/", "/th/read/");
 dUrl = origUrl.replace("/read/", "/d/");
 
 const warning = `<br>
-  <div class="warning" style="max-width: 460px;">
-    <p>
-      <strong>Warning!</strong>
-      Translations, dictionaries, and commentaries were 
-      <a class="text-decoration-none" style="cursor: pointer;" target="" href="${dUrl}">not made by the Blessed One</a>.
-      Cross-check with Pali in the 
-      <a class="text-decoration-none" style="cursor: pointer;" target="" href="${thUrl}">four main Nikāyas</a> and 
-      <a class="text-decoration-none" style="cursor: pointer;" target="" href="${rvUrl}">original sources</a>.
+  <div style="max-width: 550px; margin: 0 auto; text-align: center;">
+    <p class='warning'>
+      Warning!<a style='cursor: pointer;' class='text-decoration-none' target='' href='${dUrl}'>&nbsp;</a>Translations, dictionaries and commentaries were not made by the Blessed One.<a style='cursor: pointer;' class='text-decoration-none' target='' href='${thUrl}'>&nbsp;</a>Cross-check with Pali in 4 main nikayas.<a class='text-decoration-none' target='' href='${rvUrl}'>&nbsp;</a>
     </p>
   </div>
 `;
-
 suttaArea.innerHTML =  scLink + warning + translatorByline + html + translatorByline + warning + scLink ;  
  
  const pageTitleElement = document.querySelector("h1");

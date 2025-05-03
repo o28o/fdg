@@ -509,7 +509,17 @@ rvUrl = rvUrl.replace("/memorize/", "");
 rvUrl = rvUrl.replace("/d/", "");
 rvUrl = rvUrl.replace("/read/", "/rev/");
 
-const warning = "<br><p class='warning pli-lang' lang='pi' style='color:green;'>Bahussuto hoti sutadharo sutasannicayo...<br>sātthaṁ sabyañjanaṁ... tathārūpāssa dhammā bahussutā honti<br>dhātā vacasā paricitā manasānupekkhitā, diṭṭhiyā suppaṭividdhā. <a class='text-decoration-none' target='' href='" + rvUrl + "'>&nbsp;</a></p>";
+const warning = `<br>
+  <div style="max-width: 600px; margin: 0 auto; text-align: center;">
+    <p class='warning pli-lang' lang='pi' style='color:green;'>
+      Bahussuto hoti sutadharo sutasannicayo...
+      sātthaṁ sabyañjanaṁ...
+      tathārūpāssa dhammā bahussutā honti
+      dhātā vacasā paricitā manasānupekkhitā, diṭṭhiyā suppaṭividdhā.
+      <a class='text-decoration-none' target='' href='${rvUrl}'>&nbsp;</a>
+    </p>
+  </div>
+`;
 
 //var lineBreak = "\n\n",
 //revhtml = html.split(lineBreak).reverse().join(lineBreak)

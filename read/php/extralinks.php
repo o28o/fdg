@@ -85,7 +85,7 @@ $playerHtml = "<span class='voice-dropdown'>
             Your browser does not support the audio element.
         </audio><br>
             <a href='javascript:void(0)' class='copy-pali'>Copy Pali</a> |
-            <a href='javascript:void(0)' class='copy-translation'>Copy Translation</a> |
+            <a href='javascript:void(0)' class='copy-translation'>Copy Trn</a> |
             <a href='https://www.sc-voice.net/?src=sc#/sutta/$fromjs'>Voice.SC</a>
     </span>
 </span>";
@@ -124,7 +124,7 @@ $playerHtml = "<span class='voice-dropdown'>
             Your browser does not support the audio element.
         </audio><br>
             <a href='javascript:void(0)' class='copy-pali'>Copy Pali</a> |
-            <a href='javascript:void(0)' class='copy-translation'>Copy Translation</a> |
+            <a href='javascript:void(0)' class='copy-translation'>Copy Trn</a> |
             <a href='https://www.sc-voice.net/?src=sc#/sutta/$fromjs' >Voice.SC</a>
     </span>
 </span>";

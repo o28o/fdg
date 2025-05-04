@@ -62,7 +62,7 @@ echo json_encode([
             "url" => $mainpagenoslash . "/read.php",
             "icons" => [
                 [
-                    "src" => "/assets/img/sutta-icon.png",
+                    "src" => "/assets/img/maniIcon.png",
                     "type" => "image/png",
                     "sizes" => "192x192"
                 ]
@@ -73,7 +73,7 @@ echo json_encode([
             "url" => $mainpagenoslash . "/pm.php",
             "icons" => [
                 [
-                    "src" => "/assets/img/bhikkhu-icon.png",
+                    "src" => "/assets/img/monkIcon.png",
                     "type" => "image/png",
                     "sizes" => "192x192"
                 ]
@@ -84,7 +84,7 @@ echo json_encode([
             "url" => $mainpagenoslash . "/bipm.php",
             "icons" => [
                 [
-                    "src" => "/assets/img/bhikkhuni-icon.png",
+                    "src" => "/assets/img/nunIcon.png",
                     "type" => "image/png",
                     "sizes" => "192x192"
                 ]

@@ -70,41 +70,37 @@ if (file_put_contents($filePath, $cleanedUrl . PHP_EOL) === false) {
 
 // Режим Словаря 
 if (preg_match('/dictLookup/', $p) || preg_match('/dictLookup/', $extra)) {
-    // Действие при выполнении условия
-
-
-$stringForWord = urlencode(strtolower($stringForWord));
-$dictType = 'https://dict.dhamma.gift';
-//$dictType = 'https://dpdict.net';
+    $stringForWord = urlencode(htmlspecialchars(strtolower($stringForWord), ENT_QUOTES));
+    $dictType = 'https://dict.dhamma.gift';
     
-    if ( preg_match('/\/ru/', $actual_link)) {
-  $outputlang = "-oru";
-  $langinurl = "/ru";
-} else {
-    $outputlang = "";
-  $langinurl = "";
+    if (preg_match('/\/ru/', $actual_link)) {
+        $outputlang = "-oru";
+        $langinurl = "/ru";
+    } else {
+        $outputlang = "";
+        $langinurl = "";
     }
 
-  
-  //    const dictUrl = "https://dict.dhamma.gift/html_search?q=";
-        // const dictUrl = "dttp://app.dicttango/WordLookup?word=";
- $server_name = $_SERVER['SERVER_NAME']; // Получаем имя сервера (домен или IP)
-// Проверяем, является ли сервер локальным
-if ($server_name === 'localhost' || $server_name === '127.0.0.1') {
-   $dictUrl = "dttp://app.dicttango/WordLookup?word=";
-} else {
-  $dictUrl = "{$dictType}{$langinurl}/search_html?q=";  
-}
- 
-    
-echo "<script>
-window.open(`{$dictUrl}{$stringForWord}`, '_blank');
-</script>";
-echo "<script>document.getElementById( 'spinner' ).style.display = 'none';</script>";
+    if (empty($stringForWord) || $stringForWord === '""') {
+        $stringForWord = "dukkha";
+    }
 
-//exit();
-return;
+    $server_name = $_SERVER['SERVER_NAME'];
+    if ($server_name === 'localhost' || $server_name === '127.0.0.1') {
+        $dictUrl = "dttp://app.dicttango/WordLookup?word="; // Исправлен протокол
+    } else {
+        $dictUrl = "{$dictType}{$langinurl}/search_html?q=";  
+    }
+    
+    echo "<script>
+    setTimeout(function() {
+        window.open('{$dictUrl}' + '{$stringForWord}', '_blank');
+        document.getElementById('spinner').style.display = 'none';
+    }, 100);
+    </script>";
+    return;
 }
+
 
 // Проверка условий
 if (preg_match('/wordRep/', $p) || preg_match('/wordRep/', $extra)) {

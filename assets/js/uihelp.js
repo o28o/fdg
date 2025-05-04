@@ -18,7 +18,10 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     // Проверяем, если это первое посещение страницы с /read/
-    if (window.location.pathname.includes('/read/') && !localStorage.getItem('visited_sc')  && visitCount === 3 ) {
+if (
+    (window.location.pathname.includes('/read/') || 
+    window.location.pathname.includes('/r/')
+) && !localStorage.getItem('visited_sc') && visitCount === 3) {
         highlightMultipleById(['gearRead', 'helpsc']);
 		    localStorage.setItem('dictionaryVisible', 'true');
 
@@ -53,12 +56,12 @@ document.addEventListener("DOMContentLoaded", function () {
 
 // Проверяем, если это N посещение и нужно подсветить элементы
 if (visitCount === targetVisitForRead) {
-    ['MenuRead', 'MenuEnglish', 'MenuRussian', 'tools', 'materials'].forEach(id => {
+    ['MenuRead', 'MenuEnglish', 'MenuRussian', 'MenuDict', 'tools', 'materials'].forEach(id => {
         highlightById(id); // Подсвечиваем каждый элемент
     });
 } else if (visitCount > targetVisitForRead + extraTimes) {
     // Убираем подсветку, если превышено количество посещений
-    ['MenuRead', 'MenuEnglish', 'MenuRussian', 'tools', 'materials'].forEach(id => {
+    ['MenuRead', 'MenuEnglish', 'MenuRussian',  'MenuDict', 'tools', 'materials'].forEach(id => {
         let element = document.getElementById(id);
         if (element) {
             element.style.boxShadow = ''; // Убираем подсветку

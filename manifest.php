@@ -55,5 +55,41 @@ echo json_encode([
         "params" => [
             "text" => "q"
         ]
+    ],
+    "shortcuts" => [
+        [
+            "name" => "DG Read",
+            "url" => $mainpagenoslash . "/read.php",
+            "icons" => [
+                [
+                    "src" => "/assets/img/maniIcon.png",
+                    "type" => "image/png",
+                    "sizes" => "192x192"
+                ]
+            ]
+        ],
+        [
+            "name" => "Bhikkhu Patimokkha",
+            "url" => $mainpagenoslash . "/pm.php",
+            "icons" => [
+                [
+                    "src" => "/assets/img/monkIcon.png",
+                    "type" => "image/png",
+                    "sizes" => "192x192"
+                ]
+            ]
+        ],
+        [
+            "name" => "Bhikkhuni Patimokkha",
+            "url" => $mainpagenoslash . "/bipm.php",
+            "icons" => [
+                [
+                    "src" => "/assets/img/nunIcon.png",
+                    "type" => "image/png",
+                    "sizes" => "192x192"
+                ]
+            ]
+        ]
     ]
+    
 ], JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE | JSON_PRETTY_PRINT);

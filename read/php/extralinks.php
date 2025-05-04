@@ -86,7 +86,9 @@ $playerHtml = "<span class='voice-dropdown'>
         </audio><br>
             <a href='javascript:void(0)' class='copy-pali'>Copy Pali</a> |
             <a href='javascript:void(0)' class='copy-translation'>Copy Trn</a> |
-            <a href='https://www.sc-voice.net/?src=sc#/sutta/$fromjs'>Voice.SC</a>
+            <a href='https://www.sc-voice.net/?src=sc#/sutta/$fromjs'>Voice.SC</a> |
+            <a href='/assets/common/ttsHelp.html'>?</a> 
+
     </span>
 </span>";
       }
@@ -125,7 +127,8 @@ $playerHtml = "<span class='voice-dropdown'>
         </audio><br>
             <a href='javascript:void(0)' class='copy-pali'>Copy Pali</a> |
             <a href='javascript:void(0)' class='copy-translation'>Copy Trn</a> |
-            <a href='https://www.sc-voice.net/?src=sc#/sutta/$fromjs' >Voice.SC</a>
+            <a href='https://www.sc-voice.net/?src=sc#/sutta/$fromjs' >Voice.SC</a> | 
+            <a href='/assets/common/ttsHelp.html'>?</a> 
     </span>
 </span>";
     }

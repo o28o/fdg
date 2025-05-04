@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <link rel="icon" type="image/png" sizes="32x32" href="https://dhamma.gift/assets/img/favico_black.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="/assets/css/bootstrap.5.3.1.min.css" rel="stylesheet" />
+<link href="/assets/css/extrastyles.css" rel="stylesheet" />
+<link href="/assets/css/pages.css" rel="stylesheet" />
+
+<title>Audio Help</title>
+<script>
+function setLanguage(lang) {
+// Обновляем контент
+if (lang === 'ru') {
+document.getElementById('ru-content').style.display = 'block';
+document.getElementById('en-content').style.display = 'none';
+document.title = "Слушание Дхаммы";
+document.documentElement.lang = 'ru';
+
+// Обновляем переключатель (активная русская версия)
+document.querySelector('.lang-switcher').innerHTML = `
+<a class="btn btn-sm btn-outline-secondary rounded-pill text-decoration-none" href="./ttsHelp.html">en</a>
+<span class="btn btn-sm btn-primary rounded-pill ms-1">ru</span>
+`;
+} else {
+document.getElementById('en-content').style.display = 'block';
+document.getElementById('ru-content').style.display = 'none';
+document.title = "Listening to Dhamma";
+document.documentElement.lang = 'en';
+
+// Обновляем переключатель (активная английская версия)
+document.querySelector('.lang-switcher').innerHTML = `
+<span class="btn btn-sm btn-primary rounded-pill">en</span>
+<a class="btn btn-sm btn-outline-secondary rounded-pill text-decoration-none ms-1" href="./ttsHelpRu.html">ru</a>
+`;
+}
+
+// Добавляем обработчики для новых кнопок
+addSwitcherListeners();
+}
+
+function addSwitcherListeners() {
+// Обработчик для английской кнопки
+document.querySelector('.lang-switcher a[href="./ttsHelp.html"]')?.addEventListener('click', function(e) {
+e.preventDefault();
+setLanguage('en');
+});
+
+// Обработчик для русской кнопки
+document.querySelector('.lang-switcher a[href="./ttsHelpRu.html"]')?.addEventListener('click', function(e) {
+e.preventDefault();
+setLanguage('ru');
+});
+}
+
+function detectLanguage() {
+// 1. Проверяем referrer (высший приоритет)
+const referrer = document.referrer.toLowerCase();
+if (referrer.includes('/ru/') || referrer.includes('/r/')) return 'ru';
+if (referrer.includes('/en/')) return 'en';
+
+// 2. Проверяем текущий URL (низкий приоритет)
+const currentUrl = window.location.pathname.toLowerCase();
+if (currentUrl.includes('/ru/') || currentUrl.includes('/r/')) return 'ru';
+if (currentUrl.includes('/en/')) return 'en';
+
+// 3. По умолчанию - английский
+return 'en';
+}
+
+document.addEventListener('DOMContentLoaded', function() {
+// Устанавливаем язык при загрузке
+setLanguage(detectLanguage());
+});
+</script>
+</head>
+<body>
+<div class="container mt-3">
+<div class="d-flex align-items-center">
+<div class="input-group">
+<a href="/ru/read.php" title="Sutta and Vinaya reading" rel="noreferrer" class="me-1">
+<svg fill="#979797" version="1.1" xmlns="http://www.w3.org/2000/svg" height="26px" viewBox="0 0 547.596 547.596" stroke="#979797">
+<g> <path d="M540.76,254.788L294.506,38.216c-11.475-10.098-30.064-10.098-41.386,0L6.943,254.788 c-11.475,10.098-8.415,18.284,6.885,18.284h75.964v221.773c0,12.087,9.945,22.108,22.108,22.108h92.947V371.067 c0-12.087,9.945-22.108,22.109-22.108h93.865c12.239,0,22.108,9.792,22.108,22.108v145.886h92.947 c12.24,0,22.108-9.945,22.108-22.108v-221.85h75.965C549.021,272.995,552.081,264.886,540.76,254.788z"></path> </g>
+</svg>
+</a>
+
+<a href="/ru" title="Sutta and Vinaya search" rel="noreferrer" class="me-1">
+<img width="24px" alt="dhamma.gift icon" src="/assets/img/gray-white.png">
+</a>
+
+<div class="ms-1 form-check form-switch">
+<input type="checkbox" class="form-check-input" id="darkSwitch">
+</div>
+</div>
+
+<!-- Языковой переключатель -->
+<div class="ms-auto d-inline-flex align-items-center lang-switcher">
+<a class="btn btn-sm btn-outline-secondary rounded-pill text-decoration-none" href="./ttsHelp.html">en</a>
+<span class="btn btn-sm btn-primary rounded-pill ms-1">ru</span>
+</div>
+</div>
+</div>
+
+<!-- Russian Content (hidden by default) -->
+<div id="ru-content" style="display:none;">
+<div class="mt-2 mb-2">
+<h2 class="mt-2 mb-2">Слушание Дхаммы</h2>
+<h5>Дхамма изначально была устным учением.</h5>
+</div>
+<br>
+
+<div class="p-3 rounded bg-light">
+<p>
+На этом сайте предусмотрено несколько способов прослушать Сутты и другие тексты на пали или языке перевода:
+</p>
+
+<h5 class="mt-4">1. Встроенный аудиоплеер</h5>
+<p>
+На страницах Сутт и Винаи при клике на ссылку "Voice" откроется аудиоплеер с записью чтения текста, если имеется сохранённый файл. В основном это сохранённые файлы TTS (text-to-speech) из проекта voice.suttacentral.net.
+</p>
+<p>
+Если файла нет, то вместо ссылки Voice будет ссылка Voice.SC, которая перенаправит вас на сайт voice.suttacentral.net.
+</p>
+<p>
+Если файл есть, то появится встроенный плеер вашего браузера. Обычно такие плееры позволяют:
+</p>
+<ul>
+<li>Нажать кнопку воспроизведения для прослушивания или остановки</li>
+<li>Использовать ползунок перемотки</li>
+<li>Регулировать громкость и скорость воспроизведения</li>
+<li>Скачать аудиофайл</li>
+</ul>
+
+<h5 class="mt-4">2. Копирование текста для TTS-приложений</h5>
+<p>
+Используйте кнопки "Copy Pali" (копировать пали) или "Copy Trn" (копировать перевод) для быстрого копирования текста.
+</p>
+<p>
+Скопированный текст вы можете использовать в приложениях, на сайтах и в браузерных расширениях для преобразования текста в речь:
+</p>
+<p>
+Для прослушивания пали можно использовать санскритские TTS-модули с небольшими различиями в чтении, но у вас будет очень широкий выбор приложений, сайтов, расширений, голосов и настроек. Если для модуля TTS потребуется текст в деванагари, эту опцию можно включить в настройках интерфейса чтения: "Шестерёнка" → Система письма → Devanagari → Применить.
+</p>
+<p>
+Пример приложений для Android и iOS:
+</p>
+<ul>
+<li><strong>Android:</strong> <a href="https://play.google.com/store/apps/details?id=hesoft.T2S" target="_blank">Text to Speech</a></li>
+<li><strong>iOS:</strong> <a href="https://apps.apple.com/us/app/voice-aloud-reader/id1446876360" target="_blank">Voice Aloud Reader</a></li>
+<li>Или встроенные функции TTS вашего устройства</li>
+</ul>
+
+<h5 class="mt-4">3. Voice.SC</h5>
+<p>
+<a href="https://www.sc-voice.net/" target="_blank">Voice.SC</a> — TTS-сайт с возможностью прослушивания пали и второго языка "построчно".
+</p>
+
+<p class="mt-4">
+<em>
+"Pañcime, bhikkhave, ādīnavā āyatakena gītassarena dhammaṁ bhaṇantassa."
+</em> (АН 5.209)<br>
+"Вот, монахи, пять опасностей для того, кто декламирует Дхамму певучим голосом."
+</p>
+<p>
+<a href="https://dhamma.gift/r/?q=an5.209">Читать</a>
+</p>
+</div>
+</div>
+
+<!-- English Content (hidden by default) -->
+<div id="en-content" style="display:none;">
+<div class="mt-2 mb-2">
+<h2 class="mt-2 mb-2">Listening to Dhamma</h2>
+<h5>Dhamma was originally an oral teaching.</h5>
+</div>
+<br>
+
+<div class="p-3 rounded bg-light">
+<p>
+There are several ways on the site to listen to suttas and other texts in Pali or in translation:
+</p>
+
+<h5 class="mt-4">1. Built-in audio player</h5>
+<p>
+On Sutta and Vinaya pages, clicking the "Voice" link will open an audio player with a recording of the text being read, if a saved file is available. These are mostly saved TTS (text-to-speech) files from the voice.suttacentral.net project.
+</p>
+<p>
+If no file is available, the "Voice" link will be replaced with a "Voice.SC" link that will redirect you to the voice.suttacentral.net website.
+</p>
+<p>
+If a file exists, your browser's built-in player will appear. Such players typically allow you to:
+</p>
+<ul>
+<li>Click the play button to start or stop playback</li>
+<li>Use the seek slider</li>
+<li>Adjust volume and playback speed</li>
+<li>Download the audio file</li>
+</ul>
+
+<h5 class="mt-4">2. Copying text for TTS applications</h5>
+<p>
+Use the "Copy Pali" or "Copy Trn" (copy translation) buttons to quickly copy text.
+</p>
+<p>
+You can use the copied text in applications, websites, and browser extensions for text-to-speech conversion:
+</p>
+<p>
+For listening to Pali, you can use Sanskrit TTS modules with minor differences in pronunciation, giving you a wide selection of applications, websites, extensions, voices, and settings. If the TTS module requires text in Devanagari, you can enable this option in the reading interface settings: "Gear icon" → Writing System → Devanagari → Apply.
+</p>
+<p>
+Example apps for Android and iOS:
+</p>
+<ul>
+<li><strong>Android:</strong> <a href="https://play.google.com/store/apps/details?id=hesoft.T2S" target="_blank">Text to Speech</a></li>
+<li><strong>iOS:</strong> <a href="https://apps.apple.com/us/app/voice-aloud-reader/id1446876360" target="_blank">Voice Aloud Reader</a></li>
+<li>Or your device's built-in TTS features</li>
+</ul>
+
+<h5 class="mt-4">3. Voice.SC</h5>
+<p>
+<a href="https://www.sc-voice.net/" target="_blank">Voice.SC</a> is a TTS website with the ability to listen to Pali and a second language "line by line".
+</p>
+
+<p class="mt-4">
+<em>
+"Pañcime, bhikkhave, ādīnavā āyatakena gītassarena dhammaṁ bhaṇantassa."
+</em> (AN 5.209)<br>
+"There are, monks, these five dangers in reciting the Dhamma with a drawn-out singing voice."
+</p>
+<p>
+<a href="https://dhamma.gift/?q=an5.209">Read</a>
+</p>
+</div>
+</div>
+<script src="/assets/js/dark-mode-switch/dark-mode-switch.js"></script>
+</body>
+</html>

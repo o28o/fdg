@@ -3,11 +3,20 @@ const urlsToCache = [
     '/assets/js/paliLookup.js',
     '/assets/js/autopali.js',
     '/ru/index.php',
+    '/read.php',
+    '/ru/read.php',
     '/index.php',
     '/assets/img/icon-192x192.png',
     '/assets/img/icon-512x512.png',
-        '/read/index.html',
-            '/r/index.html'
+    '/read/index.html',
+    '/r/index.html',
+    '/',
+    '/r/',
+    '/ru/',
+    '/read/',
+    '/pm.php',
+    '/bipm.php',
+    '/assets/texts/sutta_words.txt'
 ];
 
 self.addEventListener('install', (event) => {

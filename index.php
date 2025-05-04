@@ -311,7 +311,7 @@ echo '<div style="max-width: 450px; display: none;" class="alert alert-primary a
     <a class="btn btn-secondary installButton" id="" style="display:none;">' . $installpwalong . '</a>
    <br>
    <strong>Android</strong> Chrome: Настройки -> добавить на Главную<br>
-   Теперь можно: выделить слово <b>на любом сайте и приложении</b> -> и выбрать DG в "Поделиться" меню ОС<br>
+   Теперь можно: выделить слово <b>на любом сайте и приложении</b> -> и выбрать DG в меню "Поделиться" ОС<br>
    <strong>iOS</strong> Safari: Поделиться -> добавить на Главную. 
 
 <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button></div>';

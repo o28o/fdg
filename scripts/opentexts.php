@@ -186,6 +186,12 @@ if (strpos($q, 'http') !== false || strpos($q, 'https') !== false) {
     }
 }
 
+// Если шеринг внутри приложения (нет URL, но есть текст в кавычках)
+else if (preg_match('/"([^"]+)"/u', $q, $matches)) {
+    $q = $matches[1]; // оставить только текст в кавычках
+    $p = '-kn';
+}
+
 	
 	if (empty($_GET["la"])) {
     $la = "";

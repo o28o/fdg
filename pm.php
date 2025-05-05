@@ -212,7 +212,7 @@ $(document).ready(function () {
 
 
       // Проверяем хэш в URL
-if (window.location.hash === '#expand-bupm') {
+if (window.location.hash === '#expand') {
     $("#bupmCollapse").collapse("show");
     // ...обновляем кнопку
 }

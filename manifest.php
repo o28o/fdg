@@ -70,7 +70,7 @@ echo json_encode([
         ],
         [
             "name" => "Bhikkhu Patimokkha",
-            "url" => $mainpagenoslash . "/pm.php",
+            "url" => $mainpagenoslash . "/pm.php#expand",
             "icons" => [
                 [
                     "src" => "/assets/img/monkIcon.png",
@@ -81,7 +81,7 @@ echo json_encode([
         ],
         [
             "name" => "Bhikkhuni Patimokkha",
-            "url" => $mainpagenoslash . "/bipm.php",
+            "url" => $mainpagenoslash . "/bipm.php#expand",
             "icons" => [
                 [
                     "src" => "/assets/img/nunIcon.png",

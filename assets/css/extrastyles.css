@@ -803,3 +803,87 @@ video-container { position: relative; padding-bottom: 56.25%; padding-top: 30px;
   word-break: break-word;
   overflow-wrap: break-word;
 }
+
+
+
+.fdgLink {
+    position: relative;
+    display: inline-block;
+    vertical-align: middle;
+    -webkit-tap-highlight-color: transparent;
+    touch-action: manipulation;
+}
+
+.fdgLink::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: -2px;
+    bottom: -2px;
+    background-color: transparent;
+    transition: 
+        background-color 0.5s ease-out,
+        box-shadow 0.5s ease-out,
+        opacity 0.5s ease-out,
+        top 0.3s ease-out,
+        bottom 0.3s ease-out,
+        left 0.3s ease-out,
+        right 0.3s ease-out;
+    border-radius: 3px;
+    opacity: 0;
+    pointer-events: none;
+}
+
+/* Для десктопов - hover */
+@media (hover: hover) {
+    .fdgLink:hover::after {
+        background-color: rgba(218, 66, 14, 0.6); /* Полупрозрачный вариант */
+        top: -3px;
+        bottom: -3px;
+        left: -3px;
+        right: -3px;
+        box-shadow: 0 0 4px rgba(218, 66, 14, 0.6);
+        opacity: 1;
+    }
+}
+
+/* Яркое подтверждение при касании */
+.fdgLink:active::after {
+    background-color: rgba(218, 66, 14, 0.8); /* Полностью непрозрачный */
+    box-shadow: 0 0 8px rgba(218, 66, 14, 0.9); /* Ярче свечение */
+    top: -4px;
+    bottom: -4px;
+    left: -4px;
+    right: -4px;
+    opacity: 1;
+    transition: 
+        background-color 0.1s ease-out,
+        box-shadow 0.1s ease-out,
+        top 0.1s ease-out,
+        bottom 0.1s ease-out,
+        left 0.1s ease-out,
+        right 0.1s ease-out; /* Очень быстрое появление */
+}
+
+/* Для тач-устройств - фокус после касания */
+.fdgLink:focus::after {
+    background-color: rgba(218, 66, 14, 0.3);
+    top: -3px;
+    bottom: -3px;
+    left: -3px;
+    right: -3px;
+    box-shadow: 0 0 4px rgba(218, 66, 14, 0.3);
+    opacity: 1;
+    outline: none;
+    transition-duration: 0.5s; /* Медленное затухание */
+}
+
+/* Убираем фокус для мыши */
+@media (hover: hover) {
+    .fdgLink:focus::after {
+        background-color: transparent;
+        box-shadow: none;
+        opacity: 0;
+    }
+}

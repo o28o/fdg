@@ -137,6 +137,12 @@ textarea {
   padding: 5px; 
 }
 
+.close-warning {
+  cursor: pointer; 
+  margin-left: 0px; 
+  font-weight: bold;
+}
+
 /* На мобильных: показываем только номер */
 .sutta-name {
   display: inline;

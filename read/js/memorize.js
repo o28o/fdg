@@ -534,7 +534,7 @@ const warning = `
       tathārūpāssa dhammā bahussutā honti
       dhātā vacasā paricitā manasānupekkhitā, diṭṭhiyā suppaṭividdhā.
       <a class='text-decoration-none' target='' href='${rvUrl}'>&nbsp;</a>
-           ${canShowClose && !isWarningClosed ? `<span class="close-warning" style="cursor: pointer; margin-left: 10px; font-weight: bold;">×</span>` : ''} 
+           ${canShowClose && !isWarningClosed ? `<span class="close-warning">×</span>` : ''} 
     </p>
   </div>
 `;

@@ -365,3 +365,38 @@ margin-left: 6px;
     margin-top: 15px;
 }
 
+
+.copyLink {
+    position: relative;
+    display: inline-block;
+    vertical-align: middle; /* чтобы не сдвигало строку при увеличении */
+}
+
+.copyLink::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: -2px;
+    bottom: -2px;
+    background-color: transparent;
+    transition: all 0.2s ease;
+    border-radius: 3px;
+}
+
+.copyLink:hover::after {
+    background-color: rgb(122, 122, 249); /* ваш цвет без прозрачности */
+    top: -3px;
+    bottom: -3px;
+    left: -3px;
+    right: -3px;
+    box-shadow: 0 0 4px rgba(122, 122, 249, 0.5); /* добавляем свечение для яркости */
+}
+
+.copyLink:active::after {
+    background-color: rgb(90, 90, 220); /* чуть темнее при клике */
+    box-shadow: 0 0 6px rgba(122, 122, 249, 0.8);
+}
+
+
+

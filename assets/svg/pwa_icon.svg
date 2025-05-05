@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 192 192">
+  <!-- Белый круг -->
+  <circle cx="96" cy="96" r="90" fill="white" stroke="#ddd" stroke-width="2"/>
+  
+  <!-- Чёрная книга (иконка из Font Awesome) -->
+  <path 
+    fill="black" 
+    d="M96 32c-35.3 0-64 16.1-64 36v88c0 19.9 28.7 36 64 36s64-16.1 64-36V68c0-19.9-28.7-36-64-36zm0 16c17.2 0 32.5 6.6 41.3 16H54.7C63.5 54.6 78.8 48 96 48zM48 68h96v80c0 7.5-18 20-48 20s-48-12.5-48-20V68z"
+    transform="scale(1.2) translate(16,16)"
+  />
+</svg>

@@ -395,14 +395,40 @@ rvUrl = rvUrl.replace("/read/", "/rev/");
 thUrl = origUrl.replace("/read/", "/th/read/");
 dUrl = origUrl.replace("/read/", "/d/");
 
-const warning = `<br>
-  <div style="max-width: 550px; margin: 0 auto; text-align: center;">
+// Настройки
+const SHOW_CLOSE_AFTER = 10;  // Показывать кнопку закрытия после 10 просмотров
+
+// Получаем или инициализируем счетчик просмотров
+let viewCount = parseInt(localStorage.getItem('warningViewCount')) || 0;
+viewCount++;
+localStorage.setItem('warningViewCount', viewCount);
+
+// Проверяем, можно ли показывать кнопку закрытия
+const canShowClose = viewCount >= SHOW_CLOSE_AFTER;
+
+// Проверяем, был ли warning уже закрыт
+const isWarningClosed = localStorage.getItem('warningClosed');
+
+const warning = `
+  <div style="max-width: 550px; margin: 0 auto; text-align: center;" class="warning-container">
     <p class='warning'>
       <strong>Warning!</strong><a style='cursor: pointer;' class='text-decoration-none' target='' href='${dUrl}'>&nbsp;</a>Translations, dictionaries and commentaries were not made by the Blessed One.<a style='cursor: pointer;' class='text-decoration-none' target='' href='${thUrl}'>&nbsp;</a>Cross-check with Pali in 4 main nikayas.<a class='text-decoration-none' target='' href='${rvUrl}'>&nbsp;</a>
+           ${canShowClose && !isWarningClosed ? `<span class="close-warning" style="cursor: pointer; margin-left: 10px; font-weight: bold;">×</span>` : ''} 
     </p>
   </div>
 `;
-suttaArea.innerHTML =  scLink + warning + translatorByline + html + translatorByline + warning + scLink ;  
+
+// Добавляем HTML
+suttaArea.innerHTML = '<hr>' + scLink + '<br>' + (!isWarningClosed ? warning : '') + translatorByline + html + translatorByline + warning + scLink;
+
+// Добавляем обработчик события для кнопки закрытия (если она есть)
+if (canShowClose && !isWarningClosed) {
+  document.querySelector('.close-warning')?.addEventListener('click', function() {
+    localStorage.setItem('warningClosed', 'true');
+    document.querySelector('.warning-container')?.remove();
+  });
+}
+
  
  const pageTitleElement = document.querySelector("h1");
 let pageTitleText = pageTitleElement.textContent;

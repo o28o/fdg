@@ -178,12 +178,26 @@ $(document).ready(function () {
         });
 
 
-      // Проверяем хэш в URL
-if (window.location.hash === '#expand') {
-    $("#bipmCollapse").collapse("show");
-    // ...обновляем кнопку
-}
-      
+document.addEventListener('DOMContentLoaded', function() {
+    // Ждем полной загрузки DOM и всех зависимых скриптов
+    
+    if (window.location.hash === '#expand') {
+        // Инициализируем collapse (на всякий случай)
+        var collapseElement = document.getElementById('bipmCollapse');
+        var collapseInstance = bootstrap.Collapse.getInstance(collapseElement) || 
+                              new bootstrap.Collapse(collapseElement);
+        
+        // Показываем элемент
+        collapseInstance.show();
+        
+        // Обновляем кнопку
+        const toggleButton = document.querySelector('[data-bs-target="#bupmCollapse"]');
+        if (toggleButton) {
+            toggleButton.classList.remove('collapsed');
+            toggleButton.setAttribute('aria-expanded', 'true');
+        }
+    }
+});
     </script>
 <!-- Audio Player JS -->
 <script  src="/assets/js/jsPlayer.js"></script>  

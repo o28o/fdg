@@ -58,19 +58,8 @@ echo json_encode([
     ],
     "shortcuts" => [
         [
-            "name" => "DG Read",
-            "url" => $mainpagenoslash . "/read.php",
-            "icons" => [
-                [
-                    "src" => "/assets/img/maniIcon.png",
-                    "type" => "image/png",
-                    "sizes" => "192x192"
-                ]
-            ]
-        ],
-        [
             "name" => "Bhikkhu Patimokkha",
-            "url" => $mainpagenoslash . "/pm.php#expand",
+            "url" => $mainpagenoslash . "/pm.php?expand=true",
             "icons" => [
                 [
                     "src" => "/assets/img/monkIcon.png",
@@ -81,7 +70,7 @@ echo json_encode([
         ],
         [
             "name" => "Bhikkhuni Patimokkha",
-            "url" => $mainpagenoslash . "/bipm.php#expand",
+            "url" => $mainpagenoslash . "/bipm.php?expand=true",
             "icons" => [
                 [
                     "src" => "/assets/img/nunIcon.png",
@@ -89,7 +78,35 @@ echo json_encode([
                     "sizes" => "192x192"
                 ]
             ]
+        ],
+        [
+            "name" => "Dict.Dhamma.gift",
+            "url" => $mainpagenoslash . "/assets/openDDG.html",
+            "icons" => [
+                [
+                    "src" => "/assets/svg/dpd-logo-dark.svg",
+                    "type" => "image/svg+xml",
+                    "sizes" => "192x192"
+                ]
+            ]
         ]
+        
     ]
     
 ], JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE | JSON_PRETTY_PRINT);
+
+
+
+/*
+        [
+            "name" => "DG Read",
+            "url" => $mainpagenoslash . "/read.php",
+            "icons" => [
+                [
+                    "src" => "/assets/img/maniIcon.png",
+                    "type" => "image/png",
+                    "sizes" => "192x192"
+                ]
+            ]
+        ],
+*/

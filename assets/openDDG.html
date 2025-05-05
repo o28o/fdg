@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Redirect to Dict.Dhamma.gift</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+            color: #333;
+            margin: 0;
+            padding: 20px;
+            opacity: 0;
+            transition: opacity 0.5s ease;
+            text-align: center;
+        }
+        
+        body.show {
+            opacity: 1;
+        }
+        
+        .container {
+            max-width: 600px;
+            margin: 50px auto;
+            padding: 30px;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        h1 {
+            color: #2c3e50;
+        }
+        
+        .links {
+            margin-top: 20px;
+        }
+        
+        a {
+            display: inline-block;
+            margin: 10px;
+            padding: 10px 20px;
+            background: #3498db;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background 0.3s;
+        }
+        
+        a:hover {
+            background: #2980b9;
+        }
+        
+        .loader {
+            margin: 30px auto;
+            border: 5px solid #f3f3f3;
+            border-top: 5px solid #3498db;
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            animation: spin 1s linear infinite;
+        }
+        
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Redirecting to Dict.Dhamma.gift...</h1>
+        <div class="loader"></div>
+        <div class="links" style="display: none;">
+            <p>If it didn't work click:</p>
+            <a href="https://dict.dhamma.gift/">English</a>
+                        <a href="https://dict.dhamma.gift/ru/">Russian</a>
+
+        </div>
+    </div>
+
+    <script>
+        // Показываем тело после небольшой задержки
+        setTimeout(() => {
+            document.body.classList.add('show');
+        }, 100);
+        
+        // Проверяем, есть ли /ru/ в текущем URL
+        const shouldRedirectToRU = window.location.href.includes('/ru/');
+        const redirectUrl = shouldRedirectToRU 
+            ? "https://dict.dhamma.gift/ru/" 
+            : "https://dict.dhamma.gift/";
+        
+        // Пытаемся перенаправить
+        window.location.href = redirectUrl;
+        
+        // Если через 2 секунды не перенаправилось, показываем ссылки
+        setTimeout(() => {
+            if (window.location.href === redirectUrl) return;
+            
+            document.querySelector('.loader').style.display = 'none';
+            document.querySelector('.links').style.display = 'block';
+        }, 2000);
+    </script>
+</body>
+</html>

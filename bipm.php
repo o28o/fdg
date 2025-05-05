@@ -179,22 +179,22 @@ $(document).ready(function () {
 
 
 document.addEventListener('DOMContentLoaded', function() {
-    // Ждем полной загрузки DOM и всех зависимых скриптов
-    
-    if (window.location.hash === '#expand') {
-        // Инициализируем collapse (на всякий случай)
-        var collapseElement = document.getElementById('bipmCollapse');
-        var collapseInstance = bootstrap.Collapse.getInstance(collapseElement) || 
-                              new bootstrap.Collapse(collapseElement);
-        
-        // Показываем элемент
-        collapseInstance.show();
-        
-        // Обновляем кнопку
-        const toggleButton = document.querySelector('[data-bs-target="#bipmCollapse"]');
-        if (toggleButton) {
-            toggleButton.classList.remove('collapsed');
-            toggleButton.setAttribute('aria-expanded', 'true');
+    const urlParams = new URLSearchParams(window.location.search);
+    const shouldExpand = urlParams.get('expand') === 'true';
+
+    if (shouldExpand) {
+        const collapseElement = document.getElementById('bipmCollapse');
+        if (collapseElement) {
+            const collapseInstance = bootstrap.Collapse.getInstance(collapseElement) || 
+                                   new bootstrap.Collapse(collapseElement);
+            
+            collapseInstance.show();
+            
+            const toggleButton = document.querySelector('[data-bs-target="#bipmCollapse"]');
+            if (toggleButton) {
+                toggleButton.classList.remove('collapsed');
+                toggleButton.setAttribute('aria-expanded', 'true');
+            }
         }
     }
 });

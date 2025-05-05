@@ -510,18 +510,18 @@ rvUrl = rvUrl.replace("/d/", "");
 rvUrl = rvUrl.replace("/read/", "/rev/");
 
 // Настройки
-const SHOW_CLOSE_AFTER = 10;  // Показывать кнопку закрытия после 10 просмотров
+const SHOW_CLOSE_AFTER = 5;  // Показывать кнопку закрытия после 10 просмотров
 
 // Получаем или инициализируем счетчик просмотров
-let viewCount = parseInt(localStorage.getItem('warningViewCount')) || 0;
+let viewCount = parseInt(localStorage.getItem('goodViewCount')) || 0;
 viewCount++;
-localStorage.setItem('warningViewCount', viewCount);
+localStorage.setItem('goodViewCount', viewCount);
 
 // Проверяем, можно ли показывать кнопку закрытия
 const canShowClose = viewCount >= SHOW_CLOSE_AFTER;
 
 // Проверяем, был ли warning уже закрыт
-const isWarningClosed = localStorage.getItem('warningClosed');
+const isWarningClosed = localStorage.getItem('goodClosed');
 
 const warning = `
   <div style="max-width: 600px; margin: 0 auto; text-align: center;" class="warning-container">
@@ -542,7 +542,7 @@ suttaArea.innerHTML = scLink + '<br>' + (!isWarningClosed ? warning : '') + html
 // Добавляем обработчик события для кнопки закрытия (если она есть)
 if (canShowClose && !isWarningClosed) {
   document.querySelector('.close-warning')?.addEventListener('click', function() {
-    localStorage.setItem('warningClosed', 'true');
+    localStorage.setItem('goodClosed', 'true');
     document.querySelector('.warning-container')?.remove();
   });
 }

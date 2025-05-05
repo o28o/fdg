@@ -474,33 +474,48 @@ const rvfr = "<a class='text-decoration-none' target='' href='" + rvorigUrl + "'
 
 const scrollLink = "<a class='text-decoration-none' target='' href='javascript:void(0);' onclick='window.scrollTo(0, document.body.scrollHeight)'>&nbsp;</a>";
 
-// Добавляем ссылку в вашу строку предупреждения
-const warning = `<br>
-  <div style="max-width: 550px; margin: 0 auto; text-align: center;">
-    <p class='warning'>
-      <strong>Warning!</strong><a style='cursor: pointer;' class='text-decoration-none' target='' href='${rvfr}'>&nbsp;</a>Translations, dictionaries and commentaries were not made by the Blessed One.<a style='cursor: pointer;' class='text-decoration-none' target='' href='${dUrl}'>&nbsp;</a>Cross-check with Pali in 4 main nikayas.<a class='text-decoration-none' target='' href='${scrollLink}'>&nbsp;</a>
-    </p>
-  </div>
-`;
-
-//const warning = "<p class='warning'><strong>Внимание!</strong><br>Переводы выполнены не Благословенным.<br>Сверяйтесь с Пали в 4 основных никаях.<a class='text-decoration-none' target='' href='" + "'>&nbsp;</a></p>";
 
 var lineBreak = "\n\n",
 revhtml = html.split(lineBreak).reverse().join(lineBreak)
 // console.log(revhtml)
 // console.log(html)
 
-suttaArea.innerHTML =  scLink + warning + translatorByline + revhtml + translatorByline + warning + scLink ;  
+// Настройки
+const SHOW_CLOSE_AFTER = 10;  // Показывать кнопку закрытия после 10 просмотров
 
- /*
-const pageTitleElement = document.querySelector("h1");
-let pageTitleText = pageTitleElement.textContent;
-pageTitle = pageTitleText.replace(/[0-9.]/g, '');
+// Получаем или инициализируем счетчик просмотров
+let viewCount = parseInt(localStorage.getItem('warningViewCount')) || 0;
+viewCount++;
+localStorage.setItem('warningViewCount', viewCount);
 
-slug = slug.replace(/pli-tv-|vb-/g, '');
-document.title = `${slug} ${pageTitle}`;
+// Проверяем, можно ли показывать кнопку закрытия
+const canShowClose = viewCount >= SHOW_CLOSE_AFTER;
 
-*/ 
+// Проверяем, был ли warning уже закрыт
+const isWarningClosed = localStorage.getItem('warningClosed');
+
+const warning = `
+  <div style="max-width: 550px; margin: 0 auto; text-align: center;" class="warning-container">
+    <p class='warning'>
+      <strong>Warning!</strong><a style='cursor: pointer;' class='text-decoration-none' target='' href='${rvfr}'>&nbsp;</a>Translations, dictionaries and commentaries were not made by the Blessed One.<a style='cursor: pointer;' class='text-decoration-none' target='' href='${dUrl}'>&nbsp;</a>Cross-check with Pali in 4 main nikayas.<a class='text-decoration-none' target='' href='${scrollLink}'>&nbsp;</a>
+           ${canShowClose && !isWarningClosed ? `<span class="close-warning" style="cursor: pointer; margin-left: 10px; font-weight: bold;">×</span>` : ''} 
+    </p>
+  </div>
+`;
+
+// Добавляем HTML
+suttaArea.innerHTML = scLink + '<br>' + (!isWarningClosed ? warning : '') + translatorByline + html + translatorByline + warning + scLink;
+
+// Добавляем обработчик события для кнопки закрытия (если она есть)
+if (canShowClose && !isWarningClosed) {
+  document.querySelector('.close-warning')?.addEventListener('click', function() {
+    localStorage.setItem('warningClosed', 'true');
+    document.querySelector('.warning-container')?.remove();
+  });
+}
+
+//конец вывода информации
+
 
 var metaDescription = document.createElement('meta');
 metaDescription.name = 'description';

@@ -511,24 +511,46 @@ let rvUrl = origUrl.replace("/r/", "/read/");
 rvUrl = rvUrl.replace("/memorize/", "");
 rvUrl = rvUrl.replace("/read/", "/rev/");
 
-const warning = `<br>
-  <div style="max-width: 550px; margin: 0 auto; text-align: center;">
+// Настройки
+const SHOW_CLOSE_AFTER = 10;  // Показывать кнопку закрытия после 10 просмотров
+
+// Получаем или инициализируем счетчик просмотров
+let viewCount = parseInt(localStorage.getItem('warningViewCount')) || 0;
+viewCount++;
+localStorage.setItem('warningViewCount', viewCount);
+
+// Проверяем, можно ли показывать кнопку закрытия
+const canShowClose = viewCount >= SHOW_CLOSE_AFTER;
+
+// Проверяем, был ли warning уже закрыт
+const isWarningClosed = localStorage.getItem('warningClosed');
+
+const warning = `
+  <div style="max-width: 550px; margin: 0 auto; text-align: center;" class="warning-container">
+    <p class='warning'>
     <p class='warning pli-lang' lang='pi' style='color:green;'>
       Bahussuto hoti sutadharo sutasannicayo...
       sātthaṁ sabyañjanaṁ...
       tathārūpāssa dhammā bahussutā honti
       dhātā vacasā paricitā manasānupekkhitā, diṭṭhiyā suppaṭividdhā.
       <a class='text-decoration-none' target='' href='${rvUrl}'>&nbsp;</a>
+           ${canShowClose && !isWarningClosed ? `<span class="close-warning" style="cursor: pointer; margin-left: 10px; font-weight: bold;">×</span>` : ''} 
     </p>
   </div>
 `;
 
-//var lineBreak = "\n\n",
-//revhtml = html.split(lineBreak).reverse().join(lineBreak)
-// console.log(revhtml)
-// console.log(html)
+suttaArea.innerHTML = scLink + '<br>' + (!isWarningClosed ? warning : '') + html + warning + scLink;
 
-suttaArea.innerHTML =  scLink + warning + html + warning + scLink ;  
+// Добавляем обработчик события для кнопки закрытия (если она есть)
+if (canShowClose && !isWarningClosed) {
+  document.querySelector('.close-warning')?.addEventListener('click', function() {
+    localStorage.setItem('warningClosed', 'true');
+    document.querySelector('.warning-container')?.remove();
+  });
+}
+
+//конец вывода информации
+
 
  
  const pageTitleElement = document.querySelector("h1");

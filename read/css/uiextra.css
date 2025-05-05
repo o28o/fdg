@@ -146,7 +146,7 @@ textarea {
     display: none;
   }
 
-  @media (max-width: 406px) {
+  @media (max-width: 356px) {
  .sutta-name {
     display: none;
   }

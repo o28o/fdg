@@ -365,11 +365,12 @@ margin-left: 6px;
     margin-top: 15px;
 }
 
-
 .copyLink {
     position: relative;
     display: inline-block;
-    vertical-align: middle; /* чтобы не сдвигало строку при увеличении */
+    vertical-align: middle;
+    -webkit-tap-highlight-color: transparent;
+    touch-action: manipulation;
 }
 
 .copyLink::after {
@@ -380,23 +381,68 @@ margin-left: 6px;
     top: -2px;
     bottom: -2px;
     background-color: transparent;
-    transition: all 0.2s ease;
+    transition: 
+        background-color 0.5s ease-out,
+        box-shadow 0.5s ease-out,
+        opacity 0.5s ease-out,
+        top 0.3s ease-out,
+        bottom 0.3s ease-out,
+        left 0.3s ease-out,
+        right 0.3s ease-out;
     border-radius: 3px;
+    opacity: 0;
+    pointer-events: none;
 }
 
-.copyLink:hover::after {
-    background-color: rgb(122, 122, 249); /* ваш цвет без прозрачности */
+/* Для десктопов - hover */
+@media (hover: hover) {
+    .copyLink:hover::after {
+        background-color: rgba(19, 104, 87, 0.3); /* Полупрозрачный вариант */
+        top: -3px;
+        bottom: -3px;
+        left: -3px;
+        right: -3px;
+        box-shadow: 0 0 4px rgba(19, 104, 87, 0.3);
+        opacity: 1;
+    }
+}
+
+/* Яркое подтверждение при касании */
+.copyLink:active::after {
+    background-color: #136857; /* Полностью непрозрачный */
+    box-shadow: 0 0 8px rgba(19, 104, 87, 0.8); /* Ярче свечение */
+    top: -4px;
+    bottom: -4px;
+    left: -4px;
+    right: -4px;
+    opacity: 1;
+    transition: 
+        background-color 0.1s ease-out,
+        box-shadow 0.1s ease-out,
+        top 0.1s ease-out,
+        bottom 0.1s ease-out,
+        left 0.1s ease-out,
+        right 0.1s ease-out; /* Очень быстрое появление */
+}
+
+/* Для тач-устройств - фокус после касания */
+.copyLink:focus::after {
+    background-color: rgba(19, 104, 87, 0.3);
     top: -3px;
     bottom: -3px;
     left: -3px;
     right: -3px;
-    box-shadow: 0 0 4px rgba(122, 122, 249, 0.5); /* добавляем свечение для яркости */
+    box-shadow: 0 0 4px rgba(19, 104, 87, 0.3);
+    opacity: 1;
+    outline: none;
+    transition-duration: 0.5s; /* Медленное затухание */
 }
 
-.copyLink:active::after {
-    background-color: rgb(90, 90, 220); /* чуть темнее при клике */
-    box-shadow: 0 0 6px rgba(122, 122, 249, 0.8);
+/* Убираем фокус для мыши */
+@media (hover: hover) {
+    .copyLink:focus::after {
+        background-color: transparent;
+        box-shadow: none;
+        opacity: 0;
+    }
 }
-
-
-

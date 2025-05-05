@@ -176,6 +176,14 @@ $(document).ready(function () {
         document.addEventListener('DOMContentLoaded', function() {
             enablePaliLookup();
         });
+
+
+      // Проверяем хэш в URL
+if (window.location.hash === '#expand') {
+    $("#bipmCollapse").collapse("show");
+    // ...обновляем кнопку
+}
+      
     </script>
 <!-- Audio Player JS -->
 <script  src="/assets/js/jsPlayer.js"></script>  

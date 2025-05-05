@@ -529,22 +529,41 @@ dUrl = origUrl.replace("/ml/", "/d/");
 rvUrl = rvUrl.replace("/ml/", "/memorize/");
 rvUrl = rvUrl.replace("/read/", "/memorize/");
 
-const warning = `<br>
-  <div style="max-width: 550px; margin: 0 auto; text-align: center;">
+// Настройки
+const SHOW_CLOSE_AFTER = 10;  // Показывать кнопку закрытия после 10 просмотров
+
+// Получаем или инициализируем счетчик просмотров
+let viewCount = parseInt(localStorage.getItem('warningViewCount')) || 0;
+viewCount++;
+localStorage.setItem('warningViewCount', viewCount);
+
+// Проверяем, можно ли показывать кнопку закрытия
+const canShowClose = viewCount >= SHOW_CLOSE_AFTER;
+
+// Проверяем, был ли warning уже закрыт
+const isWarningClosed = localStorage.getItem('warningClosed');
+
+const warning = `<div style="max-width: 550px; margin: 0 auto; text-align: center;">
     <p class='warning'>
       <strong>Внимание!</strong><a style='cursor: pointer;' class='text-decoration-none' target='' href='${dUrl}'>&nbsp;</a>Переводы, словари и комментарии сделаны не Благословенным.<a style='cursor: pointer;' class='text-decoration-none' target='' href='${thUrl}'>&nbsp;</a>Сверяйтесь с Пали в 4 основных никаях.<a style='cursor: pointer;' class='text-decoration-none' target='' href='${rvUrl}'>&nbsp;</a>
+     ${canShowClose && !isWarningClosed ? `<span class="close-warning" style="cursor: pointer; margin-left: 10px; font-weight: bold;">×</span>` : ''} 
     </p>
   </div>
 `;
 
-//var lineBreak = "\n\n",
-//revhtml = html.split(lineBreak).reverse().join(lineBreak)
-// console.log(revhtml)
-// console.log(html)
+// Добавляем HTML
+suttaArea.innerHTML = scLink + '<br>' + (!isWarningClosed ? warning : '') + translatorByline + html + translatorByline + warning + scLink;
 
-suttaArea.innerHTML =  scLink + warning + translatorByline + html + translatorByline + warning + scLink ;  
+// Добавляем обработчик события для кнопки закрытия (если она есть)
+if (canShowClose && !isWarningClosed) {
+  document.querySelector('.close-warning')?.addEventListener('click', function() {
+    localStorage.setItem('warningClosed', 'true');
+    document.querySelector('.warning-container')?.remove();
+  });
+}
 
- 
+//конец вывода информации
+
 const pageTitleElement = document.querySelector("h1");
 if (pageTitleElement) {
 let pageTitleText = pageTitleElement.textContent;

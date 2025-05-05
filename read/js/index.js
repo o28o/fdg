@@ -419,7 +419,7 @@ const warning = `
 `;
 
 // Добавляем HTML
-suttaArea.innerHTML = '<hr>' + scLink + '<br>' + (!isWarningClosed ? warning : '') + translatorByline + html + translatorByline + warning + scLink;
+suttaArea.innerHTML = scLink + '<br>' + (!isWarningClosed ? warning : '') + translatorByline + html + translatorByline + warning + scLink;
 
 // Добавляем обработчик события для кнопки закрытия (если она есть)
 if (canShowClose && !isWarningClosed) {
@@ -429,7 +429,8 @@ if (canShowClose && !isWarningClosed) {
   });
 }
 
- 
+//конец вывода информации
+
  const pageTitleElement = document.querySelector("h1");
 let pageTitleText = pageTitleElement.textContent;
 pageTitle = pageTitleText.replace(/[0-9.]/g, '');

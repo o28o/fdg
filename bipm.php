@@ -191,7 +191,7 @@ document.addEventListener('DOMContentLoaded', function() {
         collapseInstance.show();
         
         // Обновляем кнопку
-        const toggleButton = document.querySelector('[data-bs-target="#bupmCollapse"]');
+        const toggleButton = document.querySelector('[data-bs-target="#bipmCollapse"]');
         if (toggleButton) {
             toggleButton.classList.remove('collapsed');
             toggleButton.setAttribute('aria-expanded', 'true');

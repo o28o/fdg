@@ -1,0 +1,14 @@
+{
+  "NAME": "dgift_bot",
+  "TOKEN": "paste token here",
+     "search": {
+       "fuzzy_enabled": true,
+       "min_query_length": 2,
+       "max_suggestions": 28,
+       "fuzzy_min_score": 70,
+       "normalize_digraphs": true,
+       "normalize_double_consonants": true,
+       "cache_size": 130000
+     }
+   }
+

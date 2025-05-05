@@ -105,7 +105,7 @@ function lazyLoadStandaloneScripts(lang = 'en') {
                 padding: '10px',
                 background: 'rgba(0,0,0,0.7)',
                 color: 'grey',
-                borderRadius: '5px',
+                borderRadius: '12px',
                 zIndex: '10000',
                 fontSize: '14px',
                 boxShadow: '0 2px 5px rgba(0,0,0,0.3)'

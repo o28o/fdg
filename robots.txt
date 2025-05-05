@@ -1,10 +1,13 @@
 Sitemap: https://dhamma.gift/sitemap.xml
+
 User-agent: *
-Allow: /
-Disallow: /result/
+Allow: /favicon.ico
+Allow: /assets/img/
+Allow: /assets/svg/
 Allow: /assets/example/
+
+Disallow: /result/
 Disallow: /scripts/
-Disallow: /assets/
 Disallow: /bw/
 Disallow: /db/
 Disallow: /new/
@@ -18,46 +21,4 @@ Disallow: /metta.lk/
 Disallow: /buddhadust.net/
 Disallow: /theravada.ru/
 Disallow: /tipitaka.theravada.su/
-
-User-agent: Googlebot
-Allow: /
-Disallow: /result/
-Allow: /assets/example/
-Disallow: /scripts/
-Disallow: /assets/
-Disallow: /bw/
-Disallow: /db/
-Disallow: /new/
-Disallow: /w.php
-Disallow: /s.php
-Disallow: /legacy.suttacentral.net/
-Disallow: /suttacentral.net/
-Disallow: /accesstoinsight.org/
-Disallow: /en.dhammadana.org/
-Disallow: /metta.lk/
-Disallow: /buddhadust.net/
-Disallow: /theravada.ru/
-Disallow: /tipitaka.theravada.su/
-
-User-agent: Yandex
-Allow: /
-Disallow: /result/
-Allow: /assets/example/
-Disallow: /scripts/
-Disallow: /assets/
-Disallow: /bw/
-Disallow: /db/
-Disallow: /new/
-Disallow: /w.php
-Disallow: /s.php
-Disallow: /legacy.suttacentral.net/
-Disallow: /suttacentral.net/
-Disallow: /accesstoinsight.org/
-Disallow: /en.dhammadana.org/
-Disallow: /metta.lk/
-Disallow: /buddhadust.net/
-Disallow: /theravada.ru/
-Disallow: /tipitaka.theravada.su/
-Host: dhamma.gift
-
 

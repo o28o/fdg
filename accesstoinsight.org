@@ -1,1 +1,1 @@
-../accesstoinsight.org
+../offline-data/accesstoinsight.org

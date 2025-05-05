@@ -1,4 +1,0 @@
-# robots.txt file for http://dhamma.ru/
-User-agent: *
-Disallow: / 
-

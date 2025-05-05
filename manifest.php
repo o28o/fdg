@@ -1,19 +1,38 @@
 <?php
-// Включаем вывод всех ошиок для отладки
+// Включаем вывод всех ошибок для отладки
 //error_reporting(E_ALL);
 //ini_set('display_errors', 1);
 error_reporting(E_ERROR | E_PARSE);
 include_once('config/config.php');
 include_once('config/translate.php');
-//echo basename($_SERVER['REQUEST_URI']);
+
 $scheme = (!empty($_SERVER['HTTPS']) && $_SERVER['HTTPS'] !== 'off') ? "https" : "http";
 $host = $_SERVER['HTTP_HOST'];
 $base_path = rtrim(dirname($_SERVER['SCRIPT_NAME']), '/') . '/';
 $base_url = "$scheme://$host$base_path";
 
-// Получаем реферер или URL, на котором вызвали манифест
-$start_url = $_SERVER['HTTP_REFERER'] ?? $base_url;
-$start_url = filter_var($start_url, FILTER_SANITIZE_URL);
+// Определяем текущую страницу, с которой устанавливается PWA
+$current_path = parse_url($_SERVER['HTTP_REFERER'] ?? $base_url, PHP_URL_PATH);
+$query_string = parse_url($_SERVER['HTTP_REFERER'] ?? $base_url, PHP_URL_QUERY);
+
+// Базовый start_url
+$start_url = $mainpagenoslash . "/?source=pwa";
+
+// Определяем start_url в зависимости от страницы установки
+if (strpos($current_path, '/read.php') !== false) {
+    $start_url = $mainpagenoslash . "/read.php?source=pwa";
+} elseif (strpos($current_path, '/pm.php') !== false) {
+    $start_url = $mainpagenoslash . "/pm.php?expand=true&source=pwa";
+} elseif (strpos($current_path, '/bipm.php') !== false) {
+    $start_url = $mainpagenoslash . "/bipm.php?expand=true&source=pwa";
+} elseif (strpos($current_path, '/assets/openDDG.html') !== false) {
+    $start_url = $mainpagenoslash . "/assets/openDDG.html?source=pwa";
+}
+
+// Если есть query параметры, сохраняем их
+if ($query_string) {
+    $start_url .= (strpos($start_url, '?') === false ? '?' : '&') . $query_string;
+}
 
 // Устанавливаем короткое имя и имя в зависимости от хоста
 if (preg_match('/^(localhost|127\.\d+\.\d+\.\d+)$/', parse_url($base_url, PHP_URL_HOST))) {
@@ -42,9 +61,9 @@ echo json_encode([
             "sizes" => "512x512"
         ]
     ],
-"start_url" => $mainpagenoslash . "/?source=pwa" ,   
-"scope" => $mainpagenoslash . "/" ,   
-"display" => "minimal-ui",
+    "start_url" => $start_url,
+    "scope" => $mainpagenoslash . "/",
+    "display" => "minimal-ui",
     "background_color" => "#ffffff",
     "theme_color" => "#000000",
 
@@ -90,11 +109,8 @@ echo json_encode([
                 ]
             ]
         ]
-        
     ]
-    
 ], JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE | JSON_PRETTY_PRINT);
-
 
 
 /*

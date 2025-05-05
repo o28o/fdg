@@ -137,6 +137,16 @@ textarea {
   padding: 5px; 
 }
 
+.warning {
+  color: #902A07;
+  text-align: center;
+}
+
+.dark p.warning {
+  color: #902A07;
+}
+
+
 .close-warning {
   cursor: pointer; 
   margin-left: 0px; 

@@ -80,14 +80,6 @@ html{
   scroll-behavior: smooth;
 }
 
-.warning {
-  color: #E32636;
-  text-align: center;
-}
-
-.dark p.warning {
-  color: #A52817;
-}
 
 #form {
   text-align: center;

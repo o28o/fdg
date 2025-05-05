@@ -103,11 +103,11 @@ include './scripts/opentexts.php';
    
 <div class="level1 d-flex align-items-center">
   <span class="toggle-button btn btn-primary btn-sm form-check-inline btn-fixed-width btn-rotate"
-    data-bs-toggle="collapse" data-bs-target="#bupmCollapse">-</span>
-  <h2><a href="#" data-bs-toggle="collapse" data-bs-target="#bupmCollapse">Bhikkhunīpātimokkha</a></h2>
+    data-bs-toggle="collapse" data-bs-target="#bipmCollapse">-</span>
+  <h2><a href="#" data-bs-toggle="collapse" data-bs-target="#bipmCollapse">Bhikkhunīpātimokkha</a></h2>
 </div>
 
-      <div class="collapse " id="bupmCollapse">
+      <div class="collapse " id="bipmCollapse">
         
 <?php
 include $basedir . "/assets/texts/bipm.php";

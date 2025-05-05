@@ -137,6 +137,25 @@ textarea {
   padding: 5px; 
 }
 
+/* На мобильных: показываем только номер */
+.sutta-name {
+  display: none;
+}
+
+.afternav {
+    display: none;
+  }
+
+  @media (max-width: 576px) {
+ .sutta-name {
+    display: inline;
+  }
+
+.afternav {
+      display: block;
+    }
+  }
+
 .finder {
   color: #902A07;
     font-weight: bold;

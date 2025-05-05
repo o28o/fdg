@@ -500,11 +500,14 @@ a:hover {
 }
 
 @media only screen and (max-width: 475px) {
-  .navigation {
-    flex-direction: column !important;
+.navigation {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     row-gap: 1rem;
-  }
-  
+}
+
   #paliauto {
   width:200px;
   }

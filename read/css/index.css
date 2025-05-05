@@ -217,12 +217,6 @@ li {
   #paliauto {
   width:210px;
   }
-#navigation {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
 
   .lists,
   .vinaya {
@@ -441,13 +435,6 @@ a:hover {
 }
 
 @media only screen and (max-width: 475px) {
-#navigation {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    row-gap: 1rem;
-}
 
   
   #paliauto {

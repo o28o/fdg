@@ -568,7 +568,12 @@ nextName = nextName.replace(/[0-9.]/g, '');
       if (nextName === undefined) {
       var nextPrint = nextSlugPrint;
       } else {
-     var nextPrint = nextSlugPrint +' ' +nextName;
+        var nextPrint = `
+      ${nextSlugPrint}
+      <span class="sutta-name"> ${nextName}</span>
+      `;
+     
+     
      }
    //  console.log(nextPrint);
          next.innerHTML = nextSlug
@@ -581,7 +586,8 @@ nextName = nextName.replace(/[0-9.]/g, '');
       </g>
       </svg></a>`
         : "";
-        next2.innerHTML = next.innerHTML;
+// Копируем HTML и сразу удаляем класс через replace()
+next2.innerHTML = next.innerHTML.replace(/class="sutta-name"/g, '');
     }
     );
   
@@ -599,7 +605,10 @@ prevName = prevName.replace(/[0-9.]/g, '');
         if (prevName === undefined) {
     var prevPrint = prevSlugPrint;
       } else {
-        var prevPrint = prevSlugPrint +' ' +prevName;
+      var prevPrint = `
+      ${prevSlugPrint}
+      <span class="sutta-name"> ${prevName}</span>
+      `;
      }
       previous.innerHTML = prevSlug
         ? `<a href="?q=${prevSlug}"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" id="body_1" width="15" height="11">
@@ -611,7 +620,8 @@ prevName = prevName.replace(/[0-9.]/g, '');
       </g>
       </svg>${prevPrint}</a>`
         : ""; 
-        previous2.innerHTML = previous.innerHTML;
+        previous2.innerHTML = previous.innerHTML.replace(/class="sutta-name"/g, '');
+
       }
       );
 

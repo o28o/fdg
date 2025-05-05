@@ -139,16 +139,16 @@ textarea {
 
 /* На мобильных: показываем только номер */
 .sutta-name {
-  display: none;
+  display: inline;
 }
 
 .afternav {
     display: none;
   }
 
-  @media (max-width: 576px) {
+  @media (max-width: 406px) {
  .sutta-name {
-    display: inline;
+    display: none;
   }
 
 .afternav {

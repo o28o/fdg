@@ -509,10 +509,10 @@ Mousetrap.bind("i", function (e) {
       // move from various vinaya books home to vi home
       window.location.href = "../vi/vi.html";
     } else if (bhikkhuRuleTypes.includes(secondPart)) {
-      // move from bhikkhu rule-type page to bhikkhu Vibhaṅga home
+      // move from bhikkhu rule-type page to bhikkhu vibhanga home
       window.location.href = "../vi/bu-vb.html";
     } else if (bhikkhuniRuleTypes.includes(secondPart)) {
-      // move from bhikkhu rule-type page to bhikkhu Vibhaṅga home
+      // move from bhikkhu rule-type page to bhikkhu vibhanga home
       window.location.href = "../vi/bi-vb.html";
     } else if (/\d/.test(secondPart)) {
       // if there is a number in the second part

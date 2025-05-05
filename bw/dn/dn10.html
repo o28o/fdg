@@ -5,8 +5,6 @@
  	<link rel="icon" type="image/x-icon" href="../images/favicon.ico">
  	<title>Dīgha Nikāya 10</title>
  	<meta name="viewport" content="width=device-width, initial-scale=1">
-		<!-- Loading manifest -->
-	<link rel="manifest" href="../manifest.json">
  	<!-- Loading third party fonts -->
  	<link href="../fonts/font-awesome.min.css" rel="stylesheet" type="text/css">
  	<!-- Loading main and menu stylesheets -->
@@ -44,7 +42,7 @@
  		<div id="navbar" class="w3-hide-small w3-hide-medium bwcontainer3">
  			<ul id="css3menu0">
  				<li class="topfirst" id="home"><a href="../home/index.html" class="w3-hide-small">Home</a></li>
-  				<li class="topmenu" id="dn"><a href="../dn/dn.html" class="pressed w3-hide-small">Dīgha Nikāya</a></li>
+ 				<li class="topmenu" id="dn"><a href="../dn/dn.html" class="pressed w3-hide-small">Dīgha Nikāya</a></li>
  				<li class="topmenu" id="mn"><a href="../mn/mn.html" class="w3-hide-small">Majjhima Nikāya</a></li>
  				<li class="topmenu" id="sn"><a href="../sn/sn.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Saṁyutta Nikāya</a>
  					<ul>
@@ -84,8 +82,8 @@
  					<ul>
  						<li><a href="../vi/kd.html" class="w3-hide-small">Khandhaka</a></li>
  						<li><a href="../vi/bu-vb.html" class="w3-hide-small">Bhikkhu Vibhaṅga</a></li>
- 						<li><a href="../vi/bu-pt.html" class="w3-hide-small">Bhikkhu Pātimokkha</a></li>
- 						<li><a href="../vi/bi-pt.html" class="w3-hide-small">Bhikkhunī Pātimokkha</a></li>
+ 						<li><a href="../vi/bu-pt.html" class="w3-hide-small">Bhikkhu Pāṭimokkha</a></li>
+ 						<li><a href="../vi/bi-pt.html" class="w3-hide-small">Bhikkhunī Pāṭimokkha</a></li>
  						<li><a href="../vi/bi-vb.html" class="w3-hide-small">Bhikkhunī Vibhaṅga</a></li>
  					</ul>
  				</li>
@@ -98,6 +96,7 @@
  	<a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-times fa-2x red-color"></i>&nbsp;&nbsp;&nbsp;Close</a><!-- Hides the sidebar when clicked -->
  		<div class="w3-bar-block w3-white">
  			<a href="../home/index.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-home fa-lg"></i>&nbsp;&nbsp;&nbsp;Home</a>
+ 			
  			<a href="../guide/guide.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Guide</a>
  			<a href="../dn/dn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Dīgha Nikāya</a>
  			<a href="../mn/mn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Majjhima Nikāya</a>
@@ -110,7 +109,7 @@
  
  
  
-   <!-- !PAGE CONTENT! --> 
+<!-- !PAGE DIV! --> <!-- Div for page content --> 
 <div class="w3-main w3-content w3-padding w3-left-align bwcontainer4">
 <div id="content">
  <h2>Sutta Pitaka</h2>
@@ -119,249 +118,213 @@
 
 <div id="metaarea">
 	<ul class="translator">
-		<li><a class="dg-link" href="/r/?q=dn10">DG</a> <a href="https://suttacentral.net/dn10">SC</a> ©&nbsp;Translated from the Pali by Bhante Sujato.&nbsp;<a href="../home/copyright.html#sc">(More copyright information)</a>
+		<li><a class="dg-link" href="/r/?q=dn10">DG</a> <a href="https://suttacentral.net/dn10">SC</a> &copy;&nbsp;Translated from the Pali by Maurice Walshe &nbsp;<a href="../home/copyright.html#wp">(More copyright information)</a>
 	</ul>
 </div>
 
-<section class="raw_sutta">
+<section class="raw_sutta">  <!-- English and Pali -->
 <div lang="en">
-<p><span class="parno">1</span><span>So I have heard. </span>At one time Venerable Ānanda was staying near Sāvatthī in Jeta’s Grove, Anāthapiṇḍika’s monastery. It was not long after the Buddha had become fully extinguished.</p>
 
+<h3><span class="add">Morality, Concentration, Wisdom</span></h3>
 
-<p><span class="parno">2</span>Now at that time the brahmin student Subha, Todeyya’s son, was residing in Sāvatthī on some business. Then he addressed a certain student: “Here, student, go to the ascetic Ānanda and in my name bow with your head to his feet. Ask him if he is healthy and well, nimble, strong, and living comfortably. And then say: ‘Sir, please visit the student Subha, Todeyya’s son, at his home out of compassion.’”</p>
-
-<hr>
-
-<p><span class="parno">3</span>“Yes, sir,” replied the student, and did as he was asked.</p>
+<p id="p1"><span class="parno">1</span>Thus have I heard.<span class="note" id="n225"><span class="details"><span class="p">[n.225] We may wonder slightly, as RD does, why this is included as a separate Sutta, consisting as it does of little more than the corresponding passages in <a href="../dn/dn2.html">DN&nbsp;2</a>. But repetitiveness was never regarded by the early redactors of the Canon as a bar to inclusion, and this was no doubt independently preserved as an account of Subha's conversion. RD points out that the three heads here are given as sīla, samādhi and paññā, which we render (somewhat differently from RD) as morality, concentration and wisdom. RD also states that the term samādhi is not found in any pre-Buddhist text. To his remarks on the subject should be added that its subsequent use in Hindu texts to denote the state of enlightenment is not in conformity with Buddhist usage, where the basic meaning of concentration is expanded to cover 'meditation' in general.</span></span></span> Once the Venerable Ananda was staying at Sāvatthī, in Jeta's grove, in Anāthapiṇḍika's park, shortly after the Lord's final passing.<span class="note" id="n226"><span class="details"><span class="p">[n.226] Chronology is of little account in this Nikāya. The Buddha’s final passing is narrated in <a href="../dn/dn16.html">DN&nbsp;16</a>.</span></span></span> And at that time the youth Subha, Todeyya's son,<span class="note" id="n227"><span class="details"><span class="p">[n.227] A Brahmin, whose name means 'man of Tudi'.</span></span></span> was staying at Sāvatthī on some business.</p>
 
 <hr>
+<p id="p2"><span class="parno">2</span>And Subha said to a certain young man: 'Go, my lad, to where the ascetic Ananda is, ask him in my name if he is in good health, free from fatigue, strong, vigorous and dwelling in comfort, and say: "It would be good if the Reverend Ananda would, out of compassion, visit the dwelling of Subha the son of Todeyya."'</p>
 
-<p><span class="parno">4</span>When he had spoken, Venerable Ānanda said to him: “It’s not the right time, student. I’ve drunk sufficient refreshments for today. But hopefully tomorrow I’ll get a chance to visit him.”</p>
-
-<p><span class="parno">5</span>“Yes, sir,” replied the student. He went back to Subha, and told him what had happened, adding: “This much, sir, I managed to do. At least Master Ānanda will take the opportunity to visit tomorrow.”</p>
-
-<hr>
-
-<p><span class="parno">6</span>Then when the night had passed, Ānanda put on his outer robe in the morning and, taking his bowl and robe, went with Venerable Cetaka as his second monk to Subha’s home, where he sat on the seat spread out. </p>
-
-<p><span class="parno">7</span>Then Subha went up to Ānanda, and exchanged greetings with him. When the greetings and polite conversation were over, he sat down to one side and said to Ānanda:</p>
-
-<p>“Master Ānanda, you were Master Gotama’s attendant. You were close to him, living in his presence. You ought to know what things Master Gotama praised, and in which he encouraged, settled, and grounded all these people. What were those things?”</p>
-
-<p><span class="parno">8</span>“Student, the Buddha praised three sets of things, and that’s what he encouraged, settled, and grounded all these people in. What three? The entire spectrum of noble ethics, immersion, and wisdom. These are the three sets of things that the Buddha praised.”</p>
-
-<h3>1. The Entire Spectrum of Ethics </h3>
-
-<p><span class="parno">9</span>“But what was that noble spectrum of ethics that the Buddha praised?”</p>
-
-<p><span class="parno">10</span>“Student, it’s when a Realized One arises in the world, perfected, a fully awakened Buddha, accomplished in knowledge and conduct, holy, knower of the world, supreme guide for those who wish to train, teacher of gods and humans, awakened, blessed. He has realized with his own insight this world — with its gods, Māras and Brahmās, this population with its ascetics and brahmins, gods and humans — and he makes it known to others. He teaches Dhamma that’s good in the beginning, good in the middle, and good in the end, meaningful and well-phrased. And he reveals a spiritual practice that’s entirely full and pure. </p>
-
-<p>A householder hears that teaching, or a householder’s child, or someone reborn in some clan. They gain faith in the Realized One, and reflect: ‘Living in a house is cramped and dirty, but the life of one gone forth is wide open. It’s not easy for someone living at home to lead the spiritual life utterly full and pure, like a polished shell. Why don’t I shave off my hair and beard, dress in ocher robes, and go forth from the lay life to homelessness?’ </p>
-
-<p>After some time they give up a large or small fortune, and a large or small family circle. They shave off hair and beard, dress in ocher robes, and go forth from the lay life to homelessness. </p>
-
-<p>Once they’ve gone forth, they live restrained in the monastic code, conducting themselves well and seeking alms in suitable places. Seeing danger in the slightest fault, they keep the rules they’ve undertaken. They act skillfully by body and speech. They’re purified in livelihood and accomplished in ethical conduct. They guard the sense doors, have mindfulness and situational awareness, and are content.</p>
+<p id="p3"><span class="parno">3</span>'Very good, sir', replied the young man. Then he went to the Venerable Ananda, exchanged courtesies with him, and sat down to one side. Then he delivered the message.</p>
 
 <hr>
+<p id="p4"><span class="parno">4</span>The Venerable Ananda replied: 'It is not the right time, young man. Today I have taken some medicine. Perhaps it will be possible to come tomorrow when the time and the occasion are suitable.'</p>
 
-<p><span class="parno">11</span>And how is a mendicant accomplished in ethics? It’s when a mendicant gives up killing living creatures. They renounce the rod and the sword. They’re scrupulous and kind, living full of compassion for all living beings. … This pertains to their ethics.</p>
-
-<p><span class="parno">12</span>There are some ascetics and brahmins who, while enjoying food given in faith, still earn a living by unworthy branches of knowledge, by wrong livelihood. This includes rites for propitiation, for granting wishes, for ghosts, for the earth, for rain, for property settlement, and for preparing and consecrating house sites, and rites involving rinsing and bathing, and oblations. It also includes administering emetics, purgatives, expectorants, and phlegmagogues; administering ear-oils, eye restoratives, nasal medicine, ointments, and counter-ointments; surgery with needle and scalpel, treating children, prescribing root medicines, and binding on herbs. They refrain from such unworthy branches of knowledge, such wrong livelihood. … This pertains to their ethics.</p>
-
-<p><span class="parno">13</span>A mendicant thus accomplished in ethics sees no danger in any quarter in regards to their ethical restraint. It’s like a king who has defeated his enemies. He sees no danger from his foes in any quarter. A mendicant thus accomplished in ethics sees no danger in any quarter in regards to their ethical restraint. When they have this entire spectrum of noble ethics, they experience a blameless happiness inside themselves. </p>
-
-<p>That’s how a mendicant is accomplished in ethics.</p>
+<p id="p5"><span class="parno">5</span>And the young man rose, returned to Subha and reported what had passed between him and the Venerable Ananda, adding: 'My mission has been thus far accomplished, that the Reverend Ananda will probably take the opportunity to come tomorrow.'</p>
 
 <hr>
-
-<p><span class="parno">14</span>This is that noble spectrum of ethics that the Buddha praised. But there is still more to be done.”</p>
-
-<p><span class="parno">15</span>“It’s incredible, Master Ānanda, it’s amazing, This noble spectrum of ethics is complete, not lacking anything! Such a complete spectrum of ethics cannot be seen among the other ascetics and brahmins. Were other ascetics and brahmins to see such a complete spectrum of noble ethics in themselves, they’d be delighted with just that much: ‘At this point it’s enough; at this point our work is done. We’ve reached the goal of our ascetic life. There is nothing more to be done.’ And yet you say: ‘But there is still more to be done.’</p>
-
-<h2>2. The Spectrum of Immersion </h2>
-
-<p><span class="parno">16</span>But what, Master Ānanda, was that noble spectrum of immersion that the Buddha praised?”</p>
-
-<p><span class="parno">17</span>“And how, student, does a mendicant guard the sense doors? When a mendicant sees a sight with their eyes, they don’t get caught up in the features and details. If the faculty of sight were left unrestrained, bad unskillful qualities of desire and aversion would become overwhelming. For this reason, they practice restraint, protecting the faculty of sight, and achieving its restraint. When they hear a sound with their ears … When they smell an odor with their nose … When they taste a flavor with their tongue … When they feel a touch with their body … When they know a thought with their mind, they don’t get caught up in the features and details. If the faculty of mind were left unrestrained, bad unskillful qualities of desire and aversion would become overwhelming. For this reason, they practice restraint, protecting the faculty of mind, and achieving its restraint. When they have this noble sense restraint, they experience an unsullied bliss inside themselves. That’s how a mendicant guards the sense doors.</p>
+<p id="p6"><span class="parno">6</span>And indeed, as that night was ending, the Venerable Ananda dressed in the early morning, took his robe and bowl and, accompanied by the Venerable Cetaka,<span class="note" id="n228"><span class="details"><span class="p">[n.228] Like Todeyya, he is named after his birthplace in the Cetiya country.</span></span></span> came to Subha's dwelling, and sat down on the prepared seat.</p>
 
 <hr>
+<p id="p7"><span class="parno">7</span>Then Subha approached the Venerable Ananda, exchanged courtesies with him, and sat down to one side. Then he said:</p>
 
-<p><span class="parno">18</span>And how does a mendicant have mindfulness and situational awareness? It’s when a mendicant acts with situational awareness when going out and coming back; when looking ahead and aside; when bending and extending the limbs; when bearing the outer robe, bowl and robes; when eating, drinking, chewing, and tasting; when urinating and defecating; when walking, standing, sitting, sleeping, waking, speaking, and keeping silent. That’s how a mendicant has mindfulness and situational awareness.</p>
+<p>'The Reverend Ananda was for a long time the Reverend Gotama's personal attendant, dwelling in his presence and near him. You, Reverend Ananda, would know what things the Reverend Gotama praised, and with which he aroused, exhorted and established people. Which, Reverend Ananda, were those things?'</p>
 
-<p><span class="parno">19</span>And how is a mendicant content? It’s when a mendicant is content with robes to look after the body and alms-food to look after the belly. Wherever they go, they set out taking only these things. They’re like a bird: wherever it flies, wings are its only burden. In the same way, a mendicant is content with robes to look after the body and alms-food to look after the belly. Wherever they go, they set out taking only these things. That’s how a mendicant is content.</p>
+<p id="p8"><span class="parno">8</span>'Subha, there were three divisions of things which the Lord praised, and with which he aroused, exhorted and established people. Which three? The division of Ariyan morality,<span class="note" id="n229"><span class="details"><span class="p">[n.229] <i>Sīlakkhandha.</i> This is also the name of the first of the three divisions of this Nikāya, but the other two do not conform to the same pattern.</span></span></span> the division of Ariyan concentration, and the division of Ariyan wisdom. These were the three divisions of things which the Lord praised…'</p>
 
-<p><span class="parno">20</span>When they have this noble spectrum of ethics, this noble sense restraint, this noble mindfulness and situational awareness, and this noble contentment, they frequent a secluded lodging — a wilderness, the root of a tree, a hill, a ravine, a mountain cave, a charnel ground, a forest, the open air, a heap of straw. After the meal, they return from alms-round, sit down cross-legged with their body straight, and establish mindfulness right there.</p>
+<h3>The Section on Morality</h3>
 
-<p><span class="parno">21</span>Giving up desire for the world, they meditate with a heart rid of desire, cleansing the mind of desire. Giving up ill will and malevolence, they meditate with a mind rid of ill will, full of compassion for all living beings, cleansing the mind of ill will. Giving up dullness and drowsiness, they meditate with a mind rid of dullness and drowsiness, perceiving light, mindful and aware, cleansing the mind of dullness and drowsiness. Giving up restlessness and remorse, they meditate without restlessness, their mind peaceful inside, cleansing the mind of restlessness and remorse. Giving up doubt, they meditate having gone beyond doubt, not undecided about skillful qualities, cleansing the mind of doubt.</p>
-
-<hr>
-
-<p><span class="parno">22</span>Suppose a man who has gotten into debt were to apply himself to work, and his efforts proved successful. He would pay off the original loan and have enough left over to support his partner. Thinking about this, he’d be filled with joy and happiness.</p>
-
-<p><span class="parno">23</span>Suppose there was a person who was sick, suffering, gravely ill. They’d lose their appetite and get physically weak. But after some time they’d recover from that illness, and regain their appetite and their strength. Thinking about this, they’d be filled with joy and happiness.</p>
-
-<p><span class="parno">24</span>Suppose a person was imprisoned in a jail. But after some time they were released from jail, safe and sound, with no loss of wealth. Thinking about this, they’d be filled with joy and happiness.</p>
+<p id="p9"><span class="parno">9</span>'Well, Reverend Ananda, what is the division of Ariyan morality which the Reverend Gotama praised … ?'</p>
 
 <hr>
+<p id="p10"><span class="parno">10</span>'Young sir, a Tathāgata arises in the world, an Arahant, fully-enlightened Buddha, endowed with wisdom and conduct, Well-Farer, Knower of the worlds, incomparable Trainer of men to be tamed, Teacher of gods and humans, enlightened and blessed. He, having realised it by his own super-knowledge, proclaims this world with its devas, māras and Brahmās, its princes and people. He preaches the Dhamma which is lovely in its beginning, lovely in its middle, lovely in its ending, in the spirit and in the letter, and displays the fully-perfected and purified holy life.</p>
 
-<p><span class="parno">25</span>Suppose a person was a bondservant. They belonged to someone else and were unable to go where they wish. But after some time they’d be freed from servitude and become their own master, an emancipated individual able to go where they wish. Thinking about this, they’d be filled with joy and happiness.</p>
-
-<p><span class="parno">26</span>Suppose there was a person with wealth and property who was traveling along a desert road, which was perilous, with nothing to eat. But after some time they crossed over the desert safely, reaching the neighborhood of a village, a sanctuary free of peril. Thinking about this, they’d be filled with joy and happiness.</p>
-
-<p><span class="parno">27</span>In the same way, as long as these five hindrances are not given up inside themselves, a mendicant regards them as a debt, a disease, a prison, slavery, and a desert crossing.</p>
-
-<p><span class="parno">28</span>But when these five hindrances are given up inside themselves, a mendicant regards this as freedom from debt, good health, release from prison, emancipation, and sanctuary.</p>
-
-<hr>
-
-<p><span class="parno">29</span>Seeing that the hindrances have been given up in them, joy springs up. Being joyful, rapture springs up. When the mind is full of rapture, the body becomes tranquil. When the body is tranquil, they feel bliss. And when blissful, the mind becomes immersed.</p>
-
-<p><span class="parno">30</span>Quite secluded from sensual pleasures, secluded from unskillful qualities, they enter and remain in the first absorption, which has the rapture and bliss born of seclusion, while placing the mind and keeping it connected. They drench, steep, fill, and spread their body with rapture and bliss born of seclusion. There’s no part of the body that’s not spread with rapture and bliss born of seclusion.</p>
+<p>"A householder, or a householder's son, or one born into some other family, hears the Dhamma. Having heard the Dhamma, he gains faith in the Tathāgata. Endowed with such faith, he reflects: 'The household life is crowded, a path of dust. Going forth is like the open air. It is not easy for one dwelling at home to lead the perfectly complete, perfectly purified holy life, bright as a polished conch. Let me then shave off my hair and beard, put on saffron robes, and go forth from home to homelessness.'
+<br>
+<p>"After some time he abandons his accumulation of wealth, be it large or small; he abandons his circle of relatives, be it large or small; he shaves off his hair and beard, puts on saffron robes, and goes forth from home to homelessness.
+<br>
+<p>"When he has thus gone forth, he lives restrained by the restraint of the Pāṭimokkha, possessed of proper behaviour and resort. Having taken up the rules of training, he trains himself in them, seeing danger in the slightest faults. He comes to be endowed with wholesome bodily and verbal action, his livelihood is purified, and he is possessed of moral discipline. He guards the doors of his sense faculties, is endowed with mindfulness and clear comprehension, and is content.</p>
 
 <hr>
-
-<p><span class="parno">31</span>It’s like when a deft bathroom attendant or their apprentice pours bath powder into a bronze dish, sprinkling it little by little with water. They knead it until the ball of bath powder is soaked and saturated with moisture, spread through inside and out; yet no moisture oozes out.</p>
-
-<p>In the same way, a mendicant drenches, steeps, fills, and spreads their body with rapture and bliss born of seclusion. There’s no part of the body that’s not spread with rapture and bliss born of seclusion. This pertains to their immersion.</p>
+<p id="p11"><span class="parno">11</span>"And how, young sir, is the bhikkhu possessed of moral discipline? Herein, young sir, having abandoned the destruction of life, the bhikkhu abstains from the destruction of life. He has laid down the rod and weapon and dwells conscientious, full of kindness, sympathetic for the welfare of all living beings. This pertains to his moral discipline.</p>
 
 <hr>
+<p id="p12"><span class="parno">12</span>"Whereas some recluses and brahmins, while living on the food offered by the faithful, earn their living by a wrong means of livelihood, by such debased arts as:</p>
 
-<p><span class="parno">32</span>Furthermore, as the placing of the mind and keeping it connected are stilled, a mendicant enters and remains in the second absorption, which has the rapture and bliss born of immersion, with internal clarity and confidence, and unified mind, without placing the mind and keeping it connected. They drench, steep, fill, and spread their body with rapture and bliss born of immersion. There’s no part of the body that’s not spread with rapture and bliss born of immersion.</p>
+<ul><li>promising gifts to deities in return for favours</li>
+<li>fulfilling such promises</li>
+<li>demonology</li>
+<li>reciting spells after entering an earthen house</li>
+<li>inducing virility and impotence</li>
+<li>preparing and consecrating sites for a house</li>
+<li>giving ceremonial mouthwashes and ceremonial bathing</li>
+<li>offering sacrificial fires</li>
+<li>administering emetics, purgatives, expectorants, and phlegmagogues</li>
+<li>administering medicines through the ear and through the nose, administering ointments and counter-ointments, practising fine surgery on the eyes and ears, practising general surgery on the body, practising as a children's doctor—</li>
+</ul>
 
-<hr>
-
-<p><span class="parno">33</span>It’s like a deep lake fed by spring water. There’s no inlet to the east, west, north, or south, and no rainfall to replenish it from time to time. But the stream of cool water welling up in the lake drenches, steeps, fills, and spreads throughout the lake. There’s no part of the lake that’s not spread through with cool water.</p>
-
-<p>In the same way, a mendicant drenches, steeps, fills, and spreads their body with rapture and bliss born of immersion. There’s no part of the body that’s not spread with rapture and bliss born of immersion. This pertains to their immersion.</p>
-
-<p><span class="parno">34</span>Furthermore, with the fading away of rapture, a mendicant enters and remains in the third absorption, where they meditate with equanimity, mindful and aware, personally experiencing the bliss of which the noble ones declare, ‘Equanimous and mindful, one meditates in bliss.’ They drench, steep, fill, and spread their body with bliss free of rapture. There’s no part of the body that’s not spread with bliss free of rapture.</p>
-
-<p><span class="parno">35</span>It’s like a pool with blue water lilies, or pink or white lotuses. Some of them sprout and grow in the water without rising above it, thriving underwater. From the tip to the root they’re drenched, steeped, filled, and soaked with cool water. There’s no part of them that’s not soaked with cool water.</p>
-
-<p>In the same way, a mendicant drenches, steeps, fills, and spreads their body with bliss free of rapture. There’s no part of the body that’s not spread with bliss free of rapture. This pertains to their immersion.</p>
-
-<p><span class="parno">36</span>Furthermore, giving up pleasure and pain, and ending former happiness and sadness, a mendicant enters and remains in the fourth absorption, without pleasure or pain, with pure equanimity and mindfulness. They sit spreading their body through with pure bright mind. There’s no part of the body that’s not spread with pure bright mind.</p>
-
-<hr>
-
-<p><span class="parno">37</span>It’s like someone sitting wrapped from head to foot with white cloth. There’s no part of the body that’s not spread over with white cloth.</p>
-
-<p>In the same way, a mendicant sits spreading their body through with pure bright mind. There's no part of their body that's not spread with pure bright mind. This pertains to their immersion.</p>
+<p>he abstains from such wrong means of livelihood, from such debased arts. This too pertains to his moral discipline.</p>
 
 <hr>
+<p id="p13"><span class="parno">13</span>"Young sir, the bhikkhu who is thus possessed of moral discipline sees no danger anywhere in regard to his restraint by moral discipline. Just as a head-anointed noble warrior who has defeated his enemies sees no danger anywhere from his enemies, so the bhikkhu who is thus possessed of moral discipline sees no danger anywhere in regard to his restraint by moral discipline. Endowed with this noble aggregate of moral discipline, he experiences within himself a blameless happiness. In this way, young sir, the bhikkhu is possessed of moral discipline.</p>
 
-<p><span class="parno">38</span>This is that noble spectrum of immersion that the Buddha praised. But there is still more to be done.”</p>
+<p>Thus a monk is perfected in morality.</p>
 
-<p><span class="parno">39</span>“It’s incredible, Master Ānanda, it’s amazing! This noble spectrum of immersion is complete, not lacking anything! Such a complete spectrum of immersion cannot be seen among the other ascetics and brahmins. Were other ascetics and brahmins to see such a complete spectrum of noble immersion in themselves, they’d be delighted with just that much: ‘At this point it’s enough; at this point our work is done. We’ve reached the goal of our ascetic life. There is nothing more to be done.’ And yet you say: ‘But there is still more to be done.’</p>
+<p id="p14"><span class="parno">14</span>'That is the division of Ariyan morality which the Lord praised… But something more remains to be done.'</p>
 
-<h2>3. The Spectrum of Wisdom </h2>
+<p id="p15"><span class="parno">15</span>'It is wonderful, Reverend Ananda, it is marvellous! This division of Ariyan morality is perfectly fulfilled, not left incomplete. And I do not see this division of Ariyan morality fulfilled thus anywhere among the ascetics and Brahmins of other schools. And if any of them were to have found this perfection in themselves, they would have been so delighted that they would have said: "We've done enough! The goal of our asceticism has been reached! There's nothing more to be done!" And yet the Reverend Ananda declares that there is more to be done!'</p>
 
-<p><span class="parno">40</span>But what, Master Ānanda, was that noble spectrum of wisdom that the Buddha praised?”</p>
+<p class="endsutta"><span class="add">End of first recitation-section</span></p>
 
-<p><span class="parno">41</span>“When their mind has become immersed in samādhi like this — purified, bright, flawless, rid of corruptions, pliable, workable, steady, and imperturbable — they extend it and project it toward knowledge and vision. They understand: ‘This body of mine is physical. It’s made up of the four primary elements, produced by mother and father, built up from rice and porridge, liable to impermanence, to wearing away and erosion, to breaking up and destruction. And this consciousness of mine is attached to it, tied to it.’</p>
+<h3>The Section on Concentration</h3>
 
-<hr>
+<p id="p16"><span class="parno">16</span>'Reverend Ananda, what is the division of Ariyan concentration which the Reverend Gotama praised? …'
 
-<p><span class="parno">42</span>Suppose there was a beryl gem that was naturally beautiful, eight-faceted, well-worked, transparent, clear, and unclouded, endowed with all good qualities. And it was strung with a thread of blue, yellow, red, white, or golden brown. And someone with good eyesight were to take it in their hand and examine it: ‘This beryl gem is naturally beautiful, eight-faceted, well-worked, transparent, clear, and unclouded, endowed with all good qualities. And it’s strung with a thread of blue, yellow, red, white, or golden brown.’</p>
-
-<hr>
-
-<p>In the same way, when their mind has become immersed in samādhi like this — purified, bright, flawless, rid of corruptions, pliable, workable, steady, and imperturbable — they extend it and project it toward knowledge and vision. This pertains to their wisdom.</p>
+<p id="p17"><span class="parno">17</span>"And how, young sir, does the bhikkhu guard the doors of his sense faculties? Herein, young sir, having seen a form with the eye, the bhikkhu does not grasp at the sign or the details. Since, if he were to dwell without restraint over the faculty of the eye, evil unwholesome states such as covetousness and grief might assail him, he practises restraint, guards the faculty of the eye, and achieves restraint over the faculty of the eye. Having heard a sound with the ear … having smelled an odour with the nose … having tasted a flavour with the tongue … having touched a tangible object with the body … having cognized a mind-object with the mind, the bhikkhu does not grasp at the sign or the details. Since, if he were to dwell without restraint over the faculty of the mind, evil unwholesome states such as covetousness and grief might assail him, he practises restraint, guards the faculty of the mind, and achieves restraint over the faculty of the mind. Endowed with this noble restraint of the sense faculties, he experiences within himself an unblemished happiness. In this way, young sir, the bhikkhu guards the doors of the sense faculties.</p>
 
 <hr>
-
-<p><span class="parno">43</span>When their mind has become immersed in samādhi like this — purified, bright, flawless, rid of corruptions, pliable, workable, steady, and imperturbable — they extend it and project it toward the creation of a mind-made body. From this body they create another body, physical, mind-made, complete in all its various parts, not deficient in any faculty.</p>
-
-<p><span class="parno">44</span>Suppose a person was to draw a reed out from its sheath. They’d think: ‘This is the reed, this is the sheath. The reed and the sheath are different things. The reed has been drawn out from the sheath.’ Or suppose a person was to draw a sword out from its scabbard. They’d think: ‘This is the sword, this is the scabbard. The sword and the scabbard are different things. The sword has been drawn out from the scabbard.’ Or suppose a person was to draw a snake out from its slough. They’d think: ‘This is the snake, this is the slough. The snake and the slough are different things. The snake has been drawn out from the slough.’</p>
+<p id="p18"><span class="parno">18</span>"And how, young sir, is the bhikkhu endowed with mindfulness and clear comprehension? Herein, young sir, in going forward and returning, the bhikkhu acts with clear comprehension. In looking ahead and looking aside, he acts with clear comprehension. In bending and stretching the limbs, he acts with clear comprehension. In wearing his robes and cloak and using his alms-bowl, he acts with clear comprehension. In eating, drinking, chewing, and tasting, he acts with clear comprehension. In defecating and urinating, he acts with clear comprehension. In going, standing, sitting, lying down, waking up, speaking, and remaining silent, he acts with clear comprehension. In this way, young sir, the bhikkhu is endowed with mindfulness and clear comprehension.</p>
 
 <hr>
+<p id="p19"><span class="parno">19</span>"And how, young sir, is the bhikkhu content? Herein, young sir, a bhikkhu is content with robes to protect his body and almsfood to sustain his belly; wherever he goes he sets out taking only (his requisites) along with him. Just as a bird, wherever it goes, flies with its wings as its only burden, in the same way a bhikkhu is content with robes to protect his body and almsfood to sustain his belly; wherever he goes he sets out taking only (his requisites) along with him. In this way, young sir, the bhikkhu is content.</p>
 
-<p>In the same way, when their mind has become immersed in samādhi like this — purified, bright, flawless, rid of corruptions, pliable, workable, steady, and imperturbable — they extend it and project it toward the creation of a mind-made body. This pertains to their wisdom.</p>
+<p><p id="p20"><span class="parno">20</span>"Endowed with this noble aggregate of moral discipline, this noble restraint over the sense faculties, this noble mindfulness and clear comprehension, and this noble contentment, he resorts to a secluded dwelling—a forest, the foot of a tree, a mountain, a glen, a hillside cave, a cremation ground, a jungle grove, the open air, a heap of straw. After returning from his alms-round, following his meals, he sits down, crosses his legs, holds his body erect, and sets up mindfulness before him.</p>
 
-<p><span class="parno">45</span>When their mind has become immersed in samādhi like this — purified, bright, flawless, rid of corruptions, pliable, workable, steady, and imperturbable — they extend it and project it toward psychic power. They wield the many kinds of psychic power: multiplying themselves and becoming one again; going unimpeded through a wall, a rampart, or a mountain as if through space; diving in and out of the earth as if it were water; walking on water as if it were earth; flying cross-legged through the sky like a bird; touching and stroking with the hand the sun and moon, so mighty and powerful; controlling the body as far as the Brahmā realm.</p>
-
-<p><span class="parno">46</span>Suppose an expert potter or their apprentice had some well-prepared clay. They could produce any kind of pot that they like. Or suppose an expert ivory-carver or their apprentice had some well-prepared ivory. They could produce any kind of ivory item that they like. Or suppose an expert goldsmith or their apprentice had some well-prepared gold. They could produce any kind of gold item that they like.</p>
-
-<p>In the same way, when their mind has become immersed in samādhi like this — purified, bright, flawless, rid of corruptions, pliable, workable, steady, and imperturbable — they extend it and project it toward psychic power. This pertains to their wisdom.</p>
+<p id="p21"><span class="parno">21</span>"Having abandoned covetousness for the world, he dwells with a mind free from covetousness; he purifies his mind from covetousness. Having abandoned ill will and hatred, he dwells with a benevolent mind, sympathetic for the welfare of all living beings; he purifies his mind from ill will and hatred. Having abandoned dullness and drowsiness, he dwells perceiving light, mindful and clearly comprehending; he purifies his mind from dullness and drowsiness. Having abandoned restlessness and worry, he dwells at ease within himself, with a peaceful mind; he purifies his mind from restlessness and worry. Having abandoned doubt, he dwells as one who has passed beyond doubt, unperplexed about wholesome states; he purifies his mind from doubt.</p>
 
 <hr>
+<p id="p22"><span class="parno">22</span>"Young sir, suppose a man were to take a loan and apply it to his business, and his business were to succeed, so that he could pay back his old debts and would have enough money left over to maintain a wife. He would reflect on this, and as a result he would become glad and experience joy.</p>
 
-<p>When their mind has become immersed in samādhi like this — purified, bright, flawless, rid of corruptions, pliable, workable, steady, and imperturbable — they extend it and project it toward clairaudience. With clairaudience that is purified and superhuman, they hear both kinds of sounds, human and divine, whether near or far. </p>
-
-<p>Suppose there was a person traveling along the road. They’d hear the sound of drums, clay drums, horns, kettledrums, and tom-toms. They’d think: ‘That’s the sound of drums,’ and ‘that’s the sound of clay-drums,’ and ‘that’s the sound of horns, kettledrums, and tom-toms.’</p>
-
-<p>In the same way, when their mind has become immersed in samādhi like this — purified, bright, flawless, rid of corruptions, pliable, workable, steady, and imperturbable — they extend it and project it toward clairaudience. This pertains to their wisdom.</p>
+<p id="p23"><span class="parno">23</span>"Again, young sir, suppose a man were to become sick, afflicted, gravely ill, so that he could not enjoy his food and his strength would decline. After some time he would recover from that illness and would enjoy his food and regain his bodily strength. He would reflect on this, and as a result he would become glad and experience joy.</p>
 
 <hr>
+<p id="p24"><span class="parno">24</span>"Again, young sir, suppose a man were locked up in a prison. After some time he would be released from prison, safe and secure, with no loss of his possessions. He would reflect on this, and as a result he would become glad and experience joy.</p>
 
-<p><span class="parno">48</span>When their mind has become immersed in samādhi like this — purified, bright, flawless, rid of corruptions, pliable, workable, steady, and imperturbable — they extend it and project it toward comprehending the minds of others. They understand mind with greed as ‘mind with greed’, and mind without greed as ‘mind without greed’. They understand mind with hate … mind without hate … mind with delusion … mind without delusion … constricted mind … scattered mind … expansive mind … unexpansive mind … mind that is not supreme … mind that is supreme … immersed mind … unimmersed mind … freed mind … They understand unfreed mind as ‘unfreed mind’.</p>
+<p id="p25"><span class="parno">25</span>"Again, young sir, suppose a man were a slave, without independence, subservient to others, unable to go where he wants. After some time he would be released from slavery and gain his independence; he would no longer be subservient to others but a free man able to go where he wants. He would reflect on this, and as a result he would become glad and experience joy.</p>
 
-<hr>
-
-<p><span class="parno">49</span>Suppose there was a woman or man who was young, youthful, and fond of adornments, and they check their own reflection in a clean bright mirror or a clear bowl of water. If they had a spot they’d know ‘I have a spot,’ and if they had no spots they’d know ‘I have no spots.’</p>
-
-<p>In the same way, when their mind has become immersed in samādhi like this — purified, bright, flawless, rid of corruptions, pliable, workable, steady, and imperturbable — they extend it and project it toward comprehending the minds of others. This pertains to their wisdom.</p>
-
-<p><span class="parno">50</span>When their mind has become immersed in samādhi like this — purified, bright, flawless, rid of corruptions, pliable, workable, steady, and imperturbable — they extend it and project it toward recollection of past lives. They recollect many kinds of past lives, that is, one, two, three, four, five, ten, twenty, thirty, forty, fifty, a hundred, a thousand, a hundred thousand rebirths; many eons of the world contracting, many eons of the world expanding, many eons of the world contracting and expanding. They remember: ‘There, I was named this, my clan was that, I looked like this, and that was my food. This was how I felt pleasure and pain, and that was how my life ended. When I passed away from that place I was reborn somewhere else. Passing away from there, I was reborn elsewhere, and there I had such a name, such a family, such appearance, such food, such experience of happiness and suffering, and such a life-span. Passing away from there, I was reborn here.’ And so they recollect their many kinds of past lives, with features and details.</p>
+<p id="p26"><span class="parno">26</span>"Again, young sir, suppose a man with wealth and possessions were travelling along a desert road where food was scarce and dangers were many. After some time he would cross over the desert and arrive safely at a village which is safe and free from danger. He would reflect on this, and as a result he would become glad and experience joy.</p>
 
 <hr>
+<p id="p27"><span class="parno">27</span>"In the same way, young sir, when a bhikkhu sees that these five hindrances are unabandoned within himself, he regards that as a debt, as a sickness, as confinement in prison, as slavery, as a desert road.</p>
 
-<p><span class="parno">51</span>Suppose a person was to leave their home village and go to another village. From that village they’d go to yet another village. And from that village they’d return to their home village. They’d think: ‘I went from my home village to another village. There I stood like this, sat like that, spoke like this, or kept silent like that. From that village I went to yet another village. There too I stood like this, sat like that, spoke like this, or kept silent like that. And from that village I returned to my home village.’</p>
+<p id="p28"><span class="parno">28</span>"But when he sees that these five hindrances have been abandoned within himself, he regards that as freedom from debt, as good health, as release from prison, as freedom from slavery, as a place of safety.</p>
 
-<p>In the same way, when their mind has become immersed in samādhi like this — purified, bright, flawless, rid of corruptions, pliable, workable, steady, and imperturbable — they extend it and project it toward recollection of past lives. This pertains to their wisdom.</p>
-
-<p><span class="parno">52</span>When their mind has become immersed in samādhi like this — purified, bright, flawless, rid of corruptions, pliable, workable, steady, and imperturbable — they extend it and project it toward knowledge of the death and rebirth of sentient beings. With clairvoyance that is purified and superhuman, they see sentient beings passing away and being reborn — inferior and superior, beautiful and ugly, in a good place or a bad place. They understand how sentient beings are reborn according to their deeds. ‘These dear beings did bad things by way of body, speech, and mind. They spoke ill of the noble ones; they had wrong view; and they chose to act out of that wrong view. When their body breaks up, after death, they’re reborn in a place of loss, a bad place, the underworld, hell. These dear beings, however, did good things by way of body, speech, and mind. They never spoke ill of the noble ones; they had right view; and they chose to act out of that right view. When their body breaks up, after death, they’re reborn in a good place, a heavenly realm.’ And so, with clairvoyance that is purified and superhuman, they see sentient beings passing away and being reborn — inferior and superior, beautiful and ugly, in a good place or a bad place. They understand how sentient beings are reborn according to their deeds.</p>
-
-<p><span class="parno">53</span>Suppose there was a stilt longhouse at the central square. A person with good eyesight standing there might see people entering and leaving a house, walking along the streets and paths, and sitting at the central square. They’d think: ‘These are people entering and leaving a house, walking along the streets and paths, and sitting at the central square.’</p>
-
-<p>In the same way, when their mind has become immersed in samādhi like this — purified, bright, flawless, rid of corruptions, pliable, workable, steady, and imperturbable — they extend and project it toward knowledge of the death and rebirth of sentient beings. This pertains to their wisdom.</p>
+<p id="p29"><span class="parno">29</span>"When he sees that these five hindrances have been abandoned within himself, gladness arises. When he is gladdened, rapture arises. When his mind is filled with rapture, his body becomes tranquil; tranquil in body, he experiences happiness; being happy, his mind becomes concentrated.</p>
 
 <hr>
+<p id="p30"><span class="parno">30</span>"Quite secluded from sense pleasures, secluded from unwholesome states, he enters and dwells in the first jhāna, which is accompanied by applied and sustained thought and filled with the rapture and happiness born of seclusion. He drenches, steeps, saturates, and suffuses his body with this rapture and happiness born of seclusion, so that there is no part of his entire body which is not suffused by this rapture and happiness.</p>
 
-<p><span class="parno">54</span>When their mind has become immersed in samādhi like this — purified, bright, flawless, rid of corruptions, pliable, workable, steady, and imperturbable — they extend it and project it toward knowledge of the ending of defilements. They truly understand: ‘This is suffering’ … ‘This is the origin of suffering’ … ‘This is the cessation of suffering’ … ‘This is the practice that leads to the cessation of suffering’. They truly understand: ‘These are defilements’ … ‘This is the origin of defilements’ … ‘This is the cessation of defilements’ … ‘This is the practice that leads to the cessation of defilements’. Knowing and seeing like this, their mind is freed from the defilements of sensuality, desire to be reborn, and ignorance. When they’re freed, they know they’re freed.</p>
-
-<hr>
-
-<p>They understand: ‘Rebirth is ended, the spiritual journey has been completed, what had to be done has been done, there is no return to any state of existence.’</p>
+<p id="p31"><span class="parno">31</span>"Young sir, suppose a skilled bath attendant or his apprentice were to pour soap-powder into a metal basin, sprinkle it with water, and knead it into a ball, so that the ball of soap-powder be pervaded by moisture, encompassed by moisture, suffused with moisture inside and out, yet would not trickle. In the same way, young sir, the bhikkhu drenches, steeps, saturates, and suffuses his body with the rapture and happiness born of seclusion, so that there is no part of his entire body which is not suffused by this rapture and happiness.</p>
 
 <hr>
+<p id="p32"><span class="parno">32</span>"Further, young sir, with the subsiding of applied and sustained thought, the bhikkhu enters and dwells in the second jhāna, which is accompanied by internal confidence and unification of mind, is without applied and sustained thought, and is filled with the rapture and happiness born of concentration. He drenches, steeps, saturates, and suffuses his body with this rapture and happiness born of concentration, so that there is no part of his entire body which is not suffused by this rapture and happiness.</p>
 
-<p><span class="parno">55</span>Suppose that in a mountain glen there was a lake that was transparent, clear, and unclouded. A person with good eyesight standing on the bank would see the mussel shells, gravel and pebbles, and schools of fish swimming about or staying still. They’d think: ‘This lake is transparent, clear, and unclouded. And here are the mussel shells, gravel and pebbles, and schools of fish swimming about or staying still.’</p>
-
-<p>In the same way, when their mind has become immersed in samādhi like this — purified, bright, flawless, rid of corruptions, pliable, workable, steady, and imperturbable — they extend it and project it toward knowledge of the ending of defilements. This pertains to their wisdom.</p>
-
-<p><span class="parno">56</span>This is that noble spectrum of wisdom that the Buddha praised. And there is nothing more to be done.”</p>
+<p id="p33"><span class="parno">33</span>"Young sir, suppose there were a deep lake whose waters welled up from below. It would have no inlet for water from the east, west, north, or south, nor would it be refilled from time to time with showers of rain; yet a current of cool water, welling up from within the lake, would drench, steep, saturate and suffuse the whole lake, so that there would be no part of that entire lake which is not suffused with the cool water. In the same way, young sir, the bhikkhu drenches, steeps, saturates, and suffuses his body with the rapture and happiness born of concentration, so that there is no part of his entire body which is not suffused by this rapture and happiness.</p>
 
 <hr>
+<p id="p34"><span class="parno">34</span>"Further, young sir, with the fading away of rapture, the bhikkhu dwells in equanimity, mindful and clearly comprehending, and experiences happiness with the body. Thus he enters and dwells in the third jhāna, of which the noble ones declare: 'He dwells happily with equanimity and mindfulness.' He drenches, steeps, saturates, and suffuses his body with this happiness free from rapture, so that there is no part of his entire body which is not suffused by this happiness.</p>
 
-<p><span class="parno">57</span>“It’s incredible, Master Ānanda, it’s amazing! This noble spectrum of wisdom is complete, not lacking anything! Such a complete spectrum of wisdom cannot be seen among the other ascetics and brahmins. And there is nothing more to be done. Excellent, Master Ānanda! Excellent! As if he were righting the overturned, or revealing the hidden, or pointing out the path to the lost, or lighting a lamp in the dark so people with good eyes can see what’s there, Master Ānanda has made the teaching clear in many ways. </p>
+<p id="p35"><span class="parno">35</span>"Young sir, suppose in a lotus pond there were blue, white, or red lotuses that have been born in the water, grow in the water, and never rise up above the water, but flourish immersed in the water. From their tips to their roots they would be drenched, steeped, saturated, and suffused with cool water, so that there would be no part of those lotuses not suffused with cool water. In the same way, young sir, the bhikkhu drenches, steeps, saturates and suffuses his body with the happiness free from rapture, so that there is no part of his entire body which is not suffused by this happiness.</p>
 
-<p>I go for refuge to Master Gotama, to the teaching, and to the mendicant Saṅgha. From this day forth, may Master Ānanda remember me as a lay follower who has gone for refuge for life.”</p>
+<hr>
+<p id="p36"><span class="parno">36</span>"Further, young sir, with the abandoning of pleasure and pain, and with the previous passing away of joy and grief, the bhikkhu enters and dwells in the fourth jhāna, which is neither pleasant nor painful and contains mindfulness fully purified by equanimity. He sits suffusing his body with a pure bright mind, so that there is no part of his entire body not suffused by a pure bright mind.</p>
+
+<p id="p37"><span class="parno">37</span>"Young sir, suppose a man were to be sitting covered from the head down by a white cloth, so that there would be no part of his entire body not suffused by the white cloth. In the same way, young sir, the bhikkhu sits suffusing his body with a pure bright mind, so that there is no part of his entire body not suffused by a pure bright mind.
+<hr>
+<p id="p38"><span class="parno">38</span>'That is the division of Ariyan concentration which the Lord praised … But something more remains to be done.'</p>
+
+<p id="p39"><span class="parno">39</span>'It is wonderful, Reverend Ananda, it is marvellous! This division of Ariyan concentration is perfectly fulfilled, not left incomplete. And I do not see this division of Ariyan concentration fulfilled thus anywhere among the ascetics and Brahmins of other schools. And if any of them were to have found this perfection in themselves, they would have been so delighted that they would have said: "We've done enough! The goal of our asceticism has been reached! There's nothing more to be done!" And yet the Reverend Ananda declares that there is more to be done!'</p>
+
+<h3>The Section on Wisdom</h3>
+
+<p id="p40"><span class="parno">40</span>'Reverend Ananda, what is the division of Ariyan wisdom which the Reverend Gotama praised?'</p>
+
+<p id="p41"><span class="parno">41</span>"When his mind is thus concentrated, pure and bright, unblemished, free from defects, malleable, wieldy, steady and attained to imperturbability, he directs and inclines it to knowledge and vision. He understands thus: 'This is my body, having material form, composed of the four primary elements, originating from father and mother, built up out of rice and gruel, impermanent, subject to rubbing and pressing, to dissolution and dispersion. And this is my consciousness, supported by it and bound up with it.'</p>
+
+<p id="p42"><span class="parno">42</span>"Young sir, suppose there were a beautiful beryl gem of purest water, eight-faceted, well cut, clear, limpid, flawless, endowed with all excellent qualities. And through it there would run a blue, yellow, red, white, or brown thread. A man with keen sight, taking it in his hand, would reflect upon it thus: 'This is a beautiful beryl gem of purest water, eight faceted, well cut, clear, limpid, flawless, endowed with all excellent qualities. And running through it there is this blue, yellow, red, white, or brown thread.' In the same way, young sir, when his mind is thus concentrated, pure and bright … the bhikkhu directs and inclines it to knowledge and vision and understands thus: 'This is my body, having material form … . and this is my consciousness, supported by it and bound up with it.' That is known to him by wisdom.</p>
+
+<hr>
+<p id="p43"><span class="parno">43</span>"When his mind is thus concentrated, pure and bright, unblemished, free from defects, malleable, wieldy, steady, and attained to imperturbability, he directs and inclines it to creating a mind-made body. From this body he creates another body having material form, mind-made, complete in all its parts, not lacking any faculties.</p>
+
+<p id="p44"><span class="parno">44</span>"Young sir, suppose a man were to draw out a reed from its sheath. He would think: 'This is the reed; this is the sheath. The reed is one thing, the sheath another, but the reed has been drawn out from the sheath.' Or suppose a man were to draw a sword out from its scabbard. He would think: 'This is the sword; this is the scabbard. The sword is one thing, the scabbard another, but the sword has been drawn out from the scabbard.' Or suppose a man were to pull a snake out from its slough. He would think: 'This is the snake; this is the slough. The snake is one thing, the slough another, but the snake has been pulled out from the slough.' In the same way, young sir, when his mind is thus concentrated, pure and bright … The bhikkhu directs and inclines it to creating a mind-made body. From this body he creates another body having material form, mind-made, complete in all its parts, not lacking any faculties. That is known to him by wisdom.</p>
+
+<p id="p45"><span class="parno">45</span>"When his mind is thus concentrated, pure and bright, unblemished, free from defects, malleable, wieldy, steady, and attained to imperturbability, he directs and inclines it to the modes of supernormal power. He exercises the various modes of supernormal power: having been one, he becomes many and having been many, he becomes one; he appears and vanishes; he goes unimpeded through walls, ramparts, and mountains as if through space; he dives in and out of the earth as if it were water; he walks on water without sinking as if it were earth; sitting cross-legged he travels through space like a winged bird; with his hand he touches and strokes the sun and the moon, so mighty and powerful; he exercises mastery over the body as far as the Brahma-world.</p>
+
+<p id="p46"><span class="parno">46</span>"Young sir, suppose a skilled potter or his apprentice were to make and fashion out of well-prepared clay whatever kind of vessel he might desire. Or suppose a skilled ivory-worker or his apprentice were to make and fashion out of well-prepared ivory whatever kind of ivory work he might desire. Or suppose a skilled goldsmith or his apprentice were to make and fashion out of well-prepared gold whatever kind of gold work he might desire. In the same way, young sir, when his mind is thus concentrated, pure and bright … the bhikkhu directs and inclines it to the modes of supernormal power and exercises the various modes of supernormal power.</p>
+
+<hr>
+<p id="p47"><span class="parno">47</span>"When his mind is thus concentrated, pure and bright, unblemished, free from defects, malleable, wieldy, steady, and attained to imperturbability, he directs and inclines it to the divine ear-element. With the divine ear-element, which is purified and surpasses the human, he hears both kinds of sound, the divine and the human, those which are distant and those which are near.</p>
+
+<p>"Young sir, suppose a man travelling along a highway were to hear the sounds of kettledrums, tambours, horns, cymbals and tom-toms, and would think: 'This is the sound of kettledrums, this is the sound of tambours, this the sound of horns, cymbals and tom-toms.' In the same way, young sir, when his mind is thus concentrated, pure and bright … the bhikkhu directs and inclines it to the divine ear-element. With the divine ear-element, which is purified and surpasses the human, he hears both kinds of sound, the divine and the human, those which are distant and those which are near.</p>
+
+<p id="p48"><span class="parno">48</span>"When his mind is thus concentrated, pure and bright, unblemished, free from defects, malleable, wieldy, steady, and attained to imperturbability, he directs and inclines it to the knowledge of encompassing the minds (of others). He understands the minds of other beings and persons, having encompassed them with his own mind. He understands a mind with lust as a mind with lust and a mind without lust as a mind without lust; he understands a mind with hatred as a mind with hatred and a mind without hatred as a mind without hatred; he understands a mind with delusion as a mind with delusion and a mind without delusion as a mind without delusion; he understands a contracted mind as a contracted mind and a distracted mind as a distracted mind; he understands an exalted mind as an exalted mind and an unexalted mind as an unexalted mind; he understands a surpassable mind as a surpassable mind and an unsurpassable mind as an unsurpassable mind; he understands a concentrated mind as a concentrated mind and an unconcentrated mind as an unconcentrated mind; he understands a liberated mind as a liberated mind and an unliberated mind as an unliberated mind.</p>
+
+<p id="p49"><span class="parno">49</span>"Young sir, suppose a young man or woman, fond of ornaments, examining his or her own facial reflection in a pure bright mirror or in a bowl of clear water, would know, if there were a mole, 'It has a mole,' and if there were no mole, 'It has no mole.' In the same way, young sir, when his mind is thus concentrated, pure and bright … the bhikkhu directs and inclines it to the knowledge of encompassing the minds (of others). He understands the minds of other beings and persons, having encompassed them with his own mind.</p>
+
+<p id="p50"><span class="parno">50</span>"When his mind is thus concentrated, pure and bright, unblemished, free from defects, malleable, wieldy, steady, and attained to imperturbability, he directs and inclines it to the knowledge of recollecting past lives. He recollects his numerous past lives, that is, one birth, two births, three, four, or five births; ten, twenty, thirty, forty, or fifty births; a hundred births, a thousand births, a hundred thousand births; many aeons of world contraction, many aeons of world expansion, many aeons of world contraction and expansion, (recollecting): 'There I had such a name, belonged to such a clan, had such an appearance; such was my food, such my experience of pleasure and pain, such my span of life. Passing away from that state, I re-arose there. There too I had such a name, belonged to such a clan, had such an appearance; such was my food, such my experience of pleasure and pain, such my span of life. Passing away from that state I re-arose here.' Thus he recollects his numerous past lives in their modes and their details.</p>
+
+<p id="p51"><span class="parno">51</span>"Young sir, suppose a man were to go from his own village to another village, then from that village to still another village, and then from that village he would return to his own village. He would think to himself: 'I went from my own village to that village. There I stood in such a way, sat in such a way, spoke in such a way, and remained silent in such a way. From that village I went to still another village. There too I stood in such a way, sat in such a way, spoke in such a way, and remained silent in such a way. From that village I returned to my own village.' In the same way, young sir, when his mind is thus concentrated, pure and bright … the bhikkhu directs and inclines it to the knowledge of recollecting past lives, and he recollects his numerous past lives in their modes and their details.</p>
+
+<p id="p52"><span class="parno">52</span>"When his mind is thus concentrated, pure and bright, unblemished, free from defects, malleable, wieldy, steady, and attained to imperturbability, he directs and inclines it to the knowledge of the passing away and reappearance of beings. With the divine eye, which is purified and surpasses the human, he sees beings passing away and reappearing—inferior and superior, beautiful and ugly, fortunate and unfortunate—and he understands how beings fare according to their kamma, thus: 'These beings—who were endowed with bad conduct of body, speech, and mind, who reviled the noble ones, held wrong views, and undertook actions governed by wrong views—with the breakup of the body, after death, have reappeared in the plane of misery, the bad destinations, the lower realms, in hell. But these beings—who were endowed with good conduct of body, speech, and mind, who did not revile the noble ones, held right views, and undertook actions governed by right views—with the breakup of the body, after death, have reappeared in the good destinations, in the heavenly world.' Thus with the divine eye, which is purified and surpasses the human, he sees beings passing away and reappearing—inferior and superior, beautiful and ugly, fortunate and unfortunate—and he understands how beings fare in accordance with their kamma.</p>
+
+<hr>
+<p id="p53"><span class="parno">53</span>"Young sir, suppose in a central square there were a building with an upper terrace, and a man with keen sight standing there were to see people entering a house, leaving it, walking along the streets, and sitting in the central square. He would think to himself: 'Those people are entering the house, those are leaving it, those are walking along the streets, and those are sitting in the central square.' In the same way, young sir, when his mind is thus concentrated, pure and bright … the bhikkhu directs and inclines it to the knowledge of the passing away and reappearance of beings. With the divine eye, which is purified and surpasses the human, he sees beings passing away and reappearing, and he understands how beings fare according to their kamma.</p>
+
+<p id="p54"><span class="parno">54</span>"When his mind is thus concentrated, pure and bright, unblemished, free from defects, malleable, wieldy, steady, and attained to imperturbability, he directs and inclines it to the knowledge of the destruction of the cankers. He understands as it really is: 'This is suffering.' He understands as it really is: 'This is the origin of suffering.' He understands as it really is: 'This is the cessation of suffering.' He understands as it really is: 'This is the way leading to the cessation of suffering.' He understands as it really is: 'These are the cankers.' He understands as it really is: 'This is the origin of the cankers.' He understands as it really is: 'This is the cessation of the cankers.' He understands as it really is: 'This is the way leading to the cessation of the cankers.'</p>
+
+<p>"Knowing and seeing thus, his mind is liberated from the canker of sensual desire, from the canker of existence, and from the canker of ignorance. When it is liberated, the knowledge arises: 'It is liberated.' He understands: 'Destroyed is birth, the holy life has been lived, what had to be done has been done, there is nothing further beyond this.'</p>
+
+<hr>
+<p id="p55"><span class="parno">55</span>"Young sir, suppose in a mountain glen there were a lake with clear water, limpid and unsullied. A man with keen sight, standing on the bank, would see oyster-shells, sand and pebbles, and shoals of fish moving about and keeping still. He would think to himself: 'This is a lake with clear water, limpid and unsullied, and there within it are oyster-shells, sand and pebbles, and shoals of fish moving about and keeping still.'</p>
+
+<p>"In the same way, young sir, when his mind is thus concentrated, pure and bright … . the bhikkhu directs and inclines it to the knowledge of the destruction of the cankers. He understands as it really is: 'This is suffering' … He understands: 'Destroyed is birth, the holy life has been lived, what had to be done has been done, there is nothing further beyond this.'</p>
+
+<hr>
+<p id="p56"><span class="parno">56</span>'That is the division of Ariyan wisdom which the Lord praised, with which he aroused, exhorted and established people. Beyond that there is nothing to be done.'</p>
+
+<hr>
+<p id="p57"><span class="parno">57</span>'It is wonderful, Reverend Ananda, it is marvellous! This division of Ariyan wisdom is perfectly fulfilled, not left incomplete. And I do not see this division of Ariyan wisdom fulfilled thus anywhere among the ascetics and Brahmins of other schools. And there is nothing further to be done! Excellent, Reverend Ananda, excellent! It is as if someone were to set up what had been knocked down, or to point out the way to one who had got lost, or to bring an oil-lamp into a dark place, so that those with eyes could see what was there. Just so the Reverend Ananda has expounded the Dhamma in various ways.</p>
+
+<p>'Reverend Ananda, I go for refuge to the Lord Gotama, the Dhamma and the Saṅgha. May the Reverend Ananda accept me as a lay-follower who has taken refuge from this day forth as long as life shall last!'</p>
+
 </div>
 
 <div lang="pi">
-<p><span class="parno">1</span>Evaṁ me sutaṁ — ​ ekaṁ samayaṁ āyasmā ānando sāvatthiyaṁ viharati jetavane anāthapiṇḍikassa ārāme aciraparinibbute bhagavati. Tena kho pana samayena subho māṇavo todeyyaputto sāvatthiyaṁ paṭivasati kenacideva karaṇīyena.</p>
+<h3>&nbsp;</h3>
 
-
-<p><span class="parno">2</span>Atha kho subho māṇavo todeyyaputto aññataraṁ māṇavakaṁ āmantesi: "ehi tvaṁ, māṇavaka, yena samaṇo ānando tenupasaṅkama; upasaṅkamitvā mama vacanena samaṇaṁ ānandaṁ appābādhaṁ appātaṅkaṁ lahuṭṭhānaṁ balaṁ phāsuvihāraṁ puccha: 'subho māṇavo todeyyaputto bhavantaṁ ānandaṁ appābādhaṁ appātaṅkaṁ lahuṭṭhānaṁ balaṁ phāsuvihāraṁ pucchatī'ti. Evañca vadehi: 'sādhu kira bhavaṁ ānando yena subhassa māṇavassa todeyyaputtassa nivesanaṁ tenupasaṅkamatu anukampaṁ upādāyā'"ti.</p>
+<p><span class="parno">1</span>Evaṁ me sutaṁ—​ ekaṁ samayaṁ āyasmā ānando sāvatthiyaṁ viharati jetavane anāthapiṇḍikassa ārāme aciraparinibbute bhagavati. Tena kho pana samayena subho māṇavo todeyyaputto sāvatthiyaṁ paṭivasati kenacideva karaṇīyena.</p>
 
 <hr>
+<p><span class="parno">2</span>Atha kho subho māṇavo todeyyaputto aññataraṁ māṇavakaṁ āmantesi: "ehi tvaṁ, māṇavaka, yena samaṇo ānando tenupasaṅkama; upasaṅkamitvā mama vacanena samaṇaṁ ānandaṁ appābādhaṁ appātaṅkaṁ lahuṭṭhānaṁ balaṁ phāsuvihāraṁ puccha: 'subho māṇavo todeyyaputto bhavantaṁ ānandaṁ appābādhaṁ appātaṅkaṁ lahuṭṭhānaṁ balaṁ phāsuvihāraṁ pucchatī'ti. Evañca vadehi: 'sādhu kira bhavaṁ ānando yena subhassa māṇavassa todeyyaputtassa nivesanaṁ tenupasaṅkamatu anukampaṁ upādāyā'"ti.</p>
 
 <p><span class="parno">3</span>"Evaṁ, bho"ti kho so māṇavako subhassa māṇavassa todeyyaputtassa paṭissutvā yenāyasmā ānando tenupasaṅkami; upasaṅkamitvā āyasmatā ānandena saddhiṁ sammodi. Sammodanīyaṁ kathaṁ sāraṇīyaṁ vītisāretvā ekamantaṁ nisīdi. Ekamantaṁ nisinno kho so māṇavako āyasmantaṁ ānandaṁ etadavoca: "subho māṇavo todeyyaputto bhavantaṁ ānandaṁ appābādhaṁ appātaṅkaṁ lahuṭṭhānaṁ balaṁ phāsuvihāraṁ pucchati; evañca vadeti: 'sādhu kira bhavaṁ ānando yena subhassa māṇavassa todeyyaputtassa nivesanaṁ tenupasaṅkamatu anukampaṁ upādāyā'"ti.</p>
 
-
 <hr>
-
 <p><span class="parno">4</span>Evaṁ vutte, āyasmā ānando taṁ māṇavakaṁ etadavoca: "akālo kho, māṇavaka. Atthi me ajja bhesajjamattā pītā. Appevanāma svepi upasaṅkameyyāma kālañca samayañca upādāyā"ti.</p>
 
 <p><span class="parno">5</span>"Evaṁ, bho"ti kho so māṇavako āyasmato ānandassa paṭissutvā uṭṭhāyāsanā yena subho māṇavo todeyyaputto tenupasaṅkami; upasaṅkamitvā subhaṁ māṇavaṁ todeyyaputtaṁ etadavoca: "avocumhā kho mayaṁ bhoto vacanena taṁ bhavantaṁ ānandaṁ: 'subho māṇavo todeyyaputto bhavantaṁ ānandaṁ appābādhaṁ appātaṅkaṁ lahuṭṭhānaṁ balaṁ phāsuvihāraṁ pucchati, evañca vadeti: "sādhu kira bhavaṁ ānando yena subhassa māṇavassa todeyyaputtassa nivesanaṁ tenupasaṅkamatu anukampaṁ upādāyā"'ti. Evaṁ vutte, bho, samaṇo ānando maṁ etadavoca: 'akālo kho, māṇavaka. Atthi me ajja bhesajjamattā pītā. Appevanāma svepi upasaṅkameyyāma kālañca samayañca upādāyā'ti. Ettāvatāpi kho, bho, katameva etaṁ, yato kho so bhavaṁ ānando okāsamakāsi svātanāyapi upasaṅkamanāyā"ti.</p>
 
-
 <hr>
-
 <p><span class="parno">6</span>Atha kho āyasmā ānando tassā rattiyā accayena pubbaṇhasamayaṁ nivāsetvā pattacīvaramādāya cetakena bhikkhunā pacchāsamaṇena yena subhassa māṇavassa todeyyaputtassa nivesanaṁ tenupasaṅkami; upasaṅkamitvā paññatte āsane nisīdi.</p>
 
-
+<hr>
 <p><span class="parno">7</span>Atha kho subho māṇavo todeyyaputto yenāyasmā ānando tenupasaṅkami; upasaṅkamitvā āyasmatā ānandena saddhiṁ sammodi. Sammodanīyaṁ kathaṁ sāraṇīyaṁ vītisāretvā ekamantaṁ nisīdi. Ekamantaṁ nisinno kho subho māṇavo todeyyaputto āyasmantaṁ ānandaṁ etadavoca:</p>
 
 <p>"bhavañhi ānando tassa bhoto gotamassa dīgharattaṁ upaṭṭhāko santikāvacaro samīpacārī. Bhavametaṁ ānando jāneyya, yesaṁ so bhavaṁ gotamo dhammānaṁ vaṇṇavādī ahosi, yattha ca imaṁ janataṁ samādapesi nivesesi patiṭṭhāpesi. Katamesānaṁ kho, bho ānanda, dhammānaṁ so bhavaṁ gotamo vaṇṇavādī ahosi; kattha ca imaṁ janataṁ samādapesi nivesesi patiṭṭhāpesī"ti?</p>
@@ -372,7 +335,7 @@
 
 <p><span class="parno">9</span>"Katamo pana so, bho ānanda, ariyo sīlakkhandho, yassa so bhavaṁ gotamo vaṇṇavādī ahosi, yattha ca imaṁ janataṁ samādapesi nivesesi patiṭṭhāpesī"ti?</p>
 
-
+<hr>
 <p><span class="parno">10</span>"Idha, māṇava, tathāgato loke uppajjati arahaṁ sammāsambuddho vijjācaraṇasampanno sugato lokavidū anuttaro purisadammasārathi satthā devamanussānaṁ buddho bhagavā. So imaṁ lokaṁ sadevakaṁ samārakaṁ sabrahmakaṁ sassamaṇabrāhmaṇiṁ pajaṁ sadevamanussaṁ sayaṁ abhiññā sacchikatvā pavedeti. So dhammaṁ deseti ādikalyāṇaṁ majjhekalyāṇaṁ pariyosānakalyāṇaṁ sātthaṁ sabyañjanaṁ kevalaparipuṇṇaṁ parisuddhaṁ brahmacariyaṁ pakāseti.</p>
 
 <p>Taṁ dhammaṁ suṇāti gahapati vā gahapatiputto vā aññatarasmiṁ vā kule paccājāto. So taṁ dhammaṁ sutvā tathāgate saddhaṁ paṭilabhati. So tena saddhāpaṭilābhena samannāgato iti paṭisañcikkhati: 'sambādho gharāvāso rajopatho, abbhokāso pabbajjā, nayidaṁ sukaraṁ agāraṁ ajjhāvasatā ekantaparipuṇṇaṁ ekantaparisuddhaṁ saṅkhalikhitaṁ brahmacariyaṁ carituṁ. Yannūnāhaṁ kesamassuṁ ohāretvā kāsāyāni vatthāni acchādetvā agārasmā anagāriyaṁ pabbajeyyan'ti.</p>
@@ -381,20 +344,16 @@
 
 <p>So evaṁ pabbajito samāno pātimokkhasaṁvarasaṁvuto viharati, ācāragocarasampanno, anumattesu vajjesu bhayadassāvī, samādāya sikkhati sikkhāpadesu, kāyakammavacīkammena samannāgato kusalena, parisuddhājīvo, sīlasampanno, indriyesu guttadvāro, satisampajaññena samannāgato, santuṭṭho.</p>
 
-
 <hr>
-
 <p><span class="parno">11</span>Kathañca, māṇava, bhikkhu sīlasampanno hoti? Idha, māṇava, bhikkhu pāṇātipātaṁ pahāya pāṇātipātā paṭivirato hoti, nihitadaṇḍo nihitasattho lajjī dayāpanno, sabbapāṇabhūtahitānukampī viharati. Yampi, māṇava, bhikkhu pāṇātipātaṁ pahāya pāṇātipātā paṭivirato hoti, nihitadaṇḍo nihitasattho lajjī dayāpanno, sabbapāṇabhūtahitānukampī viharati; idampissa hoti <span class="var" title="athā sāmaññaphalasutte 194 yāva 210 anucchedesu evaṁ" id="note217">sīlasmiṁ</span>.</p>
 
+<hr>
+<p><span class="parno">12</span>Yathā vā paneke bhonto samaṇabrāhmaṇā saddhādeyyāni bhojanāni bhuñjitvā te evarūpāya tiracchānavijjāya micchājīvena jīvitaṁ kappenti, seyyathidaṁ— santikammaṁ paṇidhikammaṁ bhūtakammaṁ bhūrikammaṁ vassakammaṁ vossakammaṁ vatthukammaṁ vatthuparikammaṁ ācamanaṁ nhāpanaṁ juhanaṁ vamanaṁ virecanaṁ uddhaṁvirecanaṁ adhovirecanaṁ sīsavirecanaṁ kaṇṇatelaṁ nettatappanaṁ natthukammaṁ añjanaṁ paccañjanaṁ sālākiyaṁ sallakattiyaṁ dārakatikicchā mūlabhesajjānaṁ anuppadānaṁ osadhīnaṁ paṭimokkho iti vā iti evarūpāya tiracchānavijjāya micchājīvā paṭivirato hoti. Yampi, māṇava, bhikkhu yathā vā paneke bhonto samaṇabrāhmaṇā saddhādeyyāni bhojanāni bhuñjitvā te evarūpāya tiracchānavijjāya micchājīvena jīvitaṁ kappenti, seyyathidaṁ—santikammaṁ paṇidhikammaṁ … pe … osadhīnaṁ paṭimokkho iti vā iti evarūpāya tiracchānavijjāya micchājīvā paṭivirato hoti. Idampissa hoti sīlasmiṁ.</p>
 
-<p><span class="parno">12</span>Yathā vā paneke bhonto samaṇabrāhmaṇā saddhādeyyāni bhojanāni bhuñjitvā te evarūpāya tiracchānavijjāya micchājīvena jīvitaṁ kappenti, seyyathidaṁ — santikammaṁ paṇidhikammaṁ bhūtakammaṁ bhūrikammaṁ vassakammaṁ vossakammaṁ vatthukammaṁ vatthuparikammaṁ ācamanaṁ nhāpanaṁ juhanaṁ vamanaṁ virecanaṁ uddhaṁvirecanaṁ adhovirecanaṁ sīsavirecanaṁ kaṇṇatelaṁ nettatappanaṁ natthukammaṁ añjanaṁ paccañjanaṁ sālākiyaṁ sallakattiyaṁ dārakatikicchā mūlabhesajjānaṁ anuppadānaṁ osadhīnaṁ paṭimokkho iti vā iti evarūpāya tiracchānavijjāya micchājīvā paṭivirato hoti. Yampi, māṇava, bhikkhu yathā vā paneke bhonto samaṇabrāhmaṇā saddhādeyyāni bhojanāni bhuñjitvā te evarūpāya tiracchānavijjāya micchājīvena jīvitaṁ kappenti, seyyathidaṁ — santikammaṁ paṇidhikammaṁ … pe … osadhīnaṁ paṭimokkho iti vā iti evarūpāya tiracchānavijjāya micchājīvā paṭivirato hoti. Idampissa hoti sīlasmiṁ.</p>
-
-
+<hr>
 <p><span class="parno">13</span><span class="var" title="Ayaṁ kho so (mr)" id="note218">Sa kho so</span>, māṇava, bhikkhu evaṁ sīlasampanno na kutoci bhayaṁ samanupassati, yadidaṁ sīlasaṁvarato. Seyyathāpi, māṇava, rājā khattiyo muddhāvasitto nihatapaccāmitto na kutoci bhayaṁ samanupassati, yadidaṁ paccatthikato; evameva kho, māṇava, bhikkhu evaṁ sīlasampanno na kutoci bhayaṁ samanupassati, yadidaṁ sīlasaṁvarato. So iminā ariyena sīlakkhandhena samannāgato ajjhattaṁ anavajjasukhaṁ paṭisaṁvedeti.</p>
 
 <p>Evaṁ kho, māṇava, bhikkhu sīlasampanno hoti.</p>
-
-<hr>
 
 <p><span class="parno">14</span>Ayaṁ kho so, māṇava, ariyo sīlakkhandho yassa so bhagavā vaṇṇavādī ahosi, yattha ca imaṁ janataṁ samādapesi nivesesi patiṭṭhāpesi. Atthi cevettha uttarikaraṇīyan"ti.</p>
 
@@ -406,12 +365,10 @@
 
 <p><span class="parno">17</span>"Kathañca, māṇava, bhikkhu indriyesu guttadvāro hoti? Idha, māṇava, bhikkhu cakkhunā rūpaṁ disvā na nimittaggāhī hoti nānubyañjanaggāhī; yatvādhikaraṇamenaṁ cakkhundriyaṁ asaṁvutaṁ viharantaṁ abhijjhādomanassā pāpakā akusalā dhammā anvāssaveyyuṁ; tassa saṁvarāya paṭipajjati, rakkhati cakkhundriyaṁ, cakkhundriye saṁvaraṁ āpajjati. Sotena saddaṁ sutvā … pe … ghānena gandhaṁ ghāyitvā … jivhāya rasaṁ sāyitvā … kāyena phoṭṭhabbaṁ phusitvā … manasā dhammaṁ viññāya na nimittaggāhī hoti nānubyañjanaggāhī; yatvādhikaraṇamenaṁ manindriyaṁ asaṁvutaṁ viharantaṁ abhijjhādomanassā pāpakā akusalā dhammā anvāssaveyyuṁ; tassa saṁvarāya paṭipajjati, rakkhati manindriyaṁ, manindriye saṁvaraṁ āpajjati. So iminā ariyena indriyasaṁvarena samannāgato ajjhattaṁ abyāsekasukhaṁ paṭisaṁvedeti. Evaṁ kho, māṇava, bhikkhu indriyesu guttadvāro hoti.</p>
 
-
 <hr>
-
 <p><span class="parno">18</span>Kathañca, māṇava, bhikkhu satisampajaññena samannāgato hoti? Idha, māṇava, bhikkhu abhikkante paṭikkante sampajānakārī hoti, ālokite vilokite sampajānakārī hoti, samiñjite pasārite sampajānakārī hoti, saṅghāṭipattacīvaradhāraṇe sampajānakārī hoti, asite pīte khāyite sāyite sampajānakārī hoti, uccārapassāvakamme sampajānakārī hoti, gate ṭhite nisinne sutte jāgarite bhāsite tuṇhībhāve sampajānakārī hoti. Evaṁ kho, māṇava, bhikkhu satisampajaññena samannāgato hoti.</p>
 
-
+<hr>
 <p><span class="parno">19</span>Kathañca, māṇava, bhikkhu santuṭṭho hoti? Idha, māṇava, bhikkhu santuṭṭho hoti kāyaparihārikena cīvarena kucchiparihārikena piṇḍapātena. So yena yeneva pakkamati, samādāyeva pakkamati. Seyyathāpi, māṇava, pakkhī sakuṇo yena yeneva
 ḍeti, sapattabhārova ḍeti; evameva kho, māṇava, bhikkhu santuṭṭho hoti kāyaparihārikena cīvarena kucchiparihārikena piṇḍapātena. So yena yeneva pakkamati, samādāyeva pakkamati. Evaṁ kho, māṇava, bhikkhu santuṭṭho hoti.</p>
 
@@ -419,72 +376,46 @@
 
 <p><span class="parno">21</span>So abhijjhaṁ loke pahāya vigatābhijjhena cetasā viharati abhijjhāya cittaṁ parisodheti. Byāpādapadosaṁ pahāya abyāpannacitto viharati sabbapāṇabhūtahitānukampī byāpādapadosā cittaṁ parisodheti. Thinamiddhaṁ pahāya vigatathinamiddho viharati ālokasaññī sato sampajāno, thinamiddhā cittaṁ parisodheti. Uddhaccakukkuccaṁ pahāya anuddhato viharati ajjhattaṁ vūpasantacitto uddhaccakukkuccā cittaṁ parisodheti. Vicikicchaṁ pahāya tiṇṇavicikiccho viharati akathaṅkathī kusalesu dhammesu, vicikicchāya cittaṁ parisodheti.</p>
 
-
 <hr>
-
 <p><span class="parno">22</span>Seyyathāpi, māṇava, puriso iṇaṁ ādāya kammante payojeyya. Tassa te kammantā samijjheyyuṁ. So yāni ca porāṇāni iṇamūlāni tāni ca byantiṁ kareyya, siyā cassa uttariṁ avasiṭṭhaṁ dārabharaṇāya. Tassa evamassa: 'ahaṁ kho pubbe iṇaṁ ādāya kammante payojesiṁ. Tassa me te kammantā samijjhiṁsu. Sohaṁ yāni ca porāṇāni iṇamūlāni tāni ca byantiṁ akāsiṁ, atthi ca me uttariṁ avasiṭṭhaṁ dārabharaṇāyā'ti. So tatonidānaṁ labhetha pāmojjaṁ, adhigaccheyya somanassaṁ.</p>
 
 <p><span class="parno">23</span>Seyyathāpi, māṇava, puriso ābādhiko assa dukkhito bāḷhagilāno; bhattañcassa nacchādeyya, na cassa kāye balamattā. So aparena samayena tamhā ābādhā mucceyya, bhattañcassa chādeyya, siyā cassa kāye balamattā. Tassa evamassa: 'ahaṁ kho pubbe ābādhiko ahosiṁ dukkhito bāḷhagilāno, bhattañca me nacchādesi, na ca me āsi kāye balamattā. Somhi etarahi tamhā ābādhā mutto bhattañca me chādeti, atthi ca me kāye balamattā'ti. So tatonidānaṁ labhetha pāmojjaṁ, adhigaccheyya somanassaṁ.</p>
 
-
-<p><span class="parno">24</span>Seyyathāpi, māṇava, puriso bandhanāgāre baddho assa. So aparena samayena tamhā bandhanāgārā mucceyya sotthinā abbhayena, na cassa kiñci bhogānaṁ vayo. Tassa evamassa: 'ahaṁ kho pubbe bandhanāgāre baddho ahosiṁ. Somhi etarahi tamhā bandhanāgārā mutto sotthinā abbhayena, natthi ca me kiñci bhogānaṁ vayo'ti. So tatonidānaṁ labhetha pāmojjaṁ, adhigaccheyya somanassaṁ.</p>
-
 <hr>
+<p><span class="parno">24</span>Seyyathāpi, māṇava, puriso bandhanāgāre baddho assa. So aparena samayena tamhā bandhanāgārā mucceyya sotthinā abbhayena, na cassa kiñci bhogānaṁ vayo. Tassa evamassa: 'ahaṁ kho pubbe bandhanāgāre baddho ahosiṁ. Somhi etarahi tamhā bandhanāgārā mutto sotthinā abbhayena, natthi ca me kiñci bhogānaṁ vayo'ti. So tatonidānaṁ labhetha pāmojjaṁ, adhigaccheyya somanassaṁ.</p>
 
 <p><span class="parno">25</span>Seyyathāpi, māṇava, puriso dāso assa anattādhīno parādhīno na yenakāmaṅgamo. So aparena samayena tamhā dāsabyā mucceyya, attādhīno aparādhīno bhujisso yenakāmaṅgamo. Tassa evamassa: 'ahaṁ kho pubbe dāso ahosiṁ anattādhīno parādhīno na yenakāmaṅgamo. Somhi etarahi tamhā dāsabyā mutto attādhīno aparādhīno bhujisso yenakāmaṅgamo'ti. So tatonidānaṁ labhetha pāmojjaṁ, adhigaccheyya somanassaṁ.</p>
 
 <p><span class="parno">26</span>Seyyathāpi, māṇava, puriso sadhano sabhogo kantāraddhānamaggaṁ paṭipajjeyya dubbhikkhaṁ sappaṭibhayaṁ. So aparena samayena taṁ kantāraṁ nitthareyya, sotthinā gāmantaṁ anupāpuṇeyya khemaṁ appaṭibhayaṁ. Tassa evamassa: 'ahaṁ kho pubbe sadhano sabhogo kantāraddhānamaggaṁ paṭipajjiṁ dubbhikkhaṁ sappaṭibhayaṁ. Somhi <span class="var" title="Etarahi kantāraṁ (c1)" id="note220">etarahi taṁ kantāraṁ</span> nitthiṇṇo, sotthinā gāmantaṁ anuppatto khemaṁ appaṭibhayan'ti. So tatonidānaṁ labhetha pāmojjaṁ, adhigaccheyya somanassaṁ.</p>
 
-
+<hr>
 <p><span class="parno">27</span>Evameva kho, māṇava, bhikkhu yathā iṇaṁ yathā rogaṁ yathā bandhanāgāraṁ yathā dāsabyaṁ yathā kantāraddhānamaggaṁ, evaṁ ime pañca nīvaraṇe appahīne attani samanupassati.</p>
 
 <p><span class="parno">28</span>Seyyathāpi, māṇava, yathā āṇaṇyaṁ yathā ārogyaṁ yathā bandhanāmokkhaṁ yathā bhujissaṁ yathā khemantabhūmiṁ. <span class="var" title="evameva (s1–3, c1)" id="note221">Evameva kho</span> bhikkhu ime pañca nīvaraṇe pahīne attani samanupassati.</p>
 
-<hr>
-
 <p><span class="parno">29</span>Tassime pañca nīvaraṇe pahīne attani samanupassato pāmojjaṁ jāyati, pamuditassa pīti jāyati, pītimanassa kāyo passambhati, passaddhakāyo sukhaṁ vedeti, sukhino cittaṁ samādhiyati.</p>
 
-
+<hr>
 <p><span class="parno">30</span>So vivicceva kāmehi vivicca akusalehi dhammehi savitakkaṁ savicāraṁ vivekajaṁ pītisukhaṁ paṭhamaṁ jhānaṁ upasampajja viharati. So imameva kāyaṁ vivekajena pītisukhena abhisandeti parisandeti paripūreti parippharati, nāssa kiñci sabbāvato kāyassa vivekajena pītisukhena apphuṭaṁ hoti.</p>
 
-<hr>
-
-<p><span class="parno">31</span>Seyyathāpi, māṇava, dakkho nhāpako vā nhāpakantevāsī vā kaṁsathāle nhānīyacuṇṇāni ākiritvā udakena paripphosakaṁ paripphosakaṁ <span class="var" title="sandeyya (s1–3, c1)" id="note222">sanneyya</span>. Sāyaṁ nhānīyapiṇḍi snehānugatā snehaparetā santarabāhirā phuṭā snehena, na ca paggharaṇī. </p>
-
-<p>Evameva kho, māṇava, bhikkhu imameva kāyaṁ vivekajena pītisukhena abhisandeti parisandeti paripūreti parippharati, nāssa kiñci sabbāvato kāyassa vivekajena pītisukhena apphuṭaṁ hoti. Yampi, māṇava, bhikkhu vivicceva kāmehi vivicca akusalehi dhammehi savitakkaṁ savicāraṁ vivekajaṁ pītisukhaṁ paṭhamaṁ jhānaṁ upasampajja viharati. So imameva kāyaṁ vivekajena pītisukhena abhisandeti parisandeti paripūreti parippharati, nāssa kiñci sabbāvato kāyassa vivekajena pītisukhena apphuṭaṁ hoti. Idampissa hoti samādhismiṁ.</p>
-
+<p><span class="parno">31</span>Seyyathāpi, māṇava, dakkho nhāpako vā nhāpakantevāsī vā kaṁsathāle nhānīyacuṇṇāni ākiritvā udakena paripphosakaṁ paripphosakaṁ <span class="var" title="sandeyya (s1–3, c1)" id="note222">sanneyya</span>. Sāyaṁ nhānīyapiṇḍi snehānugatā snehaparetā santarabāhirā phuṭā snehena, na ca paggharaṇī. Evameva kho, māṇava, bhikkhu imameva kāyaṁ vivekajena pītisukhena abhisandeti parisandeti paripūreti parippharati, nāssa kiñci sabbāvato kāyassa vivekajena pītisukhena apphuṭaṁ hoti. Yampi, māṇava, bhikkhu vivicceva kāmehi vivicca akusalehi dhammehi savitakkaṁ savicāraṁ vivekajaṁ pītisukhaṁ paṭhamaṁ jhānaṁ upasampajja viharati. So imameva kāyaṁ vivekajena pītisukhena abhisandeti parisandeti paripūreti parippharati, nāssa kiñci sabbāvato kāyassa vivekajena pītisukhena apphuṭaṁ hoti. Idampissa hoti samādhismiṁ.</p>
 
 <hr>
-
 <p><span class="parno">32</span>Puna caparaṁ, māṇava, bhikkhu vitakkavicārānaṁ vūpasamā ajjhattaṁ sampasādanaṁ cetaso ekodibhāvaṁ avitakkaṁ avicāraṁ samādhijaṁ pītisukhaṁ dutiyaṁ jhānaṁ upasampajja viharati. So imameva kāyaṁ samādhijena pītisukhena abhisandeti parisandeti paripūreti parippharati, nāssa kiñci sabbāvato kāyassa samādhijena pītisukhena apphuṭaṁ hoti.</p>
 
+<p><span class="parno">33</span>Seyyathāpi, māṇava, udakarahado gambhīro ubbhidodako. Tassa nevassa puratthimāya disāya udakassa āyamukhaṁ, na dakkhiṇāya disāya udakassa āyamukhaṁ, na pacchimāya disāya udakassa āyamukhaṁ, na uttarāya disāya udakassa āyamukhaṁ, devo ca na kālena kālaṁ sammā dhāraṁ anupaveccheyya. Atha kho tamhāva udakarahadā sītā vāridhārā ubbhijjitvā tameva udakarahadaṁ sītena vārinā abhisandeyya parisandeyya paripūreyya paripphareyya, nāssa kiñci sabbāvato udakarahadassa sītena vārinā apphuṭaṁ assa. Evameva kho, māṇava, bhikkhu … pe … yampi, māṇava, bhikkhu vitakkavicārānaṁ vūpasamā … pe … dutiyaṁ jhānaṁ upasampajja viharati. So imameva kāyaṁ samādhijena pītisukhena abhisandeti parisandeti paripūreti parippharati, nāssa kiñci sabbāvato kāyassa samādhijena pītisukhena apphuṭaṁ hoti. Idampissa hoti samādhismiṁ.</p>
+
 <hr>
-
-<p><span class="parno">33</span>Seyyathāpi, māṇava, udakarahado gambhīro ubbhidodako. Tassa nevassa puratthimāya disāya udakassa āyamukhaṁ, na dakkhiṇāya disāya udakassa āyamukhaṁ, na pacchimāya disāya udakassa āyamukhaṁ, na uttarāya disāya udakassa āyamukhaṁ, devo ca na kālena kālaṁ sammā dhāraṁ anupaveccheyya. Atha kho tamhāva udakarahadā sītā vāridhārā ubbhijjitvā tameva udakarahadaṁ sītena vārinā abhisandeyya parisandeyya paripūreyya paripphareyya, nāssa kiñci sabbāvato udakarahadassa sītena vārinā apphuṭaṁ assa. </p>
-
-<p>Evameva kho, māṇava, bhikkhu … pe … yampi, māṇava, bhikkhu vitakkavicārānaṁ vūpasamā … pe … dutiyaṁ jhānaṁ upasampajja viharati. So imameva kāyaṁ samādhijena pītisukhena abhisandeti parisandeti paripūreti parippharati, nāssa kiñci sabbāvato kāyassa samādhijena pītisukhena apphuṭaṁ hoti. Idampissa hoti samādhismiṁ.</p>
-
-
 <p><span class="parno">34</span>Puna caparaṁ, māṇava, bhikkhu pītiyā ca virāgā upekkhako ca viharati sato sampajāno, sukhañca kāyena paṭisaṁvedeti, yaṁ taṁ ariyā ācikkhanti: 'upekkhako satimā sukhavihārī'ti, tatiyaṁ jhānaṁ upasampajja viharati. So imameva kāyaṁ nippītikena sukhena abhisandeti parisandeti paripūreti parippharati, nāssa kiñci sabbāvato kāyassa nippītikena sukhena apphuṭaṁ hoti.</p>
 
-<p><span class="parno">35</span>Seyyathāpi, māṇava, uppaliniyaṁ vā paduminiyaṁ vā puṇḍarīkiniyaṁ vā appekaccāni uppalāni vā padumāni vā puṇḍarīkāni vā udake jātāni udake saṁvaḍḍhāni udakānuggatāni antonimuggaposīni, tāni yāva caggā yāva ca mūlā sītena vārinā abhisannāni parisannāni paripūrāni paripphuṭāni, nāssa kiñci sabbāvataṁ uppalānaṁ vā padumānaṁ vā puṇḍarīkānaṁ vā sītena vārinā apphuṭaṁ assa. </p>
+<p><span class="parno">35</span>Seyyathāpi, māṇava, uppaliniyaṁ vā paduminiyaṁ vā puṇḍarīkiniyaṁ vā appekaccāni uppalāni vā padumāni vā puṇḍarīkāni vā udake jātāni udake saṁvaḍḍhāni udakānuggatāni antonimuggaposīni, tāni yāva caggā yāva ca mūlā sītena vārinā abhisannāni parisannāni paripūrāni paripphuṭāni, nāssa kiñci sabbāvataṁ uppalānaṁ vā padumānaṁ vā puṇḍarīkānaṁ vā sītena vārinā apphuṭaṁ assa. Evameva kho, māṇava, bhikkhu … pe … yampi, māṇava, bhikkhu pītiyā ca virāgā … pe … tatiyaṁ jhānaṁ upasampajja viharati. So imameva kāyaṁ nippītikena sukhena abhisandeti parisandeti paripūreti parippharati, nāssa kiñci sabbāvato kāyassa nippītikena sukhena apphuṭaṁ hoti. Idampissa hoti samādhismiṁ.</p>
 
-<p>Evameva kho, māṇava, bhikkhu … pe … yampi, māṇava, bhikkhu pītiyā ca virāgā … pe … tatiyaṁ jhānaṁ upasampajja viharati. So imameva kāyaṁ nippītikena sukhena abhisandeti parisandeti paripūreti parippharati, nāssa kiñci sabbāvato kāyassa nippītikena sukhena apphuṭaṁ hoti. Idampissa hoti samādhismiṁ.</p>
-
-
+<hr>
 <p><span class="parno">36</span>Puna caparaṁ, māṇava, bhikkhu sukhassa ca pahānā dukkhassa ca pahānā pubbeva somanassadomanassānaṁ atthaṅgamā adukkhamasukhaṁ upekkhāsatipārisuddhiṁ catutthaṁ jhānaṁ upasampajja viharati. So imameva kāyaṁ parisuddhena cetasā pariyodātena pharitvā nisinno hoti; nāssa kiñci sabbāvato kāyassa parisuddhena cetasā pariyodātena apphuṭaṁ hoti.</p>
 
-<hr>
-
-<p><span class="parno">37</span>Seyyathāpi, māṇava, puriso odātena vatthena sasīsaṁ pārupitvā nisinno assa, nāssa kiñci sabbāvato kāyassa odātena vatthena apphuṭaṁ assa. </p>
-
-<p>Evameva kho, māṇava, bhikkhu … pe … yampi, māṇava, bhikkhu sukhassa ca pahānā dukkhassa ca pahānā pubbeva somanassadomanassānaṁ atthaṅgamā adukkhamasukhaṁ upekkhāsatipārisuddhiṁ catutthaṁ jhānaṁ upasampajja viharati. </p>
-
-<p>So imameva kāyaṁ parisuddhena cetasā pariyodātena pharitvā nisinno hoti; nāssa kiñci sabbāvato kāyassa parisuddhena cetasā pariyodātena apphuṭaṁ hoti. Idampissa hoti samādhismiṁ.</p>
-
+<p><span class="parno">37</span>Seyyathāpi, māṇava, puriso odātena vatthena sasīsaṁ pārupitvā nisinno assa, nāssa kiñci sabbāvato kāyassa odātena vatthena apphuṭaṁ assa. Evameva kho, māṇava, bhikkhu … pe … yampi, māṇava, bhikkhu sukhassa ca pahānā dukkhassa ca pahānā pubbeva somanassadomanassānaṁ atthaṅgamā adukkhamasukhaṁ upekkhāsatipārisuddhiṁ catutthaṁ jhānaṁ upasampajja viharati. So imameva kāyaṁ parisuddhena cetasā pariyodātena pharitvā nisinno hoti; nāssa kiñci sabbāvato kāyassa parisuddhena cetasā pariyodātena apphuṭaṁ hoti. Idampissa hoti samādhismiṁ.</p>
 
 <hr>
-
 <p><span class="parno">38</span>Ayaṁ kho so, māṇava, ariyo samādhikkhandho yassa so bhagavā vaṇṇavādī ahosi, yattha ca imaṁ janataṁ samādapesi nivesesi patiṭṭhāpesi. Atthi cevettha uttarikaraṇīyan"ti.</p>
 
 <p><span class="parno">39</span>"Acchariyaṁ, bho ānanda, abbhutaṁ, bho ānanda. So cāyaṁ, bho ānanda, ariyo samādhikkhandho paripuṇṇo, no aparipuṇṇo. Evaṁ paripuṇṇañcāhaṁ, bho ānanda, ariyaṁ samādhikkhandhaṁ ito bahiddhā aññesu samaṇabrāhmaṇesu na samanupassāmi. Evaṁ paripuṇṇañca, bho ānanda, ariyaṁ samādhikkhandhaṁ ito bahiddhā aññe samaṇabrāhmaṇā attani samanupasseyyuṁ, te tāvatakeneva attamanā assu: 'alamettāvatā, katamettāvatā, anuppatto no sāmaññattho, natthi no kiñci uttarikaraṇīyan'ti. Atha ca pana bhavaṁ ānando evamāha: 'atthi cevettha uttarikaraṇīyan'ti.</p>
@@ -495,86 +426,48 @@
 
 <p><span class="parno">41</span>"So evaṁ samāhite citte parisuddhe pariyodāte anaṅgaṇe vigatūpakkilese mudubhūte kammaniye ṭhite āneñjappatte ñāṇadassanāya cittaṁ abhinīharati abhininnāmeti. So evaṁ pajānāti: 'ayaṁ kho me kāyo rūpī cātumahābhūtiko mātāpettikasambhavo odanakummāsūpacayo aniccucchādanaparimaddanabhedanaviddhaṁsanadhammo; idañca pana me viññāṇaṁ ettha sitaṁ ettha paṭibaddhan'ti.</p>
 
-<hr>
-
-<p><span class="parno">42</span>Seyyathāpi, māṇava, maṇi veḷuriyo subho jātimā aṭṭhaṁso suparikammakato accho vippasanno anāvilo sabbākārasampanno. Tatrāssa suttaṁ āvutaṁ nīlaṁ vā pītaṁ vā lohitaṁ vā odātaṁ vā paṇḍusuttaṁ vā. Tamenaṁ cakkhumā puriso hatthe karitvā paccavekkheyya: 'ayaṁ kho maṇi veḷuriyo subho jātimā aṭṭhaṁso suparikammakato accho vippasanno anāvilo sabbākārasampanno. Tatridaṁ suttaṁ āvutaṁ nīlaṁ vā pītaṁ vā lohitaṁ vā odātaṁ vā paṇḍusuttaṁ vā'ti. </p>
+<p><span class="parno">42</span>Seyyathāpi, māṇava, maṇi veḷuriyo subho jātimā aṭṭhaṁso suparikammakato accho vippasanno anāvilo sabbākārasampanno. Tatrāssa suttaṁ āvutaṁ nīlaṁ vā pītaṁ vā lohitaṁ vā odātaṁ vā paṇḍusuttaṁ vā. Tamenaṁ cakkhumā puriso hatthe karitvā paccavekkheyya: 'ayaṁ kho maṇi veḷuriyo subho jātimā aṭṭhaṁso suparikammakato accho vippasanno anāvilo sabbākārasampanno. Tatridaṁ suttaṁ āvutaṁ nīlaṁ vā pītaṁ vā lohitaṁ vā odātaṁ vā paṇḍusuttaṁ vā'ti. Evameva kho, māṇava, bhikkhu evaṁ samāhite citte parisuddhe pariyodāte anaṅgaṇe vigatūpakkilese mudubhūte kammaniye ṭhite āneñjappatte ñāṇadassanāya cittaṁ abhinīharati abhininnāmeti. So evaṁ pajānāti: 'ayaṁ kho me kāyo rūpī cātumahābhūtiko mātāpettikasambhavo odanakummāsūpacayo aniccucchādanaparimaddanabhedanaviddhaṁsanadhammo. Idañca pana me viññāṇaṁ ettha sitaṁ ettha paṭibaddhan'ti. Yampi, māṇava, bhikkhu evaṁ samāhite citte … pe … āneñjappatte ñāṇadassanāya cittaṁ abhinīharati abhininnāmeti. So evaṁ pajānāti … pe … ettha paṭibaddhanti. Idampissa hoti paññāya.</p>
 
 <hr>
-
-<p>Evameva kho, māṇava, bhikkhu evaṁ samāhite citte parisuddhe pariyodāte anaṅgaṇe vigatūpakkilese mudubhūte kammaniye ṭhite āneñjappatte ñāṇadassanāya cittaṁ abhinīharati abhininnāmeti. So evaṁ pajānāti: 'ayaṁ kho me kāyo rūpī cātumahābhūtiko mātāpettikasambhavo odanakummāsūpacayo aniccucchādanaparimaddanabhedanaviddhaṁsanadhammo. Idañca pana me viññāṇaṁ ettha sitaṁ ettha paṭibaddhan'ti. Yampi, māṇava, bhikkhu evaṁ samāhite citte … pe … āneñjappatte ñāṇadassanāya cittaṁ abhinīharati abhininnāmeti. So evaṁ pajānāti … pe … ettha paṭibaddhanti. Idampissa hoti paññāya.</p>
-
-
-<hr>
-
 <p><span class="parno">43</span>So evaṁ samāhite citte parisuddhe pariyodāte anaṅgaṇe vigatūpakkilese mudubhūte kammaniye ṭhite āneñjappatte manomayaṁ kāyaṁ abhinimmānāya cittaṁ abhinīharati abhininnāmeti. So imamhā kāyā aññaṁ kāyaṁ abhinimmināti rūpiṁ manomayaṁ sabbaṅgapaccangiṁ ahīnindriyaṁ.</p>
 
-<p><span class="parno">44</span>Seyyathāpi, māṇava, puriso muñjamhā īsikaṁ pavāheyya. Tassa evamassa: 'ayaṁ muñjo ayaṁ īsikā; añño muñjo aññā īsikā; muñjamhā tveva īsikā pavāḷhā'ti. Seyyathā vā pana, māṇava, puriso asiṁ kosiyā pavāheyya. Tassa evamassa: 'ayaṁ asi, ayaṁ kosi; añño asi, aññā kosi; kosiyā tveva asi pavāḷho'ti. Seyyathā vā pana, māṇava, puriso ahiṁ karaṇḍā uddhareyya. Tassa evamassa: 'ayaṁ ahi, ayaṁ karaṇḍo; añño ahi, añño karaṇḍo; karaṇḍā tveva ahi ubbhato'ti. </p>
+<p><span class="parno">44</span>Seyyathāpi, māṇava, puriso muñjamhā īsikaṁ pavāheyya. Tassa evamassa: 'ayaṁ muñjo ayaṁ īsikā; añño muñjo aññā īsikā; muñjamhā tveva īsikā pavāḷhā'ti. Seyyathā vā pana, māṇava, puriso asiṁ kosiyā pavāheyya. Tassa evamassa: 'ayaṁ asi, ayaṁ kosi; añño asi, aññā kosi; kosiyā tveva asi pavāḷho'ti. Seyyathā vā pana, māṇava, puriso ahiṁ karaṇḍā uddhareyya. Tassa evamassa: 'ayaṁ ahi, ayaṁ karaṇḍo; añño ahi, añño karaṇḍo; karaṇḍā tveva ahi ubbhato'ti. Evameva kho, māṇava, bhikkhu … pe … yampi, māṇava, bhikkhu evaṁ samāhite citte parisuddhe pariyodāte anaṅgaṇe vigatūpakkilese mudubhūte kammaniye ṭhite āneñjappatte manomayaṁ kāyaṁ abhinimmānāya cittaṁ abhinīharati abhininnāmeti … pe … . Idampissa hoti paññāya.</p>
+
+<p><span class="parno">45</span>So evaṁ samāhite citte parisuddhe pariyodāte anaṅgaṇe vigatūpakkilese mudubhūte kammaniye ṭhite āneñjappatte iddhividhāya cittaṁ abhinīharati abhininnāmeti. So anekavihitaṁ iddhividhaṁ paccanubhoti—ekopi hutvā bahudhā hoti, bahudhāpi hutvā eko hoti; āvibhāvaṁ tirobhāvaṁ tirokuṭṭaṁ tiropākāraṁ tiropabbataṁ asajjamāno gacchati seyyathāpi ākāse; pathaviyāpi ummujjanimujjaṁ karoti seyyathāpi udake; udakepi abhijjamāne gacchati seyyathāpi pathaviyaṁ; ākāsepi pallaṅkena kamati seyyathāpi pakkhī sakuṇo; imepi candimasūriye evaṁ mahiddhike evaṁ mahānubhāve pāṇinā parāmasati parimajjati; yāva brahmalokāpi kāyena vasaṁ vatteti.</p>
+
+<p><span class="parno">46</span>Seyyathāpi, māṇava, dakkho kumbhakāro vā kumbhakārantevāsī vā suparikammakatāya mattikāya yaññadeva bhājanavikatiṁ ākaṅkheyya, taṁ tadeva kareyya abhinipphādeyya. Seyyathā vā pana, māṇava, dakkho dantakāro vā dantakārantevāsī vā suparikammakatasmiṁ dantasmiṁ yaññadeva dantavikatiṁ ākaṅkheyya, taṁ tadeva kareyya abhinipphādeyya. Seyyathā vā pana, māṇava, dakkho suvaṇṇakāro vā suvaṇṇakārantevāsī vā suparikammakatasmiṁ suvaṇṇasmiṁ yaññadeva suvaṇṇavikatiṁ ākaṅkheyya, taṁ tadeva kareyya abhinipphādeyya. Evameva kho, māṇava, bhikkhu … pe … yampi māṇava bhikkhu evaṁ samāhite citte parisuddhe pariyodāte anaṅgaṇe vigatūpakkilese mudubhūte kammaniye ṭhite āneñjappatte iddhividhāya cittaṁ abhinīharati abhininnāmeti. So anekavihitaṁ iddhividhaṁ paccanubhoti—ekopi hutvā bahudhā hoti … pe … yāva brahmalokāpi kāyena vasaṁ vatteti. Idampissa hoti paññāya.</p>
 
 <hr>
-
-<p>Evameva kho, māṇava, bhikkhu … pe … yampi, māṇava, bhikkhu evaṁ samāhite citte parisuddhe pariyodāte anaṅgaṇe vigatūpakkilese mudubhūte kammaniye ṭhite āneñjappatte manomayaṁ kāyaṁ abhinimmānāya cittaṁ abhinīharati abhininnāmeti … pe … . Idampissa hoti paññāya.</p>
-
-<p><span class="parno">45</span>So evaṁ samāhite citte parisuddhe pariyodāte anaṅgaṇe vigatūpakkilese mudubhūte kammaniye ṭhite āneñjappatte iddhividhāya cittaṁ abhinīharati abhininnāmeti. So anekavihitaṁ iddhividhaṁ paccanubhoti — ekopi hutvā bahudhā hoti, bahudhāpi hutvā eko hoti; āvibhāvaṁ tirobhāvaṁ tirokuṭṭaṁ tiropākāraṁ tiropabbataṁ asajjamāno gacchati seyyathāpi ākāse; pathaviyāpi ummujjanimujjaṁ karoti seyyathāpi udake; udakepi abhijjamāne gacchati seyyathāpi pathaviyaṁ; ākāsepi pallaṅkena kamati seyyathāpi pakkhī sakuṇo; imepi candimasūriye evaṁ mahiddhike evaṁ mahānubhāve pāṇinā parāmasati parimajjati; yāva brahmalokāpi kāyena vasaṁ vatteti.</p>
-
-<p><span class="parno">46</span>Seyyathāpi, māṇava, dakkho kumbhakāro vā kumbhakārantevāsī vā suparikammakatāya mattikāya yaññadeva bhājanavikatiṁ ākaṅkheyya, taṁ tadeva kareyya abhinipphādeyya. Seyyathā vā pana, māṇava, dakkho dantakāro vā dantakārantevāsī vā suparikammakatasmiṁ dantasmiṁ yaññadeva dantavikatiṁ ākaṅkheyya, taṁ tadeva kareyya abhinipphādeyya. Seyyathā vā pana, māṇava, dakkho suvaṇṇakāro vā suvaṇṇakārantevāsī vā suparikammakatasmiṁ suvaṇṇasmiṁ yaññadeva suvaṇṇavikatiṁ ākaṅkheyya, taṁ tadeva kareyya abhinipphādeyya. </p>
-
-<p>Evameva kho, māṇava, bhikkhu … pe … yampi māṇava bhikkhu evaṁ samāhite citte parisuddhe pariyodāte anaṅgaṇe vigatūpakkilese mudubhūte kammaniye ṭhite āneñjappatte iddhividhāya cittaṁ abhinīharati abhininnāmeti. So anekavihitaṁ iddhividhaṁ paccanubhoti — ekopi hutvā bahudhā hoti … pe … yāva brahmalokāpi kāyena vasaṁ vatteti. Idampissa hoti paññāya.</p>
-
-
-<hr>
-
 <p><span class="parno">47</span>So evaṁ samāhite citte … pe … āneñjappatte dibbāya sotadhātuyā cittaṁ abhinīharati abhininnāmeti. So dibbāya sotadhātuyā visuddhāya atikkantamānusikāya ubho sadde suṇāti dibbe ca mānuse ca ye dūre santike ca.</p>
 
-<p>Seyyathāpi, māṇava, puriso addhānamaggappaṭipanno. So suṇeyya bherisaddampi mudiṅgasaddampi saṅkhapaṇavadindimasaddampi. Tassa evamassa — bherisaddo itipi mudiṅgasaddo itipi saṅkhapaṇavadindimasaddo <span class="var" title="itipīti (mr)" id="note224">itipi</span>. </p>
-
-<p>Evameva kho, māṇava, bhikkhu … pe … yampi, māṇava, bhikkhu evaṁ samāhite citte … pe … āneñjappatte dibbāya sotadhātuyā cittaṁ abhinīharati abhininnāmeti. So dibbāya sotadhātuyā visuddhāya atikkantamānusikāya ubho sadde suṇāti dibbe ca mānuse ca ye dūre santike ca. Idampissa hoti paññāya.</p>
-
-<hr>
+<p>Seyyathāpi, māṇava, puriso addhānamaggappaṭipanno. So suṇeyya bherisaddampi mudiṅgasaddampi saṅkhapaṇavadindimasaddampi. Tassa evamassa— bherisaddo itipi mudiṅgasaddo itipi saṅkhapaṇavadindimasaddo <span class="var" title="itipīti (mr)" id="note224">itipi</span>. Evameva kho, māṇava, bhikkhu … pe … yampi, māṇava, bhikkhu evaṁ samāhite citte … pe … āneñjappatte dibbāya sotadhātuyā cittaṁ abhinīharati abhininnāmeti. So dibbāya sotadhātuyā visuddhāya atikkantamānusikāya ubho sadde suṇāti dibbe ca mānuse ca ye dūre santike ca. Idampissa hoti paññāya.</p>
 
 <p><span class="parno">48</span>So evaṁ samāhite citte parisuddhe pariyodāte anaṅgaṇe vigatūpakkilese mudubhūte kammaniye ṭhite āneñjappatte cetopariyañāṇāya cittaṁ abhinīharati abhininnāmeti. So parasattānaṁ parapuggalānaṁ cetasā ceto paricca pajānāti, sarāgaṁ vā cittaṁ 'sarāgaṁ cittan'ti pajānāti, vītarāgaṁ vā cittaṁ 'vītarāgaṁ cittan'ti pajānāti, sadosaṁ vā cittaṁ 'sadosaṁ cittan'ti pajānāti, vītadosaṁ vā cittaṁ 'vītadosaṁ cittan'ti pajānāti, samohaṁ vā cittaṁ 'samohaṁ cittan'ti pajānāti, vītamohaṁ vā cittaṁ 'vītamohaṁ cittan'ti pajānāti, saṅkhittaṁ vā cittaṁ 'saṅkhittaṁ cittan'ti pajānāti, vikkhittaṁ vā cittaṁ 'vikkhittaṁ cittan'ti pajānāti, mahaggataṁ vā cittaṁ 'mahaggataṁ cittan'ti pajānāti, amahaggataṁ vā cittaṁ 'amahaggataṁ cittan'ti pajānāti, sauttaraṁ vā cittaṁ 'sauttaraṁ cittan'ti pajānāti, anuttaraṁ vā cittaṁ 'anuttaraṁ cittan'ti pajānāti, samāhitaṁ vā cittaṁ 'samāhitaṁ cittan'ti pajānāti, asamāhitaṁ vā cittaṁ 'asamāhitaṁ cittan'ti pajānāti, vimuttaṁ vā cittaṁ 'vimuttaṁ cittan'ti pajānāti, avimuttaṁ vā cittaṁ 'avimuttaṁ cittan'ti pajānāti.</p>
 
-<hr>
+<p><span class="parno">49</span>Seyyathāpi, māṇava, itthī vā puriso vā daharo yuvā maṇḍanajātiko ādāse vā parisuddhe pariyodāte acche vā udakapatte sakaṁ mukhanimittaṁ paccavekkhamāno sakaṇikaṁ vā sakaṇikanti jāneyya, akaṇikaṁ vā akaṇikanti jāneyya. Evameva kho, māṇava, bhikkhu … pe … yampi, māṇava, bhikkhu evaṁ samāhite … pe … āneñjappatte cetopariyañāṇāya cittaṁ abhinīharati abhininnāmeti. So parasattānaṁ parapuggalānaṁ cetasā ceto paricca pajānāti, sarāgaṁ vā cittaṁ sarāgaṁ cittanti pajānāti … pe … avimuttaṁ vā cittaṁ avimuttaṁ cittanti pajānāti. Idampissa hoti paññāya.</p>
 
-<p><span class="parno">49</span>Seyyathāpi, māṇava, itthī vā puriso vā daharo yuvā maṇḍanajātiko ādāse vā parisuddhe pariyodāte acche vā udakapatte sakaṁ mukhanimittaṁ paccavekkhamāno sakaṇikaṁ vā sakaṇikanti jāneyya, akaṇikaṁ vā akaṇikanti jāneyya. </p>
+<p><span class="parno">50</span>So evaṁ samāhite citte … pe … āneñjappatte pubbenivāsānussatiñāṇāya cittaṁ abhinīharati abhininnāmeti. So anekavihitaṁ pubbenivāsaṁ anussarati. Seyyathidaṁ—ekampi jātiṁ dvepi jātiyo tissopi jātiyo catassopi jātiyo pañcapi jātiyo dasapi jātiyo vīsampi jātiyo tiṁsampi jātiyo cattālīsampi jātiyo paññāsampi jātiyo jātisatampi jātisahassampi jātisatasahassampi anekepi saṁvaṭṭakappe anekepi vivaṭṭakappe anekepi saṁvaṭṭavivaṭṭakappe: 'amutrāsiṁ evaṁnāmo evaṅgotto evaṁvaṇṇo evamāhāro evaṁsukhadukkhappaṭisaṁvedī evamāyupariyanto. So tato cuto amutra udapādiṁ; tatrāpāsiṁ evaṁnāmo evaṅgotto evaṁvaṇṇo evamāhāro evaṁsukhadukkhappaṭisaṁvedī evamāyupariyanto; so tato cuto idhūpapanno'ti. Iti sākāraṁ sauddesaṁ anekavihitaṁ pubbenivāsaṁ anussarati.</p>
 
-<p>Evameva kho, māṇava, bhikkhu … pe … yampi, māṇava, bhikkhu evaṁ samāhite … pe … āneñjappatte cetopariyañāṇāya cittaṁ abhinīharati abhininnāmeti. So parasattānaṁ parapuggalānaṁ cetasā ceto paricca pajānāti, sarāgaṁ vā cittaṁ sarāgaṁ cittanti pajānāti … pe … avimuttaṁ vā cittaṁ avimuttaṁ cittanti pajānāti. Idampissa hoti paññāya.</p>
-
-<p><span class="parno">50</span>So evaṁ samāhite citte … pe … āneñjappatte pubbenivāsānussatiñāṇāya cittaṁ abhinīharati abhininnāmeti. So anekavihitaṁ pubbenivāsaṁ anussarati. Seyyathidaṁ — ekampi jātiṁ dvepi jātiyo tissopi jātiyo catassopi jātiyo pañcapi jātiyo dasapi jātiyo vīsampi jātiyo tiṁsampi jātiyo cattālīsampi jātiyo paññāsampi jātiyo jātisatampi jātisahassampi jātisatasahassampi anekepi saṁvaṭṭakappe anekepi vivaṭṭakappe anekepi saṁvaṭṭavivaṭṭakappe: 'amutrāsiṁ evaṁnāmo evaṅgotto evaṁvaṇṇo evamāhāro evaṁsukhadukkhappaṭisaṁvedī evamāyupariyanto. So tato cuto amutra udapādiṁ; tatrāpāsiṁ evaṁnāmo evaṅgotto evaṁvaṇṇo evamāhāro evaṁsukhadukkhappaṭisaṁvedī evamāyupariyanto; so tato cuto idhūpapanno'ti. Iti sākāraṁ sauddesaṁ anekavihitaṁ pubbenivāsaṁ anussarati.</p>
-
-<hr>
-
-<p><span class="parno">51</span>Seyyathāpi, māṇava, puriso sakamhā gāmā aññaṁ gāmaṁ gaccheyya; tamhāpi gāmā aññaṁ gāmaṁ gaccheyya; so tamhā gāmā sakaṁyeva gāmaṁ paccāgaccheyya. Tassa evamassa: 'ahaṁ kho sakamhā gāmā amuṁ gāmaṁ agacchiṁ, tatra evaṁ aṭṭhāsiṁ evaṁ nisīdiṁ evaṁ abhāsiṁ evaṁ tuṇhī ahosiṁ. So tamhāpi gāmā amuṁ gāmaṁ gacchiṁ, tatrāpi evaṁ aṭṭhāsiṁ evaṁ nisīdiṁ evaṁ abhāsiṁ evaṁ tuṇhī ahosiṁ. Somhi tamhā gāmā sakaṁyeva gāmaṁ paccāgato'ti. </p>
-
-<p>Evameva kho, māṇava, bhikkhu … pe … yampi, māṇava, bhikkhu evaṁ samāhite citte … pe … āneñjappatte pubbenivāsānussatiñāṇāya cittaṁ abhinīharati abhininnāmeti. So anekavihitaṁ pubbenivāsaṁ anussarati. Seyyathidaṁ — ekampi jātiṁ … pe … iti sākāraṁ sauddesaṁ anekavihitaṁ pubbenivāsaṁ anussarati. Idampissa hoti paññāya.</p>
+<p><span class="parno">51</span>Seyyathāpi, māṇava, puriso sakamhā gāmā aññaṁ gāmaṁ gaccheyya; tamhāpi gāmā aññaṁ gāmaṁ gaccheyya; so tamhā gāmā sakaṁyeva gāmaṁ paccāgaccheyya. Tassa evamassa: 'ahaṁ kho sakamhā gāmā amuṁ gāmaṁ agacchiṁ, tatra evaṁ aṭṭhāsiṁ evaṁ nisīdiṁ evaṁ abhāsiṁ evaṁ tuṇhī ahosiṁ. So tamhāpi gāmā amuṁ gāmaṁ gacchiṁ, tatrāpi evaṁ aṭṭhāsiṁ evaṁ nisīdiṁ evaṁ abhāsiṁ evaṁ tuṇhī ahosiṁ. Somhi tamhā gāmā sakaṁyeva gāmaṁ paccāgato'ti. Evameva kho, māṇava, bhikkhu … pe … yampi, māṇava, bhikkhu evaṁ samāhite citte … pe … āneñjappatte pubbenivāsānussatiñāṇāya cittaṁ abhinīharati abhininnāmeti. So anekavihitaṁ pubbenivāsaṁ anussarati. Seyyathidaṁ—ekampi jātiṁ … pe … iti sākāraṁ sauddesaṁ anekavihitaṁ pubbenivāsaṁ anussarati. Idampissa hoti paññāya.</p>
 
 <p><span class="parno">52</span>So evaṁ samāhite citte … pe … āneñjappatte sattānaṁ cutūpapātañāṇāya cittaṁ abhinīharati abhininnāmeti. So dibbena cakkhunā visuddhena atikkantamānusakena satte passati cavamāne upapajjamāne hīne paṇīte suvaṇṇe dubbaṇṇe sugate duggate, yathākammūpage satte pajānāti: 'ime vata bhonto sattā kāyaduccaritena samannāgatā vacīduccaritena samannāgatā manoduccaritena samannāgatā ariyānaṁ upavādakā micchādiṭṭhikā micchādiṭṭhikammasamādānā. Te kāyassa bhedā paraṁ maraṇā apāyaṁ duggatiṁ vinipātaṁ nirayaṁ upapannā. Ime vā pana bhonto sattā kāyasucaritena samannāgatā vacīsucaritena samannāgatā manosucaritena samannāgatā ariyānaṁ anupavādakā sammādiṭṭhikā sammādiṭṭhikammasamādānā. Te kāyassa bhedā paraṁ maraṇā sugatiṁ saggaṁ lokaṁ upapannā'ti. Iti dibbena cakkhunā visuddhena atikkantamānusakena satte passati cavamāne upapajjamāne hīne paṇīte suvaṇṇe dubbaṇṇe sugate duggate, yathākammūpage satte pajānāti.</p>
 
-
-<p><span class="parno">53</span>Seyyathāpi, māṇava, majjhesiṅghāṭake pāsādo, tattha cakkhumā puriso ṭhito passeyya manusse gehaṁ pavisantepi nikkhamantepi rathikāyapi vīthiṁ sañcarante majjhesiṅghāṭake nisinnepi. Tassa evamassa: 'ete manussā gehaṁ pavisanti, ete nikkhamanti, ete rathikāya vīthiṁ sañcaranti, ete majjhesiṅghāṭake nisinnā'ti. </p>
-
-<p>Evameva kho, māṇava, bhikkhu … pe … yampi, māṇava, bhikkhu evaṁ samāhite citte … pe … āneñjappatte sattānaṁ cutūpapātañāṇāya cittaṁ abhinīharati abhininnāmeti. So dibbena cakkhunā visuddhena atikkantamānusakena satte passati cavamāne upapajjamāne hīne paṇīte suvaṇṇe dubbaṇṇe sugate duggate, yathākammūpage satte pajānāti. Idampissa hoti paññāya.</p>
-
 <hr>
+<p><span class="parno">53</span>Seyyathāpi, māṇava, majjhesiṅghāṭake pāsādo, tattha cakkhumā puriso ṭhito passeyya manusse gehaṁ pavisantepi nikkhamantepi rathikāyapi vīthiṁ sañcarante majjhesiṅghāṭake nisinnepi. Tassa evamassa: 'ete manussā gehaṁ pavisanti, ete nikkhamanti, ete rathikāya vīthiṁ sañcaranti, ete majjhesiṅghāṭake nisinnā'ti. Evameva kho, māṇava, bhikkhu … pe … yampi, māṇava, bhikkhu evaṁ samāhite citte … pe … āneñjappatte sattānaṁ cutūpapātañāṇāya cittaṁ abhinīharati abhininnāmeti. So dibbena cakkhunā visuddhena atikkantamānusakena satte passati cavamāne upapajjamāne hīne paṇīte suvaṇṇe dubbaṇṇe sugate duggate, yathākammūpage satte pajānāti. Idampissa hoti paññāya.</p>
 
 <p><span class="parno">54</span>So evaṁ samāhite citte parisuddhe pariyodāte anaṅgaṇe vigatūpakkilese mudubhūte kammaniye ṭhite āneñjappatte āsavānaṁ khayañāṇāya cittaṁ abhinīharati abhininnāmeti. So idaṁ dukkhanti yathābhūtaṁ pajānāti, ayaṁ dukkhasamudayoti yathābhūtaṁ pajānāti, ayaṁ dukkhanirodhoti yathābhūtaṁ pajānāti, ayaṁ dukkhanirodhagāminī paṭipadāti yathābhūtaṁ pajānāti; ime āsavāti yathābhūtaṁ pajānāti, ayaṁ āsavasamudayoti yathābhūtaṁ pajānāti, ayaṁ āsavanirodhoti yathābhūtaṁ pajānāti, ayaṁ āsavanirodhagāminī paṭipadāti yathābhūtaṁ pajānāti.</p>
 
-<hr>
-
 <p>Tassa evaṁ jānato evaṁ passato kāmāsavāpi cittaṁ vimuccati, bhavāsavāpi cittaṁ vimuccati, avijjāsavāpi cittaṁ vimuccati, vimuttasmiṁ vimuttamiti ñāṇaṁ hoti. 'Khīṇā jāti, vusitaṁ brahmacariyaṁ, kataṁ karaṇīyaṁ, nāparaṁ itthattāyā'ti pajānāti.</p>
 
-
 <hr>
-
 <p><span class="parno">55</span>Seyyathāpi, māṇava, pabbatasaṅkhepe udakarahado accho vippasanno anāvilo. Tattha cakkhumā puriso tīre ṭhito passeyya sippisambukampi sakkharakathalampi macchagumbampi carantampi tiṭṭhantampi. Tassa evamassa: 'ayaṁ kho udakarahado accho vippasanno anāvilo. Tatrime sippisambukāpi sakkharakathalāpi macchagumbāpi carantipi tiṭṭhantipī'ti</p>
 
 <p>Evameva kho, māṇava, bhikkhu … pe … yampi, māṇava, bhikkhu evaṁ samāhite citte … pe … āneñjappatte āsavānaṁ khayañāṇāya cittaṁ abhinīharati abhininnāmeti. So idaṁ dukkhanti yathābhūtaṁ pajānāti … pe … āsavanirodhagāminī paṭipadāti yathābhūtaṁ pajānāti. Tassa evaṁ jānato evaṁ passato kāmāsavāpi cittaṁ vimuccati, bhavāsavāpi cittaṁ vimuccati, avijjāsavāpi cittaṁ vimuccati, vimuttasmiṁ vimuttamiti ñāṇaṁ hoti, 'khīṇā jāti, vusitaṁ brahmacariyaṁ, kataṁ karaṇīyaṁ, nāparaṁ itthattāyā'ti pajānāti. Idampissa hoti paññāya.</p>
 
-
+<hr>
 <p><span class="parno">56</span>Ayaṁ kho so, māṇava, ariyo paññākkhandho yassa so bhagavā vaṇṇavādī ahosi, yattha ca imaṁ janataṁ samādapesi nivesesi patiṭṭhāpesi. Natthi cevettha uttarikaraṇīyan"ti.</p>
 
-
 <hr>
-
 <p><span class="parno">57</span>"Acchariyaṁ, bho ānanda, abbhutaṁ, bho ānanda. So cāyaṁ, bho ānanda, ariyo paññākkhandho paripuṇṇo, no aparipuṇṇo. Evaṁ paripuṇṇañcāhaṁ, bho ānanda, ariyaṁ paññākkhandhaṁ ito bahiddhā aññesu samaṇabrāhmaṇesu na samanupassāmi. <span class="var" title="natthi cettha (bj) | natthi no kiñci (s1–3, mr)" id="note225">Natthi cevettha</span> <span class="var" title="uttariṁ karaṇīyanti (bj, s2, s3, pts1) | uttariṁkaraṇīyanti (s1) | uttarikaraṇīyanti (mr)" id="note226">uttarikaraṇīyaṁ</span>. Abhikkantaṁ, bho ānanda, abhikkantaṁ, bho ānanda. Seyyathāpi, bho ānanda, nikkujjitaṁ vā ukkujjeyya, paṭicchannaṁ vā vivareyya, mūḷhassa vā maggaṁ ācikkheyya, andhakāre vā telapajjotaṁ dhāreyya: 'cakkhumanto rūpāni dakkhantī'ti; evamevaṁ bhotā ānandena anekapariyāyena dhammo pakāsito.</p>
 
 <p>Esāhaṁ, bho ānanda, taṁ bhavantaṁ gotamaṁ saraṇaṁ gacchāmi dhammañca bhikkhusaṁghañca. Upāsakaṁ maṁ bhavaṁ ānando dhāretu ajjatagge pāṇupetaṁ saraṇaṁ gatan"ti.</p>
@@ -589,9 +482,9 @@
 <!-- Footer -->
 		<footer>
 			<div id="breadcrumbs"><a href="../home/index.html">Home</a><a href="dn.html">Dīgha Nikāya</a>DN10: Subha Sutta</div>
-					<div class="bottomlinks">
+		<div class="bottomlinks">
  	<a href="../guide/guide.html"><span class="w3-bar-item"><i class="fa fa-compass"></i>&nbsp;Guide</span></a>
- 	 	<a href="../home/help.html"><span class="w3-bar-item"><i class="fa fa-info"></i>&nbsp;Help</span></a>
+ 	<a href="../home/help.html"><span class="w3-bar-item"><i class="fa fa-info"></i>&nbsp;Help</span></a>
  	<a href="../home/crossreference.html"><span class="w3-bar-item"><i class="fa fa-exchange"></i>&nbsp;Links&nbsp;Cross&nbsp;Reference</span></a>
  	<a href="../home/copyright.html"><span class="w3-bar-item">&copy;&nbsp;Copyright</span></a>
  	<a href="../home/contact.html"><span class="w3-bar-item"><i class="fa fa-envelope"></i>&nbsp;Contact</span></a>

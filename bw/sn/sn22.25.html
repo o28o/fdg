@@ -3,10 +3,8 @@
 <head>
  	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
  	<link rel="icon" type="image/x-icon" href="../images/favicon.ico">
- 	<title>Samyutta Nika 22.25</title>
+ 	<title>Samyutta Nikāya - Connected Discourses on the Aggregates 22.25</title>
  	<meta name="viewport" content="width=device-width, initial-scale=1">
-		<!-- Loading manifest -->
-	<link rel="manifest" href="../manifest.json">
  	<!-- Loading third party fonts -->
  	<link href="../fonts/font-awesome.min.css" rel="stylesheet" type="text/css">
  	<!-- Loading main and menu stylesheets -->
@@ -40,17 +38,17 @@
  <!-- Top menu -->
 
  <div class="w3-main w3-white bwcontainer2">
- 	<div class="w3-button w3-padding-8 w3-left w3-hide-large" onclick="w3_open()"><i class="fa fa-bars fa-lg"></i>&nbsp;</div>
+ 	<div class="w3-button w3-padding-8 w3-left w3-hide-large" onclick="w3_open()">☰</div>
  		<div id="navbar" class="w3-hide-small w3-hide-medium bwcontainer3">
  			<ul id="css3menu0">
  				<li class="topfirst" id="home"><a href="../home/index.html" class="w3-hide-small">Home</a></li>
- 			<li class="topmenu" id="dn"><a href="../dn/dn.html" class="w3-hide-small">Dīgha Nikāya</a></li>
+			<li class="topmenu" id="dn"><a href="../dn/dn.html" class="w3-hide-small">Dīgha Nikāya</a></li>
  				<li class="topmenu" id="mn"><a href="../mn/mn.html" class="w3-hide-small">Majjhima Nikāya</a></li>
  				<li class="topmenu" id="sn"><a href="../sn/sn.html" class="pressed w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Saṁyutta Nikāya</a>
  					<ul>
- 						<li><a href="../sn/sn01.html" class="pressed w3-hide-small">Vol. 1 ‒ The Book with Verses</a></li>
+ 						<li><a href="../sn/sn01.html" class="w3-hide-small">Vol. 1 ‒ The Book with Verses</a></li>
  						<li><a href="../sn/sn02.html" class="w3-hide-small">Vol. 2 ‒ The Book of Causation</a></li>
- 						<li><a href="../sn/sn03.html" class="w3-hide-small">Vol. 3 ‒ The Book of the Aggregates</a></li>
+ 						<li><a href="../sn/sn03.html" class="pressed w3-hide-small">Vol. 3 ‒ The Book of the Aggregates</a></li>
  						<li><a href="../sn/sn04.html" class="w3-hide-small">Vol. 4 ‒ The Book of the Six Sense Bases</a></li>
  						<li><a href="../sn/sn05.html" class="w3-hide-small">Vol. 5 ‒ The Great Book</a></li>
  					</ul>
@@ -84,8 +82,8 @@
  					<ul>
  						<li><a href="../vi/kd.html" class="w3-hide-small">Khandhaka</a></li>
  						<li><a href="../vi/bu-vb.html" class="w3-hide-small">Bhikkhu Vibhaṅga</a></li>
- 						<li><a href="../vi/bu-pt.html" class="w3-hide-small">Bhikkhu Pātimokkha</a></li>
- 						<li><a href="../vi/bi-pt.html" class="w3-hide-small">Bhikkhunī Pātimokkha</a></li>
+ 						<li><a href="../vi/bu-pt.html" class="w3-hide-small">Bhikkhu Pāṭimokkha</a></li>
+ 						<li><a href="../vi/bi-pt.html" class="w3-hide-small">Bhikkhunī Pāṭimokkha</a></li>
  						<li><a href="../vi/bi-vb.html" class="w3-hide-small">Bhikkhunī Vibhaṅga</a></li>
  					</ul>
  				</li>
@@ -96,9 +94,9 @@
 <!-- Sidebar (hidden by default) -->
  <nav class="w3-sidebar w3-bar-block w3-card w3-border w3-top w3-animate-left w3-hide-large" id="mySidebar">
  	<a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-times fa-2x red-color"></i>&nbsp;&nbsp;&nbsp;Close</a><!-- Hides the sidebar when clicked -->
-<p>&nbsp;</p>
  		<div class="w3-bar-block w3-white">
- 			<a href="../home/index.html" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-home fa-lg"></i>&nbsp;&nbsp;Home</a>
+ 			<a href="../home/index.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-home fa-lg"></i>&nbsp;&nbsp;&nbsp;Home</a>
+ 			
  			<a href="../guide/guide.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Guide</a>
  			<a href="../dn/dn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Dīgha Nikāya</a>
  			<a href="../mn/mn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Majjhima Nikāya</a>
@@ -107,66 +105,65 @@
  			<a href="../kn/kn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Khuddaka Nikāya</a>
  			<a href="../vi/vi.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Vinaya Piṭaka</a>
  		</div>
- </nav> 
+ </nav>
+ 
+ 
+ 
+<!-- !PAGE DIV! --> <!-- Div for page content --> 
+ <div class="w3-main w3-content w3-padding w3-left-align bwcontainer4"> 
+ 
+ <h2 id="SN01heading">Saṁyutta Nikāya — The Connected Discourses</h2>
+ 
+ 		
 
-<!-- !PAGE CONTENT! -->
-<div class="w3-main w3-content w3-padding w3-left-align bwcontainer4">
- 	<h2 id="SN01heading">Saṁyutta Nikāya — The Linked Discourses</h2>
+
+
+ 
+ <h3 id="SN22heading">SN22: Connected Discourses on the Aggregates</h3>
+ 
+ 		 
+ <!--      SN content begins here      -->
   
-		<div class="w3-bar w3-light-grey center">  <!-- Div for SN sub-navigation -->
-			<a href="sn01.html#content" title="The Book of the Verses" class="w3-bar-item w3-button w3-border w3-mobile w3-hover-yellow" style="width:20%">Vol 1:<br>Verses<br>SN1-11</a>
-			<a href="sn02.html#content" title="The Book of Causation" class="w3-bar-item w3-button w3-border w3-mobile w3-hover-yellow" style="width:20%">Vol 2:<br>Causation<br>SN12-21</a>
-			<a href="sn03.html#content" title="The Book of the Aggregates" class="w3-bar-item w3-button w3-border w3-mobile w3-hover-yellow w3-yellow" style="width:20%">Vol 3:<br>Aggregates<br>SN22-34</a>
-			<a href="sn04.html#content" title="The Book of the Six Sense Bases" class="w3-bar-item w3-button w3-border w3-mobile w3-hover-yellow" style="width:20%">Vol 4:<br>Sense Bases<br>SN35-44</a>
-			<a href="sn05.html#content" title="The Great Book" class="w3-bar-item w3-button w3-border w3-mobile w3-hover-yellow" style="width:20%">Vol 5:<br>Great Book<br>SN45-56</a>
-		</div>  <!-- End div for SN sub-navigation -->
+ <div id="content">
 
-
-<!-- SN content begins here -->
-
-<div id="content">
-
-<h2>22. Khandhasaṁyutta: On the Aggregates</h2>
-
-<h3>III. The Burden — SN22.25: Desire and Greed </h3>
+<h3>SN22:25 Desire and Lust</h3>
 
 <div id="metaarea">
-	<ul class="translator">
-	<li><a class="dg-link" href="/r/?q=sn22.25">DG</a> <a href="https://suttacentral.net/sn22.25">SC</a> ©&nbsp;Translated from the Pali by Bhante Sujato.&nbsp;<a href="../home/copyright.html#sc">(More copyright information)</a>
-	</ul>
-</div>
-
-<section class="raw_sutta">
+ <ul class="translator">
+ <li><a class="dg-link" href="/r/?q=sn22.25">DG</a> <a href="https://suttacentral.net/sn22.25">SC</a> &copy;&nbsp;Translated from the Pali by Bhikkhu Bodhi.&nbsp;
+ <a href="../home/copyright.html#wp">(More copyright information)</a>
+ </li>
+ </ul>
+ </div>
+<section class="raw_sutta">  <!-- English and Pali -->
 <div lang="en">
 
-<p><span class="parno">1</span>At Sāvatthī.</p>
+<p id="p1"><span class="parno">1</span>At Sāvatthī. "Bhikkhus, abandon desire and lust for form. Thus that form will be abandoned, cut off at the root, made like a palm stump, obliterated so that it is no more subject to future arising.</p>
 
-<p>“Mendicants, give up desire and greed for form. Thus that form will be given up, cut off at the root, made like a palm stump, obliterated, and unable to arise in the future.</p>
+<p>"Abandon desire and lust for feeling … for perception … for volitional formations … for consciousness. Thus that consciousness will be abandoned, cut off at the root, made like a palm stump, obliterated so that it is no more subject to future arising."</p>
+</div>
 
-<p>Give up desire and greed for feeling … perception … choices … consciousness. Thus that consciousness will be given up, cut off at the root, made like a palm stump, obliterated, and unable to arise in the future.”</p>
-
-</div> <!-- End English -->
 <div lang="pi">
-<p><span class="parno">1</span>Sāvatthinidānaṁ.</p>
 
-<p>“Yo, bhikkhave, rūpasmiṁ chandarāgo taṁ pajahatha. Evaṁ taṁ rūpaṁ pahīnaṁ bhavissati ucchinnamūlaṁ tālāvatthukataṁ anabhāvaṅkataṁ āyatiṁ anuppādadhammaṁ.</p>
+<p><span class="parno">1</span>Sāvatthinidānaṁ. "Yo, bhikkhave, rūpasmiṁ chandarāgo taṁ pajahatha. Evaṁ taṁ rūpaṁ pahīnaṁ bhavissati ucchinnamūlaṁ tālāvatthukataṁ anabhāvaṅkataṁ āyatiṁ anup pāda dhammaṁ. </p>
 
-<p>Yo vedanāya chandarāgo taṁ pajahatha. Evaṁ sā vedanā pahīnā bhavissati ucchinnamūlā tālāvatthukatā anabhāvaṅkatā āyatiṁ anuppādadhammā. Yo saññāya chandarāgo taṁ pajahatha. Evaṁ sā saññā pahīnā bhavissati ucchinnamūlā tālāvatthukatā anabhāvaṅkatā āyatiṁ anuppādadhammā. Yo saṅkhāresu chandarāgo taṁ pajahatha. Evaṁ te saṅkhārā pahīnā bhavissanti ucchinnamūlā tālāvatthukatā anabhāvaṅkatā āyatiṁ anuppādadhammā. Yo viññāṇasmiṁ chandarāgo taṁ pajahatha. Evaṁ taṁ viññāṇaṁ pahīnaṁ bhavissati ucchinnamūlaṁ tālāvatthukataṁ anabhāvaṅkataṁ āyatiṁ anuppādadhamman”ti.</p>
-
-<p class="endsutta">Catutthaṁ.</p>
-</div> <!-- end pali -->
-
+<p>Yo vedanāya chandarāgo taṁ pajahatha. Evaṁ sā vedanā pahīnā bhavissati ucchinnamūlā tālāvatthukatā anabhāvaṅkatā āyatiṁ anup pāda dhammā. Yo saññāya chandarāgo taṁ pajahatha. Evaṁ sā saññā pahīnā bhavissati ucchinnamūlā tālāvatthukatā anabhāvaṅkatā āyatiṁ anup pāda dhammā. Yo saṅkhāresu chandarāgo taṁ pajahatha. Evaṁ te saṅkhārā pahīnā bhavissanti ucchinnamūlā tālāvatthukatā anabhāvaṅkatā āyatiṁ anup pāda dhammā. Yo viññāṇasmiṁ chandarāgo taṁ pajahatha. Evaṁ taṁ viññāṇaṁ pahīnaṁ bhavissati ucchinnamūlaṁ tālāvatthukataṁ anabhāvaṅkataṁ āyatiṁ anup pāda dhamman"ti.</p>
+<p class="endsection">Catutthaṁ.</p>
+</div>
 </section>  <!-- End English and Pali -->
-<div id="nextprev"><a id="previous-sutta" href="sn22.24.html#content"></a><a id="next-sutta" href="sn22.26.html#content"></a></div>
+<div id="nextprev"><a id="previous-sutta" href="./sn22.24.html#content"></a><a id="next-sutta" href="./sn22.26.html#content"></a></div>
 </div>  <!--End Content -->
 </div>  <!-- End Page -->
 <div class="w3-white bwcontainer2"> <!-- Footer div -->
 <!-- Footer -->
 		<footer>
-			<div id="breadcrumbs"><a href="../home/index.html">Home</a><a href="sn.html">Saṁyutta Nikāya</a><a href="sn22.html">22. Khandhasaṁyutta: On the Aggregates</a> SN22.25: Desire and Greed </div>
-					<div class="bottomlinks">
+			<div id="breadcrumbs"> 
+<a href="../home/index.html">Home</a><a href="sn.html">Saṁyutta Nikāya</a><a href="sn22.html">Connected Discourses on the Aggregates</a>SN22:25 Desire and Lust
+</div>
+	
+ 	<div class="bottomlinks">
  	<a href="../guide/guide.html"><span class="w3-bar-item"><i class="fa fa-compass"></i>&nbsp;Guide</span></a>
- 	 	<a href="../home/help.html"><span class="w3-bar-item"><i class="fa fa-info"></i>&nbsp;Help</span></a>
+ 	<a href="../home/help.html"><span class="w3-bar-item"><i class="fa fa-info"></i>&nbsp;Help</span></a>
  	<a href="../home/crossreference.html"><span class="w3-bar-item"><i class="fa fa-exchange"></i>&nbsp;Links&nbsp;Cross&nbsp;Reference</span></a>
  	<a href="../home/copyright.html"><span class="w3-bar-item">&copy;&nbsp;Copyright</span></a>
  	<a href="../home/contact.html"><span class="w3-bar-item"><i class="fa fa-envelope"></i>&nbsp;Contact</span></a>

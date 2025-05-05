@@ -3,10 +3,8 @@
 <head>
  	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
  	<link rel="icon" type="image/x-icon" href="../images/favicon.ico">
- 	<title>Samyutta Nika 22.21</title>
+ 	<title>Samyutta Nikāya - Connected Discourses on the Aggregates 22.21</title>
  	<meta name="viewport" content="width=device-width, initial-scale=1">
-		<!-- Loading manifest -->
-	<link rel="manifest" href="../manifest.json">
  	<!-- Loading third party fonts -->
  	<link href="../fonts/font-awesome.min.css" rel="stylesheet" type="text/css">
  	<!-- Loading main and menu stylesheets -->
@@ -40,17 +38,17 @@
  <!-- Top menu -->
 
  <div class="w3-main w3-white bwcontainer2">
- 	<div class="w3-button w3-padding-8 w3-left w3-hide-large" onclick="w3_open()"><i class="fa fa-bars fa-lg"></i>&nbsp;</div>
+ 	<div class="w3-button w3-padding-8 w3-left w3-hide-large" onclick="w3_open()">☰</div>
  		<div id="navbar" class="w3-hide-small w3-hide-medium bwcontainer3">
  			<ul id="css3menu0">
  				<li class="topfirst" id="home"><a href="../home/index.html" class="w3-hide-small">Home</a></li>
- 			<li class="topmenu" id="dn"><a href="../dn/dn.html" class="w3-hide-small">Dīgha Nikāya</a></li>
+			<li class="topmenu" id="dn"><a href="../dn/dn.html" class="w3-hide-small">Dīgha Nikāya</a></li>
  				<li class="topmenu" id="mn"><a href="../mn/mn.html" class="w3-hide-small">Majjhima Nikāya</a></li>
  				<li class="topmenu" id="sn"><a href="../sn/sn.html" class="pressed w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Saṁyutta Nikāya</a>
  					<ul>
- 						<li><a href="../sn/sn01.html" class="pressed w3-hide-small">Vol. 1 ‒ The Book with Verses</a></li>
+ 						<li><a href="../sn/sn01.html" class="w3-hide-small">Vol. 1 ‒ The Book with Verses</a></li>
  						<li><a href="../sn/sn02.html" class="w3-hide-small">Vol. 2 ‒ The Book of Causation</a></li>
- 						<li><a href="../sn/sn03.html" class="w3-hide-small">Vol. 3 ‒ The Book of the Aggregates</a></li>
+ 						<li><a href="../sn/sn03.html" class="pressed w3-hide-small">Vol. 3 ‒ The Book of the Aggregates</a></li>
  						<li><a href="../sn/sn04.html" class="w3-hide-small">Vol. 4 ‒ The Book of the Six Sense Bases</a></li>
  						<li><a href="../sn/sn05.html" class="w3-hide-small">Vol. 5 ‒ The Great Book</a></li>
  					</ul>
@@ -84,8 +82,8 @@
  					<ul>
  						<li><a href="../vi/kd.html" class="w3-hide-small">Khandhaka</a></li>
  						<li><a href="../vi/bu-vb.html" class="w3-hide-small">Bhikkhu Vibhaṅga</a></li>
- 						<li><a href="../vi/bu-pt.html" class="w3-hide-small">Bhikkhu Pātimokkha</a></li>
- 						<li><a href="../vi/bi-pt.html" class="w3-hide-small">Bhikkhunī Pātimokkha</a></li>
+ 						<li><a href="../vi/bu-pt.html" class="w3-hide-small">Bhikkhu Pāṭimokkha</a></li>
+ 						<li><a href="../vi/bi-pt.html" class="w3-hide-small">Bhikkhunī Pāṭimokkha</a></li>
  						<li><a href="../vi/bi-vb.html" class="w3-hide-small">Bhikkhunī Vibhaṅga</a></li>
  					</ul>
  				</li>
@@ -96,9 +94,9 @@
 <!-- Sidebar (hidden by default) -->
  <nav class="w3-sidebar w3-bar-block w3-card w3-border w3-top w3-animate-left w3-hide-large" id="mySidebar">
  	<a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-times fa-2x red-color"></i>&nbsp;&nbsp;&nbsp;Close</a><!-- Hides the sidebar when clicked -->
-<p>&nbsp;</p>
  		<div class="w3-bar-block w3-white">
- 			<a href="../home/index.html" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-home fa-lg"></i>&nbsp;&nbsp;Home</a>
+ 			<a href="../home/index.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-home fa-lg"></i>&nbsp;&nbsp;&nbsp;Home</a>
+ 			
  			<a href="../guide/guide.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Guide</a>
  			<a href="../dn/dn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Dīgha Nikāya</a>
  			<a href="../mn/mn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Majjhima Nikāya</a>
@@ -107,110 +105,88 @@
  			<a href="../kn/kn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Khuddaka Nikāya</a>
  			<a href="../vi/vi.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Vinaya Piṭaka</a>
  		</div>
- </nav> 
+ </nav>
+ 
+ 
+ 
+<!-- !PAGE DIV! --> <!-- Div for page content --> 
+ <div class="w3-main w3-content w3-padding w3-left-align bwcontainer4"> 
+ 
+ <h2 id="SN01heading">Saṁyutta Nikāya — The Connected Discourses</h2>
+ 
+ 		
 
-<!-- !PAGE CONTENT! -->
-<div class="w3-main w3-content w3-padding w3-left-align bwcontainer4">
- 	<h2 id="SN01heading">Saṁyutta Nikāya — The Linked Discourses</h2>
+
+
+ 
+ <h3 id="SN22heading">SN22: Connected Discourses on the Aggregates</h3>
+ 
+ 		 
+ <!--      SN content begins here      -->
   
-		<div class="w3-bar w3-light-grey center">  <!-- Div for SN sub-navigation -->
-			<a href="sn01.html#content" title="The Book of the Verses" class="w3-bar-item w3-button w3-border w3-mobile w3-hover-yellow" style="width:20%">Vol 1:<br>Verses<br>SN1-11</a>
-			<a href="sn02.html#content" title="The Book of Causation" class="w3-bar-item w3-button w3-border w3-mobile w3-hover-yellow" style="width:20%">Vol 2:<br>Causation<br>SN12-21</a>
-			<a href="sn03.html#content" title="The Book of the Aggregates" class="w3-bar-item w3-button w3-border w3-mobile w3-hover-yellow w3-yellow" style="width:20%">Vol 3:<br>Aggregates<br>SN22-34</a>
-			<a href="sn04.html#content" title="The Book of the Six Sense Bases" class="w3-bar-item w3-button w3-border w3-mobile w3-hover-yellow" style="width:20%">Vol 4:<br>Sense Bases<br>SN35-44</a>
-			<a href="sn05.html#content" title="The Great Book" class="w3-bar-item w3-button w3-border w3-mobile w3-hover-yellow" style="width:20%">Vol 5:<br>Great Book<br>SN45-56</a>
-		</div>  <!-- End div for SN sub-navigation -->
+ <div id="content">
 
-
-<!-- SN content begins here -->
-
-<div id="content">
-
-<h2>22. Khandhasaṁyutta: On the Aggregates</h2>
-
-<h3>II. Impermanence — SN22.21: With Ānanda </h3>
+<h3>SN22:21 Ānanda</h3>
 
 <div id="metaarea">
-	<ul class="translator">
-	<li><a class="dg-link" href="/r/?q=sn22.21">DG</a> <a href="https://suttacentral.net/sn22.21">SC</a> &copy;&nbsp;Translated from the Pali by Bhante Sujato.&nbsp;&nbsp;<a href="../home/copyright.html#sc">(More copyright information)</a></li>
-	</ul>
-</div>
-
-<section class="raw_sutta">
+ <ul class="translator">
+ <li><a class="dg-link" href="/r/?q=sn22.21">DG</a> <a href="https://suttacentral.net/sn22.21">SC</a> &copy;&nbsp;Translated from the Pali by Bhikkhu Bodhi.&nbsp;
+ <a href="../home/copyright.html#wp">(More copyright information)</a>
+ </li>
+ </ul>
+ </div>
+<section class="raw_sutta">  <!-- English and Pali -->
 <div lang="en">
 
-<p><span class="parno">1</span>At Sāvatthī.</p>
+<p id="p1"><span class="parno">1</span>At Sāvatthī. Then the Venerable Ānanda approached the Blessed One, paid homage to him, sat down to one side, and said to him:</p>
 
-<p>Then Venerable Ānanda went up to the Buddha, bowed, sat down to one side, and said to the Buddha:</p>
+<p>"Venerable sir, it is said, ‘cessation, cessation.’ Through the cessation of what things is cessation spoken of?"</p>
 
-<p>“Sir, they speak of ‘cessation’. The cessation of what things does this refer to?”</p>
+<p>"Form, Ānanda, is impermanent, conditioned, dependently arisen, subject to destruction, to vanishing, to fading away, to cessation. Through its cessation, cessation is spoken of.</p>
 
-<p>“Ānanda, form is impermanent, conditioned, dependently originated, liable to end, vanish, fade away, and cease. Its cessation is what ‘cessation’ refers to.</p>
+<p>"Feeling is impermanent … Perception is impermanent … Volitional formations are impermanent … <a class="pts_pn">sn.iii.25</a> … Consciousness is impermanent, conditioned, dependently arisen, subject to destruction, to vanishing, to fading away, to cessation. Through its cessation, cessation is spoken of.</p>
 
+<p>"It is through the cessation of these things, Ānanda, that cessation is spoken of."</p>
 <hr>
-<p>Feeling …</p>
+</div>
 
-<hr>
-<p>Perception …</p>
-
-<hr>
-<p>Choices …</p>
-
-<hr>
-<p>Consciousness is impermanent, conditioned, dependently originated, liable to end, vanish, fade away, and cease. Its cessation is what ‘cessation’ refers to.</p>
-
-<p>When they speak of ‘cessation’, its the cessation of these things that this refers to.”</p>
-<hr>
-
-</div> <!-- End English -->
 <div lang="pi">
-<p><span class="parno">1</span>Sāvatthiyaṁ … ārāme.</p>
 
-<p>Atha kho āyasmā ānando yena bhagavā tenupasaṅkami; upasaṅkamitvā bhagavantaṁ abhivādetvā ekamantaṁ nisīdi. Ekamantaṁ nisinno kho āyasmā ānando bhagavantaṁ etadavoca:</p>
+<p><span class="parno">1</span>Sāvatthiyaṁ … ārāme. Atha kho āyasmā ānando yena bhagavā tenupasaṅkami; upasaṅkamitvā bhagavantaṁ abhivādetvā ekamantaṁ nisīdi. Ekamantaṁ nisinno kho āyasmā ānando bhagavantaṁ etadavoca: </p>
 
-<p>“‘nirodho nirodho’ti, bhante, vuccati. Katamesānaṁ kho, bhante, dhammānaṁ nirodho ‘nirodho’ti vuccatī”ti? Variant: nirodho → nirodhā (bj, pts1ed)</p>
+<p>"‘nirodho nirodho’ti, bhante, vuccati. Katamesānaṁ kho, bhante, dhammānaṁ nirodho ‘nirodho’ti vuccatī"ti? "</p>
 
-<p>“Rūpaṁ kho, ānanda, aniccaṁ saṅkhataṁ paṭiccasamuppannaṁ khayadhammaṁ vayadhammaṁ virāgadhammaṁ nirodhadhammaṁ. Tassa nirodho ‘nirodho’ti vuccati. <span class="var" title="Variant: nirodho → nirodhā (bj, pts1ed)"></span></p>
+<p>Rūpaṁ kho, Ānanda, aniccaṁ saṅkhataṁ paṭiccasamuppannaṁ khayadhammaṁ vayadhammaṁ virāgadhammaṁ nirodhadhammaṁ. Tassa nirodho ‘nirodho’ti vuccati. </p>
 
+<p>Vedanā aniccā saṅkhatā paṭiccasamuppannā khayadhammā vayadhammā virāgadhammā nirodhadhammā. Tassā nirodho ‘nirodho’ti vuccati. Saññā … saṅkhārā aniccā saṅkhatā paṭiccasamuppannā khayadhammā vayadhammā virāgadhammā nirodhadhammā. Tesaṁ nirodho ‘nirodho’ti vuccati. Viññāṇaṁ aniccaṁ saṅkhataṁ paṭiccasamuppannaṁ khayadhammaṁ vayadhammaṁ virāgadhammaṁ nirodhadhammaṁ. Tassa nirodho ‘nirodho’ti vuccati. </p>
+
+<p>Imesaṁ kho, Ānanda, dhammānaṁ nirodho ‘nirodho’ti vuccatī"ti.</p>
 <hr>
-<p>Vedanā aniccā saṅkhatā paṭiccasamuppannā khayadhammā vayadhammā virāgadhammā nirodhadhammā. Tassā nirodho ‘nirodho’ti vuccati.</p>
+<p class="endsection">Dasamaṁ.
+<br>Aniccavaggo dutiyo.</p>
 
-<hr>
-<p>Saññā …</p>
-
-<hr>
-<p>saṅkhārā aniccā saṅkhatā paṭiccasamuppannā khayadhammā vayadhammā virāgadhammā nirodhadhammā. Tesaṁ nirodho ‘nirodho’ti vuccati.</p>
-
-<hr>
-<p>Viññāṇaṁ aniccaṁ saṅkhataṁ paṭiccasamuppannaṁ khayadhammaṁ vayadhammaṁ virāgadhammaṁ nirodhadhammaṁ. Tassa nirodho ‘nirodho’ti vuccati.</p>
-
-<p>Imesaṁ kho, ānanda, dhammānaṁ nirodho ‘nirodho’ti vuccatī”ti.</p>
-<hr>
-
-<p class="endsutta">Dasamaṁ.
-
-
-
-<span class="half"><br></span>Aniccavaggo dutiyo.
-<br>Tassuddānaṁ</p>
-
-<p class="verse">Aniccaṁ dukkhaṁ anattā,
+<div class="verse">
+<p><span class="parno">2</span>Aniccaṁ dukkhaṁ anattā,
 <br>yadaniccāpare tayo;
 <br>Hetunāpi tayo vuttā,
-<br>ānandena ca te dasāti. </p>
-</div> <!-- end pali -->
+<br>ānandena ca te dasāti.</p>
+</div>
 
+</div>
 </section>  <!-- End English and Pali -->
-<div id="nextprev"><a id="previous-sutta" href="sn22.20.html#content"></a><a id="next-sutta" href="sn22.22.html#content"></a></div>
+<div id="nextprev"><a id="previous-sutta" href="./sn22.20.html#content"></a><a id="next-sutta" href="./sn22.22.html#content"></a></div>
 </div>  <!--End Content -->
 </div>  <!-- End Page -->
 <div class="w3-white bwcontainer2"> <!-- Footer div -->
 <!-- Footer -->
 		<footer>
-			<div id="breadcrumbs"><a href="../home/index.html">Home</a><a href="sn.html">Saṁyutta Nikāya</a><a href="sn22.html">22. Khandhasaṁyutta: On the Aggregates</a> SN22.21: With Ānanda </div>
-					<div class="bottomlinks">
+			<div id="breadcrumbs"> 
+<a href="../home/index.html">Home</a><a href="sn.html">Saṁyutta Nikāya</a><a href="sn22.html">Connected Discourses on the Aggregates</a>SN22:21 Ānanda
+</div>
+	
+ 	<div class="bottomlinks">
  	<a href="../guide/guide.html"><span class="w3-bar-item"><i class="fa fa-compass"></i>&nbsp;Guide</span></a>
- 	 	<a href="../home/help.html"><span class="w3-bar-item"><i class="fa fa-info"></i>&nbsp;Help</span></a>
+ 	<a href="../home/help.html"><span class="w3-bar-item"><i class="fa fa-info"></i>&nbsp;Help</span></a>
  	<a href="../home/crossreference.html"><span class="w3-bar-item"><i class="fa fa-exchange"></i>&nbsp;Links&nbsp;Cross&nbsp;Reference</span></a>
  	<a href="../home/copyright.html"><span class="w3-bar-item">&copy;&nbsp;Copyright</span></a>
  	<a href="../home/contact.html"><span class="w3-bar-item"><i class="fa fa-envelope"></i>&nbsp;Contact</span></a>

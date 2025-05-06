@@ -40,11 +40,13 @@ function showNotification(message) {
 }
 
 function cleanTextForTTS(text) {
-  // Удаляем текст в квадратных скобках (варианты и примечания)
-  return text.replace(/\[.*?\]/g, '')
-             .replace(/\s+/g, ' ') // Удаляем лишние пробелы
-             .trim();
+  return text
+    .replace(/\[.*?\]/g, '') // Удаляем квадратные скобки
+    .replace(/[ \t]+/g, ' ') // Заменяем только множественные пробелы и табуляции на один пробел
+    .replace(/\n{3,}/g, '\n\n') // Убираем слишком длинные участки из переносов строк
+    .trim();
 }
+
 
 function openInNewTab(content, isPali) {
   // Создаем человеко-читаемое название

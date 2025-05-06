@@ -20,23 +20,17 @@ async function copyToClipboard(text) {
 }
 
 function showNotification(message) {
-  // Создаем новое уведомление
   const notification = document.createElement('div');
   notification.className = 'bubble-notification';
-
-  // Добавляем текст
   const text = document.createElement('span');
   text.textContent = message;
   notification.appendChild(text);
-  
   document.body.appendChild(notification);
   
-  // Показываем с анимацией
   setTimeout(() => {
     notification.classList.add('show');
   }, 10);
   
-  // Удаляем уведомление после показа
   setTimeout(() => {
     notification.classList.remove('show');
     setTimeout(() => {
@@ -45,14 +39,20 @@ function showNotification(message) {
   }, 2000);
 }
 
-function openInNewTab(content) {
+function openInNewTab(content, isPali) {
+  // Создаем человеко-читаемое название на основе текущего URL
+  const url = new URL(window.location.href);
+  let title = url.pathname.split('/').filter(Boolean).join('_');
+  title = title.replace(/\.html$/, '');
+  title = (title || 'text') + (isPali ? '_pali' : '_translation') + '_tts';
+  
   // Создаем HTML-страницу с текстом
   const html = `
     <!DOCTYPE html>
     <html>
     <head>
       <meta charset="UTF-8">
-      <title>Text for TTS</title>
+      <title>${title}</title>
       <style>
         body {
           font-family: Arial, sans-serif;
@@ -72,54 +72,82 @@ function openInNewTab(content) {
   
   // Открываем новую вкладку с содержимым
   const blob = new Blob([html], { type: 'text/html' });
-  const url = URL.createObjectURL(blob);
-  window.open(url, '_blank');
-}
-
-async function handleSuttaClick(e) {
-  if (e.target.classList.contains('copy-pali') || e.target.classList.contains('copy-translation') ||
-      e.target.classList.contains('open-pali') || e.target.classList.contains('open-translation')) {
-    e.preventDefault();
-    
-    const container = e.target.closest('.sutta-container') || e.target.closest('.text-block') || 
-                     e.target.closest('section') || e.target.closest('div');
-                     
-    let selector, message, isOpenAction;
-    if (e.target.classList.contains('copy-pali') || e.target.classList.contains('open-pali')) {
-      selector = '.pli-lang';
-      message = window.location.pathname.includes('/ru/') || window.location.pathname.includes('/r/') 
-        ? 'Текст Пали скопирован' 
-        : 'Pali text copied';
-      isOpenAction = e.target.classList.contains('open-pali');
-    } else {
-      selector = '.rus-lang';
-      message = window.location.pathname.includes('/ru/') || window.location.pathname.includes('/r/') 
-        ? 'Перевод скопирован' 
-        : 'Translation copied';
-      isOpenAction = e.target.classList.contains('open-translation');
+  const blobUrl = URL.createObjectURL(blob);
+  
+  const newWindow = window.open(blobUrl, '_blank');
+  
+  // Пытаемся установить более читаемый URL (не всегда работает из-за политик безопасности)
+  try {
+    if (newWindow) {
+      newWindow.document.title = title;
+      // Альтернативный вариант с history.replaceState (не меняет origin)
+      newWindow.history.replaceState({}, title, `/${title}.html`);
     }
-    
-    const elements = container ? container.querySelectorAll(selector) : document.querySelectorAll(selector);
-    if (elements.length === 0) {
-      console.warn(`Не найдены элементы с селектором: ${selector}`);
-      return;
-    }
-    
-    const combinedText = Array.from(elements)
-      .map(el => el.textContent.trim())
-      .join('\n');
-    
-    if (isOpenAction) {
-      openInNewTab(combinedText);
-    } else {
-      const success = await copyToClipboard(combinedText);
-      showNotification(success ? message : (window.location.pathname.includes('/ru/') || window.location.pathname.includes('/r/') 
-        ? 'Не удалось скопировать текст' 
-        : 'Failed to copy text'));
-    }
+  } catch (e) {
+    console.log('Cannot modify new window URL due to security restrictions');
   }
 }
 
+async function handleSuttaClick(e) {
+  // Проверяем, является ли элемент одной из наших ссылок
+  const target = e.target.closest('a');
+  if (!target || !(target.classList.contains('copy-pali') || 
+                 target.classList.contains('copy-translation'))) {
+    return;
+  }
+
+  e.preventDefault();
+  
+  // Определяем, был ли клик с намерением открыть в новой вкладке
+  const isOpenInNewTab = e.button !== 0 || // Не левая кнопка мыши
+                        e.ctrlKey ||      // Ctrl+click
+                        e.metaKey ||      // Cmd+click (Mac)
+                        e.shiftKey ||     // Shift+click (открывает в новом окне)
+                        (target.hasAttribute('target') && 
+                         target.getAttribute('target') === '_blank');
+
+  const container = target.closest('.sutta-container') || target.closest('.text-block') || 
+                   target.closest('section') || target.closest('div');
+                   
+  let selector, message, excludeVariant = false;
+  const isPali = target.classList.contains('copy-pali');
+  
+  if (isPali) {
+    selector = '.pli-lang';
+    message = window.location.pathname.includes('/ru/') || window.location.pathname.includes('/r/') 
+      ? isOpenInNewTab ? 'Пали открыто в новой вкладке' : 'Текст Пали скопирован' 
+      : isOpenInNewTab ? 'Pali opened in new tab' : 'Pali text copied';
+    excludeVariant = true;
+  } else {
+    selector = '.rus-lang';
+    message = window.location.pathname.includes('/ru/') || window.location.pathname.includes('/r/') 
+      ? isOpenInNewTab ? 'Перевод открыт в новой вкладке' : 'Перевод скопирован' 
+      : isOpenInNewTab ? 'Translation opened in new tab' : 'Translation copied';
+  }
+  
+  let elements = container ? container.querySelectorAll(selector) : document.querySelectorAll(selector);
+  if (elements.length === 0) {
+    console.warn(`Не найдены элементы с селектором: ${selector}`);
+    return;
+  }
+  
+  if (excludeVariant) {
+    elements = Array.from(elements).filter(el => !el.classList.contains('variant'));
+  }
+  
+  const combinedText = Array.from(elements)
+    .map(el => el.textContent.trim())
+    .join('\n');
+  
+  if (isOpenInNewTab) {
+    openInNewTab(combinedText, isPali);
+  } else {
+    const success = await copyToClipboard(combinedText);
+    showNotification(success ? message : (window.location.pathname.includes('/ru/') || window.location.pathname.includes('/r/') 
+      ? 'Не удалось скопировать текст' 
+      : 'Failed to copy text'));
+  }
+}
 function initSuttaCopy() {
   document.addEventListener('click', handleSuttaClick);
 }

@@ -84,11 +84,9 @@ $playerHtml = "<span class='voice-dropdown'>
             <source src='$voicefile' type='$mimeType'>
             Your browser does not support the audio element.
         </audio><br>
-            <a href='javascript:void(0)' class='copy-pali'>Copy Pali</a> |
-            <a href='javascript:void(0)' class='copy-translation'>Copy Trn</a> |
-            <a href='https://www.sc-voice.net/?src=sc#/sutta/$fromjs'>Voice.SC</a> |
-			<a href='javascript:void(0)' class='open-pali'>Open Pali</a> |
-			<a href='javascript:void(0)' class='open-translation'>Open Trn</a> |
+<a href='javascript:void(0)' class='copy-pali'>Copy/Open Pali</a> |
+<a href='javascript:void(0)' class='copy-translation'>Copy/Open Trn</a> |
+<a href='https://www.sc-voice.net/?src=sc#/sutta/$fromjs'>Voice.SC</a>
           
             <a href='/assets/common/ttsHelp.html'>?</a> 
 
@@ -128,11 +126,9 @@ $playerHtml = "<span class='voice-dropdown'>
             <source src='$voicefile' type='$mimeType'>
             Your browser does not support the audio element.
         </audio><br>
-            <a href='javascript:void(0)' class='copy-pali'>Copy Pali</a> |
-            <a href='javascript:void(0)' class='copy-translation'>Copy Trn</a> |
-            <a href='https://www.sc-voice.net/?src=sc#/sutta/$fromjs'>Voice.SC</a> |
-			<a href='javascript:void(0)' class='open-pali'>Open Pali</a> |
-			<a href='javascript:void(0)' class='open-translation'>Open Trn</a> |
+ <a href='javascript:void(0)' class='copy-pali'>Copy/Open Pali</a> |
+<a href='javascript:void(0)' class='copy-translation'>Copy/Open Trn</a> |
+<a href='https://www.sc-voice.net/?src=sc#/sutta/$fromjs'>Voice.SC</a>
           
             <a href='/assets/common/ttsHelp.html'>?</a> 
     </span>

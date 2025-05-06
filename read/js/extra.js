@@ -81,9 +81,9 @@ function openInNewTab(content, isPali) {
     </html>
   `;
   
-  const blob = new Blob([html], { type: 'text/html' });
-  const blobUrl = URL.createObjectURL(blob);
-  window.open(blobUrl, '_blank');
+const dataUrl = 'data:text/html;charset=utf-8,' + encodeURIComponent(html);
+window.open(dataUrl, '_blank');
+
 }
 
 async function handleSuttaClick(e) {

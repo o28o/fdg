@@ -235,23 +235,23 @@ if (preg_match("/^(ja|snp|iti|thig|thag)[0-9].*/i", $stringForOpen)) {
         session_write_close();
     }
 	
-  echo "<script>window.location.href='$readerlang?q=$stringForOpen';</script>";
+  echo "<script>window.location.href='$readerlang?q=$stringForOpen&s=$s';</script>";
   exit();
 	  
 } else if (preg_match("/^(bu|bi)-pm$/i", $stringForOpen)) {
 //echo "<script>alert('case 1');</script>";	
-	echo "<script>window.location.href='$readerlang?q={$stringForOpen}';</script>";	
+	echo "<script>window.location.href='$readerlang?q={$stringForOpen}&s=$s';</script>";	
 	  exit(); 
 }  else if (preg_match("/^(bu|pm|bpm|bupm)$/i", $stringForOpen)) {
   
 	//echo "<script>window.location.href='$readerlang?q=bu-{$stringForOpen}';</script>";	
-	echo "<script>window.location.href='/pm.php';</script>";	
+	echo "<script>window.location.href='/pm.php?expand=true';</script>";	
 	  exit(); 
 } else if (preg_match("/^(bi|bipm)$/i", $stringForOpen)) {
 
 //echo "<script>alert('case 1');</script>";	
 //	echo "<script>window.location.href='$readerlang?q={$stringForOpen}';</script>";	
-	echo "<script>window.location.href='/bipm.php';</script>";	
+	echo "<script>window.location.href='/bipm.php?expand=true';</script>";	
 } else if  (preg_match("/^(pj|ss|ay|np|pc|pd|sk|as)$/i", $stringForOpen)) {
 
   //open read.php Bu
@@ -289,12 +289,12 @@ if (empty($stringForOpen)) {
 
   $stringForOpen = str_replace('bi-vb-', 'bi-', $stringForOpen);
     $stringForOpen = str_replace('bu-vb-', 'bu-', $stringForOpen);
-  echo "<script>window.location.href='$readerlang?q={$stringForOpen}';</script>";	
+  echo "<script>window.location.href='$readerlang?q={$stringForOpen}&s=$s';</script>";	
 	  exit(); 
 } else if (preg_match("/(bu|bi)-(vb|[a-z][a-z]*)/i", $stringForOpen)) {
 //echo "<script>alert('case 4');</script>";	
  $stringForOpen = $stringForOpen . "1";
-echo "<script>window.location.href='$readerlang?q={$stringForOpen}';</script>";	
+echo "<script>window.location.href='$readerlang?q={$stringForOpen}&s=$s';</script>";	
 	  exit(); 
 } else if (preg_match("/(pj|ss|ay|np|pc|pd|sk|as)([0-9]{1,3}|[0-9]-[0-9])/i", $stringForOpen)) {
  // echo "<script>alert('case 5');</script>";	
@@ -321,7 +321,7 @@ if (empty($stringForOpen)) {
 
   $stringForOpen = str_replace('bi-vb-', 'bi-', $stringForOpen);
     $stringForOpen = str_replace('bu-vb-', 'bu-', $stringForOpen);
-  echo "<script>window.location.href='$readerlang?q={$stringForOpen}';</script>";	
+  echo "<script>window.location.href='$readerlang?q={$stringForOpen}&s=$s';</script>";	
 	  exit(); 
 
 
@@ -500,7 +500,7 @@ if ((  $numberblock <= $latestrusmn ) && ( preg_match("/mn/i",$letterblock) ) ){
 $defaultlang = 'lang=pli-rus';
 }
 $stringForOpen = strtolower($stringForOpen);
-echo "<script>window.location.href='$readerlang?q={$stringForOpen}';</script>";
+echo "<script>window.location.href='$readerlang?q={$stringForOpen}&s=$s';</script>";
   exit();
 }
 // &$defaultlang

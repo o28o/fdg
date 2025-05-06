@@ -192,7 +192,7 @@ function showOnlySelectedLanguage(isPali) {
   container.querySelectorAll('.variant').forEach(el => el.remove());
   
   // 3. Удаляем все лишние кнопки и элементы управления
-  const controlsToKeep = isPali ? ['only-pali', 'open-pali'] : ['only-translation', 'open-translation'];
+  const controlsToKeep = isPali ? ['only-pali', 'open-pali'] : ['only-russian', 'open-translation'];
   document.querySelectorAll('.language-control').forEach(control => {
     if (!controlsToKeep.includes(control.classList[0])) {
       control.remove();
@@ -224,68 +224,7 @@ document.querySelector('.only-pali')?.addEventListener('click', () => {
   openCleanPage(cleanHtml, true);
 });
 
-document.querySelector('.only-translation')?.addEventListener('click', () => {
-  const cleanHtml = showOnlySelectedLanguage(false);
-  openCleanPage(cleanHtml, false);
-});
-
-// Функция для открытия очищенной страницы
-function openCleanPage(html, isPali) {
-  const title = generatePageTitle(isPali);
-  const win = window.open('', '_blank');
-  win.document.write(html);
-  win.document.title = title;
-  win.document.close();
-}function showOnlySelectedLanguage(isPali) {
-  // Определяем, какие элементы оставлять
-  const keepClass = isPali ? 'pli-lang' : 'rus-lang';
-  const removeClasses = ['eng-lang', 'variant', isPali ? 'rus-lang' : 'pli-lang'];
-  
-  // Находим контейнер с текстом
-  const container = document.querySelector('.sutta-container, .text-block, section, div.content') || document.body;
-  
-  // 1. Удаляем все ненужные элементы
-  removeClasses.forEach(cls => {
-    container.querySelectorAll(`.${cls}`).forEach(el => el.remove());
-  });
-  
-  // 2. Очищаем оставшиеся элементы от variant-контента
-  container.querySelectorAll('.variant').forEach(el => el.remove());
-  
-  // 3. Удаляем все лишние кнопки и элементы управления
-  const controlsToKeep = isPali ? ['only-pali', 'open-pali'] : ['only-translation', 'open-translation'];
-  document.querySelectorAll('.language-control').forEach(control => {
-    if (!controlsToKeep.includes(control.classList[0])) {
-      control.remove();
-    }
-  });
-  
-  // 4. Оптимизируем структуру для TTS
-  container.querySelectorAll('[class]').forEach(el => {
-    el.removeAttribute('class'); // Удаляем все классы
-  });
-  
-  // 5. Удаляем скрипты и лишние мета-теги
-  document.querySelectorAll('script, style, link, meta').forEach(el => {
-    if (!['viewport', 'charset'].some(meta => el.hasAttribute(meta))) {
-      el.remove();
-    }
-  });
-  
-  // Возвращаем очищенный HTML
-  return document.documentElement.outerHTML;
-}
-
-// Обработчики для кнопок
-document.querySelector('.only-pali')?.addEventListener('click', () => {
-  const cleanHtml = showOnlySelectedLanguage(true);
-  // Теперь можно либо:
-  // 1. Оставить как есть (текущая страница уже очищена)
-  // 2. Открыть в новой вкладке:
-  openCleanPage(cleanHtml, true);
-});
-
-document.querySelector('.only-translation')?.addEventListener('click', () => {
+document.querySelector('.only-russian')?.addEventListener('click', () => {
   const cleanHtml = showOnlySelectedLanguage(false);
   openCleanPage(cleanHtml, false);
 });

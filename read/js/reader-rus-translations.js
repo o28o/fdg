@@ -515,7 +515,7 @@ const isWarningClosed = localStorage.getItem('warningClosed');
 const warning = `
   <div style="max-width: 550px; margin: 0 auto; text-align: center;" class="warning-container">
     <p class='warning'>
-      <strong>Напоминание:</strong><a style='cursor: pointer;' class='text-decoration-none' target='' href='${dUrl}'>&nbsp;</a>Переводы, словари и комментарии сделаны не Благословенным.<a style='cursor: pointer;' class='text-decoration-none' target='' href='${thUrl}'>&nbsp;</a>Сверяйтесь с Пали в 4 основных никаях.<a style='cursor: pointer;' class='text-decoration-none' target='' href='${rvUrl}'>&nbsp;</a>
+      <strong>Заметка:</strong><a style='cursor: pointer;' class='text-decoration-none' target='' href='${dUrl}'>&nbsp;</a>Переводы, словари и комментарии сделаны не Благословенным.<a style='cursor: pointer;' class='text-decoration-none' target='' href='${thUrl}'>&nbsp;</a>Сверяйтесь с Пали в 4 основных никаях.<a style='cursor: pointer;' class='text-decoration-none' target='' href='${rvUrl}'>&nbsp;</a>
            ${canShowClose && !isWarningClosed ? `<span class="close-warning">×</span>` : ''} 
     </p>
   </div>

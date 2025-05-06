@@ -356,7 +356,7 @@ if (finder && finder.trim() !== "") {
   //  console.log(`engTransData[${segment}]: ${engTransData[segment]}`);
     if (engTransData[segment] !== transData[segment] && varData[segment] !== undefined) {
         html += `${openHtml}<span id="${anchor}">
-      <span class="pli-lang inputscript-ISOPali" lang="pi">${преобразоватьТекст().trim()}<a class="text-decoration-none" style="cursor: pointer;" onclick="copyToClipboard('${fullUrlWithAnchor}')">&nbsp;</a>
+      <span class="pli-lang inputscript-ISOPali" lang="pi">${преобразоватьТекст().trim()}<a class="text-decoration-none copyLink" style="cursor: pointer;" onclick="copyToClipboard('${fullUrlWithAnchor}')">&nbsp;</a>
 	  </span>
       <span class="greyedout rus-lang" lang="ru">${paliData[segment]}
 <br>
@@ -370,7 +370,7 @@ ${varData[segment].trim()}
 
     } else if (engTransData[segment] !== transData[segment]) {
         html += `${openHtml}<span id="${anchor}">
-      <span class="pli-lang inputscript-ISOPali" lang="pi">${преобразоватьТекст().trim()}<a class="text-decoration-none" style="cursor: pointer;" onclick="copyToClipboard('${fullUrlWithAnchor}')">&nbsp;</a>
+      <span class="pli-lang inputscript-ISOPali" lang="pi">${преобразоватьТекст().trim()}<a class="text-decoration-none copyLink" style="cursor: pointer;" onclick="copyToClipboard('${fullUrlWithAnchor}')">&nbsp;</a>
 	  </span>
       <span class="greyedout rus-lang" lang="ru">${paliData[segment]}
 		  </span>
@@ -381,7 +381,7 @@ ${varData[segment].trim()}
 
     } else if (varData[segment] !== undefined) {
         html += `${openHtml}<span id="${anchor}">
-      <span class="pli-lang inputscript-ISOPali" lang="pi">${преобразоватьТекст().trim()}<a class="text-decoration-none" style="cursor: pointer;"  onclick="copyToClipboard('${fullUrlWithAnchor}')">&nbsp;</a></span>
+      <span class="pli-lang inputscript-ISOPali" lang="pi">${преобразоватьТекст().trim()}<a class="text-decoration-none copyLink" style="cursor: pointer;"  onclick="copyToClipboard('${fullUrlWithAnchor}')">&nbsp;</a></span>
 
       <span class="greyedout eng-lang" lang="en">${paliData[segment]}</span><br>
       <span class="variant pli-lang inputscript-ISOPali" lang="pi">
@@ -390,7 +390,7 @@ ${varData[segment].trim()}
       </span>${closeHtml}\n\n`;
     }  else {
         html += `${openHtml}<span id="${anchor}">
-      <span class="pli-lang inputscript-ISOPali" lang="pi">${преобразоватьТекст().trim()}<a class="text-decoration-none" style="cursor: pointer;"  onclick="copyToClipboard('${fullUrlWithAnchor}')">&nbsp;</a></span>
+      <span class="pli-lang inputscript-ISOPali" lang="pi">${преобразоватьТекст().trim()}<a class="text-decoration-none copyLink" style="cursor: pointer;"  onclick="copyToClipboard('${fullUrlWithAnchor}')">&nbsp;</a></span>
       <span class="greyedout rus-lang" lang="ru">${paliData[segment]}</span>
       </span>${closeHtml}\n\n`;
     }
@@ -527,15 +527,15 @@ const isWarningClosed = localStorage.getItem('goodClosed');
 
 const warning = `
   <div style="max-width: 550px; margin: 0 auto; text-align: center;" class="warning-container">
-    <p class='warning'>
-    <p class='warning pli-lang' lang='pi' style='color:green;'>
+    <p class=''>
+    <p class='pli-lang' lang='pi' style='color:green;'>
       Bahussuto hoti sutadharo sutasannicayo...
       sātthaṁ sabyañjanaṁ...
       tathārūpāssa dhammā bahussutā honti
       dhātā vacasā paricitā manasānupekkhitā, diṭṭhiyā suppaṭividdhā.
       <a class='text-decoration-none' target='' href='${rvUrl}'>&nbsp;</a>
-           ${canShowClose && !isWarningClosed ? `<span class="close-warning">×</span>` : ''} 
-    </p>
+           ${canShowClose && !isWarningClosed ? `<span class="close-warning">×</span>` : ''}
+           </p>
   </div>
 `;
 

@@ -545,7 +545,9 @@ More search options available from the main page.</p>`;
 
 // Отправка запроса по адресу http://localhost:8080/ru/?q= с использованием значения slug
 var xhr = new XMLHttpRequest();
-xhr.open("GET", "/?q=" + encodeURIComponent(slug), true);
+var urlParams = new URLSearchParams(window.location.search);
+urlParams.set('q', slug);
+xhr.open("GET", '/?' + urlParams.toString(), true);
 xhr.send();
 
 xhr.onreadystatechange = function() {

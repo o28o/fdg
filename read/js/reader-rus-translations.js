@@ -676,9 +676,10 @@ console.log('slug', slug);
   
 // Отправка запроса по адресу http://localhost:8080/ru/?q= с использованием значения slug
 var xhr = new XMLHttpRequest();
-xhr.open("GET", "/ru/?q=" + encodeURIComponent(slug), true);
+var urlParams = new URLSearchParams(window.location.search);
+urlParams.set('q', slug);
+xhr.open("GET", '/ru/?' + urlParams.toString(), true);
 xhr.send();
-
 xhr.onreadystatechange = function() {
   if (xhr.readyState == 4) {
     if (xhr.status == 200) {

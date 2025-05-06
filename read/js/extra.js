@@ -62,6 +62,7 @@ function openInNewTab(content, isPali) {
           padding: 20px;
           white-space: pre-line;
         }
+        .variant { display: none; } /* Скрываем элементы с классом variant */
       </style>
     </head>
     <body>
@@ -76,11 +77,9 @@ function openInNewTab(content, isPali) {
   
   const newWindow = window.open(blobUrl, '_blank');
   
-  // Пытаемся установить более читаемый URL (не всегда работает из-за политик безопасности)
   try {
     if (newWindow) {
       newWindow.document.title = title;
-      // Альтернативный вариант с history.replaceState (не меняет origin)
       newWindow.history.replaceState({}, title, `/${title}.html`);
     }
   } catch (e) {
@@ -96,30 +95,25 @@ async function handleSuttaClick(e) {
     const container = e.target.closest('.sutta-container') || e.target.closest('.text-block') || 
                      e.target.closest('section') || e.target.closest('div');
                      
-    let selector, message, isOpenAction, excludeVariant = false;
+    let selector, message, isOpenAction;
     if (e.target.classList.contains('copy-pali') || e.target.classList.contains('open-pali')) {
-      selector = '.pli-lang';
+      selector = '.pli-lang:not(.variant)'; // Исключаем элементы с классом variant
       message = window.location.pathname.includes('/ru/') || window.location.pathname.includes('/r/') 
         ? 'Текст Пали скопирован' 
         : 'Pali text copied';
       isOpenAction = e.target.classList.contains('open-pali');
-      excludeVariant = true;
     } else {
-      selector = '.rus-lang';
+      selector = '.rus-lang:not(.variant)'; // Исключаем элементы с классом variant
       message = window.location.pathname.includes('/ru/') || window.location.pathname.includes('/r/') 
         ? 'Перевод скопирован' 
         : 'Translation copied';
       isOpenAction = e.target.classList.contains('open-translation');
     }
     
-    let elements = container ? container.querySelectorAll(selector) : document.querySelectorAll(selector);
+    const elements = container ? container.querySelectorAll(selector) : document.querySelectorAll(selector);
     if (elements.length === 0) {
       console.warn(`Не найдены элементы с селектором: ${selector}`);
       return;
-    }
-    
-    if (excludeVariant) {
-      elements = Array.from(elements).filter(el => !el.classList.contains('variant'));
     }
     
     const combinedText = Array.from(elements)

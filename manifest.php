@@ -49,8 +49,12 @@ header('Content-Type: application/json');
 echo json_encode([
     "name" => $name,
     "short_name" => $short_name,
-	"description" => "Sutta & Vinaya Search. Read. Multi-Tool.",
-
+    "description" => "Sutta & Vinaya Search. Read. Multi-Tool.",
+    "id" => "/",
+    "launch_handler" => [
+        "client_mode" => "focus-existing"
+    ],
+    "orientation" => "any",
     "icons" => [
         [
             "src" => "/assets/img/pwa-bold-monocolor-192.png",

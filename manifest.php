@@ -56,7 +56,7 @@ echo json_encode([
             "sizes" => "192x192"
         ],
         [
-            "src" => "/assets/img/pwa_icon-512.png",
+            "src" => "/assets/img/pwa-bold-monocolor-512.png",
             "type" => "image/png",
             "sizes" => "512x512"
         ]

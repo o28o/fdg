@@ -578,7 +578,7 @@ document.addEventListener("keydown", (event) => {
 
 
 document.addEventListener('keydown', (event) => {
-  if (event.altKey && event.key.toLowerCase() === 'l') {
+  if (event.altKey && event.code === "KeyL") {
     event.preventDefault(); // Предотвращаем стандартное поведение
 
     const scriptOptions = ['ISOPali', 'devanagari', 'thai']; // Доступные скрипты
@@ -599,7 +599,6 @@ document.addEventListener('keydown', (event) => {
     window.location.href = url.toString(); // Перезагружаем страницу
   }
 });
-
 
 
 document.addEventListener('keydown', (event) => {

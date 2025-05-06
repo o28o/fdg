@@ -21862,7 +21862,7 @@ include $basedir . "/assets/texts/bipm.php";
         <!-- Portfolio Modals-->
 <script>
   if ('serviceWorker' in navigator) {
-    navigator.serviceWorker.register('/assets/sw.js')
+    navigator.serviceWorker.register('/sw.js')
       .then(function(registration) {
         console.log('ServiceWorker registration successful with scope: ', registration.scope);
       })

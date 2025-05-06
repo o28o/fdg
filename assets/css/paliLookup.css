@@ -79,8 +79,8 @@
 }
 
 .close-btn svg {
-  width: 16px;  /* Переопределяет атрибут width в SVG */
-  height: 16px; /* Для надежности в Safari */
+  width: 14px;  /* Переопределяет атрибут width в SVG */
+  height: 14px; /* Для надежности в Safari */
 }
 
 .overlay {

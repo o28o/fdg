@@ -340,6 +340,9 @@ margin-left: 6px;
     vertical-align: middle;
     -webkit-tap-highlight-color: transparent;
     touch-action: manipulation;
+    user-select: none;
+    -webkit-user-select: none;
+    -webkit-touch-callout: none;
 }
 
 .copyLink::after {

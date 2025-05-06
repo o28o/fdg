@@ -128,9 +128,12 @@ $playerHtml = "<span class='voice-dropdown'>
             <source src='$voicefile' type='$mimeType'>
             Your browser does not support the audio element.
         </audio><br>
-            Pali <a href='javascript:void(0)' class='copy-pali'>Copy</a> <a href='javascript:void(0)' class='open-pali'>Open</a> |
-			Trn <a href='javascript:void(0)' class='copy-translation'>Copy</a> <a href='javascript:void(0)' class='open-translation'>Open</a> |
+             <a href='javascript:void(0)' class='copy-pali'>Copy Pali</a> |
+            <a href='javascript:void(0)' class='copy-translation'>Copy Trn</a> |
             <a href='https://www.sc-voice.net/?src=sc#/sutta/$fromjs'>Voice.SC</a> |
+			Beta Open <a href='javascript:void(0)' class='open-pali'>Pali</a> 
+			<a href='javascript:void(0)' class='open-translation'>Trn</a> |
+
             <a href='/assets/common/ttsHelp.html'>?</a> 
     </span>
 </span>";

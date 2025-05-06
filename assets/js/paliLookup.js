@@ -284,7 +284,9 @@ function createPopup() {
 
     const closeBtn = document.createElement('button');
     closeBtn.classList.add('close-btn');
-    closeBtn.innerHTML = '<img src="/assets/svg/xmark.svg" class=""></img>';
+    closeBtn.innerHTML = `
+    <img src="/assets/svg/xmark.svg" style="width:16px;height:16px;display:block;">
+`;
 
     // Создаем кнопку "Search with dhamma.gift"
     const openBtn = document.createElement('a');

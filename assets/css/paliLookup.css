@@ -66,19 +66,20 @@
 }
 
 .popup .close-btn {
-  width: 30px;
-  height: 30px;
-  background: rgba(206, 5, 32, 0.6);
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: rgba(206, 5, 32, 0.6); /* Красный с 80% непрозрачности */
+  color: rgba(225, 222, 222, 0.7); /* Светлый серый с 90% непрозрачности */
   border: none;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 0;
+  height: 30px;
+  width: 30px;
   cursor: pointer;
+  border-radius: 100%;
 }
 
 .close-btn svg {
+  color: white;
   width: 14px;  /* Переопределяет атрибут width в SVG */
   height: 14px; /* Для надежности в Safari */
 }

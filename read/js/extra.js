@@ -39,66 +39,37 @@ function showNotification(message) {
   }, 2000);
 }
 
-function openInNewTab(content, isPali) {
-  // Генерируем читаемый заголовок
-  const docTitle = generatePageTitle(isPali);
-  
-  // Создаем чистый HTML-документ
-  const html = `
-    <!DOCTYPE html>
-    <html lang="${isPali ? 'pi' : 'ru'}">
-    <head>
-      <meta charset="UTF-8">
-      <title>${docTitle}</title>
-      <meta name="viewport" content="width=device-width, initial-scale=1">
-      <style>
-        body {
-          font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-          line-height: 1.6;
-          max-width: 800px;
-          margin: 0 auto;
-          padding: 20px;
-          color: #333;
-        }
-        .text-content {
-          white-space: pre-line;
-          text-align: justify;
-        }
-      </style>
-    </head>
-    <body>
-      <div class="text-content">${content.replace(/\n/g, '<br>')}</div>
-      <script>
-        // Добавляем небольшой скрипт для совместимости
-        document.addEventListener('DOMContentLoaded', function() {
-          console.log('TTS page loaded');
-        });
-      </script>
-    </body>
-    </html>
-  `;
 
-  // Создаем data-URL (наиболее совместимый вариант)
-  try {
-    const dataUrl = `data:text/html;charset=UTF-8,${encodeURIComponent(html)}`;
-    const newWindow = window.open('', '_blank');
-    
-    if (newWindow) {
-      newWindow.document.write(html);
-      newWindow.document.close();
-      newWindow.focus();
-    } else {
-      // Fallback для блокировщиков всплывающих окон
-      const win = window.open();
-      win.document.write(html);
-      win.document.close();
-    }
-  } catch (e) {
-    console.error('Error opening TTS page:', e);
-    // Ultimate fallback - открываем как plain text
-    window.open(`data:text/plain,${encodeURIComponent(content)}`, '_blank');
+function openInNewTab(content, isPali) {
+  const docTitle = generatePageTitle(isPali);
+  const form = document.createElement('form');
+
+  form.method = 'POST';
+  form.action = '/assets/render.php';
+  form.target = '_blank';
+
+  const cleanContent = cleanTextForTTS(content); // Очистка перед отправкой
+
+  const inputs = {
+    title: docTitle,
+    content: cleanContent,
+    lang: isPali ? 'pi' : 'ru'
+  };
+
+  for (const [key, value] of Object.entries(inputs)) {
+    const input = document.createElement('input');
+    input.type = 'hidden';
+    input.name = key;
+    input.value = value;
+    form.appendChild(input);
   }
+
+  document.body.appendChild(form);
+  form.submit();
+  document.body.removeChild(form);
 }
+
+
 
 // Генератор заголовка страницы
 function generatePageTitle(isPali) {

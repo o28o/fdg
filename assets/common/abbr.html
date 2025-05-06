@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html data-bs-theme="light">
+<head>
+<title>Edition Abbreviations</title>
+<meta name="description" content="Edition Abbreviations">
+
+
+<meta property="og:type" content="article" />
+<meta property="og:title" content="Edition Abbreviations - Dhamma.gift" />
+
+<meta property="og:url" content="https://dhamma.gift">
+<meta property="og:image" content="/assets/img/social_sharing_results.jpg" />
+
+<meta property="og:description" content="Edition Abbreviations" />
+<meta name="twitter:title" content="Dhamma.gift">
+<meta name="twitter:description" content="Edition Abbreviations">
+
+<meta name="twitter:card" content="/assets/img/social_sharing_results.jpg">
+<meta property="twitter:domain" content="dhamma.gift">
+<meta property="twitter:url" content="">
+<meta name="twitter:title" content="Edition Abbreviations">
+<meta name="twitter:description" content="Edition Abbreviations">
+<meta name="twitter:image" content="/assets/img/social_sharing_results.jpg">
+
+
+<link rel="icon" type="image/png" href="/assets/img/favico-noglass.png" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta charset="UTF-8">
+
+<link rel="stylesheet" type="text/css" href="/assets/js/datatables/datatables.min.css"/>
+<link rel="stylesheet" type="text/css" href="/assets/css/bootstrap.5.3.1.min.css"/>
+<link rel="stylesheet" href="/assets/css/langswitch.css">
+<link rel="stylesheet" href="/assets/css/paliLookup.css">
+<link rel="stylesheet" href="/assets/css/extrastyles.css">
+
+<script type="text/javascript" src="/assets/js/bootstrap.bundle.5.3.1.min.js"></script>
+<script src="/assets/js/jquery-3.7.0.min.js"></script>
+<script type="text/javascript" src="/assets/js/datatables/datatables.js"></script>
+<script type="text/javascript" src="/assets/js/natural.js"></script>
+<script type="text/javascript" src="/assets/js/strip-html.js"></script>
+<!-- <script type="text/javascript" src="/assets/js/diacritics.js"></script> -->
+
+
+<link href="/assets/css/extrastyles.css" rel="stylesheet" />
+<link href="/assets/css/table.css" rel="stylesheet" />
+<!--<script src="https://cdn.jsdelivr.net/gh/virtualvinodh/aksharamukha/aksharamukha-web-plugin/aksharamukha-v3.js?class=verse"></script>-->
+</head>
+<body>
+<div class="container-fluid mt-2">    
+
+    <h3 class="pl-2 ml-2">Edition Abbreviations</h3>
+
+           <a href='/'>
+            <button class="btn btn-light mb-1" type="button">
+    <img class="table-home-icon" src="/assets/svg/home-icon.svg"></img>   
+      </button>  
+</a>
+    <button id="theme-button" class="btn btn-light mb-1 " type="button">
+      
+<img src="/assets/svg/circle-half-stroke.svg" onclick="switchIcon(this)" class="changesvg table-theme-icon gray-icon"></img>
+</button>		  
+<a class="btn btn-light mb-1" type="button" class="text-decoration-none" href="https://suttacentral.net/abbreviations?lang=en">Initial List</a>
+<!--
+
+<button class="btn btn-light mb-1  toggle-dict-btn" type="button" ><img class="" src="/assets/svg/comment.svg"></img></button>
+
+Переключатель режимов 
+<div id="mode-switcher">
+  <a id="toggle-mode" href="javascript:void(0);" class="toggle-icon">
+    <img style="height: 20px; width:20px;" src="/assets/svg/align-left.svg" class="common-size-icon4" />
+  </a>
+</div>
+    <script src="/assets/js/switchView.js"></script>
+-->
+
+        <div class="btn btn-light mb-1 form-check-inline mb-1" data-bs-html="true" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Buttons:<br><br><strong>Home</strong> - go to main page<br><strong>Switch Theme</strong> - dark, light, auto<br><strong>Collapse / Expand</strong> - all search result enries on the page<br><strong>Words</strong> - results aggregated by words.<br><strong>Pali / Eng</strong> - switch between languages: Pali, Pali-English, English<br><strong>Pali Lookup</strong> - toggle Word Lookup On/Off<br><strong>?</strong> - this help<br><br><br>________________<br><br><strong>Searchbar</strong> - additional filtering for search results<br><br><br>________________<br>Columns:<br><strong>Sutta</strong> - text index e.g. sn56.11, dn22, an10.46<br><br><strong>Title</strong> - text name<br><br><strong>Words</strong> - word matches within the text<br><br><strong>Count</strong> - count of matches within the text<br><br><strong>Metaphor Count</strong> - number of similes, metaphors in the text in general, unrelated to the searched word. Useful to identify metaphorical texts<br><br><strong>Links</strong> - links to external resources<br><br><strong>Type</strong> - 'dhamma' for four main Nikayas, 'khudakka' - for all books of khudakka nikaya, 'vinaya' - for all vinaya related texts<br><br><strong>Quote</strong> - quote with mached word<br><br><br>________________<br><strong>Custom Search Builer</strong> - advanced filtering if basic searchbar is not enough<br>">  <img class="table-home-icon" src="/assets/svg/question.svg"></img></div>     
+
+<hr>
+<div id='variants' class="variants" style='display: none;'> has <a href=/ru/w.php?s=bāhiy&d=an,sn,mn,dn&p=-oru#variants>variants</a></div>
+
+<table id="pali" class="display table table-striped table-hover responsive " cellspacing="0" width="100%">
+   <thead class="thead-light">
+        <tr>
+            <th>Abbreviation</th>
+            <th>Meaning</th>
+        </tr>
+    </thead>
+    <tbody id="sutta">
+<tr><td><strong>ACIP</strong></td><td>Asian Classics Input Project</td></tr>
+<tr><td><strong>Bf</strong></td><td>Bajaur</td></tr>
+<tr><td><strong>BJT-a</strong></td><td>Buddhajayantītripiṭakagranthamālā Atthakathā</td></tr>
+<tr><td><strong>BJT</strong></td><td>Buddhajayantītripiṭakagranthamālā 2501–2531 (1957–1989)</td></tr>
+<tr><td><strong>CBETA</strong></td><td>Chinese Buddhist Electronic Text Association</td></tr>
+<tr><td><strong>Cck</strong></td><td>Chulachomklao Pāḷi Tipiṭaka 2436 (1893)</td></tr>
+<tr><td><strong>Csp A</strong></td><td>Chaṭṭhasaṅgīti Piṭakaṃ Atthakathā</td></tr>
+<tr><td><strong>Csp 1st ed.</strong></td><td>Chaṭṭhasaṅgīti Piṭakaṃ, 1st edition 2496–2499 (1952–1955)</td></tr>
+<tr><td><strong>Csp 2nd ed.</strong></td><td>Chaṭṭhasaṅgīti Piṭakaṃ, 2nd edition 2500–2506 (1956–1962)</td></tr>
+<tr><td><strong>Csp 3rd ed.</strong></td><td>Chaṭṭhasaṅgīti Piṭakaṃ, 3rd edition (1997)</td></tr>
+<tr><td><strong>D</strong></td><td>Derge edition</td></tr>
+<tr><td><strong>DDB</strong></td><td>Digital Dictionary of Buddhism</td></tr>
+<tr><td><strong>DH</strong></td><td>Dun Huang</td></tr>
+<tr><td><strong>Dr</strong></td><td>Dayyaraṭṭhassa Saṅgītitepiṭakaṁ</td></tr>
+<tr><td><strong>Finot</strong></td><td>Finot</td></tr>
+<tr><td><strong>G</strong></td><td>Gilgit</td></tr>
+<tr><td><strong>GBM</strong></td><td>Gilgit Buddhist Manuscripts</td></tr>
+<tr><td><strong>GRETIL</strong></td><td>Göttingen Register of Electronic Texts in Indian Languages</td></tr>
+<tr><td><strong>Km</strong></td><td>Phratraipiṭakapāḷi 2501–2512 (1958–1969)</td></tr>
+<tr><td><strong>Lv</strong></td><td>Lāvaraṭṭhassa 2500 (1957)</td></tr>
+<tr><td><strong>Maku</strong></td><td>Mahāmakurājāvidyālai 2466 (1923)</td></tr>
+<tr><td><strong>Mc</strong></td><td>Mahācūḷātepiṭakaṁ</td></tr>
+<tr><td><strong>Mr</strong></td><td>Maramma Tipiṭaka 2541 (1997)</td></tr>
+<tr><td><strong>Ms</strong></td><td>Mahasaṅgīti Tipiṭaka</td></tr>
+<tr><td><strong>NDP</strong></td><td>Nālandā-Devanāgarī-Pāḷi-Series 2500–2505 (1957–1962)</td></tr>
+<tr><td><strong>Nya</strong></td><td>Ñāṇamoḷi section number</td></tr>
+<tr><td><strong>PTS A</strong></td><td>Pali Text Society Atthakathā</td></tr>
+<tr><td><strong>PTS cs</strong></td><td>Pali Text Society section number</td></tr>
+<tr><td><strong>PTS vp en</strong></td><td>Pali Text Society volume and page of the English translation</td></tr>
+<tr><td><strong>PTS vp pli</strong></td><td>Pali Text Society volume and page of the Pali text</td></tr>
+<tr><td><strong>PTS vp pli 1st ed.</strong></td><td>Pali Text Society volume and page, 1st edition of the Pali text</td></tr>
+<tr><td><strong>PTS vp pli 2nd ed.</strong></td><td>Pali Text Society volume and page, 2nd edition of the Pali text</td></tr>
+<tr><td><strong>Q</strong></td><td>Qianlong (Peking edition of Tibetan canon)</td></tr>
+<tr><td><strong>Qizil</strong></td><td>Qizil</td></tr>
+<tr><td><strong>SC</strong></td><td>SuttaCentral</td></tr>
+<tr><td><strong>SCT</strong></td><td>SuttaCentral Taishō</td></tr>
+<tr><td><strong>Si</strong></td><td>Sinhala Tipiṭaka (prior to 1957)</td></tr>
+<tr><td><strong>Syam A</strong></td><td>Syāmaraṭṭhassa Tepiṭakaṃ Atthakathā</td></tr>
+<tr><td><strong>Syam all</strong></td><td>Chulachomklao Pāḷi Tipiṭaka 2436 (1893), Syāmaraṭṭhassa Tepiṭakaṃ 2469–2471 (1926–1928) & 2538 (1995)</td></tr>
+<tr><td><strong>Syam 1st ed.</strong></td><td>Syāmaraṭṭhassa Tepiṭakaṃ, 1st edition 2469–2471 (1926–1928)</td></tr>
+<tr><td><strong>Syam 2nd ed.</strong></td><td>Syāmaraṭṭhassa Tepiṭakaṃ, 2nd edition 2538 (1995)</td></tr>
+<tr><td><strong>Tf</strong></td><td>Turfan</td></tr>
+<tr><td><strong>PTS verse number</strong></td><td>Pali Text Society verse number</td></tr>
+<tr><td><strong>SC verse number</strong></td><td>SuttaCentral verse number</td></tr>
+<tr><td><strong>VRI</strong></td><td>Vipassanā Research Institute 2537–2542</td></tr>
+<tr><td><strong>WP</strong></td><td>Wisdom Publications</td></tr>
+
+<!--
+<tr><td><strong>Dg</strong></td><td>Dharmaguptaka</td></tr>
+<tr><td><strong>Hv</strong></td><td>Haimavata</td></tr>
+<tr><td><strong>Ka</strong></td><td>Kāśyapīya</td></tr>
+<tr><td><strong>Lo</strong></td><td>Lokuttaravāda</td></tr>
+<tr><td><strong>Mg</strong></td><td>Mahāsaṅghika</td></tr>
+<tr><td><strong>Mi</strong></td><td>Mahīśāsaka</td></tr>
+<tr><td><strong>Mu</strong></td><td>Mūlasarvāstivāda</td></tr>
+<tr><td><strong>Sarv</strong></td><td>Sarvāstivāda</td></tr>
+<tr><td><strong>Tv</strong></td><td>Theravāda</td></tr> 
+-->
+      </tbody>
+    </table>
+        </div>
+
+
+        <script src="/assets/js/paliLookup.js"></script>
+    <script>
+      
+ 
+      
+// Инициализируем таблицу
+var table = new DataTable('#pali', {
+  pageLength: 50 // Устанавливает количество записей на странице по умолчанию
+});
+
+// Получаем параметр 's' из URL
+var filterValue = new URLSearchParams(window.location.search).get('s');
+
+// Если параметр существует — применяем фильтр и убираем его из URL
+if (filterValue) {
+  table.search(filterValue).draw();
+
+  // Удаляем параметр 's' из URL без перезагрузки страницы
+  var currentUrl = new URL(window.location.href);
+  currentUrl.searchParams.delete('s');
+  history.replaceState({}, '', currentUrl);
+}
+</script>
+  
+
+
+  
+        <script src="/assets/js/openFdg.js"></script>
+<script src="/assets/js/themeswitch.js"></script>
+	  <script src="/assets/js/smoothScroll.js"defer></script>
+    <script defer type="module" src="/assets/js/langswitch.js"></script>     <script src="/assets/js/linksdpr.js"></script>
+        <script src="/assets/js/openDpr.js"></script>
+                <script src="/assets/js/linksru.js"></script>
+        <script src="/assets/js/openRu.js"></script>
+        <script src="/assets/js/linksbw.js"></script>
+                <script src="/assets/js/openBw.js"></script>
+</body>
+      <script defer>
+           //to enable bootstrap tooltip    
+$(function () {
+        $('[data-bs-toggle="tooltip"]').tooltip();
+    });
+</script>    
+
+</html>
+
+<!--
+  cat list | awk -F'\t' '{print "<tr><td>"$1"</td><td>"$2"</td></tr>"}'  
+-->
+
+

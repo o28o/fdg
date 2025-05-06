@@ -89,65 +89,54 @@ function openInNewTab(content, isPali) {
 }
 
 async function handleSuttaClick(e) {
-  // Проверяем, является ли элемент одной из наших ссылок
-  const target = e.target.closest('a');
-  if (!target || !(target.classList.contains('copy-pali') || 
-                 target.classList.contains('copy-translation'))) {
-    return;
-  }
-
-  e.preventDefault();
-  
-  // Определяем, был ли клик с намерением открыть в новой вкладке
-  const isOpenInNewTab = e.button !== 0 || // Не левая кнопка мыши
-                        e.ctrlKey ||      // Ctrl+click
-                        e.metaKey ||      // Cmd+click (Mac)
-                        e.shiftKey ||     // Shift+click (открывает в новом окне)
-                        (target.hasAttribute('target') && 
-                         target.getAttribute('target') === '_blank');
-
-  const container = target.closest('.sutta-container') || target.closest('.text-block') || 
-                   target.closest('section') || target.closest('div');
-                   
-  let selector, message, excludeVariant = false;
-  const isPali = target.classList.contains('copy-pali');
-  
-  if (isPali) {
-    selector = '.pli-lang';
-    message = window.location.pathname.includes('/ru/') || window.location.pathname.includes('/r/') 
-      ? isOpenInNewTab ? 'Пали открыто в новой вкладке' : 'Текст Пали скопирован' 
-      : isOpenInNewTab ? 'Pali opened in new tab' : 'Pali text copied';
-    excludeVariant = true;
-  } else {
-    selector = '.rus-lang';
-    message = window.location.pathname.includes('/ru/') || window.location.pathname.includes('/r/') 
-      ? isOpenInNewTab ? 'Перевод открыт в новой вкладке' : 'Перевод скопирован' 
-      : isOpenInNewTab ? 'Translation opened in new tab' : 'Translation copied';
-  }
-  
-  let elements = container ? container.querySelectorAll(selector) : document.querySelectorAll(selector);
-  if (elements.length === 0) {
-    console.warn(`Не найдены элементы с селектором: ${selector}`);
-    return;
-  }
-  
-  if (excludeVariant) {
-    elements = Array.from(elements).filter(el => !el.classList.contains('variant'));
-  }
-  
-  const combinedText = Array.from(elements)
-    .map(el => el.textContent.trim())
-    .join('\n');
-  
-  if (isOpenInNewTab) {
-    openInNewTab(combinedText, isPali);
-  } else {
-    const success = await copyToClipboard(combinedText);
-    showNotification(success ? message : (window.location.pathname.includes('/ru/') || window.location.pathname.includes('/r/') 
-      ? 'Не удалось скопировать текст' 
-      : 'Failed to copy text'));
+  if (e.target.classList.contains('copy-pali') || e.target.classList.contains('copy-translation') ||
+      e.target.classList.contains('open-pali') || e.target.classList.contains('open-translation')) {
+    e.preventDefault();
+    
+    const container = e.target.closest('.sutta-container') || e.target.closest('.text-block') || 
+                     e.target.closest('section') || e.target.closest('div');
+                     
+    let selector, message, isOpenAction, excludeVariant = false;
+    if (e.target.classList.contains('copy-pali') || e.target.classList.contains('open-pali')) {
+      selector = '.pli-lang';
+      message = window.location.pathname.includes('/ru/') || window.location.pathname.includes('/r/') 
+        ? 'Текст Пали скопирован' 
+        : 'Pali text copied';
+      isOpenAction = e.target.classList.contains('open-pali');
+      excludeVariant = true;
+    } else {
+      selector = '.rus-lang';
+      message = window.location.pathname.includes('/ru/') || window.location.pathname.includes('/r/') 
+        ? 'Перевод скопирован' 
+        : 'Translation copied';
+      isOpenAction = e.target.classList.contains('open-translation');
+    }
+    
+    let elements = container ? container.querySelectorAll(selector) : document.querySelectorAll(selector);
+    if (elements.length === 0) {
+      console.warn(`Не найдены элементы с селектором: ${selector}`);
+      return;
+    }
+    
+    if (excludeVariant) {
+      elements = Array.from(elements).filter(el => !el.classList.contains('variant'));
+    }
+    
+    const combinedText = Array.from(elements)
+      .map(el => el.textContent.trim())
+      .join('\n');
+    
+    if (isOpenAction) {
+      openInNewTab(combinedText, e.target.classList.contains('open-pali'));
+    } else {
+      const success = await copyToClipboard(combinedText);
+      showNotification(success ? message : (window.location.pathname.includes('/ru/') || window.location.pathname.includes('/r/') 
+        ? 'Не удалось скопировать текст' 
+        : 'Failed to copy text'));
+    }
   }
 }
+
 function initSuttaCopy() {
   document.addEventListener('click', handleSuttaClick);
 }

@@ -266,8 +266,8 @@ echo '<!--
          <a class="text-reset" target="" href="/new/">new</a> 
                   <a class="text-reset" target="" href="' . $readerPage . '">index</a>  
 <a class="text-reset" target="" href="/assets/texts/sutta.php">sutta</a>                       
-      <a class="text-reset" target="" href="/pm.php">bupm</a>        
-      <a class="text-reset" target="" href="/bipm.php">bipm</a> 
+      <a class="text-reset" target="" href="/pm.php?expand=true">bupm</a>        
+      <a class="text-reset" target="" href="/bipm.php?expand=true">bipm</a> 
 
          </div>
          </li>

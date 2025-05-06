@@ -131,7 +131,7 @@ $playerHtml = "<span class='voice-dropdown'>
              <a href='javascript:void(0)' class='copy-pali'>Copy Pali</a> |
             <a href='javascript:void(0)' class='copy-translation'>Copy Trn</a> |
             <a href='https://www.sc-voice.net/?src=sc#/sutta/$fromjs'>Voice.SC</a> |
-			Beta Open <a href='javascript:void(0)' class='open-pali'>Pali</a> 
+			Beta <a href='javascript:void(0)' class='open-pali'>Pli</a> 
 			<a href='javascript:void(0)' class='open-translation'>Trn</a> |
 
             <a href='/assets/common/ttsHelp.html'>?</a> 

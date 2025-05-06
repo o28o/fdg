@@ -464,22 +464,23 @@ nextName = nextName.replace(/[0-9.]/g, '');
       } else {
      var nextPrint = nextSlugPrint +' ' +nextName;
      }
-	 
-	 let finder = params.get("s"); 
-	 next.innerHTML = nextSlug
-  ? `<a href="?q=${nextSlug}${finder ? `&s=${finder}` : ""}">${nextPrint}<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" id="body_1" width="15" height="11">
+        let finder = params.get("s");
+         next.innerHTML = nextSlug
+        ? `<a href="?q=${nextSlug}&s=${finder}">${nextPrint}<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" id="body_1" width="15" height="11">
+
       <g transform="matrix(0.021484375 0 0 0.021484375 2 -0)">
         <g>
-          <path d="M202.1 450C 196.03278 449.9987 190.56381 446.34256 188.24348 440.73654C 185.92316 435.13055 187.20845 428.67883 191.5 424.39L191.5 424.39L365.79 250.1L191.5 75.81C 185.81535 69.92433 185.89662 60.568687 191.68266 54.782654C 197.46869 48.996624 206.82434 48.91536 212.71 54.6L212.71 54.6L397.61 239.5C 403.4657 245.3575 403.4657 254.8525 397.61 260.71L397.61 260.71L212.70999 445.61C 209.89557 448.4226 206.07895 450.0018 202.1 450z" stroke="none" fill="#8f8f8f" fill-rule="nonzero" />
+              <path d="M202.1 450C 196.03278 449.9987 190.56381 446.34256 188.24348 440.73654C 185.92316 435.13055 187.20845 428.67883 191.5 424.39L191.5 424.39L365.79 250.1L191.5 75.81C 185.81535 69.92433 185.89662 60.568687 191.68266 54.782654C 197.46869 48.996624 206.82434 48.91536 212.71 54.6L212.71 54.6L397.61 239.5C 403.4657 245.3575 403.4657 254.8525 397.61 260.71L397.61 260.71L212.70999 445.61C 209.89557 448.4226 206.07895 450.0018 202.1 450z" stroke="none" fill="#8f8f8f" fill-rule="nonzero" />
         </g>
       </g>
-    </svg></a>`
-  : "";
+      </svg></a>`
+        : "";
         next2.innerHTML = next.innerHTML;
     }
- 
-
- url: "/read/php/api.php?fromjs=" +texttype +"/" +slugReady +"&type=B"
+    );
+  
+  $.ajax({
+      url: "/read/php/api.php?fromjs=" +texttype +"/" +slugReady +"&type=B"
     }).done(function(data) {
       const prevArray = data.split(" ");
       let prevSlug = prevArray[0];
@@ -492,9 +493,9 @@ prevName = prevName.replace(/[0-9.]/g, '');
       } else {
         var prevPrint = prevSlugPrint +' ' +prevName;
      }
+      let finder = params.get("s");
 
-
-previous.innerHTML = prevSlug
+    previous.innerHTML = prevSlug
   ? `<a href="?q=${prevSlug}${finder ? `&s=${finder}` : ""}"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" id="body_1" width="15" height="11">
       <g transform="matrix(0.021484375 0 0 0.021484375 2 -0)">
         <g>
@@ -502,7 +503,7 @@ previous.innerHTML = prevSlug
         </g>
       </g>
       </svg>${prevPrint}</a>`
-  : ""; 
+  : "";
         previous2.innerHTML = previous.innerHTML;
       }
       );

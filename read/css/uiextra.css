@@ -143,9 +143,8 @@ textarea {
 }
 
 .dark p.warning {
-  color: #67260b;
+  color: rgb(170,69,16);
 }
-
 
 .close-warning {
   cursor: pointer; 

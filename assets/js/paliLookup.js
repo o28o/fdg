@@ -101,11 +101,11 @@ function lazyLoadStandaloneScripts(lang = 'en') {
             Object.assign(loadingEl.style, {
                 position: 'fixed',
                 bottom: '20px',
-                right: '20px',
+                left: '20px',
                 padding: '10px',
                 background: 'rgba(0,0,0,0.7)',
-                color: 'white',
-                borderRadius: '5px',
+                color: 'grey',
+                borderRadius: '12px',
                 zIndex: '10000',
                 fontSize: '14px',
                 boxShadow: '0 2px 5px rgba(0,0,0,0.3)'

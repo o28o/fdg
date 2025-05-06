@@ -356,7 +356,7 @@ let rvUrl = origUrl.replace("/r/", "/read/");
 rvUrl = rvUrl.replace("/ml/", "");
 rvUrl = rvUrl.replace("/read/", "/rev/");
 
-const warning = "<p class='warning'><strong>Внимание!</strong><br>Переводы выполнены не Благословенным.<br>Сверяйтесь с Пали в 4 основных никаях.<a style='cursor: pointer;' class='text-decoration-none' target='' href='" + rvUrl + "'>&nbsp;</a></p>";
+const warning = "<p class='warning'><strong>Напоминание:</strong><br>Переводы выполнены не Благословенным.<br>Сверяйтесь с Пали в 4 основных никаях.<a style='cursor: pointer;' class='text-decoration-none' target='' href='" + rvUrl + "'>&nbsp;</a></p>";
 
 suttaArea.innerHTML =  scLink + warning + translatorByline + html + translatorByline + warning + scLink;
 

@@ -51,6 +51,7 @@ echo json_encode([
     "short_name" => $short_name,
     "description" => "Sutta & Vinaya Search. Read. Multi-Tool.",
     "id" => "/",
+	"lang" => "en",
     "launch_handler" => [
         "client_mode" => "focus-existing"
     ],
@@ -67,6 +68,44 @@ echo json_encode([
             "sizes" => "512x512"
         ]
     ],
+	"screenshots" => [
+    [
+        "src" => "/assets/img/android/1.jpg",
+        "type" => "image/jpeg",
+        "sizes" => "1080x1920",
+        "label" => "Screen 1"
+    ],
+    [
+        "src" => "/assets/img/android/2.jpg",
+        "type" => "image/jpeg",
+        "sizes" => "1080x1920",
+        "label" => "Screen 2"
+    ],
+    [
+        "src" => "/assets/img/android/3.jpg",
+        "type" => "image/jpeg",
+        "sizes" => "1080x1920",
+        "label" => "Screen 3"
+    ],
+    [
+        "src" => "/assets/img/android/4.jpg",
+        "type" => "image/jpeg",
+        "sizes" => "1080x1920",
+        "label" => "Screen 4"
+    ],
+    [
+        "src" => "/assets/img/android/5.jpg",
+        "type" => "image/jpeg",
+        "sizes" => "1080x1920",
+        "label" => "Screen 5"
+    ],
+    [
+        "src" => "/assets/img/android/6.jpg",
+        "type" => "image/jpeg",
+        "sizes" => "1080x1920",
+        "label" => "Screen 6"
+    ]
+],
     "start_url" => $start_url,
     "scope" => $mainpagenoslash . "/",
     "display" => "minimal-ui",

@@ -82,7 +82,7 @@ function openInNewTab(content, isPali) {
   `;
   
 const dataUrl = 'data:text/html;charset=utf-8,' + encodeURIComponent(html);
-window.open(dataUrl, '_blank');
+window.location.href = dataUrl;
 
 }
 

@@ -39,14 +39,23 @@ function showNotification(message) {
   }, 2000);
 }
 
+function cleanTextForTTS(text) {
+  // Удаляем текст в квадратных скобках (варианты и примечания)
+  return text.replace(/\[.*?\]/g, '')
+             .replace(/\s+/g, ' ') // Удаляем лишние пробелы
+             .trim();
+}
+
 function openInNewTab(content, isPali) {
-  // Создаем человеко-читаемое название на основе текущего URL
+  // Создаем человеко-читаемое название
   const url = new URL(window.location.href);
-  let title = url.pathname.split('/').filter(Boolean).join('_');
-  title = title.replace(/\.html$/, '');
-  title = (title || 'text') + (isPali ? '_pali' : '_translation') + '_tts';
+  let title = url.pathname.split('/').filter(Boolean).join('_')
+    .replace(/\.html$/, '') + (isPali ? '_pali' : '_translation') + '_tts';
   
-  // Создаем HTML-страницу с текстом
+  // Очищаем контент для TTS
+  const cleanContent = cleanTextForTTS(content);
+  
+  // Создаем чистую HTML-страницу
   const html = `
     <!DOCTYPE html>
     <html>
@@ -62,29 +71,17 @@ function openInNewTab(content, isPali) {
           padding: 20px;
           white-space: pre-line;
         }
-        .variant { display: none; } /* Скрываем элементы с классом variant */
       </style>
     </head>
     <body>
-      ${content.replace(/\n/g, '<br>')}
+      ${cleanContent.replace(/\n/g, '<br>')}
     </body>
     </html>
   `;
   
-  // Открываем новую вкладку с содержимым
   const blob = new Blob([html], { type: 'text/html' });
   const blobUrl = URL.createObjectURL(blob);
-  
-  const newWindow = window.open(blobUrl, '_blank');
-  
-  try {
-    if (newWindow) {
-      newWindow.document.title = title;
-      newWindow.history.replaceState({}, title, `/${title}.html`);
-    }
-  } catch (e) {
-    console.log('Cannot modify new window URL due to security restrictions');
-  }
+  window.open(blobUrl, '_blank');
 }
 
 async function handleSuttaClick(e) {
@@ -97,28 +94,39 @@ async function handleSuttaClick(e) {
                      
     let selector, message, isOpenAction;
     if (e.target.classList.contains('copy-pali') || e.target.classList.contains('open-pali')) {
-      selector = '.pli-lang:not(.variant)'; // Исключаем элементы с классом variant
+      selector = '.pli-lang';
       message = window.location.pathname.includes('/ru/') || window.location.pathname.includes('/r/') 
         ? 'Текст Пали скопирован' 
         : 'Pali text copied';
       isOpenAction = e.target.classList.contains('open-pali');
     } else {
-      selector = '.rus-lang:not(.variant)'; // Исключаем элементы с классом variant
+      selector = '.rus-lang';
       message = window.location.pathname.includes('/ru/') || window.location.pathname.includes('/r/') 
         ? 'Перевод скопирован' 
         : 'Translation copied';
       isOpenAction = e.target.classList.contains('open-translation');
     }
     
-    const elements = container ? container.querySelectorAll(selector) : document.querySelectorAll(selector);
+    // Получаем элементы и клонируем их, чтобы не изменять оригинальный DOM
+    const elements = container ? Array.from(container.querySelectorAll(selector)) : 
+                                Array.from(document.querySelectorAll(selector));
     if (elements.length === 0) {
       console.warn(`Не найдены элементы с селектором: ${selector}`);
       return;
     }
     
-    const combinedText = Array.from(elements)
-      .map(el => el.textContent.trim())
-      .join('\n');
+    // Удаляем variant-элементы из клонированного DOM
+    const cleanedElements = elements.map(el => {
+      const clone = el.cloneNode(true);
+      const variants = clone.querySelectorAll('.variant');
+      variants.forEach(v => v.remove());
+      return clone;
+    }).filter(el => !el.classList.contains('variant'));
+    
+    // Получаем чистый текст
+    const combinedText = cleanedElements
+      .map(el => cleanTextForTTS(el.textContent))
+      .join('\n\n'); // Двойной перенос между абзацами
     
     if (isOpenAction) {
       openInNewTab(combinedText, e.target.classList.contains('open-pali'));

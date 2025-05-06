@@ -663,6 +663,12 @@ urlParams.set('q', slug);
 xhr.open("GET", '/ru/?' + urlParams.toString(), true);
 xhr.send();
 
+//var xhr = new XMLHttpRequest();
+//xhr.open("GET", "/?q=" + encodeURIComponent(slug), true);
+//xhr.send();
+
+
+
 xhr.onreadystatechange = function() {
   if (xhr.readyState == 4) {
     if (xhr.status == 200) {

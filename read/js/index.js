@@ -301,7 +301,7 @@ if (translator === "o") {
      </p>
      </div>`;
      
-      const scButton = `<a href="https://suttacentral.net/${slug}/en/${translator}">Read on SC</a>`;
+      const scButton = `<a title="SuttaCentral.net"  href="https://suttacentral.net/${slug}/en/${translator}">Read on SC</a>`;
       
       
       $.ajax({
@@ -315,7 +315,7 @@ const enUrl = window.location.href;
 
 const ruUrl = enUrl.replace("/read/", "/r/");
 
-let scLink = `<p class="sc-link"><a href="${ruUrl}">Ru</a>&nbsp;`;
+let scLink = `<p class="sc-link"><a title="Russian" href="${ruUrl}">Ru</a>&nbsp;`;
  
 //dpr
 if (texttype !== "vinaya") {
@@ -374,12 +374,12 @@ function findTextUrl(nikaya, subdivision, textnum) {
 let textUrl = getTextUrl(slug);
 // console.log("Ссылка на", slug + ":", textUrl);
 if (textUrl) {
-scLink += `<a target="" href="${textUrl}">DPR</a>&nbsp;`;
+scLink += `<a target="" title="Digital Pali Reader" href="${textUrl}">DPR</a>&nbsp;`;
 }
 }
 //dpr end
 
-scLink += `<a target="" href="https://suttacentral.net/${slug}/en/${translator}">SC</a>&nbsp;`;
+scLink += `<a target="" title="SuttaCentral.net" href="https://suttacentral.net/${slug}/en/${translator}">SC</a>&nbsp;`;
       
 //<a href="/legacy.suttacentral.net/read/pi/${slug}.html">legacy.SC</a>&nbsp; <a target="" href="https://voice.suttacentral.net/scv/index.html?#/sutta?search=${slug}">Voice.SC</a> 
       if (linksArray[0].length >= 4) {

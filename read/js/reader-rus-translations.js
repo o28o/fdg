@@ -113,7 +113,7 @@ var htmlpath = `${Sccopy}/sc-data/sc_bilara_data/html/pli/ms/${texttype}/${slugR
 const ruUrl  = window.location.href;
 
 const mlUrl = ruUrl.replace("/r/", "/ml/");
- let scLink = `<p class="sc-link"><a target="" href="${mlUrl}">R+E</a>&nbsp;`;
+ let scLink = `<p class="sc-link"><a target="" title='Pali + Русский + Английский' href="${mlUrl}">R+E</a>&nbsp;`;
  //<a class='ruLink' href='' onclick=openRu('${slug}') data-slug='${slug}'>tst</a>&nbsp;
 const currentURL = window.location.href;
 const anchorURL = new URL(currentURL).hash; // Убираем символ "#"
@@ -404,7 +404,7 @@ else if (translator === "o+in+progress" ) {
 
 const enUrl = ruUrl.replace("/r/", "/read/");
 
-scLink += `<a href="${enUrl}">En</a>&nbsp;`;
+scLink += `<a title='Английский' href="${enUrl}">En</a>&nbsp;`;
  
   
 //dpr
@@ -464,15 +464,15 @@ function findTextUrl(nikaya, subdivision, textnum) {
 let textUrl = getTextUrl(slug);
 //console.log("Ссылка на", slug + ":", textUrl);
 if (textUrl) {
-scLink += `<a target="" href="${textUrl}">DPR</a>&nbsp;`;
+scLink += `<a target="" title='Digital Pali Reader' href="${textUrl}">DPR</a>&nbsp;`;
 }
 
 }
 //dpr end
 if ((translator === 'sujato') || (translator === 'brahmali')) {
-  scLink += `<a target="" href="https://suttacentral.net/${slug}/en/${translator}">SC</a>&nbsp;`;  
+  scLink += `<a target="" title='SuttaCentral.net' href="https://suttacentral.net/${slug}/en/${translator}">SC</a>&nbsp;`;  
 } else {
-  scLink += `<a target="" href="https://suttacentral.net/${slug}">SC</a>&nbsp;`;
+  scLink += `<a target="" title='SuttaCentral.net' href="https://suttacentral.net/${slug}">SC</a>&nbsp;`;
 }
 
       $.ajax({

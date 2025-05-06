@@ -78,7 +78,7 @@ function extraLinks($fromjs) {
       //        <button class='close-player' aria-label='Close player'>×</button>
     
 $playerHtml = "<span class='voice-dropdown'>
-    <a href='javascript:void(0)' class='voice-link'>Voice</a>
+    <a href='javascript:void(0)' class='voice-link'  title='Text-to-Speech Options' class='voice-link'>Voice</a>
     <span class='voice-player'>
         <audio controls class='lazy-audio' preload='none'>
             <source src='$voicefile' type='$mimeType'>
@@ -86,8 +86,8 @@ $playerHtml = "<span class='voice-dropdown'>
         </audio><br>
             Pali <a href='javascript:void(0)' title='Copy Pali' class='copy-pali'>Copy</a> <a href='javascript:void(0)' title='Open Pali' class='open-pali'>Open</a> |
             Trn <a href='javascript:void(0)' title='Copy Translation' class='copy-translation'>Copy</a> <a href='javascript:void(0)' title='Open Translation'  class='open-translation'>Open</a> |
-            <a href='https://www.sc-voice.net/?src=sc#/sutta/$fromjs'>Voice.SC</a> |
-            <a href='/assets/common/ttsHelp.html'>?</a> 
+            <a title='sc-voice.net' href='https://www.sc-voice.net/?src=sc#/sutta/$fromjs'>Voice.SC</a> |
+            <a title='TTS help' href='/assets/common/ttsHelp.html'>?</a> 
     </span>
 </span>";
       }
@@ -118,7 +118,7 @@ $playerHtml = "<span class='voice-dropdown'>
         }
         
 $playerHtml = "<span class='voice-dropdown'>
-    <a href='javascript:void(0)' class='voice-link'>Voice</a>
+    <a href='javascript:void(0)' class='voice-link' title='Text-to-Speech Options' >Voice</a>
     <span class='voice-player'>
         <audio controls class='lazy-audio' preload='none'>
             <source src='$voicefile' type='$mimeType'>
@@ -126,8 +126,8 @@ $playerHtml = "<span class='voice-dropdown'>
         </audio><br>
             Pali <a href='javascript:void(0)' title='Copy Pali' class='copy-pali'>Copy</a> <a href='javascript:void(0)' title='Open Pali' class='open-pali'>Open</a> |
             Trn <a href='javascript:void(0)' title='Copy Translation' class='copy-translation'>Copy</a> <a href='javascript:void(0)' title='Open Translation'  class='open-translation'>Open</a> |
-            <a href='https://www.sc-voice.net/?src=sc#/sutta/$fromjs'>Voice.SC</a> |
-            <a href='/assets/common/ttsHelp.html'>?</a> 
+            <a title='sc-voice.net' href='https://www.sc-voice.net/?src=sc#/sutta/$fromjs'>Voice.SC</a> |
+            <a title='TTS help' href='/assets/common/ttsHelp.html'>?</a> 
     </span>
 </span>";
     }
@@ -136,7 +136,7 @@ $playerHtml = "<span class='voice-dropdown'>
 
   // Если аудио нет, используем простую ссылку
   if (!$hasAudio) {
-      $playerHtml = "<a target='' href='https://www.sc-voice.net/?src=sc#/sutta/$fromjs'>Voice.SC</a>";
+      $playerHtml = "<a target='' title='sc-voice.net' href='https://www.sc-voice.net/?src=sc#/sutta/$fromjs'>Voice.SC</a>";
   }
 
   if ($mode == "offline") {  
@@ -145,9 +145,9 @@ $playerHtml = "<span class='voice-dropdown'>
       ruslinkdn=`cd $locationrudn ; ls -R . | grep -m1 \"{$fromjs}.html\" ` ;
       
       echo -n \"{$playerHtml}{$final}\"
-        [ ! -z $bwlink ] && echo -n \"&nbsp;<a target='' href=$linktbw/$bwlink>TBW</a>\"
-        [ ! -z \$ruslink ] && echo -n \"&nbsp;<a target='' href=$linkforthru/\$ruslink>Th.ru</a>\"
-        [ ! -z \$ruslinkdn ] && echo -n \"&nbsp;<a target='' href=/tipitaka.theravada.su/dn/\$ruslinkdn>Th.su</a>\"
+        [ ! -z $bwlink ] && echo -n \"&nbsp;<a target='' title='TheBuddhasWords.net' href=$linktbw/$bwlink>TBW</a>\"
+        [ ! -z \$ruslink ] && echo -n \"&nbsp;<a target='' title='Theravada.ru' href=$linkforthru/\$ruslink>Th.ru</a>\"
+        [ ! -z \$ruslinkdn ] && echo -n \"&nbsp;<a title='Theravada.su' target='' href=/tipitaka.theravada.su/dn/\$ruslinkdn>Th.su</a>\"
       ");
   } else {
       // online 
@@ -191,11 +191,11 @@ $playerHtml = "<span class='voice-dropdown'>
 
           echo -n \"{$playerHtml}{$final}\";
           
-          [[ $bwlink != \"\" ]] && echo -n \"&nbsp;<a target='' href='$linktbw/$bwlink'>TBW</a>\"; 
+          [[ $bwlink != \"\" ]] && echo -n \"&nbsp;<a target='' title='TheBuddhasWords.net' href='$linktbw/$bwlink'>TBW</a>\"; 
               
-          [[ \$ruslink != \"\" ]] && echo -n \"&nbsp;<a target='' href='https://theravada.ru/Teaching/Canon/Suttanta/Texts/\$ruslink'>Th.ru</a>\"; 
+          [[ \$ruslink != \"\" ]] && echo -n \"&nbsp;<a title='Theravada.ru' target='' href='https://theravada.ru/Teaching/Canon/Suttanta/Texts/\$ruslink'>Th.ru</a>\"; 
                 
-          [ \${#ruslinkdn} -gt 5 ] && echo -n \"&nbsp;<a target='' href='\$ruslinkdn'>Th.su</a>\";
+          [ \${#ruslinkdn} -gt 5 ] && echo -n \"&nbsp;<a title='Theravada.su' target='' href='\$ruslinkdn'>Th.su</a>\";
           ");
       }
   }

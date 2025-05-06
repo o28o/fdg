@@ -122,7 +122,7 @@ const ruUrl = mlUrl.replace("/ml/", "/r/");
 const enUrl = mlUrl.replace("/ml/", "/read/");
 //let ifRus = `<a target="" href="${ruUrl}">Ru</a>&nbsp;<a target="" href="${enUrl}">En</a>&nbsp;`;
 
-let scLink = `<p class="sc-link"><a target="" href="${ruUrl}">Ru</a>&nbsp;<a target="" href="${enUrl}">En</a>&nbsp;`;
+let scLink = `<p class="sc-link"><a title='Русский' target="" href="${ruUrl}">Ru</a>&nbsp;<a target="" title='Английский' href="${enUrl}">En</a>&nbsp;`;
 
 const currentURL = window.location.href;
 const anchorURL = new URL(currentURL).hash; // Убираем символ "#"
@@ -439,7 +439,7 @@ else {
      </p>
      </div>`;
      
-      const scButton = `<a href="https://suttacentral.net/${slug}/en/${translator}">Читать на SC</a>`;
+      const scButton = `<a title='SuttaCentral.net' href="https://suttacentral.net/${slug}/en/${translator}">Читать на SC</a>`;
       
       $.ajax({
       url: "/read/php/extralinks.php?fromjs=" +slug
@@ -503,15 +503,15 @@ function findTextUrl(nikaya, subdivision, textnum) {
 let textUrl = getTextUrl(slug);
 //console.log("Ссылка на", slug + ":", textUrl);
 if (textUrl) {
-scLink += `<a target="" href="${textUrl}">DPR</a>&nbsp;`;
+scLink += `<a target="" title='Digital Pali Reader' href="${textUrl}">DPR</a>&nbsp;`;
 }
 }
 //dpr end
 
 if ((translator === 'sujato') || (translator === 'brahmali')) {
-  scLink += `<a target="" href="https://suttacentral.net/${slug}/en/${translator}">SC</a>&nbsp;`;  
+  scLink += `<a target="" title='SuttaCentral.net' href="https://suttacentral.net/${slug}/en/${translator}">SC</a>&nbsp;`;  
 } else {
-  scLink += `<a target="" href="https://suttacentral.net/${slug}">SC</a>&nbsp;`;
+  scLink += `<a target="" title='SuttaCentral.net' href="https://suttacentral.net/${slug}">SC</a>&nbsp;`;
 }
  //     scLink += `<a target="" href="https://suttacentral.net/${slug}/en/${translator}">SC</a>&nbsp;`; 
 

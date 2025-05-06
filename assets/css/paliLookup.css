@@ -85,8 +85,8 @@
 }
 
 .close-btn svg {
-  width: 15px;
-  height: 15px;
+  width: 16px;
+  height: 16px;
   fill: currentColor; /* Наследует цвет от .close-btn */
   transform: translateZ(0); /* Фикс рендеринга в Safari */
   vertical-align: middle; /* Дополнительное выравнивание */

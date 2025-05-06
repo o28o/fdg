@@ -47,20 +47,23 @@ function cleanTextForTTS(text) {
     .trim();
 }
 
+
 function openInNewTab(content, isPali) {
+  // Создаем человеко-читаемое название
   const url = new URL(window.location.href);
   let title = url.pathname.split('/').filter(Boolean).join('_')
     .replace(/\.html$/, '') + (isPali ? '_pali' : '_translation') + '_tts';
   
+  // Очищаем контент для TTS
   const cleanContent = cleanTextForTTS(content);
   
+  // Создаем чистую HTML-страницу
   const html = `
     <!DOCTYPE html>
     <html>
     <head>
       <meta charset="UTF-8">
       <title>${title}</title>
-      <meta name="viewport" content="width=device-width, initial-scale=1">
       <style>
         body {
           font-family: Arial, sans-serif;
@@ -78,9 +81,9 @@ function openInNewTab(content, isPali) {
     </html>
   `;
   
-  // Кодируем HTML в data-URL
-  const dataUrl = `data:text/html;charset=UTF-8,${encodeURIComponent(html)}`;
-  window.open(dataUrl, '_blank', 'noopener,noreferrer');
+  const blob = new Blob([html], { type: 'text/html' });
+  const blobUrl = URL.createObjectURL(blob);
+  window.open(blobUrl, '_blank');
 }
 
 async function handleSuttaClick(e) {

@@ -1,3 +1,4 @@
+
 <?php
 if (strpos($_SERVER['REQUEST_URI'], "/ru") !== false){
 $lang = "ru";
@@ -1048,7 +1049,7 @@ $readerPage = $mainpage . '/read';
 $mainreadlink = '/th/read.php';
 
 }
-$menuuseful = 'MenuRead,MenuEnglish,MenuRussian,tools,materials';
+$menuuseful = 'MenuRead,MenuEnglish,MenuDict,MenuRussian,tools,materials';
 
 
 ?>

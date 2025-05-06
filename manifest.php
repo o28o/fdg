@@ -112,7 +112,7 @@ echo json_encode([
     "spirituality"
 ],
 "dir" => "ltr", 
-"iarc_rating_id" => "",
+"iarc_rating_id" => "e",
 "prefer_related_applications" => false,
 "related_applications" => [],
 "scope_extensions" => [

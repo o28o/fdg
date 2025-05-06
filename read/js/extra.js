@@ -49,6 +49,41 @@ function cleanTextForTTS(text) {
 
 
 function openInNewTab(content, isPali) {
+  try {
+    // Пытаемся использовать data-URL
+    const html = generateHtml(content, isPali);
+    const dataUrl = `data:text/html;charset=UTF-8,${encodeURIComponent(html)}`;
+    const newWindow = window.open(dataUrl, '_blank');
+    
+    // Fallback для браузеров с ограничениями
+    if (!newWindow || newWindow.closed) {
+      throw new Error('Popup blocked');
+    }
+  } catch (e) {
+    // Fallback для старых браузеров
+    const textUrl = URL.createObjectURL(new Blob(
+      [cleanTextForTTS(content)], 
+      {type: 'text/plain'}
+    ));
+    window.open(textUrl, '_blank');
+  }
+}
+
+function generateHtml(content, isPali) {
+  const title = generateTitle(isPali);
+  return `<!DOCTYPE html>
+    <html>
+    <head>
+      <meta charset="UTF-8">
+      <title>${title}</title>
+      <style>body{font-family:Arial; line-height:1.6; max-width:800px; margin:0 auto; padding:20px;}</style>
+    </head>
+    <body>
+      ${cleanTextForTTS(content).replace(/\n/g, '<br>')}
+    </body>
+    </html>`;
+}
+
   // Создаем человеко-читаемое название
   const url = new URL(window.location.href);
   let title = url.pathname.split('/').filter(Boolean).join('_')

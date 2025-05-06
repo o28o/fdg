@@ -40,15 +40,17 @@ if (preg_match('/^(localhost|127\.\d+\.\d+\.\d+)$/', parse_url($base_url, PHP_UR
     $name = "DG Offline";
 } else {
     $short_name = "Dhamma.Gift";
-    $name = "Dhamma.gift Search. Read. Multi-Tool. ";
+    $name = "Dhamma.gift";
 }
 
 // Устанавливаем заголовок JSON
 header('Content-Type: application/json');
 
 echo json_encode([
-    "short_name" => $short_name,
     "name" => $name,
+    "short_name" => $short_name,
+	"description" => "Sutta & Vinaya Search. Read. Multi-Tool.",
+
     "icons" => [
         [
             "src" => "/assets/img/pwa-bold-monocolor-192.png",

@@ -464,9 +464,9 @@ nextName = nextName.replace(/[0-9.]/g, '');
       } else {
      var nextPrint = nextSlugPrint +' ' +nextName;
      }
-      
+        let finder = params.get("s");
          next.innerHTML = nextSlug
-        ? `<a href="?q=${nextSlug}">${nextPrint}<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" id="body_1" width="15" height="11">
+        ? `<a href="?q=${nextSlug}&s=${finder}">${nextPrint}<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" id="body_1" width="15" height="11">
 
       <g transform="matrix(0.021484375 0 0 0.021484375 2 -0)">
         <g>
@@ -493,9 +493,10 @@ prevName = prevName.replace(/[0-9.]/g, '');
       } else {
         var prevPrint = prevSlugPrint +' ' +prevName;
      }
-    
+      let finder = params.get("s");
+
       previous.innerHTML = prevSlug
-        ? `<a href="?q=${prevSlug}&lang=${language}"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" id="body_1" width="15" height="11">
+        ? `<a href="?q=${prevSlug}&s=${finder}&lang=${language}"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" id="body_1" width="15" height="11">
 
       <g transform="matrix(0.021484375 0 0 0.021484375 2 -0)">
         <g>
@@ -545,9 +546,8 @@ More search options available from the main page.</p>`;
 
 // Отправка запроса по адресу http://localhost:8080/ru/?q= с использованием значения slug
 var xhr = new XMLHttpRequest();
-var urlParams = new URLSearchParams(window.location.search);
-urlParams.set('q', slug);
-xhr.open("GET", '/?' + urlParams.toString(), true);
+var xhr = new XMLHttpRequest();
+xhr.open("GET", "/?q=" + encodeURIComponent(slug), true);
 xhr.send();
 
 xhr.onreadystatechange = function() {

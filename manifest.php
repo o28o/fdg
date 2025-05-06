@@ -106,6 +106,19 @@ echo json_encode([
         "label" => "Screen 6"
     ]
 ],
+"categories" => [
+    "education",
+    "books",
+    "spirituality"
+],
+"dir" => "ltr", 
+"iarc_rating_id" => "",
+"prefer_related_applications" => false,
+"related_applications" => [],
+"scope_extensions" => [
+    "https://dict.dhamma.gift/"
+],
+
     "start_url" => $start_url,
     "scope" => $mainpagenoslash . "/",
     "display" => "minimal-ui",

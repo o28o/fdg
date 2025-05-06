@@ -47,7 +47,6 @@ function cleanTextForTTS(text) {
     .trim();
 }
 
-
 function openInNewTab(content, isPali) {
   // Создаем человеко-читаемое название
   const url = new URL(window.location.href);

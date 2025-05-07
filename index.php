@@ -1109,14 +1109,31 @@ foreach ($slides as $index => $slide) {
             </div>
         </footer>
 		
+
 		<pwa-install
   icon="/assets/img/pwa-bold-monocolor-192.png"
-  name="Моё Приложение"
-  description="Установите PWA для быстрого доступа"
+  name="Dhamma.Gift"
+  description="Установите для быстрого доступа, поиска и словаря"
   lang="ru"
   manual-apple="true"
   manual-chrome="true">
 </pwa-install>
+
+
+<script>
+  const pwa = document.querySelector('pwa-install');
+
+  let visits = parseInt(localStorage.getItem('visits') || '0', 10);
+  visits++;
+  localStorage.setItem('visits', visits);
+
+  if (visits === 3) {
+    window.addEventListener('load', () => {
+      pwa.showDialog(); // ручной вызов баннера
+    });
+  }
+</script>
+
 
 
         <!-- Copyright Section-->
@@ -1396,7 +1413,8 @@ const resources = [...commonResources, langSpecific];
 
 
 
-<script type="module" src="https://cdn.jsdelivr.net/npm/@khmyznikov/pwa-install@0.5.5/dist/pwa-install.bundle.js" defer ></script>
+<script type="module" src="https://cdn.jsdelivr.net/npm/@khmyznikov/pwa-install@0.5.5/dist/pwa-install.bundle.js"></script>
+
 
 </body>
 

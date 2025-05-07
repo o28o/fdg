@@ -189,8 +189,23 @@ textarea {
   height: 2.4em;       /* 1.2em * 2 строки */
 }
 
+#previous a,
+#next a {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  line-height: 1.2em;
+  height: 2.4em;
+}
+
+/* Стиль для названия сутты (одна строка + обрезка) */
 .sutta-name {
-  display: inline;
+  white-space: nowrap; /* Запрещаем перенос */
+  overflow: hidden;
+  text-overflow: ellipsis; /* Добавляем "..." */
+  max-width: 48%; /* Ограничиваем ширину (можно адаптивно) */
 }
 
 .afternav {

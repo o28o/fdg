@@ -4,6 +4,7 @@ document.addEventListener("DOMContentLoaded", function () {
     // Целевые посещения
     var targetVisit = 15;
     var targetVisitForPWA = 7;
+    var targetVisitForPWApopup = 5;
     var targetVisitForGear = 13;
     var targetVisitForRead = 10;
     var extraTimes = 0;
@@ -292,7 +293,71 @@ document.getElementById('dismissBtn').addEventListener('click', () => {
   document.getElementById('installBanner').style.display = 'none';
 });
 */
+
+
+let deferredPrompt;
+const banner = document.getElementById('pwa-banner');
+const installBtn = document.getElementById('installBtn');
+const closeBtn = document.getElementById('closePwaBanner');
+
+// Функция определения языка
+function getLanguage() {
+  const path = window.location.pathname;
+  if (path.startsWith('/ru/') || path.startsWith('/r/')) {
+    return 'ru';
+  }
+  return 'en';
+}
+
+// Локализация текстов
+function localizePwaBanner() {
+  const language = getLanguage();
+  const texts = {
+    ru: {
+      title: 'Установить Dhamma.Gift',
+      description: 'Добавить на главный экран для быстрого доступа',
+      installBtn: 'Установить'
+    },
+    en: {
+      title: 'Install Dhamma.Gift',
+      description: 'Add to home screen for quick access',
+      installBtn: 'Install'
+    }
+  };
   
+  const currentTexts = texts[language];
+  banner.querySelector('.pwa-title').textContent = currentTexts.title;
+  banner.querySelector('.pwa-description').textContent = currentTexts.description;
+  installBtn.textContent = currentTexts.installBtn;
+}
+
+// Инициализация при загрузке
+document.addEventListener('DOMContentLoaded', localizePwaBanner);
+
+window.addEventListener('beforeinstallprompt', (e) => {
+  // Показываем баннер только если количество посещений достигло целевого значения
+  if (visitCount === targetVisitForPWApopup) {
+    e.preventDefault();
+    deferredPrompt = e;
+    localizePwaBanner(); // Обновляем тексты перед показом
+    banner.classList.remove('hidden');
+  }
+});
+
+installBtn.addEventListener('click', async () => {
+  if (deferredPrompt) {
+    deferredPrompt.prompt();
+    const { outcome } = await deferredPrompt.userChoice;
+    if (outcome === 'accepted') {
+      banner.classList.add('hidden');
+    }
+    deferredPrompt = null;
+  }
+});
+
+closeBtn.addEventListener('click', () => {
+  banner.classList.add('hidden');
+});
   
 });
 

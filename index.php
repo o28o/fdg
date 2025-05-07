@@ -1109,53 +1109,17 @@ foreach ($slides as $index => $slide) {
             </div>
         </footer>
 		
-<?php
-$host = $_SERVER['REMOTE_ADDR'];
-if ($host === '127.0.0.1' || $host === '::1' || $host === 'localhost') {
-?>
-  <div id="pwa-banner" class="pwa-install hidden">
-    <img src="/assets/img/pwa-bold-monocolor-192.png" alt="App Icon" class="icon">
-    <div class="text">
-      <h2>Установить Dhamma.Gift</h2>
-      <p>Добавьте Dhamma.Gift на главный экран для быстрого доступа.</p>
-    </div>
-    <div class="actions">
-      <button id="installBtn">Установить</button>
-      <button id="closePwaBanner">✕</button>
-    </div>
+<div id="pwa-banner" class="pwa-install hidden">
+  <img src="/assets/img/pwa-bold-monocolor-192.png" alt="App Icon" class="icon">
+  <div class="text">
+    <h2 class="pwa-title">Install Dhamma.Gift</h2>
+    <p class="pwa-description">Add to home screen for quick access</p>
   </div>
-<?php
-}
-?>
-
-<script>
-  let deferredPrompt;
-  const banner = document.getElementById('pwa-banner');
-  const installBtn = document.getElementById('installBtn');
-  const closeBtn = document.getElementById('closePwaBanner');
-
-  window.addEventListener('beforeinstallprompt', (e) => {
-    e.preventDefault();
-    deferredPrompt = e;
-    banner.classList.remove('hidden');
-  });
-
-  installBtn.addEventListener('click', async () => {
-    if (deferredPrompt) {
-      deferredPrompt.prompt();
-      const { outcome } = await deferredPrompt.userChoice;
-      if (outcome === 'accepted') {
-        banner.classList.add('hidden');
-      }
-      deferredPrompt = null;
-    }
-  });
-
-  closeBtn.addEventListener('click', () => {
-    banner.classList.add('hidden');
-  });
-</script>
-
+  <div class="actions">
+    <button id="installBtn" class="pwa-button">Install</button>
+    <button id="closePwaBanner">✕</button>
+  </div>
+</div>
 
 
         <!-- Copyright Section-->
@@ -1432,11 +1396,6 @@ const resources = [...commonResources, langSpecific];
     }, 5000);
 });
 </script>
-
-
-
-<script type="module" src="https://cdn.jsdelivr.net/npm/@khmyznikov/pwa-install@0.5.5/dist/pwa-install.bundle.js"></script>
-
 
 </body>
 

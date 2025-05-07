@@ -218,8 +218,14 @@ const hintSettings = {
 // Вызываем функцию с настройками
 showHint(hintSettings);
 //observeAndHighlightElements('hint');
-  
-initPwaBanner();
+ 
+ 
+if (
+  visitCount >= targetVisitForPWApopup &&
+  visitCount <= targetVisitForPWApopup + 3
+) {
+  initPwaBanner();
+}
   
 });
 

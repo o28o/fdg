@@ -152,7 +152,45 @@ textarea {
   font-weight: bold;
 }
 
-/* На мобильных: показываем только номер */
+/* На маленьких мобильных: показываем только номер */
+#navigation {
+  display: flex;
+  gap: 8px; 
+    overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 2; /* число строк, которые допускаются */
+  -webkit-box-orient: vertical;
+  text-overflow: ellipsis;
+}
+
+#previous2,
+#next2 {
+    max-width: 49%;
+  word-break: break-word;
+}
+
+#previous,
+#previous2 {
+  margin-right: auto;
+  text-align: left;
+}
+
+#next,
+#next2 {
+  margin-left: auto;
+  text-align: right;
+}
+
+#previous,
+#next {
+  max-width: 49%;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 2; /* число строк, которые допускаются */
+  -webkit-box-orient: vertical;
+  text-overflow: ellipsis;
+}
+
 .sutta-name {
   display: inline;
 }

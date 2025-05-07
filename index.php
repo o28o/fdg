@@ -38,6 +38,8 @@ include 'scripts/search-handler.php';
     }
 </style>
 
+  <!-- PWA-метатеги -->
+  <meta name="theme-color" content="#ffffff">
 <link rel="manifest" href="<?php echo $mainpagenoslash ;?>/manifest.php">
 <link rel="canonical" href="<?php echo $canonicalPage;?>">
 <link rel="alternate" href="https://dhamma.gift/ru/" hreflang="ru">
@@ -90,6 +92,18 @@ if (siteLanguage === 'ru' && currentPath !== '/ru/') {
 
   <!-- Загрузка иконки для iOS -->
   <link rel="apple-touch-icon" sizes="152x152" href="/assets/img/favico-noglass.png">
+  
+  
+  
+  <!-- iOS-специфичные -->
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="Dhamma.Gift">
+  <link rel="apple-touch-icon" href="/icons/icon-180x180.png">
+  <link rel="apple-touch-startup-image" href="/splash.png">
+    <meta name="mobile-web-app-capable" content="yes">
+  
+  
   
 <!-- Google fonts
 <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css" />

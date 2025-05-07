@@ -1108,6 +1108,14 @@ foreach ($slides as $index => $slide) {
                 </div>
             </div>
         </footer>
+		
+		
+		<div id="installBanner" style="display: none; position: fixed; top: 0; width: 100%; background: #fff; box-shadow: 0 2px 6px rgba(0,0,0,0.2); padding: 10px; text-align: center; z-index: 1000;">
+  <span>Install Dhamma.gift app</span>
+  <button id="installBtn">Intstall</button>
+</div>
+
+		
         <!-- Copyright Section-->
 <div id="copyright" class="copyright py-4 text-center text-white " >
 <div class="container"> <a target="_blank" rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="/assets/img/88x31.png" loading="lazy" /></a> <small>Copyright <a class="text-white text-decoration-none" href="/assets/readylinebyline.html">&copy;</a> Dhamma.gift <?php echo $mode; ?> <a class="text-white text-decoration-none" href="/assets/countdowntable.php">2022</a>-<?php echo date("Y"); ?></small>  <small id="copyrightnote">

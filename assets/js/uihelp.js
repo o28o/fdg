@@ -262,6 +262,43 @@ checkHint('/w.php/', ['dict-panel', 'help-icon'], 1);
   
   */
   
+  let deferredPrompt;
+
+// Считаем визиты
+let visitCount = parseInt(localStorage.getItem('visitCount') || '0', 10);
+visitCount++;
+localStorage.setItem('visitCount', visitCount);
+
+// Ждём события
+window.addEventListener('beforeinstallprompt', (e) => {
+  e.preventDefault();
+  deferredPrompt = e;
+
+  // Показываем плашку только на нужный визит
+  if (visitCount >= targetVisitForPWA) {
+    document.getElementById('installBanner').style.display = 'block';
+  }
+});
+
+// Установка
+document.getElementById('installBtn').addEventListener('click', () => {
+  if (deferredPrompt) {
+    deferredPrompt.prompt();
+    deferredPrompt.userChoice.then((choiceResult) => {
+      // Пользователь выбрал установить или отказался
+      console.log('User choice', choiceResult.outcome);
+      document.getElementById('installBanner').style.display = 'none';
+    });
+  }
+});
+
+// Закрытие
+document.getElementById('dismissBtn').addEventListener('click', () => {
+  document.getElementById('installBanner').style.display = 'none';
+});
+
+  
+  
 });
 
 // 

@@ -4,7 +4,6 @@ document.addEventListener("DOMContentLoaded", function () {
     // Целевые посещения
     var targetVisit = 15;
     var targetVisitForPWA = 7;
-    var targetVisitForPWApopup = 5;
     var targetVisitForGear = 13;
     var targetVisitForRead = 10;
     var extraTimes = 0;
@@ -263,12 +262,12 @@ checkHint('/w.php/', ['dict-panel', 'help-icon'], 1);
   
   */
   
- /* let deferredPrompt;
+ /* let deferPrompt;
 
 // Ждём события
 window.addEventListener('beforeinstallprompt', (e) => {
   e.preventDefault();
-  deferredPrompt = e;
+  deferPrompt = e;
 
   // Показываем плашку только на нужный визит
   if (visitCount >= targetVisitForPWA) {
@@ -278,9 +277,9 @@ window.addEventListener('beforeinstallprompt', (e) => {
 
 // Установка
 document.getElementById('installBtn').addEventListener('click', () => {
-  if (deferredPrompt) {
-    deferredPrompt.prompt();
-    deferredPrompt.userChoice.then((choiceResult) => {
+  if (deferPrompt) {
+    deferPrompt.prompt();
+    deferPrompt.userChoice.then((choiceResult) => {
       // Пользователь выбрал установить или отказался
       console.log('User choice', choiceResult.outcome);
       document.getElementById('installBanner').style.display = 'none';
@@ -293,20 +292,74 @@ document.getElementById('dismissBtn').addEventListener('click', () => {
   document.getElementById('installBanner').style.display = 'none';
 });
 */
+  
+});
 
 
-let deferredPrompt;
-const banner = document.getElementById('pwa-banner');
-const installBtn = document.getElementById('installBtn');
-const closeBtn = document.getElementById('closePwaBanner');
+// Объявляем все необходимые переменные
+let deferPrompt = null;
+let banner = null;
+let installBtn = null;
+let closeBtn = null;
+const targetVisitForPWApopup = 5; // Тестовое значение - измените на нужное (например, 7)
+const pwaBannerShownKey = 'pwaBannerShown';
 
-// Функция определения языка
-function getLanguage() {
-  const path = window.location.pathname;
-  if (path.startsWith('/ru/') || path.startsWith('/r/')) {
-    return 'ru';
+// Функция создания баннера
+function createPwaBanner() {
+  // Проверяем, не был ли баннер уже создан
+  if (document.getElementById('pwa-banner')) return;
+  
+  // Создаем HTML баннера
+  const bannerHTML = `
+    <div id="pwa-banner" class="pwa-install hidden">
+      <img src="/assets/img/pwa-bold-monocolor-192.png" alt="App Icon" class="icon">
+      <div class="text">
+        <h2 class="pwa-title">Install Dhamma.Gift</h2>
+        <p class="pwa-description">Add to home screen for quick access</p>
+      </div>
+      <div class="actions">
+        <button id="installBtn" class="pwa-button">Install</button>
+        <button id="closePwaBanner">✕</button>
+      </div>
+    </div>
+  `;
+  
+  // Добавляем баннер в DOM
+  document.body.insertAdjacentHTML('beforeend', bannerHTML);
+  
+  // Инициализируем элементы
+  banner = document.getElementById('pwa-banner');
+  installBtn = document.getElementById('installBtn');
+  closeBtn = document.getElementById('closePwaBanner');
+  
+  // Назначаем обработчики событий
+  if (installBtn) installBtn.addEventListener('click', installPwa);
+  if (closeBtn) closeBtn.addEventListener('click', hidePwaBanner);
+}
+
+// Функция скрытия баннера
+function hidePwaBanner() {
+  if (banner) {
+    banner.classList.add('hidden');
+    localStorage.setItem(pwaBannerShownKey, 'true');
   }
-  return 'en';
+}
+
+// Установка PWA
+async function installPwa() {
+  if (deferPrompt) {
+    try {
+      deferPrompt.prompt();
+      const { outcome } = await deferPrompt.userChoice;
+      if (outcome === 'accepted') {
+        hidePwaBanner();
+      }
+    } catch (error) {
+      console.error('Ошибка при установке PWA:', error);
+    } finally {
+      deferPrompt = null;
+    }
+  }
 }
 
 // Локализация текстов
@@ -325,40 +378,64 @@ function localizePwaBanner() {
     }
   };
   
-  const currentTexts = texts[language];
-  banner.querySelector('.pwa-title').textContent = currentTexts.title;
-  banner.querySelector('.pwa-description').textContent = currentTexts.description;
-  installBtn.textContent = currentTexts.installBtn;
+  if (!banner) return;
+  
+  const currentTexts = texts[language] || texts.en;
+  const titleEl = banner.querySelector('.pwa-title');
+  const descEl = banner.querySelector('.pwa-description');
+  const btnEl = banner.querySelector('.pwa-button');
+  
+  if (titleEl) titleEl.textContent = currentTexts.title;
+  if (descEl) descEl.textContent = currentTexts.description;
+  if (btnEl) btnEl.textContent = currentTexts.installBtn;
 }
 
-// Инициализация при загрузке
-document.addEventListener('DOMContentLoaded', localizePwaBanner);
+// Определение языка
+function getLanguage() {
+  const path = window.location.pathname;
+  return (path.startsWith('/ru/') || path.startsWith('/r/')) ? 'ru' : 'en';
+}
 
-window.addEventListener('beforeinstallprompt', (e) => {
-  // Показываем баннер только если количество посещений достигло целевого значения
-  if (visitCount === targetVisitForPWApopup) {
-    e.preventDefault();
-    deferredPrompt = e;
-    localizePwaBanner(); // Обновляем тексты перед показом
-    banner.classList.remove('hidden');
-  }
-});
-
-installBtn.addEventListener('click', async () => {
-  if (deferredPrompt) {
-    deferredPrompt.prompt();
-    const { outcome } = await deferredPrompt.userChoice;
-    if (outcome === 'accepted') {
-      banner.classList.add('hidden');
+// Инициализация баннера
+function initPwaBanner() {
+  try {
+    const visitCount = parseInt(localStorage.getItem('visitCount') || '0', 10);
+    const alreadyShown = localStorage.getItem(pwaBannerShownKey);
+    
+    console.log(`Визитов: ${visitCount}, Показывался: ${alreadyShown}`);
+    
+    if (visitCount >= targetVisitForPWApopup && !alreadyShown) {
+      createPwaBanner();
+      
+      window.addEventListener('beforeinstallprompt', (e) => {
+        console.log('beforeinstallprompt event triggered');
+        e.preventDefault();
+        deferPrompt = e;
+        localizePwaBanner();
+        if (banner) {
+          banner.classList.remove('hidden');
+          console.log('PWA баннер показан');
+        }
+      });
     }
-    deferredPrompt = null;
+  } catch (error) {
+    console.error('Ошибка инициализации PWA баннера:', error);
   }
-});
+}
 
-closeBtn.addEventListener('click', () => {
-  banner.classList.add('hidden');
-});
-  
-});
+// Проверяем и увеличиваем счетчик посещений
+function updateVisitCount() {
+  try {
+    const visitCount = parseInt(localStorage.getItem('visitCount') || '0', 10);
+    localStorage.setItem('visitCount', (visitCount + 1).toString());
+    console.log(`Обновлен счетчик посещений: ${visitCount + 1}`);
+  } catch (error) {
+    console.error('Ошибка обновления счетчика посещений:', error);
+  }
+}
 
-// 
+// Инициализация при загрузке страницы
+document.addEventListener('DOMContentLoaded', () => {
+  updateVisitCount();
+  initPwaBanner();
+});

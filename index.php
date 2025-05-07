@@ -1109,19 +1109,6 @@ foreach ($slides as $index => $slide) {
             </div>
         </footer>
 		
-<div id="pwa-banner" class="pwa-install hidden">
-  <img src="/assets/img/pwa-bold-monocolor-192.png" alt="App Icon" class="icon">
-  <div class="text">
-    <h2 class="pwa-title">Install Dhamma.Gift</h2>
-    <p class="pwa-description">Add to home screen for quick access</p>
-  </div>
-  <div class="actions">
-    <button id="installBtn" class="pwa-button">Install</button>
-    <button id="closePwaBanner">✕</button>
-  </div>
-</div>
-
-
         <!-- Copyright Section-->
 <div id="copyright" class="copyright py-4 text-center text-white " >
 <div class="container"> <a target="_blank" rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="/assets/img/88x31.png" loading="lazy" /></a> <small>Copyright <a class="text-white text-decoration-none" href="/assets/readylinebyline.html">&copy;</a> Dhamma.gift <?php echo $mode; ?> <a class="text-white text-decoration-none" href="/assets/countdowntable.php">2022</a>-<?php echo date("Y"); ?></small>  <small id="copyrightnote">

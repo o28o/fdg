@@ -40,7 +40,7 @@ if (preg_match('/^(localhost|127\.\d+\.\d+\.\d+)$/', parse_url($base_url, PHP_UR
     $name = "DG Offline";
 } else {
     $short_name = "Dhamma.Gift";
-    $name = "Dhamma.gift";
+    $name = "Dhamma.Gift";
 }
 
 // Устанавливаем заголовок JSON
@@ -98,9 +98,21 @@ echo json_encode([
         "type" => "image/jpeg",
         "sizes" => "1080x1920",
         "label" => "Screen 5"
+    ],    
+	[
+        "src" => "/assets/img/android/6.jpg",
+        "type" => "image/jpeg",
+        "sizes" => "1080x1920",
+        "label" => "Screen 5"
+    ],	
+	[
+        "src" => "/assets/img/android/7.jpg",
+        "type" => "image/jpeg",
+        "sizes" => "1080x1920",
+        "label" => "Screen 5"
     ],
     [
-        "src" => "/assets/img/android/6.jpg",
+        "src" => "/assets/img/android/8.jpg",
         "type" => "image/jpeg",
         "sizes" => "1080x1920",
         "label" => "Screen 6"

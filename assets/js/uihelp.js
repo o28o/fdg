@@ -1,12 +1,15 @@
-document.addEventListener("DOMContentLoaded", function () {
-    var infoUpdate = document.getElementById("infoUpdate");
-
     // Целевые посещения
     var targetVisit = 15;
+    var targetVisitForPWApopup = 5; 
     var targetVisitForPWA = 7;
     var targetVisitForGear = 13;
     var targetVisitForRead = 10;
     var extraTimes = 0;
+
+
+document.addEventListener("DOMContentLoaded", function () {
+    var infoUpdate = document.getElementById("infoUpdate");
+
 
     // Получаем текущее количество посещений из localStorage
     var visitCount = parseInt(localStorage.getItem("visitCount") || "0", 10);
@@ -216,85 +219,7 @@ const hintSettings = {
 showHint(hintSettings);
 //observeAndHighlightElements('hint');
   
-  
-/**
- * Показывает подсказки после N посещений конкретной страницы
- * @param {string} pagePath - Путь страницы (/read/, /result/ и т.д.)
- * @param {string|array} elementsToHighlight - Класс(ы) или ID элементов для подсветки
- * @param {number} targetVisits - После какого посещения показать
- */
- /*
-function checkHint(pagePath, elementsToHighlight, targetVisits) {
-    // Создаем уникальный ключ для этой проверки
-    const visitKey = `visitCount_${pagePath.replace(/\//g, '_')}`;
-    const hintShownKey = `hintShown_${pagePath.replace(/\//g, '_')}`;
-    
-    // Обновляем счетчик посещений
-    const visits = parseInt(localStorage.getItem(visitKey) || 0) + 1;
-    localStorage.setItem(visitKey, visits);
-
-    // Проверяем условия для показа
-    if (window.location.pathname.includes(pagePath) && 
-        !localStorage.getItem(hintShownKey) && 
-        visits >= targetVisits) {
-        
-        // Подсвечиваем элементы (работает с массивом или строкой)
-        if (Array.isArray(elementsToHighlight)) {
-            highlightMultipleById(elementsToHighlight); // Ваша существующая функция
-        } else {
-            highlightElement(elementsToHighlight); // Новая функция для одиночных элементов
-        }
-        
-        localStorage.setItem(hintShownKey, 'true');
-    }
-}
-
-// Для /read/ - подсветить два элемента по ID на 3-й визит
-checkHint('/read/', ['gearRead', 'helpsc'], 3);
-checkHint('/r/', ['gearRead', 'helpsc'], 3);
-
-// Для /result/ - подсветить один класс на 2-й визит
-checkHint('/ru/', 'search-hint', 2);
-checkHint('/', 'search-hint', 2);
-
-// Для /w.php/ - подсветить несколько классов на 1-й визит
-checkHint('/w.php/', ['dict-panel', 'help-icon'], 1);  
-  
-  */
-  
- /* let deferPrompt;
-
-// Ждём события
-window.addEventListener('beforeinstallprompt', (e) => {
-  e.preventDefault();
-  deferPrompt = e;
-
-  // Показываем плашку только на нужный визит
-  if (visitCount >= targetVisitForPWA) {
-    document.getElementById('installBanner').style.display = 'block';
-  }
-});
-
-// Установка
-document.getElementById('installBtn').addEventListener('click', () => {
-  if (deferPrompt) {
-    deferPrompt.prompt();
-    deferPrompt.userChoice.then((choiceResult) => {
-      // Пользователь выбрал установить или отказался
-      console.log('User choice', choiceResult.outcome);
-      document.getElementById('installBanner').style.display = 'none';
-    });
-  }
-});
-
-// Закрытие
-document.getElementById('dismissBtn').addEventListener('click', () => {
-  document.getElementById('installBanner').style.display = 'none';
-});
-*/
-  
-    updateVisitCount();
-  initPwaBanner();
+initPwaBanner();
   
 });
 
@@ -303,7 +228,6 @@ let deferPrompt = null;
 let banner = null;
 let installBtn = null;
 let closeBtn = null;
-const targetVisitForPWApopup = 5; // Тестовое значение - измените на нужное (например, 7)
 const pwaBannerShownKey = 'pwaBannerShown';
 
 // Функция создания баннера
@@ -423,12 +347,4 @@ function initPwaBanner() {
   }
 }
 
-// Проверяем и увеличиваем счетчик посещений
-function updateVisitCount() {
-  try {
-    const visitCount = parseInt(localStorage.getItem('visitCount') || '0', 10);
-    localStorage.setItem('visitCount', (visitCount + 1).toString());
-  } catch (error) {
-    console.error('Ошибка обновления счетчика посещений:', error);
-  }
-}
+

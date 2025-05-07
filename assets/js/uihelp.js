@@ -264,11 +264,6 @@ checkHint('/w.php/', ['dict-panel', 'help-icon'], 1);
   
   let deferredPrompt;
 
-// Считаем визиты
-let visitCount = parseInt(localStorage.getItem('visitCount') || '0', 10);
-visitCount++;
-localStorage.setItem('visitCount', visitCount);
-
 // Ждём события
 window.addEventListener('beforeinstallprompt', (e) => {
   e.preventDefault();

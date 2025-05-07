@@ -924,6 +924,22 @@ video-container { position: relative; padding-bottom: 56.25%; padding-top: 30px;
       font-size: 16px;
     }
 
+    /* Background in light mode, text in dark mode */
+    --light: hsl(198, 100%, 95%);
+    --light-shade: hsl(198, 100%, 93%);
+
+    /* Background in dark mode, text in light mode */
+    --dark: hsl(198, 100%, 5%);
+    --dark-shade: hsl(198, 100%, 7%);
+
+    /* Primary colour used for logo, buttons, etc */
+    --primary: hsl(198, 100%, 50%);
+
+    /* Primary alternative used for pressed buttons */
+    --primary-alt: hsl(205, 100%, 40%);
+
+    /* Primary colour suitable for text in light and dark mode */
+    --primary-text: hsl(205, 79%, 48%);
 
 
 /* Базовые стили баннера */
@@ -944,8 +960,8 @@ video-container { position: relative; padding-bottom: 56.25%; padding-top: 30px;
   /*  box-sizing: border-box;
   
  Светлая тема по умолчанию */
-  background-color: var(--bs-body-bg);
-  border: 1px solid var(--bs-border-color);
+  background-color: var(--light);
+  border: 1px solid var(--light-shade);
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
   
   transition: all 0.3s ease;
@@ -957,8 +973,8 @@ video-container { position: relative; padding-bottom: 56.25%; padding-top: 30px;
 .dark-mode .pwa-install,
 .bg-dark .pwa-install,
 [data-bs-theme="dark"] .pwa-install {
-  background-color: var(--bs-secondary);
-  border-color: var(--bs-border-color-translucent);
+  background-color: var(--dark);
+  border-color: var(--dark);
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
 }
 
@@ -984,7 +1000,7 @@ video-container { position: relative; padding-bottom: 56.25%; padding-top: 30px;
   width: 40px;
   height: 40px;
   border-radius: 8px;
-  background-color: var(--bs-tertiary-bg);
+  background-color: var(--light-shade);
   flex-shrink: 0;
   background-size: cover;
   background-position: center;
@@ -1000,14 +1016,14 @@ video-container { position: relative; padding-bottom: 56.25%; padding-top: 30px;
   margin: 0;
   font-size: 15px;
   font-weight: 600;
-  color: var(--bs-heading-color);
+  color: var(--dark);
  
 }
 
 .pwa-install .text p {
   margin: 2px 0 0;
   font-size: 13px;
-  color: var(--bs-secondary-color);
+  color: var(--dark);
  
 }
 
@@ -1039,13 +1055,13 @@ video-container { position: relative; padding-bottom: 56.25%; padding-top: 30px;
 }
 
 #installBtn:hover {
-  background: var(--bs-primary);
+  background: var(--primary);
 }
 
 #installBtn:active,
 #installBtn:focus {
-  background: var(--bs-primary);
-  box-shadow: 0 0 0 3px rgba(var(--bs-secondary-rgb), 0.3);
+  background: var(--primary-alt);
+  box-shadow: 0 0 0 3px rgba(var(--light-shade), 0.3);
 }
 
 /* Кнопка закрытия */

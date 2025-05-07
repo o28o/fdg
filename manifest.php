@@ -50,7 +50,7 @@ echo json_encode([
     "name" => $name,
     "short_name" => $short_name,
     "description" => "Sutta & Vinaya Search. Read. Multi-Tool.",
-    "id" => "/",
+    "id" => "DG",
 	"lang" => "en",
     "launch_handler" => [
         "client_mode" => "focus-existing"
@@ -134,8 +134,8 @@ echo json_encode([
     "start_url" => $start_url,
     "scope" => $mainpagenoslash . "/",
     "display" => "minimal-ui",
-    "background_color" => "#ffffff",
-    "theme_color" => "#000000",
+    "background_color" => "#2E3E50",
+    "theme_color" => "#125350",
 
     // Поддержка Web Share Target API
     "share_target" => [

@@ -293,8 +293,10 @@ document.getElementById('dismissBtn').addEventListener('click', () => {
 });
 */
   
+    updateVisitCount();
+  initPwaBanner();
+  
 });
-
 
 // Объявляем все необходимые переменные
 let deferPrompt = null;
@@ -402,8 +404,7 @@ function initPwaBanner() {
     const visitCount = parseInt(localStorage.getItem('visitCount') || '0', 10);
     const alreadyShown = localStorage.getItem(pwaBannerShownKey);
     
-    console.log(`Визитов: ${visitCount}, Показывался: ${alreadyShown}`);
-    
+
     if (visitCount >= targetVisitForPWApopup && !alreadyShown) {
       createPwaBanner();
       
@@ -414,7 +415,6 @@ function initPwaBanner() {
         localizePwaBanner();
         if (banner) {
           banner.classList.remove('hidden');
-          console.log('PWA баннер показан');
         }
       });
     }
@@ -428,14 +428,7 @@ function updateVisitCount() {
   try {
     const visitCount = parseInt(localStorage.getItem('visitCount') || '0', 10);
     localStorage.setItem('visitCount', (visitCount + 1).toString());
-    console.log(`Обновлен счетчик посещений: ${visitCount + 1}`);
   } catch (error) {
     console.error('Ошибка обновления счетчика посещений:', error);
   }
 }
-
-// Инициализация при загрузке страницы
-document.addEventListener('DOMContentLoaded', () => {
-  updateVisitCount();
-  initPwaBanner();
-});

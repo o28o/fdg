@@ -262,7 +262,7 @@ checkHint('/w.php/', ['dict-panel', 'help-icon'], 1);
   
   */
   
-  let deferredPrompt;
+ /* let deferredPrompt;
 
 // Ждём события
 window.addEventListener('beforeinstallprompt', (e) => {
@@ -291,7 +291,7 @@ document.getElementById('installBtn').addEventListener('click', () => {
 document.getElementById('dismissBtn').addEventListener('click', () => {
   document.getElementById('installBanner').style.display = 'none';
 });
-
+*/
   
   
 });

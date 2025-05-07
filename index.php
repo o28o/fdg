@@ -1109,12 +1109,13 @@ foreach ($slides as $index => $slide) {
             </div>
         </footer>
 		
-		
+<!--		
 		<div id="installBanner" style="display: none; position: fixed; top: 0; width: 100%; background: #fff; box-shadow: 0 2px 6px rgba(0,0,0,0.2); padding: 10px; text-align: center; z-index: 1000;">
   <span>Install Dhamma.gift app</span>
   <button id="installBtn">Intstall</button>
 </div>
 
+-->
 		
         <!-- Copyright Section-->
 <div id="copyright" class="copyright py-4 text-center text-white " >

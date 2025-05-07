@@ -1109,19 +1109,24 @@ foreach ($slides as $index => $slide) {
             </div>
         </footer>
 		
-
-<div id="pwa-banner" class="pwa-install hidden">
-  <img src="/assets/img/pwa-bold-monocolor-192.png alt="App Icon" class="icon">
-  <div class="text">
-    <h2>Установить Dhamma.Gift</h2>
-    <p>Добавьте Dhamma.Gift на главный экран для быстрого доступа.</p>
+<?php
+$host = $_SERVER['REMOTE_ADDR'];
+if ($host === '127.0.0.1' || $host === '::1' || $host === 'localhost') {
+?>
+  <div id="pwa-banner" class="pwa-install hidden">
+    <img src="/assets/img/pwa-bold-monocolor-192.png" alt="App Icon" class="icon">
+    <div class="text">
+      <h2>Установить Dhamma.Gift</h2>
+      <p>Добавьте Dhamma.Gift на главный экран для быстрого доступа.</p>
+    </div>
+    <div class="actions">
+      <button id="installBtn">Установить</button>
+      <button id="closePwaBanner">✕</button>
+    </div>
   </div>
-  <div class="actions">
-    <button id="installBtn">Установить</button>
-    <button id="closePwaBanner">✕</button>
-  </div>
-</div>
-
+<?php
+}
+?>
 
 <script>
   let deferredPrompt;

@@ -941,9 +941,9 @@ video-container { position: relative; padding-bottom: 56.25%; padding-top: 30px;
   max-width: calc(100% - 32px);
   min-width: 280px;
   width: auto;
-  box-sizing: border-box;
+  /*  box-sizing: border-box;
   
-  /* Светлая тема по умолчанию */
+ Светлая тема по умолчанию */
   background-color: var(--bs-body-bg);
   border: 1px solid var(--bs-border-color);
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
@@ -1001,18 +1001,14 @@ video-container { position: relative; padding-bottom: 56.25%; padding-top: 30px;
   font-size: 15px;
   font-weight: 600;
   color: var(--bs-heading-color);
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
+ 
 }
 
 .pwa-install .text p {
   margin: 2px 0 0;
   font-size: 13px;
   color: var(--bs-secondary-color);
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
+ 
 }
 
 /* Контейнер кнопок действий */

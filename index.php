@@ -310,9 +310,9 @@ echo '<div style="max-width: 450px; display: none;" class="alert alert-primary a
 Добавить <strong>Dhamma.gift</strong> на Домашний Экран?
     <a class="btn btn-secondary installButton" id="" style="display:none;">' . $installpwalong . '</a>
    <br>
+   <strong>iOS</strong> Safari: Поделиться -> добавить на Главную.<br> 
    <strong>Android</strong> Chrome: Настройки -> добавить на Главную<br>
    Теперь можно: выделить слово <b>на любом сайте и приложении</b> -> и выбрать DG в меню "Поделиться" ОС<br>
-   <strong>iOS</strong> Safari: Поделиться -> добавить на Главную. 
 
 <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button></div>';
 } else {
@@ -320,9 +320,9 @@ echo '<div style="max-width: 450px; display: none;" class="alert alert-primary a
 Add <strong>Dhamma.gift</strong> to your Home Screen?
     <a class="btn btn-secondary installButton" id="" style="display:none;">' . $installpwalong . '</a>
    <br>
+   <strong>iOS</strong> Safari: Share -> Add to Home Screen.<br>
    <strong>Android</strong> Chrome: Settings -> Add to Home Screen<br>
    After that you can select word <b>on any site or app</b>-> and send it to DG app via "Share" OS menu<br>
-   <strong>iOS</strong> Safari: Share -> Add to Home Screen.
 
 <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button></div>';
 }

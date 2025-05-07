@@ -923,25 +923,32 @@ video-container { position: relative; padding-bottom: 56.25%; padding-top: 30px;
       content: "";
       font-size: 16px;
     }
-    
-    
-/* Светлая тема (по умолчанию) */
+
+
+
+/* Базовые стили баннера */
 .pwa-install {
   position: fixed;
-  background-color: var(--bs-body-bg);
   bottom: 16px;
   left: 50%;
   transform: translateX(-50%);
   display: flex;
   align-items: center;
+  gap: 12px;
   border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
   padding: 12px 16px;
   z-index: 1000;
   max-width: calc(100% - 32px);
+  min-width: 280px;
   width: auto;
-  transition: all 0.3s ease;
+  box-sizing: border-box;
+  
+  /* Светлая тема по умолчанию */
+  background-color: var(--bs-body-bg);
   border: 1px solid var(--bs-border-color);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  
+  transition: all 0.3s ease;
   will-change: transform, opacity;
   touch-action: none;
 }
@@ -955,47 +962,68 @@ video-container { position: relative; padding-bottom: 56.25%; padding-top: 30px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
 }
 
+/* Скрытое состояние */
 .pwa-install.hidden {
   opacity: 0;
   visibility: hidden;
   transform: translateX(-50%) translateY(20px);
 }
 
+/* Основной контент */
 .pwa-install-content {
   display: flex;
   align-items: center;
   flex-grow: 1;
+  min-width: 0;
+  gap: 12px;
+  overflow: hidden;
 }
 
+/* Иконка приложения */
 .pwa-install .icon {
   width: 40px;
   height: 40px;
-  margin-right: 12px;
   border-radius: 8px;
   background-color: var(--bs-tertiary-bg);
+  flex-shrink: 0;
+  background-size: cover;
+  background-position: center;
 }
 
-/* Тексты */
+/* Текстовый блок */
+.pwa-install .text {
+  min-width: 0;
+  flex-grow: 1;
+}
+
 .pwa-install .text h2 {
   margin: 0;
   font-size: 15px;
   font-weight: 600;
   color: var(--bs-heading-color);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .pwa-install .text p {
   margin: 2px 0 0;
   font-size: 13px;
   color: var(--bs-secondary-color);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
-/* Кнопки */
+/* Контейнер кнопок действий */
 .pwa-install .actions {
   display: flex;
   gap: 8px;
-  margin-left: 10px;
+  flex-shrink: 0;
+  align-items: center;
 }
 
+/* Общие стили кнопок */
 .pwa-install button {
   padding: 8px 16px;
   font-size: 14px;
@@ -1004,42 +1032,41 @@ video-container { position: relative; padding-bottom: 56.25%; padding-top: 30px;
   cursor: pointer;
   border: none;
   transition: all 0.2s ease;
+  outline: none;
+  line-height: 1.2;
 }
 
+/* Кнопка установки */
 #installBtn {
   background: var(--bs-secondary);
   color: var(--bs-white);
 }
 
-/* Темная тема */
-.dark-mode .pwa-install,
-.bg-dark .pwa-install,
-[data-bs-theme="dark"] #installBtn {
+#installBtn:hover {
   background: var(--bs-primary);
-  color: var(--bs-white);
 }
 
-
-#installBtn:hover {
-  background: var(--bs-secondary-bg-subtle);
+#installBtn:active,
+#installBtn:focus {
+  background: var(--bs-primary);
+  box-shadow: 0 0 0 3px rgba(var(--bs-secondary-rgb), 0.3);
 }
 
 /* Кнопка закрытия */
 #closePwaBanner {
-  position: absolute;
-  top: 8px;
-  right: 8px;
   background: transparent;
   color: var(--bs-secondary-color);
-  padding: 4px;
+  padding: 6px;
   font-size: 16px;
-  line-height: 1;
   width: 24px;
   height: 24px;
   display: flex;
   align-items: center;
   justify-content: center;
   border-radius: 50%;
+  cursor: pointer;
+  flex-shrink: 0;
+  transition: all 0.2s ease;
 }
 
 #closePwaBanner:hover {
@@ -1047,7 +1074,24 @@ video-container { position: relative; padding-bottom: 56.25%; padding-top: 30px;
   background: var(--bs-tertiary-bg);
 }
 
-/* Адаптация для темной темы */
+#closePwaBanner:active,
+#closePwaBanner:focus {
+  box-shadow: 0 0 0 3px rgba(var(--bs-secondary-color-rgb), 0.2);
+}
+
+/* Темная тема для кнопок */
+.dark-mode #installBtn,
+.bg-dark #installBtn,
+[data-bs-theme="dark"] #installBtn {
+  background: #136857;
+}
+
+.dark-mode #installBtn:hover,
+.bg-dark #installBtn:hover,
+[data-bs-theme="dark"] #installBtn:hover {
+  background: var(--bs-primary);
+}
+
 .dark-mode #closePwaBanner,
 .bg-dark #closePwaBanner,
 [data-bs-theme="dark"] #closePwaBanner {
@@ -1059,4 +1103,51 @@ video-container { position: relative; padding-bottom: 56.25%; padding-top: 30px;
 [data-bs-theme="dark"] #closePwaBanner:hover {
   color: var(--bs-emphasis-color-dark);
   background: var(--bs-tertiary-bg-dark);
+}
+
+/* Адаптация для мобильных устройств */
+@media (max-width: 400px) {
+  .pwa-install {
+    flex-wrap: wrap;
+    padding-bottom: 12px;
+  }
+  
+  .pwa-install-content {
+    width: 100%;
+    margin-right: 0;
+  }
+  
+  .pwa-install .actions {
+    width: 100%;
+    justify-content: flex-end;
+    order: 2;
+  }
+  
+  #closePwaBanner {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+  }
+  
+  .pwa-install .text h2,
+  .pwa-install .text p {
+    padding-right: 24px; /* Чтобы текст не заходил под кнопку закрытия */
+  }
+}
+
+/* Особый случай для очень узких экранов */
+@media (max-width: 300px) {
+  .pwa-install {
+    min-width: auto;
+    width: calc(100% - 32px);
+  }
+  
+  .pwa-install .actions {
+    flex-direction: column;
+    width: 100%;
+  }
+  
+  #installBtn {
+    width: 100%;
+  }
 }

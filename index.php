@@ -1110,28 +1110,45 @@ foreach ($slides as $index => $slide) {
         </footer>
 		
 
-		<pwa-install
-  icon="/assets/img/pwa-bold-monocolor-192.png"
-  name="Dhamma.Gift"
-  description="Установите для быстрого доступа, поиска и словаря"
-  lang="ru"
-  manual-apple="true"
-  manual-chrome="true">
-</pwa-install>
+<div id="pwa-banner" class="pwa-install hidden">
+  <img src="/assets/img/pwa-bold-monocolor-192.png alt="App Icon" class="icon">
+  <div class="text">
+    <h2>Установить Dhamma.Gift</h2>
+    <p>Добавьте Dhamma.Gift на главный экран для быстрого доступа.</p>
+  </div>
+  <div class="actions">
+    <button id="installBtn">Установить</button>
+    <button id="closePwaBanner">✕</button>
+  </div>
+</div>
 
 
 <script>
-  const pwa = document.querySelector('pwa-install');
+  let deferredPrompt;
+  const banner = document.getElementById('pwa-banner');
+  const installBtn = document.getElementById('installBtn');
+  const closeBtn = document.getElementById('closePwaBanner');
 
-  let visits = parseInt(localStorage.getItem('visits') || '0', 10);
-  visits++;
-  localStorage.setItem('visits', visits);
+  window.addEventListener('beforeinstallprompt', (e) => {
+    e.preventDefault();
+    deferredPrompt = e;
+    banner.classList.remove('hidden');
+  });
 
-  if (visits === 3) {
-    window.addEventListener('load', () => {
-      pwa.showDialog(); // ручной вызов баннера
-    });
-  }
+  installBtn.addEventListener('click', async () => {
+    if (deferredPrompt) {
+      deferredPrompt.prompt();
+      const { outcome } = await deferredPrompt.userChoice;
+      if (outcome === 'accepted') {
+        banner.classList.add('hidden');
+      }
+      deferredPrompt = null;
+    }
+  });
+
+  closeBtn.addEventListener('click', () => {
+    banner.classList.add('hidden');
+  });
 </script>
 
 

@@ -227,7 +227,7 @@ initPwaBanner();
 let deferPrompt = null;
 let banner = null;
 let installBtn = null;
-let closeBtn = null;
+let closeBtnPWA = null;
 const pwaBannerShownKey = 'pwaBannerShown';
 
 // Функция создания баннера
@@ -256,11 +256,11 @@ function createPwaBanner() {
   // Инициализируем элементы
   banner = document.getElementById('pwa-banner');
   installBtn = document.getElementById('installBtn');
-  closeBtn = document.getElementById('closePwaBanner');
+  closeBtnPWA = document.getElementById('closePwaBanner');
   
   // Назначаем обработчики событий
   if (installBtn) installBtn.addEventListener('click', installPwa);
-  if (closeBtn) closeBtn.addEventListener('click', hidePwaBanner);
+  if (closeBtnPWA) closeBtnPWA.addEventListener('click', hidePwaBanner);
 }
 
 // Функция скрытия баннера

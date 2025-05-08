@@ -595,22 +595,20 @@ document.head.appendChild(ogDescriptionMeta);
       $.ajax({
       url: "/read/php/api.php?fromjs=" +texttype +"/" +slugReady +"&type=A"
     }).done(function(data) {
-      const nextArray = data.split(" ");
+      let nextArray = data.split(" ");
       let nextSlug = nextArray[0];
-let nextSlugPrint = nextSlug.replace(/pli-tv-|b[ui]-vb-/g, "");
-
-   //   let nextName = nextArray[1];
+      let nextSlugPrint = nextSlug.replace(/pli-tv-|b[ui]-vb-/g, "");
 let nextName = nextArray.slice(1).join(" ");
 nextName = nextName.replace(/[0-9.]/g, '');
-
-      if (nextName === undefined) {
+     if (nextName === undefined) {
       var nextPrint = nextSlugPrint;
       } else {
      var nextPrint = nextSlugPrint +' ' +nextName;
      }
-     console.log(nextPrint);
+        let finder = params.get("s");
          next.innerHTML = nextSlug
-        ? `<a href="?q=${nextSlug}">${nextPrint.trim()}<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" id="body_1" width="15" height="11">
+          ? `<a href="?q=${nextSlug}${params.has("s") ? `&s=${finder}` : ""}">${nextPrint.trim()}
+        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" id="body_1" width="15" height="11">
 
       <g transform="matrix(0.021484375 0 0 0.021484375 2 -0)">
         <g>
@@ -629,30 +627,29 @@ nextName = nextName.replace(/[0-9.]/g, '');
       const prevArray = data.split(" ");
       let prevSlug = prevArray[0];
       let prevSlugPrint = prevSlug.replace(/pli-tv-|b[ui]-vb-/g, "");
-
-//      let prevName = prevArray[1];
 let prevName = prevArray.slice(1).join(" ");
 prevName = prevName.replace(/[0-9.]/g, '');
-
-        if (prevName === undefined) {
+      
+    if (prevName === undefined) {
     var prevPrint = prevSlugPrint;
       } else {
         var prevPrint = prevSlugPrint +' ' +prevName;
      }
-      previous.innerHTML = prevSlug
-        ? `<a href="?q=${prevSlug}"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" id="body_1" width="15" height="11">
+      let finder = params.get("s");
 
+    previous.innerHTML = prevSlug
+  ? `<a href="?q=${prevSlug}${params.has("s") ? `&s=${finder}` : ""}">
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" id="body_1" width="15" height="11">
       <g transform="matrix(0.021484375 0 0 0.021484375 2 -0)">
         <g>
-              <path d="M353 450C 349.02106 450.0018 345.20444 448.4226 342.39 445.61L342.39 445.61L157.5 260.71C 151.64429 254.8525 151.64429 245.3575 157.5 239.5L157.5 239.5L342.39 54.6C 346.1788 50.809414 351.70206 49.328068 356.8792 50.713974C 362.05634 52.099876 366.10086 56.14248 367.4892 61.318974C 368.87753 66.49547 367.3988 72.01941 363.61002 75.81L363.61002 75.81L189.32 250.1L363.61 424.39C 367.90283 428.6801 369.18747 435.13425 366.8646 440.74118C 364.5417 446.34808 359.06903 450.00275 353 450z" stroke="none" fill="#8f8f8f" fill-rule="nonzero" />
+          <path d="M353 450C 349.02106 450.0018 345.20444 448.4226 342.39 445.61L342.39 445.61L157.5 260.71C 151.64429 254.8525 151.64429 245.3575 157.5 239.5L157.5 239.5L342.39 54.6C 346.1788 50.809414 351.70206 49.328068 356.8792 50.713974C 362.05634 52.099876 366.10086 56.14248 367.4892 61.318974C 368.87753 66.49547 367.3988 72.01941 363.61002 75.81L363.61002 75.81L189.32 250.1L363.61 424.39C 367.90283 428.6801 369.18747 435.13425 366.8646 440.74118C 364.5417 446.34808 359.06903 450.00275 353 450z" stroke="none" fill="#8f8f8f" fill-rule="nonzero" />
         </g>
       </g>
       </svg>${prevPrint.trim()}</a>`
-        : ""; 
+  : "";
         previous2.innerHTML = previous.innerHTML;
       }
       );
-
     }
     );
     })

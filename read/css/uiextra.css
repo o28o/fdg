@@ -246,15 +246,17 @@ margin-left: 6px;
 }
 
 /* Стили для колонок (скрыты по умолчанию) */
-.column-view .pli-lang, .column-view .rus-lang { /* , .column-view .eng-langДобавлено eng-lang */
+.column-view > .pli-lang, 
+.column-view > .rus-lang {
   display: inline-block;
   width: 48%;
   vertical-align: top;
-  text-align: left; /* Оба текста выравниваются по левому краю */
+  text-align: left;
 }
 
+
 /* Разделительная линия между колонками */
-.column-view .pli-lang {
+.column-view > .pli-lang {
   padding-right: 10px;
   max-width: 48%; /* Ограничение по ширине для левой колонки */
   word-wrap: break-word; /* Перенос длинных слов */

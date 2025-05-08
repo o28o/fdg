@@ -86,12 +86,12 @@
                         const cache = await caches.open(cacheName);
                         const requests = await cache.keys();
                         for (const request of requests) {
-                            if (request.url.includes('/assets/') || request.url.includes('suttacentral.net/')) {
+                            if (request.url.includes('/assets/') || request.url.includes('/read/') || request.url.includes('suttacentral.net/')) {
                                 await cache.delete(request);
                             }
                         }
                     }
-                    statusEl.innerHTML += '<br>✅ Кеш /assets/ и suttacentral.net/ удалён';
+                    statusEl.innerHTML += '<br>✅ Кеш /assets/, /read/ и suttacentral.net/ удалён';
                 }
 
                 // 6. Принудительно перезагружаем страницу без кеша

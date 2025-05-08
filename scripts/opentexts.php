@@ -151,8 +151,29 @@ if (isset($_GET['reader'])) {
  */		}
  
  
- 
- 
+ $anchor = '';
+$requestUri = $_SERVER['REQUEST_URI'] ?? '';
+
+// Если в URL есть #, берём часть после него
+if (strpos($requestUri, '#') !== false) {
+    $anchor = '#' . explode('#', $requestUri)[1];
+}
+
+
+/**
+ * Перенаправляет на указанный URL с поддержкой GET-параметров и якоря.
+ *
+ * @param string $readerlang Базовый URL (например, 'https://dhamma.gift/ru/')
+ * @param string $stringForOpen Основной параметр (например, 'mn14')
+ * @param string|null $s Дополнительный параметр (опционально)
+ * @param string $anchor Якорь (например, '#4.2')
+ */
+function redirectWithAnchor($readerlang, $stringForOpen, $s = null, $anchor = '') {
+    $url = "$readerlang?q=$stringForOpen" . (!empty($s) ? "&s=$s" : "") . $anchor;
+    echo "<script>window.location.href='$url';</script>";
+    exit; // Желательно завершать выполнение после редиректа
+}
+
  
    	  	if ($_SERVER["REQUEST_METHOD"] == "GET") {
    	  	$q = test_input($_GET["q"]);
@@ -221,9 +242,7 @@ $stringForOpen = preg_replace('/([0-9]) ([0-9])/', '$1.$2', $stringForOpen);
 $stringForOpen = preg_replace('/([0-9])\. ([0-9])/', '$1.$2', $stringForOpen);
 if (preg_match("/^(ja|snp|iti|thig|thag)[0-9].*/i", $stringForOpen)) {
   
-echo "<script>window.location.href='$readerlang?q=$stringForOpen" . (!empty($s) ? "&s=$s" : "") . "';</script>";
-  exit();
-	  
+redirectWithAnchor($readerlang, $stringForOpen, $s ?? null, $anchor); 	  
 //for patimokkha and vinaya vibhanga
 } else if (preg_match("/pli-tv-/i", $stringForOpen)) {
   
@@ -235,13 +254,12 @@ echo "<script>window.location.href='$readerlang?q=$stringForOpen" . (!empty($s) 
         session_write_close();
     }
 	
-	echo "<script>window.location.href='$readerlang?q=$stringForOpen" . (!empty($s) ? "&s=$s" : "") . "';</script>";
-  exit();
+redirectWithAnchor($readerlang, $stringForOpen, $s ?? null, $anchor); 
 	  
 } else if (preg_match("/^(bu|bi)-pm$/i", $stringForOpen)) {
 //echo "<script>alert('case 1');</script>";	
-	echo "<script>window.location.href='$readerlang?q=$stringForOpen" . (!empty($s) ? "&s=$s" : "") . "';</script>";
-	  exit(); 
+redirectWithAnchor($readerlang, $stringForOpen, $s ?? null, $anchor); 
+
 }  else if (preg_match("/^(bu|pm|bpm|bupm)$/i", $stringForOpen)) {
   
 	//echo "<script>window.location.href='$readerlang?q=bu-{$stringForOpen}';</script>";	
@@ -289,13 +307,13 @@ if (empty($stringForOpen)) {
 
   $stringForOpen = str_replace('bi-vb-', 'bi-', $stringForOpen);
     $stringForOpen = str_replace('bu-vb-', 'bu-', $stringForOpen);
-    	echo "<script>window.location.href='$readerlang?q=$stringForOpen" . (!empty($s) ? "&s=$s" : "") . "';</script>";
-	  exit(); 
+ redirectWithAnchor($readerlang, $stringForOpen, $s ?? null, $anchor); 
+
 } else if (preg_match("/(bu|bi)-(vb|[a-z][a-z]*)/i", $stringForOpen)) {
 //echo "<script>alert('case 4');</script>";	
  $stringForOpen = $stringForOpen . "1";
- 	echo "<script>window.location.href='$readerlang?q=$stringForOpen" . (!empty($s) ? "&s=$s" : "") . "';</script>";
-	  exit(); 
+ 	redirectWithAnchor($readerlang, $stringForOpen, $s ?? null, $anchor); 
+
 } else if (preg_match("/(pj|ss|ay|np|pc|pd|sk|as)([0-9]{1,3}|[0-9]-[0-9])/i", $stringForOpen)) {
  // echo "<script>alert('case 5');</script>";	
   $stringForOpen = "bu-" . $stringForOpen;
@@ -321,9 +339,7 @@ if (empty($stringForOpen)) {
 
   $stringForOpen = str_replace('bi-vb-', 'bi-', $stringForOpen);
     $stringForOpen = str_replace('bu-vb-', 'bu-', $stringForOpen);
-    	echo "<script>window.location.href='$readerlang?q=$stringForOpen" . (!empty($s) ? "&s=$s" : "") . "';</script>";
-	  exit(); 
-
+    redirectWithAnchor($readerlang, $stringForOpen, $s ?? null, $anchor); 
 
 }
 /* ru with arg */ 
@@ -500,8 +516,8 @@ if ((  $numberblock <= $latestrusmn ) && ( preg_match("/mn/i",$letterblock) ) ){
 $defaultlang = 'lang=pli-rus';
 }
 $stringForOpen = strtolower($stringForOpen);
-	echo "<script>window.location.href='$readerlang?q=$stringForOpen" . (!empty($s) ? "&s=$s" : "") . "';</script>";
-  exit();
+redirectWithAnchor($readerlang, $stringForOpen, $s ?? null, $anchor); 
+
 }
 // &$defaultlang
 if(preg_match("/^(mn|dn|dhp|iti)[0-9]{1,3}b$/i",$stringForOpen) || preg_match("/^(snp|sn|an|ud|thig|thag)[0-9]{0,2}( |\.)[0-9]{0,3}b$/i",$stringForOpen) || preg_match("/^(snp|sn|an|ud|dhp)[0-9]{0,2}( |\.)[0-9]{0,3}-[0-9]{0,3}b$/i",$stringForOpen)|| preg_match("/^dhp[0-9]{0,3}-[0-9]{0,3}b$/i",$stringForOpen)){
@@ -509,8 +525,12 @@ if(preg_match("/^(mn|dn|dhp|iti)[0-9]{1,3}b$/i",$stringForOpen) || preg_match("/
   $forbwlink = strtolower(preg_replace("/b$/i","","$stringForOpen"));
   $bwprefix = strtolower(substr($forbwlink,0,2));
   
-  echo "<script>window.location.href='/bw/{$bwprefix}/{$forbwlink}.html';</script>";
+//  echo "<script>window.location.href='/bw/{$bwprefix}/{$forbwlink}.html';</script>";
+
+ echo "<script>window.location.href='/bw/{$bwprefix}/{$forbwlink}.html" . (!empty($s) ? "&s=$s" : "") . "$anchor';</script>";
+ 
   exit(); 
 }
+
 ?> 
 

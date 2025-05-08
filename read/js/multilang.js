@@ -605,7 +605,8 @@ nextName = nextName.replace(/[0-9.]/g, '');
      }     
         let finder = params.get("s");
          next.innerHTML = nextSlug
-        ? `<a href="?q=${nextSlug}&s=${finder}">${nextPrint.trim()}<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" id="body_1" width="15" height="11">
+          ? `<a href="?q=${nextSlug}${params.has("s") ? `&s=${finder}` : ""}">${nextPrint.trim()}
+        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" id="body_1" width="15" height="11">
 
       <g transform="matrix(0.021484375 0 0 0.021484375 2 -0)">
         <g>

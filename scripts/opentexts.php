@@ -151,29 +151,33 @@ if (isset($_GET['reader'])) {
  */		}
  
  
- $anchor = '';
-$requestUri = $_SERVER['REQUEST_URI'] ?? '';
-
-// Если в URL есть #, берём часть после него
-if (strpos($requestUri, '#') !== false) {
-    $anchor = '#' . explode('#', $requestUri)[1];
-}
-
-
 /**
- * Перенаправляет на указанный URL с поддержкой GET-параметров и якоря.
- *
+ * Перенаправляет на URL, сохраняя якорь (#...) из текущего запроса или реферера.
+ * 
  * @param string $readerlang Базовый URL (например, 'https://dhamma.gift/ru/')
  * @param string $stringForOpen Основной параметр (например, 'mn14')
  * @param string|null $s Дополнительный параметр (опционально)
- * @param string $anchor Якорь (например, '#4.2')
  */
-function redirectWithAnchor($readerlang, $stringForOpen, $s = null, $anchor = '') {
-    $url = "$readerlang?q=$stringForOpen" . (!empty($s) ? "&s=$s" : "") . $anchor;
-    echo "<script>window.location.href='$url';</script>";
-    exit; // Желательно завершать выполнение после редиректа
-}
+function redirectWithAnchor($readerlang, $stringForOpen, $s = null) {
+    // Пытаемся получить якорь из текущего URL (REQUEST_URI)
+    $anchor = '';
+    $requestUri = $_SERVER['REQUEST_URI'] ?? '';
+    
+    if (strpos($requestUri, '#') !== false) {
+        $anchor = '#' . explode('#', $requestUri)[1];
+    } 
+    // Если якоря нет в текущем URL, проверяем реферер
+    elseif (!empty($_SERVER['HTTP_REFERER']) && strpos($_SERVER['HTTP_REFERER'], '#') !== false) {
+        $anchor = '#' . explode('#', $_SERVER['HTTP_REFERER'])[1];
+    }
 
+    // Формируем URL с параметрами и якорем
+    $url = "$readerlang?q=$stringForOpen" . (!empty($s) ? "&s=$s" : "") . $anchor;
+    
+    // Редирект
+    echo "<script>window.location.href='$url';</script>";
+    exit;
+}
  
    	  	if ($_SERVER["REQUEST_METHOD"] == "GET") {
    	  	$q = test_input($_GET["q"]);

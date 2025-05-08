@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Очистка кеша и данных</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 50px;
+            background-color: #f5f5f5;
+        }
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            color: #e74c3c;
+        }
+        .loading {
+            margin: 20px 0;
+            font-size: 18px;
+            color: #555;
+        }
+        .success {
+            color: #27ae60;
+            font-weight: bold;
+        }
+        .error {
+            color: #e74c3c;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>⚡ Очистка данных сайта</h1>
+        <p class="loading" id="status">Идёт очистка кеша, cookies и других данных...</p>
+    </div>
+
+    <script>
+        async function clearAllData() {
+            const statusEl = document.getElementById('status');
+            
+            try {
+                // 1. Очищаем localStorage и sessionStorage
+                localStorage.clear();
+                sessionStorage.clear();
+                statusEl.innerHTML += '<br>✅ localStorage/sessionStorage очищены';
+
+                // 2. Удаляем все cookies
+                document.cookie.split(';').forEach(cookie => {
+                    const [name] = cookie.trim().split('=');
+                    document.cookie = `${name}=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/; domain=${window.location.hostname}`;
+                });
+                statusEl.innerHTML += '<br>✅ Cookies удалены';
+
+                // 3. Очищаем IndexedDB
+                if (window.indexedDB) {
+                    const dbs = await indexedDB.databases();
+                    await Promise.all(dbs.map(db => indexedDB.deleteDatabase(db.name)));
+                    statusEl.innerHTML += '<br>✅ IndexedDB очищен';
+                }
+
+                // 4. Удаляем кеш Service Worker и Cache API
+                if ('serviceWorker' in navigator) {
+                    const registrations = await navigator.serviceWorker.getRegistrations();
+                    await Promise.all(registrations.map(reg => reg.unregister()));
+                    statusEl.innerHTML += '<br>✅ Service Workers удалены';
+                }
+
+                if ('caches' in window) {
+                    const cacheNames = await caches.keys();
+                    await Promise.all(cacheNames.map(name => caches.delete(name)));
+                    statusEl.innerHTML += '<br>✅ Кеш (Cache API) очищен';
+                }
+
+                // 5. Удаляем специфичные кеши (/assets/, suttacentral.net и др.)
+                if ('caches' in window) {
+                    const cacheNames = await caches.keys();
+                    for (const cacheName of cacheNames) {
+                        const cache = await caches.open(cacheName);
+                        const requests = await cache.keys();
+                        for (const request of requests) {
+                            if (request.url.includes('/assets/') || request.url.includes('suttacentral.net/')) {
+                                await cache.delete(request);
+                            }
+                        }
+                    }
+                    statusEl.innerHTML += '<br>✅ Кеш /assets/ и suttacentral.net/ удалён';
+                }
+
+                // 6. Принудительно перезагружаем страницу без кеша
+                statusEl.innerHTML += '<br><span class="success">Всё очищено! Перенаправляю...</span>';
+                setTimeout(() => {
+                    window.location.href = '/' + (window.location.search || '?') + '&nocache=' + Date.now();
+                }, 1500);
+
+            } catch (error) {
+                statusEl.innerHTML += `<br><span class="error">Ошибка: ${error.message}</span>`;
+                console.error('Ошибка очистки:', error);
+            }
+        }
+
+        // Запускаем очистку при загрузке страницы
+        window.onload = clearAllData;
+    </script>
+</body>
+</html>

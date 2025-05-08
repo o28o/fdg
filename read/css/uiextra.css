@@ -469,3 +469,76 @@ margin-left: 6px;
         opacity: 0;
     }
 }
+
+
+
+/* Firefox-specific styles */
+@-moz-document url-prefix() {
+  .voice-player {
+    display: none;
+    position: fixed;
+    top: 25%;
+    left: 50%;
+    transform: translateX(-50%);
+    background: white;
+    padding: 20px;
+    border: 1px solid #ddd;
+    z-index: 1000;
+    min-width: 350px;
+    max-width: 90vw;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    border-radius: 24px;
+  }
+
+  .voice-dropdown.active .voice-player {
+    display: block;
+  }
+
+  .dark .voice-player {
+    background: #333;
+    border-color: #555;
+    color: #fff;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.5);
+  }
+
+  /* Улучшение для Firefox Mobile */
+  .voice-link:focus {
+    outline: none;
+  }
+}
+
+/* Общие улучшения для всех браузеров */
+.voice-player {
+  white-space: nowrap; /* Предотвращаем перенос строк */
+}
+
+.player-links {
+  display: inline-block;
+  margin-top: 10px;
+}
+
+.player-links a {
+  margin: 0 5px;
+  white-space: nowrap;
+}
+
+/* Для мобильных устройств - делаем окно уже */
+@media (max-width: 480px) {
+  .voice-player {
+    min-width: 280px;
+    padding: 15px;
+    white-space: normal;
+  }
+
+  .player-links {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 5px;
+  }
+
+  .player-links a {
+    margin: 2px;
+  }
+}
+

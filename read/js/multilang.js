@@ -663,7 +663,7 @@ prevName = prevName.replace(/[0-9.]/g, '');
 var xhr = new XMLHttpRequest();
 var urlParams = new URLSearchParams(window.location.search);
 urlParams.set('q', slug);
-xhr.open("GET", '/ru/?' + urlParams.toString(), true);
+xhr.open("GET", '/ru/?p=-kn&' + urlParams.toString(), true);
 xhr.send();
 
 //var xhr = new XMLHttpRequest();
@@ -681,7 +681,7 @@ xhr.onreadystatechange = function() {
           !xhr.responseText.includes("404") &&
           xhr.responseText.trim().length > 0) {
         console.log(xhr.responseText);
-        window.location.href = "/ru/?q=" + encodeURIComponent(slug);
+        window.location.href = "/ru/?p=-kn&q=" + encodeURIComponent(slug);
       } else {
         console.log('Page not found or empty response');
       }

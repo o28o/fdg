@@ -261,12 +261,6 @@ margin-left: 6px;
   box-sizing: border-box; /* Учитываем внутренние отступы и границы */
 }
 
-.variant .pli-lang {
-  width: 100%; /* или 100% */
-  display: block;
-}
-
-
 .column-view .rus-lang { 
   padding-left: 10px;
   box-sizing: border-box; /* Учитываем внутренние отступы и границы , .column-view .eng-lang*/
@@ -286,6 +280,21 @@ margin-left: 6px;
 .column-view .rus-lang:empty  {
   display: none;
 }	
+
+
+.pli-lang.variant {
+  width: auto;
+  max-width: none;
+  display: inline;
+}
+
+.column-view .pli-lang:not(.variant),
+.column-view .rus-lang:not(.variant) {
+  display: inline-block;
+  width: 48%;
+  vertical-align: top;
+  text-align: left;
+}
 
 .greyedout {
   color: #5a5a5a !important;

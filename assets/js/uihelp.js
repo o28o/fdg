@@ -244,7 +244,7 @@ function createPwaBanner() {
   // Создаем HTML баннера
   const bannerHTML = `
     <div id="pwa-banner" class="pwa-install hidden">
-      <img src="/assets/img/pwa-bold-monocolor-192.png" alt="App Icon" class="icon">
+      <img src="/assets/img/icon-192x192.png" alt="App Icon" class="icon">
       <div class="text">
         <h2 class="pwa-title">Install Dhamma.Gift</h2>
         <p class="pwa-description">Add to home screen for quick access</p>

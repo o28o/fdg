@@ -80,7 +80,6 @@ $.ajax({
   if (slug.match(/bu-pm|bi-pm/)) {
    translator = "jayasaro";
  } 
-      console.log('inside', translator);
 
 //if (slug.match(/^mn([1-9]|1[0-9]|2[0-1])$/)) {
  
@@ -104,7 +103,6 @@ if ( texttype === "vinaya")
 //var engtrnpath = `${Sccopy}/sc-data/sc_bilara_data/translation/${pathLang}/${translator}/${texttype}/${slugReady}_translation-${pathLang}-${translator}.json`;
   var engtrnpath = `${Sccopy}/sc-data/sc_bilara_data/translation/en/sujato/${texttype}/${slugReady}_translation-en-sujato.json`;
 }
-console.log('engtrnpath line108', engtrnpath);
 
 var htmlpath = `${Sccopy}/sc-data/sc_bilara_data/html/pli/ms/${texttype}/${slugReady}_html.json`;
 
@@ -127,30 +125,23 @@ const anchorURL = new URL(currentURL).hash; // Убираем символ "#"
  var trnpath = thtrnpath; 
  let language = "pli-rus";
 // scLink += ifRus; 
-  console.log(trnpath);
 } else if (slug.includes("sn")) { 
   var trnpath = thtrnpath; 
-  console.log(trnpath);
 //  scLink += ifRus; 
 } else if (slug.includes("an")) { 
   var trnpath = thtrnpath; 
-  console.log(trnpath);
 //  scLink += ifRus; 
 } else if (slug.includes("dn")) { 
   var trnpath = thtrnpath; 
  // scLink += ifRus; 
-  console.log(trnpath);
 }*/
 
  if (snranges.indexOf(slug) !== -1) { 
   var trnpath = thtrnpath; 
-  console.log(trnpath);
 } else if (anranges.indexOf(slug) !== -1) { 
   var trnpath = thtrnpath; 
-  console.log(trnpath);
 } else if (dnranges.indexOf(slug) !== -1) { 
   var trnpath = thtrnpath; 
-  console.log(trnpath);
 }
 else if (slug.match(/ja/)) {
   let language = "pli";
@@ -161,11 +152,9 @@ else if (slug.match(/ja/)) {
   } else if (slugNumber > 70) {
     var trnpath = `${Sccopy}/sc-data/sc_bilara_data/root/pli/ms/${texttype}/${slugReady}_root-pli-ms.json`;
   }
-  // console.log('ja case ', rootpath, trnpath, htmlpath);
 } else if ( texttype === "sutta" ) {
   let translator = "sujato";
   const pathLang = "en";
-  // console.log(`${Sccopy}/sc-data/sc_bilara_data/translation/${pathLang}/${translator}/${texttype}/${slugReady}_translation-${pathLang}-${translator}.json`);
   var trnpath = `${Sccopy}/sc-data/sc_bilara_data/translation/${pathLang}/${translator}/${texttype}/${slugReady}_translation-${pathLang}-${translator}.json`;
 } else if (slug.match(/bu-pm|bi-pm/)) {
   
@@ -192,16 +181,13 @@ var rootpath = `${Sccopy}/sc-data/sc_bilara_data/root/pli/ms/${texttype}/${slug}
     var engtrnpath = `/assets/texts/${texttype}/${slug}_translation-en-brahmali.json`;
 
     var htmlpath = `/assets/texts/${texttype}/${slug}_html.json`;
-    console.log(rootpath, trnpath, htmlpath);
+    //console.log(rootpath, trnpath, htmlpath);
 } else if ( texttype === "vinaya" ) {
 	
   let translator = "brahmali";
 
   const pathLang = "en";
   var trnpath = `${Sccopy}/sc-data/sc_bilara_data/translation/${pathLang}/${translator}/${texttype}/${slugReady}_translation-${pathLang}-${translator}.json`;
-  console.log('vinaya case');
-  console.log(trnpath);
-  console.log(engtrnpath);
 
 }  
 
@@ -234,8 +220,6 @@ const rootResponse = fetch(rootpath)
   });
 
 /*rootResponse.then(data => {
-  console.log('Final data:', data);
-  console.log('Used rootpath:', rootpath); 
 });
 
 const translationResponse = fetch(thtrnpath)
@@ -580,7 +564,7 @@ function findTextUrl(nikaya, subdivision, textnum) {
 }
 
 let textUrl = getTextUrl(slug);
-console.log("Ссылка на", slug + ":", textUrl);
+//console.log("Ссылка на", slug + ":", textUrl);
 if (textUrl) {
 scLink += `<a target="" href="${textUrl}">DPR</a> `;
 }
@@ -597,7 +581,7 @@ if ((translator === 'sujato') || (translator === 'brahmali')) {
 //<a href="/legacy.suttacentral.net/read/pi/${slug}.html">legacy.SC</a>  <a target="" href="https://voice.suttacentral.net/scv/index.html?#/sutta?search=${slug}">Voice.SC</a>
       if (linksArray[0].length >= 4) {
         scLink += linksArray[0];
-            console.log("extralinks " + linksArray[0]);
+            //console.log("extralinks " + linksArray[0]);
       } 
       scLink += "</p>"; 
 
@@ -665,6 +649,10 @@ document.head.appendChild(ogDescriptionMeta);
 
 
       toggleThePali();
+
+  let params = new URLSearchParams(document.location.search);
+
+
       
       $.ajax({
       url: "/read/php/api.php?fromjs=" +texttype +"/" +slugReady +"&type=A"
@@ -681,8 +669,11 @@ nextName = nextName.replace(/[0-9.]/g, '');
       } else {
      var nextPrint = nextSlugPrint +' ' +nextName;
      }     
+
+       let finder = params.get("s");
          next.innerHTML = nextSlug
-        ? `<a href="?q=${nextSlug}">${nextPrint.trim()}<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" id="body_1" width="15" height="11">
+          ? `<a href="?q=${nextSlug}${params.has("s") ? `&s=${finder}` : ""}">${nextPrint.trim()}
+        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" id="body_1" width="15" height="11">
 
       <g transform="matrix(0.021484375 0 0 0.021484375 2 -0)">
         <g>
@@ -691,7 +682,8 @@ nextName = nextName.replace(/[0-9.]/g, '');
       </g>
       </svg></a>`
         : "";
-        next2.innerHTML = next.innerHTML;
+
+	next2.innerHTML = next.innerHTML;
     }
     );
   
@@ -709,17 +701,21 @@ prevName = prevName.replace(/[0-9.]/g, '');
       } else {
         var prevPrint = prevSlugPrint +' ' +prevName;
      }
-      previous.innerHTML = prevSlug
-        ? `<a href="?q=${prevSlug}"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" id="body_1" width="15" height="11">
+        
+     let finder = params.get("s");
 
+    previous.innerHTML = prevSlug
+  ? `<a href="?q=${prevSlug}${params.has("s") ? `&s=${finder}` : ""}">
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" id="body_1" width="15" height="11">
       <g transform="matrix(0.021484375 0 0 0.021484375 2 -0)">
         <g>
-              <path d="M353 450C 349.02106 450.0018 345.20444 448.4226 342.39 445.61L342.39 445.61L157.5 260.71C 151.64429 254.8525 151.64429 245.3575 157.5 239.5L157.5 239.5L342.39 54.6C 346.1788 50.809414 351.70206 49.328068 356.8792 50.713974C 362.05634 52.099876 366.10086 56.14248 367.4892 61.318974C 368.87753 66.49547 367.3988 72.01941 363.61002 75.81L363.61002 75.81L189.32 250.1L363.61 424.39C 367.90283 428.6801 369.18747 435.13425 366.8646 440.74118C 364.5417 446.34808 359.06903 450.00275 353 450z" stroke="none" fill="#8f8f8f" fill-rule="nonzero" />
+          <path d="M353 450C 349.02106 450.0018 345.20444 448.4226 342.39 445.61L342.39 445.61L157.5 260.71C 151.64429 254.8525 151.64429 245.3575 157.5 239.5L157.5 239.5L342.39 54.6C 346.1788 50.809414 351.70206 49.328068 356.8792 50.713974C 362.05634 52.099876 366.10086 56.14248 367.4892 61.318974C 368.87753 66.49547 367.3988 72.01941 363.61002 75.81L363.61002 75.81L189.32 250.1L363.61 424.39C 367.90283 428.6801 369.18747 435.13425 366.8646 440.74118C 364.5417 446.34808 359.06903 450.00275 353 450z" stroke="none" fill="#8f8f8f" fill-rule="nonzero" />
         </g>
       </g>
       </svg>${prevPrint.trim()}</a>`
-        : ""; 
-        previous2.innerHTML = previous.innerHTML;
+  : "";
+
+	previous2.innerHTML = previous.innerHTML;
       }
       );
 
@@ -945,7 +941,6 @@ function showRussian() {
   suttaArea.classList.remove('column-view'); // Отключаем двухколоночный режим
 }
 function showPali() {
-  console.log("showing pali ");
   suttaArea.classList.remove("hide-pali");
   suttaArea.classList.add("hide-english");
   suttaArea.classList.add("hide-russian");
@@ -990,7 +985,6 @@ if (
   slug === 'pli-tv-bi-vb-as1-7'
 ) {
   const slugParts = slug.match(/^([a-z]+)-([a-z]+)-([a-z]+)-([a-z]+)-([a-z]+)*(\d*)/);
-  console.log('as case');
   const fixforbivb = slug.replace(/(\d+)-(\d+)/g, '');
   const bookWithoutNumber = fixforbivb.replace(/(\d+)/g, '');
   const fixforbivb2 = slug.replace(/-([a-z]+)\d+/g, '');

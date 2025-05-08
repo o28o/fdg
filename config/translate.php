@@ -44,16 +44,16 @@ $tooltippoweredby = 'Natural Intelligence, Естественный Интелл
 $tooltiptitle = 'На Pāḷi, Русском, Английском, ไทย и සිංහල ';
 $title = 'Найдите Истину';
 $tooltippli = 'Поиск на Пали по-умолчанию. По Суттам an, sn, dn, mn. Ангутара Никаи, Саньютта Никаи, Маджжхима Никаи, Дигха Никаи';
-$radiopli = 'Pāḷi*';
+$radiopli = '4 Никаи';
 $tooltipdef = 'Поиск определений понятия на Пали в 4 Никаях. Что это, какие виды бывают, какими метафорами описывается. Если в Суттах не будет результатов, то поиск автоматически проведется в определениях из Винаи. Работает только для определений данных стандартными фразами. См. в "для Продвинутых"';
 $radiodef = 'Опр';
 
 $tooltipsml = 'Поиск сравнений, метафор, символов понятия на Пали в 4 Никаях. Работает только для определений данных стандартными фразами.';
 $radiosml = 'Пдб';
 
-$tooltiptextype = '<strong>Pāḷi*</strong> - 4 Основные Никаи: Ангутара Никаи (АН), Саньютта Никаи (СН), Маджжхима Никаи (МН), Дигха Никаи (ДН). В коренных текстах (Мула). <br><br>
+$tooltiptextype = '<strong>Pāḷi*</strong> - 4 Никаи + 6 книг КН Удана (Ud), Дхаммапада (Dhp), Итивутака (Iti), Суттанипата (Snp), Тхерагатха (Thag), Тхеригатха (Thig)<br><br>
+<strong>4 Никаи</strong> - 4 Основные Никаи: Ангутара Никаи (АН), Саньютта Никаи (СН), Маджжхима Никаи (МН), Дигха Никаи (ДН). В коренных текстах (Мула). <br><br>
 <strong>Виная*</strong> - Поиск в Вибхангах Винаи и Патимоккхах на Пали и Английском. <br><br>
-<strong>+ 6 книг КН</strong> - 4 Никаи + 6 книг КН Удана (Ud), Дхаммапада (Dhp), Итивутака (Iti), Суттанипата (Snp), Тхерагатха (Thag), Тхеригатха (Thig)<br><br>
 <strong>+ вся КН</strong> - 4 Никаи + поиск на Пали во всех книгах Кхуддака Никаи.<br><br>
 <strong>+ Kd, Pvr</strong> - Виная + Кхандхаки и Паривара<br><br>
 <strong>TBW</strong> - поиск в материалах theBuddhasWords.net<br><br>
@@ -79,7 +79,8 @@ $liststd = "Все совпадения";
 $tooltipvin = 'Поиск в Винае на Пали';
 $radiovin = 'Виная*';
 $tooltipkn = 'Поиск на Пали в 4 никаях + поиск в 6 книгах Кхуддака Никаи: ud, iti, snp, dhp, thag, thig. Удана, Итивутака, Суттанипата, Дхаммапада, Тхерагатха, Тхеригатха';
-$radiokn = '+ 6 книг КН';
+$radiokn = 'Pāḷi*';
+//+ 6 книг КН
 $tooltiponl = 'X Y ... могут быть на любом расстоянии в рамках одного текста. Без этой опции (по умолчанию) поиск идёт только по рядомстоящим словам. ';
 $checkboxonl = 'Любое расстояние';
 $tooltipnonl = 'С этой опцией будут собраны тексты, которые содержат только рядомстоящие X и Y (в одной строке). По умолчанию, без этой опции поиск будет производиться на любом расстоянии в пределах одного текста.';
@@ -592,14 +593,15 @@ $tooltippoweredby = 'Natural Intelligence, Dhamma Intelligence';
 $tooltiptitle = 'In Pāḷi, English, Russian, සිංහල & ไทย';
 $title = 'Search for Truth';
 $tooltippli = 'Default search. In Suttas of AN, SN, MN, DN + partially KN. Anguttara Nikaya, Samyutta Nikaya, Majjhimma Nikaya, Digha Nikaya + partially Khudakka Nikaya';
-$radiopli = 'Pāḷi*';
+$radiopli = '4 Nikayas';
 $tooltipdef = 'Search for definitions in the 4 main Pali Nikayas. Find meanings, quantities, types, and metaphors associated with the term. Requires standard phrasing for definitions. If no results are found in Suttas, Vinaya texts are automatically searched. Study related Suttas for a comprehensive view. See "Advanced" for more details.';
 $radiodef = 'Def';
 
 $tooltipsml = 'Search for similes, metaphors, and symbols related to the search term in four main Pali Nikayas. Requires standard phrasing for definitions.';
 $radiosml = 'Sml';
 
-$tooltiptextype = '<strong>Pāḷi*</strong> - Anguttara Nikaya (AN), Samyutta Nikaya (SN), Majjhimma Nikaya (MN), Digha Nikaya (DN). Search in Root texts (Mula)
+$tooltiptextype = '<strong>Pāḷi*</strong> - 4 Nikayas + 6 KN books: Udana (Ud), Dhammapada (Dhp), Itivuttaka (Iti), Suttanipāta (Snp), Theragāthā (Thag), Therigatha (Thig)<br><br>
+<strong>4 Nikayas</strong> - Anguttara Nikaya (AN), Samyutta Nikaya (SN), Majjhimma Nikaya (MN), Digha Nikaya (DN). Search in Root texts (Mula)
 <br><br>
 <strong>Vinaya*</strong> - Search in  Vinaya Vibhangas and Patimokkhas in Pali and English. <br><br>
 <strong>+ 6 KN books</strong> - 4 Nikayas + 6 KN books: Udana (Ud), Dhammapada (Dhp), Itivuttaka (Iti), Suttanipāta (Snp), Theragāthā (Thag), Therigatha (Thig)<br><br>
@@ -629,7 +631,8 @@ $liststd = "All matches";
 $tooltipvin = 'Search in Pali Vinaya';
 $radiovin = 'Vinaya*';
 $tooltipkn = '+ search in Pali Khuddaka Nikaya: dhp, iti, ud, snp, thag, thig';
-$radiokn = '+ 6 KN books';
+$radiokn = 'Pāḷi*';
+//+ 6 KN books
 $tooltiponl = 'X Y ... Finds texts containing only both and more matches for X, Y ... Without this option only texts where X Y are standing next to each other will be found';
 $checkboxonl = 'Any distance';
 $tooltipnonl = 'Search for X Y ... on any distance within one text. By default only texts containing X Y ... next to each other will be found.';

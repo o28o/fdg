@@ -22118,6 +22118,8 @@ const resources = [...commonResources, langSpecific];
 });
 </script>
 <script src="/assets/js/paliLookup.js"></script>
+<script src="/assets/js/settings.js"></script>
+
 </body>
 <?php
 ?>  

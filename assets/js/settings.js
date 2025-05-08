@@ -1,4 +1,58 @@
 
+//установка фокуса в инпуте по нажатию / 
+document.addEventListener('keydown', function(event) {
+    // Проверяем именно символ / (код 191 или Slash)
+    if (event.key === '/' || event.code === 'Slash') {
+        // Ищем все возможные инпуты
+        const inputs = document.querySelectorAll(
+            '#paliauto[type="search"], #paliauto[type="text"], .dtsb-value.dtsb-input'
+        );
+        
+        // Если нет ни одного подходящего инпута - выходим
+        if (inputs.length === 0) return;
+        
+        // Берем первый подходящий инпут (или можно реализовать более сложную логику выбора)
+        const input = inputs[0];
+        
+        // Предотвращаем действие по умолчанию только если нашли инпут
+        event.preventDefault();
+        
+        // Фокусируемся и перемещаем курсор в конец
+        input.focus();
+        input.setSelectionRange(input.value.length, input.value.length);
+    }
+});
+
+// Отключаем перехват / когда фокус уже в инпуте
+const handleInputKeydown = (event) => {
+    if (event.key === '/' || event.code === 'Slash') {
+        event.stopPropagation();
+    }
+};
+
+// Вешаем обработчики на все существующие и будущие инпуты
+document.querySelectorAll('input').forEach(input => {
+    input.addEventListener('keydown', handleInputKeydown);
+});
+
+// Наблюдатель для динамически добавляемых инпутов
+new MutationObserver((mutations) => {
+    mutations.forEach((mutation) => {
+        mutation.addedNodes.forEach((node) => {
+            if (node.nodeName === 'INPUT') {
+                node.addEventListener('keydown', handleInputKeydown);
+            } else if (node.querySelectorAll) {
+                node.querySelectorAll('input').forEach(input => {
+                    input.addEventListener('keydown', handleInputKeydown);
+                });
+            }
+        });
+    });
+}).observe(document.body, { childList: true, subtree: true });
+
+//конец фокуса в инпуте по нажатию / 
+
+
 function loadModal(modalId, modalFile) {
     fetch(modalFile)
         .then(response => response.text())

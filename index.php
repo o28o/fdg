@@ -1398,6 +1398,8 @@ const resources = [...commonResources, langSpecific];
 });
 </script>
 
+<script src="/assets/js/settings.js"></script>
+
 </body>
 
 <?php

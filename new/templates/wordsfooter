@@ -13,29 +13,8 @@
   stateSaveParams: function(settings, data) {
     data.search.search = ''; 
   },	   
-	   dom: '<"row"lf>r<t><"row"ip><Q>',
-
-
+     dom: '<"row"lf>r<t><"row"ip><"dt-searchBuilder"Q><"buttons-row"B>',
 buttons: [
-  // Коллекция экспорта
-  {
-    extend: 'collection',
-    text: 'Export',
-    className: 'btn btn-secondary', // можно заменить на свою стилизацию
-    buttons: [
-      {
-        extend: 'copyHtml5'
-      },
-      {
-        extend: 'excelHtml5'
-      },
-      {
-        extend: 'csvHtml5'
-      }
-    ]
-  },
-
-  // Остальные кнопки — обычные
   {
     text: 'Main',
     className: 'btn btn-link',
@@ -57,6 +36,23 @@ buttons: [
       window.location.href = '/history.php';
     }
   },
+  {
+    extend: 'collection',
+    text: 'Export',
+    className: 'btn btn-link', // можно заменить на свою стилизацию
+    buttons: [
+      {
+        extend: 'copyHtml5'
+      },
+      {
+        extend: 'excelHtml5'
+      },
+      {
+        extend: 'csvHtml5'
+      }
+    ]
+  },
+
   {
     text: 'Make List',
     className: 'btn btn-link',

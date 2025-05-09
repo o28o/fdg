@@ -14,6 +14,70 @@
     data.search.search = ''; 
   },	   
 	   dom: '<"row"lf>r<t><"row"ip><Q>',
+
+
+buttons: [
+  // Коллекция экспорта
+  {
+    extend: 'collection',
+    text: 'Export',
+    className: 'btn btn-secondary', // можно заменить на свою стилизацию
+    buttons: [
+      {
+        extend: 'copyHtml5'
+      },
+      {
+        extend: 'excelHtml5'
+      },
+      {
+        extend: 'csvHtml5'
+      }
+    ]
+  },
+
+  // Остальные кнопки — обычные
+  {
+    text: 'Main',
+    className: 'btn btn-link',
+    action: function () {
+      window.location.href = "/";
+    }
+  },
+  {
+    text: 'Read',
+    className: 'btn btn-link',
+    action: function () {
+      window.location.href = "/read.php";
+    }
+  },
+  {
+    text: 'History',
+    className: 'btn btn-link',
+    action: function () {
+      window.location.href = '/history.php';
+    }
+  },
+  {
+    text: 'Make List',
+    className: 'btn btn-link',
+    action: function () {
+      window.location.href = '/assets/makelist.html';
+    }
+  },
+  {
+    text: 'Sutta Diff',
+    className: 'btn btn-link',
+    action: function () {
+      window.location.href = '/assets/diff';
+    }
+  },
+  {
+    extend: 'colvis',
+    className: 'btn btn-link',
+    text: 'Visibility'
+  }
+],
+
 	   'paging'  : true,
 	         "search": {
     "caseInsensitive": true,

@@ -101,11 +101,11 @@ function lazyLoadStandaloneScripts(lang = 'en') {
             Object.assign(loadingEl.style, {
                 position: 'fixed',
                 bottom: '20px',
-                right: '20px',
+                left: '20px',
                 padding: '10px',
                 background: 'rgba(0,0,0,0.7)',
-                color: 'white',
-                borderRadius: '5px',
+                color: 'grey',
+                borderRadius: '12px',
                 zIndex: '10000',
                 fontSize: '14px',
                 boxShadow: '0 2px 5px rgba(0,0,0,0.3)'
@@ -208,22 +208,24 @@ function lookupWordInStandaloneDict(word) {
     word = word.replace(/[’”'"]/g, "").replace(/ṁ/g, "ṃ");
    // console.log("after: ", word);
 
-    if (word in dpd_i2h) {
-        out += "<strong>" + word + '</strong><br><ul style="line-height: 1em; padding-left: 15px;">';
-        for (const headword of dpd_i2h[word]) {
-            if (headword in dpd_ebts) {
-                out += '<li>' + headword + '. ' + dpd_ebts[headword] + '</li>';
-            }
+// Создаем URL для поиска слова в словаре
+const dictSearchUrl = `https://dict.dhamma.gift/${savedDict.includes("ru") ? "ru/" : ""}search_html?q=${encodeURIComponent(word)}`;
+
+if (word in dpd_i2h) {
+    out += `<a href="${dictSearchUrl}" target="_blank" rel="noopener noreferrer" style="text-decoration: none; color: inherit;"><strong>${word}</strong></a><br><ul style="line-height: 1em; padding-left: 15px;">`;
+    for (const headword of dpd_i2h[word]) {
+        if (headword in dpd_ebts) {
+            out += '<li>' + headword + '. ' + dpd_ebts[headword] + '</li>';
         }
-        out += "</ul>";
     }
-
-    if (word in dpd_deconstructor) {
-        out += "<strong>" + word + '</strong><br><ul style="line-height: 1em; padding-left: 15px;">';
-        out += "<li>" + dpd_deconstructor[word] + "</li>";
-    }
-
     out += "</ul>";
+}
+
+if (word in dpd_deconstructor) {
+    out += `<a href="${dictSearchUrl}" target="_blank" rel="noopener noreferrer" style="text-decoration: none; color: inherit;"><strong>${word}</strong></a><br><ul style="line-height: 1em; padding-left: 15px;">`;
+    out += "<li>" + dpd_deconstructor[word] + "</li>";
+    out += "</ul>";
+}
 
     return out.replace(/ṃ/g, "ṁ");
 }
@@ -242,8 +244,8 @@ function createPopup() {
     const popup = document.createElement('div');
     popup.classList.add('popup');
     popup.style.position = 'fixed';
-    popup.style.maxWidth = '600px';
-    popup.style.maxHeight = '600px';
+    popup.style.maxWidth = '100%';
+    popup.style.maxHeight = '1200px';
     popup.style.overflow = 'hidden'; // Важно для корректного ресайза
 
     // Проверка параметров окна браузера
@@ -280,10 +282,14 @@ function createPopup() {
         popup.style.left = savedLeft;
     }
 
-    const closeBtn = document.createElement('button');
-    closeBtn.classList.add('close-btn');
-    closeBtn.innerHTML = '<img src="/assets/svg/xmark.svg" class=""></img>';
-
+const closeBtn = document.createElement('button');
+closeBtn.classList.add('close-btn');
+closeBtn.innerHTML = `
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512" width="17" height="17" fill="currentColor">
+    <path d="M342.6 150.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L192 210.7 86.6 105.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L146.7 256 41.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L192 301.3 297.4 406.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L237.3 256 342.6 150.6z"/>
+  </svg>
+`;
+    
     // Создаем кнопку "Search with dhamma.gift"
     const openBtn = document.createElement('a');
     openBtn.classList.add('open-btn');
@@ -311,6 +317,30 @@ openBtn.style.color = 'rgba(255, 255, 255, 0.8)'; // Белый с неболь�
             <path d="M505 442.7l-99.7-99.7c28.4-35.3 45.7-79.8 45.7-128C451 98.8 352.2 0 224 0S-3 98.8-3 224s98.8 224 224 224c48.2 0 92.7-17.3 128-45.7l99.7 99.7c6.2 6.2 14.4 9.4 22.6 9.4s16.4-3.1 22.6-9.4c12.5-12.5 12.5-32.8 0-45.3zM224 384c-88.4 0-160-71.6-160-160S135.6 64 224 64s160 71.6 160 160-71.6 160-160 160z"/>
         </svg>
     `;
+
+const dictBtn = document.createElement('a');
+dictBtn.classList.add('dict-btn');
+dictBtn.style.position = 'absolute';
+dictBtn.style.top = '10px';
+dictBtn.style.right = '80px'; // Располагаем левее существующей кнопки
+dictBtn.style.background = 'rgba(45, 62, 80, 0.6)';
+dictBtn.style.color = 'rgba(255, 255, 255, 0.8)';
+dictBtn.style.cursor = 'pointer';
+dictBtn.style.width = '30px';
+dictBtn.style.height = '30px';
+dictBtn.style.borderRadius = '50%';
+dictBtn.style.display = 'flex';
+dictBtn.style.alignItems = 'center';
+dictBtn.style.justifyContent = 'center';
+dictBtn.style.textDecoration = 'none';
+dictBtn.target = '_blank';
+dictBtn.title = 'Open in dict.dhamma.gift';
+
+// Заменяем SVG код на использование внешнего файла
+dictBtn.innerHTML = `
+    <img src="/assets/svg/dpd-logo-dark.svg" width="18" height="18" >
+`;
+
 
     const iframe = document.createElement('iframe');
     iframe.src = '';
@@ -357,6 +387,7 @@ openBtn.style.color = 'rgba(255, 255, 255, 0.8)'; // Белый с неболь�
     `;
 
     popup.appendChild(header);
+    popup.appendChild(dictBtn);
     popup.appendChild(openBtn);
     popup.appendChild(closeBtn);
     popup.appendChild(iframe);
@@ -383,9 +414,8 @@ openBtn.style.color = 'rgba(255, 255, 255, 0.8)'; // Белый с неболь�
     if (isFirstDrag) {
         popup.style.top = '50%';
         popup.style.left = '50%';
-        popup.style.width = '80%';
-        popup.style.maxWidth = '600px';
-        popup.style.height = '80%';
+        popup.style.width = '749px';
+        popup.style.height = '600px';
         popup.style.transform = 'translate(-50%, -50%)';
     }
 
@@ -629,9 +659,17 @@ if (translation) {
     document.body.removeChild(tempDiv);
     
     // Устанавливаем минимальную и максимальную высоту
-    const minHeight = 100; // Минимальная высота popup
-    const maxHeight = window.innerHeight * 0.8; // Максимальная высота (80% окна)
+    let minHeight = 100; // Минимальная высота popup
+    const maxHeight = window.innerHeight * 0.95; 
     
+   if (dictUrl === "standalonebw" || dictUrl === "standalonebwru") {
+        minHeight = 100; // Минимальная высота для standalone
+    } else {
+const screenHeight = window.innerHeight;
+minHeight = (screenHeight * 0.8 < 600) ? screenHeight * 0.8 : 600;
+
+    }
+
     // Вычисляем конечную высоту
     let finalHeight = Math.min(Math.max(contentHeight + 20, minHeight), maxHeight);
     
@@ -694,6 +732,10 @@ if (translation) {
                 const openBtn = document.querySelector('.open-btn');
                 const wordForSearch = cleanedWord.replace(/'ti/, ''); // Исправил на replace
                 openBtn.href = `${dhammaGift}${encodeURIComponent(wordForSearch)}${dgParams}`;
+
+                const dictBtn = document.querySelector('.dict-btn');
+                const dictSearchUrl = `https://dict.dhamma.gift/${savedDict.includes("ru") ? "ru/" : ""}search_html?q=${encodeURIComponent(wordForSearch)}`;
+                dictBtn.href = dictSearchUrl;
 
 
 function showSearchButton() {

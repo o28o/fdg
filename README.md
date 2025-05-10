@@ -1,4 +1,4 @@
-# fdg 
+# dg 
 # dhamma.gift - Liberation Search Engine
 # online version
 Grep-based search in all Texts of Pali Suttanta and Vinaya in 4 languages: Pali, English, Russian, Thai and Sinhala. Little script that will or at least might change Buddhism to better.
@@ -11,8 +11,8 @@ Perfect for those who are looking for Awakening and study Pali.
 You can get all occurrences of the definition, metaphor, practice etc.
 By default search is made in DN, MN, SN, AN. But user has option to add other books of KN.
 
-# fdg.offline
-Offline version of fdg 
+# dg.offline
+Offline version of dg 
 
 This instruction is only for Android devices. Check possible options for IOS in the end of this instruction. if you'll find out how to run it on IOS please let me know.
 
@@ -41,14 +41,14 @@ copy-paste into terminal contents of the script from scripts/install-linix.sh (r
     pkg install -y git
     mkdir -p $PREFIX/share/apache2/default-site/htdocs
     cd $PREFIX/share/apache2/default-site/htdocs
-    git clone https://github.com/o28o/fdg.git ./
+    git clone https://github.com/o28o/dg.git ./
     bash ./scripts/install-android.sh
 
 4\. If you want to add offline audio files clone this repo to ./assets/audio
 
     mkdir -p $PREFIX/share/apache2/default-site/htdocs/assets/audio
     cd $PREFIX/share/apache2/default-site/htdocs/assets/audio
-    git clone https://github.com/o28o/fdg.audio ./
+    git clone https://github.com/o28o/dg.audio ./
 
 # Option #2
 # manual installation 
@@ -86,7 +86,7 @@ and if needed
 
     cd /data/data/com.termux/files/usr/share/apache2/default-site/htdocs
 
-    git clone https://github.com/o28o/fdg.git ./
+    git clone https://github.com/o28o/dg.git ./
 
 
 offline resources part
@@ -167,7 +167,7 @@ don't forget to run
     apachctl start
     termux-open-url http://localhost:8080/
 
-before using fdg offline 
+before using dg offline 
 
 done. 
 

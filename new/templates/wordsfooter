@@ -40,7 +40,7 @@ buttons: [
               exportOptions: {
   columns: ':visible',
   modifier: {
-    page: 'current'
+    search: 'applied'
   }
 }
 
@@ -50,7 +50,7 @@ buttons: [
               exportOptions: {
   columns: ':visible',
   modifier: {
-    page: 'current'
+    search: 'applied'
   }
 }
 
@@ -60,7 +60,7 @@ buttons: [
               exportOptions: {
   columns: ':visible',
   modifier: {
-    page: 'current'
+    search: 'applied'
   }
 }
 

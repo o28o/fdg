@@ -89,7 +89,7 @@ searchBuilderConfiguration
               exportOptions: {
   columns: ':visible',
   modifier: {
-    page: 'current'
+    search: 'applied'
   }
 }
 
@@ -99,7 +99,7 @@ searchBuilderConfiguration
               exportOptions: {
   columns: ':visible',
   modifier: {
-    page: 'current'
+    search: 'applied'
   }
 }
 
@@ -109,7 +109,7 @@ searchBuilderConfiguration
               exportOptions: {
   columns: ':visible',
   modifier: {
-    page: 'current'
+    search: 'applied'
   }
 }
 

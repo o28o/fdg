@@ -116,7 +116,7 @@ if (preg_match('/wordRep/', $p) || preg_match('/wordRep/', $extra)) {
     }
     
 echo "<script>
-window.location.href='$langinurl/w.php?s=$stringForWord';
+window.location.href='$langinurl/w.php?&d=an,sn,mn,dn,kn&s=$stringForWord';
 </script>";
     exit();
 }

@@ -73,49 +73,49 @@ echo json_encode([
         "src" => "/assets/img/android/1.jpg",
         "type" => "image/jpeg",
         "sizes" => "1080x1920",
-        "label" => "Screen 1"
+        "label" => "Main"
     ],
     [
         "src" => "/assets/img/android/2.jpg",
         "type" => "image/jpeg",
         "sizes" => "1080x1920",
-        "label" => "Screen 2"
+        "label" => "Flexible Tables"
     ],
     [
         "src" => "/assets/img/android/3.jpg",
         "type" => "image/jpeg",
         "sizes" => "1080x1920",
-        "label" => "Screen 3"
+        "label" => "Autocomplete"
     ],
     [
         "src" => "/assets/img/android/4.jpg",
         "type" => "image/jpeg",
         "sizes" => "1080x1920",
-        "label" => "Screen 4"
+        "label" => "Share to Search"
     ],
     [
         "src" => "/assets/img/android/5.jpg",
         "type" => "image/jpeg",
         "sizes" => "1080x1920",
-        "label" => "Screen 5"
+        "label" => "Dhamma.Gift Read"
     ],    
 	[
         "src" => "/assets/img/android/6.jpg",
         "type" => "image/jpeg",
         "sizes" => "1080x1920",
-        "label" => "Screen 5"
+        "label" => "shortcuts"
     ],	
 	[
         "src" => "/assets/img/android/7.jpg",
         "type" => "image/jpeg",
         "sizes" => "1080x1920",
-        "label" => "Screen 5"
+        "label" => "Build-in Pali Dictionary"
     ],
     [
         "src" => "/assets/img/android/8.jpg",
         "type" => "image/jpeg",
         "sizes" => "1080x1920",
-        "label" => "Screen 6"
+        "label" => "Dhamma Multi-Tool"
     ]
 ],
 "categories" => [

@@ -35,24 +35,47 @@ buttons: [
       window.location.href = '/history.php';
     }
   },
-    // Коллекция экспорта
-  {
-    extend: 'collection',
+    
+	{
+		   extend: 'collection',
     text: 'Export',
-    className: 'btn btn-secondary', // можно заменить на свою стилизацию
+    className: 'btn btn-link', // можно заменить на свою стилизацию
     buttons: [
       {
-        extend: 'copyHtml5'
+        extend: 'copyHtml5',
+              exportOptions: {
+  columns: ':visible',
+  modifier: {
+    page: 'current'
+  }
+}
+
       },
       {
-        extend: 'excelHtml5'
+        extend: 'excelHtml5',
+              exportOptions: {
+  columns: ':visible',
+  modifier: {
+    page: 'current'
+  }
+}
+
       },
       {
-        extend: 'csvHtml5'
+        extend: 'csvHtml5',
+              exportOptions: {
+  columns: ':visible',
+  modifier: {
+    page: 'current'
+  }
+}
+
       }
     ]
   },
-    {
+
+
+	{
     text: 'Read',
     className: 'btn btn-link',
     action: function () {

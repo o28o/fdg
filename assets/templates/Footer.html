@@ -45,22 +45,44 @@
                             }
                         }, 
   {
-    extend: 'collection',
+	   extend: 'collection',
     text: 'Export',
     className: 'btn btn-link', // можно заменить на свою стилизацию
     buttons: [
       {
-        extend: 'copyHtml5'
+        extend: 'copyHtml5',
+              exportOptions: {
+  columns: ':visible',
+  modifier: {
+    page: 'current'
+  }
+}
+
       },
       {
-        extend: 'excelHtml5'
+        extend: 'excelHtml5',
+              exportOptions: {
+  columns: ':visible',
+  modifier: {
+    page: 'current'
+  }
+}
+
       },
       {
-        extend: 'csvHtml5'
+        extend: 'csvHtml5',
+              exportOptions: {
+  columns: ':visible',
+  modifier: {
+    page: 'current'
+  }
+}
+
       }
     ]
-  },						
-			         {
+  },
+		         
+	  {
               text: 'Make List',
                className: 'btn btn-link ',
                   action: function ( dt ) {

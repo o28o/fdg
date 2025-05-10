@@ -10,6 +10,10 @@ alias grep="grep --color"
 alias apa="cd $basedir"
 alias tst="cd /var/www/test"
 
+
+alias rsssh="ssh -tt -p1000 $USER@94.126.201.8"
+
+
 #SC relate
 alias roottxt="cd $basedir/suttacentral.net/sc-data/sc_bilara_data/root/pli/ms"
 alias trntxt="cd $basedir/suttacentral.net/sc-data/sc_bilara_data/translation/en/sujato/sutta"
@@ -54,3 +58,6 @@ function commit_and_push {
   # Выполняем коммит и пуш
   git add . && git commit -a -m "$commit_message" && git push
 }
+
+                                                                                                                             ✓
+

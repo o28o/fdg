@@ -15,7 +15,27 @@
 	   	       dom: '<"row"lf>r<t><"row"ip><Q>',
 
 buttons: [
-  // Коллекция экспорта
+
+
+  // Остальные кнопки — обычные
+  {
+    text: 'Main',
+    className: 'btn btn-link',
+    action: function () {
+      window.location.href = "/";
+    }
+  },
+  
+
+  
+  {
+    text: 'History',
+    className: 'btn btn-link',
+    action: function () {
+      window.location.href = '/history.php';
+    }
+  },
+    // Коллекция экспорта
   {
     extend: 'collection',
     text: 'Export',
@@ -32,27 +52,11 @@ buttons: [
       }
     ]
   },
-
-  // Остальные кнопки — обычные
-  {
-    text: 'Main',
-    className: 'btn btn-link',
-    action: function () {
-      window.location.href = "/";
-    }
-  },
-  {
+    {
     text: 'Read',
     className: 'btn btn-link',
     action: function () {
       window.location.href = "/read.php";
-    }
-  },
-  {
-    text: 'History',
-    className: 'btn btn-link',
-    action: function () {
-      window.location.href = '/history.php';
     }
   },
   {

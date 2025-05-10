@@ -93,19 +93,11 @@ $('#pali').find('tbody').find('tr').each(function() {
 	    
 
 	   buttons: [
-
   {
     text: 'Main',
     className: 'btn btn-link',
     action: function () {
       window.location.href = "/";
-    }
-  },
-  {
-    text: 'Read',
-    className: 'btn btn-link',
-    action: function () {
-      window.location.href = "/read.php";
     }
   },
   {
@@ -115,9 +107,6 @@ $('#pali').find('tbody').find('tr').each(function() {
       window.location.href = '/history.php';
     }
   },
-
-
-  // Коллекция экспорта
   {
     extend: 'collection',
     text: 'Export',
@@ -134,8 +123,13 @@ $('#pali').find('tbody').find('tr').each(function() {
       }
     ]
   },
-
-
+  {
+    text: 'Read',
+    className: 'btn btn-link',
+    action: function () {
+      window.location.href = "/read.php";
+    }
+  },
   {
     text: 'Make List',
     className: 'btn btn-link',

@@ -71,13 +71,7 @@ searchBuilderConfiguration
                                 window.location.href = "/new";
                             }
             },
-              {
-              text: 'Read',
-              className: 'btn btn-link ',
-                  action: function ( dt ) {
-                                window.location.href = "/sc";
-                            }
-            },
+
 			                       {
               text: 'History',
               className: 'btn btn-link ',
@@ -85,6 +79,29 @@ searchBuilderConfiguration
                                 window.location.href = '/history.php';
                             }
                         },
+  {
+    extend: 'collection',
+    text: 'Export',
+    className: 'btn btn-link', // можно заменить на свою стилизацию
+    buttons: [
+      {
+        extend: 'copyHtml5'
+      },
+      {
+        extend: 'excelHtml5'
+      },
+      {
+        extend: 'csvHtml5'
+      }
+    ]
+  },
+                {
+              text: 'Read',
+              className: 'btn btn-link ',
+                  action: function ( dt ) {
+                                window.location.href = "/sc";
+                            }
+            },
 			         {
               text: 'Make List',
                className: 'btn btn-link ',

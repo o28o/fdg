@@ -22,13 +22,7 @@ buttons: [
       window.location.href = "/";
     }
   },
-  {
-    text: 'Read',
-    className: 'btn btn-link',
-    action: function () {
-      window.location.href = "/read.php";
-    }
-  },
+
   {
     text: 'History',
     className: 'btn btn-link',
@@ -51,6 +45,13 @@ buttons: [
         extend: 'csvHtml5'
       }
     ]
+  },
+    {
+    text: 'Read',
+    className: 'btn btn-link',
+    action: function () {
+      window.location.href = "/read.php";
+    }
   },
 
   {

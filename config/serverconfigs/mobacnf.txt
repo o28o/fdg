@@ -1,0 +1,56 @@
+cd /drives/c/soft/dg/
+
+USER=
+basedir="/drives/c/soft/dg"
+
+#bash related
+alias ll="ls -ahtr"
+alias lls="ll | sort -V"
+alias grep="grep --color"
+alias apa="cd $basedir"
+alias tst="cd /var/www/test"
+
+#SC relate
+alias roottxt="cd $basedir/suttacentral.net/sc-data/sc_bilara_data/root/pli/ms"
+alias trntxt="cd $basedir/suttacentral.net/sc-data/sc_bilara_data/translation/en/sujato/sutta"
+alias sutta="cd $basedir/suttacentral.net/sc-data/sc_bilara_data/root/pli/ms/sutta"
+
+#FDG related
+alias asset="cd $basedir/assets/texts/sutta/"
+alias thsutta="cd $basedir/assets/texts/th"
+alias res="cd $basedir/fdg/result"
+alias all="cd $basedir/assets/texts/words"
+alias dwnl="echo $dwnl"
+
+
+
+functionname=sshpull
+function sshpull {
+echo "server kz"
+ssh -p1000 $USER@94.126.201.8 "cd /var/www/html
+git pull
+echo
+echo dpd-ui
+cd /var/www/dpd-ui
+git pull
+echo
+echo audio
+cd /var/www/html/assets/audio
+git pull"
+}
+
+
+alias comsshpull="commit_and_push && sshpull"
+
+function commit_and_push {
+  # Показываем статус репозитория
+  git status
+  #echo "Нажмите Enter, чтобы продолжить..."
+  read
+
+  # Определяем сообщение коммита
+  local commit_message="${@:-updates}"
+
+  # Выполняем коммит и пуш
+  git add . && git commit -a -m "$commit_message" && git push
+}

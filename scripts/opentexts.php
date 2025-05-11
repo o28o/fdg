@@ -199,7 +199,7 @@ function redirectWithAnchor($readerlang, $stringForOpen, $s = null) {
   }
 
 
- //для поделиться pwa share api 
+//для поделиться pwa share api 
 $q = urldecode($q);
 
 if (strpos($q, 'http') !== false || strpos($q, 'https') !== false) {

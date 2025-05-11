@@ -127,8 +127,11 @@ echo json_encode([
 "iarc_rating_id" => "e",
 "prefer_related_applications" => false,
 "related_applications" => [],
+
 "scope_extensions" => [
-    "https://dict.dhamma.gift/"
+    ["origin" => "*.dhamma.gift.com"],
+    ["origin" => "dict.dhamma.gift"],
+    ["origin" => "*.dict.dhamma.gift"]
 ],
 
     "start_url" => $start_url,

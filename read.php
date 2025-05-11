@@ -54,6 +54,49 @@ if (isset($_GET['ml']) && $_GET['ml'] === 'on') {
     }
 </style>
 
+<script>
+// Проверяем, есть ли параметр source=pwa в URL
+const urlParams = new URLSearchParams(window.location.search);
+const isPWA = urlParams.get('source') === 'pwa';
+
+// Если это PWA или TWA (и нужно принудительно задать язык)
+if (isPWA) {
+    // Проверяем значение siteLanguage в localStorage
+    let siteLanguage = localStorage.getItem('siteLanguage');
+
+    // Если siteLanguage не задан, определяем язык по URL или браузеру
+    if (!siteLanguage) {
+        const currentPath = window.location.pathname;
+        
+        // Если язык уже указан в URL, используем его
+        if (currentPath.includes('/ru/')) {
+            siteLanguage = 'ru';
+        } else if (currentPath.includes('/th/')) {
+            siteLanguage = 'th';
+        } else {
+            // Если язык не в URL, берём язык браузера
+            const browserLang = navigator.language || navigator.userLanguage;
+            siteLanguage = browserLang.startsWith('ru') ? 'ru' : 
+                          browserLang.startsWith('th') ? 'th' : 'en';
+        }
+
+        // Сохраняем язык в localStorage
+        localStorage.setItem('siteLanguage', siteLanguage);
+    }
+
+    // Если текущий URL не соответствует выбранному языку, делаем редирект
+    const currentPath = window.location.pathname;
+    const currentHash = window.location.hash;
+
+    if (siteLanguage === 'ru' && !currentPath.includes('/ru/')) {
+        window.location.href = '/ru/' + currentHash;
+    } else if (siteLanguage === 'th' && !currentPath.includes('/th/')) {
+        window.location.href = '/th/' + currentHash;
+    } else if (siteLanguage === 'en' && currentPath !== '/') {
+        window.location.href = '/' + currentHash;
+    }
+}
+</script>
 <!-- Favicon favico-noglass
 <link href="/assets/img/gray.png" rel="icon" media="(prefers-color-scheme: light)">
 <link href="/assets/img/gray-white.png" rel="icon" media="(prefers-color-scheme: dark)">-->

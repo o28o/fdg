@@ -138,7 +138,7 @@ echo json_encode([
     "scope" => $mainpagenoslash . "/",
     "display" => "minimal-ui",
     "background_color" => "#2E3E50",
-    "theme_color" => "#1B252F",
+    "theme_color" => "#2E3E50",
 
     // Поддержка Web Share Target API
     "share_target" => [

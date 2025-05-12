@@ -321,7 +321,7 @@ async def set_menu_button(update: Update, lang: str):
     """Устанавливает кнопку меню в зависимости от языка"""
     user_id = update.effective_user.id
     button_text = "DG ru" if lang == "ru" else "DG en"
-    button_url = "https://dhamma.gift/ru/" if lang == "ru" else "https://dhamma.gift"
+    button_url = "https://dhamma.gift/ru/?source=pwa" if lang == "ru" else "https://dhamma.gift/?source=pwa"
     
     # Создаем объект WebAppInfo с URL
     web_app_info = WebAppInfo(url=button_url)
@@ -339,7 +339,7 @@ async def set_menu_button(update: Update, lang: str):
 async def update_menu_button(user_id: int, lang: str, bot):
     """Обновляет кнопку меню в списке чатов"""
     button_text = "DG ru" if lang == "ru" else "DG en"
-    button_url = "https://dhamma.gift/ru/" if lang == "ru" else "https://dhamma.gift"
+    button_url = "https://dhamma.gift/ru/?source=pwa" if lang == "ru" else "https://dhamma.gift/?source=pwa"
     
     menu_button = MenuButtonWebApp(
         text=button_text,

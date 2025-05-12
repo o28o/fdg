@@ -1070,7 +1070,7 @@ sed -i 's/":/@/g'  $tmpdir/${prefix}initrun* $tmpdir/$basefile
 sed -i -e 's@.*sutta/kn@khudakka\@/@g' -e 's@.*sutta/@dhamma\@/@g' -e 's@.*vinaya/@vinaya\@/@g' $tmpdir/${prefix}initrun* $tmpdir/$basefile
 sed -i -e 's@.*/sutta/kn@khudakka\@/@g' -e 's@.*/sutta/@dhamma\@/@g' -e 's@.*/vinaya/@vinaya\@/@g' $tmpdir/$basefile
    
-cat $tmpdir/${prefix}initrun* | sed 's/<[^>]*>//g' | sed 's/@ *"/@/g' | sed 's/",$//g' | sed 's/ "$//g' | sed 's@/.*/@@g'|  sort -t'@' -k2V,2 -k4V,4 -k2n,3 | uniq > $tmpdir/${prefix}readyforawk
+cat $tmpdir/${prefix}initrun* | sed 's/<[^>]*>//g'  | sed 's^@/^@^g' | sed 's/@ *"/@/g' | sed 's/",$//g' | sed 's/ "$//g' | sed 's@/.*/@@g'|  sort -t'@' -k2V,2 -k4V,4 -k2n,3 | uniq > $tmpdir/${prefix}readyforawk
 
 
 # |  для доп колонки |  awk -F/ '{print $NF}' | sed 's@\@/.*/@\@@g' |

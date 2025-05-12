@@ -1,3 +1,44 @@
+document.addEventListener('DOMContentLoaded', function() {
+  // Инициализация уведомления
+  initCopyNotification();
+
+  // Скрытие share icon на production
+  const shareOnlineElement = document.getElementById('shareOnline');
+  if (shareOnlineElement && window.location.href.includes('dhamma.gift')) {
+    shareOnlineElement.style.display = 'none';
+  }
+
+  // Добавляем обработку копирования
+  document.querySelectorAll('.copyLink').forEach(link => {
+    link.addEventListener('click', (event) => {
+      if (event.button === 0) { // Левый клик
+        event.preventDefault();
+        const textToCopy = link.getAttribute('data-copy');
+        copyToClipboard(textToCopy);
+      }
+    });
+
+    // Правый клик — стандартное меню работает
+    link.addEventListener('contextmenu', () => {
+      // Не мешаем стандартному поведению
+    });
+  });
+
+// Инициализируем уведомление при загрузке
+
+initCopyNotification();
+
+
+// Скрыть share icon на production
+  const shareOnlineElement = document.getElementById('shareOnline');
+  if (shareOnlineElement && window.location.href.includes('dhamma.gift')) {
+    shareOnlineElement.style.display = 'none';
+  }
+
+});
+
+
+
 // Функция для добавления стилей и элемента уведомления
 function initCopyNotification() {
 
@@ -8,8 +49,6 @@ function initCopyNotification() {
   document.body.appendChild(bubble);
 }
 
-// Инициализируем уведомление при загрузке
-document.addEventListener('DOMContentLoaded', initCopyNotification);
 
 // Функция для определения языка
 function getNotificationText() {
@@ -87,10 +126,3 @@ function showBubbleNotification(text) {
   }, 2000);
 }
 
-// Скрыть share icon на production
-document.addEventListener('DOMContentLoaded', function() {
-  const shareOnlineElement = document.getElementById('shareOnline');
-  if (shareOnlineElement && window.location.href.includes('dhamma.gift')) {
-    shareOnlineElement.style.display = 'none';
-  }
-});

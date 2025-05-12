@@ -52,6 +52,7 @@ echo json_encode([
     "description" => "Sutta & Vinaya Search. Read. Multi-Tool.",
     "id" => "DG",
 	"lang" => "en",
+	"handle_links" => "auto",
     "launch_handler" => [
         "client_mode" => "focus-existing"
     ],

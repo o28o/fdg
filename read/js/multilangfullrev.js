@@ -182,10 +182,9 @@ var rootpath = `${Sccopy}/sc-data/sc_bilara_data/root/pli/ms/${texttype}/${slug}
  }    
     
     var trnpath = `/assets/texts/${texttype}/${slug}_translation-${pathLang}-${translator}.json`;
-    var engtrnpath = `/assets/texts/${texttype}/${slug}_translation-en-brahmali.json`;
+    var engtrnpath = `${Sccopy}/sc-data/sc_bilara_data/translation/en/brahmali/${texttype}/${slug}_translation-en-brahmali.json`;
+    var htmlpath = `/assets/html/${texttype}/${slug}_html.json`;
 
-    var htmlpath = `/assets/texts/${texttype}/${slug}_html.json`;
-    console.log(rootpath, trnpath, htmlpath);
 } else if ( texttype === "vinaya" ) {
 	
 if (vinayaranges.indexOf(slug) !== -1) { 

@@ -183,10 +183,9 @@ var rootDevanagaripath = `/assets/texts/devanagari/root/pli/ms/${texttype}/${slu
  }
   
     var trnpath = `/assets/texts/${texttype}/${slug}_translation-${pathLang}-${translator}.json`;
-    var engtrnpath = `/assets/texts/${texttype}/${slug}_translation-en-brahmali.json`;
+    var engtrnpath = `${Sccopy}/sc-data/sc_bilara_data/translation/en/brahmali/${texttype}/${slug}_translation-en-brahmali.json`;
+    var htmlpath = `/assets/html/${texttype}/${slug}_html.json`;
 
-    var htmlpath = `/assets/texts/${texttype}/${slug}_html.json`;
-    
 } else if ( texttype === "vinaya" ) {
 	
 if (vinayaranges.indexOf(slug) !== -1) { 

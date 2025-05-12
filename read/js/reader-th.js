@@ -205,8 +205,9 @@ else {
 var rootpath = `${Sccopy}/sc-data/sc_bilara_data/root/pli/ms/${texttype}/${slug}_root-pli-ms.json`
  }
     var trnpath = `${Sccopy}/sc-data/sc_bilara_data/translation/${pathLang}/${translator}/${texttype}/${slug}_translation-${pathLang}-${translator}.json`;
-    var htmlpath = `/assets/texts/${texttype}/${slug}_html.json`;
-    console.log(rootpath, trnpath, htmlpath);
+
+    var htmlpath = `/assets/html/${texttype}/${slug}_html.json`;
+
 } else if ( texttype === "vinaya" ) {
 	
   let translator = "brahmali";

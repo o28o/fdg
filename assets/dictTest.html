@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>DPD Response Speed Test</title>
   <style>
     body {
@@ -78,7 +78,7 @@
   <h1>DPD Response Speed Test</h1>
   <div id="test-container">
     <p>
-      Testing <a target="_blank" href="https://dict.dhamma.gift">dict.Dhamma.Gift</a> and <a target="_blank" href="https://dpdict.net">DPDict.net</a> using your connection.
+      Testing <a target="_blank" href="https://dict.dhamma.gift ">dict.Dhamma.Gift</a> and <a target="_blank" href="https://dpdict.net ">DPDict.net</a> using your connection.
     </p>
 
     <div class="controls">
@@ -96,38 +96,29 @@
   </div>
 
   <script>
-    // Массив терминов по умолчанию
     const defaultTerms = ["bhagavato", "dhamma", "dukkha", "adhivacanasamphasso", "kho", "kacchapo"];
     let term = '';
     let testRunning = false;
     let availableTerms = [];
 
-    // Элементы DOM
     const outputEl = document.getElementById('output');
     const statusEl = document.getElementById('status');
     const runTestBtn = document.getElementById('run-test');
     const copyResultsBtn = document.getElementById('copy-results');
 
-    // Функция для загрузки терминов из файла
     async function loadTerms() {
-      const termsUrl = 'https://dhamma.gift/assets/texts/sutta_words.txt';
+      const termsUrl = 'https://dhamma.gift/assets/texts/sutta_words.txt ';
 
       try {
         statusEl.textContent = "Loading terms from file...";
         const response = await fetch(termsUrl);
 
-        if (!response.ok) {
-          throw new Error(`HTTP error! status: ${response.status}`);
-        }
+        if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
 
         const text = await response.text();
-        const terms = text.split('\n')
-          .map(t => t.trim())
-          .filter(t => t.length > 0);
+        const terms = text.split('\n').map(t => t.trim()).filter(t => t.length > 0);
 
-        if (terms.length === 0) {
-          throw new Error('File is empty');
-        }
+        if (terms.length === 0) throw new Error('File is empty');
 
         availableTerms = terms;
         addToOutput(`Successfully loaded ${terms.length} terms from file`, 'success');
@@ -141,18 +132,15 @@
       }
     }
 
-    // Функция для получения текущей даты и времени клиента
     function getClientTimestamp() {
       const now = new Date();
       return now.toISOString().replace('T', ' ').substring(0, 19);
     }
 
-    // Функция URL-кодирования
     function urlencode(str) {
       return encodeURIComponent(str);
     }
 
-    // Добавление сообщения в вывод
     function addToOutput(message, className = '') {
       const line = document.createElement('div');
       line.innerHTML = message;
@@ -161,12 +149,18 @@
       outputEl.scrollTop = outputEl.scrollHeight;
     }
 
-    // Очистка вывода
     function clearOutput() {
       outputEl.innerHTML = '';
     }
 
-    // Функция проверки доступности
+    // Таймер для таймаута запроса
+    function withTimeout(promise, time = 10000) {
+      const timeout = new Promise((_, reject) =>
+        setTimeout(() => reject(new Error('Request timeout')), time)
+      );
+      return Promise.race([promise, timeout]);
+    }
+
     async function checkEndpoint(lang, path, baseUrl) {
       const targetUrl = `${baseUrl}${path}?q=${urlencode(term)}`;
       const startTime = performance.now();
@@ -174,32 +168,21 @@
       addToOutput(`Testing ${lang} at <a href="${targetUrl}">${baseUrl}</a>`, 'info');
 
       try {
-        // Используем GET запрос без no-cors, чтобы видеть реальный статус ответа
-        const response = await fetch(targetUrl, {
-          method: 'GET',
-          cache: 'no-store'
-        });
+        const responsePromise = fetch(targetUrl, { method: 'GET', cache: 'no-store' });
+        const response = await withTimeout(responsePromise);
 
         const totalTime = (performance.now() - startTime) / 1000;
         const timestamp = getClientTimestamp();
 
-        if (!response.ok) {
-          throw new Error(`HTTP error! status: ${response.status}`);
-        }
+        if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
 
-        // Проверяем, что ответ содержит контент (не 204 и т.д.)
         const content = await response.text();
-        if (!content) {
-          throw new Error('Empty response content');
-        }
+        if (!content) throw new Error('Empty response content');
 
         const resultLine = `${timestamp} ${lang} <b>OK</b> <b>${totalTime.toFixed(3)}s</b> ${term} ${targetUrl}`;
         addToOutput(resultLine, 'success');
 
-        return {
-          success: true,
-          message: resultLine
-        };
+        return { success: true, message: resultLine };
       } catch (error) {
         const responseTime = (performance.now() - startTime) / 1000;
         const timestamp = getClientTimestamp();
@@ -209,19 +192,17 @@
           errorMsg = 'Network error (server down or unreachable)';
         } else if (errorMsg.includes('HTTP error')) {
           errorMsg = `Server error (${errorMsg.replace('HTTP error! status: ', '')})`;
+        } else if (errorMsg === 'Request timeout') {
+          errorMsg = 'Request timed out';
         }
 
         const errorLine = `${timestamp} ${lang} <b>FAIL</b> <b>${responseTime.toFixed(3)}s</b> ${term} ${targetUrl} (${errorMsg})`;
         addToOutput(errorLine, 'fail');
 
-        return {
-          success: false,
-          message: errorLine
-        };
+        return { success: false, message: errorLine };
       }
     }
 
-    // Основная функция тестирования
     async function runTests() {
       if (testRunning) return;
       testRunning = true;
@@ -232,25 +213,29 @@
       runTestBtn.disabled = true;
       copyResultsBtn.disabled = true;
 
-      // Выбираем случайный термин из доступных
       term = availableTerms[Math.floor(Math.random() * availableTerms.length)];
-      addToOutput(`Starting tests with term: <a target="_blank" href="https://dict.dhamma.gift/search_html?q=${term}">${term}</a>`, 'info');
+      addToOutput(`Starting tests with term: <a target="_blank" href="https://dict.dhamma.gift/search_html?q= ${term}">${term}</a>`, 'info');
       addToOutput(`Your local time: ${getClientTimestamp()}`, 'info');
 
       try {
-        // Определение базового URL
         let baseUrl = window.location.hostname === 'localhost'
-          ? "http://localhost:8880" : "https://dict.dhamma.gift";
+          ? "http://localhost:8880"
+          : "https://dict.dhamma.gift ";
 
-        // Выполнение проверок
+        const endpoints = [
+          { lang: "RU", path: "/ru/search_html", url: baseUrl },
+          { lang: "RU", path: "/search_html", url: "https://ru.dpdict.net " },
+          { lang: "EN", path: "/search_html", url: baseUrl },
+          { lang: "EN", path: "/search_html", url: "https://dpdict.net " },
+        ];
+
         const results = [];
+        for (const endpoint of endpoints) {
+          const res = await checkEndpoint(endpoint.lang, endpoint.path, endpoint.url);
+          results.push(res);
+          await new Promise(resolve => setTimeout(resolve, 500)); // небольшая пауза между запросами
+        }
 
-        results.push(await checkEndpoint("RU", "/ru/search_html", baseUrl));
-        results.push(await checkEndpoint("RU", "/search_html", "https://ru.dpdict.net"));
-        results.push(await checkEndpoint("EN", "/search_html", baseUrl));
-        results.push(await checkEndpoint("EN", "/search_html", "https://dpdict.net"));
-
-        // Статистика
         const successCount = results.filter(r => r.success).length;
         const totalTests = results.length;
 
@@ -269,7 +254,6 @@
       }
     }
 
-    // Копирование результатов
     function copyResults() {
       const textToCopy = outputEl.innerText;
       navigator.clipboard.writeText(textToCopy).then(() => {
@@ -285,25 +269,18 @@
       });
     }
 
-    // Инициализация при загрузке страницы
     async function initialize() {
-      // Сначала загружаем термины
       await loadTerms();
-
-      // Затем запускаем тесты
       runTests();
     }
 
-    // Обработчики событий
     runTestBtn.addEventListener('click', async () => {
-      // При повторном запуске обновляем термины
       await loadTerms();
       runTests();
     });
 
     copyResultsBtn.addEventListener('click', copyResults);
 
-    // Запуск инициализации при загрузке страницы
     document.addEventListener('DOMContentLoaded', initialize);
   </script>
 </body>

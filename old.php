@@ -112,7 +112,7 @@ include 'scripts/opentexts.php';
     </div>
 </h1>
 
- <!--Icon Divider    -->
+ <!--Icon Divider   
                 <div class="divider-custom divider-light">
                     <div class="divider-custom-line"></div>
                         <div class="lock example divider-custom-icon">
@@ -120,7 +120,7 @@ include 'scripts/opentexts.php';
  <i class="fa-solid fa-circle icon-lock bigger"></i>
                       </div>
                     <div class="divider-custom-line"></div>
-                </div>
+                </div> -->
 </div>
 
 <form method="GET" action="" class="justify-content-center">

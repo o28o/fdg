@@ -24,17 +24,6 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   });
 
-// Инициализируем уведомление при загрузке
-
-initCopyNotification();
-
-
-// Скрыть share icon на production
-  const shareOnlineElement = document.getElementById('shareOnline');
-  if (shareOnlineElement && window.location.href.includes('dhamma.gift')) {
-    shareOnlineElement.style.display = 'none';
-  }
-
 });
 
 

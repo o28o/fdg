@@ -1132,8 +1132,8 @@ fi
 
 paste -d"@" $tmpdir/${prefix}counts $tmpdir/${prefix}afterawk $tmpdir/${prefix}wordsAggregatedByTexts > $tmpdir/${prefix}finalraw
 bash $apachesitepath/new/awk-step2fornew.sh $tmpdir/${prefix}finalraw "$keyword" > $tmpdir/${prefix}finalhtml
-#cp $tmpdir/${prefix}finalraw $tmpdir/${keyword}_finalrawForAI.txt
-#cp $tmpdir/${prefix}finalhtml $tmpdir/${keyword}_finalhtmlForAI.txt
+#cp $tmpdir/${prefix}_finalraw $tmpdir/${keyword}_finalrawForAI.txt
+#cp $tmpdir/${prefix}_finalhtml $tmpdir/${keyword}_finalhtmlForAI.txt
 
 headerinfo="${keyword^} $(awk -F@ '{ sum += $3 }; END { print NR " texts and "  sum " matches" }' $tmpdir/${prefix}counts)"
 escapedKeyword="$(echo "$patternforhist" | sed 's/\\/\\\\/g')"
@@ -1205,7 +1205,7 @@ sed -i 's/":/@/g'  $tmpdir/$basefile
 sed -i -e 's@.*sutta/kn@khudakka\@/@g' -e 's@.*sutta/@dhamma\@/@g' -e 's@.*vinaya/@vinaya\@/@g' $tmpdir/$basefile
 sed -i -e 's@.*/sutta/kn@khudakka\@/@g' -e 's@.*/sutta/@dhamma\@/@g' -e 's@.*/vinaya/@vinaya\@/@g' $tmpdir/$basefile
    
-cat $tmpdir/$basefile | sed 's/<[^>]*>//g' | sed 's/@ *"/@/g' | sed 's/",$//g' | sed 's/ "$//g' | sed 's@/.*/@@g'| awk -F@ '{OFS = "@"} {print $1, $2, $3, "", $4}' | sort -t'@' -k2V,2 -k4V,4 -k2n,3 | uniq > $tmpdir/${prefix}readyforawk
+cat $tmpdir/$basefile | sed 's/<[^>]*>//g' | sed 's^@/^@^g' | sed 's/@ *"/@/g' | sed 's/",$//g' | sed 's/ "$//g' | sed 's@/.*/@@g'| awk -F@ '{OFS = "@"} {print $1, $2, $3, "", $4}' | sort -t'@' -k2V,2 -k4V,4 -k2n,3 | uniq > $tmpdir/${prefix}readyforawk
 
 
 # |  для доп колонки |  awk -F/ '{print $NF}' | sed 's@\@/.*/@\@@g' |
@@ -1258,11 +1258,12 @@ fi
 
 paste -d"@" $tmpdir/${prefix}counts $tmpdir/${prefix}afterawk $tmpdir/${prefix}wordsAggregatedByTexts > $tmpdir/${prefix}finalraw
 bash $apachesitepath/new/awk-step2fornew.sh $tmpdir/${prefix}finalraw "$keyword" > $tmpdir/${prefix}finalhtml
-cp $tmpdir/${prefix}_finalraw $tmpdir/${keyword}finalrawForAI.txt
-cp $tmpdir/${prefix}_finalhtml $tmpdir/${keyword}finalhtmlForAI.txt
+#cp $tmpdir/${prefix}_finalraw $tmpdir/${keyword}_finalrawForAI.txt
+#cp $tmpdir/${prefix}_finalhtml $tmpdir/${keyword}_finalhtmlForAI.txt
 
 headerinfo="${keyword^} $(awk -F@ '{ sum += $3 }; END { print NR " texts and "  sum " matches" }' $tmpdir/${prefix}counts)"
 escapedKeyword="$(echo "$patternforhist" | sed 's/\\/\\\\/g')"
+
 if [[ "$@" == *"-oru"* ]]
 then
 wordLinkToReplace="/ru/w.php?s=${escapedKeyword}\&d=$source\&p=-oru"

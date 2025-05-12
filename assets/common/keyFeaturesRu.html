@@ -18,7 +18,7 @@
     <meta name="keywords" content="Будда, Buddha, Дхамма, Дхарма, Виная, поиск, Сутта, Сутты, Суттапитака, Винаяпитака, suttapitaka, vinayapitaka Пали, Палийский канон, буддизм, dhamma, sutta, Buddhism, pali Canon, патимоккха, пратимокша, patimokkha, pratimoksasutra">
     <meta name="description" content="Что такое Dhamma.gift? Ключевые особенности Dhamma.gift — ваш универсальный портал для доступа к пали-текстам, переводам и ресурсам для изучения учений Будды, Сутт, Винаи и буддийской доктрины. Найдите переводы и ссылки для изучения Дхаммы Будды.">
 <style>
-li img {
+img {
   max-width: 200px;
   height: auto;
 }
@@ -65,11 +65,14 @@ li img {
 </div>
 <br>
 
+
 <div style="text-align: center; margin: 1em 0;">
-  <a href="/pwa" target="_blank">
-    <img src="/assets/img/pwa-cta.png" alt="Установить как приложение Dhamma.gift (PWA)">
-  </a>
+  <button id="installPWA" style="background: none; border: none; padding: 0; cursor: pointer;">
+    <img src="/assets/img/pwa-cta.png" alt="Установить Dhamma.gift как приложение" />
+  </button>
 </div>
+
+
 
 <h3>Dhamma.Gift</h3>
 
@@ -156,7 +159,7 @@ li img {
 <ul>
 <li>
   <a href="https://chromewebstore.google.com/detail/dhammagift-search-and-wor/dnnogjdcmhbiobpnkhdbfnfjnjlikabd">
-    <img src="/assets/img/chrome-cta.png" alt="Скачать в Chrome Web Store">
+    <img style="max-width:180px; margin-left:10px;" src="/assets/img/chrome-cta.png" alt="Скачать в Chrome Web Store">
   </a>
 </li>
 <li>
@@ -181,5 +184,33 @@ li img {
 <br>
 <br>
 <script src="/assets/js/dark-mode-switch/dark-mode-switch.js"></script>
+<script>
+  let deferredPrompt;
+
+  window.addEventListener('beforeinstallprompt', (e) => {
+    // Предотвращаем автоматическое отображение баннера
+    e.preventDefault();
+    deferredPrompt = e;
+
+    // Показываем кнопку
+    const installBtn = document.getElementById('installPWA');
+    installBtn.style.display = 'inline-block';
+
+    installBtn.addEventListener('click', () => {
+      if (deferredPrompt) {
+        deferredPrompt.prompt();
+        deferredPrompt.userChoice.then((choiceResult) => {
+          if (choiceResult.outcome === 'accepted') {
+            console.log('Установка принята');
+          } else {
+            console.log('Установка отклонена');
+          }
+          deferredPrompt = null;
+        });
+      }
+    });
+  });
+</script>
+
 </body>
 </html>

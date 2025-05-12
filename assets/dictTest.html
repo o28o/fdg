@@ -5,7 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>DPD Response Speed Test</title>
   <style>
-    /* Ваши стили остаются без изменений */
     body {
       font-family: 'Courier New', monospace;
       max-width: 900px;
@@ -123,8 +122,8 @@
 
         const text = await response.text();
         const terms = text.split('\n')
-        .map(t => t.trim())
-        .filter(t => t.length > 0);
+          .map(t => t.trim())
+          .filter(t => t.length > 0);
 
         if (terms.length === 0) {
           throw new Error('File is empty');
@@ -156,17 +155,18 @@
     // Добавление сообщения в вывод
     function addToOutput(message, className = '') {
       const line = document.createElement('div');
-      line.innerHTML = message; // вместо textContent
+      line.innerHTML = message;
       line.className = className;
       outputEl.appendChild(line);
       outputEl.scrollTop = outputEl.scrollHeight;
     }
+
     // Очистка вывода
     function clearOutput() {
       outputEl.innerHTML = '';
     }
 
-    // Функция проверки доступности через HEAD запрос
+    // Функция проверки доступности
     async function checkEndpoint(lang, path, baseUrl) {
       const targetUrl = `${baseUrl}${path}?q=${urlencode(term)}`;
       const startTime = performance.now();
@@ -174,23 +174,25 @@
       addToOutput(`Testing ${lang} at <a href="${targetUrl}">${baseUrl}</a>`, 'info');
 
       try {
-        // Пробуем HEAD запрос сначала
-        const headResponse = await fetch(targetUrl, {
-          method: 'HEAD',
-          mode: 'no-cors',
-          cache: 'no-store'
-        });
-
-        // Затем GET запрос
-        const getStartTime = performance.now();
-        const getResponse = await fetch(targetUrl, {
+        // Используем GET запрос без no-cors, чтобы видеть реальный статус ответа
+        const response = await fetch(targetUrl, {
           method: 'GET',
-          mode: 'no-cors',
           cache: 'no-store'
         });
 
         const totalTime = (performance.now() - startTime) / 1000;
         const timestamp = getClientTimestamp();
+
+        if (!response.ok) {
+          throw new Error(`HTTP error! status: ${response.status}`);
+        }
+
+        // Проверяем, что ответ содержит контент (не 204 и т.д.)
+        const content = await response.text();
+        if (!content) {
+          throw new Error('Empty response content');
+        }
+
         const resultLine = `${timestamp} ${lang} <b>OK</b> <b>${totalTime.toFixed(3)}s</b> ${term} ${targetUrl}`;
         addToOutput(resultLine, 'success');
 
@@ -204,7 +206,9 @@
 
         let errorMsg = error.message;
         if (errorMsg.includes('Failed to fetch')) {
-          errorMsg = 'Network error (CORS or server down)';
+          errorMsg = 'Network error (server down or unreachable)';
+        } else if (errorMsg.includes('HTTP error')) {
+          errorMsg = `Server error (${errorMsg.replace('HTTP error! status: ', '')})`;
         }
 
         const errorLine = `${timestamp} ${lang} <b>FAIL</b> <b>${responseTime.toFixed(3)}s</b> ${term} ${targetUrl} (${errorMsg})`;
@@ -231,13 +235,12 @@
       // Выбираем случайный термин из доступных
       term = availableTerms[Math.floor(Math.random() * availableTerms.length)];
       addToOutput(`Starting tests with term: <a target="_blank" href="https://dict.dhamma.gift/search_html?q=${term}">${term}</a>`, 'info');
-      //  addToOutput(`Source: ${availableTerms === defaultTerms ? 'default terms': 'sutta_words.txt'}`, 'info');
       addToOutput(`Your local time: ${getClientTimestamp()}`, 'info');
 
       try {
         // Определение базового URL
         let baseUrl = window.location.hostname === 'localhost'
-        ? "http://localhost:8880": "https://dict.dhamma.gift";
+          ? "http://localhost:8880" : "https://dict.dhamma.gift";
 
         // Выполнение проверок
         const results = [];
@@ -252,16 +255,13 @@
         const totalTests = results.length;
 
         statusEl.textContent = `Tests completed. Success: ${successCount}/${totalTests}`;
-        statusEl.className = successCount === totalTests ? 'success':
-        successCount > 0 ? 'warning': 'fail';
-
-        if (successCount < totalTests) {
-          addToOutput("\nNote: 'FAIL' may indicate CORS restrictions", 'warning');
-        }
+        statusEl.className = successCount === totalTests ? 'success' :
+                             successCount > 0 ? 'warning' : 'fail';
 
       } catch (error) {
         statusEl.textContent = `Error during testing: ${error.message}`;
         statusEl.className = 'fail';
+        console.error('Testing error:', error);
       } finally {
         testRunning = false;
         runTestBtn.disabled = false;

@@ -17,6 +17,12 @@
 
     <meta name="description" content="Explore the key features of Dhamma.gift - your ultimate one-stop portal for accessing Pali texts, translations, and resources for studying Buddha's teachings, Suttas, Vinaya and Buddhist doctrine." />
     <meta name="keywords" content="Buddha, dhamma, pitaka, sutta, suttas, vinaya, patimokkha, pratimoksa, Buddhism, pali Canon, dharma">
+<style>
+img {
+  max-width: 200px;
+  height: auto;
+}
+</style>
 </head>
 <body>
   
@@ -55,6 +61,12 @@
     <h5>What initiatives make up Dhamma.gift?</h5>
 </div>
 <br>
+
+<div style="text-align: center; margin: 1em 0;">
+  <button id="installPWA" style="background: none; border: none; padding: 0; cursor: pointer;">
+    <img src="/assets/img/pwa-cta.png" alt="Install Dhamma.gift as an app" />
+  </button>
+</div>
 
 <h3>Dhamma.Gift</h3>
 <h4>A Dhamma multi-tool or one-window portal</h4>
@@ -106,6 +118,13 @@
 
 <h3>Dhamma.Gift Telegram Bot and Mini Apps</h3>
 <h4>Search Suttas and Pali Dictionary from any Telegram chat and group with Dhamma.gift Inline Bot</h4>
+
+<div style="text-align: center; margin: 1em 0;">
+  <a href="https://t.me/dgift_bot" target="_blank">
+    <img src="/assets/img/telegram-cta.png" alt="Open @dgift_bot in Telegram">
+  </a>
+</div>
+
 <ul>
     <li>Type in any chat or group <a href="https://t.me/dhammagift_bot">@Dhammagift_bot</a> or its short name <a href="https://t.me/dgift_bot" target="_blank">@Dgift_bot</a>, start typing the Pali word or text number you are interested in - the bot will show options and provide links to Reading/Search and Dictionary.</li>
     <li>Mini-Apps for instant access to Dhamma.gift and dictionary inside Telegram, Telegram Desktop or Telegram Web:
@@ -122,8 +141,16 @@
 <h4>Add Sutta Search and Pali Dictionary to any website in a couple of clicks</h4>
 <p>Install Browser Extensions to add dictionary lookup and instant search features from Dhamma.gift to any website:</p>
 <ul>
-    <li>Extension in <a href="https://chromewebstore.google.com/detail/dhammagift-search-and-wor/dnnogjdcmhbiobpnkhdbfnfjnjlikabd">Chrome Web Store</a></li>
-    <li>Extension in <a href="https://microsoftedge.microsoft.com/addons/detail/dhammagift-search-and-wo/aokegkhdaijkikbdocanadeghllhfmhj">Microsoft Edge Store</a></li>
+    <li>
+      <a href="https://chromewebstore.google.com/detail/dhammagift-search-and-wor/dnnogjdcmhbiobpnkhdbfnfjnjlikabd">
+        <img style="max-width:180px; margin-left:10px;" src="/assets/img/chrome-cta.png" alt="Download from Chrome Web Store">
+      </a>
+    </li>
+    <li>
+      <a href="https://microsoftedge.microsoft.com/addons/detail/dhammagift-search-and-wo/aokegkhdaijkikbdocanadeghllhfmhj">
+        <img src="/assets/img/edge-cta.png" alt="Download from Microsoft Edge Store">
+      </a>
+    </li>
     <li>Script for Tampermonkey: <a href="https://github.com/o28o/dictPlugin/blob/main/ExtentionMethod.md">Installation Guide</a></li>
 </ul>
 <br>
@@ -139,5 +166,32 @@
 <br>
 <br>
 <script src="/assets/js/dark-mode-switch/dark-mode-switch.js"></script>
+<script>
+  let deferredPrompt;
+
+  window.addEventListener('beforeinstallprompt', (e) => {
+    // Prevent automatic banner display
+    e.preventDefault();
+    deferredPrompt = e;
+
+    // Show the button
+    const installBtn = document.getElementById('installPWA');
+    installBtn.style.display = 'inline-block';
+
+    installBtn.addEventListener('click', () => {
+      if (deferredPrompt) {
+        deferredPrompt.prompt();
+        deferredPrompt.userChoice.then((choiceResult) => {
+          if (choiceResult.outcome === 'accepted') {
+            console.log('Installation accepted');
+          } else {
+            console.log('Installation declined');
+          }
+          deferredPrompt = null;
+        });
+      }
+    });
+  });
+</script>
 </body>
 </html>

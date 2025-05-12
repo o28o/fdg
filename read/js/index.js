@@ -115,9 +115,7 @@ var rootpath = `/assets/texts/th/root/pli/ms/${texttype}/${slug}_rootth-pli-ms.j
 else {
 var rootpath = `${Sccopy}/sc-data/sc_bilara_data/root/pli/ms/${texttype}/${slug}_root-pli-ms.json`
  }
-
-  
-    var trnpath = `/assets/texts/${texttype}/${slug}_translation-en-brahmali.json`;
+    var trnpath = `${Sccopy}/sc-data/sc_bilara_data/translation/en/brahmali/${texttype}/${slug}_translation-en-brahmali.json`;
     var htmlpath = `/assets/html/${texttype}/${slug}_html.json`;
   //  console.log(rootpath, trnpath, htmlpath);
 } else {

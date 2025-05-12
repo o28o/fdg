@@ -415,10 +415,10 @@ margin-left: 6px;
     display: inline-block;
     vertical-align: middle;
     -webkit-tap-highlight-color: transparent;
-    touch-action: manipulation;
- /*   user-select: none;
+  /*   touch-action: manipulation;
+    user-select: none;
     -webkit-user-select: none;
-    -webkit-touch-callout: none;*/
+    -webkit-touch-callout: none; */
 }
 
 .copyLink::after {

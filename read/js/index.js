@@ -246,32 +246,25 @@ if (finder && finder.trim() !== "") {
 
 // inputscript-ISOPali add for aksharamukha
 if (paliData[segment] !== undefined && transData[segment] !== undefined && varData[segment] !== undefined) {
-  html += `${openHtml}<span id="${anchor}">
-    <span class="pli-lang" lang="pi">${paliData[segment].trim()}
-      <a class="text-decoration-none copyLink" data-copy="${fullUrlWithAnchor}" style="cursor: pointer;">&nbsp;</a><br>
+        html += `${openHtml}<span id="${anchor}">
+      <span class="pli-lang " lang="pi">${paliData[segment].trim()}<a class="text-decoration-none copyLink" style="cursor: pointer;" onclick="copyToClipboard('${fullUrlWithAnchor}')">&nbsp;</a><br>
       <span class="variant pli-lang inputscript-ISOPali" lang="pi">
-        ${varData[segment].trim()}
+${varData[segment].trim()}   
+</span>      
       </span>
-    </span>
-    <span class="rus-lang" lang="ru">${transData[segment]}<br></span>
-  </span>${closeHtml}\n\n`;
-} else if (paliData[segment] !== undefined && transData[segment] !== undefined) {
-  html += `${openHtml}<span id="${anchor}">
-    <span class="pli-lang" lang="pi">${paliData[segment].trim()}
-      <a class="text-decoration-none copyLink" data-copy="${fullUrlWithAnchor}" style="cursor: pointer;">&nbsp;</a>
-    </span>
-    <span class="rus-lang" lang="ru">${transData[segment]}<br></span>
-  </span>${closeHtml}\n\n`;
+      <span class="rus-lang" lang="ru">${transData[segment]}
+<br></span>
+      </span>${closeHtml}\n\n`;
+} else if (paliData[segment] !== undefined && transData[segment] !== undefined ) {
+        html += `${openHtml}<span id="${anchor}">
+      <span class="pli-lang " lang="pi">${paliData[segment].trim()}<a class="text-decoration-none copyLink" style="cursor: pointer;" onclick="copyToClipboard('${fullUrlWithAnchor}')">&nbsp;</a></span>
+      <span class="rus-lang" lang="ru">${transData[segment]}<br></span>
+      </span>${closeHtml}\n\n`;
 } else if (paliData[segment] !== undefined) {
-  html += `${openHtml}<span id="${anchor}">
-    <span class="pli-lang inputscript-ISOPali" lang="pi">${paliData[segment]}</span>
-  </span>${closeHtml}\n\n`;
+  html += openHtml + '<span id="' + anchor + '"><span class="pli-lang inputscript-ISOPali" lang="pi">' + paliData[segment] + '</span></span>' + closeHtml + '\n\n';
 } else if (transData[segment] !== undefined) {
-  html += `${openHtml}<span id="${anchor}">
-    <span class="rus-lang" lang="ru">${transData[segment]}</span>
-  </span>${closeHtml}\n\n`;
+  html += openHtml + '<span id="' + anchor + '"><span class="rus-lang" lang="ru">' + transData[segment] + '</span></span>' + closeHtml + '\n\n';
 }
-
 });
 
 

@@ -1132,9 +1132,8 @@ fi
 
 paste -d"@" $tmpdir/${prefix}counts $tmpdir/${prefix}afterawk $tmpdir/${prefix}wordsAggregatedByTexts > $tmpdir/${prefix}finalraw
 bash $apachesitepath/new/awk-step2fornew.sh $tmpdir/${prefix}finalraw "$keyword" > $tmpdir/${prefix}finalhtml
-cp $tmpdir/${prefix}finalraw $tmpdir/${keyword}_finalrawForAI.txt
-cp $tmpdir/${prefix}finalhtml $tmpdir/${keyword}_finalhtmlForAI.txt
-
+#cp $tmpdir/${prefix}finalraw $tmpdir/${keyword}_finalrawForAI.txt
+#cp $tmpdir/${prefix}finalhtml $tmpdir/${keyword}_finalhtmlForAI.txt
 
 headerinfo="${keyword^} $(awk -F@ '{ sum += $3 }; END { print NR " texts and "  sum " matches" }' $tmpdir/${prefix}counts)"
 escapedKeyword="$(echo "$patternforhist" | sed 's/\\/\\\\/g')"

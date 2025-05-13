@@ -318,7 +318,7 @@ if (empty($stringForOpen)) {
  $stringForOpen = $stringForOpen . "1";
  	redirectWithAnchor($readerlang, $stringForOpen, $s ?? null, $anchor); 
 
-} else if (preg_match("/(pj|ss|ay|np|pc|pd|sk|as|kd|pvr)([0-9]{1,3}|[0-9]-[0-9])/i", $stringForOpen)) {
+} else if (preg_match("/(pj|ss|ay|np|pc|pd|sk|as)([0-9]{1,3}|[0-9]-[0-9])/i", $stringForOpen)) {
  // echo "<script>alert('case 5');</script>";	
   $stringForOpen = "bu-" . $stringForOpen;
 
@@ -524,7 +524,7 @@ redirectWithAnchor($readerlang, $stringForOpen, $s ?? null, $anchor);
 
 }
 // &$defaultlang
-if(preg_match("/^(mn|dn|dhp|iti)[0-9]{1,3}b$/i",$stringForOpen) || preg_match("/^(snp|sn|an|ud|thig|thag)[0-9]{0,2}( |\.)[0-9]{0,3}b$/i",$stringForOpen) || preg_match("/^(snp|sn|an|ud|dhp)[0-9]{0,2}( |\.)[0-9]{0,3}-[0-9]{0,3}b$/i",$stringForOpen)|| preg_match("/^dhp[0-9]{0,3}-[0-9]{0,3}b$/i",$stringForOpen)){
+if(preg_match("/^(mn|dn|dhp|iti|kd|pvr)[0-9]{1,3}b$/i",$stringForOpen) || preg_match("/^(snp|sn|an|ud|thig|thag|pvr)[0-9]{0,2}( |\.)[0-9]{0,3}b$/i",$stringForOpen) || preg_match("/^(snp|sn|an|ud|dhp)[0-9]{0,2}( |\.)[0-9]{0,3}-[0-9]{0,3}b$/i",$stringForOpen)|| preg_match("/^dhp[0-9]{0,3}-[0-9]{0,3}b$/i",$stringForOpen)){
   $stringForOpen = str_replace (" ", ".", $stringForOpen);
   $forbwlink = strtolower(preg_replace("/b$/i","","$stringForOpen"));
   $bwprefix = strtolower(substr($forbwlink,0,2));

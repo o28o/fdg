@@ -345,7 +345,14 @@ if (empty($stringForOpen)) {
     $stringForOpen = str_replace('bu-vb-', 'bu-', $stringForOpen);
     redirectWithAnchor($readerlang, $stringForOpen, $s ?? null, $anchor); 
 
+} else if (preg_match("/(kd|pvr)([0-9]{1,3}|[0-9][ \.][0-9])/i", $stringForOpen)) {
+ // echo "<script>alert('case 5');</script>";	
+  $stringForOpen = "pli-tv-" . $stringForOpen;
+
+    redirectWithAnchor($readerlang, $stringForOpen, $s ?? null, $anchor); 
+
 }
+
 /* ru with arg */ 
 /* for th.su dn */
   if (preg_match("/^(dn|mn)[0-9]{1,3}s$/i",$stringForOpen)) {
@@ -503,7 +510,7 @@ window.location.href='{$base}read.php#{$stringForOpen}Collapse';
   exit();
 }
 
-#open sutta in read interface
+#open sutta in sc light interface
 if(preg_match("/^(mn|dn|dhp|iti)[0-9]{1,3}$/i",$stringForOpen) || preg_match("/^(snp|sn|an|ud|thig|thag)[0-9]{0,2}( |\.)[0-9]{0,3}$/i",$stringForOpen) || preg_match("/^(snp|sn|an|ud|dhp)[0-9]{0,2}( |\.)[0-9]{0,3}-[0-9]{0,3}$/i",$stringForOpen)|| preg_match("/^dhp[0-9]{0,3}-[0-9]{0,3}$/i",$stringForOpen)){
 $stringForOpen = str_replace (" ", ".", $stringForOpen);
 $check = shell_exec("grep -m1 -i \"{$stringForOpen}_\" $indexesfile | awk '{print \$0}'");
@@ -524,7 +531,7 @@ redirectWithAnchor($readerlang, $stringForOpen, $s ?? null, $anchor);
 
 }
 // &$defaultlang
-if(preg_match("/^(mn|dn|dhp|iti|kd|pvr)[0-9]{1,3}b$/i",$stringForOpen) || preg_match("/^(snp|sn|an|ud|thig|thag|pvr)[0-9]{0,2}( |\.)[0-9]{0,3}b$/i",$stringForOpen) || preg_match("/^(snp|sn|an|ud|dhp)[0-9]{0,2}( |\.)[0-9]{0,3}-[0-9]{0,3}b$/i",$stringForOpen)|| preg_match("/^dhp[0-9]{0,3}-[0-9]{0,3}b$/i",$stringForOpen)){
+if(preg_match("/^(mn|dn|dhp|iti)[0-9]{1,3}b$/i",$stringForOpen) || preg_match("/^(snp|sn|an|ud|thig|thag)[0-9]{0,2}( |\.)[0-9]{0,3}b$/i",$stringForOpen) || preg_match("/^(snp|sn|an|ud|dhp)[0-9]{0,2}( |\.)[0-9]{0,3}-[0-9]{0,3}b$/i",$stringForOpen)|| preg_match("/^dhp[0-9]{0,3}-[0-9]{0,3}b$/i",$stringForOpen)){
   $stringForOpen = str_replace (" ", ".", $stringForOpen);
   $forbwlink = strtolower(preg_replace("/b$/i","","$stringForOpen"));
   $bwprefix = strtolower(substr($forbwlink,0,2));

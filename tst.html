@@ -2,86 +2,113 @@
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Тест загрузки</title>
-
     <style>
-
-#page-spinner img {
-    filter: invert(1);
-    background: white;
-    border-radius: 50%;
-    padding: 10px;
-position: fixed;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
+        /* Спиннер всегда видим и загружается первым */
+        #page-spinner {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.9);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 9999;
+        }
+        
+        .spinner-icon {
+            filter: invert(1);
+            background: white;
+            border-radius: 50%;
+            padding: 10px;
             width: 60px;
             height: 60px;
-            z-index: 9999;
             animation: spin 2s linear infinite;
         }
-
+        
         @keyframes spin {
-            to { transform: rotate(360deg); }
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
         }
-
-        /* Скрытие body до загрузки */
-        body {
+        
+        /* Основной контент изначально скрыт */
+        body.preload .content {
             opacity: 0;
-            background: black;
             visibility: hidden;
-            transition: opacity 0.5s ease-in-out;
         }
-
-        .content {
+        
+        body.loaded .content {
+            opacity: 1;
+            visibility: visible;
+            transition: opacity 0.5s ease;
+        }
+        
+        /* Общие стили */
+        body {
+            margin: 0;
+            padding: 0;
+            background: black;
             color: white;
+            font-family: Arial, sans-serif;
+        }
+        
+        .content {
             text-align: center;
-            margin-top: 100px;
+            padding-top: 100px;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        #paliauto {
+            padding: 10px 15px;
+            width: 300px;
+            max-width: 80%;
+            border: 2px solid #444;
+            border-radius: 25px;
+            background: #222;
+            color: white;
+            font-size: 16px;
+            outline: none;
         }
     </style>
 </head>
-<body>
-
-<!-- Спиннер -->
+<body class="preload">
+<!-- Спиннер (отдельно от основного контента) -->
 <div id="page-spinner">
-    <img src="/assets/svg/circle-notch.svg" alt="Загрузка..." style="width: 100%; height: auto;">
+    <div class="spinner-icon"></div>
 </div>
 
-<!-- Контент страницы -->
+<!-- Основной контент (изначально скрыт) -->
 <div class="content">
     <h1>Добро пожаловать!</h1>
     <p>Этот текст появится через 5 секунд.</p>
-    <input type="text" id="paliauto" placeholder="Поиск...">
+    <input type="text" id="paliauto" placeholder="Поиск..." autocomplete="off">
 </div>
 
 <script>
-    document.addEventListener('DOMContentLoaded', function () {
-        // Прячем тело страницы
-        document.body.style.visibility = 'hidden';
-        document.body.style.opacity = '0';
-        document.body.style.transition = 'opacity 0.5s ease';
-
-        // Ждём строго 5 секунд перед показом
-        setTimeout(() => {
-            // Скрываем спиннер
-            const spinner = document.getElementById('page-spinner');
-            if (spinner) {
-                spinner.style.display = 'none';
+    // Спиннер уже виден, так как его стили загружены первыми
+    
+    document.addEventListener('DOMContentLoaded', function() {
+        setTimeout(function() {
+            // 1. Скрываем спиннер
+            var spinner = document.getElementById('page-spinner');
+            if(spinner) spinner.style.display = 'none';
+            
+            // 2. Показываем основной контент
+            document.body.className = 'loaded';
+            
+            // 3. Фокус на поле ввода
+            var input = document.getElementById('paliauto');
+            if(input) {
+                input.focus();
+                // Дублируем фокус для надежности
+                setTimeout(function() { input.focus(); }, 50);
             }
-
-            // Показываем основной контент
-            document.body.style.visibility = 'visible';
-            document.body.style.opacity = '1';
-
-            // Фокус на поле поиска
-            const searchInput = document.getElementById('paliauto');
-            if (searchInput) {
-                searchInput.focus();
-                setTimeout(() => searchInput.focus(), 50);
-            }
-        }, 5000); // Точное время задержки в миллисекундах
+        }, 5000);
     });
 </script>
-
 </body>
 </html>

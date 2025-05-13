@@ -29,31 +29,14 @@ include 'scripts/search-handler.php';
 <meta property="og:title" content="Dhamma.gift" />
 <meta property="og:description" content="<?php echo $ogdesc;?>" />
 
-    <style>
-        /* Стили для спиннера */
-        #page-spinner {
-            position: fixed;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            width: 50px;
-            height: 50px;
-            z-index: 9999;
-            animation: spin 2s linear infinite;
-        }
-
-        @keyframes spin {
-            to { transform: rotate(360deg); }
-        }
-
-        /* Текущие стили скрытия body до загрузки */
-        body {
-            opacity: 0;
-            background: black;
-            visibility: hidden;
-            transition: opacity 0.3s ease-in-out;
-        }
-    </style>
+<style>
+    body {
+        opacity: 0;
+        background: black;
+        visibility: hidden;
+        transition: opacity 0.3s ease-in-out; /* Плавное появление */
+    }
+</style>
 
   <!-- PWA-метатеги -->
   <meta name="theme-color" content="#ffffff">
@@ -165,11 +148,6 @@ if (isPWA) {
 
 <!-- <script>window.location.href="https://f.dhamma.gift";</script> -->
     <body id="page-top"> 
-    
-  <div id="page-spinner">
-    <img src="/assets/svg/circle-notch.svg" alt="Loading..." style="width: 100%; height: auto;">
-</div>  
-    
   <script>
 const url = new URL(window.location);
 const searchParams = new URLSearchParams(url.search);

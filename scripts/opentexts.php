@@ -350,7 +350,6 @@ if (empty($stringForOpen)) {
   $stringForOpen = "pli-tv-" . $stringForOpen;
 
     redirectWithAnchor($readerlang, $stringForOpen, $s ?? null, $anchor); 
-
 }
 
 /* ru with arg */ 

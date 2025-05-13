@@ -318,7 +318,7 @@ if (empty($stringForOpen)) {
  $stringForOpen = $stringForOpen . "1";
  	redirectWithAnchor($readerlang, $stringForOpen, $s ?? null, $anchor); 
 
-} else if (preg_match("/(pj|ss|ay|np|pc|pd|sk|as)([0-9]{1,3}|[0-9]-[0-9])/i", $stringForOpen)) {
+} else if (preg_match("/(pj|ss|ay|np|pc|pd|sk|as|kd|pvr)([0-9]{1,3}|[0-9]-[0-9])/i", $stringForOpen)) {
  // echo "<script>alert('case 5');</script>";	
   $stringForOpen = "bu-" . $stringForOpen;
 
@@ -503,7 +503,7 @@ window.location.href='{$base}read.php#{$stringForOpen}Collapse';
   exit();
 }
 
-#open sutta in sc light interface
+#open sutta in read interface
 if(preg_match("/^(mn|dn|dhp|iti)[0-9]{1,3}$/i",$stringForOpen) || preg_match("/^(snp|sn|an|ud|thig|thag)[0-9]{0,2}( |\.)[0-9]{0,3}$/i",$stringForOpen) || preg_match("/^(snp|sn|an|ud|dhp)[0-9]{0,2}( |\.)[0-9]{0,3}-[0-9]{0,3}$/i",$stringForOpen)|| preg_match("/^dhp[0-9]{0,3}-[0-9]{0,3}$/i",$stringForOpen)){
 $stringForOpen = str_replace (" ", ".", $stringForOpen);
 $check = shell_exec("grep -m1 -i \"{$stringForOpen}_\" $indexesfile | awk '{print \$0}'");

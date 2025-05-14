@@ -20,14 +20,26 @@ homeButton.addEventListener("click", () => {
   document.location.search = "";
 });
 
-// pressing enter will "submit" the citation and load
 form.addEventListener("submit", e => {
   e.preventDefault();
   if (citation.value) {
-    buildSutta(citation.value.replace(/\s+/g, " "));
-history.pushState({ page: citation.value.replace(/\s+/g, " ") }, "", `?q=${citation.value.replace(/\s+/g, " ")}`);
+    const query = citation.value.replace(/\s+/g, " ");
+    
+    // Получаем текущий параметр s, если он есть
+    const currentParams = new URLSearchParams(window.location.search);
+    const sParam = currentParams.get("s");
+
+    // Строим новый URL с учётом параметра s
+    let newUrl = `?q=${encodeURIComponent(query)}`;
+    if (sParam) {
+      newUrl += `&s=${encodeURIComponent(sParam)}`;
+    }
+
+    buildSutta(query);
+    history.pushState({ page: query }, "", newUrl);
   }
 });
+
 
 function buildSutta(slug) {
   
@@ -693,7 +705,15 @@ xhr.onreadystatechange = function() {
           !xhr.responseText.includes("404") &&
           xhr.responseText.trim().length > 0) {
         console.log(xhr.responseText);
-        window.location.href = "/ru/?p=-kn&q=" + encodeURIComponent(slug);
+	
+let currentParams = new URLSearchParams(window.location.search);
+let sParam = currentParams.get("s");
+let newUrl = `/ru/?p=-kn&q=${encodeURIComponent(slug)}`;
+if (sParam) newUrl += `&s=${encodeURIComponent(sParam)}`;
+window.location.href = newUrl;
+	
+		
+    //    window.location.href = "/ru/?p=-kn&q=" + encodeURIComponent(slug);
       } else {
         console.log('Page not found or empty response');
       }

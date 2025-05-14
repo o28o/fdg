@@ -705,15 +705,16 @@ xhr.onreadystatechange = function() {
           !xhr.responseText.includes("404") &&
           xhr.responseText.trim().length > 0) {
         console.log(xhr.responseText);
-	
+
+/*	
 let currentParams = new URLSearchParams(window.location.search);
 let sParam = currentParams.get("s");
 let newUrl = `/ru/?p=-kn&q=${encodeURIComponent(slug)}`;
 if (sParam) newUrl += `&s=${encodeURIComponent(sParam)}`;
 window.location.href = newUrl;
-	
+	*/
 		
-    //    window.location.href = "/ru/?p=-kn&q=" + encodeURIComponent(slug);
+    window.location.href = "/ru/?p=-kn&q=" + encodeURIComponent(slug);
       } else {
         console.log('Page not found or empty response');
       }

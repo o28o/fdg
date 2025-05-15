@@ -852,10 +852,19 @@ foreach ($slides as $index => $slide) {
 			   
             <div class="container">
               
-                                 <div style="text-align: center; margin: 1em 0;">
-<button id="installPWA" style="background: none;  border: none; padding: 0; cursor: pointer;">
-<img src="/assets/img/pwa-cta.png" style="width: 200px;" alt="Установить Dhamma.gift как приложение" />
-</button>
+<div class="d-flex flex-column flex-md-row justify-content-center align-items-center my-3 mb-3">
+    <button id="installPWA" style="background: none; border: none; padding: 0; cursor: pointer;">
+        <img src="/assets/img/pwa-cta.png" style="width: 200px;" alt="Установить Dhamma.gift как приложение">
+    </button>
+    <a href="https://t.me/dgift_bot">
+        <img src="/assets/img/telegram-cta.png" style="height: 75px;" alt="Перейти в Telegram-бот">
+    </a>
+    <a href="https://chromewebstore.google.com/detail/dhammagift-search-and-wor/dnnogjdcmhbiobpnkhdbfnfjnjlikabd">
+        <img style="height: 58px;" src="/assets/img/chrome-cta.png" alt="Download from Chrome Web Store">
+    </a>
+    <a href="https://microsoftedge.microsoft.com/addons/detail/dhammagift-search-and-wo/aokegkhdaijkikbdocanadeghllhfmhj">
+        <img style="max-width: 180px; " src="/assets/img/edge-cta.png" alt="Download from Microsoft Edge Store">
+    </a>
 </div>
 
 <script>

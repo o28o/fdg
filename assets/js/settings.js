@@ -500,9 +500,22 @@ document.addEventListener("keydown", (event) => {
 		  defaultLanguageLinkPart = "/read/";
 		}
 
-if (urlWithoutParams.endsWith("/r/") || urlWithoutParams.endsWith("/read/") ||
-        urlWithoutParams.endsWith("/th/") || urlWithoutParams.endsWith("/th/read/")) {
-    
+//Новые кейсы 
+    // Переключение между / и /ru/
+    if (urlWithoutParams.endsWith("/") || urlWithoutParams.endsWith("/ru/")) {
+      newUrl = (urlWithoutParams.endsWith("/ru/")) 
+        ? window.location.origin + "/" 
+        : window.location.origin + "/ru/";
+    }
+
+
+    // Переключение между /read.php и /ru/read.php
+    if (urlWithoutParams.endsWith("/read.php") || urlWithoutParams.endsWith("/ru/read.php")) {
+      newUrl = (urlWithoutParams.endsWith("/ru/read.php")) 
+        ? window.location.origin + "/read.php" 
+        : window.location.origin + "/ru/read.php";
+    }
+
 
     // Проверяем, содержит ли URL /r/
     if (urlWithoutParams.endsWith("/r/")) {
@@ -520,24 +533,6 @@ if (urlWithoutParams.endsWith("/r/") || urlWithoutParams.endsWith("/read/") ||
         newUrl = window.location.origin + "/read/";
       }
     }
-
-}
-
-    // Переключение между / и /ru/
-    if (urlWithoutParams.endsWith("/") || urlWithoutParams.endsWith("/ru/")) {
-      newUrl = (urlWithoutParams.endsWith("/ru/")) 
-        ? window.location.origin + "/" 
-        : window.location.origin + "/ru/";
-    }
-
-
-    // Переключение между /read.php и /ru/read.php
-    if (urlWithoutParams.endsWith("/read.php") || urlWithoutParams.endsWith("/ru/read.php")) {
-      newUrl = (urlWithoutParams.endsWith("/ru/read.php")) 
-        ? window.location.origin + "/read.php" 
-        : window.location.origin + "/ru/read.php";
-    }
-
 
     // Добавляем параметры обратно, если они были
     let params = currentUrl.split('?')[1] || '';
@@ -592,7 +587,23 @@ document.addEventListener("keydown", (event) => {
 document.addEventListener("keydown", (event) => {
   if (event.altKey && event.code === "KeyP") {
     event.preventDefault();
-    alert("Четыре Благородные Истины!");
+
+    // Создаем кастомное модальное окно
+    let modal = document.createElement("div");
+    modal.innerHTML = `
+      <div style="position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%);
+                  background: white; padding: 20px; border: 1px solid black; box-shadow: 0px 4px 10px rgba(0,0,0,0.2);">
+        <p>Четыре Благородные Истины!</p>
+        <p><a href="https://example.com" target="_blank">Подробнее</a></p>
+        <button id="closeModal">Закрыть</button>
+      </div>
+    `;
+    document.body.appendChild(modal);
+
+    // Закрытие модального окна
+    document.getElementById("closeModal").addEventListener("click", () => {
+      modal.remove();
+    });
   }
 });
 

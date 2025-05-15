@@ -7,6 +7,7 @@ Allow: /assets/svg/
 Allow: /assets/example/
 
 Disallow: /result/
+Disallow: /ru/result/
 Disallow: /scripts/
 Disallow: /bw/
 Disallow: /db/

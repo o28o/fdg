@@ -19,7 +19,7 @@ if ( preg_match('/\/ru/', $actual_link)) {
   $defaultlang = 'lang=pli-rus';
   $outputlang = "-oru";
   $base = "/ru/";
-  $readerlang = $base . "read/";
+  $readerlang = "/r/";
   $aksharatext = "На латинице вы искали ";
   function afterAkhsaramukhaResponse($convertedStr) {
     echo "На латинице вы искали $convertedStr<br><br>";

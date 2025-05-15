@@ -243,32 +243,29 @@ if (finder && finder.trim() !== "") {
   }
 }
 
-
-let linkToCopy = `<a class="text-decoration-none copyLink" style="cursor: pointer;" onclick="copyToClipboard('${fullUrlWithAnchor}')">&nbsp;</a>`
-let linkWithDataSet = `<a class="text-decoration-none copyLink" style="cursor: pointer;" data-copy-text="${fullUrlWithAnchor}">&nbsp;</a>`
-
-
-// inputscript-ISOPali add for aksharamukha data-copy-text="${fullUrlWithAnchor}"
+// inputscript-ISOPali add for aksharamukha
 if (paliData[segment] !== undefined && transData[segment] !== undefined && varData[segment] !== undefined) {
-        html += `${openHtml}<span id="${anchor}">
-      <span class="pli-lang " lang="pi">${paliData[segment].trim()}<a class="text-decoration-none copyLink" style="cursor: pointer;" onclick="copyToClipboard('${fullUrlWithAnchor}')">&nbsp;</a><br>
-      <span class="variant pli-lang inputscript-ISOPali" lang="pi">
+    html += `${openHtml}<span id="${anchor}">
+  <span class="pli-lang" lang="pi">${paliData[segment].trim()}<a class="text-decoration-none copyLink" style="cursor: pointer;" data-copy-text="${fullUrlWithAnchor}">&nbsp;</a><br>
+  <span class="variant pli-lang inputscript-ISOPali" lang="pi">
 ${varData[segment].trim()}   
 </span>      
-      </span>
-      <span class="rus-lang" lang="ru">${transData[segment].trim()}${linkWithDataSet}
+  </span>
+  <span class="rus-lang" lang="ru">${transData[segment]}
 <br></span>
-      </span>${closeHtml}\n\n`;
-} else if (paliData[segment] !== undefined && transData[segment] !== undefined ) {
-        html += `${openHtml}<span id="${anchor}">
-      <span class="pli-lang " lang="pi">${paliData[segment].trim()}<a class="text-decoration-none copyLink" style="cursor: pointer;" onclick="copyToClipboard('${fullUrlWithAnchor}')">&nbsp;</a></span>
-      <span class="rus-lang" lang="ru">${transData[segment].trim()}${linkWithDataSet}<br></span>
-      </span>${closeHtml}\n\n`;
+  </span>${closeHtml}\n\n`;
+} else if (paliData[segment] !== undefined && transData[segment] !== undefined) {
+    html += `${openHtml}<span id="${anchor}">
+  <span class="pli-lang" lang="pi">${paliData[segment].trim()}<a class="text-decoration-none copyLink" style="cursor: pointer;" data-copy-text="${fullUrlWithAnchor}">&nbsp;</a></span>
+  <span class="rus-lang" lang="ru">${transData[segment]}<br></span>
+  </span>${closeHtml}\n\n`;
 } else if (paliData[segment] !== undefined) {
-  html += openHtml + '<span id="' + anchor + '"><span class="pli-lang inputscript-ISOPali" lang="pi">' + paliData[segment].trim() + linkToCopy + '</span></span>' + closeHtml + '\n\n';
+  html += openHtml + '<span id="' + anchor + '"><span class="pli-lang inputscript-ISOPali" lang="pi">' + paliData[segment] + '</span></span>' + closeHtml + '\n\n';
 } else if (transData[segment] !== undefined) {
-  html += openHtml + '<span id="' + anchor + '"><span class="rus-lang" lang="ru">' + transData[segment].trim() + linkWithDataSet + '</span></span>' + closeHtml + '\n\n';
+  html += openHtml + '<span id="' + anchor + '"><span class="rus-lang" lang="ru">' + transData[segment] + '</span></span>' + closeHtml + '\n\n';
 }
+
+
 });
 
 

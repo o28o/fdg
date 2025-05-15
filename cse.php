@@ -15,21 +15,31 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta charset="UTF-8">
 
+<style>
+  body {
+    display: flex;
+    justify-content: center;
+    margin: 0;
+  }
+  .content {
+    max-width: 1400px;
+    width: 100%;
+    text-align: left;
+  }
+</style>
 
   
 </head>
+
 <body>
-  
-         <script async src="https://cse.google.com/cse.js?cx=c184c71e0fe5d4c93">
-</script>
-<div style="z-index:99999" class="gcse-search"></div>
-  
-  <script async src="https://cse.google.com/cse.js?cx=c184c71e0fe5d4c93"></script>
-<div class="gcse-searchresults-only"></div>
-          
-          
-          
+  <div class="content">
+    <script async src="https://cse.google.com/cse.js?cx=c184c71e0fe5d4c93"></script>
+
+    <div style="z-index: 99;" class="gcse-search"></div>
+    <div class="gcse-searchresults-only"></div>
+  </div>
 </body>
+
 
 </head>
   </html>

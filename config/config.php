@@ -197,4 +197,52 @@ if (savedReader) {
     document.querySelector(\'input[name="reader"][value="\' + savedReader + \'"]\').checked = true;
 }
 </script>';
+
+$ctaButtons =' <div class="d-flex flex-column flex-md-row justify-content-center align-items-center my-3 mb-3">
+    <button id="installPWA" style="background: none; border: none; padding: 0; cursor: pointer;">
+        <img src="/assets/img/pwa-cta.png" style="width: 200px;" alt="Install Dhamma.gift as progressive web app">
+    </button>
+    <a href="https://t.me/dgift_bot">
+        <img src="/assets/img/telegram-cta.png" style="height: 75px;" alt="Open DGift_bot - inline bot in any Telegram chat or Group">
+    </a>
+    <a href="https://chromewebstore.google.com/detail/dhammagift-search-and-wor/dnnogjdcmhbiobpnkhdbfnfjnjlikabd">
+        <img style="height: 58px;" src="/assets/img/chrome-cta.png" alt="Download from Chrome Web Store">
+    </a>
+    <a class="ms-1" href="https://microsoftedge.microsoft.com/addons/detail/dhammagift-search-and-wo/aokegkhdaijkikbdocanadeghllhfmhj">
+        <img style="max-width: 180px; " src="/assets/img/edge-cta.png" alt="Download from Microsoft Edge Store">
+    </a>
+	
+	</div>
+
+<script>
+let deferredPrompt;
+
+window.addEventListener(\'beforeinstallprompt\', (e) => {
+// Prevent automatic banner display
+e.preventDefault();
+deferredPrompt = e;
+
+// Show the button
+const installBtn = document.getElementById(\'installPWA\');
+installBtn.style.display = \'inline-block\';
+
+installBtn.addEventListener(\'click\', () => {
+if (deferredPrompt) {
+deferredPrompt.prompt();
+deferredPrompt.userChoice.then((choiceResult) => {
+if (choiceResult.outcome === \'accepted\') {
+console.log(\'Installation accepted\');
+} else {
+console.log(\'Installation declined\');
+}
+deferredPrompt = null;
+});
+}
+});
+});
+</script>';
+
+
+
+
 ?>

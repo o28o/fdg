@@ -21606,41 +21606,11 @@ include $basedir . "/assets/texts/bipm.php";
                <h2 class="page-section-heading text-center text-uppercase text-white mb-5"><?php echo $head2recomlinks;?></h2>
 			   
             <div class="container">
-                                 <div style="text-align: center; margin: 1em 0;">
-<button id="installPWA" style="background: none;  border: none; padding: 0; cursor: pointer;">
-<img src="/assets/img/pwa-cta.png" style="width: 200px;" alt="Установить Dhamma.gift как приложение" />
-</button>
-</div>
+
+			<?php echo $ctaButtons;?>
+              
 
                 <div  class="row">
-                  
-<script>
-let deferredPrompt;
-
-window.addEventListener('beforeinstallprompt', (e) => {
-// Prevent automatic banner display
-e.preventDefault();
-deferredPrompt = e;
-
-// Show the button
-const installBtn = document.getElementById('installPWA');
-installBtn.style.display = 'inline-block';
-
-installBtn.addEventListener('click', () => {
-if (deferredPrompt) {
-deferredPrompt.prompt();
-deferredPrompt.userChoice.then((choiceResult) => {
-if (choiceResult.outcome === 'accepted') {
-console.log('Installation accepted');
-} else {
-console.log('Installation declined');
-}
-deferredPrompt = null;
-});
-}
-});
-});
-</script>
 
                    <!-- Footer Location-->
                     <div class="col-lg-4 mb-5 mb-lg-0">

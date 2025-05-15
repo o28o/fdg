@@ -356,13 +356,13 @@ let linkWithDataSet = `<a class="text-decoration-none copyLink" style="cursor: p
   //  console.log(`engTransData[${segment}]: ${engTransData[segment]}`);
     if (engTransData[segment] !== transData[segment] && varData[segment] !== undefined) {
         html += `${openHtml}<span id="${anchor}">
-      <span class="pli-lang inputscript-ISOPali" lang="pi">${преобразоватьТекст().trim()}<a class="text-decoration-none copyLink" style="cursor: pointer;" onclick="copyToClipboard('${fullUrlWithAnchor}')">&nbsp;</a>
+      <span class="pli-lang inputscript-ISOPali" lang="pi">${преобразоватьТекст().trim()}${linkToCopy}
 	  </span>
-      <span class="greyedout rus-lang" lang="ru">${paliData[segment].trim()}${linkWithDataSet}
+      <span class="greyedout rus-lang" lang="ru">${paliData[segment].trim()}${linkToCopy}
 <br>
-		  <span class="variant pli-lang inputscript-ISOPali" lang="pi">
-${varData[segment].trim()}   
-</span>		  </span>      
+		  <font class="variant">
+${varData[segment].trim()}${linkToCopy}  
+</font>		  </span>      
       </span>${closeHtml}\n\n`;
 	  
 	  //	  </span>   --dark-gray2: #9E9E9E;  --light-gray2: #616161;
@@ -370,9 +370,9 @@ ${varData[segment].trim()}
 
     } else if (engTransData[segment] !== transData[segment]) {
         html += `${openHtml}<span id="${anchor}">
-      <span class="pli-lang inputscript-ISOPali" lang="pi">${преобразоватьТекст().trim()}<a class="text-decoration-none copyLink" style="cursor: pointer;" onclick="copyToClipboard('${fullUrlWithAnchor}')">&nbsp;</a>
+      <span class="pli-lang inputscript-ISOPali" lang="pi">${преобразоватьТекст().trim()}${linkToCopy}
 	  </span>
-      <span class="greyedout rus-lang" lang="ru">${paliData[segment].trim()}${linkWithDataSet}
+      <span class="greyedout rus-lang" lang="ru">${paliData[segment].trim()}${linkToCopy}
 		  </span>
       </span>${closeHtml}\n\n`;
 	  
@@ -381,17 +381,17 @@ ${varData[segment].trim()}
 
     } else if (varData[segment] !== undefined) {
         html += `${openHtml}<span id="${anchor}">
-      <span class="pli-lang inputscript-ISOPali" lang="pi">${преобразоватьТекст().trim()}<a class="text-decoration-none copyLink" style="cursor: pointer;"  onclick="copyToClipboard('${fullUrlWithAnchor}')">&nbsp;</a></span>
+      <span class="pli-lang inputscript-ISOPali" lang="pi">${преобразоватьТекст().trim()}${linkToCopy}</span>
 
       <span class="greyedout eng-lang" lang="en">${paliData[segment].trim()}${linkWithDataSet}</span><br>
-      <span class="variant pli-lang inputscript-ISOPali" lang="pi">
-${varData[segment].trim()}   
-</span>      
+      <font class="variant">
+${varData[segment].trim()}${linkToCopy}   
+</font>      
       </span>${closeHtml}\n\n`;
     }  else {
         html += `${openHtml}<span id="${anchor}">
-      <span class="pli-lang inputscript-ISOPali" lang="pi">${преобразоватьТекст().trim()}<a class="text-decoration-none copyLink" style="cursor: pointer;"  onclick="copyToClipboard('${fullUrlWithAnchor}')">&nbsp;</a></span>
-      <span class="greyedout rus-lang" lang="ru">${paliData[segment].trim()}${linkWithDataSet}</span>
+      <span class="pli-lang inputscript-ISOPali" lang="pi">${преобразоватьТекст().trim()}${linkToCopy}</span>
+      <span class="greyedout rus-lang" lang="ru">${paliData[segment].trim()}${linkToCopy}</span>
       </span>${closeHtml}\n\n`;
     }
 

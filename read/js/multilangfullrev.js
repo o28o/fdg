@@ -331,16 +331,20 @@ paliData[segment] = paliData[segment].replace(/[—–—]/, ' — ');
 }
 //   console.log(`transData[${segment}]: ${transData[segment]}`);
   //  console.log(`engTransData[${segment}]: ${engTransData[segment]}`);
+  
+  let linkToCopy = `<a class="text-decoration-none copyLink" style="cursor: pointer;" onclick="copyToClipboard('${fullUrlWithAnchor}')">&nbsp;</a>`
+let linkWithDataSet = `<a class="text-decoration-none copyLink" style="cursor: pointer;" data-copy-text="${fullUrlWithAnchor}">&nbsp;</a>`
+
     if (engTransData[segment] !== transData[segment]) {
         html += `<p><span id="${anchor}">
-      <span class="pli-lang inputscript-ISOPali" lang="pi">${paliData[segment].trim()}<a class="text-decoration-none" style="cursor: pointer;" onclick="copyToClipboard('${fullUrlWithAnchor}')">&nbsp;</a></span>
-      <span class="rus-lang" lang="ru">${transData[segment]}</span>
-      <span class="eng-lang" lang="en">${engTransData[segment]}</span>
+      <span class="pli-lang inputscript-ISOPali" lang="pi">${paliData[segment].trim()}${linkToCopy}</span>
+      <span class="rus-lang" lang="ru">${transData[segment].trim()}${linkToCopy}</span>
+      <span class="eng-lang" lang="en">${engTransData[segment].trim()}${linkToCopy}</span>
       </span></p>\n\n`;
     } else {
         html += `<p><span id="${anchor}">
-      <span class="pli-lang inputscript-ISOPali" lang="pi">${paliData[segment].trim()}<a class="text-decoration-none" style="cursor: pointer;" onclick="copyToClipboard('${fullUrlWithAnchor}')">&nbsp;</a></span>
-      <span class="rus-lang" lang="en">${engTransData[segment]}</span>
+      <span class="pli-lang inputscript-ISOPali" lang="pi">${paliData[segment].trim()}${linkToCopy}</span>
+      <span class="rus-lang" lang="en">${engTransData[segment].trim()}${linkToCopy}</span>
       </span></p>\n\n`;
     }
 

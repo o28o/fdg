@@ -414,17 +414,25 @@ if (localStorage.getItem("removePunct") === "true" && paliData[segment] !== unde
 if (paliData[segment] !== undefined) {
 paliData[segment] = paliData[segment].replace(/[—–—]/, ' — ');
 }
+
+let linkToCopy = `<a class="text-decoration-none copyLink" style="cursor: pointer;" onclick="copyToClipboard('${fullUrlWithAnchor}')">&nbsp;</a>`
+let linkWithDataSet = `<a class="text-decoration-none copyLink" style="cursor: pointer;" data-copy-text="${fullUrlWithAnchor}">&nbsp;</a>`
+
+
 //   console.log(`transData[${segment}]: ${transData[segment]}`);
   //  console.log(`engTransData[${segment}]: ${engTransData[segment]}`);
     if (engTransData[segment] !== transData[segment] && varData[segment] !== undefined) {
         html += `${openHtml}<span id="${anchor}">
-      <span class="pli-lang inputscript-ISOPali" lang="pi">${paliData[segment].trim()}<a class="text-decoration-none copyLink" style="cursor: pointer;" onclick="copyToClipboard('${fullUrlWithAnchor}')">&nbsp;</a><br>
-<span class="variant pli-lang inputscript-ISOPali" lang="pi">
-${varData[segment].trim()}   
-</span>   
+	<span class="pli-lang inputscript-ISOPali" lang="pi">${paliData[segment].trim()}${linkToCopy}<br>
+<font class="variant">
+${varData[segment].trim()}${linkToCopy}   
+</font>   
 	  </span>
-      <span class="rus-lang" lang="ru">${transData[segment]}<br>
-	  	  <font class="eng-lang">${engTransData[segment]}</font><br>
+	  <span class="right-column">
+
+      <span class="rus-lang" lang="ru">${transData[segment].trim()}${linkToCopy}<br>
+	  	  <font class="eng-lang">${engTransData[segment].trim()}${linkToCopy}</font><br>
+		  </span>
 		  </span>
       </span>${closeHtml}\n\n`;
 	  
@@ -433,10 +441,10 @@ ${varData[segment].trim()}
 
     } else if (engTransData[segment] !== transData[segment]) {
         html += `${openHtml}<span id="${anchor}">
-      <span class="pli-lang inputscript-ISOPali" lang="pi">${paliData[segment].trim()}<a class="text-decoration-none copyLink" style="cursor: pointer;" onclick="copyToClipboard('${fullUrlWithAnchor}')">&nbsp;</a>
+      <span class="pli-lang inputscript-ISOPali" lang="pi">${paliData[segment].trim()}${linkToCopy}
 	  </span>
-      <span class="rus-lang" lang="ru">${transData[segment]}<br>
-	  	  <font class="eng-lang">${engTransData[segment]}</font><br>
+      <span class="rus-lang" lang="ru">${transData[segment].trim()}${linkToCopy}<br>
+	  	  <font class="eng-lang">${engTransData[segment].trim()}${linkToCopy}</font><br>
 		  </span>
       </span>${closeHtml}\n\n`;
 	  
@@ -445,16 +453,16 @@ ${varData[segment].trim()}
 
     } else if (varData[segment] !== undefined) {
         html += `${openHtml}<span id="${anchor}">
-      <span class="pli-lang inputscript-ISOPali" lang="pi">${paliData[segment].trim()}<a class="text-decoration-none copyLink" style="cursor: pointer;"  onclick="copyToClipboard('${fullUrlWithAnchor}')">&nbsp;</a><br>
-<span class="variant pli-lang inputscript-ISOPali" lang="pi">
-${varData[segment].trim()}   
-</span></span>      
-      <span class="rus-lang" lang="en">${engTransData[segment]}</span>
+      <span class="pli-lang inputscript-ISOPali" lang="pi">${paliData[segment].trim().trim()}${linkToCopy}<br>
+<font class="variant">
+${varData[segment].trim()}${linkToCopy}
+</font></span>      
+      <span class="rus-lang" lang="en">${engTransData[segment].trim()}${linkToCopy}</span>
       </span>${closeHtml}\n\n`;
     }  else {
         html += `${openHtml}<span id="${anchor}">
-      <span class="pli-lang inputscript-ISOPali" lang="pi">${paliData[segment].trim()}<a class="text-decoration-none copyLink" style="cursor: pointer;"  onclick="copyToClipboard('${fullUrlWithAnchor}')">&nbsp;</a></span>
-      <span class="rus-lang" lang="en">${engTransData[segment]}</span>
+      <span class="pli-lang inputscript-ISOPali" lang="pi">${paliData[segment].trim()}${linkToCopy}</span>
+      <span class="rus-lang" lang="en">${engTransData[segment].trim()}${linkToCopy}</span>
       </span>${closeHtml}\n\n`;
     }
 

@@ -348,13 +348,17 @@ if (paliData[segment] !== undefined) {
 paliData[segment] = paliData[segment].replace(/[—–—]/, ' — ');
 }
 
+let linkToCopy = `<a class="text-decoration-none copyLink" style="cursor: pointer;" onclick="copyToClipboard('${fullUrlWithAnchor}')">&nbsp;</a>`
+let linkWithDataSet = `<a class="text-decoration-none copyLink" style="cursor: pointer;" data-copy-text="${fullUrlWithAnchor}">&nbsp;</a>`
+
 //   console.log(`transData[${segment}]: ${transData[segment]}`);
   //  console.log(`engTransData[${segment}]: ${engTransData[segment]}`);
     if (engTransData[segment] !== transData[segment] && varData[segment] !== undefined) {
         html += `${openHtml}<span id="${anchor}">
-      <span class="pli-lang inputscript-ISOPali" lang="pi">${paliDevanagariData[segment]}<a class="text-decoration-none copyLink" style="cursor: pointer;" onclick="copyToClipboard('${fullUrlWithAnchor}')">&nbsp;</a>
+      <span class="pli-lang inputscript-ISOPali" lang="pi">${paliDevanagariData[segment].trim()}<a class="text-decoration-none copyLink" style="cursor: pointer;" onclick="copyToClipboard('${fullUrlWithAnchor}')">&nbsp;</a>
 	  </span>
-      <span class="greyedout rus-lang" lang="ru">${paliData[segment]}
+      <span class="greyedout rus-lang" lang="ru">${paliData[segment].trim()}${linkWithDataSet}
+
 <br>
 		  <span class="variant pli-lang inputscript-ISOPali" lang="pi">
 ${varData[segment].trim()}   
@@ -366,9 +370,10 @@ ${varData[segment].trim()}
 
     } else if (engTransData[segment] !== transData[segment]) {
         html += `${openHtml}<span id="${anchor}">
-      <span class="pli-lang inputscript-ISOPali" lang="pi">${paliDevanagariData[segment]}<a class="text-decoration-none copyLink" style="cursor: pointer;" onclick="copyToClipboard('${fullUrlWithAnchor}')">&nbsp;</a>
+      <span class="pli-lang inputscript-ISOPali" lang="pi">${paliDevanagariData[segment].trim()}<a class="text-decoration-none copyLink" style="cursor: pointer;" onclick="copyToClipboard('${fullUrlWithAnchor}')">&nbsp;</a>
 	  </span>
-      <span class="greyedout rus-lang" lang="ru">${paliData[segment]}
+      <span class="greyedout rus-lang" lang="ru">${paliData[segment].trim()}${linkWithDataSet}
+
 		  </span>
       </span>${closeHtml}\n\n`;
 	  
@@ -377,17 +382,19 @@ ${varData[segment].trim()}
 
     } else if (varData[segment] !== undefined) {
         html += `${openHtml}<span id="${anchor}">
-      <span class="pli-lang inputscript-ISOPali" lang="pi">${paliDevanagariData[segment]}<a class="text-decoration-none copyLink" style="cursor: pointer;"  onclick="copyToClipboard('${fullUrlWithAnchor}')">&nbsp;</a></span>
+      <span class="pli-lang inputscript-ISOPali" lang="pi">${paliDevanagariData[segment].trim()}<a class="text-decoration-none copyLink" style="cursor: pointer;"  onclick="copyToClipboard('${fullUrlWithAnchor}')">&nbsp;</a></span>
 
-      <span class="greyedout eng-lang" lang="en">${paliData[segment]}</span><br>
+      <span class="greyedout eng-lang" lang="en">${paliData[segment].trim()}${linkWithDataSet}
+</span><br>
       <span class="variant pli-lang inputscript-ISOPali" lang="pi">
 ${varData[segment].trim()}   
 </span>      
       </span>${closeHtml}\n\n`;
     }  else {
         html += `${openHtml}<span id="${anchor}">
-      <span class="pli-lang inputscript-ISOPali" lang="pi">${paliDevanagariData[segment]}<a class="text-decoration-none copyLink" style="cursor: pointer;"  onclick="copyToClipboard('${fullUrlWithAnchor}')">&nbsp;</a></span>
-      <span class="greyedout rus-lang" lang="ru">${paliData[segment]}</span>
+      <span class="pli-lang inputscript-ISOPali" lang="pi">${paliDevanagariData[segment].trim()}<a class="text-decoration-none copyLink" style="cursor: pointer;"  onclick="copyToClipboard('${fullUrlWithAnchor}')">&nbsp;</a></span>
+      <span class="greyedout rus-lang" lang="ru">${paliData[segment].trim()}${linkWithDataSet}
+</span>
       </span>${closeHtml}\n\n`;
     }
 

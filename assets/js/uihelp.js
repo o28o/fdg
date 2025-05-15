@@ -206,11 +206,11 @@ const hintSettings = {
         },
         '/r/': {
             title: 'Подсказка:',
-            message: 'Чтобы скопировать ссылку на нужное место, кликните в конце строки с пали — там есть невидимая ссылка.'
+            message: 'Чтобы скопировать ссылку на нужное место, кликните в конце нужной строки — там есть невидимая ссылка.'
         },
         '/read/': {
             title: 'Hint:',
-            message: 'To copy a link to a specific location, click at the end of the Pali line — there’s an invisible link there.'
+            message: 'To copy a link to a specific location, click at the end of the desired line — there’s an invisible link there.'
         }
     }
 };

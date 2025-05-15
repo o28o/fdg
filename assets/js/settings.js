@@ -500,6 +500,9 @@ document.addEventListener("keydown", (event) => {
 		  defaultLanguageLinkPart = "/read/";
 		}
 
+if (urlWithoutParams.endsWith("/r/") || urlWithoutParams.endsWith("/read/") ||
+        urlWithoutParams.endsWith("/th/") || urlWithoutParams.endsWith("/th/read/")) {
+    
 
     // Проверяем, содержит ли URL /r/
     if (urlWithoutParams.endsWith("/r/")) {
@@ -518,6 +521,7 @@ document.addEventListener("keydown", (event) => {
       }
     }
 
+}
 
     // Переключение между / и /ru/
     if (urlWithoutParams.endsWith("/") || urlWithoutParams.endsWith("/ru/")) {
@@ -533,7 +537,8 @@ document.addEventListener("keydown", (event) => {
         ? window.location.origin + "/read.php" 
         : window.location.origin + "/ru/read.php";
     }
-	
+
+
     // Добавляем параметры обратно, если они были
     let params = currentUrl.split('?')[1] || '';
     newUrl = params ? `${newUrl}?${params}` : newUrl;

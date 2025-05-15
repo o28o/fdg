@@ -342,7 +342,7 @@ echo '<div style="max-width: 450px; display: none;" class="alert alert-primary a
    <br>
    <strong>iOS</strong> Safari: Поделиться -> добавить на Главную.<br> 
    <strong>Android</strong> Chrome: Настройки -> добавить на Главную<br>
-   Теперь можно: выделить слово <b>на любом сайте и приложении</b> -> и выбрать DG в меню "Поделиться" ОС<br>
+   Теперь на Андроид можно: выделить слово <b>на любом сайте и приложении</b> -> и выбрать DG в меню "Поделиться" ОС<br>
 
 <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button></div>';
 } else {
@@ -352,7 +352,7 @@ Add <strong>Dhamma.gift</strong> to your Home Screen?
    <br>
    <strong>iOS</strong> Safari: Share -> Add to Home Screen.<br>
    <strong>Android</strong> Chrome: Settings -> Add to Home Screen<br>
-   After that you can select word <b>on any site or app</b>-> and send it to DG app via "Share" OS menu<br>
+   After that on Android you can select word <b>on any site or app</b>-> and send it to DG app via "Share" OS menu<br>
 
 <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button></div>';
 }

@@ -6,32 +6,6 @@ function getRanges($string) {
   $check = shell_exec("grep -m1 -i \"{$string}_\" $indexesfile | awk '{print \$0}'");
 
 
-// Включаем сессию ТОЛЬКО если запрос содержит проблемные slug
-$problematicSlugs = ['pli-tv-bu-vb-', 'bu-', 'bi-'];
-$isProblematicSlug = false;
-
-foreach ($problematicSlugs as $slugPattern) {
-    if (strpos($stringForOpen, $slugPattern) !== false) {
-        $isProblematicSlug = true;
-        break;
-    }
-}
-
-if ($isProblematicSlug) {
-    session_start(); // Активируем сессию только для проблемных slug
-
-    // Проверяем, не был ли этот slug уже обработан
-    if (isset($_SESSION['processed_slug']) && $_SESSION['processed_slug'] === $stringForOpen) {
-        die("Ошибка: обнаружен бесконечный редирект. Запрос: " . htmlspecialchars($stringForOpen));
-    }
-
-    // Запоминаем slug в сессии
-    $_SESSION['processed_slug'] = $stringForOpen;
-}
-
-
-
-
 //if this empty then find range
 if (empty($check)) {
   $command = escapeshellcmd("bash $scriptfile $string");
@@ -241,9 +215,46 @@ $anchor = isset(parse_url($_SERVER['REQUEST_URI'])['fragment']) ? parse_url($_SE
 		$string = str_replace("`", "", $q);
 $stringForOpen = strtolower($string);
 $stringForOpen = preg_replace('/([a-zA-Z])\s+(\d)/', '$1$2', $stringForOpen);
+$stringForOpen = preg_replace('/([^\d])\s+(\d)/u', '$1$2', $stringForOpen);
 $stringForOpen = preg_replace('/(\d+)\s*\.\s*(\d+)/', '$1.$2', $stringForOpen);
 $stringForOpen = preg_replace('/([0-9]) ([0-9])/', '$1.$2', $stringForOpen);
 $stringForOpen = preg_replace('/([0-9])\. ([0-9])/', '$1.$2', $stringForOpen);
+$stringForOpen = str_replace(
+    ['й','ц','у','к','е','н','г','ш','щ','з','х','ъ','ф','ы','в','а','п','р','о','л','д','ж','э','я','ч','с','м','и','т','ь','б','ю','.'],
+    ['q','w','e','r','t','y','u','i','o','p','[',']','a','s','d','f','g','h','j','k','l',';',"'",'z','x','c','v','b','n','m',',','.','.'],
+    $stringForOpen
+);
+
+// Дебаг-вывод
+/* echo "<pre>После замены: ";
+var_dump($stringForOpen);
+echo "</pre>";
+exit("=== ДЕБАГ: Скрипт остановлен ===");
+ */
+// Включаем сессию ТОЛЬКО если запрос содержит проблемные slug
+$problematicSlugs = ['pli-tv-bu-vb-', 'bu-', 'bi-'];
+$isProblematicSlug = false;
+
+foreach ($problematicSlugs as $slugPattern) {
+    if (strpos($stringForOpen, $slugPattern) !== false) {
+        $isProblematicSlug = true;
+        break;
+    }
+}
+
+if ($isProblematicSlug) {
+    session_start(); // Активируем сессию только для проблемных slug
+
+    // Проверяем, не был ли этот slug уже обработан
+    if (isset($_SESSION['processed_slug']) && $_SESSION['processed_slug'] === $stringForOpen) {
+        die("Ошибка: обнаружен бесконечный редирект. Запрос: " . htmlspecialchars($stringForOpen));
+    }
+
+    // Запоминаем slug в сессии
+    $_SESSION['processed_slug'] = $stringForOpen;
+}
+
+
 if (preg_match("/^(ja|snp|iti|thig|thag)[0-9].*/i", $stringForOpen)) {
   
 redirectWithAnchor($readerlang, $stringForOpen, $s ?? null, $anchor); 	  

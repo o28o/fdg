@@ -262,9 +262,9 @@ margin-left: 6px;
 .column-view .pli-lang:not(:empty) + .eng-lang:not(:empty),
 .column-view .eng-lang:not(:empty) + .rus-lang:not(:empty) {
   width: 48%;
-  padding-left: 10px;
+  
 }
-.column-view .pli-lang:not(:empty):not(.variant) {
+.column-view .pli-lang:not(:empty) {
   width: 48%;
   padding-right: 10px;
   max-width: 48%;
@@ -280,17 +280,17 @@ margin-left: 6px;
   vertical-align: top;
   box-sizing: border-box;
 
-  /* Убираем возможные пробельные отступы между дочерними элементами */
-  font-size: 0; /* Отключаем влияние размера шрифта на inline-block элементы */
+  /* Убираем возможные пробельные отступы между дочерними элементами 
+  font-size: 0;*/ /* Отключаем влияние размера шрифта на inline-block элементы */
 }
 
-/* Внутри right-column — восстанавливаем нормальный размер текста */
+/* Внутри right-column — восстанавливаем нормальный размер текста 
 .column-view .right-column * {
-  font-size: medium; /* Или задай конкретное значение, например 16px */
-}
+  font-size: medium;  
+}*/
 
 /* Pali — слева */
-.column-view .pli-lang:not(:empty):not(.variant) {
+.column-view .pli-lang:not(:empty) {
   width: 48%;
   padding-right: 10px;
   max-width: 48%;

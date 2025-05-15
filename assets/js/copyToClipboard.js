@@ -23,90 +23,94 @@ function getNotificationText() {
 }
 
 // Основная функция копирования
-// Основная функция копирования
 function copyToClipboard(text = "") {
-  // Если уведомление еще не создано, создаем его
+  // Инициализация уведомления
   if (!document.getElementById('bubbleNotification')) {
     initCopyNotification();
   }
 
-  // Обработка текста для копирования
+  // Обработка URL
   if (text === 127) {
+    text = window.location.href.replace('localhost', '127.0.0.1');
+  } else if (text === "") {
     text = window.location.href;
-    text = text.replace('localhost', '127.0.0.1');
+    text = text.includes('localhost') || text.includes('127.0.0.1')
+      ? text.replace(/https?:\/\/(localhost|127\.0\.0\.1)(:\d+)?/gi, 'https://dhamma.gift')
+      : text.includes('dhamma.gift')
+        ? text.replace('https://dhamma.gift', 'http://127.0.0.1:8080')
+        : 'https://dhamma.gift' + text.substring(text.indexOf('/', 8));
   }
 
-  if (text === "") {
-    text = window.location.href;
-    if (text.includes('localhost') || text.includes('127.0.0.1')) {
-		text = text.replace(/http:\/\/(localhost|127\.0\.0\.1)(:\d+)?/g, 'https://dhamma.gift');
-    } else if (!text.includes('https://dhamma.gift')) {
-      text = 'https://dhamma.gift' + text.substring(text.indexOf('/', 8));
-    } else {
-      text = text.replace('https://dhamma.gift', 'http://127.0.0.1:8080');
-    }
-  }
-
-//подумать. если будет мешать удалить.
-if (text.includes('localhost') || text.includes('127.0.0.1')) {
-	//	text = text.replace(/http:\/\/(localhost|127\.0\.0\.1)(:\d+)?/g, 'https://dhamma.gift');
-		text = text.replace(/https?:\/\/(localhost|127\.0\.0\.1)(:\d+)?/gi, 'https://dhamma.gift');
-    }
-
-
-  // Получаем элемент, на котором было вызвано копирование
+  // Получаем элемент, на котором кликнули
   const clickedElement = event?.target;
-  let textToCopy = text;
+  if (!clickedElement || !clickedElement.classList.contains('copyLink')) {
+    navigator.clipboard.writeText(text);
+    showBubbleNotification(getNotificationText());
+    return;
+  }
+
+  const parentSpan = clickedElement.closest('span[id]');
+  if (!parentSpan) return;
+
+  // Определяем язык кликнутого элемента
+  const clickedLang = clickedElement.closest('[lang]')?.getAttribute('lang');
+  const suttaId = new URL(text).searchParams.get('q') || '';
+
+  let textParts = [];
   
-  // Если копирование вызвано кликом на ссылку
-  if (clickedElement && clickedElement.classList.contains('copyLink')) {
-    // Находим родительский span с языком (lang="pi" или lang="ru")
-    const languageElement = clickedElement.closest('[lang]');
-    const language = languageElement?.getAttribute('lang');
-    
-    // Находим родительский span с id
-    const parentSpan = clickedElement.closest('span[id]');
-    
-    if (parentSpan) {
-      // Получаем текст на пали
-      const piText = parentSpan.querySelector('.pli-lang')?.textContent.trim()
-	  .replace(/\u00A0/g, '\n')
+  // 1. Всегда добавляем текст пали (с видимыми вариантами)
+  const piElement = parentSpan.querySelector('.pli-lang');
+  if (piElement) {
+    const piClone = piElement.cloneNode(true);
+    // Удаляем только скрытые варианты
+    piClone.querySelectorAll('.hidden-variant').forEach(el => el.remove());
+    const piText = piClone.textContent
+      .trim()
+      .replace(/\u00A0/g, '\n')
       .replace(/\s\s+/g, '\n');
-	 
-      
-      // Извлекаем номер сутты из URL (например, mn1 из https://dhamma.gift/read/?q=mn1#1.5)
-      const suttaId = new URL(text).searchParams.get('q') || '';
-      
-      // Формируем текст для копирования
-      if (language === 'pi') {
-        // Только пали + номер сутты + ссылка
-        textToCopy = `${piText}\n\n${suttaId}\n${text}`;
-      } else {
-        // Пали + перевод + номер сутты + ссылка
-//        const translationText = parentSpan.querySelector('.rus-lang')?.textContent.trim();
-const translations = Array.from(parentSpan.querySelectorAll('[class*="-lang"]:not(.pli-lang)'))
-  .map(el => el.textContent.trim())
-  .filter(Boolean)
-  .join('\n');
-        textToCopy = `${piText}\n${translationText}\n\n${suttaId}\n${text}`;
-      }
+    textParts.push(piText);
+  }
+
+  // 2. Если кликнули на перевод - добавляем его текст
+  if (clickedLang !== 'pi') {
+    const translationElement = clickedElement.closest('[lang]:not([lang="pi"])');
+    if (translationElement) {
+      const translationText = translationElement.textContent.trim();
+      textParts.push(translationText);
     }
   }
 
-  console.log(textToCopy);
+  // 3. Добавляем все остальные видимые переводы (кроме кликнутого)
+  if (clickedLang !== 'pi') {
+    const otherTranslations = Array.from(
+      parentSpan.querySelectorAll('[lang]:not([lang="pi"]):not([lang="' + clickedLang + '"])')
+    )
+      .filter(el => !el.closest('.hidden-variant'))
+      .map(el => el.textContent.trim())
+      .filter(Boolean);
+    
+    if (otherTranslations.length > 0) {
+      textParts = textParts.concat(otherTranslations);
+    }
+  }
+
+  // Собираем финальный текст с правильными отступами
+  let textToCopy = textParts.join('\n\n'); // Двойной перенос между блоками
   
-  // Показываем уведомление
+  // 4. Добавляем ID сутты и ссылку с дополнительными отступами
+  if (suttaId) textToCopy += `\n\n${suttaId}`;
+  textToCopy += `\n${text}`;
+
+  console.log('Копируемый текст:', textToCopy);
   showBubbleNotification(getNotificationText());
   
-  // Копирование в буфер обмена
   if (navigator.clipboard) {
-    navigator.clipboard.writeText(textToCopy).catch(() => {
-      fallbackCopy(textToCopy);
-    });
+    navigator.clipboard.writeText(textToCopy).catch(() => fallbackCopy(textToCopy));
   } else {
     fallbackCopy(textToCopy);
   }
 }
+
 // Fallback для старых браузеров
 function fallbackCopy(text) {
   const textarea = document.createElement('textarea');

@@ -198,18 +198,18 @@ if (savedReader) {
 }
 </script>';
 
-$ctaButtons =' <div class="d-flex flex-column flex-md-row justify-content-center align-items-center my-3 mb-3">
-    <button id="installPWA" style="background: none; border: none; padding: 0; cursor: pointer;">
-        <img src="/assets/img/pwa-cta.png" style="width: 200px;" alt="Install Dhamma.gift as progressive web app">
+$ctaButtons =' <div class="d-flex flex-column flex-md-row justify-content-center align-items-center my-3 mb-2">
+    <button class="ms-2 mb-2" id="installPWA" style="background: none; border: none; padding: 0; cursor: pointer;">
+        <img src="/assets/img/buttons/pwa-cta.png" style="width: 200px;" alt="Install Dhamma.gift as progressive web app">
     </button>
-    <a href="https://t.me/dgift_bot">
-        <img src="/assets/img/telegram-cta.png" style="height: 75px;" alt="Open DGift_bot - inline bot in any Telegram chat or Group">
+    <a class="ms-2 mb-2" href="https://t.me/dgift_bot">
+        <img src="/assets/img/buttons/telegram-cta.png" style="width: 200px;" alt="Open DGift_bot - inline bot in any Telegram chat or Group">
     </a>
-    <a href="https://chromewebstore.google.com/detail/dhammagift-search-and-wor/dnnogjdcmhbiobpnkhdbfnfjnjlikabd">
-        <img style="height: 58px;" src="/assets/img/chrome-cta.png" alt="Download from Chrome Web Store">
+    <a class="ms-2 mb-2" href="https://chromewebstore.google.com/detail/dhammagift-search-and-wor/dnnogjdcmhbiobpnkhdbfnfjnjlikabd">
+        <img src="/assets/img/buttons/chrome-cta.png" style="width: 200px;" alt="Download from Chrome Web Store">
     </a>
-    <a class="ms-1" href="https://microsoftedge.microsoft.com/addons/detail/dhammagift-search-and-wo/aokegkhdaijkikbdocanadeghllhfmhj">
-        <img style="max-width: 180px; " src="/assets/img/edge-cta.png" alt="Download from Microsoft Edge Store">
+    <a class="ms-2 mb-2" href="https://microsoftedge.microsoft.com/addons/detail/dhammagift-search-and-wo/aokegkhdaijkikbdocanadeghllhfmhj">
+        <img src="/assets/img/buttons/edge-cta.png" style="width: 200px;" alt="Download from Microsoft Edge Store">
     </a>
 	
 	</div>

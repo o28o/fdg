@@ -49,7 +49,8 @@ function copyToClipboard(text = "") {
 
 //подумать. если будет мешать удалить.
 if (text.includes('localhost') || text.includes('127.0.0.1')) {
-		text = text.replace(/http:\/\/(localhost|127\.0\.0\.1)(:\d+)?/g, 'https://dhamma.gift');
+	//	text = text.replace(/http:\/\/(localhost|127\.0\.0\.1)(:\d+)?/g, 'https://dhamma.gift');
+		text = text.replace(/https?:\/\/(localhost|127\.0\.0\.1)(:\d+)?/gi, 'https://dhamma.gift');
     }
 
 

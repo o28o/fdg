@@ -28,7 +28,7 @@ $mode = 'offline';
 #$fontawesomejs = '<script src="/assets/js/fontawesome.6.1.all.js" defer></script>';
 $fontawesomejs = '<script src="https://kit.fontawesome.com/a2bd6cd99e.js" crossorigin="anonymous"></script>';
 
-$basedir = "/var/www/html/";
+$basedir = "/var/www/test/";
 
 //converter.php
 $adapterscriptlocation = '/home/aksharamukha/aksharamukha/bin/python3 /var/www/html/scripts/aksharamukha-adapter.py';
@@ -44,7 +44,7 @@ $adapterscriptlocation = '/home/aksharamukha/aksharamukha/bin/python3 /var/www/h
 
 $fontawesomejs = '<script src="https://kit.fontawesome.com/a2bd6cd99e.js" crossorigin="anonymous" ></script>';
 
-$basedir = "/var/www/html/";
+$basedir = "/var/www/test/";
 //converter.php
 //not used currently. php curl for offline
 $adapterscriptlocation = '/home/python/aksharamukha/bin/python3 /var/www/html/scripts/aksharamukha-adapter.py';

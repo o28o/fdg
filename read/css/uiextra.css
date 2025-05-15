@@ -240,61 +240,94 @@ margin-left: 6px;
 }
 
 
-/* Стили по умолчанию для чередующегося отображения */
-.pli-lang, .rus-lang,  { /* .eng-lang Добавлено eng-lang */
+/* === Базовые стили для всех режимов === */
+
+.pli-lang, .eng-lang, .rus-lang {
   display: inline;
 }
 
-/* Стили для колонок (скрыты по умолчанию) */
-.column-view .pli-lang, .column-view .rus-lang { /* , .column-view .eng-langДобавлено eng-lang */
+.column-view .pli-lang,
+.column-view .eng-lang,
+.column-view .rus-lang {
+  display: inline-block;
+  vertical-align: top;
+  text-align: left;
+  box-sizing: border-box;
+  word-wrap: break-word;
+}
+
+/* === Старый стиль: два языка по 48% === */
+
+.column-view .pli-lang:not(:empty) + .rus-lang:not(:empty),
+.column-view .pli-lang:not(:empty) + .eng-lang:not(:empty),
+.column-view .eng-lang:not(:empty) + .rus-lang:not(:empty) {
+  width: 48%;
+  padding-left: 10px;
+}
+.column-view .pli-lang:not(:empty):not(.variant) {
+  width: 48%;
+  padding-right: 10px;
+  max-width: 48%;
+}
+
+/* === Новый стиль: с .right-column === */
+
+/* Если внутри .column-view есть .right-column */
+.column-view .right-column {
   display: inline-block;
   width: 48%;
-  vertical-align: top;
-  text-align: left; /* Оба текста выравниваются по левому краю */
-}
-
-/* Разделительная линия между колонками */
-.column-view .pli-lang {
-  padding-right: 10px;
-  max-width: 48%; /* Ограничение по ширине для левой колонки */
-  word-wrap: break-word; /* Перенос длинных слов */
-  box-sizing: border-box; /* Учитываем внутренние отступы и границы */
-}
-
-.column-view .rus-lang { 
   padding-left: 10px;
-  box-sizing: border-box; /* Учитываем внутренние отступы и границы , .column-view .eng-lang*/
+  vertical-align: top;
+  box-sizing: border-box;
+
+  /* Убираем возможные пробельные отступы между дочерними элементами */
+  font-size: 0; /* Отключаем влияние размера шрифта на inline-block элементы */
 }
 
-/* Стили для двух колонок */
+/* Внутри right-column — восстанавливаем нормальный размер текста */
+.column-view .right-column * {
+  font-size: medium; /* Или задай конкретное значение, например 16px */
+}
+
+/* Pali — слева */
+.column-view .pli-lang:not(:empty):not(.variant) {
+  width: 48%;
+  padding-right: 10px;
+  max-width: 48%;
+}
+
+/* Переводы внутри right-column — блочные элементы */
+.column-view .right-column .rus-lang,
+.column-view .right-column .eng-lang {
+  display: block;
+  width: 100%;
+  margin: 0; /* Убираем все внешние отступы */
+  padding: 0;
+}
+
+/* Убедимся, что <br> не добавляет лишний отступ */
+.column-view .right-column br {
+  display: none; /* Либо удалите <br> из HTML, если он не нужен */
+}
+
+/* Скрытие пустых */
+.column-view .pli-lang:empty,
+.column-view .eng-lang:empty,
+.column-view .rus-lang:empty {
+  display: none;
+}
+
+/* Ширина контейнера */
 #sutta.column-view {
   max-width: 105rem;
 }
 
+/* Перенос слов для читаемости */
 #sutta * {
   word-break: break-word;
-        overflow-wrap: break-word;
+  overflow-wrap: break-word;
 }
 
-/* Если один из языков справа скрыт , .column-view .eng-lang:empty*/
-.column-view .rus-lang:empty  {
-  display: none;
-}	
-
-
-.pli-lang.variant {
-  width: auto;
-  max-width: none;
-  display: inline;
-}
-
-.column-view .pli-lang:not(.variant),
-.column-view .rus-lang:not(.variant) {
-  display: inline-block;
-  width: 48%;
-  vertical-align: top;
-  text-align: left;
-}
 
 .greyedout {
   color: #5a5a5a !important;

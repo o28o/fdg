@@ -185,17 +185,19 @@ document.addEventListener('click', function(e) {
   if (piText) textToCopy += piText;
 
   // 2. Собираем переводы (исключаем только hidden-variant)
-  const translations = Array.from(contentBlock.querySelectorAll('[lang]:not([lang="pi"]):not(.hidden-variant)'))
-    .map(el => ({
-      lang: el.getAttribute('lang'),
-      text: processText(el.textContent)
-    }))
-    // Фильтруем дубликаты
-    .filter((t, index, self) => 
-      t.text && 
-      t.text !== piText &&
-      self.findIndex(item => item.lang === t.lang && item.text === t.text) === index
-    );
+ // Ищем только УНИКАЛЬНЫЕ языки, игнорируем вложенные дубликаты
+const langSet = new Set();
+const translations = [];
+
+for (const el of contentBlock.querySelectorAll('[lang]:not([lang="pi"]):not(.hidden-variant)')) {
+  const lang = el.getAttribute('lang');
+  const text = processText(el.textContent);
+
+  if (!text || text === piText || langSet.has(lang)) continue;
+
+  langSet.add(lang);
+  translations.push({ lang, text });
+}
 
   // Добавляем переводы с разделением
   if (translations.length > 0) {
@@ -224,4 +226,6 @@ document.addEventListener('click', function(e) {
     .then(() => showBubbleNotification(getNotificationText()))
     .catch(() => fallbackCopy(textToCopy));
 });
+
+
 	});

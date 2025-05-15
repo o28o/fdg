@@ -370,7 +370,7 @@ if (paliData[segment] !== undefined && transData[segment] !== undefined && varDa
         html += `${openHtml}<span id="${anchor}">
       <span class="pli-lang inputscript-ISOPali" lang="pi">${paliData[segment].trim()}${linkToCopy}<br>
       <span class="variant pli-lang inputscript-ISOPali" lang="pi">
-${varData[segment].trim()}   
+${varData[segment].trim()}${linkToCopy}   
 </span>      
       </span>
       <span class="rus-lang" lang="ru">${transData[segment].trim()}${linkWithDataSet}

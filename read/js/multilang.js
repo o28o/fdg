@@ -368,12 +368,16 @@ let linkWithDataSet = `<a class="text-decoration-none copyLink" style="cursor: p
     if (engTransData[segment] !== transData[segment] && varData[segment] !== undefined) {
         html += `${openHtml}<span id="${anchor}">
       <span class="pli-lang inputscript-ISOPali" lang="pi">${paliData[segment].trim()}<a class="text-decoration-none copyLink" style="cursor: pointer;" onclick="copyToClipboard('${fullUrlWithAnchor}')">&nbsp;</a><br>
-<span class="variant pli-lang inputscript-ISOPali" lang="pi">
-${varData[segment].trim()}   
-</span>   
 	  </span>
-      <span class="rus-lang" lang="ru">${transData[segment].trim()}${linkWithDataSet}<br>
-	  	  <font class="eng-lang" lang="en">${engTransData[segment].trim()}${linkWithDataSet}</font><br>
+<span class="variant pli-lang inputscript-ISOPali" lang="pi">
+${varData[segment].trim()}${linkToCopy}   
+</span>   
+
+<span class="right-column">
+      <span class="rus-lang" lang="ru">${transData[segment].trim()}${linkWithDataSet} </span><br>
+
+	  	  <span class="eng-lang" lang="en"><font>${engTransData[segment].trim()}${linkWithDataSet}</font><br>
+		  </span>
 		  </span>
       </span>${closeHtml}\n\n`;
 	  
@@ -384,9 +388,14 @@ ${varData[segment].trim()}
         html += `${openHtml}<span id="${anchor}">
       <span class="pli-lang inputscript-ISOPali" lang="pi">${paliData[segment].trim()}<a class="text-decoration-none copyLink" style="cursor: pointer;" onclick="copyToClipboard('${fullUrlWithAnchor}')">&nbsp;</a>
 	  </span>
-      <span class="rus-lang" lang="ru">${transData[segment].trim()}${linkWithDataSet}<br>
-	  	  <font class="eng-lang" lang="en">${engTransData[segment].trim()}${linkWithDataSet}</font><br>
+	  <span class="right-column">
+      <span class="rus-lang" lang="ru">${transData[segment].trim()}${linkWithDataSet}
+	  </span><br>
+
+	  	  <span class="eng-lang" lang="en"><font>${engTransData[segment].trim()}${linkWithDataSet}</font><br>
 		  </span>
+		  </span>
+
       </span>${closeHtml}\n\n`;
 	  
 	  //	  </span>   --dark-gray2: #9E9E9E;  --light-gray2: #616161;
@@ -395,11 +404,16 @@ ${varData[segment].trim()}
     } else if (varData[segment] !== undefined) {
         html += `${openHtml}<span id="${anchor}">
       <span class="pli-lang inputscript-ISOPali" lang="pi">${paliData[segment].trim()}<a class="text-decoration-none copyLink" style="cursor: pointer;"  onclick="copyToClipboard('${fullUrlWithAnchor}')">&nbsp;</a><br>
+</span>      
 <span class="variant pli-lang inputscript-ISOPali" lang="pi">
-${varData[segment].trim()}   
-</span></span>      
+${varData[segment].trim()}${linkToCopy}   
+</span>
+<span class="right-column">
       <span class="rus-lang" lang="en">${engTransData[segment].trim()}${linkWithDataSet}</span>
-      </span>${closeHtml}\n\n`;
+      </span>
+      </span>
+	  
+	  ${closeHtml}\n\n`;
     }  else {
         html += `${openHtml}<span id="${anchor}">
       <span class="pli-lang inputscript-ISOPali" lang="pi">${paliData[segment].trim()}<a class="text-decoration-none copyLink" style="cursor: pointer;"  onclick="copyToClipboard('${fullUrlWithAnchor}')">&nbsp;</a></span>

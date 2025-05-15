@@ -253,7 +253,7 @@ if (paliData[segment] !== undefined && transData[segment] !== undefined && varDa
         html += `${openHtml}<span id="${anchor}">
       <span class="pli-lang " lang="pi">${paliData[segment].trim()}<a class="text-decoration-none copyLink" style="cursor: pointer;" onclick="copyToClipboard('${fullUrlWithAnchor}')">&nbsp;</a><br>
       <span class="variant pli-lang inputscript-ISOPali" lang="pi">
-${varData[segment].trim()}   
+${varData[segment].trim()}${linkToCopy}
 </span>      
       </span>
       <span class="rus-lang" lang="ru">${transData[segment].trim()}${linkWithDataSet}

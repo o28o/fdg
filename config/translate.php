@@ -533,17 +533,205 @@ $dpdpart = '<h3>Скачать Словарь "DPD"</h3>
 <h3>Скачать Оболочку mDict</h3>
 ';
 
-$defaults = '<br><div class="text-start">
-<h5 >Выбрать режим Чтения по-умолчанию</h5>
-<input class="form-check-input mt-2" name="reader" type="radio" id="stRadio" value="st"> <strong>Стандартный</strong> - Два языка - пали, русс 
-<a href="/r/?q=sn56.11">демо</a>
-<br>
-<input class="form-check-input mt-2" name="reader" type="radio" id="mlRadio" value="ml"> <strong>Мультиланг</strong> - Три языка - пали, русс, англ <a href="/ml/?q=sn56.11">демо</a><br>
- <input class="form-check-input mt-2" name="reader" type="radio" id="dRadio" value="d"> <strong>"Деванагари"</strong> - деванагари или тайский скрипт и латинизированный пали <a href="/d/?q=sn56.11">демо</a><br>
-<input class="form-check-input mt-2" name="reader" type="radio" id="memRadio" value="mem"> <strong>Для запоминания</strong> - текст сокращен до первых букв каждого слова <a href="/memorize/?q=sn56.11">демо</a><br>
-<input class="form-check-input mt-2" name="reader" type="radio" id="rvRadio" value="rv"> <strong>Реверс</strong> - текст снизу вверх (слова не изменены) <a href="/rev/?q=sn56.11">демо</a><br>
-<input class="form-check-input mt-2" name="reader" type="radio" id="frRadio" value="fr"> <strong>Полный Реверс</strong> - как предыдущий (слова слева направо) <a href="/frev/?q=sn56.11">демо</a><br>  
-</div>';
+$defaults = '
+
+<!-- Словарь Onlick Popup -->
+<a title="Всплывающий по клику словарь" class="common-size-icon4 toggle-dict-btn text-decoration-none text-black">  <img src="/assets/svg/comment.svg" alt="Всплывающий по клику словарь" class="dictIcon"></img></a>
+<a title="Настройки" id="settingsButton" data-bs-toggle="modal" data-bs-target="#settings" href="javascript:void(0);" class="toggle-icon text-decoration-none text-muted">
+<img id="gearRead" alt="Настройки" src="/assets/svg/gear.svg" class="common-size-icon4"></img>
+</a>
+
+<div class="">
+<a title="Помощь" data-bs-toggle="modal" data-bs-target="#paliLookupInfo" id="helpMessage" href="javascript:void(0);" class="toggle-icon text-decoration-none text-muted">
+<img id="helpsc" alt="Помощь" src="/assets/svg/question.svg" class="common-size-icon4"></img>
+</a>
+<!-- Модальное окно "Настройки" -->
+<div class="modal fade" id="settings" tabindex="-1" aria-labelledby="settingsLabel" aria-hidden="true" data-bs-focus="false">
+<div class="modal-dialog modal-dialog-centered">
+<div class="modal-content">
+<div class="modal-header">
+<h2 class="modal-title" id="settingsLabel">Настройки</h2>
+<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Закрыть"></button>
+</div>
+<div class="modal-body">
+<div class="mb-2">
+<!-- Дропдаун для выбора системы письма -->
+<label for="script-select"><h5 style="text-align: left;">Система письма:</h5></label>
+<select class="dropdown droponmain rounded-pill text-black border-2 border-secondary text-center input-group-append" id="script-select">
+<option value="ISOPali">ISOPali</option>
+<option value="Devanagari">Devanagari</option>
+<option value="Thai">Thai</option>
+</select>
+&nbsp;<strong>Alt+L</strong>
+
+</div>
+<div class="mb-2">
+<!-- Дропдаун для выбора системы письма -->
+<label for="dict-select"><h5 style="text-align: left;">Словарь по клику:</h5></label>
+<select class="dropdown droponmain rounded-pill text-black border-2 border-secondary text-center input-group-append" id="dict-select">
+<option value="standalonebwru">DPD Встроенный</option>
+<option value="standalonebw">DPD Встроенный Англ</option>
+<option value="dpdFullRu">DPD Онлайн</option>
+<option value="dpdFull">DPD Онлайн Англ</option>
+<option value="dpdCompactRu">DPD Онлайн мини</option>
+<option value="dpdCompact">DPD Онлайн мини Англ</option>
+<option value="searchonly">Только Поиск</option>
+<option value="dictTango">DictTango Android</option>
+<option value="mdict">Mdict IOS</option>
+</select> <a href="/assets/common/dictHelpRu.html">?</a>
+</div>
+
+
+<div class="mb-2">
+<div class="d-flex">
+<label class="form-check-label me-2" for="removePunctCheckbox">
+<h5 class="mb-0">Убрать пунктуацию из Пали</h5>
+</label>
+<input class="form-check-input setting-checkbox" type="checkbox" id="removePunctCheckbox" data-key="removePunct">
+&nbsp;  <strong>Alt+.</strong>
+
+</div>
+
+</div>
+<!--        <div class="mb-2">
+                    <label for="reader-select"><h5 style="text-align: left;">Интерфейс:</h5></label>
+                    <select class="dropdown droponmain rounded-pill text-black border-2 border-secondary text-center input-group-append" id="reader-select">
+                        <option value="st">Стандартный</option>
+                        <option value="ml">Мульти</option>
+                        <option value="d">"Деванагари"</option>
+                        <option value="mem">Для запоминания</option>
+                        <option value="rv">Реверс</option>
+                        <option value="fr">Полный Реверс</option>
+                    </select>
+                </div> -->
+
+<h5 style="text-align: left;">Выберите Режим Чтения:</h5>
+<div class="container">
+
+
+<!-- Стандартный -->
+<div class="row align-items-center mb-2">
+<div class="col-auto">
+<input class="form-check-input mt-2 border-secondary" name="reader" type="radio" id="stRadio" value="st"> &nbsp;
+<a id="stDemo" href="/r/?q=sn56.11"><strong>Стандартный</strong></a>
+
+</div>
+<div class="col text-end">
+Два языка: пали, русс
+</div>
+</div>
+
+<!-- Мульти -->
+<div class="row align-items-center mb-2">
+<div class="col-auto">
+<input class="form-check-input mt-2 border-secondary" name="reader" type="radio" id="mlRadio" value="ml"> &nbsp;
+<a id="mlDemo" href="/ml/?q=dn22"> <strong>Мульти</strong></a>
+
+</div>
+<div class="col text-end">
+Три языка: пали, русс, англ
+</div>
+</div>
+
+<!-- Деванагари -->
+<div class="row align-items-center mb-2">
+<div class="col-auto">
+<input class="form-check-input mt-2 border-secondary" name="reader" type="radio" id="dRadio" value="d">
+&nbsp;
+<a id="dDemo" href="/d/?q=sn12.2"><strong>"Деванагари"</strong></a>
+
+</div>
+<div class="col text-end">
+Деванагари или тайский скрипт + пали латиницей
+</div>
+
+</div>
+
+<!-- Скрытая часть -->
+<div id="collapseInterfaces" class="collapse">
+<div class="row align-items-center mb-2">
+<div class="col-auto">
+<input class="form-check-input mt-2 border-secondary" name="reader" type="radio" id="memRadio" value="mem">
+&nbsp;
+<a id="memDemo" href="/memorize/?q=an10.46">              <strong>Для запоминания</strong>
+</a>
+</div>
+<div class="col text-end">
+Текст сокращен до первых букв каждого слова
+</div>
+</div>
+
+<div class="row align-items-center mb-2">
+<div class="col-auto">
+<input class="form-check-input mt-2 border-secondary" name="reader" type="radio" id="rvRadio" value="rv">
+&nbsp;
+<a id="rvDemo" href="/rev/?q=sn35.236"><strong>Реверс</strong></a>
+
+</div>
+<div class="col text-end">
+Текст снизу вверх
+</div>
+</div>
+
+<div class="row align-items-center mb-2">
+<div class="col-auto">
+<input class="form-check-input mt-2 border-secondary" name="reader" type="radio" id="frRadio" value="fr">
+&nbsp;
+<a id="frDemo" href="/frev/?q=sn22.59"><strong>Полный Реверс</strong>
+</a>
+</div>
+<div class="col text-end">
+Как предыдущий + слова слева направо
+</div>
+</div>
+<p class="mb-2">
+Клик <strong>по названию</strong> - перейти один раз, <strong>по радио кнопке</strong> - сделать по умолчанию.
+</p>
+<!--    <div class="row align-items-center mb-2">
+                            <div class="col-auto">
+                                <input class="form-check-input mt-2 border-secondary" name="reader" type="radio" id="thRadio" value="fr"> &nbsp;
+                                <a id="frDemo" href="/read/th?q=mn44"><strong>Thai</strong></a>
+                            </div>
+                            <div class="col text-end">
+                                Two languages: Pali, Thai
+                            </div>
+                        </div>
+                          <div class="row align-items-center mb-2">
+                        <div class="col-auto">
+                            <input class="form-check-input mt-2 border-secondary" name="reader" type="radio" id="mlRadio" value="mlth"> &nbsp;
+                            <a id="mlDemo" href="/read/mlth.html?q=sn44.1"><strong>Thai Multi</strong></a>
+                        </div>
+                        <div class="col text-end">
+                            Three languages: Pali, Thai, English
+                        </div>
+                    </div>
+                    -->
+
+</div>
+
+<!-- Кнопка "Показать ещё" -->
+<div class="text-end mb-2">
+<button class="btn btn-sm btn-secondary rounded-pill" type="button" data-bs-toggle="collapse" data-bs-target="#collapseInterfaces" aria-expanded="false" aria-controls="collapseInterfaces">
+Другие
+</button>
+</div>
+</div>
+
+</div>
+<div class="modal-footer">
+
+<!-- Кнопки "Применить" и "Сбросить" -->
+<div class="text-end">
+<button type="button" class="btn btn-sm  rounded-pill btn-secondary " id="reset-button">Сбросить</button>
+<button type="button" class="btn btn-sm btn-light border-secondary rounded-pill" id="apply-button">Применить</button>
+<button type="button" class="btn-sm  btn-secondary rounded-pill" data-bs-dismiss="modal">Закрыть</button>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+';
  
 
 }
@@ -926,17 +1114,152 @@ grep -E -A1 -Eir "${defpattern}.*nāma|an1\..*${defpattern}|An2.*Dv.*${defpatter
 Please, create an issue on github or send an email, if you\'ll find other criteria.<br><br> ';
 
 
-$defaults = '<br><div class="text-start">
-<h5>Choose defauld Reading Mode</h5>
-<input class="form-check-input mt-2" name="reader" type="radio" id="stRadio" value="st"> <strong>Standard</strong> - Two languages - Pali, English 
-<a href="/r/?q=sn56.11">demo</a>
-<br>
-<input class="form-check-input mt-2" name="reader" type="radio" id="mlRadio" value="ml"> <strong>Multilang</strong> - Three languages - Pali, Russian, English <a href="/read/ml.html?q=sn56.11">demo</a><br>
-<input class="form-check-input mt-2" name="reader" type="radio" id="dRadio" value="d"> <strong>"Devanagari"</strong> - Devanagari or Thai script and Romanized Pali <a href="/d/?q=sn56.11">demo</a><br>
-<input class="form-check-input mt-2" name="reader" type="radio" id="memRadio" value="mem"> <strong>Memorization Trainer</strong> - Text reduced to the first letters of each word <a href="/memorize/?q=sn56.11">demo</a><br>
-<input class="form-check-input mt-2" name="reader" type="radio" id="rvRadio" value="rv"> <strong>Reverse</strong> - Text from bottom to top, right to left (words unchanged) <a href="/rev/?q=sn56.11">demo</a><br>
-<input class="form-check-input mt-2" name="reader" type="radio" id="frRadio" value="fr"> <strong>Full Reverse</strong> - Same as above (words left to right) <a href="/frev/?q=sn56.11">demo</a><br>  
-</div>';
+$defaults = '<!-- Dictionary OnClick Popup -->
+<a alt="onclick popup dictionary" title="onclick popup dictionary" class="common-size-icon4 toggle-dict-btn text-decoration-none text-black">
+<img src="/assets/svg/comment.svg" class="dictIcon"></img>
+</a>
+
+<!-- Settings Button -->
+<a alt="Settings" title="Settings" id="settingsButton" data-bs-toggle="modal" data-bs-target="#settings" href="javascript:void(0);" class="toggle-icon text-decoration-none text-muted">
+<img id="gearRead" src="/assets/svg/gear.svg" class="common-size-icon4"></img>
+</a>
+
+
+<!-- Модальное окно "Настройки" -->
+<div class="modal fade" id="settings" tabindex="-1" aria-labelledby="settingsLabel" aria-hidden="true" data-bs-focus="false">
+<div class="modal-dialog modal-dialog-centered">
+<div class="modal-content">
+<div class="modal-header">
+<h2 class="modal-title" id="settingsLabel">Settings</h2>
+<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+</div>
+<div class="modal-body">
+<div class="mb-2">
+<!-- Dropdown for script selection -->
+<label for="script-select"><h5 style="text-align: left;">Script system:</h5></label>
+<select class="dropdown droponmain rounded-pill text-black border-2 border-secondary text-center input-group-append" id="script-select">
+<option value="ISOPali">ISOPali</option>
+<option value="Devanagari">Devanagari</option>
+<option value="Thai">Thai</option>
+</select>
+&nbsp;  <strong>Alt+L</strong>
+</div>
+
+<div class="mb-2">
+<!-- Дропдаун для выбора режима словаря -->
+<label for="dict-select"><h5 style="text-align: left;">On click dictionary:</h5></label>
+<select class="dropdown droponmain rounded-pill text-black border-2 border-secondary text-center input-group-append" id="dict-select">
+<option value="standalonebw">DPD Built-in</option>
+<option value="standalonebwru">DPD Built-in Rus</option>
+<option value="dpdFull">DPD Online </option>
+<option value="dpdFullRu">DPD Online Rus</option>
+<option value="dpdCompact">DPD Onilne mini </option>
+<option value="dpdCompactRu">DPD Online mini Rus</option>
+<option value="searchonly">Search Only</option>
+<option value="dictTango">DictTango Android</option>
+<option value="mdict">Mdict IOS</option>
+
+</select> <a href="/assets/common/dictHelp.html">?</a>
+</div>
+
+<div class="mb-2">
+<div class="d-flex">
+<label class="form-check-label me-2" for="removePunctCheckbox">
+<h5 class="mb-0">Remove punctuation from Pali </h5>
+</label>
+<input class="form-check-input setting-checkbox" type="checkbox" id="removePunctCheckbox" data-key="removePunct">&nbsp; <strong>Alt+.</strong>
+</div>
+
+</div>
+<h5 style="text-align: left;">Select Reading Mode: </h5>
+<div class="container">
+<!-- Standard -->
+<div class="row align-items-center mb-2">
+<div class="col-auto">
+<input class="form-check-input mt-2 border-secondary" name="reader" type="radio" id="stRadio" value="st"> &nbsp;
+<a id="stDemo" href="/read/?q=sn56.11"><strong>Standard</strong></a>
+</div>
+<div class="col text-end">
+Two languages: Pali, English
+</div>
+</div>
+
+<!-- Multi -->
+<div class="row align-items-center mb-2">
+<div class="col-auto">
+<input class="form-check-input mt-2 border-secondary" name="reader" type="radio" id="mlRadio" value="ml"> &nbsp;
+<a id="mlDemo" href="/ml/?q=dn22"><strong>Multi</strong></a>
+</div>
+<div class="col text-end">
+Three languages: Pali, Russian, English
+</div>
+</div>
+
+<!-- Devanagari -->
+<div class="row align-items-center mb-2">
+<div class="col-auto">
+<input class="form-check-input mt-2 border-secondary" name="reader" type="radio" id="dRadio" value="d"> &nbsp;
+<a id="dDemo" href="/d/?q=sn12.2"><strong>"Devanagari"</strong></a>
+</div>
+<div class="col text-end">
+Devanagari or Thai script + Pali in Latin
+</div>
+</div>
+
+<!-- Hidden Section -->
+<div id="collapseInterfaces" class="collapse">
+<div class="row align-items-center mb-2">
+<div class="col-auto">
+<input class="form-check-input mt-2 border-secondary" name="reader" type="radio" id="memRadio" value="mem"> &nbsp;
+<a id="memDemo" href="/memorize/?q=an10.46"><strong>For Memorization</strong></a>
+</div>
+<div class="col text-end">
+Text shortened to the first letters of each word
+</div>
+</div>
+<div class="row align-items-center mb-2">
+<div class="col-auto">
+<input class="form-check-input mt-2 border-secondary" name="reader" type="radio" id="rvRadio" value="rv"> &nbsp;
+<a id="rvDemo" href="/rev/?q=sn35.236"><strong>Reverse</strong></a>
+</div>
+<div class="col text-end">
+Text from bottom to top
+</div>
+</div>
+<div class="row align-items-center mb-2">
+<div class="col-auto">
+<input class="form-check-input mt-2 border-secondary" name="reader" type="radio" id="frRadio" value="fr"> &nbsp;
+<a id="frDemo" href="/frev/?q=sn22.59"><strong>Full Reverse</strong></a>
+</div>
+<div class="col text-end">
+Like the previous one + words from left to right
+</div>
+</div>
+<p class="mb-2">
+Click <strong>title</strong> to go once or click <strong>radio button</strong> to set as default.
+</p>
+</div>
+
+<!-- "Show More" Button -->
+<div class="text-end mb-2">
+<button class="btn btn-sm btn-secondary rounded-pill" type="button" data-bs-toggle="collapse" data-bs-target="#collapseInterfaces" aria-expanded="false" aria-controls="collapseInterfaces">
+Others
+</button>
+</div>
+</div>
+</div>
+<div class="modal-footer">
+<!-- "Apply" and "Reset" Buttons -->
+<div class="text-end">
+<button type="button" class="btn btn-sm rounded-pill btn-secondary" id="reset-button">Reset</button>
+<button type="button" class="btn btn-sm btn-light border-secondary rounded-pill" id="apply-button">Apply</button>
+<button type="button" class="btn-sm btn-secondary rounded-pill" data-bs-dismiss="modal">Close</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+';
 
 $closemodal = 'Close Window';
 

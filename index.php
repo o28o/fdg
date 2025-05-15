@@ -126,10 +126,10 @@ if (isPWA) {
 <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css" />
 -->
 
-<!--  Core theme CSS (includes Bootstrap)
+<!--  Core theme CSS (includes Bootstrap)-->
 <link href="/assets/css/paliLookup.css" rel="stylesheet" />
 
--->
+
 <link rel="stylesheet" href="/assets/css/jquery-ui.min.css">
 <!-- -->
 
@@ -1377,9 +1377,8 @@ var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
 </script>
 
 <!-- 
-<script src="/assets/js/paliLookup.js"></script>
 
-<script src="/assets/js/standalone-dpd/pali-lookup-standalone.js" defer></script>
+<script src="/assets/js/paliLookup.js"></script>
 -->
 <script defer>
   window.addEventListener('DOMContentLoaded', function() {

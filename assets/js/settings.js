@@ -480,56 +480,64 @@ window.onload = updateDemoLinks;
   //end 
 
 //Горячие кнопки от 1 до Х
-
 document.addEventListener("keydown", (event) => {
-  if (event.altKey && event.code === "Digit1") { // Проверяем, что нажаты Alt и 7
+  if (event.altKey && event.code === "Digit1") { 
     event.preventDefault();
 
-    let currentUrl = window.location.href; // Получаем текущий URL
-    let urlWithoutParams = currentUrl.split('?')[0]; // Удаляем всё после ?
-
+    let currentUrl = window.location.href;
+    let urlWithoutParams = currentUrl.split('?')[0];
     let newUrl;
-    let defaultLanguage = localStorage.getItem('siteLanguage') || "en"; // Получаем язык из localStorage или используем "en" по умолчанию
 
-	let defaultLanguageLinkPart;
-		if (defaultLanguage === "ru") {
-		  defaultLanguageLinkPart = "/r/";
-		} else if (defaultLanguage === "th") {
-		  defaultLanguageLinkPart = "/th/read/";
-		} else {
-		  defaultLanguageLinkPart = "/read/";
-		}
+    let defaultLanguage = localStorage.getItem('siteLanguage') || "en";
+    let defaultLanguageLinkPart = (defaultLanguage === "ru") ? "/r/" : (defaultLanguage === "th") ? "/th/read/" : "/read/";
 
-
-    // Проверяем, содержит ли URL /r/
-    if (urlWithoutParams.endsWith("/r/")) {
-      newUrl = urlWithoutParams.replace("/r/", "/read/"); // Меняем на /read/
-    } else if (urlWithoutParams.endsWith("/th/read/")) {
-      newUrl = urlWithoutParams.replace("/th/read/", defaultLanguageLinkPart); // Меняем на /read/
-    } else if (urlWithoutParams.endsWith("/read/")) {
-      newUrl = urlWithoutParams.replace("/read/", "/r/"); // Меняем на /r/
-    } 
-	else {
-      // Если URL не содержит ни /r/, ни /read/, выбираем начальный вариант
-      if (localStorage.siteLanguage && localStorage.siteLanguage === 'ru') {
-        newUrl = window.location.origin + "/r/";
-      } else {
-        newUrl = window.location.origin + "/read/";
+    // Переключение между /r/, /read/, /th/, /th/read/
+    if (urlWithoutParams.endsWith("/r/") || urlWithoutParams.endsWith("/read/") ||
+        urlWithoutParams.endsWith("/th/") || urlWithoutParams.endsWith("/th/read/")) {
+      alert("case 1");     
+      if (urlWithoutParams.endsWith("/r/")) {
+        newUrl = urlWithoutParams.replace("/r/", "/read/");
+      } else if (urlWithoutParams.endsWith("/read/")) {
+        newUrl = urlWithoutParams.replace("/read/", "/r/");
+      } else if (urlWithoutParams.endsWith("/th/read/")) {
+        newUrl = urlWithoutParams.replace("/th/read/", defaultLanguageLinkPart);
+      } else if (urlWithoutParams.endsWith("/th/")) {
+        newUrl = urlWithoutParams.replace("/th/", defaultLanguageLinkPart);
       }
     }
 
-    // Добавляем параметры обратно, если они были
+    // Переключение между / и /ru/
+    if (urlWithoutParams.endsWith("/") || urlWithoutParams.endsWith("/ru/")) {
+      alert("case 2");     
+      newUrl = (urlWithoutParams.endsWith("/ru/")) 
+        ? window.location.origin + "/" 
+        : window.location.origin + "/ru/";
+    }
+
+    // Переключение между /read.php и /ru/read.php
+    if (urlWithoutParams.endsWith("/read.php") || urlWithoutParams.endsWith("/ru/read.php")) {
+      alert("case 3");     
+      newUrl = (urlWithoutParams.endsWith("/read.php")) 
+        ? urlWithoutParams.replace("/read.php", "/ru/read.php") 
+        : urlWithoutParams.replace("/ru/read.php", "/read.php");
+    }
+
+    // Если ни одно условие не выполнено, выбираем начальный вариант
+    if (!newUrl) {
+      newUrl = (localStorage.siteLanguage && localStorage.siteLanguage === 'ru') 
+        ? window.location.origin + "/r/" 
+        : window.location.origin + "/read/";
+    }
+
     let params = currentUrl.split('?')[1] || '';
     newUrl = params ? `${newUrl}?${params}` : newUrl;
 
-    if (newUrl !== currentUrl) { // Проверяем, изменился ли URL
-      history.pushState(null, "", newUrl); // Добавляем запись в историю
-      location.href = newUrl; // Принудительно переходим по новому URL
+    if (newUrl !== currentUrl) { 
+      history.pushState(null, "", newUrl);
+      location.href = newUrl;
       location.reload();
     }
   }
-  
-
 });
 
 

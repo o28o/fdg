@@ -3,6 +3,16 @@ const siteLanguage = localStorage.getItem('siteLanguage');
 
 let savedDict = localStorage.getItem('selectedDict');
 
+
+
+    function savePopupState() {
+        localStorage.setItem('popupWidth', popup.style.width);
+        localStorage.setItem('popupHeight', popup.style.height);
+        localStorage.setItem('popupTop', popup.style.top);
+        localStorage.setItem('popupLeft', popup.style.left);
+    }
+
+
 if (savedDict) {
     savedDict = savedDict.toLowerCase();
 } else if (window.location.pathname.includes('/d/')) {
@@ -381,13 +391,6 @@ function createPopup() {
     let isDragging = false;
     let isResizing = false;
 
-    function savePopupState() {
-        localStorage.setItem('popupWidth', popup.style.width);
-        localStorage.setItem('popupHeight', popup.style.height);
-        localStorage.setItem('popupTop', popup.style.top);
-        localStorage.setItem('popupLeft', popup.style.left);
-    }
-
     // Перетаскивание окна
     let startX, startY, initialLeft, initialTop;
     let isFirstDrag = localStorage.getItem('isFirstDrag') === 'false' ? false : true;
@@ -482,7 +485,7 @@ function createPopup() {
             isResizing = false;
             iframe.style.pointerEvents = 'auto';
             popup.classList.remove('resizing');
-            savePopupState();
+           savePopupState();
         }
     }
 

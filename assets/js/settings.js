@@ -674,52 +674,62 @@ document.addEventListener('keydown', (event) => {
 });
 
 
+
 document.addEventListener("keydown", function (event) {
   const isCtrlPressed = event.ctrlKey || event.metaKey;
   const currentPath = window.location.pathname;
   const baseUrl = window.location.origin;
 
-  // === Общая функция получения целевого URL с toggle и сохранением в localStorage ===
-  function getTargetUrl(isForHomepage) {
-    const key = "preferredLanguage";
-    let savedLang = localStorage.getItem(key);
-    const isRuCurrent = currentPath.includes("/ru/") || currentPath.includes("/r/");
+  const key = "preferredLanguage";
+  const savedLang = localStorage.getItem(key);
+  const isRuCurrent = currentPath.includes("/ru/") || currentPath.includes("/r/");
+
+  // Функция: получить URL для заданного языка и страницы
+  function makeUrl(lang, isHomepage) {
+    if (isHomepage) {
+      return lang === "ru" ? `${baseUrl}/ru/` : `${baseUrl}/`;
+    } else {
+      return lang === "ru" ? `${baseUrl}/ru/read.php` : `${baseUrl}/read.php`;
+    }
+  }
+
+  // Функция: определить, нужно ли переключать язык или использовать сохранённый
+  function determineTargetUrl(isHomepage) {
+    const isCurrentTarget =
+      (isHomepage && (currentPath === "/" || currentPath === "/ru/")) ||
+      (!isHomepage && (currentPath === "/read.php" || currentPath === "/ru/read.php"));
 
     let nextLang;
 
-    if (!savedLang) {
-      // Первый запуск: определяем по URL
-      nextLang = isRuCurrent ? "ru" : "en";
+    if (isCurrentTarget) {
+      // Уже на целевой странице — делаем toggle
+      nextLang = isRuCurrent ? "en" : "ru";
+      localStorage.setItem(key, nextLang);
     } else {
-      // Toggle между en и ru
-      nextLang = savedLang === "ru" ? "en" : "ru";
+      // С других страниц — просто используем сохранённое предпочтение
+      nextLang = savedLang || (isRuCurrent ? "ru" : "en");
+      if (!savedLang) localStorage.setItem(key, nextLang); // сохранить при первом запуске
     }
 
-    // Сохраняем обновлённый язык
-    localStorage.setItem(key, nextLang);
-
-    // Формируем URL
-    if (isForHomepage) {
-      return nextLang === "ru" ? `${baseUrl}/ru/` : `${baseUrl}/`;
-    } else {
-      return nextLang === "ru" ? `${baseUrl}/ru/read.php` : `${baseUrl}/read.php`;
-    }
+    return makeUrl(nextLang, isHomepage);
   }
 
   // === Ctrl + 1: Переход на домашнюю страницу ===
   if (isCtrlPressed && event.key === "1") {
     event.preventDefault();
-    const targetUrl = getTargetUrl(true);
+    const targetUrl = determineTargetUrl(true);
     window.location.href = targetUrl;
   }
 
   // === Ctrl + 2: Переход на read.php ===
   if (isCtrlPressed && event.key === "2") {
     event.preventDefault();
-    const targetUrl = getTargetUrl(false);
+    const targetUrl = determineTargetUrl(false);
     window.location.href = targetUrl;
   }
 });
+
+
 
 
 

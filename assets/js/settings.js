@@ -478,6 +478,24 @@ if (!hasNumbersInQ && !window.location.pathname.match(/\/(ml|d|memorize|rev|frev
 window.onload = updateDemoLinks;
   //end 
 
+
+//remove punctuation checkbox
+    document.querySelectorAll(".setting-checkbox").forEach(checkbox => {
+        const key = checkbox.dataset.key; // Берём ключ из data-key
+        checkbox.checked = localStorage.getItem(key) === "true";
+
+        checkbox.addEventListener("change", () => {
+            localStorage.setItem(key, checkbox.checked);
+        });
+    });
+
+
+
+//end of DOMContentLoaded
+
+});
+
+
 //Горячие кнопки от 1 до Х
 
 document.addEventListener("keydown", (event) => {
@@ -516,26 +534,7 @@ document.addEventListener("keydown", (event) => {
         newUrl = window.location.origin + "/read/";
       }
     }
-/*
-// Обработка случаев, когда страница открыта с реферером
-if (document.referrer) {
-  const referrerUrl = new URL(document.referrer);
-  const referrerPath = referrerUrl.pathname;
-  
-  // Для рефереров /ru/ и / (точное совпадение, не просто окончание на /)
-  if (referrerPath === "/ru/read.php" || referrerPath === "/read.php") {
-    newUrl = (referrerPath === "/ru/read.php") 
-      ? window.location.origin + "/read.php" 
-      : window.location.origin + "/ru/read.php";
-  }
-  // Для рефереров /ru/read.php и /read.php (точное окончание)
-  else if (referrerPath === "/ru/" || referrerPath === "/") {
-    newUrl = (referrerPath === "/ru/") 
-      ? window.location.origin + "/" 
-      : window.location.origin + "/ru/";
-  } 
-}
-*/
+
 
     // Добавляем параметры обратно, если они были
 let params = currentUrl.split('?')[1] || '';
@@ -588,6 +587,9 @@ document.addEventListener("keydown", (event) => {
 });
 
 
+
+
+
 document.addEventListener("keydown", (event) => {
   if (event.altKey && event.code === "Digit7") { // Проверяем, что нажаты Alt и 7
           event.preventDefault();
@@ -632,18 +634,6 @@ document.addEventListener("keydown", (event) => {
 
 
 
-//remove punctuation checkbox
-    document.querySelectorAll(".setting-checkbox").forEach(checkbox => {
-        const key = checkbox.dataset.key; // Берём ключ из data-key
-        checkbox.checked = localStorage.getItem(key) === "true";
-
-        checkbox.addEventListener("change", () => {
-            localStorage.setItem(key, checkbox.checked);
-        });
-    });
-
-
-
 document.addEventListener('keydown', (event) => {
   if (event.altKey && event.code === "KeyL") {
     event.preventDefault(); // Предотвращаем стандартное поведение
@@ -668,6 +658,7 @@ document.addEventListener('keydown', (event) => {
 });
 
 
+
 document.addEventListener('keydown', (event) => {
   // Для отладки: смотри, что нажимается
 //  console.log('Pressed:', event.code);
@@ -683,15 +674,61 @@ document.addEventListener('keydown', (event) => {
 });
 
 
-//end of the initial function
+document.addEventListener("keydown", function (event) {
+  const isCtrlPressed = event.ctrlKey || event.metaKey;
+  const currentPath = window.location.pathname;
+  const baseUrl = window.location.origin;
+
+  // === Общая функция получения целевого URL с toggle и сохранением в localStorage ===
+  function getTargetUrl(isForHomepage) {
+    const key = "preferredLanguage";
+    let savedLang = localStorage.getItem(key);
+    const isRuCurrent = currentPath.includes("/ru/") || currentPath.includes("/r/");
+
+    let nextLang;
+
+    if (!savedLang) {
+      // Первый запуск: определяем по URL
+      nextLang = isRuCurrent ? "ru" : "en";
+    } else {
+      // Toggle между en и ru
+      nextLang = savedLang === "ru" ? "en" : "ru";
+    }
+
+    // Сохраняем обновлённый язык
+    localStorage.setItem(key, nextLang);
+
+    // Формируем URL
+    if (isForHomepage) {
+      return nextLang === "ru" ? `${baseUrl}/ru/` : `${baseUrl}/`;
+    } else {
+      return nextLang === "ru" ? `${baseUrl}/ru/read.php` : `${baseUrl}/read.php`;
+    }
+  }
+
+  // === Ctrl + 1: Переход на домашнюю страницу ===
+  if (isCtrlPressed && event.key === "1") {
+    event.preventDefault();
+    const targetUrl = getTargetUrl(true);
+    window.location.href = targetUrl;
+  }
+
+  // === Ctrl + 2: Переход на read.php ===
+  if (isCtrlPressed && event.key === "2") {
+    event.preventDefault();
+    const targetUrl = getTargetUrl(false);
+    window.location.href = targetUrl;
+  }
 });
 
 
-let dukkhaModalIsOpen = false;
-let dukkhaOverlay = null;
-let dukkhaModal = null;
 
-function createDukkhaModal() {
+
+let quickModalIsOpen = false;
+let quickOverlay = null;
+let quickModal = null;
+
+function createQuickModal() {
   let currentUrl = window.location.href;
   let urlWithoutParams = currentUrl.split('?')[0];
   let queryBase = urlWithoutParams.endsWith("/ru/") || urlWithoutParams.endsWith("/r/") 
@@ -707,9 +744,9 @@ function createDukkhaModal() {
   const linkColorDanger = "#dc322f";
 
   // Создаем оверлей
-  dukkhaOverlay = document.createElement("div");
-  dukkhaOverlay.className = "dukkha-overlay-element";
-  dukkhaOverlay.style.cssText = `
+  quickOverlay = document.createElement("div");
+  quickOverlay.className = "quick-overlay-element";
+  quickOverlay.style.cssText = `
     position: fixed;
     top: 0;
     left: 0;
@@ -722,9 +759,9 @@ function createDukkhaModal() {
   `;
 
   // Создаем модальное окно
-  dukkhaModal = document.createElement("div");
-  dukkhaModal.className = "dukkha-modal-container";
-  dukkhaModal.style.cssText = `
+  quickModal = document.createElement("div");
+  quickModal.className = "quick-modal-container";
+  quickModal.style.cssText = `
     position: fixed;
     top: 50%;
     left: 50%;
@@ -735,8 +772,8 @@ function createDukkhaModal() {
   `;
 
     // HTML содержимого
-    dukkhaModal.innerHTML = `
-      <div class="dukkha-modal-content-wrapper" style="
+    quickModal.innerHTML = `
+      <div class="quick-modal-content-wrapper" style="
         background-color: ${bgColor};
         color: ${textColor};
         padding: 1.5rem;
@@ -749,7 +786,7 @@ function createDukkhaModal() {
       ">
 
         <!-- Кнопка закрытия -->
-        <button id="dukkhaCloseModalBtn" class="dukkha-close-button" style="
+        <button id="quickCloseModalBtn" class="quick-close-button" style="
           position: absolute;
           top: 12px;
           right: 12px;
@@ -770,129 +807,129 @@ function createDukkhaModal() {
           z-index: 10;
         " title="Закрыть">×</button>
 
-        <h5 class="dukkha-modal-title" style="
+        <h5 class="quick-modal-title" style="
           text-align:center;
           margin-bottom: 1.2rem;
           color: #93a1a1;
           font-size: 1.2rem;
           font-weight: 600;
-        ">Четыре Благородные Истины</h5>
+        ">Cattāri Ariyasaccāni</h5>
 
         <!-- Список ссылок в двух колонках -->
-        <div class="dukkha-links-container" style="
+        <div class="quick-links-container" style="
           display: flex;
           gap: 1.2rem;
           flex-wrap: wrap;
           justify-content: space-between;
         ">
           <!-- Колонка 1 -->
-          <div class="dukkha-links-column" style="flex: 1 1 45%; min-width: 200px;">
+          <div class="quick-links-column" style="flex: 1 1 45%; min-width: 200px;">
             <p><strong>1st priority:</strong></p>
-            <ul class="dukkha-links-list" style="padding-left: 1rem; margin: 0; font-size: 0.9rem;">
-              <li><a href="${queryBase}sn56.11" target="_blank" class="dukkha-link-primary" style="color: ${linkColorPrimary}; text-decoration: none;">SN 56.11</a></li>
-              <li><a href="${queryBase}dn22" target="_blank" class="dukkha-link-primary" style="color: ${linkColorPrimary}; text-decoration: none;">DN 22</a></li>
-              <li><a href="${queryBase}sn12.2" target="_blank" class="dukkha-link-primary" style="color: ${linkColorPrimary}; text-decoration: none;">SN 12.2</a></li>
+            <ul class="quick-links-list" style="padding-left: 1rem; margin: 0; font-size: 0.9rem;">
+              <li><a href="${queryBase}sn56.11" target="_blank" class="quick-link-primary" style="color: ${linkColorPrimary}; text-decoration: none;">SN 56.11</a></li>
+              <li><a href="${queryBase}dn22" target="_blank" class="quick-link-primary" style="color: ${linkColorPrimary}; text-decoration: none;">DN 22</a></li>
+              <li><a href="${queryBase}sn12.2" target="_blank" class="quick-link-primary" style="color: ${linkColorPrimary}; text-decoration: none;">SN 12.2</a></li>
             </ul>
 
             <p style="margin-top: 1rem;"><strong>Clarify 5 khandha:</strong></p>
-            <ul class="dukkha-links-list" style="padding-left: 1rem; margin: 0; font-size: 0.9rem;">
-              <li><a href="${queryBase}sn22.56" target="_blank" class="dukkha-link-success" style="color: ${linkColorSuccess}; text-decoration: none;">SN 22.56</a></li>
-              <li><a href="${queryBase}sn22.79" target="_blank" class="dukkha-link-success" style="color: ${linkColorSuccess}; text-decoration: none;">SN 22.79</a></li>
-              <li><a href="${queryBase}sn22.85" target="_blank" class="dukkha-link-success" style="color: ${linkColorSuccess}; text-decoration: none;">SN 22.85</a></li>
+            <ul class="quick-links-list" style="padding-left: 1rem; margin: 0; font-size: 0.9rem;">
+              <li><a href="${queryBase}sn22.56" target="_blank" class="quick-link-success" style="color: ${linkColorSuccess}; text-decoration: none;">SN 22.56</a></li>
+              <li><a href="${queryBase}sn22.79" target="_blank" class="quick-link-success" style="color: ${linkColorSuccess}; text-decoration: none;">SN 22.79</a></li>
+              <li><a href="${queryBase}sn22.85" target="_blank" class="quick-link-success" style="color: ${linkColorSuccess}; text-decoration: none;">SN 22.85</a></li>
             </ul>
           </div>
 
           <!-- Колонка 2 -->
-          <div class="dukkha-links-column" style="flex: 1 1 45%; min-width: 200px;">
+          <div class="quick-links-column" style="flex: 1 1 45%; min-width: 200px;">
             <p><strong>Clarify 6 ajjhattayatanani:</strong></p>
-            <ul class="dukkha-links-list" style="padding-left: 1rem; margin: 0; font-size: 0.9rem;">
-              <li><a href="${queryBase}sn35.228" target="_blank" class="dukkha-link-warning" style="color: ${linkColorWarning}; text-decoration: none;">SN 35.228</a></li>
-              <li><a href="${queryBase}sn35.229" target="_blank" class="dukkha-link-warning" style="color: ${linkColorWarning}; text-decoration: none;">SN 35.229</a></li>
-              <li><a href="${queryBase}sn35.236" target="_blank" class="dukkha-link-warning" style="color: ${linkColorWarning}; text-decoration: none;">SN 35.236</a></li>
-              <li><a href="${queryBase}sn35.238" target="_blank" class="dukkha-link-warning" style="color: ${linkColorWarning}; text-decoration: none;">SN 35.238</a></li>
+            <ul class="quick-links-list" style="padding-left: 1rem; margin: 0; font-size: 0.9rem;">
+              <li><a href="${queryBase}sn35.228" target="_blank" class="quick-link-warning" style="color: ${linkColorWarning}; text-decoration: none;">SN 35.228</a></li>
+              <li><a href="${queryBase}sn35.229" target="_blank" class="quick-link-warning" style="color: ${linkColorWarning}; text-decoration: none;">SN 35.229</a></li>
+              <li><a href="${queryBase}sn35.236" target="_blank" class="quick-link-warning" style="color: ${linkColorWarning}; text-decoration: none;">SN 35.236</a></li>
+              <li><a href="${queryBase}sn35.238" target="_blank" class="quick-link-warning" style="color: ${linkColorWarning}; text-decoration: none;">SN 35.238</a></li>
             </ul>
 
             <p style="margin-top: 1rem;"><strong>Clarify 4-6-X Dhatu:</strong></p>
-            <ul class="dukkha-links-list" style="padding-left: 1rem; margin: 0; font-size: 0.9rem;">
-              <li><a href="${queryBase}sn14" target="_blank" class="dukkha-link-danger" style="color: ${linkColorDanger}; text-decoration: none;">SN 14</a></li>
-              <li><a href="${queryBase}mn28" target="_blank" class="dukkha-link-danger" style="color: ${linkColorDanger}; text-decoration: none;">MN 28</a></li>
-              <li><a href="${queryBase}mn115" target="_blank" class="dukkha-link-danger" style="color: ${linkColorDanger}; text-decoration: none;">MN 115</a></li>
-              <li><a href="${queryBase}mn140" target="_blank" class="dukkha-link-danger" style="color: ${linkColorDanger}; text-decoration: none;">MN 140</a></li>
+            <ul class="quick-links-list" style="padding-left: 1rem; margin: 0; font-size: 0.9rem;">
+              <li><a href="${queryBase}sn14" target="_blank" class="quick-link-danger" style="color: ${linkColorDanger}; text-decoration: none;">SN 14</a></li>
+              <li><a href="${queryBase}mn28" target="_blank" class="quick-link-danger" style="color: ${linkColorDanger}; text-decoration: none;">MN 28</a></li>
+              <li><a href="${queryBase}mn115" target="_blank" class="quick-link-danger" style="color: ${linkColorDanger}; text-decoration: none;">MN 115</a></li>
+              <li><a href="${queryBase}mn140" target="_blank" class="quick-link-danger" style="color: ${linkColorDanger}; text-decoration: none;">MN 140</a></li>
             </ul>
           </div>
 
-          <!-- Новая колонка или блок для Dukkham so abhinanadati -->
-          <div class="dukkha-full-width-column" style="flex: 1 1 90%; min-width: 200px; margin-top: 1rem;">
-            <p><strong>Dukkham so abhinanadati:</strong></p>
-            <ul class="dukkha-links-list" style="padding-left: 1rem; margin: 0; font-size: 0.9rem;">
-              <li><a href="${queryBase}sn14.35" target="_blank" class="dukkha-link-primary" style="color: ${linkColorPrimary}; text-decoration: none;">SN 14.35</a></li>
-              <li><a href="${queryBase}sn22.29" target="_blank" class="dukkha-link-primary" style="color: ${linkColorPrimary}; text-decoration: none;">SN 22.29</a></li>
-              <li><a href="${queryBase}sn35.19" target="_blank" class="dukkha-link-primary" style="color: ${linkColorPrimary}; text-decoration: none;">SN 35.19</a></li>
-              <li><a href="${queryBase}sn35.20" target="_blank" class="dukkha-link-primary" style="color: ${linkColorPrimary}; text-decoration: none;">SN 35.20</a></li>
-              <li><a href="${queryBase}iti61" target="_blank" class="dukkha-link-primary" style="color: ${linkColorPrimary}; text-decoration: none;">Iti 61</a></li>
+          <!-- Новая колонка или блок для Dukkhaṁ so abhinanadati -->
+          <div class="quick-full-width-column" style="flex: 1 1 90%; min-width: 200px; margin-top: 1rem;">
+            <p><strong>Quickm so abhinanadati:</strong></p>
+            <ul class="quick-links-list" style="padding-left: 1rem; margin: 0; font-size: 0.9rem;">
+              <li><a href="${queryBase}sn14.35" target="_blank" class="quick-link-primary" style="color: ${linkColorPrimary}; text-decoration: none;">SN 14.35</a></li>
+              <li><a href="${queryBase}sn22.29" target="_blank" class="quick-link-primary" style="color: ${linkColorPrimary}; text-decoration: none;">SN 22.29</a></li>
+              <li><a href="${queryBase}sn35.19" target="_blank" class="quick-link-primary" style="color: ${linkColorPrimary}; text-decoration: none;">SN 35.19</a></li>
+              <li><a href="${queryBase}sn35.20" target="_blank" class="quick-link-primary" style="color: ${linkColorPrimary}; text-decoration: none;">SN 35.20</a></li>
+              <li><a href="${queryBase}iti61" target="_blank" class="quick-link-primary" style="color: ${linkColorPrimary}; text-decoration: none;">Iti 61</a></li>
             </ul>
           </div>
         </div>
       </div>
     `;
 
-  document.body.appendChild(dukkhaOverlay);
-  document.body.appendChild(dukkhaModal);
+  document.body.appendChild(quickOverlay);
+  document.body.appendChild(quickModal);
 
   // Анимация появления
   requestAnimationFrame(() => {
-    dukkhaOverlay.style.opacity = "1";
-    dukkhaModal.style.opacity = "1";
-    dukkhaModal.style.transform = "translate(-50%, -50%) scale(1)";
+    quickOverlay.style.opacity = "1";
+    quickModal.style.opacity = "1";
+    quickModal.style.transform = "translate(-50%, -50%) scale(1)";
   });
 
   // Функция закрытия
-  const closeDukkhaModal = () => {
-    dukkhaModalIsOpen = false;
-    dukkhaOverlay.style.opacity = "0";
-    dukkhaModal.style.opacity = "0";
-    dukkhaModal.style.transform = "translate(-50%, -50%) scale(0.95)";
+  const closeQuickModal = () => {
+    quickModalIsOpen = false;
+    quickOverlay.style.opacity = "0";
+    quickModal.style.opacity = "0";
+    quickModal.style.transform = "translate(-50%, -50%) scale(0.95)";
 
     setTimeout(() => {
-      dukkhaOverlay.remove();
-      dukkhaModal.remove();
-      dukkhaOverlay = null;
-      dukkhaModal = null;
+      quickOverlay.remove();
+      quickModal.remove();
+      quickOverlay = null;
+      quickModal = null;
     }, 300);
   };
 
   // Обработчики событий
-  dukkhaOverlay.addEventListener("click", (e) => e.target === dukkhaOverlay && closeDukkhaModal());
-  dukkhaModal.querySelector("#dukkhaCloseModalBtn").addEventListener("click", closeDukkhaModal);
+  quickOverlay.addEventListener("click", (e) => e.target === quickOverlay && closeQuickModal());
+  quickModal.querySelector("#quickCloseModalBtn").addEventListener("click", closeQuickModal);
   
-  const escHandler = (e) => e.key === "Escape" && closeDukkhaModal();
+  const escHandler = (e) => e.key === "Escape" && closeQuickModal();
   document.addEventListener("keydown", escHandler);
 }
 
-function toggleDukkhaModal() {
-  if (dukkhaModalIsOpen) {
+function toggleQuickModal() {
+  if (quickModalIsOpen) {
     // Если окно открыто - закрываем
-    dukkhaOverlay.style.opacity = "0";
-    dukkhaModal.style.opacity = "0";
-    dukkhaModal.style.transform = "translate(-50%, -50%) scale(0.95)";
+    quickOverlay.style.opacity = "0";
+    quickModal.style.opacity = "0";
+    quickModal.style.transform = "translate(-50%, -50%) scale(0.95)";
     
     setTimeout(() => {
-      dukkhaOverlay.remove();
-      dukkhaModal.remove();
-      dukkhaOverlay = null;
-      dukkhaModal = null;
-      dukkhaModalIsOpen = false;
+      quickOverlay.remove();
+      quickModal.remove();
+      quickOverlay = null;
+      quickModal = null;
+      quickModalIsOpen = false;
     }, 300);
   } else {
     // Если окно закрыто - создаем и показываем
-    createDukkhaModal();
-    dukkhaModalIsOpen = true;
+    createQuickModal();
+    quickModalIsOpen = true;
   }
 }
 
 document.addEventListener("keydown", (event) => {
   if (event.altKey && event.code === "KeyP") {
     event.preventDefault();
-    toggleDukkhaModal();
+    toggleQuickModal();
   }
 });

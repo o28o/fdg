@@ -30,6 +30,13 @@ align-items: center;
    color: #000;
 }
 
+#sutta p, 
+#sutta ol, 
+#sutta ul, 
+#sutta li { 
+  margin-bottom: 1.5rem; 
+  font-size: 1.1rem; 
+}
 
 
 #scrollToTopBtn {

@@ -90,7 +90,6 @@ document.addEventListener('DOMContentLoaded', function() {
     }
   });
 
-
 document.addEventListener("keydown", (event) => {
   if (event.ctrlKey && event.code === "ArrowRight") {
     const nextDiv = document.getElementById("next");
@@ -500,9 +499,6 @@ document.addEventListener("keydown", (event) => {
 		  defaultLanguageLinkPart = "/read/";
 		}
 
-if (urlWithoutParams.endsWith("/r/") || urlWithoutParams.endsWith("/read/") ||
-        urlWithoutParams.endsWith("/th/") || urlWithoutParams.endsWith("/th/read/")) {
-    
 
     // Проверяем, содержит ли URL /r/
     if (urlWithoutParams.endsWith("/r/")) {
@@ -520,30 +516,30 @@ if (urlWithoutParams.endsWith("/r/") || urlWithoutParams.endsWith("/read/") ||
         newUrl = window.location.origin + "/read/";
       }
     }
-
-}
-
 /*
-//Новые кейсы 
-    // Переключение между / и /ru/
-    if (urlWithoutParams.endsWith("/") || urlWithoutParams.endsWith("/ru/")) {
-      newUrl = (urlWithoutParams.endsWith("/ru/")) 
-        ? window.location.origin + "/" 
-        : window.location.origin + "/ru/";
-    }
-
-
-    // Переключение между /read.php и /ru/read.php
-    if (urlWithoutParams.endsWith("/read.php") || urlWithoutParams.endsWith("/ru/read.php")) {
-      newUrl = (urlWithoutParams.endsWith("/ru/read.php")) 
-        ? window.location.origin + "/read.php" 
-        : window.location.origin + "/ru/read.php";
-    }
-
+// Обработка случаев, когда страница открыта с реферером
+if (document.referrer) {
+  const referrerUrl = new URL(document.referrer);
+  const referrerPath = referrerUrl.pathname;
+  
+  // Для рефереров /ru/ и / (точное совпадение, не просто окончание на /)
+  if (referrerPath === "/ru/read.php" || referrerPath === "/read.php") {
+    newUrl = (referrerPath === "/ru/read.php") 
+      ? window.location.origin + "/read.php" 
+      : window.location.origin + "/ru/read.php";
+  }
+  // Для рефереров /ru/read.php и /read.php (точное окончание)
+  else if (referrerPath === "/ru/" || referrerPath === "/") {
+    newUrl = (referrerPath === "/ru/") 
+      ? window.location.origin + "/" 
+      : window.location.origin + "/ru/";
+  } 
+}
 */
+
     // Добавляем параметры обратно, если они были
-    let params = currentUrl.split('?')[1] || '';
-    newUrl = params ? `${newUrl}?${params}` : newUrl;
+let params = currentUrl.split('?')[1] || '';
+newUrl = params ? `${newUrl}?${params}` : `${newUrl}?q=sn56.11`;
 
     if (newUrl !== currentUrl) { // Проверяем, изменился ли URL
       history.pushState(null, "", newUrl); // Добавляем запись в историю
@@ -588,203 +584,6 @@ document.addEventListener("keydown", (event) => {
         console.error(`Ссылка с id "${linkId}" не найдена!`);
       }
     }
-  }
-});
-
-let isModalOpen = false;
-
-document.addEventListener("keydown", (event) => {
-  if (event.altKey && event.code === "KeyP") {
-    event.preventDefault();
-
-    // Защита от повторного открытия
-    if (isModalOpen) return;
-    isModalOpen = true;
-
-    let currentUrl = window.location.href;
-    let urlWithoutParams = currentUrl.split('?')[0];
-    let queryBase;
-
-    // Определение базового пути поиска
-    if (urlWithoutParams.endsWith("/ru/") || urlWithoutParams.endsWith("/r/")) {
-      queryBase = "/r/?q=";
-    } else {
-      queryBase = "/read/?q=";
-    }
-
-    // Цвета для темной и светлой темы
-    const isDark = document.body.classList.contains("dark");
-    const bgColor = isDark ? "#2c3e50" : "#ffffff";
-    const textColor = isDark ? "#ffffff" : "#212529";
-    const linkColorPrimary = "#859900"; // Первый приоритет
-    const linkColorSuccess = "#2aa198"; // Clarify 5 khandha
-    const linkColorWarning = "#cb4b16"; // Clarify 6 ajjhattayatanani
-    const linkColorDanger = "#dc322f";  // Dukkham so abhinanadati
-
-    // Создаём отдельно оверлей и модальное окно
-    const overlay = document.createElement("div");
-    overlay.style.position = "fixed";
-    overlay.style.top = "0";
-    overlay.style.left = "0";
-    overlay.style.width = "100%";
-    overlay.style.height = "100%";
-    overlay.style.zIndex = "9999";
-    overlay.style.backgroundColor = "rgba(0, 0, 0, 0.7)";
-    overlay.style.opacity = "0";
-    overlay.style.transition = "opacity 0.4s ease";
-
-    const modal = document.createElement("div");
-    modal.style.position = "fixed";
-    modal.style.top = "50%";
-    modal.style.left = "50%";
-    modal.style.transform = "translate(-50%, -50%) scale(0.95)";
-    modal.style.zIndex = "10000";
-    modal.style.opacity = "0";
-    modal.style.transition = "opacity 0.4s ease, transform 0.4s ease";
-
-    // HTML содержимого
-    modal.innerHTML = `
-      <div class="modal-content" style="
-  background-color: ${bgColor};
-  color: ${textColor};
-  padding: 1.5rem;
-  max-width: 600px;
-  width: 95%;
-  border-radius: 1rem;
-  box-shadow: 0 8px 24px rgba(0,0,0,0.3);
-  font-family: sans-serif;
-  position: relative;
-">
-
-<!-- Кнопка закрытия -->
-<button id="closeModalBtn" style="
-  position: absolute;
-  top: 12px;
-  right: 12px;
-  background-color: #9e1c19; /* красный фон */
-  color: #fff; /* белый крестик */
-  border: none;
-  width: 28px;
-  height: 28px;
-  border-radius: 50%;
-  font-size: 1.1rem;
-  font-weight: bold;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: all 0.2s ease;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
-  z-index: 10;
-" title="Закрыть">×</button>
-
-  <h5 style="
-    text-align:center;
-    margin-bottom: 1.2rem;
-    color: #93a1a1;
-    font-size: 1.2rem;
-    font-weight: 600;
-  ">Четыре Благородные Истины</h5>
-
-  <!-- Список ссылок в двух колонках -->
-  <div style="
-    display: flex;
-    gap: 1.2rem;
-    flex-wrap: wrap;
-    justify-content: space-between;
-  ">
-    <!-- Колонка 1 -->
-    <div style="flex: 1 1 45%; min-width: 200px;">
-      <p><strong>1st priority:</strong></p>
-      <ul style="padding-left: 1rem; margin: 0; font-size: 0.9rem;">
-        <li><a href="${queryBase}sn56.11" target="_blank" style="color: ${linkColorPrimary}; text-decoration: none;">SN 56.11</a></li>
-        <li><a href="${queryBase}dn22" target="_blank" style="color: ${linkColorPrimary}; text-decoration: none;">DN 22</a></li>
-        <li><a href="${queryBase}sn12.2" target="_blank" style="color: ${linkColorPrimary}; text-decoration: none;">SN 12.2</a></li>
-      </ul>
-
-      <p style="margin-top: 1rem;"><strong>Clarify 5 khandha:</strong></p>
-      <ul style="padding-left: 1rem; margin: 0; font-size: 0.9rem;">
-        <li><a href="${queryBase}sn22.56" target="_blank" style="color: ${linkColorSuccess}; text-decoration: none;">SN 22.56</a></li>
-        <li><a href="${queryBase}sn22.79" target="_blank" style="color: ${linkColorSuccess}; text-decoration: none;">SN 22.79</a></li>
-        <li><a href="${queryBase}sn22.85" target="_blank" style="color: ${linkColorSuccess}; text-decoration: none;">SN 22.85</a></li>
-      </ul>
-    </div>
-
-    <!-- Колонка 2 -->
-    <div style="flex: 1 1 45%; min-width: 200px;">
-      <p><strong>Clarify 6 ajjhattayatanani:</strong></p>
-      <ul style="padding-left: 1rem; margin: 0; font-size: 0.9rem;">
-        <li><a href="${queryBase}sn35.228" target="_blank" style="color: ${linkColorWarning}; text-decoration: none;">SN 35.228</a></li>
-        <li><a href="${queryBase}sn35.229" target="_blank" style="color: ${linkColorWarning}; text-decoration: none;">SN 35.229</a></li>
-        <li><a href="${queryBase}sn35.236" target="_blank" style="color: ${linkColorWarning}; text-decoration: none;">SN 35.236</a></li>
-        <li><a href="${queryBase}sn35.238" target="_blank" style="color: ${linkColorWarning}; text-decoration: none;">SN 35.238</a></li>
-      </ul>
-
-      <p style="margin-top: 1rem;"><strong>Clarify 4-6-X Dhatu:</strong></p>
-      <ul style="padding-left: 1rem; margin: 0; font-size: 0.9rem;">
-        <li><a href="${queryBase}sn14" target="_blank" style="color: ${linkColorDanger}; text-decoration: none;">SN 14</a></li>
-        <li><a href="${queryBase}mn28" target="_blank" style="color: ${linkColorDanger}; text-decoration: none;">MN 28</a></li>
-        <li><a href="${queryBase}mn115" target="_blank" style="color: ${linkColorDanger}; text-decoration: none;">MN 115</a></li>
-        <li><a href="${queryBase}mn140" target="_blank" style="color: ${linkColorDanger}; text-decoration: none;">MN 140</a></li>
-      </ul>
-    </div>
-
-    <!-- Новая колонка или блок для Dukkham so abhinanadati -->
-    <div style="flex: 1 1 90%; min-width: 200px; margin-top: 1rem;">
-      <p><strong>Dukkham so abhinanadati:</strong></p>
-      <ul style="padding-left: 1rem; margin: 0; font-size: 0.9rem;">
-        <li><a href="${queryBase}sn14.35" target="_blank" style="color: ${linkColorPrimary}; text-decoration: none;">SN 14.35</a></li>
-        <li><a href="${queryBase}sn22.29" target="_blank" style="color: ${linkColorPrimary}; text-decoration: none;">SN 22.29</a></li>
-        <li><a href="${queryBase}sn35.19" target="_blank" style="color: ${linkColorPrimary}; text-decoration: none;">SN 35.19</a></li>
-        <li><a href="${queryBase}sn35.20" target="_blank" style="color: ${linkColorPrimary}; text-decoration: none;">SN 35.20</a></li>
-        <li><a href="${queryBase}iti61" target="_blank" style="color: ${linkColorPrimary}; text-decoration: none;">Iti 61</a></li>
-      </ul>
-    </div>
-  </div>
-</div>
-    `;
-
-    // Добавляем элементы на страницу
-    document.body.appendChild(overlay);
-    document.body.appendChild(modal);
-
-    // Анимация появления
-    requestAnimationFrame(() => {
-      overlay.style.opacity = "1";
-      modal.style.opacity = "1";
-      modal.style.transform = "translate(-50%, -50%) scale(1)";
-    });
-
-    // Функция закрытия
-    const closeModal = () => {
-      isModalOpen = false;
-      overlay.style.opacity = "0";
-      modal.style.opacity = "0";
-      modal.style.transform = "translate(-50%, -50%) scale(0.95)";
-
-      setTimeout(() => {
-        overlay.remove();
-        modal.remove();
-      }, 300);
-    };
-
-    // Закрытие по клику вне контента
-    overlay.addEventListener("click", (e) => {
-      if (e.target === overlay) {
-        closeModal();
-      }
-    });
-
-    // Закрытие по кнопке ×
-    modal.querySelector("#closeModalBtn").addEventListener("click", closeModal);
-
-    // Закрытие по ESC
-    document.addEventListener("keydown", function escHandler(e) {
-      if (e.key === "Escape") {
-        closeModal();
-        document.removeEventListener("keydown", escHandler);
-      }
-    });
   }
 });
 
@@ -887,3 +686,213 @@ document.addEventListener('keydown', (event) => {
 //end of the initial function
 });
 
+
+let dukkhaModalIsOpen = false;
+let dukkhaOverlay = null;
+let dukkhaModal = null;
+
+function createDukkhaModal() {
+  let currentUrl = window.location.href;
+  let urlWithoutParams = currentUrl.split('?')[0];
+  let queryBase = urlWithoutParams.endsWith("/ru/") || urlWithoutParams.endsWith("/r/") 
+    ? "/r/?q=" 
+    : "/read/?q=";
+
+  const isDark = document.body.classList.contains("dark");
+  const bgColor = isDark ? "#2c3e50" : "#ffffff";
+  const textColor = isDark ? "#ffffff" : "#212529";
+  const linkColorPrimary = "#859900";
+  const linkColorSuccess = "#2aa198";
+  const linkColorWarning = "#cb4b16";
+  const linkColorDanger = "#dc322f";
+
+  // Создаем оверлей
+  dukkhaOverlay = document.createElement("div");
+  dukkhaOverlay.className = "dukkha-overlay-element";
+  dukkhaOverlay.style.cssText = `
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 9999;
+    background-color: rgba(0, 0, 0, 0.7);
+    opacity: 0;
+    transition: opacity 0.4s ease;
+  `;
+
+  // Создаем модальное окно
+  dukkhaModal = document.createElement("div");
+  dukkhaModal.className = "dukkha-modal-container";
+  dukkhaModal.style.cssText = `
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.95);
+    z-index: 10000;
+    opacity: 0;
+    transition: opacity 0.4s ease, transform 0.4s ease;
+  `;
+
+    // HTML содержимого
+    dukkhaModal.innerHTML = `
+      <div class="dukkha-modal-content-wrapper" style="
+        background-color: ${bgColor};
+        color: ${textColor};
+        padding: 1.5rem;
+        max-width: 600px;
+        width: 95%;
+        border-radius: 1rem;
+        box-shadow: 0 8px 24px rgba(0,0,0,0.3);
+        font-family: sans-serif;
+        position: relative;
+      ">
+
+        <!-- Кнопка закрытия -->
+        <button id="dukkhaCloseModalBtn" class="dukkha-close-button" style="
+          position: absolute;
+          top: 12px;
+          right: 12px;
+          background-color: #9e1c19;
+          color: #fff;
+          border: none;
+          width: 28px;
+          height: 28px;
+          border-radius: 50%;
+          font-size: 1.1rem;
+          font-weight: bold;
+          cursor: pointer;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          transition: all 0.2s ease;
+          box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+          z-index: 10;
+        " title="Закрыть">×</button>
+
+        <h5 class="dukkha-modal-title" style="
+          text-align:center;
+          margin-bottom: 1.2rem;
+          color: #93a1a1;
+          font-size: 1.2rem;
+          font-weight: 600;
+        ">Четыре Благородные Истины</h5>
+
+        <!-- Список ссылок в двух колонках -->
+        <div class="dukkha-links-container" style="
+          display: flex;
+          gap: 1.2rem;
+          flex-wrap: wrap;
+          justify-content: space-between;
+        ">
+          <!-- Колонка 1 -->
+          <div class="dukkha-links-column" style="flex: 1 1 45%; min-width: 200px;">
+            <p><strong>1st priority:</strong></p>
+            <ul class="dukkha-links-list" style="padding-left: 1rem; margin: 0; font-size: 0.9rem;">
+              <li><a href="${queryBase}sn56.11" target="_blank" class="dukkha-link-primary" style="color: ${linkColorPrimary}; text-decoration: none;">SN 56.11</a></li>
+              <li><a href="${queryBase}dn22" target="_blank" class="dukkha-link-primary" style="color: ${linkColorPrimary}; text-decoration: none;">DN 22</a></li>
+              <li><a href="${queryBase}sn12.2" target="_blank" class="dukkha-link-primary" style="color: ${linkColorPrimary}; text-decoration: none;">SN 12.2</a></li>
+            </ul>
+
+            <p style="margin-top: 1rem;"><strong>Clarify 5 khandha:</strong></p>
+            <ul class="dukkha-links-list" style="padding-left: 1rem; margin: 0; font-size: 0.9rem;">
+              <li><a href="${queryBase}sn22.56" target="_blank" class="dukkha-link-success" style="color: ${linkColorSuccess}; text-decoration: none;">SN 22.56</a></li>
+              <li><a href="${queryBase}sn22.79" target="_blank" class="dukkha-link-success" style="color: ${linkColorSuccess}; text-decoration: none;">SN 22.79</a></li>
+              <li><a href="${queryBase}sn22.85" target="_blank" class="dukkha-link-success" style="color: ${linkColorSuccess}; text-decoration: none;">SN 22.85</a></li>
+            </ul>
+          </div>
+
+          <!-- Колонка 2 -->
+          <div class="dukkha-links-column" style="flex: 1 1 45%; min-width: 200px;">
+            <p><strong>Clarify 6 ajjhattayatanani:</strong></p>
+            <ul class="dukkha-links-list" style="padding-left: 1rem; margin: 0; font-size: 0.9rem;">
+              <li><a href="${queryBase}sn35.228" target="_blank" class="dukkha-link-warning" style="color: ${linkColorWarning}; text-decoration: none;">SN 35.228</a></li>
+              <li><a href="${queryBase}sn35.229" target="_blank" class="dukkha-link-warning" style="color: ${linkColorWarning}; text-decoration: none;">SN 35.229</a></li>
+              <li><a href="${queryBase}sn35.236" target="_blank" class="dukkha-link-warning" style="color: ${linkColorWarning}; text-decoration: none;">SN 35.236</a></li>
+              <li><a href="${queryBase}sn35.238" target="_blank" class="dukkha-link-warning" style="color: ${linkColorWarning}; text-decoration: none;">SN 35.238</a></li>
+            </ul>
+
+            <p style="margin-top: 1rem;"><strong>Clarify 4-6-X Dhatu:</strong></p>
+            <ul class="dukkha-links-list" style="padding-left: 1rem; margin: 0; font-size: 0.9rem;">
+              <li><a href="${queryBase}sn14" target="_blank" class="dukkha-link-danger" style="color: ${linkColorDanger}; text-decoration: none;">SN 14</a></li>
+              <li><a href="${queryBase}mn28" target="_blank" class="dukkha-link-danger" style="color: ${linkColorDanger}; text-decoration: none;">MN 28</a></li>
+              <li><a href="${queryBase}mn115" target="_blank" class="dukkha-link-danger" style="color: ${linkColorDanger}; text-decoration: none;">MN 115</a></li>
+              <li><a href="${queryBase}mn140" target="_blank" class="dukkha-link-danger" style="color: ${linkColorDanger}; text-decoration: none;">MN 140</a></li>
+            </ul>
+          </div>
+
+          <!-- Новая колонка или блок для Dukkham so abhinanadati -->
+          <div class="dukkha-full-width-column" style="flex: 1 1 90%; min-width: 200px; margin-top: 1rem;">
+            <p><strong>Dukkham so abhinanadati:</strong></p>
+            <ul class="dukkha-links-list" style="padding-left: 1rem; margin: 0; font-size: 0.9rem;">
+              <li><a href="${queryBase}sn14.35" target="_blank" class="dukkha-link-primary" style="color: ${linkColorPrimary}; text-decoration: none;">SN 14.35</a></li>
+              <li><a href="${queryBase}sn22.29" target="_blank" class="dukkha-link-primary" style="color: ${linkColorPrimary}; text-decoration: none;">SN 22.29</a></li>
+              <li><a href="${queryBase}sn35.19" target="_blank" class="dukkha-link-primary" style="color: ${linkColorPrimary}; text-decoration: none;">SN 35.19</a></li>
+              <li><a href="${queryBase}sn35.20" target="_blank" class="dukkha-link-primary" style="color: ${linkColorPrimary}; text-decoration: none;">SN 35.20</a></li>
+              <li><a href="${queryBase}iti61" target="_blank" class="dukkha-link-primary" style="color: ${linkColorPrimary}; text-decoration: none;">Iti 61</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    `;
+
+  document.body.appendChild(dukkhaOverlay);
+  document.body.appendChild(dukkhaModal);
+
+  // Анимация появления
+  requestAnimationFrame(() => {
+    dukkhaOverlay.style.opacity = "1";
+    dukkhaModal.style.opacity = "1";
+    dukkhaModal.style.transform = "translate(-50%, -50%) scale(1)";
+  });
+
+  // Функция закрытия
+  const closeDukkhaModal = () => {
+    dukkhaModalIsOpen = false;
+    dukkhaOverlay.style.opacity = "0";
+    dukkhaModal.style.opacity = "0";
+    dukkhaModal.style.transform = "translate(-50%, -50%) scale(0.95)";
+
+    setTimeout(() => {
+      dukkhaOverlay.remove();
+      dukkhaModal.remove();
+      dukkhaOverlay = null;
+      dukkhaModal = null;
+    }, 300);
+  };
+
+  // Обработчики событий
+  dukkhaOverlay.addEventListener("click", (e) => e.target === dukkhaOverlay && closeDukkhaModal());
+  dukkhaModal.querySelector("#dukkhaCloseModalBtn").addEventListener("click", closeDukkhaModal);
+  
+  const escHandler = (e) => e.key === "Escape" && closeDukkhaModal();
+  document.addEventListener("keydown", escHandler);
+}
+
+function toggleDukkhaModal() {
+  if (dukkhaModalIsOpen) {
+    // Если окно открыто - закрываем
+    dukkhaOverlay.style.opacity = "0";
+    dukkhaModal.style.opacity = "0";
+    dukkhaModal.style.transform = "translate(-50%, -50%) scale(0.95)";
+    
+    setTimeout(() => {
+      dukkhaOverlay.remove();
+      dukkhaModal.remove();
+      dukkhaOverlay = null;
+      dukkhaModal = null;
+      dukkhaModalIsOpen = false;
+    }, 300);
+  } else {
+    // Если окно закрыто - создаем и показываем
+    createDukkhaModal();
+    dukkhaModalIsOpen = true;
+  }
+}
+
+document.addEventListener("keydown", (event) => {
+  if (event.altKey && event.code === "KeyP") {
+    event.preventDefault();
+    toggleDukkhaModal();
+  }
+});

@@ -768,30 +768,63 @@ function createQuickModal() {
   `;
 
   // Модалка
+  
+  
+  
+
   quickModal = document.createElement("div");
-  quickModal.className = "quick-modal-container";
-  quickModal.style.cssText = `
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%) scale(0.95);
-    z-index: 10000;
-    opacity: 0;
-    transition: opacity 0.4s ease, transform 0.4s ease;
-  `;
+quickModal.className = "quick-modal-container";
+quickModal.style.cssText = `
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0.95);
+  z-index: 10000;
+  opacity: 0;
+  transition: opacity 0.4s ease, transform 0.4s ease;
+  width: 95%;
+  max-width: 600px;
+`;
+
+// После добавляем элемент в DOM, вставляем медиаквери
+const styleTag = document.createElement("style");
+styleTag.textContent = `
+  @media (max-width: 768px) {
+    .quick-modal-container {
+      top: 0 !important;
+      left: 0 !important;
+      transform: none !important;
+      width: 100% !important;
+      height: 100% !important;
+      display: flex !important;
+      align-items: flex-start !important;
+      justify-content: center;
+      padding: 1rem;
+    }
+    .quick-modal-content-wrapper {
+      width: 100% !important;
+      max-width: none !important;
+      height: auto;
+      margin-top: 1.5rem;
+      border-radius: 0.75rem;
+    }
+  }
+`;
+document.head.appendChild(styleTag);
+
 
   quickModal.innerHTML = `
-    <div class="quick-modal-content-wrapper" style="
-      background-color: ${bgColor};
-      color: ${textColor};
-      padding: 1.5rem;
-      max-width: 600px;
-      width: 95%;
-      border-radius: 1rem;
-      box-shadow: 0 8px 24px rgba(0,0,0,0.3);
-      font-family: sans-serif;
-      position: relative;
-    ">
+   <div class="quick-modal-content-wrapper" style="
+  background-color: ${bgColor};
+  color: ${textColor};
+  padding: 1.5rem;
+  max-width: 600px;
+  width: 100%;
+  border-radius: 1rem;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.3);
+  font-family: sans-serif;
+  position: relative;
+">
 
       <button id="quickCloseModalBtn" class="quick-close-button" style="
         position: absolute;

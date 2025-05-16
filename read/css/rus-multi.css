@@ -135,13 +135,14 @@ body.dark {
   margin-top: 3px;
 }
 
-p, 
-ol,
-ul,
-li {
-  margin-bottom: 1.5rem;
-  font-size: 1.1rem;
+#sutta p, 
+#sutta ol, 
+#sutta ul, 
+#sutta li { 
+  margin-bottom: 1.5rem; 
+  font-size: 1.1rem; 
 }
+
 
 .instructions ul li {
   line-height: 1.3;

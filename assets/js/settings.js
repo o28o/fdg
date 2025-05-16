@@ -732,11 +732,10 @@ document.addEventListener("keydown", function (event) {
 
 
 
-
-
 let quickModalIsOpen = false;
 let quickOverlay = null;
 let quickModal = null;
+let escHandler = null;
 
 function createQuickModal() {
   let currentUrl = window.location.href;
@@ -746,14 +745,14 @@ function createQuickModal() {
     : "/read/?q=";
 
   const isDark = document.body.classList.contains("dark");
-  const bgColor = isDark ? "#2c3e50" : "#ffffff";
+  const bgColor = isDark ? "#1a252f" : "#ffffff";
   const textColor = isDark ? "#ffffff" : "#212529";
   const linkColorPrimary = "#859900";
   const linkColorSuccess = "#2aa198";
   const linkColorWarning = "#cb4b16";
   const linkColorDanger = "#dc322f";
 
-  // Создаем оверлей
+  // Оверлей 2c3e50
   quickOverlay = document.createElement("div");
   quickOverlay.className = "quick-overlay-element";
   quickOverlay.style.cssText = `
@@ -768,7 +767,7 @@ function createQuickModal() {
     transition: opacity 0.4s ease;
   `;
 
-  // Создаем модальное окно
+  // Модалка
   quickModal = document.createElement("div");
   quickModal.className = "quick-modal-container";
   quickModal.style.cssText = `
@@ -781,157 +780,140 @@ function createQuickModal() {
     transition: opacity 0.4s ease, transform 0.4s ease;
   `;
 
-    // HTML содержимого
-    quickModal.innerHTML = `
-      <div class="quick-modal-content-wrapper" style="
-        background-color: ${bgColor};
-        color: ${textColor};
-        padding: 1.5rem;
-        max-width: 600px;
-        width: 95%;
-        border-radius: 1rem;
-        box-shadow: 0 8px 24px rgba(0,0,0,0.3);
-        font-family: sans-serif;
-        position: relative;
-      ">
+  quickModal.innerHTML = `
+    <div class="quick-modal-content-wrapper" style="
+      background-color: ${bgColor};
+      color: ${textColor};
+      padding: 1.5rem;
+      max-width: 600px;
+      width: 95%;
+      border-radius: 1rem;
+      box-shadow: 0 8px 24px rgba(0,0,0,0.3);
+      font-family: sans-serif;
+      position: relative;
+    ">
 
-        <!-- Кнопка закрытия -->
-        <button id="quickCloseModalBtn" class="quick-close-button" style="
-          position: absolute;
-          top: 12px;
-          right: 12px;
-          background-color: #9e1c19;
-          color: #fff;
-          border: none;
-          width: 28px;
-          height: 28px;
-          border-radius: 50%;
-          font-size: 1.1rem;
-          font-weight: bold;
-          cursor: pointer;
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          transition: all 0.2s ease;
-          box-shadow: 0 2px 6px rgba(0,0,0,0.2);
-          z-index: 10;
-        " title="Закрыть">×</button>
+      <button id="quickCloseModalBtn" class="quick-close-button" style="
+        position: absolute;
+        top: 12px;
+        right: 12px;
+        background-color: #9e1c19;
+        color: #fff;
+        border: none;
+        width: 28px;
+        height: 28px;
+        border-radius: 50%;
+        font-size: 1.1rem;
+        font-weight: bold;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: all 0.2s ease;
+        box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+        z-index: 10;
+      " title="Закрыть">×</button>
 
-        <h5 class="quick-modal-title" style="
-          text-align:center;
-          margin-bottom: 1.2rem;
-          color: #93a1a1;
-          font-size: 1.2rem;
-          font-weight: 600;
-        ">Cattāri Ariyasaccāni</h5>
+      <h5 class="quick-modal-title" style="
+        text-align:center;
+        margin-bottom: 1.2rem;
+        color: #93a1a1;
+        font-size: 1.2rem;
+        font-weight: 600;
+      ">Cattāri Ariyasaccāni</h5>
 
-        <!-- Список ссылок в двух колонках -->
-        <div class="quick-links-container" style="
-          display: flex;
-          gap: 1.2rem;
-          flex-wrap: wrap;
-          justify-content: space-between;
-        ">
-          <!-- Колонка 1 -->
-          <div class="quick-links-column" style="flex: 1 1 45%; min-width: 200px;">
-            <p><strong>1st priority:</strong></p>
-            <ul class="quick-links-list" style="padding-left: 1rem; margin: 0; font-size: 0.9rem;">
-              <li><a href="${queryBase}sn56.11" target="_blank" class="quick-link-primary" style="color: ${linkColorPrimary}; text-decoration: none;">SN 56.11</a></li>
-              <li><a href="${queryBase}dn22" target="_blank" class="quick-link-primary" style="color: ${linkColorPrimary}; text-decoration: none;">DN 22</a></li>
-              <li><a href="${queryBase}sn12.2" target="_blank" class="quick-link-primary" style="color: ${linkColorPrimary}; text-decoration: none;">SN 12.2</a></li>
-            </ul>
+      <div class="quick-links-container" style="display: flex; gap: 1.2rem; flex-wrap: wrap; justify-content: space-between;">
+        <div class="quick-links-column" style="flex: 1 1 45%; min-width: 200px;">
+          <p><strong>1st priority:</strong></p>
+          <ul style="padding-left: 1rem; font-size: 0.9rem;">
+            <li><a href="${queryBase}sn56.11" target="_blank" style="color: ${linkColorPrimary}; text-decoration: none;">SN 56.11</a></li>
+            <li><a href="${queryBase}dn22" target="_blank" style="color: ${linkColorPrimary}; text-decoration: none;">DN 22</a></li>
+            <li><a href="${queryBase}sn12.2" target="_blank" style="color: ${linkColorPrimary}; text-decoration: none;">SN 12.2</a></li>
+          </ul>
 
-            <p style="margin-top: 1rem;"><strong>Clarify 5 khandha:</strong></p>
-            <ul class="quick-links-list" style="padding-left: 1rem; margin: 0; font-size: 0.9rem;">
-              <li><a href="${queryBase}sn22.56" target="_blank" class="quick-link-success" style="color: ${linkColorSuccess}; text-decoration: none;">SN 22.56</a></li>
-              <li><a href="${queryBase}sn22.79" target="_blank" class="quick-link-success" style="color: ${linkColorSuccess}; text-decoration: none;">SN 22.79</a></li>
-              <li><a href="${queryBase}sn22.85" target="_blank" class="quick-link-success" style="color: ${linkColorSuccess}; text-decoration: none;">SN 22.85</a></li>
-            </ul>
-          </div>
+          <p style="margin-top: 1rem;"><strong>Clarify 5 khandha:</strong></p>
+          <ul style="padding-left: 1rem; font-size: 0.9rem;">
+            <li><a href="${queryBase}sn22.56" target="_blank" style="color: ${linkColorSuccess}; text-decoration: none;">SN 22.56</a></li>
+            <li><a href="${queryBase}sn22.79" target="_blank" style="color: ${linkColorSuccess}; text-decoration: none;">SN 22.79</a></li>
+            <li><a href="${queryBase}sn22.85" target="_blank" style="color: ${linkColorSuccess}; text-decoration: none;">SN 22.85</a></li>
+          </ul>
+        </div>
 
-          <!-- Колонка 2 -->
-          <div class="quick-links-column" style="flex: 1 1 45%; min-width: 200px;">
-            <p><strong>Clarify 6 ajjhattayatanani:</strong></p>
-            <ul class="quick-links-list" style="padding-left: 1rem; margin: 0; font-size: 0.9rem;">
-              <li><a href="${queryBase}sn35.228" target="_blank" class="quick-link-warning" style="color: ${linkColorWarning}; text-decoration: none;">SN 35.228</a></li>
-              <li><a href="${queryBase}sn35.229" target="_blank" class="quick-link-warning" style="color: ${linkColorWarning}; text-decoration: none;">SN 35.229</a></li>
-              <li><a href="${queryBase}sn35.236" target="_blank" class="quick-link-warning" style="color: ${linkColorWarning}; text-decoration: none;">SN 35.236</a></li>
-              <li><a href="${queryBase}sn35.238" target="_blank" class="quick-link-warning" style="color: ${linkColorWarning}; text-decoration: none;">SN 35.238</a></li>
-            </ul>
+        <div class="quick-links-column" style="flex: 1 1 45%; min-width: 200px;">
+          <p><strong>Clarify 6 ajjhattayatanani:</strong></p>
+          <ul style="padding-left: 1rem; font-size: 0.9rem;">
+            <li><a href="${queryBase}sn35.228" target="_blank" style="color: ${linkColorWarning}; text-decoration: none;">SN 35.228</a></li>
+            <li><a href="${queryBase}sn35.229" target="_blank" style="color: ${linkColorWarning}; text-decoration: none;">SN 35.229</a></li>
+            <li><a href="${queryBase}sn35.236" target="_blank" style="color: ${linkColorWarning}; text-decoration: none;">SN 35.236</a></li>
+            <li><a href="${queryBase}sn35.238" target="_blank" style="color: ${linkColorWarning}; text-decoration: none;">SN 35.238</a></li>
+          </ul>
 
-            <p style="margin-top: 1rem;"><strong>Clarify 4-6-X Dhatu:</strong></p>
-            <ul class="quick-links-list" style="padding-left: 1rem; margin: 0; font-size: 0.9rem;">
-              <li><a href="${queryBase}sn14" target="_blank" class="quick-link-danger" style="color: ${linkColorDanger}; text-decoration: none;">SN 14</a></li>
-              <li><a href="${queryBase}mn28" target="_blank" class="quick-link-danger" style="color: ${linkColorDanger}; text-decoration: none;">MN 28</a></li>
-              <li><a href="${queryBase}mn115" target="_blank" class="quick-link-danger" style="color: ${linkColorDanger}; text-decoration: none;">MN 115</a></li>
-              <li><a href="${queryBase}mn140" target="_blank" class="quick-link-danger" style="color: ${linkColorDanger}; text-decoration: none;">MN 140</a></li>
-            </ul>
-          </div>
+          <p style="margin-top: 1rem;"><strong>Clarify 4-6-X Dhatu:</strong></p>
+          <ul style="padding-left: 1rem; font-size: 0.9rem;">
+            <li><a href="${queryBase}sn14" target="_blank" style="color: ${linkColorDanger}; text-decoration: none;">SN 14</a></li>
+            <li><a href="${queryBase}mn28" target="_blank" style="color: ${linkColorDanger}; text-decoration: none;">MN 28</a></li>
+            <li><a href="${queryBase}mn115" target="_blank" style="color: ${linkColorDanger}; text-decoration: none;">MN 115</a></li>
+            <li><a href="${queryBase}mn140" target="_blank" style="color: ${linkColorDanger}; text-decoration: none;">MN 140</a></li>
+          </ul>
+        </div>
 
-          <!-- Новая колонка или блок для Dukkhaṁ so abhinanadati -->
-          <div class="quick-full-width-column" style="flex: 1 1 90%; min-width: 200px; margin-top: 1rem;">
-            <p><strong>Quickm so abhinanadati:</strong></p>
-            <ul class="quick-links-list" style="padding-left: 1rem; margin: 0; font-size: 0.9rem;">
-              <li><a href="${queryBase}sn14.35" target="_blank" class="quick-link-primary" style="color: ${linkColorPrimary}; text-decoration: none;">SN 14.35</a></li>
-              <li><a href="${queryBase}sn22.29" target="_blank" class="quick-link-primary" style="color: ${linkColorPrimary}; text-decoration: none;">SN 22.29</a></li>
-              <li><a href="${queryBase}sn35.19" target="_blank" class="quick-link-primary" style="color: ${linkColorPrimary}; text-decoration: none;">SN 35.19</a></li>
-              <li><a href="${queryBase}sn35.20" target="_blank" class="quick-link-primary" style="color: ${linkColorPrimary}; text-decoration: none;">SN 35.20</a></li>
-              <li><a href="${queryBase}iti61" target="_blank" class="quick-link-primary" style="color: ${linkColorPrimary}; text-decoration: none;">Iti 61</a></li>
-            </ul>
-          </div>
+        <div class="quick-full-width-column" style="flex: 1 1 90%; min-width: 200px; margin-top: 1rem;">
+          <p><strong>Dukkaṁ so abhinanadati:</strong></p>
+          <ul style="padding-left: 1rem; font-size: 0.9rem;">
+            <li><a href="${queryBase}sn14.35" target="_blank" style="color: ${linkColorPrimary}; text-decoration: none;">SN 14.35</a></li>
+            <li><a href="${queryBase}sn22.29" target="_blank" style="color: ${linkColorPrimary}; text-decoration: none;">SN 22.29</a></li>
+            <li><a href="${queryBase}sn35.19" target="_blank" style="color: ${linkColorPrimary}; text-decoration: none;">SN 35.19</a></li>
+            <li><a href="${queryBase}sn35.20" target="_blank" style="color: ${linkColorPrimary}; text-decoration: none;">SN 35.20</a></li>
+            <li><a href="${queryBase}iti61" target="_blank" style="color: ${linkColorPrimary}; text-decoration: none;">Iti 61</a></li>
+          </ul>
         </div>
       </div>
-    `;
+    </div>
+  `;
 
   document.body.appendChild(quickOverlay);
   document.body.appendChild(quickModal);
 
-  // Анимация появления
+  // Плавное появление
   requestAnimationFrame(() => {
     quickOverlay.style.opacity = "1";
     quickModal.style.opacity = "1";
     quickModal.style.transform = "translate(-50%, -50%) scale(1)";
   });
 
-  // Функция закрытия
-  const closeQuickModal = () => {
-    quickModalIsOpen = false;
-    quickOverlay.style.opacity = "0";
-    quickModal.style.opacity = "0";
-    quickModal.style.transform = "translate(-50%, -50%) scale(0.95)";
+  // Закрытие
+const closeQuickModal = () => {
+  quickOverlay?.style && (quickOverlay.style.opacity = "0");
+  quickModal?.style && (quickModal.style.opacity = "0");
+  quickModal?.style && (quickModal.style.transform = "translate(-50%, -50%) scale(0.95)");
 
-    setTimeout(() => {
-      quickOverlay.remove();
-      quickModal.remove();
-      quickOverlay = null;
-      quickModal = null;
-    }, 300);
-  };
+  setTimeout(() => {
+    quickOverlay?.remove();
+    quickModal?.remove();
+    quickOverlay = null;
+    quickModal = null;
+    quickModalIsOpen = false; // перемещено сюда
+  }, 300);
 
-  // Обработчики событий
+  if (escHandler) {
+    document.removeEventListener("keydown", escHandler);
+    escHandler = null;
+  }
+};
+
+
   quickOverlay.addEventListener("click", (e) => e.target === quickOverlay && closeQuickModal());
   quickModal.querySelector("#quickCloseModalBtn").addEventListener("click", closeQuickModal);
-  
-  const escHandler = (e) => e.key === "Escape" && closeQuickModal();
+
+  escHandler = (e) => e.key === "Escape" && closeQuickModal();
   document.addEventListener("keydown", escHandler);
 }
 
 function toggleQuickModal() {
   if (quickModalIsOpen) {
-    // Если окно открыто - закрываем
-    quickOverlay.style.opacity = "0";
-    quickModal.style.opacity = "0";
-    quickModal.style.transform = "translate(-50%, -50%) scale(0.95)";
-    
-    setTimeout(() => {
-      quickOverlay.remove();
-      quickModal.remove();
-      quickOverlay = null;
-      quickModal = null;
-      quickModalIsOpen = false;
-    }, 300);
+    const closeEvent = new Event('click');
+    quickOverlay.dispatchEvent(closeEvent);
   } else {
-    // Если окно закрыто - создаем и показываем
     createQuickModal();
     quickModalIsOpen = true;
   }
@@ -943,3 +925,4 @@ document.addEventListener("keydown", (event) => {
     toggleQuickModal();
   }
 });
+

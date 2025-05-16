@@ -959,3 +959,62 @@ document.addEventListener("keydown", (event) => {
   }
 });
 
+
+
+/*
+
+const openQuickModalBtn = document.createElement("button");
+openQuickModalBtn.innerText = "≡"; // или иконку по желанию
+openQuickModalBtn.setAttribute("aria-label", "Открыть окно Cattāri Ariyasaccāni");
+openQuickModalBtn.style.cssText = `
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 10001;
+  background-color: #859900;
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  width: 48px;
+  height: 48px;
+  font-size: 1.5rem;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+  cursor: pointer;
+`;
+
+openQuickModalBtn.addEventListener("click", toggleQuickModal);
+document.body.appendChild(openQuickModalBtn);
+
+
+
+
+if (!document.getElementById("openQuickModalBtn")) {
+  const openQuickModalBtn = document.createElement("button");
+
+  openQuickModalBtn.addEventListener("click", toggleQuickModal);
+
+}
+
+
+<button onclick="toggleQuickModal()" aria-label="Открыть Cattāri Ariyasaccāni" style="
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 10001;
+  background-color: #859900;
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  width: 48px;
+  height: 48px;
+  font-size: 1.5rem;
+  font-weight: bold;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+  cursor: pointer;
+">
+  ≡
+</button>
+
+
+*/
+

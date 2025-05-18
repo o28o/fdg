@@ -93,28 +93,27 @@ echo '<!--
 
         The Buddha\'s Words</a></li>    
    
-            <li>
-         <div class="dropdown-item ">Tipitaka:
-         CST: 
-           <a class="text-reset" target=""  href="https://tipitakapali.org/">TPO</a>
-         <a class="text-reset" target=""  href="https://tipitaka.app">Tp.app</a>
-  
-       <a class="text-reset" target="" href="https://84000.org/">Thai</a>
-          <a class="text-reset" target="" href="https://tipitaka.org/">VRI</a>  
-       </div>
-         </li>
+<li>
+  <div class="dropdown-item">Типитака:
+    <a class="text-reset" target="" href="https://84000.org/" title="Тайская Типитака на 84000.org">Thai</a>
+    <a class="text-reset" target="" href="https://tipitaka.org/" title="Типитака VRI на Tipitaka.org">VRI</a>  
+    <a class="text-reset" target="" href="https://gretil.sub.uni-goettingen.de/gretil.html#Suttapit" title="Типитака PTS на GRETIL">PTS</a>  
+    <a class="text-reset" target="" href="https://suttacentral.net/pitaka/sutta?lang=en" title="Типитака Mahāsaṅgīti на SuttaCentral.net">MS</a>
+  </div>
+</li>
 
-            <li>
-         <div class="dropdown-item ">Tipitaka Pali Reader 
-         <a class="text-reset" target=""  href="https://play.google.com/store/apps/details?id=com.paauk.tipitakapalireader">Android</a> 
-         <a class="text-reset" target="" href="https://apps.apple.com/us/app/tipitaka-pali-reader/id1541426949">IOS</a>   </div>
-         </li>
+<li>
+  <div class="dropdown-item">Типитака CST:
+    <a class="text-reset" target="" href="https://apply.paauksociety.org/tipitaka/index.php" title="Paauksociety.org">PA</a>
+    <a class="text-reset" target="" href="https://tipitaka.app" title="Tipitaka.app">Tp.app</a>
+    <a class="text-reset" target="" href="https://tipitakapali.org/" title="Tipitaka Pali Online">TPO</a>
+    <a class="text-reset" target="" href="https://americanmonk.org/tipitaka-pali-reader/" title="Tipitaka Pali Reader App">TPR</a>
+  </div>
+</li>
     
 
-         
-
-        <li><a class="dropdown-item" target="_blank" href="' . $linknoblasc . '">Статьи на Dhammadana.org</a></li>
       <li><a class="dropdown-item" target="_blank" href="' . $linkmolds . '">Переводы Майкла Олдса</a></li>
+        <li><a class="dropdown-item" target="_blank" href="' . $linknoblasc . '">Статьи на Dhammadana.org</a></li>
 
   </ul>
   
@@ -194,13 +193,13 @@ echo '<!--
    <li><a class="dropdown-item" target="_blank" href="https://dsal.uchicago.edu/dictionaries/pali/">Cловарь R. Davids, W. Stede PTS</a></li>          
   <li><a class="dropdown-item" target="_blank" href="http://dictionary.tamilcube.com/pali-dictionary.aspx">Англ-Пали Словарь</a></li>
 
-      <li>
-         <div class="dropdown-item "> Англ-Санскр Словарь
-         <a class="text-reset" target=""  href="https://sanskritdictionary.com/?iencoding=iast&q=&lang=sans&action=Search">Skrdict</a>
-     <a class="text-reset" target="" href="https://www.learnsanskrit.cc/translate?search=&dir=au">Learnskr</a>  
+   <li>
+         <div class="dropdown-item "> Skr
+        <a class="text-reset" target=""  href="https://www.sanskrit-lexicon.uni-koeln.de/scans/MWScan/2020/web/webtc2/index.php">Monier-Williams</a>
+		<a class="text-reset" target=""  href="https://sanskritdictionary.com/?iencoding=iast&q=&lang=sans&action=Search">Skrdict</a>
+		<a class="text-reset" target="" href="https://www.learnsanskrit.cc/translate?search=&dir=au">Learnskr</a>  
        </div>
-         </li>    
-
+         </li>  
 </ul>    
     
 <a class="dropdown text-decoration-none mx-1 d-md-inline-block" id="materials" data-bs-toggle="dropdown" aria-expanded="false" href="#">

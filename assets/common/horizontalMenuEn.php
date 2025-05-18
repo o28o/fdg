@@ -77,7 +77,8 @@ echo '<!--
   
                 <li>
          <div class="dropdown-item ">
-         <a class="text-reset" target="" href="https://suttacentral.net/pitaka/sutta?lang=en" >SuttaCentral</a> 
+		   <a class="text-reset" target="" href="https://suttacentral.net/pitaka/sutta?lang=en" title="Mahāsaṅgīti Edition at SuttaCentral.net">SuttaCentral</a>
+
                 <a class="text-reset" target="" href="https://suttacentral.net/pitaka/vinaya?lang=en">Виная</a>
          <a class="text-reset" target="" href="https://www.sc-voice.net/">Voice</a>
         <a class="text-reset" target="" href="' . $linksclegacy . '">Legacy</a>
@@ -90,25 +91,25 @@ echo '<!--
  The Buddha\'s Words</a></li> 
  
  
-            <li>
+ 	          <li>
          <div class="dropdown-item ">Tipitaka:
-         CST: 
-           <a class="text-reset" target=""  href="https://tipitakapali.org/">TPO</a>
-         <a class="text-reset" target=""  href="https://tipitaka.app">Tp.app</a>
-       <a class="text-reset" target="" href="https://84000.org/">Thai</a>
-          <a class="text-reset" target="" href="https://tipitaka.org/">VRI</a>  
+  <a class="text-reset" target="" href="https://84000.org/" title="Thai Tipitaka at 84000.org">Thai</a>
+  <a class="text-reset" target="" href="https://tipitaka.org/" title="VRI Tipitaka at Tipitaka.org">VRI</a>  
+  <a class="text-reset" target="" href="https://gretil.sub.uni-goettingen.de/gretil.html#Suttapit" title="PTS Tipitaka at GRETIL">PTS</a>  
+  <a class="text-reset" target="" href="https://suttacentral.net/pitaka/sutta?lang=en" title="Mahāsaṅgīti Edition at SuttaCentral.net">MS</a>
        </div>
          </li>
-    
-            <li>
-
-         <div class="dropdown-item ">Tipitaka Pali Reader 
-
-         <a class="text-reset" target=""  href="https://play.google.com/store/apps/details?id=com.paauk.tipitakapalireader">Android</a> 
-         <a class="text-reset" target="" href="https://apps.apple.com/us/app/tipitaka-pali-reader/id1541426949">IOS</a>   </div>
-         </li>
-    
-
+		 
+ 
+<li>
+  <div class="dropdown-item">Tipitaka CST:
+    <a class="text-reset" target="" href="https://apply.paauksociety.org/tipitaka/index.php" title="Paauksociety.org">PA</a>
+    <a class="text-reset" target="" href="https://tipitaka.app" title="Tipitaka.app">Tp.app</a>
+    <a class="text-reset" target="" href="https://tipitakapali.org/" title="Tipitaka Pali Online">TPO</a>
+    <a class="text-reset" target="" href="https://americanmonk.org/tipitaka-pali-reader/" title="Tipitaka Pali Reader App">TPR</a>
+  </div>
+</li>
+	
 
           <li><a class="dropdown-item" target="_blank" href="' . $linkmolds . '">' . $anamemolds . '</a></li>   
 <!-- <li><a class="dropdown-item" href="https://github.com/digitalpalidictionary/digitalpalidictionary/releases">' . $anamedpd . '</a></li>  -->
@@ -178,9 +179,10 @@ echo '<!--
    <li><a class="dropdown-item" target="_blank" href="http://dictionary.tamilcube.com/pali-dictionary.aspx">Eng-Pali Dictionary</a></li>
 
       <li>
-         <div class="dropdown-item "> Eng-Sanskr Dictionary
-         <a class="text-reset" target=""  href="https://sanskritdictionary.com/?iencoding=iast&q=&lang=sans&action=Search">Skrdict</a>
-     <a class="text-reset" target="" href="https://www.learnsanskrit.cc/translate?search=&dir=au">Learnskr</a>  
+         <div class="dropdown-item "> Skr
+        <a class="text-reset" target=""  href="https://www.sanskrit-lexicon.uni-koeln.de/scans/MWScan/2020/web/webtc2/index.php">Monier-Williams</a>
+		<a class="text-reset" target=""  href="https://sanskritdictionary.com/?iencoding=iast&q=&lang=sans&action=Search">Skrdict</a>
+		<a class="text-reset" target="" href="https://www.learnsanskrit.cc/translate?search=&dir=au">Learnskr</a>  
        </div>
          </li>    
 

@@ -108,6 +108,7 @@ $check</h2>";*/
 //
 
 //kn
+/*
 $pathkn = 'assets/texts/sutta/kn/';
 $check = shell_exec("
 knrangeInFile=`grep 'let knranges = ' $basedir/read/js/reader-rus-translations.js | sed 's@;@@g' | sed 's@.*\[@\[@g'`
@@ -123,7 +124,7 @@ echo KN updated to \$kndir
 sed -i \"s@let knranges =.*@let knranges = \$kndir;@g\" $basedir/read/js/reader-rus-translations.js $basedir/read/js/multilang.js $basedir/read/js/multilangrev.js $basedir/read/js/multilangfullrev.js  $basedir/read/js/memorize.js 
 fi
 ");
-
+*/
 echo "<h2 style='text-align: center;'>
 $check</h2>";
 echo "<h2 style='text-align: center;'>
@@ -134,6 +135,7 @@ echo "<h2 style='text-align: center;'>
 MN complete</h2>";
 
 //vinaya
+/*
 $pathvinaya = 'assets/texts/vinaya/pli-tv-b[ui]-vb/';
 $check = shell_exec("
 vinayarangeInFile=`grep 'let vinayaranges = ' $basedir/read/js/reader-rus-translations.js | sed 's@;@@g' | sed 's@.*\[@\[@g'`
@@ -154,6 +156,8 @@ sed -i 's@let vinayaranges =.*@let vinayaranges = '\"\$vinayadir\"';@g' $basedir
 
 fi
 ");
+
+*/
 echo "<h2 style='text-align: center;'>
 $check</h2>";
 

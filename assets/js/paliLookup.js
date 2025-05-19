@@ -1,3 +1,32 @@
+if (typeof initCopyNotification === 'undefined') {
+    // Функция НЕ объявлена — можно добавлять её
+    function initCopyNotification() {
+        if (!document.getElementById('bubbleNotification')) {
+            const bubble = document.createElement('div');
+            bubble.id = 'bubbleNotification';
+            bubble.className = 'bubble-notification';
+            document.body.appendChild(bubble);
+        }
+    }
+	    initCopyNotification();
+}
+
+if (typeof showBubbleNotification === 'undefined') {
+    // Функция НЕ объявлена — можно добавлять её
+     function showBubbleNotification(text) {
+        const bubble = document.getElementById('bubbleNotification');
+        if (!bubble) return;
+
+        bubble.textContent = text;
+        bubble.classList.add('show');
+        bubble.style.opacity = '1';
+
+        setTimeout(() => {
+            bubble.style.opacity = '0';
+        }, 2000);
+    }
+}
+ 
 // Проверяем язык в localStorage
 const siteLanguage = localStorage.getItem('siteLanguage');
 

@@ -8,7 +8,7 @@ if (typeof initCopyNotification === 'undefined') {
             document.body.appendChild(bubble);
         }
     }
-	    initCopyNotification();
+	    //initCopyNotification();
 }
 
 if (typeof showBubbleNotification === 'undefined') {

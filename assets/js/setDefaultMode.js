@@ -14,7 +14,7 @@
 
   // Сохранение настроек
   function savePreferences() {
-    console.log("Сохраняем настройки...");
+  //  console.log("Сохраняем настройки...");
     var pOptions = document.getElementById("pOptions");
     var extraOptions = document.getElementById("extraOptions");
     var onlCheckbox = document.getElementById("onlCheckbox");
@@ -26,9 +26,7 @@
       onl: onlCheckbox.checked,
       la: laCheckbox.checked
     };
-
-    console.log("Настройки к сохранению:", preferences);
-
+ //   console.log("Настройки к сохранению:", preferences);
     try {
       if (storageAvailable('localStorage')) {
         localStorage.setItem("userPreferences", JSON.stringify(preferences));

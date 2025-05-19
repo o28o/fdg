@@ -1,4 +1,3 @@
-
 <?php
 if (strpos($_SERVER['REQUEST_URI'], "/ru") !== false){
 $lang = "ru";
@@ -1364,7 +1363,6 @@ $dpdpart = '<h3>Download DPD</h3>
 ';
 
 }
-
 if (strpos($_SERVER['REQUEST_URI'], "/th") !== false){
 $lang = "th";
 $htmllang = "th";
@@ -1372,9 +1370,6 @@ $mainpage = '/th';
 $mainpagenoslash = '/th';
 $readerPage = $mainpage . '/read';
 $mainreadlink = '/th/read.php';
-
 }
 $menuuseful = 'MenuRead,MenuEnglish,MenuDict,MenuRussian,tools,materials';
-
-
 ?>

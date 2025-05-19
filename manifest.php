@@ -157,6 +157,7 @@ echo json_encode([
     "share_target" => [
         "action" => $mainpagenoslash . "/",
         "method" => "GET",
+         "enctype" => "application/x-www-form-urlencoded",
         "params" => [
             "text" => "q"
         ]

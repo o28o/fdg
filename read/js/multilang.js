@@ -64,7 +64,7 @@ function buildSutta(slug) {
       slug = "pli-tv-" + slug;
     }
   }
-  let html = `<div class="button-area"><button id="language-button" class="hide-button">Pāḷi Рус</button></div>`;
+  let html = `<div class="button-area"><button title="Переключить язык (Atl+Z или Alt+Space)" id="language-button" class="hide-button">Pāḷi Рус</button></div>`;
   
   const slugReady = parseSlug(slug);
   console.log("slugReady is " + slugReady + " slug is " + slug); 
@@ -120,9 +120,9 @@ const mlUrl  = window.location.href;
 
 const ruUrl = mlUrl.replace("/ml/", "/r/");
 const enUrl = mlUrl.replace("/ml/", "/read/");
-//let ifRus = `<a target="" href="${ruUrl}">Ru</a>&nbsp;<a target="" href="${enUrl}">En</a>&nbsp;`;
+//let ifRus = `<a target="" title="Русский (Alt+1)" href="${ruUrl}">Ru</a>&nbsp;<a target="" title="Английский (Alt+1)" href="${enUrl}">En</a>&nbsp;`;
 
-let scLink = `<p class="sc-link"><a title='Русский' target="" href="${ruUrl}">Ru</a>&nbsp;<a target="" title='Английский' href="${enUrl}">En</a>&nbsp;`;
+let scLink = `<p class="sc-link"><a title="Русский (Alt+1)" target="" href="${ruUrl}">Ru</a>&nbsp;<a target="" title="Английский (Alt+1)" href="${enUrl}">En</a>&nbsp;`;
 
 const currentURL = window.location.href;
 const anchorURL = new URL(currentURL).hash; // Убираем символ "#"

@@ -79,7 +79,7 @@ function buildSutta(slug) {
       slug = "pli-tv-" + slug;
     }
   }
-  let html = `<div class="button-area"><button id="language-button" class="hide-button">Pāḷi Рус</button></div>`;
+  let html = `<div class="button-area"><button title="Переключить язык (Atl+Z или Alt+Space)" id="language-button" class="hide-button">Pāḷi Рус</button></div>`;
   
   const slugReady = parseSlug(slug);
  // console.log("slugReady is " + slugReady + " slug is " + slug); 
@@ -125,7 +125,7 @@ var htmlpath = `${Sccopy}/sc-data/sc_bilara_data/html/pli/ms/${texttype}/${slugR
 const ruUrl  = window.location.href;
 
 const mlUrl = ruUrl.replace("/r/", "/ml/");
- let scLink = `<p class="sc-link"><a target="" title='Pali + Русский + Английский' href="${mlUrl}">R+E</a>&nbsp;`;
+ let scLink = `<p class="sc-link"><a target="" title='Pali + Русский + Английский (Alt+2)' href="${mlUrl}">R+E</a>&nbsp;`;
  //<a class='ruLink' href='' onclick=openRu('${slug}') data-slug='${slug}'>tst</a>&nbsp;
 const currentURL = window.location.href;
 const anchorURL = new URL(currentURL).hash; // Убираем символ "#"
@@ -422,7 +422,7 @@ else if (translator === "o+in+progress" ) {
 
 const enUrl = ruUrl.replace("/r/", "/read/");
 
-scLink += `<a title='Английский' href="${enUrl}">En</a>&nbsp;`;
+scLink += `<a title='Английский (Alt+1)' href="${enUrl}">En</a>&nbsp;`;
  
   
 //dpr

@@ -57,12 +57,15 @@ document.addEventListener("DOMContentLoaded", function () {
       localStorage.setItem("variantVisibility", storedState);
    //   console.log(`Состояние видимости переключено. Теперь: ${storedState}`);
 
-
+//      const notificationText = storedState === "hidden" ? "Variants Off" : "Variants On";
+      
   // Устанавливаем начальное состояние иконки на основе storedState
   if (storedState === "hidden") {
     iconImage.setAttribute("src", eyeSlashIcon);
+	      showBubbleNotification("Variants Off");
   } else {
     iconImage.setAttribute("src", eyeIcon);
+	showBubbleNotification("Variants On");
   }
     });
     

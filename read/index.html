@@ -70,59 +70,62 @@ transition: opacity 0.3s ease-in-out;
 
 <body class="dark">
 <form id="form" class="ui-widget mb-2">
-<label class="sr-only dropup rounded-pill mb-2" for="paliauto"></label>
-<input class="mb-2" id="paliauto" type="search" placeholder="Try sn56.11" autofocus><input class="go-button mb-2" type="submit" value="Go">
-<div id="form-div" class="">
-<!-- Home Button -->
-<div id="home-button" class="icon-button">
-<a href="/read.php" title="Read Suttas and Vinaya" rel="noreferrer">
-<img class="common-size-icon" alt="page for reading" src="/assets/svg/home-icon.svg"></img>
-</a>
-</div>
+  <label class="sr-only dropup rounded-pill mb-2" for="paliauto"></label>
+  <input class="mb-2" id="paliauto" type="search" placeholder="Try sn56.11" autofocus>
+  <input class="go-button mb-2" type="submit" value="Go">
+  <div id="form-div" class="">
 
-<!-- Search Button -->
-<div id="fdg-button" class="icon-button">
-<a href="/" title="Search in Suttas and Vinaya" rel="noreferrer">
-<img width="26px" alt="main page for search" src="/assets/img/gray-white.png">
-</a>
-</div>
+    <!-- Home Button -->
+    <div id="home-button" class="icon-button">
+      <a href="/read.php" title="Read Suttas and Vinaya (Ctrl+2)" rel="noreferrer">
+        <img class="common-size-icon" alt="page for reading" src="/assets/svg/home-icon.svg">
+      </a>
+    </div>
 
-<!-- Theme Toggle Button -->
-<div id="theme-button" class="icon-button">
-<img src="/assets/svg/circle-half-stroke.svg" title="Switch theme" alt="Switch theme" onclick="switchIcon(this)" class="common-size-icon3 changesvg gray-icon"></img>
-</div>
+    <!-- Search Button -->
+    <div id="fdg-button" class="icon-button">
+      <a href="/" title="Search in Suttas and Vinaya (Ctrl+1)" rel="noreferrer">
+        <img width="26px" alt="main page for search" src="/assets/img/gray-white.png">
+      </a>
+    </div>
 
-<!-- Column Mode Switcher -->
-<div id="mode-switcher" class="">
-<a id="toggle-mode" href="javascript:void(0);" alt="Toggle one or two column mode" title="Toggle one or two column mode" class="toggle-icon">
-<img src="/assets/svg/align-left.svg" alt="Text in one or two columns" class="common-size-icon4"></img>
-</a>
-</div>
+    <!-- Theme Toggle Button -->
+    <div id="theme-button" class="icon-button">
+      <img src="/assets/svg/circle-half-stroke.svg" title="Switch theme (Alt+T)" alt="Switch theme" onclick="switchIcon(this)" class="common-size-icon3 changesvg gray-icon">
+    </div>
 
-<!-- Variants Toggle Button -->
-<div class="" id="variants-switcher">
-<a alt="Show or hide variants from different Canon versions" title="Show or hide variants from different Canon versions" id="toggle-variants" href="javascript:void(0);" class="toggle-icon text-decoration-none text-black">
-<img src="/assets/svg/eye.svg" class="common-size-icon4"></img>
-</a>
-</div>
+    <!-- Column Mode Switcher -->
+    <div id="mode-switcher" class="">
+      <a id="toggle-mode" href="javascript:void(0);" alt="Toggle one or two column mode" title="Toggle one or two column mode (Alt+C)" class="toggle-icon">
+        <img src="/assets/svg/align-left.svg" alt="Text in one or two columns" class="common-size-icon4">
+      </a>
+    </div>
 
-<!-- Dictionary OnClick Popup -->
-<a alt="onclick popup dictionary" title="onclick popup dictionary" class="common-size-icon4 toggle-dict-btn text-decoration-none text-black">
-<img src="/assets/svg/comment.svg" class="dictIcon"></img>
-</a>
+    <!-- Variants Toggle Button -->
+    <div class="" id="variants-switcher">
+      <a alt="Show or hide variants from different Canon versions" title="Show or hide variants from different Canon versions (Alt+V)" id="toggle-variants" href="javascript:void(0);" class="toggle-icon text-decoration-none text-black">
+        <img src="/assets/svg/eye.svg" class="common-size-icon4">
+      </a>
+    </div>
 
-<!-- Settings Button -->
-<a alt="Settings" title="Settings" id="settingsButton" data-bs-toggle="modal" data-bs-target="#settings" href="javascript:void(0);" class="toggle-icon text-decoration-none text-muted">
-<img id="gearRead" src="/assets/svg/gear.svg" class="common-size-icon4"></img>
-</a>
+    <!-- Dictionary OnClick Popup -->
+    <a alt="Onclick popup dictionary" title="Onclick popup dictionary (Alt+A)" class="common-size-icon4 toggle-dict-btn text-decoration-none text-black">
+      <img src="/assets/svg/comment.svg" class="dictIcon">
+    </a>
 
-<!-- Help Button -->
-<div class="">
-<a alt="Help" title="Help" data-bs-toggle="modal" data-bs-target="#paliLookupInfo" id="helpMessage" href="javascript:void(0);" class="toggle-icon text-decoration-none text-muted">
-<img id="helpsc" src="/assets/svg/question.svg" class="common-size-icon4"></img>
-</a>
-</div>
-</div>
+    <!-- Settings Button -->
+    <a alt="Settings" title="Settings (Alt+S)" id="settingsButton" data-bs-toggle="modal" data-bs-target="#settings" href="javascript:void(0);" class="toggle-icon text-decoration-none text-muted">
+      <img id="gearRead" src="/assets/svg/gear.svg" class="common-size-icon4">
+    </a>
+
+    <!-- Help Button -->
+    <div class="">
+      <a alt="Help" title="Help (Alt+H)" data-bs-toggle="modal" data-bs-target="#paliLookupInfo" id="helpMessage" href="javascript:void(0);" class="toggle-icon text-decoration-none text-muted">
+        <img id="helpsc" src="/assets/svg/question.svg" class="common-size-icon4">
+      </a>
+    </div>
+
+  </div>
 </form>
 <br>
 <div id="navigation" class="navigation">
@@ -615,7 +618,7 @@ break; // Прекратить поиск после первого совпад
 
 <script src="/assets/js/uihelp.js">
 </script>
-<script src="/assets/js/variantsButtonSc.js"></script>
+<script src="/assets/js/variantsButton.js"></script>
 <script src="/assets/js/settings.js"></script>
 <!-- Загружаются параллельно, но выполняются строго по порядку -->
 <script src="/assets/js/paliLookup.js" defer></script>

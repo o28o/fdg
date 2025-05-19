@@ -66,7 +66,7 @@ function buildSutta(slug) {
 
 // console.log('texttype ' + texttype + ' translator ' + translator);
 
-  let html = `<div class="button-area"><button id="language-button" class="hide-button">Pāḷi Eng</button></div>`;
+  let html = `<div class="button-area"><button title="Switch language (Atl+Z or Alt+Space)" id="language-button" class="hide-button">Pāḷi Eng</button></div>`;
   
   const slugReady = parseSlug(slug);
   // console.log("slugReady is " + slugReady + " slug is " + slug); 
@@ -317,7 +317,7 @@ const enUrl = window.location.href;
 
 const ruUrl = enUrl.replace("/read/", "/r/");
 
-let scLink = `<p class="sc-link"><a title="Russian" href="${ruUrl}">Ru</a>&nbsp;`;
+let scLink = `<p class="sc-link"><a title="Russian (Alt+1)" href="${ruUrl}">Ru</a>&nbsp;`;
  
 //dpr
 if (texttype !== "vinaya") {

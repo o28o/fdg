@@ -567,6 +567,8 @@ overlay.addEventListener('click', () => {
 // Проверяем состояние в localStorage при загрузке страницы
 let dictionaryVisible = localStorage.getItem('dictionaryVisible') === null ? true : localStorage.getItem('dictionaryVisible') === 'true';
 
+initCopyNotification();
+
 const toggleBtn = document.querySelector('.toggle-dict-btn img');
 if (dictionaryVisible) {
   toggleBtn.src = "/assets/svg/comment.svg";

@@ -435,6 +435,25 @@ Add <strong>Dhamma.gift</strong> to your Home Screen?
 </div>
 
   <?php echo $regexlink;?> 
+  
+<script>
+
+
+if (!document.getElementById("openQuickModalBtn")) {
+  const openQuickModalBtn = document.getElementById("openQuickModalBtn");
+  openQuickModalBtn.addEventListener("click", toggleQuickModal);
+}
+</script>
+
+<a 
+  type="button"
+  onclick="toggleQuickModal()" 
+  aria-label="Открыть Cattāri Ariyasaccāni" 
+  class="common-size-icon4" 
+  style="cursor: pointer; height: 25px">
+  <i class="fa-solid fa-compass"></i>
+</a> 
+
   <?php echo $defaults;?> 
   <?php echo $defaultsJS;?> 
     <script src="/assets/js/setDefaultMode.js"></script>

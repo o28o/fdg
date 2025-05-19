@@ -570,10 +570,8 @@ let dictionaryVisible = localStorage.getItem('dictionaryVisible') === null ? tru
 const toggleBtn = document.querySelector('.toggle-dict-btn img');
 if (dictionaryVisible) {
   toggleBtn.src = "/assets/svg/comment.svg";
-      showBubbleNotification("Dictionary On");
 } else {
   toggleBtn.src = "/assets/svg/comment-slash.svg";
-      showBubbleNotification("Dictionary Off");
   clearParams();
 }
 

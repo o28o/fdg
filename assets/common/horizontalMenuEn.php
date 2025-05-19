@@ -172,7 +172,7 @@ echo '<!--
          </li>   
    
    
-      <li><a class="dropdown-item" target="_blank" href="https://cpd.uni-koeln.de/">Critical Pali Dictionary CPD</a></li>   
+      <li><a class="dropdown-item" target="_blank" href="https://cpd.uni-koeln.de/search">Critical Pali Dictionary CPD</a></li>   
    <li><a class="dropdown-item" target="_blank" href="https://gandhari.org/dop">M. Cone dictionary Gandhari.org </a></li>   
    <li><a class="dropdown-item" target="_blank" href="https://dsal.uchicago.edu/dictionaries/pali/">R. Davids, W. Stede dictionary PTS</a></li> 
    

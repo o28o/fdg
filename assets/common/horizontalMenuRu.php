@@ -188,7 +188,7 @@ echo '<!--
        </div>
          </li>   
    
-   <li><a class="dropdown-item" target="_blank" href="https://cpd.uni-koeln.de/">Cловарь Critical Pali Dict CPD</a></li>   
+   <li><a class="dropdown-item" target="_blank" href="https://cpd.uni-koeln.de/search">Cловарь Critical Pali Dict CPD</a></li>   
    <li><a class="dropdown-item" target="_blank" href="https://gandhari.org/dop">Cловарь M. Cone Gandhari.org</a></li>   
    <li><a class="dropdown-item" target="_blank" href="https://dsal.uchicago.edu/dictionaries/pali/">Cловарь R. Davids, W. Stede PTS</a></li>          
   <li><a class="dropdown-item" target="_blank" href="http://dictionary.tamilcube.com/pali-dictionary.aspx">Англ-Пали Словарь</a></li>

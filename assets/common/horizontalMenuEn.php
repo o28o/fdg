@@ -43,8 +43,8 @@ echo '<!--
 </figure>	  
 </a>
   <ul class="dropdown-menu" aria-labelledby="MenuRussian">
-    <li><a class="dropdown-item" target="" href="' . $mainreadlink . '">Table of Content</a></li>
-    <li><a class="dropdown-item" target="" href="' . $readerPage . '">SC Light</a></li>
+    <li><a class="dropdown-item" target=""  href="' . $mainreadlink . '">Table of Content</a></li>
+    <li><a class="dropdown-item" target=""  href="' . $readerPage . '">SC Light</a></li>
   </ul>
 -->
 <a class="dropdown text-decoration-none mx-1 d-md-inline-block" id="MenuEnglish" data-bs-toggle="dropdown" aria-expanded="false" href="#">
@@ -65,23 +65,23 @@ echo '<!--
 
          <div class="dropdown-item ">Patimokkha 
 
-         <a class="text-reset" target=""  href="' . $linkati . '">ATI</a>
-       <a class="text-reset" target="" href="/assets/dhammatalks.org/vinaya/bmc/Section0000.html">BMC</a>
-          <a class="text-reset" target="" href="/assets/materials/bupm_trn_by_nanatusita.pdf">Nanatusita</a>  
+         <a class="text-reset" target="_blank"   href="' . $linkati . '">ATI</a>
+       <a class="text-reset" target="_blank"  href="/assets/dhammatalks.org/vinaya/bmc/Section0000.html">BMC</a>
+          <a class="text-reset" target=""  href="/assets/materials/bupm_trn_by_nanatusita.pdf">Nanatusita</a>  
        </div>
          </li>
             
-  <li><a class="dropdown-item" target="_blank" href="/assets/materials/bipm_trn_by_chatsumarn_kabilsingh.pdf">Patimokkha Bi trans. by Ch Kabilsingh</a></li>
+  <li><a class="dropdown-item" target="" href="/assets/materials/bipm_trn_by_chatsumarn_kabilsingh.pdf">Patimokkha Bi trans. by Ch Kabilsingh</a></li>
         
         <li><a class="dropdown-item" target="_blank" href="https://simsapa.github.io/">Simsapa Pali Reader <u>PC</u> <u>Mac</u> <u>Linux</u></a></li>
   
                 <li>
          <div class="dropdown-item ">
-		   <a class="text-reset" target="" href="https://suttacentral.net/pitaka/sutta?lang=en" title="Mahāsaṅgīti Edition at SuttaCentral.net">SuttaCentral</a>
+		   <a class="text-reset" target="_blank"  href="https://suttacentral.net/pitaka/sutta?lang=en" title="Mahāsaṅgīti Edition at SuttaCentral.net">SuttaCentral</a>
 
-                <a class="text-reset" target="" href="https://suttacentral.net/pitaka/vinaya?lang=en">Виная</a>
-         <a class="text-reset" target="" href="https://www.sc-voice.net/">Voice</a>
-        <a class="text-reset" target="" href="' . $linksclegacy . '">Legacy</a>
+                <a class="text-reset" target="_blank"  href="https://suttacentral.net/pitaka/vinaya?lang=en">Виная</a>
+         <a class="text-reset" target="_blank"  href="https://www.sc-voice.net/">Voice</a>
+        <a class="text-reset" target="_blank"  href="' . $linksclegacy . '">Legacy</a>
          </div>
          </li>
     
@@ -93,20 +93,20 @@ echo '<!--
  
  	          <li>
          <div class="dropdown-item ">Tipitaka:
-  <a class="text-reset" target="" href="https://84000.org/" title="Thai Tipitaka at 84000.org">Thai</a>
-  <a class="text-reset" target="" href="https://tipitaka.org/" title="VRI Tipitaka at Tipitaka.org">VRI</a>  
-  <a class="text-reset" target="" href="https://gretil.sub.uni-goettingen.de/gretil.html#Suttapit" title="PTS Tipitaka at GRETIL">PTS</a>  
-  <a class="text-reset" target="" href="https://suttacentral.net/pitaka/sutta?lang=en" title="Mahāsaṅgīti Edition at SuttaCentral.net">MS</a>
+  <a class="text-reset" target="_blank"  href="https://84000.org/" title="Thai Tipitaka at 84000.org">Thai</a>
+  <a class="text-reset" target="_blank"  href="https://tipitaka.org/" title="VRI Tipitaka at Tipitaka.org">VRI</a>  
+  <a class="text-reset" target="_blank"  href="https://gretil.sub.uni-goettingen.de/gretil.html#Suttapit" title="PTS Tipitaka at GRETIL">PTS</a>  
+  <a class="text-reset" target="_blank"  href="https://suttacentral.net/pitaka/sutta?lang=en" title="Mahāsaṅgīti Edition at SuttaCentral.net">MS</a>
        </div>
          </li>
 		 
  
 <li>
   <div class="dropdown-item">Tipitaka CST:
-    <a class="text-reset" target="" href="https://apply.paauksociety.org/tipitaka/index.php" title="Paauksociety.org">PA</a>
-    <a class="text-reset" target="" href="https://tipitaka.app" title="Tipitaka.app">Tp.app</a>
-    <a class="text-reset" target="" href="https://tipitakapali.org/" title="Tipitaka Pali Online">TPO</a>
-    <a class="text-reset" target="" href="https://americanmonk.org/tipitaka-pali-reader/" title="Tipitaka Pali Reader App">TPR</a>
+    <a class="text-reset" target="_blank"  href="https://apply.paauksociety.org/tipitaka/index.php" title="Paauksociety.org">PA</a>
+    <a class="text-reset" target="_blank"  href="https://tipitaka.app" title="Tipitaka.app">Tp.app</a>
+    <a class="text-reset" target="_blank"  href="https://tipitakapali.org/" title="Tipitaka Pali Online">TPO</a>
+    <a class="text-reset" target="_blank"  href="https://americanmonk.org/tipitaka-pali-reader/" title="Tipitaka Pali Reader App">TPR</a>
   </div>
 </li>
 	
@@ -165,9 +165,9 @@ echo '<!--
 
                <li>
          <div class="dropdown-item ">
-                      <i class="' . $iconimportant . '"></i>        <a class="text-reset" target="" href="https://dict.dhamma.gift/">Digital Pāḷi Dict</a> 
-         <a class="text-reset" target=""  href="https://digitalpalidictionary.github.io/">Offline</a>
-       <a class="text-reset" target="" href="https://github.com/o28o/dictPlugin/tree/main?tab=readme-ov-file#for-end-users-requires-installing-browser-extention-orand-setup">Extentions</a>     
+                      <i class="' . $iconimportant . '"></i>        <a class="text-reset" target="_blank"  href="https://dict.dhamma.gift/">Digital Pāḷi Dict</a> 
+         <a class="text-reset" target="_blank"   href="https://digitalpalidictionary.github.io/">Offline</a>
+       <a class="text-reset" target="_blank"  href="https://github.com/o28o/dictPlugin/tree/main?tab=readme-ov-file#for-end-users-requires-installing-browser-extention-orand-setup">Extentions</a>     
        </div>
          </li>   
    
@@ -180,9 +180,9 @@ echo '<!--
 
       <li>
          <div class="dropdown-item "> Skr
-        <a class="text-reset" target=""  href="https://www.sanskrit-lexicon.uni-koeln.de/scans/MWScan/2020/web/webtc2/index.php">Monier-Williams</a>
-		<a class="text-reset" target=""  href="https://sanskritdictionary.com/?iencoding=iast&q=&lang=sans&action=Search">Skrdict</a>
-		<a class="text-reset" target="" href="https://www.learnsanskrit.cc/translate?search=&dir=au">Learnskr</a>  
+        <a class="text-reset" target="_blank"   href="https://www.sanskrit-lexicon.uni-koeln.de/scans/MWScan/2020/web/webtc2/index.php">Monier-Williams</a>
+		<a class="text-reset" target="_blank"   href="https://sanskritdictionary.com/?iencoding=iast&q=&lang=sans&action=Search">Skrdict</a>
+		<a class="text-reset" target="_blank"  href="https://www.learnsanskrit.cc/translate?search=&dir=au">Learnskr</a>  
        </div>
          </li>    
 
@@ -216,9 +216,9 @@ echo '<!--
 
                   <li>
          <div class="dropdown-item ">Materials
-         <a class="text-reset" target=""  href="' . $linksothermat . '">Gdrive</a>
-                   <a class="text-reset" target="" href="https://www.ancient-buddhist-texts.net/Textual-Studies/index.htm">ABT.net</a>
-        <a class="text-reset" target="" href="https://sasanarakkha.github.io/study-tools/">SBS</a>  
+         <a class="text-reset" target=""   href="' . $linksothermat . '">Gdrive</a>
+                   <a class="text-reset" target="_blank"  href="https://www.ancient-buddhist-texts.net/Textual-Studies/index.htm">ABT.net</a>
+        <a class="text-reset" target="_blank"  href="https://sasanarakkha.github.io/study-tools/">SBS</a>  
        </div>
          </li>     
    
@@ -233,17 +233,17 @@ echo '<!--
                       <li>
 <div class="dropdown-item ">
          <i class="' . $iconimportant . '"></i><a class="text-reset" href="/assets/memo.html"> Memorizer</a>
-         <a class="text-reset" target=""  href="/memorize/?q=sn56.11">sn56.11</a> 
-         <a class="text-reset" target=""  href="/memorize/?q=dn22">dn22</a> 
-         <a class="text-reset" target=""  href="/memorize/?q=sn12.2">sn12.2</a>
+         <a class="text-reset" target=""   href="/memorize/?q=sn56.11">sn56.11</a> 
+         <a class="text-reset" target=""   href="/memorize/?q=dn22">dn22</a> 
+         <a class="text-reset" target=""   href="/memorize/?q=sn12.2">sn12.2</a>
        </div>
          </li>     
 
-<li><a class="dropdown-item" target="_blank" href="https://docs.google.com/document/d/1JWHEFqcaNhYwYneWBnTp9rkgWecDB4IIHX1l3AxSiWM/edit?usp=drivesdk">Memorisation Tips & Tricks</a></li> 
+<li><a class="dropdown-item" target="" href="https://docs.google.com/document/d/1JWHEFqcaNhYwYneWBnTp9rkgWecDB4IIHX1l3AxSiWM/edit?usp=drivesdk">Memorisation Tips & Tricks</a></li> 
                   <li>
          <div class="dropdown-item ">Trainer for
-         <a class="text-reset" target=""  href="/ru/assets/grammar/nouns.html">Declentions</a>, for              
-                   <a class="text-reset" target="" href="/assets/rr.html">Patimokkha</a>
+         <a class="text-reset" target=""   href="/ru/assets/grammar/nouns.html">Declentions</a>, for              
+                   <a class="text-reset" target=""  href="/assets/rr.html">Patimokkha</a>
        </div>
          </li>     
     
@@ -266,13 +266,13 @@ echo '<!--
    
          <li>
          <div class="dropdown-item ">
-          <a class="text-reset" target="" onclick="localStorage.setItem(\'siteLanguage\', \'th\');" href="/th/?q=">Fdg</a> 
-          <a class="text-reset" target=""  href="/old.php">old</a> 
-         <a class="text-reset" target="" href="/new/">new</a> 
-                  <a class="text-reset" target="" href="' . $readerPage . '">index</a>  
-<a class="text-reset" target="" href="/assets/texts/sutta.php">sutta</a>                       
-      <a class="text-reset" target="" href="/pm.php?expand=true">bupm</a>        
-      <a class="text-reset" target="" href="/bipm.php?expand=true">bipm</a> 
+          <a class="text-reset" target=""  onclick="localStorage.setItem(\'siteLanguage\', \'th\');" href="/th/?q=">Fdg</a> 
+          <a class="text-reset" target=""   href="/old.php">old</a> 
+         <a class="text-reset" target=""  href="/new/">new</a> 
+                  <a class="text-reset" target=""  href="' . $readerPage . '">index</a>  
+<a class="text-reset" target=""  href="/assets/texts/sutta.php">sutta</a>                       
+      <a class="text-reset" target=""  href="/pm.php?expand=true">bupm</a>        
+      <a class="text-reset" target=""  href="/bipm.php?expand=true">bipm</a> 
 
          </div>
          </li>
@@ -291,13 +291,13 @@ echo '<!--
 
               <li>
          <div class="dropdown-item "> 
-         <a class="text-reset" target=""  href="https://readingfaithfully.org/">ReadingFaithfully.org</a>
-                   <a class="text-reset" target="" href="/assets/br/">blurbs</a>  
-       <a class="text-reset" target="" href="https://index.readingfaithfully.org/">index</a>
+         <a class="text-reset" target="_blank"   href="https://readingfaithfully.org/">ReadingFaithfully.org</a>
+                   <a class="text-reset" target="_blank"  href="/assets/br/">blurbs</a>  
+       <a class="text-reset" target="_blank"  href="https://index.readingfaithfully.org/">index</a>
        </div>
          </li>   
      
-   <li><a class="dropdown-item" target="_blank" href="/assets/common/lunar.html"> <i class="' . $iconimportant . '"></i> Sutta based Uposattha days</a></li>
+   <li><a class="dropdown-item" target="" href="/assets/common/lunar.html"> <i class="' . $iconimportant . '"></i> Sutta based Uposattha days</a></li>
    
    <li><a class="dropdown-item" target="_blank" href="https://www.aksharamukha.com/converter"> <i class="' . $iconimportant . '"></i> Aksharamukha script converter</a></li>
    
@@ -316,8 +316,8 @@ echo '<!--
    
               <li>
          <div class="dropdown-item ">PTS Converter
-         <a class="text-reset" target=""  href="https://palistudies.blogspot.com/2020/02/sutta-number-to-pts-reference-converter.html">#1</a>
-                   <a class="text-reset" target="" href="https://benmneb.github.io/pts-converter/">#2</a>  
+         <a class="text-reset" target="_blank"   href="https://palistudies.blogspot.com/2020/02/sutta-number-to-pts-reference-converter.html">#1</a>
+                   <a class="text-reset" target="_blank"  href="https://benmneb.github.io/pts-converter/">#2</a>  
        </div>
          </li>   
 

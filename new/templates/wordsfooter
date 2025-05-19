@@ -3,6 +3,7 @@
 <script type="text/javascript" src="/assets/js/typeahead/bootstrap3-typeahead.min.js"></script>
     <script type='text/javascript'>
    $(document).ready(function() {
+      DataTable.util.diacritics(d => d);
    var dataSrc = [];
    
      var filterValue = new URLSearchParams(window.location.search).get('f');
@@ -100,6 +101,7 @@ buttons: [
 	   'paging'  : true,
 	         "search": {
     "caseInsensitive": true,
+			"diacritics": false,
         "smart": true
   },
 	   "orderMulti": true,

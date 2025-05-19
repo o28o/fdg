@@ -22,6 +22,7 @@
 <script type="text/javascript" src="/assets/js/typeahead/bootstrap3-typeahead.min.js"></script>
     <script type='text/javascript'>
    $(document).ready(function() {
+      DataTable.util.diacritics(d => d);
        // Регистрируем собственный тип сортировки для чекбоксов
     $.fn.dataTable.ext.order['dom-checkbox'] = function(settings, col) {
         return this.api().column(col, { order: 'index' }).nodes().map(function(td, i) {
@@ -146,6 +147,7 @@ searchBuilderConfiguration
     },
       "search": {
     "caseInsensitive": true,
+			"diacritics": false,
         "smart": true
   },
 	   'paging'  : true,

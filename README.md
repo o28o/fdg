@@ -1,13 +1,13 @@
 
 # Dhamma.Gift - Liberation Search Engine
 
-Dhamma.Gift доступен как:
+## Dhamma.Gift is available as:
 
-- Веб-сайт: [https://dhamma.gift](https://dhamma.gift)
-- PWA (устанавливается через браузер на Android и десктоп)
-- APK-файл для установки вручную:  
-  [Скачать dhamma.gift-v0.1.apk](https://dhamma.gift/assets/apk/dhamma.gift-v0.1.apk)  
-  [Скачать dict.dhamma.gift-v0.1.apk](https://dhamma.gift/assets/apk/dict.dhamma.gift-v0.1.apk)
+- Website: [https://dhamma.gift](https://dhamma.gift)  
+- PWA (installable via browser on Android and desktop)  
+- APK files for manual installation:  
+  [Download dhamma.gift-v0.1.apk](https://dhamma.gift/assets/apk/dhamma.gift-v0.1.apk)  
+  [Download dict.dhamma.gift-v0.1.apk](https://dhamma.gift/assets/apk/dict.dhamma.gift-v0.1.apk)
 
 # online version
 Grep-based search in all Texts of Pali Suttanta and Vinaya in 4 languages: Pali, English, Russian, Thai and Sinhala. Little script that will or at least might change Buddhism to better.

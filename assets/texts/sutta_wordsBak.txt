@@ -15,11 +15,11 @@ dukkh.*ariyasacc
 
 taṇh.*vedan.*samud.*paṭipad
 
-ababā
-ababo
-abaddho
-ābādhā
-ābādhabhūtaṁ
+ababā 4
+ababo 3
+abaddho 444
+ābādhā 2
+ābādhabhūtaṁ 56
 ābādhabhūto
 ābādhaṁ
 ābādhānaṁ

@@ -357,6 +357,26 @@ $(document).ready(function() {
         <a alt="onclick popup dictionary" class="common-size-icon4 toggle-dict-btn text-decoration-none text-black">
             <img src="/assets/svg/comment.svg" class="dictIcon"></img>
         </a>  
+		
+		
+<script>
+
+
+if (!document.getElementById("openQuickModalBtn")) {
+  const openQuickModalBtn = document.getElementById("openQuickModalBtn");
+  openQuickModalBtn.addEventListener("click", toggleQuickModal);
+}
+</script>
+
+<a 
+  type="button"
+  onclick="toggleQuickModal()" 
+  aria-label="Открыть Cattāri Ariyasaccāni" 
+  class="common-size-icon4" 
+  style="cursor: pointer; height: 25px">
+  <i class="fa-solid fa-compass"></i>
+</a>
+
     <?php echo $defaults;?> 
     <?php echo $defaultsJS;?> 
     <script src="/assets/js/setDefaultMode.js"></script>

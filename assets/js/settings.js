@@ -855,6 +855,7 @@ quickModal.innerHTML = `
     ">Cattāri Ariyasaccāni</h5>
 
     <div class="quick-links-container" style="display: flex; gap: 1.2rem; flex-wrap: wrap; justify-content: space-between;">
+      <!-- Block 1 -->
       <div class="quick-links-column" style="flex: 1 1 45%; min-width: 200px;">
         <p><strong>1st priority:</strong></p>
         <ul style="padding-left: 1rem; font-size: 0.9rem;">
@@ -862,8 +863,11 @@ quickModal.innerHTML = `
           <li><a href="${queryBase}dn22" target="_blank" style="color: ${linkColorPrimary}; text-decoration: none;">DN 22</a></li>
           <li><a href="${queryBase}sn12.2" target="_blank" style="color: ${linkColorPrimary}; text-decoration: none;">SN 12.2</a></li>
         </ul>
+      </div>
 
-        <p style="margin-top: 1rem;"><strong>Clarify 5 khandha:</strong></p>
+      <!-- Block 2 -->
+      <div class="quick-links-column" style="flex: 1 1 45%; min-width: 200px;">
+        <p><strong>Clarify 5 khandha:</strong></p>
         <ul style="padding-left: 1rem; font-size: 0.9rem;">
           <li><a href="${queryBase}sn22.56" target="_blank" style="color: ${linkColorSuccess}; text-decoration: none;">SN 22.56</a></li>
           <li><a href="${queryBase}sn22.79" target="_blank" style="color: ${linkColorSuccess}; text-decoration: none;">SN 22.79</a></li>
@@ -871,16 +875,20 @@ quickModal.innerHTML = `
         </ul>
       </div>
 
+      <!-- Block 3 -->
       <div class="quick-links-column" style="flex: 1 1 45%; min-width: 200px;">
-        <p><strong>Clarify 6 ajjhattayatanani:</strong></p>
+        <p><strong>Clarify 6 ajjhattāyatana:</strong></p>
         <ul style="padding-left: 1rem; font-size: 0.9rem;">
           <li><a href="${queryBase}sn35.228" target="_blank" style="color: ${linkColorWarning}; text-decoration: none;">SN 35.228</a></li>
           <li><a href="${queryBase}sn35.229" target="_blank" style="color: ${linkColorWarning}; text-decoration: none;">SN 35.229</a></li>
           <li><a href="${queryBase}sn35.236" target="_blank" style="color: ${linkColorWarning}; text-decoration: none;">SN 35.236</a></li>
           <li><a href="${queryBase}sn35.238" target="_blank" style="color: ${linkColorWarning}; text-decoration: none;">SN 35.238</a></li>
         </ul>
+      </div>
 
-        <p style="margin-top: 1rem;"><strong>Clarify 4-6-X Dhatu:</strong></p>
+      <!-- Block 4 -->
+      <div class="quick-links-column" style="flex: 1 1 45%; min-width: 200px;">
+        <p><strong>Clarify 4-6-X Dhātu:</strong></p>
         <ul style="padding-left: 1rem; font-size: 0.9rem;">
           <li><a href="${queryBase}sn14" target="_blank" style="color: ${linkColorDanger}; text-decoration: none;">SN 14</a></li>
           <li><a href="${queryBase}mn28" target="_blank" style="color: ${linkColorDanger}; text-decoration: none;">MN 28</a></li>
@@ -889,8 +897,9 @@ quickModal.innerHTML = `
         </ul>
       </div>
 
-      <div class="quick-links-column" style="flex: 1 1 45%; min-width: 200px; margin-top: 1rem;">
-        <p><strong>Dukkaṁ so abhinanadati:</strong></p>
+      <!-- Block 5 -->
+      <div class="quick-links-column" style="flex: 1 1 45%; min-width: 200px;">
+        <p><strong>Dukkaṁ so abhinandati:</strong></p>
         <ul style="padding-left: 1rem; font-size: 0.9rem;">
           <li><a href="${queryBase}sn14.35" target="_blank" style="color: ${linkColorPrimary}; text-decoration: none;">SN 14.35</a></li>
           <li><a href="${queryBase}sn22.29" target="_blank" style="color: ${linkColorPrimary}; text-decoration: none;">SN 22.29</a></li>
@@ -899,7 +908,8 @@ quickModal.innerHTML = `
         </ul>
       </div>
 
-      <div class="quick-links-column" style="flex: 1 1 45%; min-width: 200px; margin-top: 1rem;">
+      <!-- Block 6 -->
+      <div class="quick-links-column" style="flex: 1 1 45%; min-width: 200px;">
         <p><strong>Extra</strong></p>
         <ul style="padding-left: 1rem; font-size: 0.9rem;">
           <li><a href="${queryBase}an3.70" target="_blank" style="color: ${linkColorDanger}; text-decoration: none;">AN 3.70</a></li>
@@ -909,10 +919,10 @@ quickModal.innerHTML = `
           <li><a href="${queryBase}iti61" target="_blank" style="color: ${linkColorPrimary}; text-decoration: none;">Iti 61</a></li>
         </ul>
       </div>
-
     </div>
   </div>
 `;
+
 
 
 

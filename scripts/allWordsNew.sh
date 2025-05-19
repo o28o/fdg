@@ -20,3 +20,6 @@ exit 0
 
 find thig thag dhp ud snp iti  -type f -name "*.json" | xargs cat | cj | tr " " "\n" | sed -E 's/^[[:punct:]]+//; s/[[:punct:]]+$//' | grep -v "^$" | sed 's/’”/”/g' | sort | uniq -c > ~/fdg/allWordsKNPartUdItiSnpThigThagDhp.txt
 
+#fresh 19 05 2025
+
+find . -type f -name "*.json" | xargs cat | cj | python3 -c "import sys; print(sys.stdin.read().lower())" | tr " " "\n" | sed -E 's/^[[:punct:]]+//; s/[[:punct:]]+$//' | grep -v "^$" | sed "s/[‘’“”]/”/g" | sort | uniq -c

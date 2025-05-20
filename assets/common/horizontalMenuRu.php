@@ -1,5 +1,5 @@
 <?php
-echo '<div class="d-md-inline-block">	';
+echo '<div class="d-md-inline-block position-relative">	';
 
 if ((($_SERVER['SERVER_ADDR'] === '127.0.0.1') || ($_SERVER['SERVER_NAME'] === 'localhost')) && (!preg_match('/(new)(\?.*)?$/', basename($_SERVER['REQUEST_URI'])))) {
 echo '<a class="text-decoration-none mx-1" href="/ru/new">
@@ -12,7 +12,7 @@ echo '<a class="text-decoration-none mx-1" href="/ru/new">
 
  if (preg_match('/(read\.php|new)(\?.*)?$/', basename($_SERVER['REQUEST_URI']))) {
     
-echo '<a class="text-decoration-none mx-1" href="' . $mainpage . '">
+echo '<a title="Поиск (Ctrl+1)" id="Search" class="dropup text-decoration-none mx-1 d-md-inline-block" href="' . $mainpage . '">
 <figure class="figure text-decoration-none">
   <i class="menu-icon icon-item fa-solid fa-magnifying-glass fa-flip-horizontal"></i>
   <figcaption class="horiz-menu-item figure-caption text-center">' . $searchcaption . '</figcaption>
@@ -22,7 +22,7 @@ echo '<a class="text-decoration-none mx-1" href="' . $mainpage . '">
 
 if (strpos($_SERVER['REQUEST_URI'], "read.php") === false) {
 echo '
-<a class="dropup text-decoration-none mx-1 d-md-inline-block" id="MenuRead"  href="' . $mainreadlink . '">
+<a title="Чтение (Ctrl+2)" class="dropup text-decoration-none mx-1 d-md-inline-block" id="MenuRead"  href="' . $mainreadlink . '">
 
 <figure class="figure text-decoration-none">
   <i class="menu-icon icon-item fa-solid fa-book-bookmark"></i>
@@ -53,7 +53,7 @@ echo '<!--
 -->
 
 
-<a class="dropup text-decoration-none mx-1 d-md-inline-block" id="MenuEnglish" data-bs-toggle="dropdown" aria-expanded="false" href="#">
+<a title="Пали Тексты и Зарубежные Ресурсы" class="dropup text-decoration-none mx-1 d-md-inline-block" id="MenuEnglish" data-bs-toggle="dropdown" aria-expanded="false" href="#">
 <figure class="figure dropup d-md-inline-block">
     <i class="menu-icon icon-item fa-solid fa-book"></i>
 <figcaption class="horiz-menu-item figure-caption text-center">Английские</figcaption>   
@@ -61,38 +61,6 @@ echo '<!--
 </a>
   <ul class="dropdown-menu" aria-labelledby="MenuEnglish">
 
-
-    <li><a class="dropdown-item" target="_blank" href="https://www.digitalpalireader.online/_dprhtml/index.html">Digital Pali Reader</a></li>
-    
-                <li>
-         <div class="dropdown-item ">Patimokkha 
-         <a class="text-reset" target="_blank"   href="' . $linkati . '">ATI</a>
-       <a class="text-reset" target="_blank"  href="/assets/dhammatalks.org/vinaya/bmc/Section0000.html">BMC</a>
-          <a class="text-reset" target="" href="/assets/materials/bupm_trn_by_nanatusita.pdf">Nanatusita</a>  
-       </div>
-         </li>
-    
-    
-
-           <li><a class="dropdown-item" target="_blank" href="/assets/materials/bipm_trn_by_chatsumarn_kabilsingh.pdf">Patimokkha Bi пер. Ch Kabilsingh</a></li>
-    
-    <li><a class="dropdown-item" target="_blank" href="https://simsapa.github.io/">Simsapa Pali Reader <u>PC</u> <u>Mac</u> <u>Linux</u></a></li>
-
-         
-                <li>
-         <div class="dropdown-item ">
-         <a class="text-reset" target="_blank"  href="https://suttacentral.net/pitaka/sutta?lang=en" >SuttaCentral</a> 
-                <a class="text-reset" target="_blank"  href="https://suttacentral.net/pitaka/vinaya?lang=ru">Виная</a>
-         <a class="text-reset" target="_blank"  href="https://www.sc-voice.net/">Voice</a>
-        <a class="text-reset" target="_blank"  href="' . $linksclegacy . '">Legacy</a>
-         </div>
-         </li>
-        <li><a class="dropdown-item" target="_blank" href="' . $linktbwOnMain . '">
-
-          <i class="' . $iconimportant . '"></i>
-
-        The Buddha\'s Words</a></li>    
-   
 <li>
   <div class="dropdown-item">Типитака:
     <a class="text-reset" target="_blank"  href="https://84000.org/" title="Тайская Типитака на 84000.org">Thai</a>
@@ -112,31 +80,67 @@ echo '<!--
 </li>
     
 
+
+    <li><a class="dropdown-item" target="_blank" href="https://www.digitalpalireader.online/_dprhtml/index.html">Digital Pali Reader</a></li>
+    
+    
+    <li><a class="dropdown-item" target="_blank" href="https://simsapa.github.io/">Simsapa Pali Reader <u>PC</u> <u>Mac</u> <u>Linux</u></a></li>
+
+         
+                <li>
+         <div class="dropdown-item ">
+         <a class="text-reset" target="_blank"  href="https://suttacentral.net/pitaka/sutta?lang=en" >SuttaCentral</a> 
+                <a class="text-reset" target="_blank"  href="https://suttacentral.net/pitaka/vinaya?lang=ru">Виная</a>
+         <a class="text-reset" target="_blank"  href="https://www.sc-voice.net/">Voice</a>
+        <a class="text-reset" target="_blank"  href="' . $linksclegacy . '">Legacy</a>
+         </div>
+         </li>
+        <li><a class="dropdown-item" target="_blank" href="' . $linktbwOnMain . '">
+
+          <i class="' . $iconimportant . '"></i>
+
+        The Buddha\'s Words</a></li>    
+   
+
       <li><a class="dropdown-item" target="_blank" href="' . $linkmolds . '">Переводы Майкла Олдса</a></li>
+	  
+	               <li>
+         <div class="dropdown-item ">Patimokkha 
+         <a class="text-reset" target="_blank"   href="' . $linkati . '">ATI</a>
+       <a class="text-reset" target="_blank"  href="/assets/dhammatalks.org/vinaya/bmc/Section0000.html">BMC</a>
+          <a class="text-reset" target="" href="/assets/materials/bupm_trn_by_nanatusita.pdf">Nanatusita</a>  
+       </div>
+         </li>
+    
+    
+
+           <li><a class="dropdown-item" target="_blank" href="/assets/materials/bipm_trn_by_chatsumarn_kabilsingh.pdf">Patimokkha Bi пер. Ch Kabilsingh</a></li>
+   
+	  
         <li><a class="dropdown-item" target="_blank" href="' . $linknoblasc . '">Статьи на Dhammadana.org</a></li>
 
   </ul>
   
 
-<a class="dropup text-decoration-none mx-1 d-md-inline-block" id="MenuRussian" data-bs-toggle="dropdown" aria-expanded="false" href="#">
+<a title="Ресурсы на Русском" class="dropup text-decoration-none mx-1 d-md-inline-block" id="MenuRussian" data-bs-toggle="dropdown" aria-expanded="false" href="#">
 <figure class="figure dropup">
   <i class="menu-icon icon-item fa-solid fa-book"></i>
 <figcaption class="horiz-menu-item figure-caption text-center">Русские</figcaption>   
 </figure>	  
 </a>
   <ul class="dropdown-menu" aria-labelledby="MenuRussian">
-    <li><a class="dropdown-item" target="_blank" href="' . $mainpagethrulink . '">Theravada.ru</a></li>
-    <li><a class="dropdown-item" target="_blank" href="' . $mainpagethsulink . '">Theravada.su</a></li>
 <li><a class="dropdown-item" href="/assets/audio/documents/dn_Syrkin_2020_ed_2025.pdf">ДН пер. А.Я. Сыркина "2025"</a></li>
-
-  <li><a class="dropdown-item" target="_blank" href="/dhamma.ru/index-sutta.html">Dhamma.ru Сутты</a></li>
-    <li><a class="dropdown-item" target="_blank" href="assets/materials/prat.html">Dhamma.ru Патимоккха</a></li>
     <li><a class="dropdown-item" target="_blank" href="' . $mainpagethrflink . '">Тхеравада.рф Сутты</a></li>
     <li><a class="dropdown-item" target="_blank" href="' . $mainpagethrfvinayalink . '">Тхеравада.рф Патимоккха</a></li>
+  <li><a class="dropdown-item" target="_blank" href="/dhamma.ru/index-sutta.html">Dhamma.ru Сутты</a></li>
+    <li><a class="dropdown-item" target="_blank" href="assets/materials/prat.html">Dhamma.ru Патимоккха</a></li>
+    <li><a class="dropdown-item" target="_blank" href="' . $mainpagethrulink . '">Theravada.ru</a></li>
+    <li><a class="dropdown-item" target="_blank" href="' . $mainpagethsulink . '">Theravada.su</a></li>
+
   </ul>
 <!-- </div> -->
 
-<a class="dropup text-decoration-none mx-1 d-md-inline-block" id="history" href="/ru/history.php">
+<a title="Общая История Поиска" class="dropup text-decoration-none mx-1 d-md-inline-block" id="history" href="/ru/history.php">
 <figure class="figure">
   <i class="menu-icon icon-item fa-solid fa-clock-rotate-left"></i>
 <figcaption class="horiz-menu-item figure-caption text-center">' . $anamehist . '</figcaption>   
@@ -167,7 +171,7 @@ echo '<!--
   
     -->
 
-<a class="dropdown text-decoration-none mx-1 d-md-inline-block" id="MenuDict" data-bs-toggle="dropdown" aria-expanded="false" href="#">
+<a title="Словари Пали и Санскрит" class="dropdown text-decoration-none mx-1 d-md-inline-block" id="MenuDict" data-bs-toggle="dropdown" aria-expanded="false" href="#">
   <figure class="figure d-md-inline-block">
     <i class="menu-icon fa-solid fa-book-atlas"></i>
     <figcaption class="horiz-menu-item figure-caption text-center">Словари</figcaption>   
@@ -199,10 +203,19 @@ echo '<!--
 		<a class="text-reset" target="_blank"   href="https://sanskritdictionary.com/?iencoding=iast&q=&lang=sans&action=Search">Skrdict</a>
 		<a class="text-reset" target="_blank"  href="https://www.learnsanskrit.cc/translate?search=&dir=au">Learnskr</a>  
        </div>
-         </li>  
+         </li> 
+
+<li><a class="dropdown-item" href="#" onclick="event.preventDefault(); [
+\'https://dsal.uchicago.edu/dictionaries/pali/\', 
+\'https://gandhari.org/dop\', 
+\'https://cpd.uni-koeln.de/search\', 
+\'https://dharmamitra.org/?target_lang=english-explained\', 
+\'https://www.wisdomlib.org/\'
+].forEach(url => window.open(url));">Открыть PTS, Cone, CPD, Mitra, Wisdomlib</a></li>		 		 
+
 </ul>    
     
-<a class="dropdown text-decoration-none mx-1 d-md-inline-block" id="materials" data-bs-toggle="dropdown" aria-expanded="false" href="#">
+<a title="Материалы для обучения и сайты" class="dropdown text-decoration-none mx-1 d-md-inline-block" id="materials" data-bs-toggle="dropdown" aria-expanded="false" href="#">
 <figure class="figure d-md-inline-block">
   <i class="menu-icon icon-item fa-solid fa-graduation-cap"></i>
 <figcaption class="horiz-menu-item figure-caption text-center">Обучение</figcaption>   
@@ -279,7 +292,7 @@ echo '<!--
   </ul>
   
 
-<a class="dropdown text-decoration-none mx-1 d-md-inline-block" id="tools" data-bs-toggle="dropdown" aria-expanded="false" href="#">
+<a title="ИИ-помощники, конвертеры и др полезные инструменты" class="dropdown text-decoration-none mx-1 d-md-inline-block" id="tools" data-bs-toggle="dropdown" aria-expanded="false" href="#">
 
 <figure class="figure d-md-inline-block">
 
@@ -349,6 +362,17 @@ echo '<!--
  <li><a class="dropdown-item" href="/ru/assets/makelist.html">
    <i class="' . $iconimportant . '"></i>
  ' . $head5makelist . '</a></li>   
+
+</ul>
+
+
+  <a title="Помощь по Dhamma.Gift Mutli-Tool" href="/assets/common/multiToolRu.html"
+     class="position-absolute top-0 end-0 small text-decoration-none  text-muted"
+     style="font-size: 0.75rem; text-decoration: none; transform: translate(100%, 0%);">
+    *
+  </a>
+
+  
 
 </div>'
 ?>

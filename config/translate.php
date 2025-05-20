@@ -1371,5 +1371,5 @@ $mainpagenoslash = '/th';
 $readerPage = $mainpage . '/read';
 $mainreadlink = '/th/read.php';
 }
-$menuuseful = 'MenuRead,MenuEnglish,MenuDict,MenuRussian,tools,materials';
+$menuuseful = 'Search,MenuRead,MenuEnglish,history,MenuDict,MenuRussian,tools,materials';
 ?>

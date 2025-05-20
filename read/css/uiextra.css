@@ -346,6 +346,11 @@ margin-left: 6px;
 
 
 .variant {
+  display: inline; /* или inline-block */
+  vertical-align: baseline;
+  line-height: 1.4; /* совпадает с основным текстом */
+  margin: 0;
+  padding: 0;
   color: #95796b !important;
 }
 

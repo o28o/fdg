@@ -1,5 +1,5 @@
 <?php
-echo '<div class="d-md-inline-block position-relative">	';
+echo '<div class="d-md-inline-block">	';
 if ((($_SERVER['SERVER_ADDR'] === '127.0.0.1') || ($_SERVER['SERVER_NAME'] === 'localhost')) && (!preg_match('/(new)(\?.*)?$/', basename($_SERVER['REQUEST_URI'])))) {
 echo '<a class="text-decoration-none mx-1" href="/ru/new">
 <figure class="figure text-decoration-none">
@@ -342,12 +342,11 @@ echo '<!--
 ' . $head5makelist . '</a></li>  
 </ul>
 
-  <a title="Dhamma.Gift Mutli-Tool Help" href="/assets/common/multiTool.html"
-     class="position-absolute top-0 end-0 small text-decoration-none  text-muted"
-     style="font-size: 0.75rem; text-decoration: none; transform: translate(100%, 0%);">
-    *
-  </a>
-
+<a title="Dhamma.Gift Multi-Tool Help" class="dropup text-decoration-none mx-1 d-md-inline-block" href="/assets/common/multiTool.html">
+<figure class="figure">
+</figure>	  
+<figcaption class="horiz-menu-item figure-caption text-center">*</figcaption>   
+</a>
 
 </div> 
 '

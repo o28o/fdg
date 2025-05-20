@@ -1,52 +1,38 @@
 <?php
-//error_reporting(E_ERROR | E_PARSE);
-include_once('config/config.php');
-include_once('config/translate.php');
-
+// Включим буферизацию вывода, чтобы избежать ошибок с заголовками
+ob_start();
 $scheme = (!empty($_SERVER['HTTPS']) && $_SERVER['HTTPS'] !== 'off') ? "https" : "http";
 $host = $_SERVER['HTTP_HOST'];
 $base_path = rtrim(dirname($_SERVER['SCRIPT_NAME']), '/') . '/';
 $base_url = "$scheme://$host$base_path";
 
-// Получаем URL, с которого устанавливается PWA
+// Получаем URL, с которого устанавливается PWA (с проверкой на существование)
 $referer = $_SERVER['HTTP_REFERER'] ?? $base_url;
-$referer_path = parse_url($referer, PHP_URL_PATH);
-$query_string = parse_url($referer, PHP_URL_QUERY);
+$referer_path = parse_url($referer, PHP_URL_PATH) ?? '/';
+$query_string = parse_url($referer, PHP_URL_QUERY) ?? '';
 
-// Определяем, русский ли это URL
-$is_russian = strpos($referer_path, '/ru/') !== false;
+// Определяем язык (русский если есть /ru/ в пути или путь точно /ru)
+$is_russian = (strpos($referer_path, '/ru/') !== false) || ($referer_path === '/ru');
 
-// Базовый start_url (по умолчанию корень с соответствующим языком)
-$start_url = $is_russian ? "/ru/?source=pwa" : "/?source=pwa";
+// Устанавливаем $mainpagenoslash в зависимости от языка
+$mainpagenoslash = $is_russian ? '/ru' : '/';
 
-// Разрешенные пути для установки
-$allowed_paths = ['/', '/ru/', '/read.php', '/ru/read.php'];
-
-// Проверяем, является ли текущий путь одним из разрешенных
-$is_allowed_path = false;
-foreach ($allowed_paths as $path) {
-    if ($referer_path === $path || str_starts_with($referer_path, $path)) {
-        $is_allowed_path = true;
-        break;
-    }
+// Формируем start_url в зависимости от пути установки
+if (strpos($referer_path, '/read.php') !== false) {
+    // Для read.php сохраняем полный путь
+    $start_url = $is_russian 
+        ? "/ru/read.php?source=pwa" 
+        : "/read.php?source=pwa";
+} elseif ($is_russian) {
+    // Для русского раздела
+    $start_url = "/ru/?source=pwa";
+} else {
+    // Для всех остальных случаев (английский)
+    $start_url = "/?source=pwa";
 }
 
-// Если путь разрешен, устанавливаем соответствующий start_url
-if ($is_allowed_path) {
-    if (strpos($referer_path, '/read.php') !== false) {
-        $start_url = $is_russian 
-            ? "/ru/read.php?source=pwa" 
-            : "/read.php?source=pwa";
-    } else {
-        // Для корневых путей (/ или /ru/) оставляем как есть
-        $start_url = $is_russian 
-            ? "/ru/?source=pwa" 
-            : "/?source=pwa";
-    }
-}
-
-// Если есть query параметры, сохраняем их
-if ($query_string) {
+// Добавляем оригинальные query параметры (если есть)
+if (!empty($query_string)) {
     $start_url .= (strpos($start_url, '?') === false ? '?' : '&') . $query_string;
 }
 
@@ -59,7 +45,8 @@ if (preg_match('/^(localhost|127\.\d+\.\d+\.\d+)$/', parse_url($base_url, PHP_UR
     $name = "Dhamma.Gift";
 }
 
-// Устанавливаем заголовок JSON
+// Очищаем буфер и устанавливаем заголовок
+ob_end_clean();
 header('Content-Type: application/json');
 
 echo json_encode([
@@ -150,7 +137,7 @@ echo json_encode([
         ["origin" => "*.dict.dhamma.gift"]
     ],
     "start_url" => $start_url,
-    "scope" => $mainpagenoslash . "/",
+    "scope" => "/",
     "display" => "minimal-ui",
     "background_color" => "#2E3E50",
     "theme_color" => "#2E3E50",

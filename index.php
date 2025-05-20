@@ -436,15 +436,6 @@ Add <strong>Dhamma.gift</strong> to your Home Screen?
 
   <?php echo $regexlink;?> 
   
-<script>
-
-
-if (!document.getElementById("openQuickModalBtn")) {
-  const openQuickModalBtn = document.getElementById("openQuickModalBtn");
-  openQuickModalBtn.addEventListener("click", toggleQuickModal);
-}
-</script>
-
 <a 
   type="button"
   onclick="toggleQuickModal()" 
@@ -453,6 +444,13 @@ if (!document.getElementById("openQuickModalBtn")) {
   style="cursor: pointer; height: 25px">
   <i class="fa-solid fa-compass"></i>
 </a> 
+
+<script>
+if (!document.getElementById("openQuickModalBtn")) {
+  const openQuickModalBtn = document.getElementById("openQuickModalBtn");
+  openQuickModalBtn.addEventListener("click", toggleQuickModal);
+}
+</script>
 
   <?php echo $defaults;?> 
   <?php echo $defaultsJS;?> 

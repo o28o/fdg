@@ -129,24 +129,33 @@ document.addEventListener('DOMContentLoaded', function() {
           // Удаляем автоматическое введение при наведении мыши
           return false;
         },
-        select: function(event, ui) {
-          var terms = this.value.split(/([\|\s\*])/);
-          terms.pop();
-          terms.push(ui.item.value);
+// ... (предыдущий код остается без изменений до функции select)
 
-          for (var i = 1; i < terms.length; i += 2) {
-            if (terms[i] === "*") {
-              terms[i] = "*";
-            } else if (terms[i] === "|") {
-              terms[i] = "|";
-            } else {
-              terms[i] = " ";
-            }
-          }
+select: function(event, ui) {
+  var terms = this.value.split(/([\|\s\*])/);
+  terms.pop();
+  
+  var selectedValue = ui.item.value;
+  if (/\s+\d+$/.test(selectedValue)) {
+    // Если да, берем только первую часть (без числа)
+    selectedValue = selectedValue.split(/\s+/)[0];
+  }
+  
+  terms.push(selectedValue);
 
-          this.value = terms.join("");
-          return false;
-        }
+  for (var i = 1; i < terms.length; i += 2) {
+    if (terms[i] === "*") {
+      terms[i] = "*";
+    } else if (terms[i] === "|") {
+      terms[i] = "|";
+    } else {
+      terms[i] = " ";
+    }
+  }
+
+  this.value = terms.join("");
+  return false;
+}
       }).autocomplete("widget").addClass("fixed-height");
     }
   });

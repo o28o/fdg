@@ -291,6 +291,7 @@ echo '<!--
   
   </ul>
   
+<div class="d-inline-flex align-items-start gap-1">
 
 <a title="ИИ-помощники, конвертеры и др полезные инструменты" class="dropdown text-decoration-none mx-1 d-md-inline-block" id="tools" data-bs-toggle="dropdown" aria-expanded="false" href="#">
 
@@ -365,12 +366,13 @@ echo '<!--
 
 </ul>
 
-<a title="Помощь по Dhamma.Gift Mutli-Tool" class="dropup text-decoration-none mx-1 d-md-inline-block" href="/assets/common/multiToolRu.html">
-<figure class="figure">
-</figure>	  
-<figcaption class="horiz-menu-item figure-caption text-center">*</figcaption>   
-</a>
-
+  <a title="Помощь по Dhamma.Gift Multi-Tool"
+     href="/assets/common/multiToolRu.html"
+     class="text-muted text-decoration-none"
+     style="font-size: 0.75rem; line-height: 1; position: relative; top: -0.25em;">
+    *
+  </a>
+</div>
 
 
 </div>'

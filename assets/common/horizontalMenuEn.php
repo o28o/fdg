@@ -265,7 +265,7 @@ echo '<!--
     <li><a class="dropdown-item" href="#study">' . $anamestudy . '</a></li> -->
 </ul>
 
-<div class="d-inline-flex align-items-start gap-1">
+<div class="d-inline-flex align-items-center gap-1">
 
 <a title="AI-assistants, converters and other useful tools" class="dropdown text-decoration-none mx-1 d-md-inline-block" id="tools" data-bs-toggle="dropdown" aria-expanded="false" href="#">
 
@@ -343,10 +343,10 @@ echo '<!--
 ' . $head5makelist . '</a></li>  
 </ul>
 
-  <a title="Помощь по Dhamma.Gift Multi-Tool"
-     href="/assets/common/multiToolRu.html"
+  <a title="Dhamma.Gift Multi-Tool Help"
+     href="/assets/common/multiTool.html"
      class="text-muted text-decoration-none"
-     style="font-size: 0.75rem; line-height: 1; position: relative; top: -0.25em;">
+     style="font-size: 0.75rem; line-height: 1; position: relative; top: 0.4em;">
     *
   </a>
 </div>

@@ -57,41 +57,7 @@ echo '<!--
   <ul class="dropdown-menu" aria-labelledby="MenuEnglish">
 
      
-                  
-        <li><a class="dropdown-item" target="_blank" href="https://www.digitalpalireader.online/_dprhtml/index.html">Digital Pali Reader</a></li>
-
-
-                <li>
-
-         <div class="dropdown-item ">Patimokkha 
-
-         <a class="text-reset" target="_blank"   href="' . $linkati . '">ATI</a>
-       <a class="text-reset" target="_blank"  href="/assets/dhammatalks.org/vinaya/bmc/Section0000.html">BMC</a>
-          <a class="text-reset" target=""  href="/assets/materials/bupm_trn_by_nanatusita.pdf">Nanatusita</a>  
-       </div>
-         </li>
-            
-  <li><a class="dropdown-item" target="" href="/assets/materials/bipm_trn_by_chatsumarn_kabilsingh.pdf">Patimokkha Bi trans. by Ch Kabilsingh</a></li>
-        
-        <li><a class="dropdown-item" target="_blank" href="https://simsapa.github.io/">Simsapa Pali Reader <u>PC</u> <u>Mac</u> <u>Linux</u></a></li>
-  
-                <li>
-         <div class="dropdown-item ">
-		   <a class="text-reset" target="_blank"  href="https://suttacentral.net/pitaka/sutta?lang=en" title="Mahāsaṅgīti Edition at SuttaCentral.net">SuttaCentral</a>
-
-                <a class="text-reset" target="_blank"  href="https://suttacentral.net/pitaka/vinaya?lang=en">Виная</a>
-         <a class="text-reset" target="_blank"  href="https://www.sc-voice.net/">Voice</a>
-        <a class="text-reset" target="_blank"  href="' . $linksclegacy . '">Legacy</a>
-         </div>
-         </li>
-    
-                  
- <li><a class="dropdown-item" target="_blank" href="' . $linktbwOnMain . '">
-   <i class="' . $iconimportant . '"></i>
- The Buddha\'s Words</a></li> 
- 
- 
- 	          <li>
+	  	          <li>
          <div class="dropdown-item ">Tipitaka:
   <a class="text-reset" target="_blank"  href="https://84000.org/" title="Thai Tipitaka at 84000.org">Thai</a>
   <a class="text-reset" target="_blank"  href="https://tipitaka.org/" title="VRI Tipitaka at Tipitaka.org">VRI</a>  
@@ -111,8 +77,45 @@ echo '<!--
 </li>
 	
 
+                  
+        <li><a class="dropdown-item" target="_blank" href="https://www.digitalpalireader.online/_dprhtml/index.html">Digital Pali Reader</a></li>
+
+
+               
+        <li><a class="dropdown-item" target="_blank" href="https://simsapa.github.io/">Simsapa Pali Reader <u>PC</u> <u>Mac</u> <u>Linux</u></a></li>
+  
+                <li>
+         <div class="dropdown-item ">
+		   <a class="text-reset" target="_blank"  href="https://suttacentral.net/pitaka/sutta?lang=en" title="Mahāsaṅgīti Edition at SuttaCentral.net">SuttaCentral</a>
+
+                <a class="text-reset" target="_blank"  href="https://suttacentral.net/pitaka/vinaya?lang=en">Виная</a>
+         <a class="text-reset" target="_blank"  href="https://www.sc-voice.net/">Voice</a>
+        <a class="text-reset" target="_blank"  href="' . $linksclegacy . '">Legacy</a>
+         </div>
+         </li>
+    
+                  
+ <li><a class="dropdown-item" target="_blank" href="' . $linktbwOnMain . '">
+   <i class="' . $iconimportant . '"></i>
+ The Buddha\'s Words</a></li> 
+ 
+ 
+
           <li><a class="dropdown-item" target="_blank" href="' . $linkmolds . '">' . $anamemolds . '</a></li>   
 <!-- <li><a class="dropdown-item" href="https://github.com/digitalpalidictionary/digitalpalidictionary/releases">' . $anamedpd . '</a></li>  -->
+
+ <li>
+
+         <div class="dropdown-item ">Patimokkha 
+
+         <a class="text-reset" target="_blank"   href="' . $linkati . '">ATI</a>
+       <a class="text-reset" target="_blank"  href="/assets/dhammatalks.org/vinaya/bmc/Section0000.html">BMC</a>
+          <a class="text-reset" target=""  href="/assets/materials/bupm_trn_by_nanatusita.pdf">Nanatusita</a>  
+       </div>
+         </li>
+            
+  <li><a class="dropdown-item" target="" href="/assets/materials/bipm_trn_by_chatsumarn_kabilsingh.pdf">Patimokkha Bi trans. by Ch Kabilsingh</a></li>
+        
 
           <li><a class="dropdown-item" target="_blank" href="' . $linknoblasc . '">' . $anameasc . '</a></li>
 
@@ -172,7 +175,7 @@ echo '<!--
          </li>   
    
    
-      <li><a class="dropdown-item" target="_blank" href="https://cpd.uni-koeln.de/search">Critical Pali Dictionary CPD</a></li>   
+      <li><a class="dropdown-item" target="_blank" href="https://cpd.uni-koeln.de/search">Critical Pali Dictionary CPD</a></li>   	  
    <li><a class="dropdown-item" target="_blank" href="https://gandhari.org/dop">M. Cone dictionary Gandhari.org </a></li>   
    <li><a class="dropdown-item" target="_blank" href="https://dsal.uchicago.edu/dictionaries/pali/">R. Davids, W. Stede dictionary PTS</a></li> 
    
@@ -184,7 +187,16 @@ echo '<!--
 		<a class="text-reset" target="_blank"   href="https://sanskritdictionary.com/?iencoding=iast&q=&lang=sans&action=Search">Skrdict</a>
 		<a class="text-reset" target="_blank"  href="https://www.learnsanskrit.cc/translate?search=&dir=au">Learnskr</a>  
        </div>
-         </li>    
+         </li>  
+
+<li><a class="dropdown-item" href="#" onclick="event.preventDefault(); [
+\'https://dsal.uchicago.edu/dictionaries/pali/\', 
+\'https://gandhari.org/dop\', 
+\'https://cpd.uni-koeln.de/search\', 
+\'https://dharmamitra.org/?target_lang=english-explained\', 
+\'https://www.wisdomlib.org/\'
+].forEach(url => window.open(url));">Open PTS, Cone, CPD, Mitra, Wisdomlib</a></li>		 		 
+		 
 
 </ul>
 

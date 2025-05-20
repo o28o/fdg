@@ -61,38 +61,6 @@ echo '<!--
 </a>
   <ul class="dropdown-menu" aria-labelledby="MenuEnglish">
 
-
-    <li><a class="dropdown-item" target="_blank" href="https://www.digitalpalireader.online/_dprhtml/index.html">Digital Pali Reader</a></li>
-    
-                <li>
-         <div class="dropdown-item ">Patimokkha 
-         <a class="text-reset" target="_blank"   href="' . $linkati . '">ATI</a>
-       <a class="text-reset" target="_blank"  href="/assets/dhammatalks.org/vinaya/bmc/Section0000.html">BMC</a>
-          <a class="text-reset" target="" href="/assets/materials/bupm_trn_by_nanatusita.pdf">Nanatusita</a>  
-       </div>
-         </li>
-    
-    
-
-           <li><a class="dropdown-item" target="_blank" href="/assets/materials/bipm_trn_by_chatsumarn_kabilsingh.pdf">Patimokkha Bi пер. Ch Kabilsingh</a></li>
-    
-    <li><a class="dropdown-item" target="_blank" href="https://simsapa.github.io/">Simsapa Pali Reader <u>PC</u> <u>Mac</u> <u>Linux</u></a></li>
-
-         
-                <li>
-         <div class="dropdown-item ">
-         <a class="text-reset" target="_blank"  href="https://suttacentral.net/pitaka/sutta?lang=en" >SuttaCentral</a> 
-                <a class="text-reset" target="_blank"  href="https://suttacentral.net/pitaka/vinaya?lang=ru">Виная</a>
-         <a class="text-reset" target="_blank"  href="https://www.sc-voice.net/">Voice</a>
-        <a class="text-reset" target="_blank"  href="' . $linksclegacy . '">Legacy</a>
-         </div>
-         </li>
-        <li><a class="dropdown-item" target="_blank" href="' . $linktbwOnMain . '">
-
-          <i class="' . $iconimportant . '"></i>
-
-        The Buddha\'s Words</a></li>    
-   
 <li>
   <div class="dropdown-item">Типитака:
     <a class="text-reset" target="_blank"  href="https://84000.org/" title="Тайская Типитака на 84000.org">Thai</a>
@@ -112,7 +80,43 @@ echo '<!--
 </li>
     
 
+
+    <li><a class="dropdown-item" target="_blank" href="https://www.digitalpalireader.online/_dprhtml/index.html">Digital Pali Reader</a></li>
+    
+    
+    <li><a class="dropdown-item" target="_blank" href="https://simsapa.github.io/">Simsapa Pali Reader <u>PC</u> <u>Mac</u> <u>Linux</u></a></li>
+
+         
+                <li>
+         <div class="dropdown-item ">
+         <a class="text-reset" target="_blank"  href="https://suttacentral.net/pitaka/sutta?lang=en" >SuttaCentral</a> 
+                <a class="text-reset" target="_blank"  href="https://suttacentral.net/pitaka/vinaya?lang=ru">Виная</a>
+         <a class="text-reset" target="_blank"  href="https://www.sc-voice.net/">Voice</a>
+        <a class="text-reset" target="_blank"  href="' . $linksclegacy . '">Legacy</a>
+         </div>
+         </li>
+        <li><a class="dropdown-item" target="_blank" href="' . $linktbwOnMain . '">
+
+          <i class="' . $iconimportant . '"></i>
+
+        The Buddha\'s Words</a></li>    
+   
+
       <li><a class="dropdown-item" target="_blank" href="' . $linkmolds . '">Переводы Майкла Олдса</a></li>
+	  
+	               <li>
+         <div class="dropdown-item ">Patimokkha 
+         <a class="text-reset" target="_blank"   href="' . $linkati . '">ATI</a>
+       <a class="text-reset" target="_blank"  href="/assets/dhammatalks.org/vinaya/bmc/Section0000.html">BMC</a>
+          <a class="text-reset" target="" href="/assets/materials/bupm_trn_by_nanatusita.pdf">Nanatusita</a>  
+       </div>
+         </li>
+    
+    
+
+           <li><a class="dropdown-item" target="_blank" href="/assets/materials/bipm_trn_by_chatsumarn_kabilsingh.pdf">Patimokkha Bi пер. Ch Kabilsingh</a></li>
+   
+	  
         <li><a class="dropdown-item" target="_blank" href="' . $linknoblasc . '">Статьи на Dhammadana.org</a></li>
 
   </ul>
@@ -125,14 +129,14 @@ echo '<!--
 </figure>	  
 </a>
   <ul class="dropdown-menu" aria-labelledby="MenuRussian">
-    <li><a class="dropdown-item" target="_blank" href="' . $mainpagethrulink . '">Theravada.ru</a></li>
-    <li><a class="dropdown-item" target="_blank" href="' . $mainpagethsulink . '">Theravada.su</a></li>
 <li><a class="dropdown-item" href="/assets/audio/documents/dn_Syrkin_2020_ed_2025.pdf">ДН пер. А.Я. Сыркина "2025"</a></li>
-
-  <li><a class="dropdown-item" target="_blank" href="/dhamma.ru/index-sutta.html">Dhamma.ru Сутты</a></li>
-    <li><a class="dropdown-item" target="_blank" href="assets/materials/prat.html">Dhamma.ru Патимоккха</a></li>
     <li><a class="dropdown-item" target="_blank" href="' . $mainpagethrflink . '">Тхеравада.рф Сутты</a></li>
     <li><a class="dropdown-item" target="_blank" href="' . $mainpagethrfvinayalink . '">Тхеравада.рф Патимоккха</a></li>
+  <li><a class="dropdown-item" target="_blank" href="/dhamma.ru/index-sutta.html">Dhamma.ru Сутты</a></li>
+    <li><a class="dropdown-item" target="_blank" href="assets/materials/prat.html">Dhamma.ru Патимоккха</a></li>
+    <li><a class="dropdown-item" target="_blank" href="' . $mainpagethrulink . '">Theravada.ru</a></li>
+    <li><a class="dropdown-item" target="_blank" href="' . $mainpagethsulink . '">Theravada.su</a></li>
+
   </ul>
 <!-- </div> -->
 
@@ -199,7 +203,16 @@ echo '<!--
 		<a class="text-reset" target="_blank"   href="https://sanskritdictionary.com/?iencoding=iast&q=&lang=sans&action=Search">Skrdict</a>
 		<a class="text-reset" target="_blank"  href="https://www.learnsanskrit.cc/translate?search=&dir=au">Learnskr</a>  
        </div>
-         </li>  
+         </li> 
+
+<li><a class="dropdown-item" href="#" onclick="event.preventDefault(); [
+\'https://dsal.uchicago.edu/dictionaries/pali/\', 
+\'https://gandhari.org/dop\', 
+\'https://cpd.uni-koeln.de/search\', 
+\'https://dharmamitra.org/?target_lang=english-explained\', 
+\'https://www.wisdomlib.org/\'
+].forEach(url => window.open(url));">Открыть PTS, Cone, CPD, Mitra, Wisdomlib</a></li>		 		 
+
 </ul>    
     
 <a class="dropdown text-decoration-none mx-1 d-md-inline-block" id="materials" data-bs-toggle="dropdown" aria-expanded="false" href="#">

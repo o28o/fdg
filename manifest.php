@@ -17,7 +17,7 @@ $query_string = parse_url($referer, PHP_URL_QUERY);
 $is_russian = strpos($referer_path, '/ru/') !== false;
 
 // Базовый start_url (по умолчанию корень с соответствующим языком)
-$start_url = $is_russian ? $mainpagenoslash . "/ru/?source=pwa" : $mainpagenoslash . "/?source=pwa";
+$start_url = $is_russian ? "/ru/?source=pwa" : "/?source=pwa";
 
 // Разрешенные пути для установки
 $allowed_paths = ['/', '/ru/', '/read.php', '/ru/read.php'];
@@ -25,7 +25,7 @@ $allowed_paths = ['/', '/ru/', '/read.php', '/ru/read.php'];
 // Проверяем, является ли текущий путь одним из разрешенных
 $is_allowed_path = false;
 foreach ($allowed_paths as $path) {
-    if (strpos($referer_path, $path) !== false) {
+    if ($referer_path === $path || str_starts_with($referer_path, $path)) {
         $is_allowed_path = true;
         break;
     }
@@ -35,13 +35,13 @@ foreach ($allowed_paths as $path) {
 if ($is_allowed_path) {
     if (strpos($referer_path, '/read.php') !== false) {
         $start_url = $is_russian 
-            ? $mainpagenoslash . "/ru/read.php?source=pwa" 
-            : $mainpagenoslash . "/read.php?source=pwa";
+            ? "/ru/read.php?source=pwa" 
+            : "/read.php?source=pwa";
     } else {
         // Для корневых путей (/ или /ru/) оставляем как есть
         $start_url = $is_russian 
-            ? $mainpagenoslash . "/ru/?source=pwa" 
-            : $mainpagenoslash . "/?source=pwa";
+            ? "/ru/?source=pwa" 
+            : "/?source=pwa";
     }
 }
 

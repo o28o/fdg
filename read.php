@@ -175,7 +175,7 @@ if (newUrl !== window.location.href) {
             
 <li class="nav-item mb-3 mx-lg-2"><a class="nav-link py-3 px-0 px-lg-0 rounded" href="<?php echo $mainpage;?>"><?php echo $menumain;?></a></li>
 <li class="nav-item mb-3 mx-lg-2"><a class="nav-link py-3 px-0 px-lg-0 rounded" href="<?php echo $mainpagenoslash;?>/history.php"><?php echo $menuhist;?></a></li>
-<li class="nav-item mb-3 mx-lg-2"><a class="nav-link py-3 px-0 px-lg-0 rounded" href="#help"><?php echo $menuhowto;?></a></li>
+<li class="nav-item mb-3 mx-lg-2"><a class="nav-link py-3 px-0 px-lg-0 rounded" href="/#help"><?php echo $menuhowto;?></a></li>
 <li class="nav-item mb-3 mx-lg-2"><a class="nav-link py-3 px-0 px-lg-0 rounded" href="#project"><?php echo $menuabout;?></a></li>             
 <li class="nav-item mb-3 mx-lg-2"><a class="nav-link py-3 px-0 px-lg-0 rounded" href="read.php#<?php echo $menuuseful;?>"><?php echo $menulinks;?></a></li>
 <li class="nav-item mb-3 mx-lg-2"><a class="nav-link py-3 px-0 px-lg-0 rounded" href="#contacts"><?php echo $menucontact;?></a></li>
@@ -21556,7 +21556,7 @@ include $basedir . "/assets/texts/bipm.php";
 </div>
 </div>
 
-<h4 id="help" class="page-section-heading text-center mb-4"><?php echo $howtovideo;?></h4>	
+<h4 class="page-section-heading text-center mb-4"><?php echo $howtovideo;?></h4>	
 
 
 
@@ -21613,7 +21613,7 @@ include $basedir . "/assets/texts/bipm.php";
                 </div>
                 <!-- About Section Button-->
                                 <div class="text-center mt-4">
-                    <a class="btn btn-xl btn-outline-light" target="_blank" href="/assets/common/<?php echo $prekeyfeatures; ?>">
+                    <a class="btn btn-xl btn-outline-light" target="" href="/assets/common/<?php echo $prekeyfeatures; ?>">
     
                    <i class="fa-solid fa-star"></i><?php echo $premail; ?>
                     </a>

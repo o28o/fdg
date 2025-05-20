@@ -1,5 +1,5 @@
 <?php
-echo '<div class="d-md-inline-block">	';
+echo '<div class="d-md-inline-block position-relative">	';
 
 if ((($_SERVER['SERVER_ADDR'] === '127.0.0.1') || ($_SERVER['SERVER_NAME'] === 'localhost')) && (!preg_match('/(new)(\?.*)?$/', basename($_SERVER['REQUEST_URI'])))) {
 echo '<a class="text-decoration-none mx-1" href="/ru/new">
@@ -12,7 +12,7 @@ echo '<a class="text-decoration-none mx-1" href="/ru/new">
 
  if (preg_match('/(read\.php|new)(\?.*)?$/', basename($_SERVER['REQUEST_URI']))) {
     
-echo '<a class="text-decoration-none mx-1" href="' . $mainpage . '">
+echo '<a title="Поиск (Ctrl+1)" id="Search" class="dropup text-decoration-none mx-1 d-md-inline-block" href="' . $mainpage . '">
 <figure class="figure text-decoration-none">
   <i class="menu-icon icon-item fa-solid fa-magnifying-glass fa-flip-horizontal"></i>
   <figcaption class="horiz-menu-item figure-caption text-center">' . $searchcaption . '</figcaption>
@@ -22,7 +22,7 @@ echo '<a class="text-decoration-none mx-1" href="' . $mainpage . '">
 
 if (strpos($_SERVER['REQUEST_URI'], "read.php") === false) {
 echo '
-<a class="dropup text-decoration-none mx-1 d-md-inline-block" id="MenuRead"  href="' . $mainreadlink . '">
+<a title="Чтение (Ctrl+2)" class="dropup text-decoration-none mx-1 d-md-inline-block" id="MenuRead"  href="' . $mainreadlink . '">
 
 <figure class="figure text-decoration-none">
   <i class="menu-icon icon-item fa-solid fa-book-bookmark"></i>
@@ -53,7 +53,7 @@ echo '<!--
 -->
 
 
-<a class="dropup text-decoration-none mx-1 d-md-inline-block" id="MenuEnglish" data-bs-toggle="dropdown" aria-expanded="false" href="#">
+<a title="Пали Тексты и Зарубежные Ресурсы" class="dropup text-decoration-none mx-1 d-md-inline-block" id="MenuEnglish" data-bs-toggle="dropdown" aria-expanded="false" href="#">
 <figure class="figure dropup d-md-inline-block">
     <i class="menu-icon icon-item fa-solid fa-book"></i>
 <figcaption class="horiz-menu-item figure-caption text-center">Английские</figcaption>   
@@ -122,7 +122,7 @@ echo '<!--
   </ul>
   
 
-<a class="dropup text-decoration-none mx-1 d-md-inline-block" id="MenuRussian" data-bs-toggle="dropdown" aria-expanded="false" href="#">
+<a title="Ресурсы на Русском" class="dropup text-decoration-none mx-1 d-md-inline-block" id="MenuRussian" data-bs-toggle="dropdown" aria-expanded="false" href="#">
 <figure class="figure dropup">
   <i class="menu-icon icon-item fa-solid fa-book"></i>
 <figcaption class="horiz-menu-item figure-caption text-center">Русские</figcaption>   
@@ -140,7 +140,7 @@ echo '<!--
   </ul>
 <!-- </div> -->
 
-<a class="dropup text-decoration-none mx-1 d-md-inline-block" id="history" href="/ru/history.php">
+<a title="Общая История Поиска" class="dropup text-decoration-none mx-1 d-md-inline-block" id="history" href="/ru/history.php">
 <figure class="figure">
   <i class="menu-icon icon-item fa-solid fa-clock-rotate-left"></i>
 <figcaption class="horiz-menu-item figure-caption text-center">' . $anamehist . '</figcaption>   
@@ -171,7 +171,7 @@ echo '<!--
   
     -->
 
-<a class="dropdown text-decoration-none mx-1 d-md-inline-block" id="MenuDict" data-bs-toggle="dropdown" aria-expanded="false" href="#">
+<a title="Словари Пали и Санскрит" class="dropdown text-decoration-none mx-1 d-md-inline-block" id="MenuDict" data-bs-toggle="dropdown" aria-expanded="false" href="#">
   <figure class="figure d-md-inline-block">
     <i class="menu-icon fa-solid fa-book-atlas"></i>
     <figcaption class="horiz-menu-item figure-caption text-center">Словари</figcaption>   
@@ -215,7 +215,7 @@ echo '<!--
 
 </ul>    
     
-<a class="dropdown text-decoration-none mx-1 d-md-inline-block" id="materials" data-bs-toggle="dropdown" aria-expanded="false" href="#">
+<a title="Материалы для обучения и сайты" class="dropdown text-decoration-none mx-1 d-md-inline-block" id="materials" data-bs-toggle="dropdown" aria-expanded="false" href="#">
 <figure class="figure d-md-inline-block">
   <i class="menu-icon icon-item fa-solid fa-graduation-cap"></i>
 <figcaption class="horiz-menu-item figure-caption text-center">Обучение</figcaption>   
@@ -292,7 +292,7 @@ echo '<!--
   </ul>
   
 
-<a class="dropdown text-decoration-none mx-1 d-md-inline-block" id="tools" data-bs-toggle="dropdown" aria-expanded="false" href="#">
+<a title="ИИ-помощники, конвертеры и др полезные инструменты" class="dropdown text-decoration-none mx-1 d-md-inline-block" id="tools" data-bs-toggle="dropdown" aria-expanded="false" href="#">
 
 <figure class="figure d-md-inline-block">
 
@@ -362,6 +362,17 @@ echo '<!--
  <li><a class="dropdown-item" href="/ru/assets/makelist.html">
    <i class="' . $iconimportant . '"></i>
  ' . $head5makelist . '</a></li>   
+
+</ul>
+
+
+  <a title="Помощь по Dhamma.Gift Mutli-Tool" href="/assets/common/multiToolRu.html"
+     class="position-absolute top-0 end-0 small text-decoration-none  text-muted"
+     style="font-size: 0.75rem; text-decoration: none; transform: translate(100%, 0%);">
+    *
+  </a>
+
+  
 
 </div>'
 ?>

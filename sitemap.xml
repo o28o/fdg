@@ -33,6 +33,23 @@
   <priority>1.00</priority>
 </url>
 <url>
+  <loc>https://dhamma.gift/assets/common/multiTool.html</loc>
+  <lastmod>2025-03-24T03:03:03+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+
+<url>
+  <loc>https://dhamma.gift/assets/common/multiToolRU.html</loc>
+  <lastmod>2025-03-24T03:03:03+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://dhamma.gift/read.php</loc>
+  <lastmod>2025-03-24T03:03:03+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+
+<url>
   <loc>https://dhamma.gift/read.php</loc>
   <lastmod>2025-03-24T03:03:03+00:00</lastmod>
   <priority>0.80</priority>

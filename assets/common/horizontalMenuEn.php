@@ -1,5 +1,5 @@
 <?php
-echo '<div class="d-md-inline-block">	';
+echo '<div class="d-md-inline-block position-relative">	';
 if ((($_SERVER['SERVER_ADDR'] === '127.0.0.1') || ($_SERVER['SERVER_NAME'] === 'localhost')) && (!preg_match('/(new)(\?.*)?$/', basename($_SERVER['REQUEST_URI'])))) {
 echo '<a class="text-decoration-none mx-1" href="/ru/new">
 <figure class="figure text-decoration-none">
@@ -11,7 +11,7 @@ echo '<a class="text-decoration-none mx-1" href="/ru/new">
 
  if (preg_match('/(read\.php|new)(\?.*)?$/', basename($_SERVER['REQUEST_URI']))) {
     
-echo '<a class="text-decoration-none mx-1"  href="' . $mainpage . '">
+echo '<a title="Search (Ctrl+1)" id="Search" class="dropup text-decoration-none mx-1 d-md-inline-block" href="' . $mainpage . '">
 <figure class="figure text-decoration-none">
   <i class="menu-icon icon-item fa-solid fa-magnifying-glass fa-flip-horizontal"></i>
   <figcaption class="horiz-menu-item figure-caption text-center">' . $searchcaption . '</figcaption>
@@ -20,7 +20,7 @@ echo '<a class="text-decoration-none mx-1"  href="' . $mainpage . '">
 } 
 if (strpos($_SERVER['REQUEST_URI'], "read.php") === false) {
 echo ' 
-<a class="dropdown text-decoration-none mx-1 d-md-inline-block" id="MenuRead" href="' . $mainreadlink . '">
+<a title="Read (Ctrl+2)" class="dropdown text-decoration-none mx-1 d-md-inline-block" id="MenuRead" href="' . $mainreadlink . '">
 <figure class="figure text-decoration-none">
   <i class="menu-icon fa-solid fa-book-bookmark"></i>
   <figcaption class="horiz-menu-item figure-caption text-center">Read Pāḷi</figcaption>
@@ -47,7 +47,7 @@ echo '<!--
     <li><a class="dropdown-item" target=""  href="' . $readerPage . '">SC Light</a></li>
   </ul>
 -->
-<a class="dropdown text-decoration-none mx-1 d-md-inline-block" id="MenuEnglish" data-bs-toggle="dropdown" aria-expanded="false" href="#">
+<a title="External Pali Resources" class="dropdown text-decoration-none mx-1 d-md-inline-block" id="MenuEnglish" data-bs-toggle="dropdown" aria-expanded="false" href="#">
 <figure class="figure d-md-inline-block">
     <i class="menu-icon fa-solid fa-link"></i>
 <figcaption class="horiz-menu-item figure-caption text-center">External</figcaption>   
@@ -122,7 +122,7 @@ echo '<!--
         
   </ul>
 
-<a class="text-decoration-none mx-1" id="history" href="/history.php">
+<a title="Common Search History" class="dropup text-decoration-none mx-1 d-md-inline-block" id="history" href="/history.php">
 <figure class="figure">
   <i class="menu-icon fa-solid fa-clock-rotate-left"></i>
 <figcaption class="horiz-menu-item figure-caption text-center">' . $anamehist . '</figcaption>   
@@ -153,7 +153,7 @@ echo '<!--
 </a> 
     -->
 
-<a class="dropdown text-decoration-none mx-1 d-md-inline-block" id="MenuDict" data-bs-toggle="dropdown" aria-expanded="false" href="#">
+<a title="Dictionaries Pali and Sanskrit" class="dropdown text-decoration-none mx-1 d-md-inline-block" id="MenuDict" data-bs-toggle="dropdown" aria-expanded="false" href="#">
   <figure class="figure d-md-inline-block">
     <i class="menu-icon fa-solid fa-book-atlas"></i>
     <figcaption class="horiz-menu-item figure-caption text-center">Dictionaries</figcaption>   
@@ -201,7 +201,7 @@ echo '<!--
 </ul>
 
 
-<a class="dropdown text-decoration-none mx-1 d-md-inline-block" id="materials" data-bs-toggle="dropdown" aria-expanded="false" href="#">
+<a title="Materials and sites" class="dropdown text-decoration-none mx-1 d-md-inline-block" id="materials" data-bs-toggle="dropdown" aria-expanded="false" href="#">
 <figure class="figure d-md-inline-block">
   <i class="menu-icon fa-solid fa-graduation-cap"></i>
 <figcaption class="horiz-menu-item figure-caption text-center">' . $anamematerials . '</figcaption>   
@@ -266,7 +266,7 @@ echo '<!--
 </ul>
 
 
-<a class="dropdown text-decoration-none mx-1 d-md-inline-block" id="tools" data-bs-toggle="dropdown" aria-expanded="false" href="#">
+<a title="AI-assistants, converters and other useful tools" class="dropdown text-decoration-none mx-1 d-md-inline-block" id="tools" data-bs-toggle="dropdown" aria-expanded="false" href="#">
 
 <figure class="figure d-md-inline-block">
 
@@ -341,6 +341,13 @@ echo '<!--
   <i class="' . $iconimportant . '"></i>
 ' . $head5makelist . '</a></li>  
 </ul>
+
+  <a title="Dhamma.Gift Mutli-Tool Help" href="/assets/common/multiTool.html"
+     class="position-absolute top-0 end-0 small text-decoration-none  text-muted"
+     style="font-size: 0.75rem; text-decoration: none; transform: translate(100%, 0%);">
+    *
+  </a>
+
 
 </div> 
 '

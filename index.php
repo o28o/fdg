@@ -718,7 +718,7 @@ foreach ($slides as $index => $slide) {
 </div>
 </div>
 
-<h4 id="help" class="page-section-heading text-center mb-4"><?php echo $howtovideo;?></h4>	
+<h4 class="page-section-heading text-center mb-4"><?php echo $howtovideo;?></h4>	
 
 <div class="embed-container mt-4 mb-5 text-center">
 <a href="<?php echo $linkhowtovideo;?>" target="_blank" ><img width="350" class="imgonmain" src="<?php echo $demovideoimg2;?>" title="<?php echo $titledeschowtovideo;?>" loading="lazy"></a>
@@ -744,7 +744,7 @@ foreach ($slides as $index => $slide) {
   </div>
   
 <!-- Portfolio Section Heading-->
-<h2 class="page-section-heading text-center text-uppercase text-secondary mb-0"><?php echo $howtoheader; ?></h2>
+<h2 id="help" class="page-section-heading text-center text-uppercase text-secondary mb-0"><?php echo $howtoheader; ?></h2>
                 <!-- Icon Divider-->
                 <div class="divider-custom">
                     <div class="divider-custom-line"></div>
@@ -855,7 +855,7 @@ foreach ($slides as $index => $slide) {
                     </a>
                 </div> -->
                                 <div class="text-center mt-4">
-                    <a class="btn btn-xl btn-outline-light" target="_blank" href="/assets/common/<?php echo $prekeyfeatures; ?>">
+                    <a class="btn btn-xl btn-outline-light" target="" href="/assets/common/<?php echo $prekeyfeatures; ?>">
     
                    <i class="fa-solid fa-star"></i><?php echo $premail; ?>
                     </a>

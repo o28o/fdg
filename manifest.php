@@ -1,5 +1,5 @@
 <?php
-// Включим буферизацию вывода, чтобы избежать ошибок с заголовками
+// Включим буферизацию вывода, чтобы избежать ошибок с заголовками     "orientation" => "any",
 ob_start();
 $scheme = (!empty($_SERVER['HTTPS']) && $_SERVER['HTTPS'] !== 'off') ? "https" : "http";
 $host = $_SERVER['HTTP_HOST'];
@@ -59,7 +59,6 @@ echo json_encode([
     "launch_handler" => [
         "client_mode" => "focus-existing"
     ],
-    "orientation" => "any",
     "icons" => [
         [
             "src" => "/assets/img/pwa-bold-monocolor-192.png",
